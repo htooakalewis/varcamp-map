@@ -207,7 +207,6 @@ async function readFreshJoin(frame, profile, assertLive, original) {
 }
 async function settleFreshWelcome(page, assertLive) {
   const welcome = page.getByText('Open the welcome directory', { exact: true });
-  const close = page.getByTestId('close-modal-button');
   await assertNoModal(page, assertLive);
   await guarded(assertLive, () => welcome.waitFor({ state: 'visible', timeout: 15000 }));
   if (!await guarded(assertLive, () => welcome.isVisible())) throw Error('Fresh welcome action not observed');
@@ -215,15 +214,20 @@ async function settleFreshWelcome(page, assertLive) {
   await guarded(assertLive, () => welcome.click({ timeout: 15000 }));
   const consumedAfterActivation = !await guarded(assertLive, () => welcome.isVisible());
   // Removal may still be pending. Close the positively identified directory before waiting for it.
-  await guarded(assertLive, () => close.waitFor({ state: 'visible', timeout: 15000 }));
-  await guarded(assertLive, () => page.getByText('VarCamp Quest Journal', { exact: true }).waitFor({ state: 'visible', timeout: 15000 }));
-  const directory = page.locator('iframe[name="modalIframe"][src$="#directory"]');
+  const directory = page.locator('iframe#modalIframe');
   await guarded(assertLive, () => directory.waitFor({ state: 'visible', timeout: 15000 }));
+  if (await guarded(assertLive, () => directory.count()) !== 1 || await guarded(assertLive, () => directory.getAttribute('title')) !== 'VarCamp Quest Journal') throw Error('Unexpected directory modal identity');
+  if (!await guarded(assertLive, () => directory.evaluate(element => element.isConnected && element.parentElement?.tagName === 'DIV'))) throw Error('Detached or unexpected directory modal container');
   const src = await guarded(assertLive, () => directory.getAttribute('src'));
   let source; try { source = new URL(src); } catch { throw Error('Invalid directory modal source'); }
   if (source.origin !== 'https://maps.3-1-133-135.sslip.io' || source.pathname !== '/varcamp-demo/src/journal/index.html' || source.hash !== '#directory') throw Error('Unexpected directory modal source');
+  const associatedClose = directory.locator('..').getByTestId('close-modal-button');
+  const close = page.getByTestId('close-modal-button');
+  if (await guarded(assertLive, () => associatedClose.count()) !== 1 || await guarded(assertLive, () => close.count()) !== 1) throw Error('Require unique associated directory close control');
+  await guarded(assertLive, () => close.waitFor({ state: 'visible', timeout: 15000 }));
   await guarded(assertLive, () => close.click({ timeout: 15000 }));
   await guarded(assertLive, () => close.waitFor({ state: 'hidden', timeout: 15000 }));
+  await guarded(assertLive, () => directory.waitFor({ state: 'hidden', timeout: 15000 }));
   await guarded(assertLive, () => welcome.waitFor({ state: 'hidden', timeout: 15000 }));
   await assertWelcomeAbsent(page, assertLive);
   return { consumedAfterActivation, consumedAfterClose: true };

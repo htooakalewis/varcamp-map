@@ -1,9 +1,14 @@
+import { readFileSync } from 'node:fs';
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import * as session from '../bots/browser-session.mjs';
 import * as runner from '../bots/runner.mjs';
 import { selectProfile } from '../bots/config.mjs';
 const welcomeText = 'Open the welcome directory';
-const journalSrc = 'https://maps.3-1-133-135.sslip.io/varcamp-demo/src/journal/index.html?v=reviewed#directory';
+// Captured native parent subtree, not a fabricated parent title/name contract.
+const modalHTML = readFileSync(new URL('./fixtures/native-directory-20261016.html', import.meta.url), 'utf8');
+const iframeHTML = modalHTML.match(/<iframe[^>]*>/)![0];
+const modalAttribute = (name: string) => iframeHTML.match(new RegExp(` ${name}="([^"]*)"`))?.[1] ?? null;
+const journalSrc = modalAttribute('src')!;
 beforeEach(() => vi.useFakeTimers());
 afterEach(() => { vi.clearAllTimers(); vi.useRealTimers(); vi.unstubAllGlobals(); });
 function knownWelcomeRoot() {
@@ -16,8 +21,8 @@ function knownWelcomeRoot() {
 function fixture(options: any = {}) {
   const profile = selectProfile(options.persona ?? 'lyra');
   const events: { name: string; at: number; details?: any }[] = [];
-  const state = { welcome: options.delayed ? 0 : 1, modal: options.preexistingModal ?? false, media: options.media !== false,
-    location: 'about:srcdoc', position: { x: 2032, y: 2128 }, room: profile.roomUrl, name: profile.botName, closed: false, frameLost: false, source: journalSrc, title: 'VarCamp Quest Journal', unknown: false, controls: true, off: true, denied: true, iframeName: 'modalIframe', ...options.state };
+  const state = { welcome: options.delayed ? 0 : 1, modal: options.preexistingModal ?? false, frameModal: options.preexistingModal ?? false, media: options.media !== false,
+    location: 'about:srcdoc', position: { x: 2032, y: 2128 }, room: profile.roomUrl, name: profile.botName, closed: false, frameLost: false, source: journalSrc, title: modalAttribute('title'), unknown: false, controls: true, off: true, denied: true, iframeId: modalAttribute('id'), iframeName: modalAttribute('name'), parentTitle: false, modalCount: 1, closeCount: 1, associatedClose: true, connected: true, ...options.state };
   const waiters = new Set<any>(); let url = options.resumed ? profile.roomUrl : 'about:blank', starts = 0, moves = 0, positionReads = 0, issuedGrant;
   const record = (name, details?) => events.push({ name, at: Date.now(), details });
   const update = values => { Object.assign(state, values); for (const wake of [...waiters]) wake(); };
@@ -41,14 +46,17 @@ function fixture(options: any = {}) {
     async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' ? exactWelcome() : !exactWelcome(), timeout, wanted === 'visible' ? 'welcome-visible' : 'welcome-absent'); },
     async click() { record('welcome-click'); if (options.clickDelay) await new Promise(resolve => setTimeout(resolve, options.clickDelay)); if (state.unknown) throw Error('unknown popup intercepts welcome');
       if (!options.residual) update({ welcome: 0 });
-      if (options.modalDelay) setTimeout(() => update({ modal: true }), options.modalDelay); else update({ modal: true });
+      if (options.modalDelay) setTimeout(() => update({ modal: true, frameModal: true }), options.modalDelay); else update({ modal: true, frameModal: true });
     },
   };
   const close = {
+    async count() { return state.modal ? state.closeCount : 0; },
     async isVisible() { return state.modal; },
     async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' ? state.modal : !state.modal, timeout, `modal-${wanted}`); },
     async click() { record('modal-close');
+      if (options.failedClose) throw Error('native close failed');
       if (!options.stuckModal) { if (options.closeDelay) setTimeout(() => update({ modal: false }), options.closeDelay); else update({ modal: false }); }
+      if (!options.stuckFrame) { const delay = options.frameCloseDelay ?? options.closeDelay; if (delay) setTimeout(() => update({ frameModal: false }), delay); else update({ frameModal: false }); }
       if (options.residual && options.removalDelay !== undefined) setTimeout(() => update({ welcome: 0 }), options.removalDelay);
     },
   };
@@ -58,19 +66,31 @@ function fixture(options: any = {}) {
     async waitFor({ state: wanted, timeout }) { await wait(() => wanted === 'hidden' && !state.media, timeout, 'media-hidden'); },
   };
   const modalFrame = {
-    async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' && state.modal && state.iframeName === 'modalIframe' && state.source.endsWith('#directory'), timeout, 'directory-source'); },
-    async isVisible() { return state.modal; }, async getAttribute(name) { if (name !== 'src') throw Error('unexpected iframe attribute'); return state.source; },
+    async count() { return state.frameModal ? state.modalCount : 0; },
+    async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => {
+      if (state.frameModal && state.modalCount > 1) throw Error('ambiguous native modal iframe');
+      return wanted === 'hidden' ? !state.frameModal : state.frameModal && state.iframeId === 'modalIframe';
+    }, timeout, wanted === 'hidden' ? 'directory-hidden' : 'directory-source'); },
+    async isVisible() { return state.modal; },
+    async getAttribute(name) { return name === 'src' ? state.source : name === 'title' ? state.title : null; },
+    async evaluate(fn) { return fn({ isConnected: state.connected, parentElement: { tagName: 'DIV' } }); },
+    locator(selector) { if (selector !== '..') throw Error(`Unexpected modal relative selector ${selector}`);
+      return { getByTestId(id) { if (id !== 'close-modal-button') throw Error('Unexpected associated modal control');
+        return state.associatedClose ? { ...close, async waitFor(options) { if (options.state === 'hidden' && !state.frameModal) return; return close.waitFor(options); } } : { ...close, async count() { return 0; }, async waitFor() { throw Error('missing associated close'); }, async click() { throw Error('unrelated close forbidden'); } };
+      } };
+    },
   };
   const page: any = {
     context: () => context, url: () => url,
     getByText(text) { if (text === welcomeText) return welcome;
-      if (text === 'VarCamp Quest Journal') return { async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' && state.modal && state.title === text, timeout, 'directory-title'); }, async isVisible() { return state.modal && state.title === text; } };
+      if (text === 'VarCamp Quest Journal') return { async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' && state.modal && state.parentTitle, timeout, 'directory-title'); }, async isVisible() { return state.modal && state.parentTitle; } };
       throw Error(`Unexpected fixture text ${text}`);
     },
     getByTestId(id) { if (id === 'close-modal-button') return close; return { async waitFor({ timeout = 15000 }) { await wait(() => state.controls, timeout, 'visible-device'); }, async getAttribute() { return state.off ? 'bg-danger' : 'bg-success'; } }; },
     getByRole(role, { name }) { if (role !== 'button' || name !== 'Continue without webcam and microphone') throw Error('Unexpected native media control'); return media; },
     locator(selector) {
-      if (selector === 'iframe[name="modalIframe"][src$="#directory"]') return modalFrame;
+      if (selector === 'iframe#modalIframe') return modalFrame;
+      if (selector === 'iframe[name="modalIframe"][src$="#directory"]') return { async waitFor() { throw Error('captured native iframe has no name attribute'); } };
       return { async all() {
         if (selector === '.popupwrapper') return [...(state.welcome ? [{ async isVisible() { return true; }, async evaluate(fn) { return fn(knownWelcomeRoot()); } }] : []), ...(state.unknown ? [{ async isVisible() { return true; }, async evaluate() { return false; } }] : [])];
         if (selector === '[role="dialog"], [role="alertdialog"], [aria-modal]') return state.modal ? [{ async isVisible() { return true; } }] : [];
@@ -101,6 +121,35 @@ function fixture(options: any = {}) {
     close() { update({ closed: true }); },
   };
 }
+it('the captured native modal acknowledges startup without fabricated parent title text or iframe name', async () => {
+  const f = fixture(); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await task;
+    expect(f.starts).toBe(1); expect(f.health.snapshot().failure).toBeNull();
+    expect(f.events.filter(row => row.name === 'modal-close')).toHaveLength(1);
+    expect(f.state.frameModal).toBe(false); expect(f.state.modal).toBe(false);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+it('waits for asynchronously removed native iframe as well as its associated closed control before media', async () => {
+  const f = fixture({ frameCloseDelay: 1000 }); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0);
+    expect(f.state.modal).toBe(false); expect(f.state.frameModal).toBe(true);
+    expect(f.events.filter(row => row.name === 'media-click')).toHaveLength(0); expect(f.starts).toBe(0);
+    await vi.advanceTimersByTimeAsync(1000); await task;
+    expect(f.starts).toBe(1); expect(f.state.frameModal).toBe(false);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+it('waits for the associated close when the native iframe disappears first', async () => {
+  const f = fixture({ closeDelay: 1000, frameCloseDelay: 0 }); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0);
+    expect(f.state.modal).toBe(true); expect(f.state.frameModal).toBe(false);
+    expect(f.events.filter(row => row.name === 'media-click')).toHaveLength(0); expect(f.starts).toBe(0);
+    await vi.advanceTimersByTimeAsync(1000); await task;
+    expect(f.starts).toBe(1); expect(f.state.modal).toBe(false);
+  } finally { f.close(); await task.catch(() => {}); }
+});
 it('waits for delayed native world registration before media or import although API/frame are already ready', async () => {
   const f = fixture({ delayed: true }); setTimeout(() => f.update({ welcome: 1 }), 1000);
   const task = f.launch(); void task.catch(() => {});
@@ -141,10 +190,18 @@ const invalid = [
   { name: 'duplicate action', state: { welcome: 2 } }, { name: 'unknown popup', state: { unknown: true } },
   { name: 'preexisting modal', preexistingModal: true }, { name: 'wrong directory title', state: { title: 'Other journal' } },
   { name: 'journal section is not directory', state: { source: journalSrc.replace('#directory', '#journal') } },
-  { name: 'wrong native modal frame', state: { iframeName: 'otherFrame' } },
+  { name: 'name-only wrong-id modal frame', state: { iframeId: 'otherFrame', iframeName: 'modalIframe' } },
+  { name: 'missing title attribute despite parent text decoy', state: { title: null, parentTitle: true } },
+  { name: 'wrong title attribute despite parent text decoy', state: { title: 'Other title', parentTitle: true } },
+  { name: 'duplicate native modal iframe', state: { modalCount: 2 } },
+  { name: 'duplicate associated native close', state: { closeCount: 2 } },
+  { name: 'unrelated close outside native container', state: { associatedClose: false } },
+  { name: 'detached modal identity', state: { connected: false } },
+  { name: 'wrong directory path', state: { source: journalSrc.replace('/src/journal/', '/other/') } },
+  { name: 'failed normal close', failedClose: true },
   { name: 'foreign directory source', state: { source: 'https://foreign.invalid/src/journal/index.html#directory' } },
   { name: 'missing action', delayed: true }, { name: 'unconsumed action', residual: true }, { name: 'returned action', reappears: true },
-  { name: 'stuck modal', stuckModal: true }, { name: 'intercepted media', interceptedMedia: true }, { name: 'stuck media', stuckMedia: true },
+  { name: 'stuck modal', stuckModal: true }, { name: 'stuck iframe after close', stuckFrame: true }, { name: 'intercepted media', interceptedMedia: true }, { name: 'stuck media', stuckMedia: true },
   { name: 'missing controls', state: { controls: false } }, { name: 'media on', state: { off: false } }, { name: 'permissions not denied', state: { denied: false } },
   { name: 'wrong room', state: { room: 'wrong-room' } }, { name: 'wrong spawn', state: { position: { x: 2256, y: 2256 } } },
   { name: 'wrong guide name', state: { name: 'Other [BOT]' } }, { name: 'wrong map frame', state: { location: 'other-frame' } },
