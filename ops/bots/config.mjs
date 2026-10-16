@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { isAbsolute } from 'node:path';
 
-const moduleSha256 = '649e961eb90cc6e2812e00603b1ba2f08922b163afa4fb5885c0674dfae75312';
+const moduleSha256 = '4d8b19bcbcc8193dbcfe5ddc7e419b61fbf7d6ae24fcc88b0dc1d27d82d44391';
 const shared = Object.freeze({ moduleSha256, moduleBytes: 23410,
   moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',

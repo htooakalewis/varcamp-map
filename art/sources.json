@@ -83,7 +83,7 @@
     "url": "https://creativecommons.org/publicdomain/zero/1.0/",
     "license": "CC0 1.0",
     "licenseFile": "assets/tilesets/original/LICENSE.txt",
-    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained.",
+    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained.",
     "files": [
       {
         "path": "assets/tilesets/original/zodiac.png",
@@ -148,6 +148,22 @@
       {
         "path": "assets/tilesets/original/coastal-flight.png",
         "sha256": "615e385edc6d741303b6631824929372ba082b6bfb5432fd632d39b996b4f525"
+      },
+      {
+        "path": "art/source/roadster-poses.png",
+        "sha256": "08b8e46661d57bb4f44ea0e09bdee91debc3311440d1d2406a949e164bd86cd0"
+      },
+      {
+        "path": "art/source/roadster-authoring.json",
+        "sha256": "d5a2428ac961f006497415f0faa442a39c571c03b7adcece9c31e184cc8418da"
+      },
+      {
+        "path": "art/source/roadster.json",
+        "sha256": "c558783659961d8bb1636a5fdf1676b9224a943890bb2950b1dcffa2f1b52d9c"
+      },
+      {
+        "path": "assets/tilesets/original/roadster.png",
+        "sha256": "f0d01aa3c4f9835b1d35fa6ae3c8534ebdb8e4a647d3cdb30f43309b13a63fe1"
       }
     ]
   },

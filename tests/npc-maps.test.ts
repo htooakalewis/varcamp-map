@@ -42,6 +42,8 @@ const receipts = [
 ];
 it.each(receipts)('removes only reviewed %s native robot data while preserving collisions and every unrelated field', (id, tmjHash, wamHash, maskHash) => {
  const tmj=JSON.parse(readFileSync(`maps/${id}.tmj`,'utf8')),wam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
+ // The separate Roadster test verifies this sole additive overlay before inversion.
+ if(id==='overworld'){tmj.layers=tmj.layers.filter((l:{name:string})=>l.name!=='roadster');tmj.tilesets=tmj.tilesets.filter((s:{name:string})=>s.name!=='roadster');tmj.nextlayerid--;}
  expect(digest(tmj)).toBe(tmjHash);expect(digest(wam)).toBe(wamHash);
  expect(digest(tmj.layers.find((l:{name:string})=>l.name==='physical-collisions').data)).toBe(maskHash);
 });

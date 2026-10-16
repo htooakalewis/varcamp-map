@@ -1,3 +1,4 @@
+import {renderRoadster} from './roadster';
 import {renderCoastalFlight} from './coastal-flight';
 import {renderExteriorGates} from './exterior-gates';
 import { renderHubMasters } from './hub-art';
@@ -52,6 +53,9 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   const flight=await renderCoastalFlight();
   if(!readFileSync('assets/tilesets/original/coastal-flight.png').equals(flight.png))errors.push('coastal-flight: native animated PNG differs from deterministic source');
   if(JSON.stringify(JSON.parse(readFileSync('art/source/coastal-flight.json','utf8')))!==JSON.stringify(flight.metadata))errors.push('coastal-flight: metadata differs from deterministic source');
+  const roadster=await renderRoadster();
+  if(!readFileSync('assets/tilesets/original/roadster.png').equals(roadster.png))errors.push('roadster: animated PNG differs from compiled original poses');
+  if(JSON.stringify(JSON.parse(readFileSync('art/source/roadster.json','utf8')))!==JSON.stringify(roadster.metadata))errors.push('roadster: metadata differs from compiled original poses');
   return errors;
 }
 if (process.argv[1] && import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {

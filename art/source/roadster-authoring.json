@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "description": "Original generated silver angular Roadster-inspired pixel car. Private reference photographs are not distributed.",
+  "source": {
+    "path": "art/source/roadster-poses.png",
+    "width": 1254,
+    "height": 1254,
+    "gridColumns": 4,
+    "gridRows": 4
+  },
+  "framePixels": 160,
+  "scale": 0.4,
+  "alphaThreshold": 128,
+  "position": {
+    "x": 73,
+    "y": 60
+  },
+  "poses": [
+    {
+      "name": "landed",
+      "duration": 3000,
+      "bottom": 139
+    },
+    {
+      "name": "ignition",
+      "duration": 600,
+      "bottom": 139
+    },
+    {
+      "name": "rise",
+      "duration": 500,
+      "bottom": 139
+    },
+    {
+      "name": "low-hover",
+      "duration": 700,
+      "bottom": 139
+    },
+    {
+      "name": "hover",
+      "duration": 1200,
+      "bottom": 133
+    },
+    {
+      "name": "jump",
+      "duration": 500,
+      "bottom": 122
+    },
+    {
+      "name": "roll-1",
+      "duration": 350,
+      "bottom": 124
+    },
+    {
+      "name": "roll-2",
+      "duration": 350,
+      "bottom": 124
+    },
+    {
+      "name": "roll-3",
+      "duration": 350,
+      "bottom": 120
+    },
+    {
+      "name": "inverted",
+      "duration": 350,
+      "bottom": 120
+    },
+    {
+      "name": "roll-5",
+      "duration": 350,
+      "bottom": 124
+    },
+    {
+      "name": "roll-6",
+      "duration": 350,
+      "bottom": 124
+    },
+    {
+      "name": "recover",
+      "duration": 500,
+      "bottom": 132
+    },
+    {
+      "name": "descend",
+      "duration": 800,
+      "bottom": 139
+    },
+    {
+      "name": "touchdown",
+      "duration": 600,
+      "bottom": 139
+    },
+    {
+      "name": "rest",
+      "duration": 2300,
+      "bottom": 139
+    }
+  ],
+  "generation": {
+    "tool": "OpenAI image generation",
+    "date": "2026-10-16",
+    "requestedPixels": 1024,
+    "actualPixels": 1254,
+    "prompt": "Use case: stylized-concept. Asset type: production game animation spritesheet for a top-down 32px-tile WorkAdventure pixel-art event campus. The five input photos are visual REFERENCES only, not edit targets, not backgrounds. Create an ORIGINAL, polished pixel-art animated silver rocket sports car inspired by the angular newly unveiled Tesla Roadster shown in the references. Low wedge nose, silver faceted metal, black glass canopy, four black tyres, thin white front lighting, red rear light bar, dark rear diffuser, visible small cold-gas jet nozzles. No lettering, logos, people, pedestal, scenery, labels, grid lines or numbers. TRUE TRANSPARENT background. CRITICAL composition: square spritesheet, exactly 4 columns by 4 rows, 16 equal square cells, 1024x1024 overall, each cell exactly 256x256; all artwork for one frame must fit wholly inside its own cell, no overlap. Crisp limited-palette pixel art with a uniform chunky pixel grid, no blur, no antialiased painterly edges, navy outlines, silver/white highlights, pale cyan/white compressed-gas exhaust. Fixed orthographic 3/4 game view from above showing the front and driver side, nose facing lower-left. The SAME car body proportions and same base centre in every cell. Car normal pose about 180 pixels wide with generous transparent margins. Row-major timeline: frame1 landed normal; frame2 landed with small ignition puffs; frame3 raised 10 pixels with downward jets; frame4 hover raised20 pixels; frame5 ascending raised35 pixels with stronger white/cyan jets; frame6 high at raised45 pixels and beginning barrel roll around car's LENGTH axis; frame7 roll45degrees; frame8 roll90degrees sideways; frame9 roll135degrees; frame10 roll180degrees inverted with underside and four tyres visible; frame11 roll225degrees; frame12 roll270degrees; frame13 roll315degrees; frame14 upright, descending with landing thrusters; frame15 gentle touchdown and small white gas puffs; frame16 settled normal car matching frame1. Do not yaw or drive horizontally across cells; this is a stationary jump and roll, not travelling. Each cell should show the entire complete car, internally consistent front, wheels and light bar. Keep exhaust within its cell. No cast shadow or floor: ground shadow and pad will be separate map assets.",
+    "referencePolicy": "Five private photographs used only as visual references; none included in this repository. Only original generated PNG pixels enter the compiler."
+  }
+}

@@ -28,8 +28,8 @@
     {
       "path": "maps/overworld.tmj",
       "fromSha256": "6a94d48491f93d0a07581919f5196d32efb141225c051407ead62be414702548",
-      "toSha256": "f75ace0a391e667af25516835ad6445dd58e0c78cb82cd5cf91c7e19b5626a07",
-      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+      "toSha256": "87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad",
+      "reason": "Retain the exact static robot retirement; append only the stationary noncolliding Roadster layer and native tileset, increment nextlayerid, preserve all prior fields/GIDs/collisions."
     },
     {
       "path": "maps/overworld.wam",
@@ -52,8 +52,8 @@
     {
       "path": "maps/preview/overworld.tmj",
       "fromSha256": "e8427a3680c82ec80866f00a687faa8e9e99823d30d743a0b778e35e0d71c3ed",
-      "toSha256": "9a4b99d4b98a04da24f3fbef6aab38a9e032425a764ae5269838722202ed9b7f",
-      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+      "toSha256": "7ae0c1575a467ac48fac7caf70a5a8fcd9d72a88d79b324f1dd0057f3484980b",
+      "reason": "Refresh the overworld native preview for the sole additive Roadster display while preserving the existing URL transformation and static robot retirement."
     },
     {
       "path": "maps/preview/shipyard-beach.tmj",
@@ -100,8 +100,8 @@
     {
       "path": "tests/coastal-boarding.test.ts",
       "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
-      "toSha256": "66e63885c2c818d733bcec1350060569e749f1363e1f9a0efffc84b2f9ed963f",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+      "toSha256": "a5e4e681ece4e214ae0a46b6cd63c29306307b6da0234d421b2ee181d5b95ccd",
+      "reason": "Preserve prior coastal/start/robot receipts by inverting only the separately verified Roadster overlay before comparison."
     },
     {
       "path": "tests/coastal-character.test.ts",
@@ -130,8 +130,8 @@
     {
       "path": "tests/npc-maps.test.ts",
       "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
-      "toSha256": "b78d2200a288af1dd1f2b0957c44d59e12fa386b05f54346c40970b73e24a217",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+      "toSha256": "0145368491fb66c784d8bbfa05a9f303de3c18f06fadc785d3124747ae7f60a0",
+      "reason": "Preserve exact static robot retirement receipts by inverting the separately verified additive Roadster layer/tileset before comparison."
     },
     {
       "path": "tests/shipyard-beach.test.ts",
@@ -160,14 +160,32 @@
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
-      "toSha256": "4f80ae57e635a8eb1efe1ba7e44eaca109a750ec455f7db169259c725a31a351",
-      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+      "toSha256": "12c46804a9f134ba98330d324bf2942083b276beb115d045c4e394c9278bde9a",
+      "reason": "Retain static robot retirement; add only the fixed Roadster LayoutAnimatedOverlay with exact source receipts."
     },
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
       "toSha256": "541f8125997ca62cfe767a535447243de5190638cbbecc016fe01107584f8a9a",
       "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
+      "toSha256": "8cc1f019f9dd754a419f9ca520eab9776ce1ff8cb503e2abd53830814ccac09a",
+      "reason": "Register the original generated Roadster source, crop/timing metadata and native atlas with exact file hashes; retain all existing source records."
+    },
+    {
+      "path": "assets/tilesets/original/ATTRIBUTION.md",
+      "fromSha256": "d642d99c504d6d57aa6933120c93b8b9d8ee8feeb04f651c5589aa469781c800",
+      "toSha256": "f1fa1ad94f416b799af047c1f8f56d3f0f1b7461e87e582b324c474bad38a950",
+      "reason": "Add Roadster generation and asset-compilation attribution; distribute no private reference photographs."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "6f29a43dda762f53808c5eee2d9733436d5e7f82747105e279f969d27a8b7e6b",
+      "toSha256": "3ce718e76e3aeee1dc298a3c2b685fecce84742419e08c6135f8db9a2898d0ab",
+      "reason": "Check deterministic Roadster atlas and metadata parity alongside every existing art check."
     }
   ]
 }
