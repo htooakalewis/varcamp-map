@@ -116,12 +116,39 @@ export async function verifyRoomUI(page) {
   const permissions = await page.evaluate(async () => Promise.all(['microphone', 'camera'].map(async name =>
     (await navigator.permissions.query({ name })).state)));
   if (permissions.length !== 2 || permissions.some(state => state !== 'denied')) throw Error('Media permissions are not denied');
-  if (await page.getByTestId('close-modal-button').isVisible() ||
-      await page.getByText('Open the welcome directory', { exact: true }).isVisible()) throw Error('Unresolved welcome/modal');
+  if (await page.getByTestId('close-modal-button').isVisible()) throw Error('Unresolved directory modal');
   if (await page.getByRole('button', { name: 'Continue without webcam and microphone', exact: true }).isVisible()) throw Error('No-media popup returned');
-  for (const modal of await page.locator('[role="dialog"], .popupwrapper').all()) {
-    if (await modal.isVisible()) throw Error('Unknown visible modal/popup');
+  // Modal semantics are independent of popup text; a matching descendant never excuses them.
+  for (const modal of await page.locator('[role="dialog"], [role="alertdialog"], [aria-modal]').all()) {
+    if (await modal.isVisible()) throw Error('Unknown visible modal');
   }
+  let knownPanels = 0;
+  for (const popup of await page.locator('.popupwrapper').all()) {
+    if (!await popup.isVisible()) continue;
+    const known = await popup.evaluate(root => {
+      // The observed action div remains clickable after the native directory closes.
+      // Inspect only its wrapper, with the exact four-DIV chain and complete normalized text.
+      const required = [
+        ['popupwrapper', 'popupwrapper-0'], ['popup-container'],
+        ['flex', 'items-center', 'p-4', 'px-10', 'pointer-events-auto', 'justify-center', 'grow'],
+        ['text-center', 'leading-6', 'responsive-message'],
+      ];
+      let element = root;
+      for (let depth = 0; depth < required.length; depth++) {
+        if (!element || element.tagName !== 'DIV' ||
+            (element.textContent ?? '').replace(/\s+/gu, ' ').trim() !== 'Open the welcome directory') return false;
+        const classes = new Set((element.getAttribute('class') ?? '').split(/\s+/u));
+        if (required[depth].some(name => !classes.has(name))) return false;
+        if (['role', 'aria-modal', 'contenteditable', 'tabindex', 'aria-controls', 'aria-haspopup'].some(name => element.getAttribute(name) !== null)) return false;
+        if (element.children.length !== (depth === required.length - 1 ? 0 : 1)) return false;
+        element = element.children[0];
+      }
+      return true;
+    });
+    if (!known || ++knownPanels > 1) throw Error('Unknown or ambiguous visible popup');
+  }
+  const welcomeVisible = await page.getByText('Open the welcome directory', { exact: true }).isVisible();
+  if (welcomeVisible !== (knownPanels === 1)) throw Error('Unclassified welcome action panel');
 }
 export async function settleWelcome(page) {
   const welcome = page.getByText('Open the welcome directory', { exact: true });
