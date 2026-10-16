@@ -10,11 +10,22 @@ import { buildMap } from '../tools/maps/builder';
 import { loadTileCatalog } from '../tools/art/catalog';
 import { validateMap } from '../tools/maps/validate';
 import { WORLD_CATALOG } from '../src/world/catalog';
-import type { MapLayout, TiledMap } from '../tools/maps/types';
+import type { MapLayout, TiledMap, TiledLayer } from '../tools/maps/types';
 const hash=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const layout=()=>json('world/layouts/shipyard-beach.json') as MapLayout;
 const native=()=>json('maps/shipyard-beach.tmj') as TiledMap;
+// Preview is a derived artifact: only these three URL adaptations are allowed.
+// Exact equality catches omitted maps:build before receipt checks can accept an
+// older, still historically reviewed preview beside newly authorized native art.
+function assertDerivedBeachPreview(preview:TiledMap):void {
+ const expected=structuredClone(native());
+ for(const p of expected.properties??[])if(p.name==='script')p.value='../'+p.value;
+ for(const set of expected.tilesets)if(set.image)set.image='../'+set.image;
+ const exits=(layers:TiledLayer[]):void=>{for(const layer of layers){if(layer.type==='group')exits(layer.layers);for(const p of layer.properties??[])if(p.name==='exitUrl')p.value=String(p.value).replace('.wam#','.tmj#');}};
+ exits(expected.layers);
+ expect(preview,'Beach preview must derive exactly from the current native map; refresh maps:build before testing or freezing receipts').toEqual(expected);
+}
 describe('relaxed native beach with retained harbor contracts',()=>{
  it('preserves every existing native entrance/exit ID, GID, property and WAM byte',()=>{
   const map=native(),contract=json('tests/fixtures/beach-semantic-contract.json');
@@ -98,6 +109,15 @@ describe('relaxed native beach with retained harbor contracts',()=>{
   for(const [x,y]of[[0,0],[0,47],[47,47],[20,46]])expect(mask.data[y*map.width+x],'sea must stay blocked').not.toBe(0);
   for(const set of newTilesets.filter(t=>t.image?.endsWith('/guides.png')))for(const layer of newLayers)if(layer.type==='tilelayer')expect(layer.data.filter(g=>g>=set.firstgid&&g<set.firstgid+set.tilecount!)).toEqual([]);
   expect(newLayers.flatMap(l=>l.type==='objectgroup'?l.objects:[]).filter(o=>o.name.startsWith('npc-name-'))).toEqual([]);
+ });
+
+ it('keeps the current beach preview exactly derived from native art, collisions, IDs and controls',()=>{
+  assertDerivedBeachPreview(json('maps/preview/shipyard-beach.tmj') as TiledMap);
+ });
+ it('rejects the actual stale committed beach preview even though its historical receipt was valid',()=>{
+  const stale='tests/fixtures/beach-retirement/stale-preview.tmj';
+  expect(hash(readFileSync(stale))).toBe('a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1');
+  expect(()=>assertDerivedBeachPreview(json(stale) as TiledMap)).toThrow(/Beach preview must derive exactly/);
  });
 
 });

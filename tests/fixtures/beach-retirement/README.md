@@ -4,3 +4,5 @@
 - `retired-native.tmj`: exact post-retirement native source from `888dd3ce8bf2d6702d339b252c32584fa281ecab:maps/shipyard-beach.tmj`; file SHA-256 `4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601`. Its semantic digest remains the original frozen `c656d02d3e7675dc3cbe54ac20649c1be6c93aec8969be5249c805bc918db11e`.
 
 The real addNpcGuides function is tested against the historical authored input and the independently extracted historical retired result digest. The old native retirement receipt and collision digest remain unchanged. Later beach artwork is checked through a separate refinement receipt and strict native delta constraints. No git access is needed in shallow CI.
+
+`stale-preview.tmj` preserves the actual previously committed preview that passed its old reviewed receipt (`a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1`) while lagging behind the authorized current native beach. It is a negative generation-contract fixture, not a new approved current preview or a replacement historical receipt. Runtime tests use committed bytes and require no git history.

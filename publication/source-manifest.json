@@ -343,7 +343,7 @@
     "ops/tests/lyra-container-config.test.ts": "55d4697528fce8e96adc04f36eea6fb0964dadda3177dce21e0e47ea1256b94c",
     "ops/tests/lyra-healthcheck.test.ts": "a65260b2ced5deb5f4e344a0992e88fa17d8e680e6d4625b187bec52d91eea58",
     "ops/tests/lyra-launcher.test.ts": "575ed5295a1be85f5231c5e4cbfb6f50e1ac4baa6bbffc2aa2c7f3b1f4960c8f",
-    "publication/revisions/2026-10-16-shared-guides.json": "6abbac6b261d3caab3ef0046f176a3ca5b9e80015b914851b5086940ad0dbd26",
+    "publication/revisions/2026-10-16-shared-guides.json": "9d725e7aadf2abaccd91149faff6c0e46766402815cf2a26fbc281d83b8f03c2",
     "publication/revisions/README.md": "3e3e2de7ffb3cee827ac613837fda846aca14fbfda4528175905662f78893e0d",
     "publication/verify-source.mjs": "9c741532360f067bc3fa8cfe0a08ff4da1f9ca808b8781f631b152a3455cac7e",
     "src/bots/controller.ts": "7620159a83df7e38d43b92dbab2ff32489f8101dcaccc05359b7e0a1c1733ea6",
@@ -369,15 +369,16 @@
     "ops/tests/guide-observer.test.ts": "40810960fb16121606eea6690f48b627aafe1d89722c8831ff516fed34cbb0de",
     "ops/tests/release-upload.test.ts": "6d0fcea08c25e2cc366c7dbf7ad51bd3b9882b4626f04b259e65670ab4e62050",
     "ops/tests/release_graph_harness.py": "1a28644932654a5155c7a753eeb5c86e09f40fb89837d79722e8d251cc05516c",
-    "tests/beach-refinement.test.ts": "302c8dcc8fcc865ddf8cf4f020f0248b5e9bd899289c4d8b47ef78d3fb7cf71b",
+    "tests/beach-refinement.test.ts": "4fca16e4ff04c389622165081a93285a2e009017cbeeaf0ee48668fad612dec7",
     "tests/fixtures/beach-semantic-contract.json": "00fa9047d103ac654e1234d516f06fe885b7c4fb750364d37ea0e913e35e7988",
     "tests/guide-lifecycle.test.ts": "16ff3cc6f76b4597173b733ae208ca78f774446f889be979d40599cd145d6c3b",
     "tests/guide-retained-proofs.test.ts": "ec5175198d08c282c9572e6db4c36b93706a6158aacc5f5e7661bc81edb8a7da",
     "tools/art/beach-lounge.py": "d0e0b674ee4f4a863ebc6202e1fd2bf9a19abc17efbedf3adf74a9418bae397e",
     "tools/maps/refine-beach.mjs": "31f38b97c766da3ef93edd411c8e6000c0a0904cd2fc483da6a8d03978d78026",
     "tests/fixtures/beach-refinement-receipt.json": "c256d552d31d0b370f9f4f3eac33c6fc2f5ff31bf013bb4881080e7892fc0222",
-    "tests/fixtures/beach-retirement/README.md": "830cdb1220f346196151b8a2465b7af0ec3b1b11f261867122b4d05f1bfe0986",
+    "tests/fixtures/beach-retirement/README.md": "020856f7846b76ec32f62892309b88482a2b640b4d352f71cdf62a4697dde9df",
     "tests/fixtures/beach-retirement/before-layout.json": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
-    "tests/fixtures/beach-retirement/retired-native.tmj": "4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601"
+    "tests/fixtures/beach-retirement/retired-native.tmj": "4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601",
+    "tests/fixtures/beach-retirement/stale-preview.tmj": "a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1"
   }
 }
