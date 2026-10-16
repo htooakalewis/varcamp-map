@@ -9,7 +9,8 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       preserveEntrySignatures: 'strict',
-      input: { journal: './src/journal/index.html', npc: './src/npc/index.html', 'src-main': './src/main.ts' },
+      output: { entryFileNames: chunk => chunk.name === 'lyra' ? 'bots/lyra.js' : 'assets/[name]-[hash].js' },
+      input: { journal: './src/journal/index.html', npc: './src/npc/index.html', 'src-main': './src/main.ts', lyra: './src/bots/lyra.ts' },
     },
   },
   preview: { cors: true },
