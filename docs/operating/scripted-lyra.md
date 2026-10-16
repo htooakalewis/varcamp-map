@@ -11,7 +11,7 @@ npm test -- --maxWorkers=1 --testTimeout=30000
 shasum -a 256 dist/bots/lyra.js
 ```
 
-Publication and activation are separate steps. This task does not publish or start a shared avatar. A built module and passing tests do not demonstrate that independent visitor sessions observe the same moving bot.
+Publication and activation are separate steps. The stable public destination is `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js`. Publication is pending the complete combined change, its full canonical CI run, and HTTPS/package byte comparison; a local build does not make that URL current. This task does not publish or start a shared avatar. A built module and passing tests do not demonstrate that independent visitor sessions observe the same moving bot.
 
 ## Behavior and commands
 
@@ -35,7 +35,7 @@ The [official custom-script guide](https://docs.workadventu.re/admin/bots/custom
 
 1. Publish the reviewed complete `dist` package on HTTPS, preserving any emitted imports and source-map assets.
 2. Compute the SHA-256 of the exact published `bots/lyra.js` bytes and compare it with the reviewed artifact.
-3. Create one bot named `Lyra [BOT]`, choose **Custom script**, and set its script URL to `https://<approved-host>/<release>/bots/lyra.js?v=<sha256>` for that exact release.
+3. Create one bot named `Lyra [BOT]`, choose **Custom script**, and set its script URL to `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=<sha256>` using the full verified module SHA-256. The query versions browser caching; it does not validate downloaded bytes. Complete steps 1–2 before activation.
 4. Join the current overworld using its native welcome spawn. Keep camera and microphone off. Start exactly one dedicated session.
 5. Use two separate visitor sessions to verify one shared avatar, changing positions, nearby bubble replies, escort ownership and retained visitor movement control. Stop through the manager and confirm only Lyra disappears.
 
@@ -46,7 +46,7 @@ The guide's prose describes a `run` function; its linked starter uses a default 
 WorkAdventure's [development tutorial](https://docs.workadventu.re/blog/gpt-bot/#our-battle-plan) describes a dedicated browser tab and eventual headless browser. A separate owned development runner may join as an ordinary participant, identify the avatar as `Lyra [BOT]`, and import this artifact only inside that browser's already-initialized map-script iframe:
 
 ```js
-const lyra = await import('https://<approved-host>/<release>/bots/lyra.js?v=<sha256>');
+const lyra = await import('https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=<sha256>');
 await lyra.default.run({});
 ```
 

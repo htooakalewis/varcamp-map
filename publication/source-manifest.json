@@ -309,5 +309,16 @@
     "world/layouts/zodiac-festival-park.json": "280254ac2a60208da078f964fa0d4201cad24f325b321026d875b32d5dd36a9c",
     "world/maze-route.json": "4e41bb39e7069b3c0f3495204cf0e81e4a474ebc3448e16560449860adbd5cd8"
   },
-  "excluded": "Local deployment history, private configuration, credentials, dependency runtimes and temporary QA archives are not part of this public source snapshot."
+  "excluded": "Local deployment history, private configuration, credentials, dependency runtimes and temporary QA archives are not part of this public source snapshot.",
+  "extensionInventory": {
+    "buildmap.vite.config.ts": "ae2f20b36f3eb305e71e1e745e083d92d2e7625b75a2f9ab78549f3561271404",
+    "src/bots/controller.ts": "528c85be839002f25e7b6a92abbabdf8fe221c35339956ba9354bf428961827e",
+    "src/bots/lyra-routes.json": "84711aaf199b2c348348392b25533c41076a3347e86f101c19276c68e2be3780",
+    "src/bots/lyra.ts": "b95b11e253a8c3c6cabdfb26a7c643960cddbfc4ff56cde5db591950c8994ae6",
+    "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15",
+    "src/bots/venue.ts": "e95238c0d3d0b07a988e500209acc8bfc03e7a001b2ad16b46ba28af8f1f6bc6",
+    "tests/lyra-bot-release.test.ts": "3722c1251146195192c63c0f0683a479971f888100bbae9c47bcdee57b6572ff",
+    "tests/lyra-bot.test.ts": "41328b989242f1bf3cafd6cc7f742a04caa2ed0e5e763729448d0311f0d378a7",
+    "tests/publication-integrity.test.ts": "1ae54917c553bc39ef228a58c11f00b84a01fd40888ea7077380e2a878b4960c"
+  }
 }

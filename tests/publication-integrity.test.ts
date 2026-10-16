@@ -1,0 +1,94 @@
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join, resolve } from 'node:path';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+
+const checker = resolve('publication/verify-source.mjs');
+const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e'; // "baseline\n"
+const extensionHash = 'f7315289ab7085fe7c2c0cde78d3fb1f1ec0b5d324ca49c50954f991eeb32aca'; // "extension\n"
+const baselinePaths = Object.keys(JSON.parse(readFileSync('publication/source-manifest.json', 'utf8')).sourceInventory);
+
+describe('publication source integrity CLI', () => {
+  let root: string;
+  let manifest: { maps: number; wams: number; sourceFilesByteExact: number; sourceInventory: Record<string, string>; extensionInventory: Record<string, string> };
+  function write(path: string, content: string) {
+    mkdirSync(dirname(join(root, path)), { recursive: true });
+    writeFileSync(join(root, path), content);
+  }
+  function verify() {
+    write('publication/source-manifest.json', JSON.stringify(manifest));
+    const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
+    return { status: result.status, output: result.stdout + result.stderr };
+  }
+  beforeEach(() => {
+    root = mkdtempSync(join(tmpdir(), 'varcamp-publication-'));
+    manifest = {
+      maps: 33, wams: 33, sourceFilesByteExact: 303,
+      sourceInventory: Object.fromEntries(baselinePaths.map(path => [path, baselineHash])),
+      extensionInventory: {
+        'src/bots/reviewed.ts': extensionHash,
+        'buildmap.vite.config.ts': extensionHash,
+        'ops/bots/reviewed-runner.mjs': extensionHash,
+      },
+    };
+    for (const path of baselinePaths) write(path, 'baseline\n');
+    for (const path of Object.keys(manifest.extensionInventory)) write(path, 'extension\n');
+  });
+  afterEach(() => rmSync(root, { recursive: true, force: true }));
+
+  it('accepts reviewed additions inside source folders and outside them', () => {
+    expect(verify().status).toBe(0);
+  });
+
+  it('still rejects changed frozen source bytes when extensions are approved', () => {
+    write('src/main.ts', 'tampered\n');
+    const result = verify();
+    expect(result.status).not.toBe(0);
+    expect(result.output).toContain('Frozen source changed: src/main.ts');
+  });
+
+  it.each(['src/bots/reviewed.ts', 'buildmap.vite.config.ts', 'ops/bots/reviewed-runner.mjs'])(
+    'rejects extension hash drift at %s', path => {
+      write(path, 'tampered\n');
+      const result = verify();
+      expect(result.status).not.toBe(0);
+      expect(result.output).toContain(`Extension source changed: ${path}`);
+    },
+  );
+
+  it.each(['src/bots/reviewed.ts', 'buildmap.vite.config.ts', 'ops/bots/reviewed-runner.mjs'])(
+    'rejects a missing extension at %s', path => {
+      rmSync(join(root, path));
+      const result = verify();
+      expect(result.status).not.toBe(0);
+      expect(result.output).toContain(`Missing extension source: ${path}`);
+    },
+  );
+
+  it('rejects unlisted additions in the eight source folders', () => {
+    write('src/bots/unreviewed.ts', 'extension\n');
+    const result = verify();
+    expect(result.status).not.toBe(0);
+    expect(result.output).toContain('Source inventory has missing or additional files');
+  });
+
+  it('rejects an extension that overlaps the immutable baseline', () => {
+    manifest.extensionInventory['src/main.ts'] = extensionHash;
+    const result = verify();
+    expect(result.status).not.toBe(0);
+    expect(result.output).toContain('Extension overlaps frozen source: src/main.ts');
+  });
+
+  it('keeps the 33 native map-pair gate even when renamed map bytes are approved', () => {
+    const oldPath = 'maps/overworld.wam';
+    const newPath = 'maps/unpaired.wam';
+    rmSync(join(root, oldPath));
+    delete manifest.sourceInventory[oldPath];
+    manifest.sourceInventory[newPath] = baselineHash;
+    write(newPath, 'baseline\n');
+    const result = verify();
+    expect(result.status).not.toBe(0);
+    expect(result.output).toContain('Native TMJ and WAM map IDs differ');
+  });
+});

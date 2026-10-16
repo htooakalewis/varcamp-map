@@ -26,7 +26,7 @@ npm run maps:build
 npm run buildmap
 ```
 
-`dist/` contains the ready-to-host world: 33 TMJ maps, 33 WAMs, runtime scripts, sponsor artwork, source atlases and credits. It omits private configuration and development previews. Copy its full contents to a static HTTPS host; keep the relative paths intact. For an existing edited WorkAdventure world, follow the guarded publication procedure rather than overwriting live WAM state.
+`dist/` contains the ready-to-host world: 33 TMJ maps, 33 WAMs, runtime scripts, the independent `bots/lyra.js` module, sponsor artwork, source atlases and credits. It omits private configuration and development previews. Copy its full contents to a static HTTPS host; keep the relative paths intact. For an existing edited WorkAdventure world, follow the guarded publication procedure rather than overwriting live WAM state.
 
 Open `maps/*.tmj` in Tiled. Normal `maps:build` preserves native edits and refreshes `maps/preview/`. Hand-composed source layouts are in `world/layouts/`; editable artwork and full source credits are retained in `art/` and `assets/`. The map files and assets match the developed world byte for byte; [the snapshot manifest](publication/source-manifest.json) records them.
 
@@ -41,7 +41,9 @@ npm run buildmap
 npm test -- --maxWorkers=1 --testTimeout=30000
 ```
 
-Full verification uses macOS ARM64 and official Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. GitHub installs that pinned, checksum-verified tool and runs all tests. An independent Linux job verifies all 303 frozen source hashes and all 33 native map pairs without regenerating artwork. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
+Full verification uses macOS ARM64 and official Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. GitHub installs that pinned, checksum-verified tool and runs all tests. An independent Linux job verifies all 303 frozen source hashes, the separately reviewed extension hashes and all 33 native map pairs without regenerating artwork. The snapshot’s original 303 paths and hashes remain unchanged; `extensionInventory` in the manifest records added source files and the changed root build configuration. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
+
+The reviewed Lyra module targets [the stable script URL](https://htooayelwinict.github.io/varcamp-map/bots/lyra.js). Publication remains pending until the complete combined change passes CI, deploys, and HTTPS bytes match the reviewed package. Activation requires that verification and a separate dedicated bot session, using `?v=<sha256>` for the verified module. See [Scripted Lyra](docs/operating/scripted-lyra.md) for the `default.run` contract and activation checks.
 
 Pushing `main` runs strict artwork and build checks on macOS ARM64, independently checks the frozen source inventory on Linux, and deploys the ready-to-host maps through GitHub Pages only when both jobs pass. Linux artwork regeneration currently changes decoded flight-atlas pixels and is unsupported; use the canonical macOS authoring environment. Publishing preserves the existing artwork bytes. This publishes map assets; it does not alter the devbox or WorkAdventure server. The original public draft files `varcamp.tmj`, `tileset.png` and `build_map.py` remain for reference; the current world starts at `maps/overworld.tmj`.
 
