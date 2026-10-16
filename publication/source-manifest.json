@@ -382,6 +382,14 @@
     "tests/fixtures/beach-retirement/stale-preview.tmj": "a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1",
     "tests/fixtures/phaser-tileset-binding/TilemapTilesetMethods.js.txt": "d67926f078422331442837833dedec96ad927aa3a78de1451700c128fe9f6c17",
     "tests/fixtures/phaser-tileset-binding/provenance.json": "8bb8b7afbf6b374048f959b88f64a242807e0aa08bc919f083377d9386fd6dc3",
-    "tests/native-tileset-binding.test.ts": "097429df0ad1bfbddbddc0bd4c2c7e487252c41600d663829f2c91dc38e479ba"
+    "tests/native-tileset-binding.test.ts": "097429df0ad1bfbddbddc0bd4c2c7e487252c41600d663829f2c91dc38e479ba",
+    "README.md": "1d5b292db0b931a91240f1bbafd8edc7bb5c58713cae584bc205c830c2f07dc7",
+    "docs/dependencies.md": "79a33a84449278b6c85c2463278aba829c4104b8c31c16c118fec877d2ad811e",
+    "docs/operating/github-publication.md": "cd59113154b545a54e0e587d7f5d026aa2175cf985073de8f2bf8b620f39cc2c",
+    "docs/operating/map-editing.md": "cc41f13f0f7aa11cdba63a1a72f6c201c147f40f93dea2773f76bf75c7b2c09d",
+    "docs/varcamp-map-handoff.md": "562878c7bc32e556a3e52e8dc6a87b2585a75422514edce0744ca6c854b62a86",
+    "docs/current-release-facts.md": "b3344e1faac0219e5cd7786d603946e99607e8b6354a46559cc7f80a40ccb9ff",
+    "ops/current-release-facts.mjs": "8f3348d178cb462354e9f2357f662634de97d7bd10d13b6ba251c2f9a0c9d143",
+    "ops/tests/current-release-facts.test.ts": "b343b5d703be9318e210b801dc0b5c8300209727a7af33395d91c28f255dcb56"
   }
 }

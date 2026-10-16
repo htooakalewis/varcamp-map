@@ -1,6 +1,6 @@
 # VarCamp Myanmar — zodiac WorkAdventure world
 
-Thirty-three connected, editable maps with twelve separate zodiac speaker buildings, a central welcome plaza, halls, parks, arcade lounges, two mazes, beaches and the sailing **FA SHIP**. Roads lead to signed gates outside the speaker plaza. New arrivals start at the central welcome point.
+Connected, editable maps with twelve separate zodiac speaker buildings, a central welcome plaza, halls, parks, arcade lounges, two mazes, beaches and the sailing **FA SHIP**. Roads lead to signed gates outside the speaker plaza. New arrivals start at the central welcome point.
 
 [Enter the live demo](https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam) · [Published map files](https://htooayelwinict.github.io/varcamp-map/) · [Download the built bundle](https://github.com/htooayelwinict/varcamp-map/releases/latest)
 
@@ -26,7 +26,7 @@ npm run maps:build
 npm run buildmap
 ```
 
-`dist/` contains the ready-to-host world: 33 TMJ maps, 33 WAMs, runtime scripts, the independent `bots/lyra.js` module, sponsor artwork, source atlases and credits. It omits private configuration and development previews. Copy its full contents to a static HTTPS host; keep the relative paths intact. For an existing edited WorkAdventure world, follow the guarded publication procedure rather than overwriting live WAM state.
+`dist/` contains the ready-to-host world: the TMJ/WAM pairs listed in [current facts](docs/current-release-facts.md), runtime scripts, the independent `bots/lyra.js` module, sponsor artwork, source atlases and credits. It omits private configuration and development previews. Copy its full contents to a static HTTPS host; keep the relative paths intact. For an existing edited WorkAdventure world, follow the guarded publication procedure rather than overwriting live WAM state.
 
 Open `maps/*.tmj` in Tiled. Normal `maps:build` preserves native edits and refreshes `maps/preview/`. Hand-composed source layouts are in `world/layouts/`; editable artwork and full source credits are retained in `art/` and `assets/`. The map files and assets match the developed world byte for byte; [the snapshot manifest](publication/source-manifest.json) records them.
 
@@ -41,7 +41,7 @@ npm run buildmap
 npm test -- --maxWorkers=1 --testTimeout=30000
 ```
 
-Full verification uses macOS ARM64 and official Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. GitHub installs that pinned, checksum-verified tool and runs all tests. An independent Linux job verifies the original 303 source receipts, their exact reviewed replacements, the 49 separately reviewed extension hashes and all 33 native map pairs without regenerating artwork. The snapshot’s original 303 paths and hashes remain unchanged; `extensionInventory` in the manifest records added source files and the changed root build configuration. The entrance also includes a [stationary native Roadster animation](docs/operating/roadster.md), with source/crop receipts and unchanged walking routes. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
+Full verification uses macOS ARM64 and official Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. GitHub installs that pinned, checksum-verified tool and runs all tests. An independent Linux job verifies the original 303 source receipts, their exact reviewed replacements, the manifest’s separately reviewed extension hashes and all native map pairs listed in [generated current facts](docs/current-release-facts.md) without regenerating artwork. The snapshot’s original 303 paths and hashes remain unchanged; `extensionInventory` in the manifest records added source files and the changed root build configuration. The entrance also includes a [stationary native Roadster animation](docs/operating/roadster.md), with source/crop receipts and unchanged walking routes. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
 
 The reviewed Lyra module targets [the stable script URL](https://htooayelwinict.github.io/varcamp-map/bots/lyra.js). Before activating any release, verify that the complete canonical CI run succeeded, the Pages deployment completed, and the exact HTTPS module bytes match the reviewed package. Then test the real shared behavior with two independent visitors in the dedicated bot session. Use `?v=<sha256>` for the verified module. A local build alone is not live acceptance. See [Scripted Lyra](docs/operating/scripted-lyra.md) for the `default.run` contract and activation checks, and the [isolated devbox launcher](ops/bots/README.md) for private start/stop/status commands.
 
