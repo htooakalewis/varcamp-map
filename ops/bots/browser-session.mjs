@@ -9,7 +9,7 @@ const createdContexts = new WeakMap(), freshGrants = new WeakMap();
 
 /** Only this runner lifecycle path creates the context that can issue a fresh bootstrap grant. */
 export async function createFreshRunnerContext(browser) {
-  const context = await browser.newContext({ permissions: [], viewport: { width: 640, height: 480 }, serviceWorkers: 'block', acceptDownloads: false });
+  const context = await browser.newContext({ permissions: [], viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', acceptDownloads: false });
   if (createdContexts.has(context)) throw Error('Refusing reused runner context');
   createdContexts.set(context, { claimed: false }); return context;
 }
