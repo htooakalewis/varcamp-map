@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { createHash } from 'node:crypto';
 import { buildCreateArgs, config, verifyModule, isMapFrame, RuntimeHealth } from '../bots/config.mjs';
 import { BotManager } from '../bots/manager.mjs';
+import { denyMediaPermissions } from '../bots/browser-session.mjs';
 
 const image = `sha256:${'a'.repeat(64)}`;
 const id = '1'.repeat(64);
@@ -124,5 +125,51 @@ describe('module and frame integrity', () => {
     health.ready({ playerId: 7 }, 100); expect(health.snapshot(101).healthy).toBe(true);
     expect(health.snapshot(16_000).healthy).toBe(false);
     health.fail('page closed'); expect(health.snapshot(102).healthy).toBe(false);
+  });
+});
+
+
+describe('isolated CDP media permissions', () => {
+  // Browser.setPermission takes W3C PermissionDescriptor names, not PermissionType enum names.
+  // This boundary matches the actual Chrome 155 / protocol 1.3 rejection captured in QA.
+  function protocol(failName?: string) {
+    const calls: { method: string; params: unknown }[] = [];
+    const failure = Error('CDP permission command failed');
+    return {
+      calls, failure,
+      async send(method: string, params?: { permission: { name: string } }) {
+        if (method === 'Target.getTargetInfo') return { targetInfo: { browserContextId: 'isolated-lyra-context' } };
+        if (method !== 'Browser.setPermission') throw Error(`Unexpected CDP method: ${method}`);
+        calls.push({ method, params });
+        if (!['microphone', 'camera'].includes(params?.permission.name ?? '')) throw Error(`Invalid PermissionDescriptor name: ${params?.permission.name}`);
+        if (params?.permission.name === failName) throw failure;
+        return {};
+      },
+    };
+  }
+  it('denies microphone and camera using W3C descriptors scoped to the intended origin and isolated context', async () => {
+    const cdp = protocol();
+    await denyMediaPermissions(cdp);
+    expect(cdp.calls).toEqual([
+      { method: 'Browser.setPermission', params: { permission: { name: 'microphone' }, setting: 'denied', origin: 'https://varcamp.3-1-133-135.sslip.io', browserContextId: 'isolated-lyra-context' } },
+      { method: 'Browser.setPermission', params: { permission: { name: 'camera' }, setting: 'denied', origin: 'https://varcamp.3-1-133-135.sslip.io', browserContextId: 'isolated-lyra-context' } },
+    ]);
+  });
+  it.each(['microphone', 'camera'])('propagates the %s denial failure without a fallback or later permission command', async name => {
+    const cdp = protocol(name);
+    await expect(denyMediaPermissions(cdp)).rejects.toBe(cdp.failure);
+    expect(cdp.calls).toHaveLength(name === 'microphone' ? 1 : 2);
+  });
+  it('refuses a missing isolated context before changing permissions', async () => {
+    const calls: string[] = [];
+    const cdp = { async send(method: string) { calls.push(method); return { targetInfo: {} }; } };
+    await expect(denyMediaPermissions(cdp)).rejects.toThrow('Missing isolated browser context ID');
+    expect(calls).toEqual(['Target.getTargetInfo']);
+  });
+  it('propagates context lookup failure before changing permissions', async () => {
+    const failure = Error('Target unavailable'); const calls: string[] = [];
+    const cdp = { async send(method: string) { calls.push(method); throw failure; } };
+    await expect(denyMediaPermissions(cdp)).rejects.toBe(failure);
+    expect(calls).toEqual(['Target.getTargetInfo']);
   });
 });

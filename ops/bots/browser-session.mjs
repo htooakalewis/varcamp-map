@@ -1,6 +1,15 @@
 import { config, isMapFrame, verifyModule } from './config.mjs';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+export async function denyMediaPermissions(cdp) {
+  const { targetInfo } = await cdp.send('Target.getTargetInfo');
+  if (!targetInfo.browserContextId) throw Error('Missing isolated browser context ID');
+  // Browser.setPermission accepts W3C PermissionDescriptor names.
+  for (const name of ['microphone', 'camera']) {
+    await cdp.send('Browser.setPermission', { permission: { name }, setting: 'denied', origin: new URL(config.roomUrl).origin, browserContextId: targetInfo.browserContextId });
+  }
+}
+
 export async function joinRoom(page) {
   await page.goto(config.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await page.getByTestId('loginSceneNameInput').fill(config.botName);

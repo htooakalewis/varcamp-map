@@ -1,6 +1,6 @@
 import { writeFile, rename } from 'node:fs/promises';
-import { config, RuntimeHealth } from './config.mjs';
-import { joinRoom, findMapFrame, startModule, readIdentity, checkDevices, dismissMediaPrompt } from './browser-session.mjs';
+import { RuntimeHealth } from './config.mjs';
+import { denyMediaPermissions, joinRoom, findMapFrame, startModule, readIdentity, checkDevices, dismissMediaPrompt } from './browser-session.mjs';
 
 // This is the only production module that loads browser dependencies.
 const { chromium } = await import('playwright-core');
@@ -41,11 +41,7 @@ try {
     page.on('close', () => fail(Error('Browser page closed')));
     page.on('console', message => { if (message.text().startsWith('Lyra stopped:')) fail(Error(message.text())); });
     const cdp = await context.newCDPSession(page);
-    const { targetInfo } = await cdp.send('Target.getTargetInfo');
-    if (!targetInfo.browserContextId) throw Error('Missing isolated browser context ID');
-    for (const name of ['audioCapture', 'videoCapture']) {
-      await cdp.send('Browser.setPermission', { permission: { name }, setting: 'denied', origin: new URL(config.roomUrl).origin, browserContextId: targetInfo.browserContextId });
-    }
+    await denyMediaPermissions(cdp);
     await joinRoom(page);
     const frame = await findMapFrame(page);
     const identity = await startModule(page, frame, fail);
