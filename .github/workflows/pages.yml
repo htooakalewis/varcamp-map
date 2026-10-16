@@ -26,6 +26,15 @@ jobs:
         with:
           node-version: '26.11.1'
           cache: npm
+      - name: Select the authoring Python for legacy fixture contracts
+        run: |
+          /usr/bin/python3 -c 'import sys, ssl, urllib.request; assert sys.version_info[:3] == (3, 9, 6), sys.version; assert urllib.request.HTTPSHandler()._context is None; print(sys.version); print(ssl.OPENSSL_VERSION)'
+          python_tools="${RUNNER_TEMP}/varcamp-python"
+          mkdir -p "$python_tools"
+          ln -s /usr/bin/python3 "$python_tools/python3"
+          printf '%s\n' "$python_tools" >> "$GITHUB_PATH"
+      - name: Verify the frozen source snapshot
+        run: node publication/verify-source.mjs
       - name: Install locked dependencies
         run: npm ci
       - name: Install the verified native Tiled renderer
@@ -77,9 +86,9 @@ jobs:
         with:
           path: dist
 
-  linux-parity:
+  source-integrity:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
       - name: Check out source
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -88,72 +97,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
-          node-version: '26.8.2'
-          cache: npm
-      - name: Install locked dependencies
-        run: npm ci
-      - name: Verify Linux flight pixels and animation metadata without rewriting sources
-        run: |
-          node --import tsx --input-type=module <<'JS'
-          import assert from 'node:assert/strict';
-          import { createHash } from 'node:crypto';
-          import { readFileSync } from 'node:fs';
-          import { isDeepStrictEqual } from 'node:util';
-          import sharp from 'sharp';
-          import { renderCoastalFlight } from './tools/art/coastal-flight.ts';
-
-          const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
-          const stored = readFileSync('assets/tilesets/original/coastal-flight.png');
-          const storedMetadata = JSON.parse(readFileSync('art/source/coastal-flight.json', 'utf8'));
-          const rendered = await renderCoastalFlight();
-          const storedDecoded = await sharp(stored).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-          const renderedDecoded = await sharp(rendered.png).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-          const dimensions = decoded => ({ width: decoded.info.width, height: decoded.info.height, channels: decoded.info.channels });
-          const encoded = { stored: sha256(stored), rendered: sha256(rendered.png) };
-          const decoded = { stored: sha256(storedDecoded.data), rendered: sha256(renderedDecoded.data) };
-
-          function chunks(bytes) {
-            assert.deepEqual(bytes.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
-            const result = [];
-            for (let offset = 8; offset < bytes.length;) {
-              const length = bytes.readUInt32BE(offset);
-              assert.ok(offset + length + 12 <= bytes.length, 'Truncated PNG chunk');
-              result.push({ type: bytes.toString('ascii', offset + 4, offset + 8), length, dataSha256: sha256(bytes.subarray(offset + 8, offset + 8 + length)) });
-              offset += length + 12;
-            }
-            return result;
-          }
-          function differences(left, right, path = '$') {
-            if (isDeepStrictEqual(left, right)) return [];
-            if (left !== null && right !== null && typeof left === 'object' && typeof right === 'object' && Array.isArray(left) === Array.isArray(right)) {
-              const keys = [...new Set([...Object.keys(left), ...Object.keys(right)])].sort();
-              return keys.flatMap(key => differences(left[key], right[key], `${path}.${key}`));
-            }
-            return [path];
-          }
-
-          const metadataDifferences = differences(storedMetadata, rendered.metadata);
-          console.log(JSON.stringify({ platform: process.platform, architecture: process.arch, node: process.version, sharp: sharp.versions, encodedSha256: encoded, decodedRgbaSha256: decoded, storedDimensions: dimensions(storedDecoded), renderedDimensions: dimensions(renderedDecoded), metadataDifferences, storedChunks: chunks(stored), renderedChunks: chunks(rendered.png) }, null, 2));
-
-          assert.equal(storedMetadata.atlas.sha256, encoded.stored, 'Canonical atlas hash differs from its frozen metadata');
-          assert.equal(storedMetadata.overlay.provenance.atlasSha256, encoded.stored, 'Canonical overlay provenance differs from the frozen PNG');
-          assert.equal(rendered.metadata.atlas.sha256, encoded.rendered, 'Rendered metadata does not identify its actual PNG bytes');
-          assert.equal(rendered.metadata.overlay.provenance.atlasSha256, encoded.rendered, 'Rendered overlay provenance does not identify its PNG');
-          assert.deepEqual(dimensions(storedDecoded), dimensions(renderedDecoded), 'PNG dimensions or channels differ');
-          assert.ok(storedDecoded.data.equals(renderedDecoded.data), 'Linux and canonical decoded RGBA pixels differ');
-
-          const normalizedStored = structuredClone(storedMetadata);
-          const normalizedRendered = structuredClone(rendered.metadata);
-          for (const metadata of [normalizedStored, normalizedRendered]) {
-            metadata.atlas.sha256 = 'PNG-encoding-only';
-            metadata.overlay.provenance.atlasSha256 = 'PNG-encoding-only';
-          }
-          assert.ok(isDeepStrictEqual(normalizedStored, normalizedRendered), `Animation metadata changed outside the two PNG encoding hashes: ${JSON.stringify(differences(normalizedStored, normalizedRendered))}`);
-          console.log('Linux parity verified: identical full RGBA pixels, dimensions and animation metadata; only PNG encoding hashes may differ. No source files were rewritten.');
-          JS
+          node-version: '26.11.1'
+      - name: Verify every frozen source file and all native map pairs
+        run: node publication/verify-source.mjs
 
   deploy:
-    needs: [build, linux-parity]
+    needs: [build, source-integrity]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:

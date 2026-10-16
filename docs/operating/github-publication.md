@@ -6,7 +6,7 @@ The repository contains all 33 native TMJ/WAM map pairs, their editable layouts,
 
 ## Edit and verify locally
 
-For the strict artwork byte comparison, use **macOS ARM64**, Node.js **26.11.1** and the locked dependencies. This matches the authoring renderer that produced the committed PNG files:
+For the strict artwork byte comparison, use **macOS ARM64**, Node.js **26.11.1** Apple Python **3.9.6** and the locked dependencies. This matches the authoring renderer that produced the committed PNG files:
 
 ```sh
 npm ci
@@ -37,12 +37,20 @@ The [Pages workflow](../../.github/workflows/pages.yml) runs on pushes to `main`
 
 The `build` job uses the standard `macos-15` ARM64 runner and Node.js **26.11.1**. It installs the lockfile, verified Tiled bundle and pinned Docker/Compose CLIs, validates all maps, runs the strict **739-sprite** art check, refreshes previews, builds the release and runs **all 754 tests plus seven Python tests** with one worker and a 30-second test timeout. No tests or validation checks are excluded. Only this strict build produces the Pages artifact.
 
-The separate `linux-parity` job uses Ubuntu **24.04** and Node.js **26.8.2**. It renders the aircraft atlas entirely in memory and compares the committed and rendered PNG hashes, complete decoded RGBA pixels, dimensions and recursively compared animation metadata. It logs the platform, Sharp library versions and each PNG chunk's type and data hash. Linux PNG compression can produce different encoded bytes despite identical pixels. The comparison therefore normalizes only `atlas.sha256` and `overlay.provenance.atlasSha256`, after proving each identifies the corresponding real PNG. Every other metadata field and every RGBA byte must match. The canonical atlas and all **303 source files** remain unchanged; this diagnostic does not regenerate source files or weaken the Mac byte check.
+The independent `source-integrity` job uses Ubuntu **24.04** and Node.js **26.11.1**. It verifies every one of the **303 source hashes**, rejects missing or additional source files, and checks all **33 native TMJ/WAM map pairs**. It does not regenerate artwork. Both this job and the complete canonical Mac build must pass before deployment.
 
-Deployment requires both jobs to pass. A failure in either the strict build or the independent Linux parity check prevents publication.
+### Publishing environment reassessment
+
+The first Linux build failed the existing byte-exact flight-artwork check. A diagnostic run then disproved the initial compression-only hypothesis: Linux generated different decoded RGBA bytes, despite identical 512×608 dimensions and animation metadata except the two PNG digest fields. The exact raster/compositing cause remains unresolved. **Linux artwork reauthoring is unsupported.** Cross-platform compiler repair is outside this publication's scope; no artwork, renderer, test or native map was changed. The source integrity gate replaces the newly introduced cross-platform reauthoring requirement; it does not replace the strict Mac artwork check or exclude any existing tests.
+
+The Mac runner's default Homebrew Python 3.14 also failed 123 legacy fixture assertions. Independent local reproduction showed Python 3.14 and 3.15 now instantiate an HTTPS handler's verified default context immediately, whereas those fixtures expect its private `_context` field to be `None`. They also report an invalid-escape syntax warning when importing the recovery guard, conflicting with its inert-import stderr assertion. Actual redirect rejection and verified TLS behavior remained intact. The workflow selects the already verified Apple `/usr/bin/python3` **3.9.6**, asserts its version and expected handler behavior, and logs the runtime. All 754 tests and seven Python checks remain required.
+
+Acceptance requires unchanged source hashes, the full canonical build and tests, a successful Pages deployment, and HTTP readback of every built file. Source push or passing tests alone do not establish that publication succeeded.
 
 After verification, the workflow copies `publication/index.html` into `dist/index.html`, copies the landing page's JPEG images into `dist/publication/`, and preserves the old root `varcamp.tmj` and `tileset.png` URLs. It uploads the complete `dist` artifact and deploys it in a separate job. Actions are pinned to official commit hashes. The build has read access to repository contents; only the deployment job receives Pages write and identity-token permissions. Publication runs queue without cancelling an earlier deployment.
 
 Check the actual Actions run and public URLs before calling publication complete. A successful build alone does not establish that GitHub Pages or a WorkAdventure room loaded. The workflow does not upload maps to the devbox, restart services or change the sponsored WorkAdventure venue.
 
 For a downloaded release archive, use the repository's Releases page when a release has been published. Retain the bundled `credits/` directory when distributing or hosting built maps.
+
+GitHub reports dependency advisories in the inherited locked toolchain. Dependency upgrades are recorded as a separate finding; this publication does not change the lockfile or expand into package upgrades.
