@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+import { profiles } from '../ops/bots/config.mjs';
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -11,6 +13,11 @@ describe('dedicated Lyra release module',()=>{
     const bot=resolve(out,'bots/lyra.js');expect(existsSync(bot),'release is missing bots/lyra.js').toBe(true);
     const script=`const m=await import(${JSON.stringify(pathToFileURL(bot).href)});if(typeof m.default?.run!=='function')throw Error('Missing official default.run');console.log('safe import without WA')`;
     expect(execFileSync(process.execPath,['--input-type=module','-e',script],{encoding:'utf8'})).toContain('safe import without WA');
+    const bytes = readFileSync(bot);
+    for (const profile of Object.values(profiles)) {
+      expect(profile.moduleSha256, `${profile.persona} must pin the actual final module`).toBe(createHash('sha256').update(bytes).digest('hex'));
+      expect(profile.moduleBytes).toBe(bytes.length);
+    }
     const map=JSON.parse(readFileSync(resolve(out,'maps/overworld.tmj'),'utf8'));
     const runtime=map.properties.find((p:{name:string})=>p.name==='script').value;
     expect(runtime).toMatch(/^\.\.\/assets\/src-main-.+\.js$/);

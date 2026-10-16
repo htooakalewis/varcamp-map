@@ -1,52 +1,62 @@
-# One owned Lyra development browser
+# Three owned development guide profiles
 
-This tool joins the user's development WorkAdventure room as the ordinary guest **Lyra [BOT]**. It owns exactly one container, `varcamp-lyra-dev`, labelled `io.varcamp.bot.owner=varcamp-lyra-development-v1`. It runs independently on the devbox after the operator disconnects. There is no public management endpoint. Use the existing private SSH access to run the CLI on that host; the operator needs Node.js 20+ and Docker CLI access. Paths below are relative to the reviewed project checkout, and the CLI resolves its seccomp profile relative to itself.
+Task 4 prepares local source for three fixed, separately owned browser profiles. It does not establish a runtime cure or authorize a launch. Historical native `hasPreviousMessage` and controller Abort origins remain unresolved. The source corrects proven loss of original error evidence and makes the observed UI-to-controller readiness handoff explicit. Unknown page, module, API, identity, media and controller failures remain fatal; there are no filters, retries, automatic restarts or deadline increases.
 
-This is an owned development launcher, not the official WorkAdventure Bots manager. The inspected guest menu exposes no Bots manager; hosted bot entitlement remains unverified. The official self-host administration stack requires separate licensing, registry access and Kubernetes. This tool does not install that stack or alter a sponsored world's limits. Its dedicated-browser approach follows the [WorkAdventure development tutorial](https://docs.workadventu.re/blog/gpt-bot/#our-battle-plan).
+| CLI profile | Container | Guest identity | Observed avatar |
+| --- | --- | --- | --- |
+| `lyra` (default) | `varcamp-lyra-dev` | Lyra [BOT] | `#woka-female4` |
+| `nova` | `varcamp-nova-dev` | Nova [BOT] | `#woka-male2` |
+| `orion` | `varcamp-orion-dev` | Orion [BOT] | `#woka-male1` |
 
-## Review, build and run on the devbox
+Each invocation selects one profile. `node ops/bots/cli.mjs status` retains default-Lyra syntax; explicit syntax is `node ops/bots/cli.mjs nova status`. Actions are `start sha256:<immutable-image-id>`, `status`, `logs`, `stop`, and read-only `snapshot`. There is no all-profile start. Only the runner loads the locked browser dependency. The tool has no public management endpoint; the operator uses existing private SSH/Docker authorization. Official hosted Bots manager entitlement remains unverified.
 
-Before activating any release, verify successful full canonical CI and Pages deployment, then compare the exact HTTPS module bytes with the reviewed artifact. Check CLI status for the current devbox process; a build alone is not live acceptance. After the build, use the commands below to start and inspect the process, then test shared behavior with two independent visitors.
+## Source review and runtime gates
 
-Run these commands inside the reviewed checkout through private SSH (for example, `ssh <devbox-host>`, then `cd <reviewed-checkout>`):
+Independent final source/isolation review, current resource preflight, canonical CI/Pages and exact public-byte verification must precede a separately authorized finite ARM64 canary. A passing canary needs a coordinator decision before adding siblings. If an unexpected error recurs, retain the original operation/source/stack, stop, and reassess. Tests and source publication do not establish ten-minute reliability or a live three-bot outcome.
+
+After those gates, the coordinator can build the reviewed image and operate one explicitly selected profile:
 
 ```sh
-mkdir -p ops/private/lyra
-chmod 700 ops/private/lyra
+mkdir -p ops/private/guides
+chmod 700 ops/private/guides
 umask 077
-node ops/bots/cli.mjs snapshot > ops/private/lyra/before.json
-
-docker build --platform linux/arm64 --iidfile ops/private/lyra/image-id -f ops/bots/Dockerfile ops/bots
-LYRA_IMAGE_ID="$(cat ops/private/lyra/image-id)"
-node ops/bots/cli.mjs start "$LYRA_IMAGE_ID"
-node ops/bots/cli.mjs status
-node ops/bots/cli.mjs logs
-
-node ops/bots/cli.mjs stop
-node ops/bots/cli.mjs snapshot > ops/private/lyra/after-stop.json
+node ops/bots/cli.mjs snapshot > ops/private/guides/before.json
+docker build --platform linux/arm64 --iidfile ops/private/guides/image-id -f ops/bots/Dockerfile ops/bots
+GUIDE_IMAGE_ID="$(cat ops/private/guides/image-id)"
+node ops/bots/cli.mjs lyra start "$GUIDE_IMAGE_ID"
+node ops/bots/cli.mjs lyra status
+node ops/bots/cli.mjs lyra logs
+node ops/bots/cli.mjs lyra stop
 ```
 
-`ops/private/` is already ignored by Git. Preserve the original private `before-browser-setup-containers.json` QA reference (31 containers) as well as a fresh snapshot before the browser setup proof. Snapshot output includes only IDs, names, state and health; keep it private. Compare every original ID and health against the before/running/stopped snapshots. Neither snapshot collection nor the manager uses Compose or mutates existing services.
+Nova/Orion use the identical image with their explicit CLI profile only when separately cleared by the coordinator. Each start atomically reserves its exact name. Running owned instances are checked; exited ones remain for explicit inspection/stop. A losing concurrent creator never cleans another creator's instance. Startup readiness retains 150 seconds, Docker calls 25 seconds, and browser startup 120 seconds. Failed startup cleanup re-verifies exact name, owner, persona, module digest and immutable ID before stopping/removing that ID. Foreign, missing or conflicting labels fail closed. Sibling/core objects are never adopted. Compare all 69 pre-existing container IDs/state/health with private before/running/after snapshots; the historical 31-container receipt is not the current baseline.
 
-`start` accepts only the immutable `sha256:...` local image ID produced by the reviewed build. Docker's exact container-name reservation prevents concurrent starts from creating duplicates. An already-running owned instance is checked for readiness; an exited instance must be inspected and explicitly stopped before a new start. A competing start can fail with Docker's name-conflict error; inspect `status` and do not invent another container name. Readiness is bounded to 150 seconds; Docker calls are individually bounded to 25 seconds. A startup failure gathers the last 80 log lines, stops/removes only its newly created, reverified container ID, and exits nonzero. A later runtime failure closes the browser and leaves an exited container for inspection. `stop` verifies both ownership labels and the exact name, then targets the immutable ID. Unrelated name collisions are refused. `status` exits nonzero unless the owned container is healthy.
+## Legacy stopped Lyra
 
-To restart, run `stop` and then `start` with the same reviewed image ID. No host directory, credentials, browser profile, Docker socket or laptop process is mounted into the container. There is no automatic restart policy, so failures remain visible and do not create retry storms. Local CLI authentication is the existing private SSH/Docker host authorization.
+The original stopped Lyra has the old owner/module labels and no persona label. New `status`, `logs`, `stop` and `start` refuse that label shape; absence of a persona never authorizes adoption or cleanup. No source test authorizes touching it.
 
-## Runtime contract
+The coordinator's explicit reviewed old-CLI path is `ops/private/lyra-legacy-04b6d56/ops/bots/cli.mjs`, extracted from the pre-Task-4 commit below. That old code verifies the original owner, exact old digest, name and immutable ID. Use it only after checking the recorded original ID/labels, preserving its failure logs, and passing the coordinator gate:
 
-The fixed public URL is:
-
-```text
-https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f
+```sh
+mkdir -p ops/private/lyra-legacy-04b6d56
+git archive 04b6d566a3ec5c711a911a0f0a4bb74aa0dc2991 ops/bots | tar -x -C ops/private/lyra-legacy-04b6d56
+node ops/private/lyra-legacy-04b6d56/ops/bots/cli.mjs status
+node ops/private/lyra-legacy-04b6d56/ops/bots/cli.mjs logs
+# Explicit legacy removal, only after preserving diagnostics and verifying the original ID:
+node ops/private/lyra-legacy-04b6d56/ops/bots/cli.mjs stop
 ```
 
-The expected SHA-256 is `29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f`. The runner fetches that exact HTTPS request without redirects and verifies its response bytes, then fulfills the original browser module request with those same bytes. The version query is not treated as proof of integrity. It calls only `module.default.run({})`, inside the dedicated initialized `about:srcdoc` frame whose script URL matches this deployment's `assets/src-main-*.js` and whose `WA.room.id` equals the intended overworld URL. Modal, journal and NPC frames are excluded. No local module fallback or bot activation in ordinary visitor scripts exists.
+## Readiness, evidence and failure authority
 
-The fresh-profile UI selectors come from the 16 October devbox browser observations: login name input, `#woka-female4`, the exact Continue/Save buttons and the two Turn off device choices. An optional proximity prompt is dismissed only through **Continue without webcam and microphone**, with normal clicks. Changed or obstructed UI fails within the startup bounds; no forced clicks or guessed popup close controls are used.
+All profiles pin `649e961eb90cc6e2812e00603b1ba2f08922b163afa4fb5885c0674dfae75312`, exactly 23,410 bytes, at `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=649e961eb90cc6e2812e00603b1ba2f08922b163afa4fb5885c0674dfae75312`. The runner verifies the exact HTTPS response with no redirects and fulfills the original browser import with those same bytes. It selects only the initialized expected `about:srcdoc` map frame and calls `default.run({ persona })` once. Ordinary visitors never activate the module.
 
-The context explicitly denies audio/video capture through Chromium's permission API, chooses microphone/camera off in the UI, checks both off controls, blocks service workers and launches with audio muted. The runner uses public WA identity APIs; it never mutates meeting internals, force-follows visitors or changes map/core state. Health requires completed `default.run`, no `Lyra stopped:` diagnostic, unchanged bot identity and room, camera/microphone off, and a fresh probe. Diagnostics are sticky even if `run` resolves. Failed startup, page errors/crashes, missing frames, room changes or stale probes close only the owned browser and exit nonzero. Health state lives only in bounded container tmpfs; normal logs rotate at 2 × 5 MiB.
+The measured handoff is joined expected room/frame → observed welcome-directory action and normal close-modal button when present → optional ordinary five-second no-media click with verified hidden popup → both device controls visibly off and actual camera/microphone permissions denied → popup/modal recheck → verified module run → unchanged identity, live controller and at least one confirmed movement-step receipt → ready. No forced clicks, DOM/store writes, missing-control success or artificial stability sleeps exist. An unknown modal or failed action prevents module start. A late prompt uses the same guarded normal dismissal and hidden/off/denied checks, or fails terminally.
 
-The controller subscribes through public `WA.player.meetings.onJoin()`. Existing bubble replay at the instant the module attaches is not established by the API observations. Acceptance must exercise a visitor already near spawn and a visitor joining later. If an existing bubble is missed, record the limitation; do not patch private meeting state or fabricate a new event. Native move results can be 16 pixels above the requested center while still in the intended tile. Verify observed tile/position changes, not invented exact-center equality.
+Controller operations retain original Error name/message/browser stack/cause and non-Error values, operation/phase/sequence/start/settlement times, persona/generation and attempted cell/step count. The shared serializer bounds depth to four, selected object keys to sixteen, strings to 4KiB, and encoded evidence to 16KiB, with explicit redaction/truncation/serialization flags. URL userinfo/query/fragment and authorization/header/credential material are redacted; chat contents are never collected. Terminal console records are parsed, validated and sanitized again before the first failure is stored. Native pageerror stacks are stored directly, without presenting a Node wrapper stack as browser origin. Logger/getter failures cannot prevent terminal shutdown.
+
+Current-operation/progress receipts remain in browser memory, with no 100ms monitoring log. Selected iframe SDK, main and GameManager response bodies are hashed from the response delivered during this session, recording URL/frame/observation time/status/size and captured-response origin. This does not refetch URLs or substitute local source hashes. At most eight selected responses of at most 8MiB each are hashed; capture gaps/pending/oversized/unavailable bodies are explicit. Response capture alone does not prove a script executed, and coverage gaps must remain in later attribution evidence.
+
+Heartbeat probes are serialized. A fatal latch while any check awaits prevents subsequent ready/success and future scheduling; `RuntimeHealth` was already sticky. Pending moves and positions stay quarantined through stop/replacement until their actual continuations settle. Movement watchdogs and all routing/ownership semantics remain unchanged. First error evidence is latched/enqueued before optional artifacts; optional collection/storage has a bounded wait. The whole cleanup, including actual owned browser closure, retains the existing ten-second process deadline. The exited container remains for inspection. Health state uses private bounded tmpfs, with logs rotated at 2 × 5MiB.
 
 ## Isolation and pinned inputs
 
@@ -58,15 +68,15 @@ Chromium sandboxing stays enabled. `seccomp.json` is a project-derived version o
 
 This derivation is required because [Docker's profile loader](https://github.com/moby/moby/blob/8af9fe3a36bab3e039862a2ab1cef1880c9b4d03/vendor/github.com/moby/profiles/seccomp/seccomp_linux.go#L144) omits capability-conditioned rules when the initial bounding set is empty. The original profile therefore blocked Chromium's filesystem-sealing `chroot` after user-namespace creation, aborting startup. The derived profile permits that syscall while keeping every container capability dropped, nonroot execution, no-new-privileges, Chromium sandboxing and host AppArmor checks. It grants no capability. The allowance is for the syscall generally; seccomp cannot restrict it to the `/proc/self/fdinfo/` pathname. Independent review and a controlled native kernel comparison must gate activation. If another kernel or AppArmor restriction prevents startup, stop and report it. There is no capability-addition, unconfined seccomp/AppArmor, no-sandbox or host sysctl fallback.
 
-## Verification and live acceptance
+## Focused verification and later acceptance
 
 ```sh
-npm test -- ops/tests/lyra-launcher.test.ts ops/tests/lyra-healthcheck.test.ts ops/tests/lyra-container-config.test.ts --maxWorkers=1
-node publication/verify-source.mjs
+npm test -- ops/tests/guide-profiles.test.ts ops/tests/guide-session.test.ts ops/tests/lyra-launcher.test.ts ops/tests/lyra-healthcheck.test.ts ops/tests/lyra-container-config.test.ts tests/guide-evidence.test.ts tests/lyra-bot.test.ts tests/lyra-bot-personas.test.ts tests/lyra-bot-release.test.ts --maxWorkers=1 --testTimeout=30000
 npm run buildmap
+node publication/verify-source.mjs
 shasum -a 256 dist/bots/lyra.js
 ```
 
-Unit checks use a controlled Docker boundary and real healthcheck subprocesses; they do not start Docker or browsers. The container configuration checks inspect the actual pinned inputs and generated Docker arguments. The full existing suite remains the coordinator's combined CI gate. All new runner and operational test files are included in the publication extension inventory.
+The tests use controlled engine/page boundaries and actual copied-runtime imports, without launching Docker or browsers. The full canonical suite remains the coordinator's combined CI gate. Public source inventory preserves every original 303-file receipt value.
 
-Live acceptance requires: successful full canonical CI and Pages deployment; exact public HTTPS byte validation; a sandboxed ARM64 build/start; one shared bot player ID and changing positions seen by two independent visitors; the same nearby bubble reply visible to both; independent visitor movement; startup-near and later-join cases; stop/restart with only Lyra disappearing/reappearing; and unchanged original 31-container IDs/health. Check CLI status for the current devbox process throughout; a build alone is not live acceptance. Local tests and earlier temporary HTTPS-interception QA do not establish these results.
+Later acceptance needs all three distinct avatars and their movement visible to two independent visitors, each guide's zodiac request/owner-safe stop, later native meeting entry, isolated profile stop/restart, robot-free fresh maps/WAMs, unchanged core containers, and a 12-minute post-chat/departure soak with full diagnostics. The deployed proximity limit is four participants (`MAX_PER_GROUP=4`, min distance 64px/group radius 48px). Three guides plus two QA visitors cannot share one five-person bubble: test all-guide arbitration with three guides plus one QA (four total); test the same reply received by both QA in subgroups of at most four, containing the target guide and both QA, with other guides absent as needed. Visibility to two visitors is separate from shared bubble membership. Do not change capacity, radius, homes or patrols to manufacture acceptance. Consistent-snapshot election remains conditional; divergent public snapshots are a documented limitation, and explicit guide addressing remains available.

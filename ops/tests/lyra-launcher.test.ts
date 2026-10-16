@@ -9,7 +9,8 @@ const id = '1'.repeat(64);
 function container(overrides = {}) {
   return { Id: id, Name: '/varcamp-lyra-dev', Config: { Labels: {
     'io.varcamp.bot.owner': 'varcamp-lyra-development-v1',
-    'io.varcamp.bot.module-sha256': '29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f',
+    'io.varcamp.bot.module-sha256': config.moduleSha256,
+    'io.varcamp.bot.persona': 'lyra',
   } }, State: { Running: true, Status: 'running', Health: { Status: 'healthy' } }, ...overrides };
 }
 function engine(initial = null) {

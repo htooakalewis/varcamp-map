@@ -1,24 +1,24 @@
-import { config, assertOwned, buildCreateArgs } from './config.mjs';
+import { selectProfile, assertOwned, buildCreateArgs } from './config.mjs';
 const pause = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 
 /** Engine injection keeps host management independent of browser dependencies. */
 export class BotManager {
-  constructor(engine, { now = Date.now, sleep = pause, startupTimeout = 150000 } = {}) {
-    this.engine = engine; this.now = now; this.sleep = sleep; this.startupTimeout = startupTimeout;
+  constructor(engine, { now = Date.now, sleep = pause, startupTimeout = 150000, persona = 'lyra' } = {}) {
+    Object.defineProperty(this, 'profile', { value: selectProfile(persona), enumerable: true }); this.engine = engine; this.now = now; this.sleep = sleep; this.startupTimeout = startupTimeout;
   }
   async status() {
-    const container = await this.engine.inspect(config.name);
+    const container = await this.engine.inspect(this.profile.name);
     if (!container) return { state: 'absent', healthy: false };
-    assertOwned(container);
+    assertOwned(container, this.profile);
     return { id: container.Id, state: container.State.Status,
       healthy: container.State.Running === true && container.State.Health?.Status === 'healthy',
       health: container.State.Health?.Status ?? 'unknown', exitCode: container.State.ExitCode };
   }
   async start(image, seccomp) {
-    const args = buildCreateArgs(image, seccomp);
-    const existing = await this.engine.inspect(config.name);
+    const args = buildCreateArgs(image, seccomp, this.profile);
+    const existing = await this.engine.inspect(this.profile.name);
     if (existing) {
-      assertOwned(existing);
+      assertOwned(existing, this.profile);
       if (!existing.State.Running) throw Error('Owned container already exists but is not running; inspect logs, then stop before starting');
       return this.waitReady(existing.Id);
     }
@@ -28,14 +28,15 @@ export class BotManager {
     try {
       const created = await this.engine.inspect(id);
       if (!created) throw Error('Created container disappeared');
-      assertOwned(created);
+      assertOwned(created, this.profile);
+      if (created.Id !== id) throw Error('Immutable container ID mismatch');
       await this.engine.start(id);
       return await this.waitReady(id);
     } catch (error) {
       let diagnostic = '';
       try { diagnostic = await this.engine.logs(id); } catch { /* Keep the primary error. */ }
       await this.removeOwned(id);
-      throw Error(`Lyra startup failed: ${error.message}\n${diagnostic}`);
+      throw Error(`${this.profile.persona} startup failed: ${error.message}\n${diagnostic}`);
     }
   }
   async waitReady(id) {
@@ -43,7 +44,8 @@ export class BotManager {
     while (this.now() < deadline) {
       const container = await this.engine.inspect(id);
       if (!container) throw Error('Owned browser disappeared during startup');
-      assertOwned(container);
+      assertOwned(container, this.profile);
+      if (container.Id !== id) throw Error('Immutable container ID mismatch');
       if (!container.State.Running || container.State.Health?.Status === 'unhealthy') throw Error(`Browser ${container.State.Status}/${container.State.Health?.Status ?? 'unknown'}`);
       if (container.State.Health?.Status === 'healthy') return { id, state: 'running', healthy: true };
       await this.sleep(1000);
@@ -53,14 +55,21 @@ export class BotManager {
   async removeOwned(id) {
     const current = await this.engine.inspect(id);
     if (!current) return;
-    assertOwned(current);
+    assertOwned(current, this.profile);
+    if (current.Id !== id) throw Error('Immutable container ID mismatch');
     if (current.State.Running) await this.engine.stop(id);
     await this.engine.remove(id);
   }
+  async logs() {
+    const current = await this.engine.inspect(this.profile.name);
+    if (!current) throw Error('Owned browser is absent');
+    assertOwned(current, this.profile);
+    return { id: current.Id, logs: await this.engine.logs(current.Id) };
+  }
   async stop() {
-    const current = await this.engine.inspect(config.name);
+    const current = await this.engine.inspect(this.profile.name);
     if (!current) return { state: 'absent', healthy: false };
-    assertOwned(current);
+    assertOwned(current, this.profile);
     await this.removeOwned(current.Id);
     return { state: 'stopped', healthy: false, id: current.Id };
   }

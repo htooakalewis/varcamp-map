@@ -1,34 +1,44 @@
 import { createHash } from 'node:crypto';
 import { isAbsolute } from 'node:path';
 
-const moduleSha256 = '29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f';
-export const config = Object.freeze({
-  name: 'varcamp-lyra-dev', owner: 'varcamp-lyra-development-v1', botName: 'Lyra [BOT]',
-  moduleSha256,
+const moduleSha256 = '649e961eb90cc6e2812e00603b1ba2f08922b163afa4fb5885c0674dfae75312';
+const shared = Object.freeze({ moduleSha256, moduleBytes: 23410,
   moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',
 });
-export const labels = Object.freeze({
-  'io.varcamp.bot.owner': config.owner,
-  'io.varcamp.bot.module-sha256': config.moduleSha256,
+export const profiles = Object.freeze(Object.fromEntries([
+  ['lyra', 'Lyra [BOT]', 'woka-female4'], ['nova', 'Nova [BOT]', 'woka-male2'], ['orion', 'Orion [BOT]', 'woka-male1'],
+].map(([persona, botName, avatar]) => [persona, Object.freeze({ ...shared, persona, botName, avatar,
+  name: `varcamp-${persona}-dev`, owner: `varcamp-${persona}-development-v1` })])));
+export function selectProfile(persona = 'lyra') {
+  if (typeof persona !== 'string' || !Object.hasOwn(profiles, persona)) throw Error('Invalid fixed guide persona');
+  return profiles[persona];
+}
+export const config = selectProfile();
+export const labelsFor = (profile = config) => ({
+  'io.varcamp.bot.owner': profile.owner,
+  'io.varcamp.bot.module-sha256': profile.moduleSha256,
+  'io.varcamp.bot.persona': profile.persona,
 });
+export const labels = Object.freeze(labelsFor());
 
-export function buildCreateArgs(image, seccomp) {
+export function buildCreateArgs(image, seccomp, profile = config) {
+  if (selectProfile(profile?.persona) !== profile) throw Error('Require a fixed profile');
   if (!/^sha256:[0-9a-f]{64}$/.test(image)) throw Error('Require an immutable local image ID (sha256:...)');
   if (!isAbsolute(seccomp) || /[\n\r]/.test(seccomp)) throw Error('Require an absolute seccomp profile path');
-  return ['create', '--name', config.name, '--init', '--user', '1000:1000',
+  return ['create', '--name', profile.name, '--init', '--user', '1000:1000',
     '--cpus', '1', '--memory', '2g', '--memory-swap', '2g', '--pids-limit', '512', '--shm-size', '512m',
     '--read-only', '--tmpfs', '/tmp:rw,nosuid,nodev,size=512m,uid=1000,gid=1000,mode=1777',
     '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges:true', '--security-opt', `seccomp=${seccomp}`,
     '--network', 'bridge', '--restart', 'no', '--stop-timeout', '15',
     '--log-driver', 'json-file', '--log-opt', 'max-size=5m', '--log-opt', 'max-file=2',
-    ...Object.entries(labels).flatMap(([key, value]) => ['--label', `${key}=${value}`]), image];
+    ...Object.entries(labelsFor(profile)).flatMap(([key, value]) => ['--label', `${key}=${value}`]), '--env', `VARCAMP_BOT_PERSONA=${profile.persona}`, image];
 }
 
-export function assertOwned(container) {
-  if (container.Name !== `/${config.name}` || !/^[0-9a-f]{64}$/.test(container.Id) ||
-      Object.entries(labels).some(([key, value]) => container.Config?.Labels?.[key] !== value)) {
-    throw Error(`Refusing container with unverified ownership: ${config.name}`);
+export function assertOwned(container, profile = config) {
+  if (container.Name !== `/${profile.name}` || !/^[0-9a-f]{64}$/.test(container.Id) ||
+      Object.entries(labelsFor(profile)).some(([key, value]) => container.Config?.Labels?.[key] !== value)) {
+    throw Error(`Refusing container with unverified ownership (legacy labels require the reviewed old CLI): ${profile.name}`);
   }
   return container;
 }
@@ -47,6 +57,7 @@ export function isMapFrame(candidate) {
 }
 
 export class RuntimeHealth {
+  constructor(profile = config) { this.profile = profile; }
   #error; #ready = false; #updatedAt = 0; #identity;
   fail(reason) { this.#error ??= String(reason); this.#ready = false; }
   ready(identity, now = Date.now()) {
@@ -55,6 +66,6 @@ export class RuntimeHealth {
   }
   snapshot(now = Date.now()) {
     return { healthy: this.#ready && !this.#error && now >= this.#updatedAt && now - this.#updatedAt < 15000,
-      updatedAt: this.#updatedAt, identity: this.#identity, error: this.#error ?? null, moduleSha256: config.moduleSha256 };
+      updatedAt: this.#updatedAt, identity: this.#identity, error: this.#error ?? null, moduleSha256: this.profile.moduleSha256, persona: this.profile.persona };
   }
 }

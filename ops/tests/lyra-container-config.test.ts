@@ -1,5 +1,9 @@
 import { expect, it } from 'vitest';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, mkdtempSync, copyFileSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { pathToFileURL } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { buildCreateArgs } from '../bots/config.mjs';
 const read = name => readFileSync(new URL(`../bots/${name}`, import.meta.url), 'utf8');
@@ -15,7 +19,7 @@ it('pins one browser dependency separately and keeps the browser image build con
   expect(instructions.filter(i => ['EXPOSE', 'VOLUME', 'ADD', 'ENTRYPOINT'].includes(i.kind))).toEqual([]);
   expect(JSON.parse(instructions.find(i => i.kind === 'CMD').args)).toEqual(['node', 'runner.mjs']);
   const copies = instructions.filter(i => i.kind === 'COPY').flatMap(i => i.args.split(' ').slice(0, -1));
-  expect(copies.sort()).toEqual(['browser-session.mjs', 'config.mjs', 'healthcheck.mjs', 'package-lock.json', 'package.json', 'runner.mjs']);
+  expect(copies.sort()).toEqual(['browser-session.mjs', 'config.mjs', 'evidence.mjs', 'healthcheck.mjs', 'package-lock.json', 'package.json', 'runner.mjs']);
   const allowedContext = read('.dockerignore').trim().split('\n');
   expect(allowedContext[0]).toBe('*');
   expect(allowedContext.slice(1).map(s => s.slice(1)).sort()).toEqual(['Dockerfile', ...copies].sort());
@@ -64,4 +68,14 @@ it('reconstructs the exact upstream profile bytes by restoring only the chroot c
   chrootRules[0].includes = { caps: ['CAP_SYS_CHROOT'] };
   const upstreamBytes = JSON.stringify(profile, null, '\t') + '\n';
   expect(createHash('sha256').update(upstreamBytes).digest('hex')).toBe('cc3e61cabda6bbc1e53e54d27ba4d55a9d3be829b6dd1a596f4a7b31b1cc7849');
+});
+
+it('imports the actual copied runner closure without any local-only files or browser startup', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'guide-copied-closure-'));
+  try {
+    const copies = read('Dockerfile').trim().split('\n').filter(line => line.startsWith('COPY ')).flatMap(line => line.split(' ').slice(1, -1));
+    for (const file of copies) copyFileSync(new URL(`../bots/${file}`, import.meta.url), join(directory, file));
+    const script = `await import(${JSON.stringify(pathToFileURL(join(directory, 'runner.mjs')).href)}); console.log('closure imports safely')`;
+    expect(execFileSync(process.execPath, ['--input-type=module', '-e', script], { encoding: 'utf8' })).toContain('closure imports safely');
+  } finally { rmSync(directory, { recursive: true, force: true }); }
 });

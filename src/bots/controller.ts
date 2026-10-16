@@ -1,3 +1,4 @@
+import { failureRecord } from '../../ops/bots/evidence.mjs';
 import { guardMap } from './map-guard';
 import { addressedCommand, PERSONAS, personaByName, type Persona } from './personas';
 import { busy, center, gateReply, help, parseCommand, planRoute, rooms, startupRoute, tileOf, type Destination, type Language, type Tile } from './venue';
@@ -22,7 +23,8 @@ export interface LyraAdapter {
   position(): Promise<Point>;
   move(point: Point): Promise<Point & { cancelled: boolean }>;
   say(text: string): void;
-  diagnostic(text: string): void;
+  diagnostic(text: string, evidence?: Record<string, unknown>): void;
+  receipt?(evidence: Record<string, unknown>): void;
   onChat(callback: (event: ChatEvent) => void): Dispose;
   onBubble(callback: (bubble: Bubble) => void): Dispose;
 }
@@ -41,7 +43,7 @@ export interface LyraController {
 }
 
 /** Owns one serialized movement loop. stop invalidates work; it never guesses that a pending move ended. */
-export function createLyraController(api: LyraAdapter, scheduler: Scheduler = clock, persona: Persona = PERSONAS.lyra): LyraController {
+export function createLyraController(api: LyraAdapter, scheduler: Scheduler = clock, persona: Persona = PERSONAS.lyra, controllerGeneration = 0): LyraController {
   let started = false, active = false, ready = false, finished = false, room = '', current: Tile = persona.home;
   let self: Participant = { id: -1, name: persona.name };
   let mode: 'startup' | 'patrol' | 'escort' | 'return' = 'startup', corner = 1;
@@ -51,6 +53,28 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
   const botCandidates = new Map<number, Persona>();
   const timers = new Set<ReturnType<typeof setTimeout>>(), subscriptions: Dispose[] = [];
   let meetingSubscriptions: Dispose[] = [], wake: (() => void) | undefined;
+  let sequence = 0, steps = 0;
+  let lastFailure: Record<string, unknown> | undefined;
+  const failureReason = () => {
+    const value = lastFailure?.error;
+    return value && typeof value === 'object' && 'message' in value && typeof value.message === 'string' ? value.message : 'controller rejection';
+  };
+  const receipt = (record: Record<string, unknown>) => { if (finished && record.state !== 'terminal') return; try { api.receipt?.(record); } catch { /* Evidence cannot change terminal authority. */ } };
+  const operation = <T>(name: string, phase: string, action: () => Promise<T>, attemptedCell?: Tile): Promise<T> => {
+    const context = { operation: name, phase, sequence: ++sequence, startedAt: scheduler.now(), persona: persona.key,
+      controllerGeneration, attemptedCell, steps };
+    receipt({ ...context, state: 'pending' });
+    const rejected = (error: unknown) => {
+      lastFailure = failureRecord(error, { ...context, event: 'controller-terminal', settledAt: scheduler.now() });
+      receipt({ ...context, state: 'failed', settledAt: scheduler.now() });
+    };
+    try {
+      // Observe the original promise without adding a scheduling or cancellation layer.
+      const pending = action();
+      void pending.then(() => receipt({ ...context, state: 'settled', settledAt: scheduler.now() }), rejected);
+      return pending;
+    } catch (error) { rejected(error); throw error; }
+  };
   let finish!: () => void;
   const done = new Promise<void>(resolve => { finish = resolve; });
   const timer = (cb: () => void, ms: number) => {
@@ -61,9 +85,10 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     if (finished) return;
     active = false; finished = true;
     for (const handle of timers) scheduler.clearTimeout(handle); timers.clear();
-    for (const off of [...subscriptions.splice(0), ...meetingSubscriptions.splice(0)]) off();
+    for (const off of [...subscriptions.splice(0), ...meetingSubscriptions.splice(0)]) { try { off(); } catch { /* Continue exact owned cleanup. */ } }
     participants.clear(); botCandidates.clear(); visitors.clear(); wake?.(); wake = undefined;
-    api.diagnostic(`${persona.name} stopped: ${reason}`);
+    receipt({ state: 'terminal', persona: persona.key, controllerGeneration, sequence, steps, at: scheduler.now() });
+    try { api.diagnostic(`${persona.name} stopped: ${reason}`, lastFailure ?? failureRecord(reason, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() })); } catch { /* Logger failure must not prevent stop/done. */ }
     if (!started) finish();
   };
   const sleep = (ms: number) => new Promise<void>(resolve => {
@@ -180,17 +205,18 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
   const same = (a: Tile, b: Tile) => a[0] === b[0] && a[1] === b[1];
   const move = async (next: Tile) => {
     if (!checkRoom()) return;
-    const actual = tileOf(await api.position());
+    const actual = tileOf(await operation('position', 'pre-step', () => api.position(), next));
     if (!active || !checkRoom()) return;
     if (!same(actual, current)) throw Error('Unexpected player position before step');
     if (Math.abs(next[0] - current[0]) + Math.abs(next[1] - current[1]) !== 1) throw Error('Non-adjacent route step');
     const timeout = timer(() => stop('movement timeout; pending move remains quarantined'), 10000);
     // Do not race this promise against a timeout: a timeout is not native cancellation.
-    const result = await api.move(center(next)); cancel(timeout);
+    const result = await operation('move', 'pre-step', () => api.move(center(next)), next); cancel(timeout);
     if (!active || !checkRoom()) return;
     if (result.cancelled) throw Error('Native movement cancelled');
     if (!same(tileOf(result), next)) throw Error('Movement result outside intended cell');
-    current = next;
+    current = next; steps++;
+    receipt({ state: 'progress', persona: persona.key, controllerGeneration, steps, cell: current, at: scheduler.now() });
     await sleep(100);
   };
   const loop = async () => {
@@ -222,16 +248,16 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
       // Native meetings.onJoin is non-replaying. Subscribe before the first asynchronous
       // map/position guard and cache live membership until validation completes.
       subscriptions.push(api.onBubble(onBubble));
-      await guardMap(await api.map()); if (!active || !checkRoom()) { finish(); return; }
-      current = tileOf(await api.position()); if (!active || !checkRoom()) { finish(); return; }
+      await operation('map', 'startup', async () => guardMap(await api.map())); if (!active || !checkRoom()) { finish(); return; }
+      current = tileOf(await operation('position', 'startup', () => api.position())); if (!active || !checkRoom()) { finish(); return; }
       startup = startupRoute(current, persona.home).slice(1); startupDeadline = scheduler.now() + 60000;
       ready = true;
       subscriptions.push(api.onChat(onChat));
       if (participants.size) lastActivity = scheduler.now();
       for (const id of participants) greet(id);
       monitor();
-      void loop().catch(error => stop(error instanceof Error ? error.message : String(error))).finally(finish);
-    } catch (error) { stop(error instanceof Error ? error.message : String(error)); finish(); }
+      void loop().catch(error => { lastFailure ??= failureRecord(error, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() }); stop(failureReason()); }).finally(finish);
+    } catch (error) { lastFailure ??= failureRecord(error, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() }); stop(failureReason()); finish(); }
   };
   return { done, start, stop };
 }

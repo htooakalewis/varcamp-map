@@ -1,6 +1,10 @@
+import { diagnosticLine } from '../../ops/bots/evidence.mjs';
 import { personaByName, personaFromMetadata } from './personas';
 import { createLyraController, type LyraAdapter, type LyraController } from './controller';
 
+export function writeDiagnostic(text: string, evidence?: Record<string, unknown>, output: (message: string) => void = message => console.warn(message)): void {
+  output(diagnosticLine(text, evidence));
+}
 let current: LyraController | undefined;
 let serial: Promise<void> = Promise.resolve();
 let generation = 0;
@@ -23,7 +27,8 @@ async function run(metadata?: unknown): Promise<void> {
       map: () => WA.room.getTiledMap(), roomId: () => WA.room.id,
       position: () => WA.player.getPosition(), move: point => WA.player.moveTo(point.x, point.y),
       say: text => WA.chat.sendChatMessage(text, { scope: 'bubble' }),
-      diagnostic: text => console.warn(text),
+      diagnostic: writeDiagnostic,
+      receipt: evidence => { (globalThis as typeof globalThis & { __varcampGuideEvidence?: Record<string, unknown> }).__varcampGuideEvidence = evidence; },
       onChat: callback => {
         const subscription = WA.chat.onChatMessage((text, event) => callback({ text, authorId: event.authorId, authorName: event.author?.name }), { scope: 'bubble' });
         return () => subscription.unsubscribe();
@@ -42,7 +47,7 @@ async function run(metadata?: unknown): Promise<void> {
         return () => subscription.unsubscribe();
       },
     };
-    const controller = createLyraController(api, undefined, persona); current = controller;
+    const controller = createLyraController(api, undefined, persona, ticket); current = controller;
     const shutdown = () => controller.stop('dedicated page closed');
     globalThis.addEventListener?.('pagehide', shutdown, { once: true });
     void controller.done.then(() => globalThis.removeEventListener?.('pagehide', shutdown));
