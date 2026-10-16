@@ -259,7 +259,7 @@ it('a lifecycle grant is claimed once and cannot replay a completed fresh bootst
     f.page.url = () => 'about:blank';
     await expect(session.bootstrapSession(f.page, { profile: f.profile, fresh: f.grant, assertLive() {}, join: async () => { throw Error('grant unexpectedly replayed'); } })).rejects.toThrow(/unused fresh owned/i);
     expect(f.starts).toBe(1);
-    expect(f.events.find(row => row.name === 'fresh-context')?.details).toEqual({ permissions: [], viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', acceptDownloads: false });
+    expect(f.events.find(row => row.name === 'fresh-context')?.details).toEqual({ permissions: [], viewport: { width: 640, height: 480 }, serviceWorkers: 'block', acceptDownloads: false });
   } finally { f.close(); await task.catch(() => {}); }
 });
 it('public startup position rejection remains fatal with original stack/cause and no retry', async () => {
