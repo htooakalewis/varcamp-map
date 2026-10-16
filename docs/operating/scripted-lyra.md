@@ -41,13 +41,19 @@ The [official custom-script guide](https://docs.workadventu.re/admin/bots/custom
 
 The guide's prose describes a `run` function; its linked starter uses a default object with `run`, which this artifact preserves. No Bots manager was exposed in the inspected demo guest menu. Official hosted registration, entitlement and live behavior are unverified; no licensed administration stack is installed by this work.
 
-## Owned devbox development runner (pending)
+## Owned devbox development runner (live acceptance pending)
 
-WorkAdventure's [development tutorial](https://docs.workadventu.re/blog/gpt-bot/#our-battle-plan) describes a dedicated browser tab and eventual headless browser. A separate owned development runner may join as an ordinary participant, identify the avatar as `Lyra [BOT]`, and import this artifact only inside that browser's already-initialized map-script iframe:
+The separate [owned development launcher](../../ops/bots/README.md) manages one additive `varcamp-lyra-dev` container through private SSH/local CLI. It joins as `Lyra [BOT]`, imports the exact reviewed HTTPS bytes only in its initialized map-script frame, and invokes `default.run({})`. Its pinned digest is `29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f`. The launcher contains its own locked browser dependency; ordinary map visitors never activate it.
 
-```js
-const lyra = await import('https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=<sha256>');
-await lyra.default.run({});
+From the reviewed devbox checkout, after building the reviewed image as documented:
+
+```sh
+node ops/bots/cli.mjs start "$(cat ops/private/lyra/image-id)"
+node ops/bots/cli.mjs status
+node ops/bots/cli.mjs logs
+node ops/bots/cli.mjs stop
 ```
 
-The runner must be additive and resource-limited, with one browser, camera/microphone off, authenticated operator controls and no public administration API. It must never add bot startup flags to ordinary map scripts. Browser dependencies belong to the runner, not this map package. Preserve existing core container IDs and health and capture before/after evidence. Start/stop/status commands and their exact service name will be documented with that separate tool; no launcher service is provided in this module task. Stop by closing only the dedicated browser/session. No model API, microphone capture, forced following, teleport, quest write, cross-map movement, WorkAdventure core change or infrastructure change is part of this module.
+Ownership labels and immutable container IDs restrict cleanup to the dedicated browser. Camera and microphone are denied/off, audio is muted, Chromium remains sandboxed, and CPU/memory/PID/tmpfs limits bound the detached process. The tool exposes no public administration API and modifies no core service. Private snapshots preserve the original 31-container reference outside Git. The publication manifest records 25 explicit extension hashes, including every runner and new operational test file; its original 303 hashes remain unchanged.
+
+The official manager and its entitlement remain separate and unverified. Launcher review, actual image build, public byte readback, sandbox startup, two independent visitors, early/later bubble joins and stop/restart acceptance remain required. A visitor already in a bubble when the module attaches may expose the supported `onJoin()` API's lack of initial replay; document the outcome without touching private meeting state. See the launcher guide for exact commands, failure health, core isolation and remaining live gates.
