@@ -1,0 +1,12 @@
+{
+  "version": "4.2.0",
+  "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/Tilemap.js",
+  "upstreamSha256": "a649403eed0b470f4c1bfd11334d3eca76ed9f4e9ff9a5e7281ab0d89db0d3e1",
+  "methodExcerptSha256": "d67926f078422331442837833dedec96ad927aa3a78de1451700c128fe9f6c17",
+  "methods": [
+    "getIndex",
+    "getTilesetIndex",
+    "addTilesetImage"
+  ],
+  "license": "MIT; Phaser Studio Inc.; retained existing pinned Phaser LICENSE.txt under docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/"
+}

@@ -1,7 +1,7 @@
 {
   "scope": "2026-10-17 reviewed beach visual refinement; original retirement receipts remain immutable",
   "baselineNativeSha256": "c656d02d3e7675dc3cbe54ac20649c1be6c93aec8969be5249c805bc918db11e",
-  "nativeSha256": "9825e6e21eb9c8b96ffab6e4dfcad15331e41c7d162276869b38c2c80f8169f8",
+  "nativeSha256": "32d850c0e7d0f817369d71aa68aa7b7fb910ca21e420cb4a76d3d37f1761783f",
   "nativeCollisionSha256": "30a049628535fe1b10f9c9d1f97b143e1932f8d888bcc73308069d258b75b605",
   "shipPlacementsSha256": "fbd17e3d12073be0e392cbd715af5a6bdffe56e16dcf7519bc7c4b838020780b",
   "wamFileSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887"

@@ -58,13 +58,13 @@
     {
       "path": "maps/preview/shipyard-beach.tmj",
       "fromSha256": "ee1475ddc49502813a5750273b05ad3918bacc82cae23d27b263b855d10dbd4f",
-      "toSha256": "9005ec8cf1048c07421dacacfca24975df30a0d8421f0e9f48018b067709e1c7",
+      "toSha256": "1cd3bfe55b565f7764f8d2a6816ed7211fa9384c838d30026a17f8790409c9f6",
       "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "maps/shipyard-beach.tmj",
       "fromSha256": "615ff0cafe9d1acc267aa6db5bcc83109bff3a5e28516a8d6cc67a7209f4a98c",
-      "toSha256": "cbff9df1324651f00ac4ade6dc748e02e40030a02a5bc179000d661091fa9b9b",
+      "toSha256": "3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac",
       "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
@@ -203,6 +203,18 @@
       "path": "art/tile-catalog.json",
       "fromSha256": "1e447f366e5ca18b15382fc16c6f5c4d566a2bc4553f97a54e693d60020f237a",
       "toSha256": "d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "tests/map-validation.test.ts",
+      "fromSha256": "06e29d5802eafe63c8efaa2096a94c622144c18f3d59663e7af3a48f62e15f72",
+      "toSha256": "bf462e344fda1874632c2b19ad7f34dc9f692fa9d866e6f7e2faf6ff5888749a",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "tools/maps/validate.ts",
+      "fromSha256": "679e63838160b2e9e05f1ea805c9184abe33a2a41767cbe7dfa3b233fb1a9c72",
+      "toSha256": "8daa3d1167f15fc9df1fd79a27139bc4754ce08bd85a950dc0a45b036a49518a",
       "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     }
   ]

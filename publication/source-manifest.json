@@ -343,7 +343,7 @@
     "ops/tests/lyra-container-config.test.ts": "55d4697528fce8e96adc04f36eea6fb0964dadda3177dce21e0e47ea1256b94c",
     "ops/tests/lyra-healthcheck.test.ts": "a65260b2ced5deb5f4e344a0992e88fa17d8e680e6d4625b187bec52d91eea58",
     "ops/tests/lyra-launcher.test.ts": "575ed5295a1be85f5231c5e4cbfb6f50e1ac4baa6bbffc2aa2c7f3b1f4960c8f",
-    "publication/revisions/2026-10-16-shared-guides.json": "9d725e7aadf2abaccd91149faff6c0e46766402815cf2a26fbc281d83b8f03c2",
+    "publication/revisions/2026-10-16-shared-guides.json": "e92cca1889ed27495d659733af11159a8d0632a37d946318af6d9e9aa448abbd",
     "publication/revisions/README.md": "3e3e2de7ffb3cee827ac613837fda846aca14fbfda4528175905662f78893e0d",
     "publication/verify-source.mjs": "9c741532360f067bc3fa8cfe0a08ff4da1f9ca808b8781f631b152a3455cac7e",
     "src/bots/controller.ts": "7620159a83df7e38d43b92dbab2ff32489f8101dcaccc05359b7e0a1c1733ea6",
@@ -374,11 +374,14 @@
     "tests/guide-lifecycle.test.ts": "16ff3cc6f76b4597173b733ae208ca78f774446f889be979d40599cd145d6c3b",
     "tests/guide-retained-proofs.test.ts": "ec5175198d08c282c9572e6db4c36b93706a6158aacc5f5e7661bc81edb8a7da",
     "tools/art/beach-lounge.py": "d0e0b674ee4f4a863ebc6202e1fd2bf9a19abc17efbedf3adf74a9418bae397e",
-    "tools/maps/refine-beach.mjs": "31f38b97c766da3ef93edd411c8e6000c0a0904cd2fc483da6a8d03978d78026",
-    "tests/fixtures/beach-refinement-receipt.json": "c256d552d31d0b370f9f4f3eac33c6fc2f5ff31bf013bb4881080e7892fc0222",
+    "tools/maps/refine-beach.mjs": "176239fee1d77f46d62ff18b2d6437ad5a72b776bce54f796f1029ab23737208",
+    "tests/fixtures/beach-refinement-receipt.json": "b8a8a513bbbe3014a2eb8975653cd7e4091d42d19260ed962b29dadb17a4967b",
     "tests/fixtures/beach-retirement/README.md": "020856f7846b76ec32f62892309b88482a2b640b4d352f71cdf62a4697dde9df",
     "tests/fixtures/beach-retirement/before-layout.json": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
     "tests/fixtures/beach-retirement/retired-native.tmj": "4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601",
-    "tests/fixtures/beach-retirement/stale-preview.tmj": "a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1"
+    "tests/fixtures/beach-retirement/stale-preview.tmj": "a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1",
+    "tests/fixtures/phaser-tileset-binding/TilemapTilesetMethods.js.txt": "d67926f078422331442837833dedec96ad927aa3a78de1451700c128fe9f6c17",
+    "tests/fixtures/phaser-tileset-binding/provenance.json": "8bb8b7afbf6b374048f959b88f64a242807e0aa08bc919f083377d9386fd6dc3",
+    "tests/native-tileset-binding.test.ts": "097429df0ad1bfbddbddc0bd4c2c7e487252c41600d663829f2c91dc38e479ba"
   }
 }

@@ -14,10 +14,16 @@ const base=JSON.parse(fs.readFileSync('maps/shipyard-beach.tmj','utf8'));
 // Reconcile the draft visuals against the existing native scene. Every pre-existing
 // GID remains stable. Portal layers and all scene properties are retained verbatim.
 let next=Math.max(...base.tilesets.map(t=>t.firstgid+t.tilecount));const key=t=>t.name==='navigation-mask'||t.name==='coastal-flight'||t.name.startsWith('beach-surf-')?t.name:t.image;const bykey=new Map(base.tilesets.map(t=>[key(t),t]));const remap=[];
+// Native client binding is by tileset.name. A builder's positional art-N name
+// cannot be reused when its sheet is appended to a differently ordered native map.
+const beachAtlasName=t=>t.image==='../assets/tilesets/original/beach-lounge.png'?'beach-lounge':t.name;
 for(const t of built.tilesets){
  let dest=bykey.get(key(t));
  if(!dest){
-  dest={...structuredClone(t),firstgid:next};base.tilesets.push(dest);bykey.set(key(t),dest);next+=t.tilecount;
+  dest={...structuredClone(t),name:beachAtlasName(t),firstgid:next};if(base.tilesets.some(old=>old.name===dest.name))throw Error(`Appended atlas name already exists: ${dest.name}`);base.tilesets.push(dest);bykey.set(key(t),dest);next+=t.tilecount;
+ }else if(t.image==='../assets/tilesets/original/beach-lounge.png'){
+  // Repair earlier appended aliases without renumbering a single GID.
+  dest.name=beachAtlasName(t);
  }else if(t.name.startsWith('beach-surf-')){
   // The layout owns timing/frame definitions. Refresh reused atlas metadata while
   // retaining its reserved GID range, so descriptor edits survive reconciliation.

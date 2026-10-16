@@ -42,8 +42,13 @@ export function validateMap(map: unknown, catalog: typeof WORLD_CATALOG): Valida
   }
   const ranges: { first: number; end: number }[] = [];
   const collisionGids = new Set<number>();
+  const tilesetNames = new Set<string>();
   tmj.tilesets.forEach((tileset, i) => {
     const path = `tilesets.${i}`;
+    if(tileset.name){
+      if(tilesetNames.has(tileset.name))add('TILESET_NAME_DUPLICATE',`${path}.name`,'Tileset names must be unique: WorkAdventure binds atlas images by name, not firstgid');
+      tilesetNames.add(tileset.name);
+    }
     if (tileset.source) add('EXTERNAL_TILESET', `${path}.source`, 'Embed tileset definitions instead of external TSX/TSJ references');
     if (!tileset.source && (!tileset.name || !tileset.tilecount || tileset.tilewidth !== 32 || tileset.tileheight !== 32)) {
       add('TILESET_FORMAT', path, 'Embedded tilesets require a name, tilecount and 32×32 tiles');

@@ -1,0 +1,77 @@
+({
+getIndex: function (location, name)
+    {
+        for (var i = 0; i < location.length; i++)
+        {
+            if (location[ i ].name === name)
+            {
+                return i;
+            }
+        }
+
+        return null;
+    },
+getTilesetIndex: function (name)
+    {
+        return this.getIndex(this.tilesets, name);
+    },
+addTilesetImage: function (tilesetName, key, tileWidth, tileHeight, tileMargin, tileSpacing, gid, tileOffset)
+    {
+        if (tilesetName === undefined) { return null; }
+        if (key === undefined || key === null) { key = tilesetName; }
+
+        var textureManager = this.scene.sys.textures;
+
+        if (!textureManager.exists(key))
+        {
+            console.warn('Texture key "%s" not found', key);
+            return null;
+        }
+
+        var texture = textureManager.get(key);
+
+        var index = this.getTilesetIndex(tilesetName);
+
+        if (index === null && this.format === Formats.TILED_JSON)
+        {
+            console.warn('Tilemap has no tileset "%s". Its tilesets are %o', tilesetName, this.tilesets);
+            return null;
+        }
+
+        var tileset = this.tilesets[ index ];
+
+        if (tileset)
+        {
+            if (tileWidth || tileHeight)
+            {
+                tileset.setTileSize(tileWidth, tileHeight);
+            }
+
+            if (tileMargin || tileSpacing)
+            {
+                tileset.setSpacing(tileMargin, tileSpacing);
+            }
+
+            tileset.setImage(texture);
+
+            return tileset;
+        }
+
+        if (tileWidth === undefined) { tileWidth = this.tileWidth; }
+        if (tileHeight === undefined) { tileHeight = this.tileHeight; }
+        if (tileMargin === undefined) { tileMargin = 0; }
+        if (tileSpacing === undefined) { tileSpacing = 0; }
+        if (gid === undefined) { gid = 0; }
+        if (tileOffset === undefined) { tileOffset = { x: 0, y: 0 }; }
+
+        tileset = new Tileset(tilesetName, gid, tileWidth, tileHeight, tileMargin, tileSpacing, undefined, undefined, tileOffset);
+
+        tileset.setImage(texture);
+
+        this.tilesets.push(tileset);
+
+        this.tiles = BuildTilesetIndex(this);
+
+        return tileset;
+    }
+})

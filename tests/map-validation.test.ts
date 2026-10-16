@@ -32,6 +32,14 @@ describe('map validation', () => {
     const map = validMap(); Object.assign(map.tilesets[0], { source: 'fixture.tsx' });
     expect(codes(map)).toContain('EXTERNAL_TILESET');
   });
+  it('rejects duplicate embedded tileset names before WorkAdventure binds the wrong firstgid',()=>{
+    const map=validMap();map.tilesets.push({...structuredClone(map.tilesets[0]),firstgid:3});
+    expect(validateMap(map,WORLD_CATALOG)).toEqual(expect.arrayContaining([expect.objectContaining({code:'TILESET_NAME_DUPLICATE',location:'tilesets.1.name'})]));
+  });
+  it('allows one atlas image to support multiple uniquely named tilesets',()=>{
+    const map=validMap();map.tilesets.push({...structuredClone(map.tilesets[0]),firstgid:3,name:'fixture-animation-alias'});
+    expect(codes(map)).toEqual([]);
+  });
   it('rejects a GID outside the embedded tileset ranges', () => {
     const map = validMap(); map.layers[2].data![0] = 3;
     expect(codes(map)).toContain('INVALID_GID');
