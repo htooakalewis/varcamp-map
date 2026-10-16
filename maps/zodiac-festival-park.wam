@@ -1,0 +1,96 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "zodiac-festival-park.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "pond-view",
+      "name": "pond-view",
+      "visible": true,
+      "x": 704,
+      "y": 800,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "fire-conversation",
+      "name": "fire-conversation",
+      "visible": true,
+      "x": 256,
+      "y": 736,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "earth-conversation",
+      "name": "earth-conversation",
+      "visible": true,
+      "x": 1152,
+      "y": 736,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "air-conversation",
+      "name": "air-conversation",
+      "visible": true,
+      "x": 256,
+      "y": 1152,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "water-conversation",
+      "name": "water-conversation",
+      "visible": true,
+      "x": 1152,
+      "y": 1152,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "picnic-conversation",
+      "name": "picnic-conversation",
+      "visible": true,
+      "x": 320,
+      "y": 1248,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "quiet-lawn",
+      "name": "quiet-lawn",
+      "visible": true,
+      "x": 1088,
+      "y": 1248,
+      "width": 128,
+      "height": 96,
+      "properties": [
+        {
+          "id": "quiet-lawn-silent",
+          "type": "silent"
+        }
+      ]
+    },
+    {
+      "id": "star-overlook-view",
+      "name": "star-overlook-view",
+      "visible": true,
+      "x": 704,
+      "y": 384,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Zodiac Festival Park"
+  }
+}

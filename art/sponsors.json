@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Original fictional DEMO ORBIT, DEMO NOVA and DEMO ATLAS marks authored for the VarCamp demo by the VarCamp map contributors with Codex assistance.",
+  "dedication": "To the extent possible under law, the contributors waive all copyright and related or neighboring rights in these three original SVG marks and their PNG exports under CC0 1.0 Universal.",
+  "purpose": "Fictional, unlinked demo sponsor placeholders. These marks make no real sponsorship or affiliation claim.",
+  "nativeSize": {
+    "width": 192,
+    "height": 64,
+    "tileWidth": 6,
+    "tileHeight": 2
+  },
+  "assets": [
+    {
+      "name": "DEMO ORBIT",
+      "image": "assets/sponsors/demo-01.png",
+      "source": "art/source/sponsors/demo-01.svg"
+    },
+    {
+      "name": "DEMO NOVA",
+      "image": "assets/sponsors/demo-02.png",
+      "source": "art/source/sponsors/demo-02.svg"
+    },
+    {
+      "name": "DEMO ATLAS",
+      "image": "assets/sponsors/demo-03.png",
+      "source": "art/source/sponsors/demo-03.svg"
+    }
+  ],
+  "replacement": {
+    "instructions": "Replace the chosen assets/sponsors/demo-0N.png with an authorized transparent 192×64 PNG at the identical path. Run npm run maps:build to refresh previews, then npm run buildmap to package the current bytes. No code edit, atlas generation or SVG rasterization is needed. PNG assets are intentionally not hash-frozen. Keep panel frames in the map, outside these bitmaps.",
+    "licenseNote": "CC0 applies to the original fictional demo marks only. Record the replacement artwork owner, permission and applicable terms here when replacing a mark; replacing a file does not relicense the new artwork.",
+    "documentation": "docs/operating/sponsors.md"
+  },
+  "nativeRepresentation": "Each unchanged 192×64 PNG is an embedded 32px tileset with 6 columns and 12 cells, drawn in row-major order by an ordinary visible 6×2 sponsor tile-layer footprint. This is compatible with the pinned WorkAdventure renderer; image-only layers are unsupported."
+}

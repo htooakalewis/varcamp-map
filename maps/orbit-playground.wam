@@ -1,0 +1,31 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "orbit-playground.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "playground-conversation",
+      "name": "playground-conversation",
+      "visible": true,
+      "x": 544,
+      "y": 672,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "orbit-games",
+      "name": "orbit-games",
+      "visible": true,
+      "x": 480,
+      "y": 448,
+      "width": 160,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Orbit Playground"
+  }
+}

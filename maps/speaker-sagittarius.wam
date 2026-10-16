@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "speaker-sagittarius.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "meeting-sagittarius",
+      "name": "meeting-sagittarius",
+      "visible": true,
+      "x": 64,
+      "y": 160,
+      "width": 1152,
+      "height": 640,
+      "properties": [
+        {
+          "id": "sagittarius-livekit",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-sagittarius",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true,
+            "raiseHandEnabled": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "beacon-sagittarius",
+      "name": "beacon-sagittarius",
+      "visible": true,
+      "x": 992,
+      "y": 928,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Speaker Sagittarius"
+  }
+}

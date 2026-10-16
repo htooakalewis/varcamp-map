@@ -1,0 +1,683 @@
+{
+  "coast-sailing-ship": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 20,
+      "height": 20
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-square-sail": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 20,
+      "y": 0,
+      "width": 7,
+      "height": 7
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-mast": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 27,
+      "y": 0,
+      "width": 2,
+      "height": 7
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sponsor-plane": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 20,
+      "y": 7,
+      "width": 12,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-sponsor-balloon": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 20,
+      "y": 11,
+      "width": 12,
+      "height": 10
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-sand": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 0,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sea": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 1,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-shallows": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 2,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-foam-south": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 3,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-foam-north": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 4,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-foam-east": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 5,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-foam-west": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 6,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-dock-plank": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 7,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-deck-plank": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 8,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-palm": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 0,
+      "y": 22,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-parasol": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 3,
+      "y": 22,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-deck-chair": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 6,
+      "y": 22,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-towel": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 8,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-beach-bar": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 10,
+      "y": 22,
+      "width": 6,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-harbor-hut": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 16,
+      "y": 22,
+      "width": 5,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-mooring-post": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 21,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-rope-horizontal": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 22,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-rope-vertical": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 23,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-barrel": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 24,
+      "y": 22,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-crate": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 25,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-wheel": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 27,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-cannon": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 29,
+      "y": 22,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-hatch": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 32,
+      "y": 22,
+      "width": 3,
+      "height": 3
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-flag": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 35,
+      "y": 22,
+      "width": 2,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-gull": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 37,
+      "y": 22,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-fish": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 39,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-shell": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 40,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sandcastle": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 41,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-cloud": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 43,
+      "y": 22,
+      "width": 4,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-bulwark": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 47,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sign-board": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 48,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-volley-net": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 49,
+      "y": 22,
+      "width": 5,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sign-post": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 54,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-wet-sand": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 55,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-footprints": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 56,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-pebble-cluster": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 57,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-underwater-rock": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 58,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sign-pointer-left": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 60,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-sign-pointer-right": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 61,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-yard-fore": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 32,
+      "y": 0,
+      "width": 16,
+      "height": 7
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-yard-starboard": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 48,
+      "y": 0,
+      "width": 15,
+      "height": 15
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-yard-aft": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 32,
+      "y": 8,
+      "width": 16,
+      "height": 10
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  }
+}

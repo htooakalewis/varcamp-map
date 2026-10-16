@@ -1,0 +1,4461 @@
+{
+  "id": "orbit-maze",
+  "width": 80,
+  "height": 80,
+  "placements": [
+    {
+      "id": "night-floor",
+      "sprite": "floor-cosmic",
+      "x": 0,
+      "y": 0,
+      "width": 80,
+      "height": 80,
+      "layer": "terrain"
+    },
+    {
+      "id": "maze-solid-walls",
+      "sprite": "wall-charcoal",
+      "x": 2,
+      "y": 2,
+      "width": 76,
+      "height": 62,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-0",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 44,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-1",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 44,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-2",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 32,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-3",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 32,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-4",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 20,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-5",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 20,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-6",
+      "sprite": "path-stone",
+      "x": 44,
+      "y": 20,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-7",
+      "sprite": "path-stone",
+      "x": 44,
+      "y": 32,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-8",
+      "sprite": "path-stone",
+      "x": 56,
+      "y": 20,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-9",
+      "sprite": "path-stone",
+      "x": 56,
+      "y": 20,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-10",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 8,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-11",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 56,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-12",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 56,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-13",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 56,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-14",
+      "sprite": "path-stone",
+      "x": 44,
+      "y": 56,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-15",
+      "sprite": "path-stone",
+      "x": 56,
+      "y": 56,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-16",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 44,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-17",
+      "sprite": "path-stone",
+      "x": 56,
+      "y": 44,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-18",
+      "sprite": "path-stone",
+      "x": 44,
+      "y": 44,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-19",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 44,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-20",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 32,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-21",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 20,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-22",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 8,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-23",
+      "sprite": "path-stone",
+      "x": 8,
+      "y": 8,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-24",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 8,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-25",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 8,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-26",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 8,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-27",
+      "sprite": "path-stone",
+      "x": 44,
+      "y": 8,
+      "width": 17,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-28",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 20,
+      "width": 5,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-10-10",
+      "sprite": "floor-blue",
+      "x": 7,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-10-10",
+      "sprite": "light-cyan",
+      "x": 7,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-10-22",
+      "sprite": "floor-blue",
+      "x": 7,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-10-22",
+      "sprite": "light-cyan",
+      "x": 7,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-10-34",
+      "sprite": "floor-blue",
+      "x": 7,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-10-34",
+      "sprite": "light-cyan",
+      "x": 7,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-10-46",
+      "sprite": "floor-blue",
+      "x": 7,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-10-46",
+      "sprite": "light-cyan",
+      "x": 7,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-10-58",
+      "sprite": "floor-blue",
+      "x": 7,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-10-58",
+      "sprite": "light-cyan",
+      "x": 7,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-22-10",
+      "sprite": "floor-blue",
+      "x": 19,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-22-10",
+      "sprite": "light-cyan",
+      "x": 19,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-22-22",
+      "sprite": "floor-blue",
+      "x": 19,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-22-22",
+      "sprite": "light-cyan",
+      "x": 19,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-22-34",
+      "sprite": "floor-blue",
+      "x": 19,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-22-34",
+      "sprite": "light-cyan",
+      "x": 19,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-22-46",
+      "sprite": "floor-blue",
+      "x": 19,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-22-46",
+      "sprite": "light-cyan",
+      "x": 19,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-22-58",
+      "sprite": "floor-blue",
+      "x": 19,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-22-58",
+      "sprite": "light-cyan",
+      "x": 19,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-34-10",
+      "sprite": "floor-blue",
+      "x": 31,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-34-10",
+      "sprite": "light-cyan",
+      "x": 31,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-34-22",
+      "sprite": "floor-blue",
+      "x": 31,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-34-22",
+      "sprite": "light-cyan",
+      "x": 31,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-34-34",
+      "sprite": "floor-blue",
+      "x": 31,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-34-34",
+      "sprite": "light-cyan",
+      "x": 31,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-34-46",
+      "sprite": "floor-blue",
+      "x": 31,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-34-46",
+      "sprite": "light-cyan",
+      "x": 31,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-34-58",
+      "sprite": "floor-blue",
+      "x": 31,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-34-58",
+      "sprite": "light-cyan",
+      "x": 31,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-46-10",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-46-10",
+      "sprite": "light-cyan",
+      "x": 43,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-46-22",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-46-22",
+      "sprite": "light-cyan",
+      "x": 43,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-46-34",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-46-34",
+      "sprite": "light-cyan",
+      "x": 43,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-46-46",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-46-46",
+      "sprite": "light-cyan",
+      "x": 43,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-46-58",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-46-58",
+      "sprite": "light-cyan",
+      "x": 43,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-58-10",
+      "sprite": "floor-blue",
+      "x": 55,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-58-10",
+      "sprite": "light-cyan",
+      "x": 55,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-58-22",
+      "sprite": "floor-blue",
+      "x": 55,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-58-22",
+      "sprite": "light-cyan",
+      "x": 55,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-58-34",
+      "sprite": "floor-blue",
+      "x": 55,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-58-34",
+      "sprite": "light-cyan",
+      "x": 55,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-58-46",
+      "sprite": "floor-blue",
+      "x": 55,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-58-46",
+      "sprite": "light-cyan",
+      "x": 55,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-58-58",
+      "sprite": "floor-blue",
+      "x": 55,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-58-58",
+      "sprite": "light-cyan",
+      "x": 55,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-70-10",
+      "sprite": "floor-blue",
+      "x": 67,
+      "y": 7,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-70-10",
+      "sprite": "light-cyan",
+      "x": 67,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-70-22",
+      "sprite": "floor-blue",
+      "x": 67,
+      "y": 19,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-70-22",
+      "sprite": "light-cyan",
+      "x": 67,
+      "y": 19,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-70-34",
+      "sprite": "floor-blue",
+      "x": 67,
+      "y": 31,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-70-34",
+      "sprite": "light-cyan",
+      "x": 67,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-70-46",
+      "sprite": "floor-blue",
+      "x": 67,
+      "y": 43,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-70-46",
+      "sprite": "light-cyan",
+      "x": 67,
+      "y": 43,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cell-70-58",
+      "sprite": "floor-blue",
+      "x": 67,
+      "y": 55,
+      "width": 7,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "cell-light-70-58",
+      "sprite": "light-cyan",
+      "x": 67,
+      "y": 55,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-fountain-chamber",
+      "sprite": "floor-cosmic",
+      "x": 15,
+      "y": 42,
+      "width": 12,
+      "height": 9,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-pool",
+      "sprite": "water-blue",
+      "x": 15,
+      "y": 42,
+      "width": 5,
+      "height": 2,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-water-edge",
+      "sprite": "lounge-crescent",
+      "x": 15,
+      "y": 42,
+      "width": 5,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-lily",
+      "sprite": "lily-pad",
+      "x": 17,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "comet-statue-chamber",
+      "sprite": "floor-cosmic",
+      "x": 28,
+      "y": 18,
+      "width": 11,
+      "height": 9,
+      "layer": "terrain"
+    },
+    {
+      "id": "comet-statue-focus",
+      "sprite": "comet-statue",
+      "x": 29,
+      "y": 18,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "star-ring-chamber",
+      "sprite": "floor-cosmic",
+      "x": 54,
+      "y": 30,
+      "width": 9,
+      "height": 9,
+      "layer": "terrain"
+    },
+    {
+      "id": "star-ring-focus",
+      "sprite": "rune-ring",
+      "x": 55,
+      "y": 30,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-0",
+      "sprite": "constellation-cancer",
+      "x": 15,
+      "y": 15,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-0",
+      "sprite": "light-amber",
+      "x": 18,
+      "y": 15,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-1",
+      "sprite": "constellation-sagittarius",
+      "x": 39,
+      "y": 15,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-1",
+      "sprite": "light-amber",
+      "x": 42,
+      "y": 15,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-2",
+      "sprite": "constellation-aquarius",
+      "x": 51,
+      "y": 27,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-2",
+      "sprite": "light-amber",
+      "x": 54,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-3",
+      "sprite": "constellation-pisces",
+      "x": 27,
+      "y": 39,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-3",
+      "sprite": "light-amber",
+      "x": 30,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-4",
+      "sprite": "constellation-leo",
+      "x": 51,
+      "y": 51,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-4",
+      "sprite": "light-amber",
+      "x": 54,
+      "y": 51,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-5",
+      "sprite": "constellation-capricorn",
+      "x": 63,
+      "y": 3,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-5",
+      "sprite": "light-amber",
+      "x": 66,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-zodiac-6",
+      "sprite": "constellation-virgo",
+      "x": 3,
+      "y": 39,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-6",
+      "sprite": "light-amber",
+      "x": 6,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "finish-court",
+      "sprite": "floor-cosmic",
+      "x": 66,
+      "y": 5,
+      "width": 9,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "finish-frame",
+      "sprite": "rune-frame",
+      "x": 69,
+      "y": 5,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "finish-shrine",
+      "sprite": "quest-shrine",
+      "x": 69,
+      "y": 5,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "finish-crystal-left",
+      "sprite": "crystal-cyan",
+      "x": 66,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "finish-crystal-right",
+      "sprite": "crystal-cyan",
+      "x": 74,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "restart-path",
+      "sprite": "floor-blue",
+      "x": 73,
+      "y": 10,
+      "width": 3,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "restart-threshold",
+      "sprite": "rune-threshold",
+      "x": 71,
+      "y": 14,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "maze-entrance",
+      "sprite": "floor-blue",
+      "x": 8,
+      "y": 58,
+      "width": 5,
+      "height": 16,
+      "layer": "terrain"
+    },
+    {
+      "id": "external-main-route",
+      "sprite": "floor-blue",
+      "x": 8,
+      "y": 70,
+      "width": 35,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "campus-return-route",
+      "sprite": "floor-blue",
+      "x": 37,
+      "y": 70,
+      "width": 6,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "campus-return-threshold",
+      "sprite": "rune-threshold",
+      "x": 38,
+      "y": 77,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-nook-floor",
+      "sprite": "floor-wood",
+      "x": 3,
+      "y": 75,
+      "width": 28,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "quiet-bench",
+      "sprite": "bench-curved",
+      "x": 4,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-books",
+      "sprite": "bookcase",
+      "x": 20,
+      "y": 75,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-plant",
+      "sprite": "plant-grass",
+      "x": 28,
+      "y": 76,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-table",
+      "sprite": "table-small-white",
+      "x": 10,
+      "y": 77,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-access",
+      "sprite": "floor-blue",
+      "x": 43,
+      "y": 70,
+      "width": 33,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "social-floor",
+      "sprite": "floor-wood-long",
+      "x": 49,
+      "y": 65,
+      "width": 27,
+      "height": 14,
+      "layer": "terrain"
+    },
+    {
+      "id": "social-sofa-left",
+      "sprite": "sofa-blue",
+      "x": 55,
+      "y": 68,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-sofa-right",
+      "sprite": "sofa-cream",
+      "x": 65,
+      "y": 68,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-table",
+      "sprite": "table-circular",
+      "x": 60,
+      "y": 67,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "social-seat",
+      "sprite": "chair-lounge",
+      "x": 60,
+      "y": 71,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-bench",
+      "sprite": "bench-curved",
+      "x": 53,
+      "y": 75,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-books",
+      "sprite": "bookcase",
+      "x": 72,
+      "y": 73,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "social-palm",
+      "sprite": "plant-palm",
+      "x": 50,
+      "y": 75,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "social-water",
+      "sprite": "water-cooler",
+      "x": 73,
+      "y": 67,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-glass",
+      "sprite": "glass-partition",
+      "x": 55,
+      "y": 77,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "exterior-lamp-0",
+      "sprite": "light-amber",
+      "x": 2,
+      "y": 65,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "exterior-lamp-1",
+      "sprite": "light-amber",
+      "x": 76,
+      "y": 66,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "exterior-lamp-2",
+      "sprite": "light-amber",
+      "x": 48,
+      "y": 76,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-66-4",
+      "sprite": "wall-navy",
+      "x": 66,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-67-4",
+      "sprite": "wall-navy",
+      "x": 67,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-68-4",
+      "sprite": "wall-navy",
+      "x": 68,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-69-4",
+      "sprite": "wall-navy",
+      "x": 69,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-70-4",
+      "sprite": "wall-navy",
+      "x": 70,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-71-4",
+      "sprite": "wall-navy",
+      "x": 71,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-72-4",
+      "sprite": "wall-navy",
+      "x": 72,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-73-4",
+      "sprite": "wall-navy",
+      "x": 73,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-74-4",
+      "sprite": "wall-navy",
+      "x": 74,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-7-6",
+      "sprite": "wall-navy",
+      "x": 7,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-8-6",
+      "sprite": "wall-navy",
+      "x": 8,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-9-6",
+      "sprite": "wall-navy",
+      "x": 9,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-10-6",
+      "sprite": "wall-navy",
+      "x": 10,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-11-6",
+      "sprite": "wall-navy",
+      "x": 11,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-12-6",
+      "sprite": "wall-navy",
+      "x": 12,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-13-6",
+      "sprite": "wall-navy",
+      "x": 13,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-19-6",
+      "sprite": "wall-navy",
+      "x": 19,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-20-6",
+      "sprite": "wall-navy",
+      "x": 20,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-21-6",
+      "sprite": "wall-navy",
+      "x": 21,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-22-6",
+      "sprite": "wall-navy",
+      "x": 22,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-23-6",
+      "sprite": "wall-navy",
+      "x": 23,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-24-6",
+      "sprite": "wall-navy",
+      "x": 24,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-25-6",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-31-6",
+      "sprite": "wall-navy",
+      "x": 31,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-32-6",
+      "sprite": "wall-navy",
+      "x": 32,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-33-6",
+      "sprite": "wall-navy",
+      "x": 33,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-34-6",
+      "sprite": "wall-navy",
+      "x": 34,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-35-6",
+      "sprite": "wall-navy",
+      "x": 35,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-36-6",
+      "sprite": "wall-navy",
+      "x": 36,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-37-6",
+      "sprite": "wall-navy",
+      "x": 37,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-43-6",
+      "sprite": "wall-navy",
+      "x": 43,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-44-6",
+      "sprite": "wall-navy",
+      "x": 44,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-45-6",
+      "sprite": "wall-navy",
+      "x": 45,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-46-6",
+      "sprite": "wall-navy",
+      "x": 46,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-47-6",
+      "sprite": "wall-navy",
+      "x": 47,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-48-6",
+      "sprite": "wall-navy",
+      "x": 48,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-49-6",
+      "sprite": "wall-navy",
+      "x": 49,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-55-6",
+      "sprite": "wall-navy",
+      "x": 55,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-56-6",
+      "sprite": "wall-navy",
+      "x": 56,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-57-6",
+      "sprite": "wall-navy",
+      "x": 57,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-58-6",
+      "sprite": "wall-navy",
+      "x": 58,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-59-6",
+      "sprite": "wall-navy",
+      "x": 59,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-60-6",
+      "sprite": "wall-navy",
+      "x": 60,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-61-6",
+      "sprite": "wall-navy",
+      "x": 61,
+      "y": 5,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-14-7",
+      "sprite": "wall-navy",
+      "x": 14,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-15-7",
+      "sprite": "wall-navy",
+      "x": 15,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-16-7",
+      "sprite": "wall-navy",
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-17-7",
+      "sprite": "wall-navy",
+      "x": 17,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-18-7",
+      "sprite": "wall-navy",
+      "x": 18,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-38-7",
+      "sprite": "wall-navy",
+      "x": 38,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-39-7",
+      "sprite": "wall-navy",
+      "x": 39,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-40-7",
+      "sprite": "wall-navy",
+      "x": 40,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-41-7",
+      "sprite": "wall-navy",
+      "x": 41,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-42-7",
+      "sprite": "wall-navy",
+      "x": 42,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-50-7",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-51-7",
+      "sprite": "wall-navy",
+      "x": 51,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-52-7",
+      "sprite": "wall-navy",
+      "x": 52,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-53-7",
+      "sprite": "wall-navy",
+      "x": 53,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-54-7",
+      "sprite": "wall-navy",
+      "x": 54,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-75-9",
+      "sprite": "wall-navy",
+      "x": 75,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-28-17",
+      "sprite": "wall-navy",
+      "x": 28,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-29-17",
+      "sprite": "wall-navy",
+      "x": 29,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-30-17",
+      "sprite": "wall-navy",
+      "x": 30,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-31-17",
+      "sprite": "wall-navy",
+      "x": 31,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-37-17",
+      "sprite": "wall-navy",
+      "x": 37,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-38-17",
+      "sprite": "wall-navy",
+      "x": 38,
+      "y": 16,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-7-18",
+      "sprite": "wall-navy",
+      "x": 7,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-13-18",
+      "sprite": "wall-navy",
+      "x": 13,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-19-18",
+      "sprite": "wall-navy",
+      "x": 19,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-25-18",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-43-18",
+      "sprite": "wall-navy",
+      "x": 43,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-44-18",
+      "sprite": "wall-navy",
+      "x": 44,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-45-18",
+      "sprite": "wall-navy",
+      "x": 45,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-46-18",
+      "sprite": "wall-navy",
+      "x": 46,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-47-18",
+      "sprite": "wall-navy",
+      "x": 47,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-48-18",
+      "sprite": "wall-navy",
+      "x": 48,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-49-18",
+      "sprite": "wall-navy",
+      "x": 49,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-55-18",
+      "sprite": "wall-navy",
+      "x": 55,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-56-18",
+      "sprite": "wall-navy",
+      "x": 56,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-57-18",
+      "sprite": "wall-navy",
+      "x": 57,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-58-18",
+      "sprite": "wall-navy",
+      "x": 58,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-59-18",
+      "sprite": "wall-navy",
+      "x": 59,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-60-18",
+      "sprite": "wall-navy",
+      "x": 60,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-61-18",
+      "sprite": "wall-navy",
+      "x": 61,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-67-18",
+      "sprite": "wall-navy",
+      "x": 67,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-73-18",
+      "sprite": "wall-navy",
+      "x": 73,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-39-19",
+      "sprite": "wall-navy",
+      "x": 39,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-40-19",
+      "sprite": "wall-navy",
+      "x": 40,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-41-19",
+      "sprite": "wall-navy",
+      "x": 41,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-42-19",
+      "sprite": "wall-navy",
+      "x": 42,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-62-19",
+      "sprite": "wall-navy",
+      "x": 62,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-63-19",
+      "sprite": "wall-navy",
+      "x": 63,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-64-19",
+      "sprite": "wall-navy",
+      "x": 64,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-65-19",
+      "sprite": "wall-navy",
+      "x": 65,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-66-19",
+      "sprite": "wall-navy",
+      "x": 66,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-54-29",
+      "sprite": "wall-navy",
+      "x": 54,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-55-29",
+      "sprite": "wall-navy",
+      "x": 55,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-61-29",
+      "sprite": "wall-navy",
+      "x": 61,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-62-29",
+      "sprite": "wall-navy",
+      "x": 62,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-7-30",
+      "sprite": "wall-navy",
+      "x": 7,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-13-30",
+      "sprite": "wall-navy",
+      "x": 13,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-19-30",
+      "sprite": "wall-navy",
+      "x": 19,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-20-30",
+      "sprite": "wall-navy",
+      "x": 20,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-21-30",
+      "sprite": "wall-navy",
+      "x": 21,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-22-30",
+      "sprite": "wall-navy",
+      "x": 22,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-23-30",
+      "sprite": "wall-navy",
+      "x": 23,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-24-30",
+      "sprite": "wall-navy",
+      "x": 24,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-25-30",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-31-30",
+      "sprite": "wall-navy",
+      "x": 31,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-37-30",
+      "sprite": "wall-navy",
+      "x": 37,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-43-30",
+      "sprite": "wall-navy",
+      "x": 43,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-49-30",
+      "sprite": "wall-navy",
+      "x": 49,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-67-30",
+      "sprite": "wall-navy",
+      "x": 67,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-73-30",
+      "sprite": "wall-navy",
+      "x": 73,
+      "y": 29,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-14-31",
+      "sprite": "wall-navy",
+      "x": 14,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-15-31",
+      "sprite": "wall-navy",
+      "x": 15,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-16-31",
+      "sprite": "wall-navy",
+      "x": 16,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-17-31",
+      "sprite": "wall-navy",
+      "x": 17,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-18-31",
+      "sprite": "wall-navy",
+      "x": 18,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-26-31",
+      "sprite": "wall-navy",
+      "x": 26,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-27-31",
+      "sprite": "wall-navy",
+      "x": 27,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-28-31",
+      "sprite": "wall-navy",
+      "x": 28,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-29-31",
+      "sprite": "wall-navy",
+      "x": 29,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-30-31",
+      "sprite": "wall-navy",
+      "x": 30,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-50-31",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-51-31",
+      "sprite": "wall-navy",
+      "x": 51,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-52-31",
+      "sprite": "wall-navy",
+      "x": 52,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-53-31",
+      "sprite": "wall-navy",
+      "x": 53,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-25-41",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 40,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-26-41",
+      "sprite": "wall-navy",
+      "x": 26,
+      "y": 40,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-7-42",
+      "sprite": "wall-navy",
+      "x": 7,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-8-42",
+      "sprite": "wall-navy",
+      "x": 8,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-9-42",
+      "sprite": "wall-navy",
+      "x": 9,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-10-42",
+      "sprite": "wall-navy",
+      "x": 10,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-11-42",
+      "sprite": "wall-navy",
+      "x": 11,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-12-42",
+      "sprite": "wall-navy",
+      "x": 12,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-13-42",
+      "sprite": "wall-navy",
+      "x": 13,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-31-42",
+      "sprite": "wall-navy",
+      "x": 31,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-32-42",
+      "sprite": "wall-navy",
+      "x": 32,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-33-42",
+      "sprite": "wall-navy",
+      "x": 33,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-34-42",
+      "sprite": "wall-navy",
+      "x": 34,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-35-42",
+      "sprite": "wall-navy",
+      "x": 35,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-36-42",
+      "sprite": "wall-navy",
+      "x": 36,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-37-42",
+      "sprite": "wall-navy",
+      "x": 37,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-43-42",
+      "sprite": "wall-navy",
+      "x": 43,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-44-42",
+      "sprite": "wall-navy",
+      "x": 44,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-45-42",
+      "sprite": "wall-navy",
+      "x": 45,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-46-42",
+      "sprite": "wall-navy",
+      "x": 46,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-47-42",
+      "sprite": "wall-navy",
+      "x": 47,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-48-42",
+      "sprite": "wall-navy",
+      "x": 48,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-49-42",
+      "sprite": "wall-navy",
+      "x": 49,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-55-42",
+      "sprite": "wall-navy",
+      "x": 55,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-56-42",
+      "sprite": "wall-navy",
+      "x": 56,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-57-42",
+      "sprite": "wall-navy",
+      "x": 57,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-58-42",
+      "sprite": "wall-navy",
+      "x": 58,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-59-42",
+      "sprite": "wall-navy",
+      "x": 59,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-60-42",
+      "sprite": "wall-navy",
+      "x": 60,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-61-42",
+      "sprite": "wall-navy",
+      "x": 61,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-67-42",
+      "sprite": "wall-navy",
+      "x": 67,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-68-42",
+      "sprite": "wall-navy",
+      "x": 68,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-69-42",
+      "sprite": "wall-navy",
+      "x": 69,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-70-42",
+      "sprite": "wall-navy",
+      "x": 70,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-71-42",
+      "sprite": "wall-navy",
+      "x": 71,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-72-42",
+      "sprite": "wall-navy",
+      "x": 72,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-73-42",
+      "sprite": "wall-navy",
+      "x": 73,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-14-43",
+      "sprite": "wall-navy",
+      "x": 14,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-38-43",
+      "sprite": "wall-navy",
+      "x": 38,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-39-43",
+      "sprite": "wall-navy",
+      "x": 39,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-40-43",
+      "sprite": "wall-navy",
+      "x": 40,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-41-43",
+      "sprite": "wall-navy",
+      "x": 41,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-42-43",
+      "sprite": "wall-navy",
+      "x": 42,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-50-43",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-51-43",
+      "sprite": "wall-navy",
+      "x": 51,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-52-43",
+      "sprite": "wall-navy",
+      "x": 52,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-53-43",
+      "sprite": "wall-navy",
+      "x": 53,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-54-43",
+      "sprite": "wall-navy",
+      "x": 54,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-62-43",
+      "sprite": "wall-navy",
+      "x": 62,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-63-43",
+      "sprite": "wall-navy",
+      "x": 63,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-64-43",
+      "sprite": "wall-navy",
+      "x": 64,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-65-43",
+      "sprite": "wall-navy",
+      "x": 65,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-66-43",
+      "sprite": "wall-navy",
+      "x": 66,
+      "y": 42,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-7-54",
+      "sprite": "wall-navy",
+      "x": 7,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-13-54",
+      "sprite": "wall-navy",
+      "x": 13,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-19-54",
+      "sprite": "wall-navy",
+      "x": 19,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-20-54",
+      "sprite": "wall-navy",
+      "x": 20,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-21-54",
+      "sprite": "wall-navy",
+      "x": 21,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-22-54",
+      "sprite": "wall-navy",
+      "x": 22,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-23-54",
+      "sprite": "wall-navy",
+      "x": 23,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-24-54",
+      "sprite": "wall-navy",
+      "x": 24,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-25-54",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-31-54",
+      "sprite": "wall-navy",
+      "x": 31,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-32-54",
+      "sprite": "wall-navy",
+      "x": 32,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-33-54",
+      "sprite": "wall-navy",
+      "x": 33,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-34-54",
+      "sprite": "wall-navy",
+      "x": 34,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-35-54",
+      "sprite": "wall-navy",
+      "x": 35,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-36-54",
+      "sprite": "wall-navy",
+      "x": 36,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-37-54",
+      "sprite": "wall-navy",
+      "x": 37,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-43-54",
+      "sprite": "wall-navy",
+      "x": 43,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-44-54",
+      "sprite": "wall-navy",
+      "x": 44,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-45-54",
+      "sprite": "wall-navy",
+      "x": 45,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-46-54",
+      "sprite": "wall-navy",
+      "x": 46,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-47-54",
+      "sprite": "wall-navy",
+      "x": 47,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-48-54",
+      "sprite": "wall-navy",
+      "x": 48,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-49-54",
+      "sprite": "wall-navy",
+      "x": 49,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-55-54",
+      "sprite": "wall-navy",
+      "x": 55,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-56-54",
+      "sprite": "wall-navy",
+      "x": 56,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-57-54",
+      "sprite": "wall-navy",
+      "x": 57,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-58-54",
+      "sprite": "wall-navy",
+      "x": 58,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-59-54",
+      "sprite": "wall-navy",
+      "x": 59,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-60-54",
+      "sprite": "wall-navy",
+      "x": 60,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-61-54",
+      "sprite": "wall-navy",
+      "x": 61,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-67-54",
+      "sprite": "wall-navy",
+      "x": 67,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-73-54",
+      "sprite": "wall-navy",
+      "x": 73,
+      "y": 53,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-14-55",
+      "sprite": "wall-navy",
+      "x": 14,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-15-55",
+      "sprite": "wall-navy",
+      "x": 15,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-16-55",
+      "sprite": "wall-navy",
+      "x": 16,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-17-55",
+      "sprite": "wall-navy",
+      "x": 17,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-18-55",
+      "sprite": "wall-navy",
+      "x": 18,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-26-55",
+      "sprite": "wall-navy",
+      "x": 26,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-27-55",
+      "sprite": "wall-navy",
+      "x": 27,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-28-55",
+      "sprite": "wall-navy",
+      "x": 28,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-29-55",
+      "sprite": "wall-navy",
+      "x": 29,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-30-55",
+      "sprite": "wall-navy",
+      "x": 30,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-38-55",
+      "sprite": "wall-navy",
+      "x": 38,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-39-55",
+      "sprite": "wall-navy",
+      "x": 39,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-40-55",
+      "sprite": "wall-navy",
+      "x": 40,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-41-55",
+      "sprite": "wall-navy",
+      "x": 41,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-42-55",
+      "sprite": "wall-navy",
+      "x": 42,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-50-55",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-51-55",
+      "sprite": "wall-navy",
+      "x": 51,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-52-55",
+      "sprite": "wall-navy",
+      "x": 52,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-53-55",
+      "sprite": "wall-navy",
+      "x": 53,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-54-55",
+      "sprite": "wall-navy",
+      "x": 54,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-62-55",
+      "sprite": "wall-navy",
+      "x": 62,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-63-55",
+      "sprite": "wall-navy",
+      "x": 63,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-64-55",
+      "sprite": "wall-navy",
+      "x": 64,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-65-55",
+      "sprite": "wall-navy",
+      "x": 65,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-facing-66-55",
+      "sprite": "wall-navy",
+      "x": 66,
+      "y": 54,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-0",
+      "sprite": "constellation-gemini",
+      "x": 27,
+      "y": 3,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-0",
+      "sprite": "light-amber",
+      "x": 30,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-0",
+      "sprite": "glass-partition",
+      "x": 27,
+      "y": 5,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-1",
+      "sprite": "constellation-libra",
+      "x": 39,
+      "y": 27,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-1",
+      "sprite": "light-amber",
+      "x": 42,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-1",
+      "sprite": "glass-partition",
+      "x": 39,
+      "y": 29,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-2",
+      "sprite": "constellation-scorpio",
+      "x": 63,
+      "y": 39,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-2",
+      "sprite": "light-amber",
+      "x": 66,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-2",
+      "sprite": "glass-partition",
+      "x": 63,
+      "y": 41,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-3",
+      "sprite": "constellation-taurus",
+      "x": 15,
+      "y": 51,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-3",
+      "sprite": "light-amber",
+      "x": 18,
+      "y": 51,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-3",
+      "sprite": "glass-partition",
+      "x": 15,
+      "y": 53,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-4",
+      "sprite": "constellation-aries",
+      "x": 39,
+      "y": 51,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-4",
+      "sprite": "light-amber",
+      "x": 42,
+      "y": 51,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-4",
+      "sprite": "glass-partition",
+      "x": 39,
+      "y": 53,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-5",
+      "sprite": "constellation-leo",
+      "x": 63,
+      "y": 51,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-5",
+      "sprite": "light-amber",
+      "x": 66,
+      "y": 51,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-5",
+      "sprite": "glass-partition",
+      "x": 63,
+      "y": 53,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-panel-6",
+      "sprite": "constellation-virgo",
+      "x": 3,
+      "y": 51,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-gold-6",
+      "sprite": "light-amber",
+      "x": 6,
+      "y": 51,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "architecture-window-6",
+      "sprite": "glass-partition",
+      "x": 3,
+      "y": 53,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-sofa",
+      "sprite": "sofa-cream",
+      "x": 13,
+      "y": 76,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-small-table",
+      "sprite": "table-small-wood",
+      "x": 17,
+      "y": 77,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-flowerbed",
+      "sprite": "flower-bed",
+      "x": 23,
+      "y": 76,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-crystal",
+      "sprite": "crystal-cyan",
+      "x": 26,
+      "y": 75,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-palm-edge",
+      "sprite": "plant-palm",
+      "x": 30,
+      "y": 75,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "quiet-lamp",
+      "sprite": "light-amber",
+      "x": 19,
+      "y": 75,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-reading-desk",
+      "sprite": "desk-glass",
+      "x": 67,
+      "y": 74,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "social-reading-laptop",
+      "sprite": "laptop",
+      "x": 68,
+      "y": 74,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-reading-chair",
+      "sprite": "chair-north-slate",
+      "x": 68,
+      "y": 77,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-table-left",
+      "sprite": "table-small-wood",
+      "x": 58,
+      "y": 69,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-table-right",
+      "sprite": "table-small-white",
+      "x": 64,
+      "y": 69,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-conversation-plant",
+      "sprite": "plant-grass",
+      "x": 51,
+      "y": 67,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-corner-crystal",
+      "sprite": "crystal-cyan",
+      "x": 74,
+      "y": 75,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-reading-light",
+      "sprite": "light-amber",
+      "x": 71,
+      "y": 74,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-garden-bed",
+      "sprite": "flower-bed",
+      "x": 50,
+      "y": 71,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-rune-carpet",
+      "sprite": "rune-ring",
+      "x": 58,
+      "y": 75,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "comet-gate-rune",
+      "sprite": "rune-threshold",
+      "x": 72,
+      "y": 70,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "comet-gate-light-left",
+      "sprite": "light-cyan",
+      "x": 69,
+      "y": 68,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "comet-gate-light-right",
+      "sprite": "light-amber",
+      "x": 75,
+      "y": 68,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "authored-navy-fascia-0",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 3,
+      "y": 3,
+      "width": 74,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-1",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 3,
+      "y": 15,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-3",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 39,
+      "y": 15,
+      "width": 14,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-4",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 63,
+      "y": 15,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-5",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 3,
+      "y": 39,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-6",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 27,
+      "y": 39,
+      "width": 14,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-7",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 51,
+      "y": 39,
+      "width": 14,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-8",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 3,
+      "y": 57,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-inner-west",
+      "sprite": "wall-navy",
+      "x": 15,
+      "y": 15,
+      "width": 5,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "authored-navy-inner-east",
+      "sprite": "wall-navy",
+      "x": 25,
+      "y": 15,
+      "width": 4,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "authored-navy-bottom-east",
+      "sprite": "wall-navy",
+      "x": 74,
+      "y": 57,
+      "width": 3,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-restart-label-face",
+      "sprite": "sign-board-face",
+      "x": 69,
+      "y": 13,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-restart-label-north",
+      "sprite": "sign-board-north",
+      "x": 69,
+      "y": 13,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-restart-label-south",
+      "sprite": "sign-board-south",
+      "x": 69,
+      "y": 13,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-restart-label-west",
+      "sprite": "sign-board-west",
+      "x": 69,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-restart-label-east",
+      "sprite": "sign-board-east",
+      "x": 77,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-campus-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 35,
+      "y": 76,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-campus-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 35,
+      "y": 76,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-campus-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 35,
+      "y": 76,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-campus-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 35,
+      "y": 76,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-campus-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 45,
+      "y": 76,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-comet-gate-label-face",
+      "sprite": "sign-board-face",
+      "x": 68,
+      "y": 72,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-comet-gate-label-north",
+      "sprite": "sign-board-north",
+      "x": 68,
+      "y": 72,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-comet-gate-label-south",
+      "sprite": "sign-board-south",
+      "x": 68,
+      "y": 72,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-comet-gate-label-west",
+      "sprite": "sign-board-west",
+      "x": 68,
+      "y": 72,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-comet-gate-label-east",
+      "sprite": "sign-board-east",
+      "x": 76,
+      "y": 72,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-face",
+      "sprite": "sign-board-face",
+      "x": 15,
+      "y": 65,
+      "width": 22,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-north",
+      "sprite": "sign-board-north",
+      "x": 15,
+      "y": 65,
+      "width": 22,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-south",
+      "sprite": "sign-board-south",
+      "x": 15,
+      "y": 67,
+      "width": 22,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-west",
+      "sprite": "sign-board-west",
+      "x": 15,
+      "y": 65,
+      "width": 1,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-east",
+      "sprite": "sign-board-east",
+      "x": 36,
+      "y": 65,
+      "width": 1,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-north",
+      "x": 10,
+      "y": 66,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-south",
+      "x": 38,
+      "y": 75,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-3",
+      "sprite": "arrow-east",
+      "x": 69,
+      "y": 71,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "signs": [
+    {
+      "name": "crescent-fountain-label",
+      "text": "01  CRESCENT FOUNTAIN",
+      "x": 18,
+      "y": 49,
+      "width": 9,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "comet-statue-label",
+      "text": "02  COMET COURT",
+      "x": 30,
+      "y": 25,
+      "width": 9,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "star-ring-label",
+      "text": "03  STAR RING",
+      "x": 54,
+      "y": 37,
+      "width": 9,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "finish-title",
+      "text": "ORBIT SHRINE",
+      "x": 67,
+      "y": 9,
+      "width": 8,
+      "height": 1,
+      "fontSize": 15,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "restart-label",
+      "text": "\u2191 RESTART ORBIT",
+      "x": 69,
+      "y": 13,
+      "width": 9,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "maze-title",
+      "text": "ORBIT MAZE",
+      "x": 4,
+      "y": 64,
+      "width": 14,
+      "height": 1,
+      "fontSize": 20,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "maze-instructions",
+      "text": "\u2191 ORBIT MAZE \u00b7 FOLLOW 01 / 02 / 03\n\u2193 PLAZA \u00b7 SOUTH LANE\nCOMET MAZE \u2192 VIA SOUTH LANE",
+      "x": 15,
+      "y": 65,
+      "width": 22,
+      "height": 3,
+      "fontSize": 17,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "campus-return-label",
+      "text": "\u2193 ZODIAC PLAZA",
+      "x": 35,
+      "y": 76,
+      "width": 11,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "quiet-nook-label",
+      "text": "QUIET GARDEN",
+      "x": 14,
+      "y": 74,
+      "width": 13,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "social-alcove-label",
+      "text": "SOCIAL ALCOVE  /  TALK HERE",
+      "x": 51,
+      "y": 65,
+      "width": 24,
+      "height": 1,
+      "fontSize": 17,
+      "color": "#17283c",
+      "align": "left"
+    },
+    {
+      "name": "social-alcove-note",
+      "text": "Meet friends before or after the maze.",
+      "x": 52,
+      "y": 66,
+      "width": 22,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#17283c",
+      "align": "left"
+    },
+    {
+      "name": "comet-gate-label",
+      "text": "\u2191 COMET MAZE",
+      "x": 68,
+      "y": 72,
+      "width": 9,
+      "height": 1,
+      "fontSize": 15,
+      "color": "#fff0b0",
+      "align": "left"
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "crescent-fountain",
+      "x": 15,
+      "y": 42,
+      "width": 12,
+      "height": 9,
+      "kind": "landmark"
+    },
+    {
+      "name": "comet-statue",
+      "x": 28,
+      "y": 18,
+      "width": 11,
+      "height": 9,
+      "kind": "landmark"
+    },
+    {
+      "name": "star-ring",
+      "x": 54,
+      "y": 30,
+      "width": 9,
+      "height": 9,
+      "kind": "landmark"
+    },
+    {
+      "name": "finish-shrine",
+      "x": 65,
+      "y": 4,
+      "width": 12,
+      "height": 12,
+      "kind": "auxiliary"
+    },
+    {
+      "name": "quiet-garden",
+      "x": 2,
+      "y": 74,
+      "width": 32,
+      "height": 6,
+      "kind": "auxiliary"
+    },
+    {
+      "name": "maze-social-alcove",
+      "x": 49,
+      "y": 65,
+      "width": 28,
+      "height": 14,
+      "kind": "auxiliary"
+    },
+    {
+      "name": "wall-sector-0-0",
+      "x": 2,
+      "y": 2,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-0-1",
+      "x": 27,
+      "y": 2,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-0-2",
+      "x": 52,
+      "y": 2,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-1-0",
+      "x": 2,
+      "y": 23,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-1-1",
+      "x": 27,
+      "y": 23,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-1-2",
+      "x": 52,
+      "y": 23,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-2-0",
+      "x": 2,
+      "y": 44,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-2-1",
+      "x": 27,
+      "y": 44,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    },
+    {
+      "name": "wall-sector-2-2",
+      "x": 52,
+      "y": 44,
+      "width": 25,
+      "height": 21,
+      "kind": "landmark"
+    }
+  ],
+  "areas": [
+    {
+      "id": "maze-finish",
+      "name": "maze-finish",
+      "x": 69,
+      "y": 10,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    },
+    {
+      "id": "maze-quiet",
+      "name": "maze-quiet",
+      "x": 2,
+      "y": 2,
+      "width": 76,
+      "height": 62,
+      "properties": [
+        {
+          "id": "maze-quiet-silent",
+          "type": "silent"
+        }
+      ]
+    },
+    {
+      "id": "quiet-garden",
+      "name": "quiet-garden",
+      "x": 2,
+      "y": 65,
+      "width": 34,
+      "height": 13,
+      "properties": [
+        {
+          "id": "quiet-garden-silent",
+          "type": "silent"
+        }
+      ]
+    },
+    {
+      "id": "maze-social-alcove",
+      "name": "maze-social-alcove",
+      "x": 63,
+      "y": 71,
+      "width": 4,
+      "height": 3,
+      "properties": []
+    },
+    {
+      "id": "npc-maze-keeper",
+      "name": "npc-maze-keeper",
+      "x": 44,
+      "y": 65,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    }
+  ],
+  "entries": [
+    {
+      "name": "maze-entry",
+      "isDefault": true,
+      "x": 9,
+      "y": 67,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "name": "from-comet",
+      "x": 70,
+      "y": 70,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "maze-restart",
+      "destination": "orbit-maze",
+      "entry": "maze-entry",
+      "x": 73,
+      "y": 14,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "campus-return",
+      "destination": "overworld",
+      "entry": "from-maze",
+      "x": 38,
+      "y": 77,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "name": "comet-gate",
+      "destination": "comet-maze",
+      "entry": "comet-entry",
+      "x": 73,
+      "y": 70,
+      "width": 2,
+      "height": 2
+    }
+  ]
+}

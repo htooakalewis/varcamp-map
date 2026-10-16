@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="96" viewBox="0 0 64 96" shape-rendering="crispEdges">
+<!-- Original VarCamp CC0 cosmic arcade cabinet, 1 unit = 1 native pixel. -->
+<path d="M8 4H56V12H60V92H4V12H8Z" fill="#101c2c"/><path d="M8 12H56V84H8Z" fill="#253855"/>
+<path d="M8 4H56V12H8Z M4 84H60V92H4Z" fill="#cba35e"/>
+<path d="M12 18H52V52H12Z" fill="#7295aa"/><path d="M16 22H48V48H16Z" fill="#101c2c"/>
+<path d="M20 38H28V34H36V30H44 M24 26H28 M38 42H42" stroke="#9ae8ed" stroke-width="2" fill="none"/>
+<path d="M8 58H56V70H8Z" fill="#435570"/><path d="M20 54V64H24V54Z" fill="#e5c67d"/>
+<path d="M36 61H40V65H36Z M44 61H48V65H44Z" fill="#9ae8ed"/>
+<path d="M27 74H37V79H27Z" fill="#0b1421"/><path d="M8 16H10V50H8Z M54 16H56V50H54Z" fill="#9ae8ed"/>
+</svg>

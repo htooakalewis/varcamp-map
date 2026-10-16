@@ -1,0 +1,61 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "comet-maze.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "comet-checkpoint-1",
+      "name": "comet-checkpoint-1",
+      "visible": true,
+      "x": 448,
+      "y": 1024,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "comet-checkpoint-2",
+      "name": "comet-checkpoint-2",
+      "visible": true,
+      "x": 736,
+      "y": 448,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "comet-checkpoint-3",
+      "name": "comet-checkpoint-3",
+      "visible": true,
+      "x": 1312,
+      "y": 736,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "comet-finish",
+      "name": "comet-finish",
+      "visible": true,
+      "x": 1280,
+      "y": 224,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "npc-maze-keeper",
+      "name": "npc-maze-keeper",
+      "visible": true,
+      "x": 1216,
+      "y": 1312,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Comet Maze"
+  }
+}

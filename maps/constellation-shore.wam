@@ -1,0 +1,41 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "constellation-shore.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "beach-games",
+      "name": "beach-games",
+      "visible": true,
+      "x": 192,
+      "y": 768,
+      "width": 160,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "picnic-bay",
+      "name": "picnic-bay",
+      "visible": true,
+      "x": 832,
+      "y": 800,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "shore-lounge",
+      "name": "shore-lounge",
+      "visible": true,
+      "x": 544,
+      "y": 800,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Constellation Shore"
+  }
+}

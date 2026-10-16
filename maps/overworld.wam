@@ -1,0 +1,31 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "overworld.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "welcome-directory",
+      "name": "welcome-directory",
+      "visible": true,
+      "x": 1984,
+      "y": 2080,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "npc-guide",
+      "name": "npc-guide",
+      "visible": true,
+      "x": 2432,
+      "y": 2272,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Constellation Campus"
+  }
+}

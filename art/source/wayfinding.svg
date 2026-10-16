@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="64" viewBox="0 0 256 64" shape-rendering="crispEdges">
+<!-- Original integer-grid CC0 pixel signage: navy boards, warm wood, brass screws and gold route arrows. -->
+<g id="board-face"><path fill="#0c1d30" d="M0 0h32v32H0z"/><path fill="#142c43" d="M3 18h9v1H3zM19 25h7v1h-7zM20 8h8v1h-8z"/></g>
+<g id="board-north" transform="translate(32 0)"><path fill="#483224" d="M0 0h32v4H0z"/><path fill="#a87642" d="M0 1h32v2H0z"/><path fill="#e8c77f" d="M0 3h32v1H0z"/></g>
+<g id="board-south" transform="translate(64 0)"><path fill="#483224" d="M0 28h32v4H0z"/><path fill="#a87642" d="M0 29h32v2H0z"/><path fill="#e8c77f" d="M0 28h32v1H0z"/></g>
+<g id="board-west" transform="translate(96 0)"><path fill="#483224" d="M0 0h4v32H0z"/><path fill="#a87642" d="M1 0h2v32H1z"/><path fill="#e8c77f" d="M3 0h1v32H3z"/></g>
+<g id="board-east" transform="translate(128 0)"><path fill="#483224" d="M28 0h4v32h-4z"/><path fill="#a87642" d="M29 0h2v32h-2z"/><path fill="#e8c77f" d="M28 0h1v32h-1z"/></g>
+<g id="board-bolts" transform="translate(160 0)"><path fill="#6a472d" d="M5 5h3v3H5zM24 5h3v3h-3zM5 24h3v3H5zM24 24h3v3h-3z"/><path fill="#edd79d" d="M5 5h2v2H5zM24 5h2v2h-2zM5 24h2v2H5zM24 24h2v2h-2z"/></g>
+<g id="sign-post" transform="translate(192 0)"><path fill="#172335" d="M10 0h12v32H10z"/><path fill="#725134" d="M12 0h8v32h-8z"/><path fill="#c99956" d="M13 0h2v32h-2z"/><path fill="#483324" d="M18 0h2v32h-2z"/></g>
+<g id="compass" transform="translate(224 0)"><path fill="#122436" d="M8 5h16v3h3v16h-3v3H8v-3H5V8h3z"/><path fill="#ac8045" d="M9 6h14v2h2v15h-2v2H9v-2H7V9h2z"/><path fill="#122436" d="M10 9h12v13H10z"/><path fill="#f4d77b" d="M15 5h2v8h-2zM15 19h2v8h-2zM5 15h8v2H5zM19 15h8v2h-8zM14 12h4v2h2v4h-2v2h-4v-2h-2v-4h2z"/></g>
+<g id="north" transform="translate(0 32)"><path fill="#162337" d="M13 5h6v3h3v3h3v4h-6v13h-6V15H7v-4h3V8h3z"/><path fill="#d6a54a" d="M14 4h4v3h3v3h3v3h-7v12h-3V13H8v-3h3V7h3z"/><path fill="#fff0ae" d="M14 4h4v3h-4zM11 7h3v3h-3zM8 10h3v3H8zM14 13h1v12h-1z"/></g>
+<g id="east" transform="translate(32 32)"><path fill="#162337" d="M17 5h4v3h3v3h3v10h-3v3h-3v3h-4v-8H5v-6h12z"/><path fill="#d6a54a" d="M17 5h3v3h3v3h3v8h-3v3h-3v3h-3v-8H5v-3h12z"/><path fill="#fff0ae" d="M17 5h3v3h-3zM20 8h3v3h-3zM5 14h12v1H5z"/></g>
+<g id="south" transform="translate(64 32)"><path fill="#162337" d="M13 5h6v13h6v4h-3v3h-3v3h-6v-3h-3v-3H7v-4h6z"/><path fill="#d6a54a" d="M14 5h3v12h7v3h-3v3h-3v3h-4v-3h-3v-3H8v-3h6z"/><path fill="#fff0ae" d="M14 5h1v12h-1zM8 17h3v3H8zM11 20h3v3h-3z"/></g>
+<g id="west" transform="translate(96 32)"><path fill="#162337" d="M12 5h4v8h12v6H16v8h-4v-3H9v-3H6V11h3V8h3z"/><path fill="#d6a54a" d="M12 5h3v9h12v3H15v8h-3v-3H9v-3H6v-8h3V8h3z"/><path fill="#fff0ae" d="M12 5h3v3h-3zM9 8h3v3H9zM6 11h3v3H6zM15 14h12v1H15z"/></g>
+</svg>

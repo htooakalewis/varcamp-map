@@ -1,0 +1,111 @@
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { resolve, dirname, relative, basename } from 'node:path';
+import type { Plugin } from 'vite';
+import { WORLD_CATALOG } from '../src/world/catalog';
+import type { TiledLayer, TiledMap } from './maps/types';
+import { isSponsorTileset, readSponsorTileset } from './maps/builder';
+
+const digest = (bytes: string | Buffer) => createHash('sha256').update(bytes).digest('hex');
+
+/** Hash inputs before bundling: hashing final HTML would cycle through its JS imports. */
+export function uiReleaseIdentity(root = process.cwd()): string {
+  const paths: string[] = [];
+  const collect = (directory: string, accept: (path: string) => boolean): void => {
+    if (!existsSync(resolve(root, directory))) return;
+    for (const entry of readdirSync(resolve(root, directory), { withFileTypes: true })) {
+      const path = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) collect(path, accept);
+      else if (entry.isFile() && accept(path)) paths.push(path);
+    }
+  };
+  collect('src', () => true);
+  collect('world', path => path.endsWith('.json'));
+  collect('tools', path => /\.(?:[cm]?js|ts|json)$/.test(path));
+  for (const file of readdirSync(root)) {
+    if (/\.config\.(?:[cm]?js|ts)$/.test(file) || ['package.json', 'package-lock.json', 'tsconfig.json'].includes(file)) paths.push(file);
+  }
+  const hash = createHash('sha256').update('varcamp-ui-inputs-v1\0');
+  for (const path of paths.sort()) {
+    const bytes = readFileSync(resolve(root, path));
+    hash.update(JSON.stringify([path, bytes.length])).update('\0').update(bytes);
+  }
+  return hash.digest('hex');
+}
+
+/** Faithful release: preserve separate licensed sheets, pixels and embedded credits. */
+export function worldRelease(): Plugin {
+  return {
+    name: 'varcamp-world-release',
+    config(config) {
+      return { define: { 'import.meta.env.VARCAMP_UI_RELEASE': JSON.stringify(uiReleaseIdentity(resolve(config.root ?? '.'))) } };
+    },
+    generateBundle(_options, bundle) {
+      const runtime = Object.values(bundle).find(entry => entry.type === 'chunk' && entry.isEntry && entry.name === 'src-main');
+      if (!runtime) throw new Error('Missing bundled world runtime');
+      const emitted = new Map<string, string | Buffer>();
+      const emit = (fileName: string, source: string | Buffer) => {
+        const existing = emitted.get(fileName);
+        if (existing !== undefined) return existing;
+        this.emitFile({ type: 'asset', fileName, source });
+        emitted.set(fileName, source);
+        return source;
+      };
+      const emitPng = (path: string, bytes: Buffer): string => {
+        if (!path.endsWith('.png')) throw new Error(`Unsupported release image: ${path}`);
+        const fileName = path.slice(0, -4) + `.${digest(bytes)}.png`;
+        emit(fileName, bytes);
+        return fileName;
+      };
+      for (const id of Object.keys(WORLD_CATALOG)) {
+        const mapPath = `maps/${id}.tmj`;
+        const map: TiledMap = JSON.parse(readFileSync(mapPath, 'utf8'));
+        const script = map.properties?.find(p => p.name === 'script');
+        if (!script) throw new Error(`Missing runtime property: ${id}`);
+        script.value = `../${runtime.fileName}`;
+        for (const tileset of map.tilesets) {
+          if (isSponsorTileset(tileset)) {
+            const sponsor = readSponsorTileset(tileset);
+            tileset.image = relative(dirname(mapPath), emitPng(sponsor.path, sponsor.bytes));
+            continue;
+          }
+          if (!tileset.image) throw new Error(`Missing embedded image: ${id}`);
+          const source = resolve(dirname(mapPath), tileset.image);
+          const path = relative(process.cwd(), source);
+          if (!path.startsWith('assets/tilesets/')) throw new Error(`Unexpected image outside source atlases: ${path}`);
+          tileset.image = relative(dirname(mapPath), emitPng(path, readFileSync(source)));
+        }
+        const checkLayers = (layers: TiledLayer[]): void => {
+          for (const layer of layers) {
+            if (layer.type === 'group') checkLayers(layer.layers);
+            if (layer.type === 'imagelayer') throw new Error(`Image layer unsupported by pinned WorkAdventure; use sponsor tile layers: ${layer.name}`);
+          }
+        };
+        checkLayers(map.layers);
+        const mapBytes = JSON.stringify(map);
+        emit(mapPath, mapBytes);
+        const wam = JSON.parse(readFileSync(`maps/${id}.wam`, 'utf8'));
+        // Version the final runtime-rewritten bytes so browser caches cannot reuse an older tilemap.
+        wam.mapUrl = `${id}.tmj?v=${digest(mapBytes)}`;
+        emit(`maps/${id}.wam`, JSON.stringify(wam));
+      }
+      const sources = JSON.parse(readFileSync('art/sources.json', 'utf8')) as Record<string, { attribution: string; url: string; license: string; licenseFile: string; changes: string }>;
+      const escape = (s: string) => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+      const creditLink = (path: string) => {
+        const bytes = emitted.get(`credits/${path}`);
+        if (bytes === undefined) throw new Error(`Missing credit dependency: ${path}`);
+        return escape(`${path}?v=${digest(bytes)}`);
+      };
+      const titles: Record<string,string> = {workadventure:'WorkAdventure starter tilesets','lpc-office':'LPC Revised: The Office','lpc-space':'LPC goes to space',original:'Original VarCamp art', 'lpc-ship':'LPC Ship', 'lpc-dock':'Reid Dock tileset', 'lpc-containers':'LPC Containers', 'lpc-water':'LPC Base Water'};
+      const fullCredits: Record<string,string> = {'lpc-office':'Credits.txt', 'lpc-ship':'CREDITS-ship.txt', 'lpc-containers':'CREDITS-container.txt', 'lpc-water':'AUTHORS'};
+      const sections = Object.entries(sources).map(([id, s]) => {
+        for (const file of readdirSync(`assets/tilesets/${id}`)) if (!file.endsWith('.png')) emit(`credits/${id}/${file}`, readFileSync(`assets/tilesets/${id}/${file}`));
+        return `<section><h2>${escape(titles[id])}</h2><p>${escape(s.attribution)}</p><p><a href="${escape(s.url)}">Source</a> · <a href="${creditLink(`${id}/${basename(s.licenseFile)}`)}">${escape(s.license)}</a> · <a href="${creditLink(`${id}/ATTRIBUTION.md`)}">Attribution record</a></p><p>${escape(s.changes)}</p>${fullCredits[id] ? `<p><a href="${creditLink(`${id}/${fullCredits[id]}`)}">Full upstream artist credits</a></p>` : ''}</section>`;
+      }).join('\n');
+      emit('credits/LICENSE.starter', readFileSync('docs/dependencies/LICENSE.starter'));
+      emit('credits/sources.json', readFileSync('art/sources.json'));
+      emit('credits/sponsors.json', readFileSync('art/sponsors.json'));
+      emit('credits/index.html', `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VarCamp world credits</title><style>body{max-width:55rem;margin:2rem auto;padding:0 1rem;font:18px/1.6 system-ui;color:#17243a}a{color:#164dc4}</style><h1>VarCamp world credits</h1><p>This release is a WorkAdventure map package. Its source sheets remain separate and byte-identical; the release does not repack, combine or rescale them. Map composition selects source tiles. Each work retains its own terms.</p>${sections}<h2>Demo sponsor marks</h2><p>The original fictional DEMO marks are CC0. Replacement artwork retains its recorded owner and terms. <a href="${creditLink('sponsors.json')}">Sponsor provenance and replacement instructions</a>.</p><h2>Code and editable sources</h2><p>Starter code: TheCodingMachine, MIT. <a href="${creditLink('LICENSE.starter')}">Retained notice</a>. Editable maps, semantic layouts and original SVG masters remain in the Git handover. The art is not collectively MIT.</p></html>`);
+    },
+  };
+}

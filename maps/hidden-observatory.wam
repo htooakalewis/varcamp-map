@@ -1,0 +1,36 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "hidden-observatory.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "observatory-discovery",
+      "name": "observatory-discovery",
+      "visible": true,
+      "x": 160,
+      "y": 800,
+      "width": 128,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "observatory-quiet",
+      "name": "observatory-quiet",
+      "visible": true,
+      "x": 32,
+      "y": 96,
+      "width": 1216,
+      "height": 992,
+      "properties": [
+        {
+          "id": "observatory-quiet-silent",
+          "type": "silent"
+        }
+      ]
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Hidden Observatory"
+  }
+}

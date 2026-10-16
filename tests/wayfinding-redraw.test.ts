@@ -1,0 +1,114 @@
+import { readFileSync, readdirSync, cpSync, mkdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { resolve, dirname } from 'node:path';
+import { describe, expect, it } from 'vitest';
+import {EXTERIOR_GATE_COPY,EXTERIOR_ROAD_COPY} from '../tools/art/exterior-gates';
+import { loadTileCatalog } from '../tools/art/catalog';
+import { buildMap } from '../tools/maps/builder';
+import { checkArt } from '../tools/art/check';
+import { addNpcGuides } from '../tools/maps/npc-guides';
+import type { MapLayout, TileRect } from '../tools/maps/types';
+
+const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
+const gap=(a:TileRect,b:TileRect)=>Math.max(0,a.x-b.x-b.width,b.x-a.x-a.width)+Math.max(0,a.y-b.y-b.height,b.y-a.y-a.height);
+const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
+const names:Record<string,RegExp>={overworld:/PLAZA/, 'campus-exploration':/EXPLORATION/, 'shipyard-beach':/HARBOR/, 'zodiac-festival-park':/FESTIVAL|PARK/, 'orbit-maze':/ORBIT|MAZE/, 'comet-maze':/COMET/, 'solar-hall':/SOLAR/, 'lunar-hall':/LUNAR/, 'nebula-arcade':/ARCADE/, 'orbit-playground':/PLAYGROUND/, 'constellation-shore':/SHORE/, 'fa-ship':/FA SHIP/, 'star-garden':/GARDEN/, 'moon-cafe':/CAF[ÉE]/, 'moon-grotto':/GROTTO/, 'stargazer-terrace':/STARGAZER/, 'fire-district':/FIRE/, 'earth-district':/EARTH/, 'air-district':/AIR/, 'water-district':/WATER/};
+const arrow=/[↑↓←→↗↘↙↖]/;
+
+describe('audience wayfinding in exported Tiled maps',()=>{
+ it('exports production labels at their native top-left coordinates in both Tiled and the pinned Phaser client',()=>{
+  const catalog=loadTileCatalog();
+  for(const l of layouts){
+   const {tmj}=buildMap(l,catalog);
+   const labels=tmj.layers.flatMap(layer=>layer.type==='objectgroup'?layer.objects:[]).filter(o=>o.text);
+   for(const label of labels)expect(label.text,`${l.id}/${label.name}: centering uses incompatible native and live text widths`).toMatchObject({fontfamily:'Arial',bold:false,halign:'left',valign:'top'});
+  }
+ });
+ it('detects a stale wayfinding PNG after its editable master changes',async()=>{
+  const root=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-wayfinding-art-'));
+  try{
+   cpSync(resolve(root,'art'),resolve(fixture,'art'),{recursive:true});
+   cpSync(resolve(root,'assets'),resolve(fixture,'assets'),{recursive:true});
+   // The flight art compiler records its exact compiler/schema input bytes.
+   for(const file of ['tools/art/coastal-flight.ts','tools/maps/builder.ts','tools/maps/types.ts']){mkdirSync(dirname(resolve(fixture,file)),{recursive:true});cpSync(resolve(root,file),resolve(fixture,file));}
+   const file=resolve(fixture,'art/source/wayfinding.svg');
+   writeFileSync(file,readFileSync(file,'utf8').replace('#0c1d30','#ff0000'));
+   process.chdir(fixture);
+   expect(await checkArt(loadTileCatalog())).toContain('wayfinding: PNG differs from native SVG export');
+  }finally{process.chdir(root);rmSync(fixture,{recursive:true,force:true});}
+ });
+ it('uses concise physical cardinal pointers and raster controls at first arrival',()=>{
+  const l=layouts.find(l=>l.id==='overworld')!;
+  for(const [id,copy]of [['north','HALLS / MAZES'],['west','PARK / ARCADE'],['east','BEACH / SHIP'],['south','GARDEN / CAFE']]){
+   const p=l.placements.find(p=>p.sprite===`exterior-road-${id}`)!;expect(p).toBeDefined();
+   expect(EXTERIOR_ROAD_COPY[id]).toBe(copy);
+  }
+  expect(l.placements.some(p=>p.sprite==='hub-nav-welcome')).toBe(true);
+  expect(l.signs?.some(s=>s.text.split('\n').length>3)).toBe(false);
+ });
+ it.each(layouts.map(l=>[l.id,l] as const))('%s labels every physical destination with a nearby readable direction',(_id,l)=>{
+  const{tmj}=buildMap(l,loadTileCatalog());
+  if(l.id==='overworld'){
+   const master=JSON.parse(readFileSync('art/source/hub-nameplates.json','utf8'));
+   for(const e of l.exits){
+    const speaker=e.destination.startsWith('speaker-'),key=speaker?e.destination.replace('speaker-',''):e.name;
+    const label=l.placements.find(p=>p.sprite===(speaker?`hub-label-${key}`:`exterior-gate-${key}`))!;
+    const copy=speaker?master.labels.find((r:{id:string})=>r.id===key).text:EXTERIOR_GATE_COPY[key];
+    expect(label,`${e.name}: raster plaque missing`).toBeDefined();expect(gap(label,e)).toBeLessThanOrEqual(6);
+    const name=speaker?new RegExp(key.toUpperCase()):names[e.destination]!;expect(copy).toMatch(name);
+    const roadArrow=l.placements.find(p=>p.id===(speaker?`approach-arrow-${key}`:`gate-approach-arrow-${key}`))!;
+    expect(roadArrow.sprite).toMatch(/^arrow-(north|south|east|west)$/);expect(gap(roadArrow,e)).toBeLessThanOrEqual(4);
+   }
+   return;
+  }
+  const labels=tmj.layers.flatMap(layer=>layer.type==='objectgroup'?layer.objects:[]).filter(o=>o.text).map(o=>({x:o.x/32,y:o.y/32,width:o.width/32,height:o.height/32,text:(o.text as {text:string}).text,size:(o.text as {pixelsize:number}).pixelsize}));
+  for(const e of l.exits){const name=e.destination.startsWith('speaker-')?new RegExp(e.destination.replace('speaker-','').toUpperCase()):names[e.destination]!;
+   expect(labels.some(s=>name.test(s.text)&&arrow.test(s.text)&&s.size>=14&&gap(s,e)<=6),`${l.id}/${e.name}: no readable arrow sign names its actual destination`).toBe(true);
+  }
+ });
+ it.each(layouts.map(l=>[l.id,l] as const))('%s explains the route to new arrivals without covering the spawn',(_id,l)=>{
+  const e=l.entries.find(e=>e.isDefault)!;
+  if(l.id==='overworld'){const welcome=l.placements.find(p=>p.sprite==='hub-nav-welcome')!;expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(true);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
+ });
+ it('points first-time visitors north toward the Festival and Exploration pavilion doors',()=>{
+  for(const id of ['zodiac-festival-park','campus-exploration']){
+   const l=layouts.find(l=>l.id===id)!,{tmj}=buildMap(l,loadTileCatalog());
+   const objects=tmj.layers.flatMap(layer=>layer.type==='objectgroup'?layer.objects:[]);
+   for(const exit of l.exits.filter(e=>e.destination!=='overworld')){
+    const label=objects.find(o=>o.name===`${exit.name}-label`)!;
+    expect((label.text as {text:string}).text.match(arrow)?.[0],`${id}/${exit.name} points visitors away from its northbound door`).toBe('↑');
+   }
+  }
+ });
+ it('keeps its new physical sign panels and road chevrons off spawns, exits, sponsor images and interactive areas',()=>{
+  const c=loadTileCatalog();
+  for(const l of layouts)for(const p of l.placements.filter(p=>p.sprite==='sign-board-face'||p.sprite.startsWith('arrow-'))){
+   expect(c[p.sprite].blockingCells,`${l.id}/${p.id} blocks a route`).toEqual([]);
+   const controls=[...l.entries,...l.exits,...(l.images??[]),...l.areas.filter(a=>!a.properties.some(p=>p.type==='silent'))];
+   for(const r of controls)expect(overlap(p,r),`${l.id}/${p.id} covers ${'name' in r?r.name:'an interaction'}`).toBe(false);
+  }
+ });
+ it('puts road arrows only on walkable ground so they do not direct visitors into solid door edges',()=>{
+  const c=loadTileCatalog();
+  for(const l of layouts){
+   const {tmj}=buildMap(l,c),mask=tmj.layers.find(layer=>layer.name==='physical-collisions');
+   if(mask?.type!=='tilelayer')throw new Error(`${l.id}: navigation mask missing`);
+   const spawn=l.entries.find(e=>e.isDefault)!,q=[spawn.y*l.width+spawn.x],seen=new Set(q);
+   for(let h=0;h<q.length;h++){const i=q[h],x=i%l.width,y=Math.floor(i/l.width);for(const[nx,ny]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const n=ny*l.width+nx;if(nx<0||ny<0||nx>=l.width||ny>=l.height||mask.data[n]||seen.has(n))continue;seen.add(n);q.push(n);}}
+   for(const p of l.placements.filter(p=>p.sprite.startsWith('arrow-'))){const i=p.y*l.width+p.x;expect(mask.data[i],`${l.id}/${p.id}: arrow is drawn on a solid cell`).toBe(0);expect(seen.has(i),`${l.id}/${p.id}: arrow lies outside the accessible road network`).toBe(true);}
+  }
+ });
+ it('keeps all production labels apart from controls, other labels and scenery except deliberate wall plaques and return-rune backplates',()=>{
+  for(const l of layouts)for(const[i,s]of(l.signs??[]).entries()){
+   for(const other of(l.signs??[]).slice(i+1))expect(overlap(s,other),`${l.id}/${s.name} obscures ${other.name}`).toBe(false);
+   for(const r of [...l.entries,...l.exits,...(l.images??[])])expect(overlap(s,r),`${l.id}/${s.name} covers ${r.name}`).toBe(false);
+   for(const p of l.placements.filter(p=>!['terrain','atmosphere'].includes(p.layer)&&!p.id.startsWith(`wayfinding-wallboard-${s.name}-`))){
+    const facade=l.id==='overworld'&&s.name.startsWith('room-')&&p.id.startsWith(s.name.replace('room-','')+'-')&&['wall-charcoal','wall-navy'].includes(p.sprite);
+    const returnRune=s.name==='plaza-wayfinding'&&p.id==='door-sigil'&&p.sprite==='rune-threshold';
+    const staffWall=['solar-hall','lunar-hall'].includes(l.id)&&s.name==='staff-label'&&p.id==='staff-north-wall'&&p.sprite==='wall-navy';
+    const coastalBoard=['shipyard-beach','constellation-shore','fa-ship'].includes(l.id)&&p.id===`wood-sign-${s.name}`;
+    if(!facade&&!returnRune&&!staffWall&&!coastalBoard)expect(overlap(s,p),`${l.id}/${s.name} obscures ${p.id}`).toBe(false);
+   }
+  }
+ });
+});

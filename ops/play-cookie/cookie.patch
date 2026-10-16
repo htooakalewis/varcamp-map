@@ -1,0 +1,119 @@
+--- a/play/src/pusher/services/OpenIDClient.ts
++++ b/play/src/pusher/services/OpenIDClient.ts
+@@ -1,4 +1,5 @@
+ import crypto from "crypto";
++import { transientOidcCookieOptions } from "./TransientOidcCookieOptions";
+ import type { Client, IntrospectionResponse, OpenIDCallbackChecks } from "openid-client";
+ import { Issuer, generators, custom } from "openid-client";
+ import { v4 } from "uuid";
+@@ -80,18 +81,12 @@
+             const code_verifier = generators.codeVerifier();
+             // store the code_verifier in your framework's session mechanism, if it is a cookie based solution
+             // it should be httpOnly (not readable by javascript) and encrypted.
+-            res.cookie("code_verifier", this.encrypt(code_verifier), {
+-                httpOnly: true, // dont let browser javascript access cookie ever
+-                secure: req.secure, // only use cookie over https
+-            });
++            res.cookie("code_verifier", this.encrypt(code_verifier), transientOidcCookieOptions(req));
+ 
+             // We also store the state in cookies. The state should not be needed, except for older OpenID client servers that
+             // don't understand PKCE
+             const state = v4();
+-            res.cookie("oidc_state", state, {
+-                httpOnly: true, // dont let browser javascript access cookie ever
+-                secure: req.secure, // only use cookie over https
+-            });
++            res.cookie("oidc_state", state, transientOidcCookieOptions(req));
+ 
+             const code_challenge = generators.codeChallenge(code_verifier);
+ 
+@@ -150,8 +145,8 @@
+             }
+ 
+             return client.callback(OPID_CLIENT_REDIRECT_URL, params, checks).then((tokenSet) => {
+-                res.clearCookie("code_verifier");
+-                res.clearCookie("oidc_state");
++                res.clearCookie("code_verifier", transientOidcCookieOptions(req));
++                res.clearCookie("oidc_state", transientOidcCookieOptions(req));
+ 
+                 return client
+                     .userinfo(tokenSet, {
+--- a/play/src/pusher/controllers/AuthenticateController.ts
++++ b/play/src/pusher/controllers/AuthenticateController.ts
+@@ -1,4 +1,5 @@
+ import fs from "fs";
++import { transientOidcCookieOptions } from "../services/TransientOidcCookieOptions";
+ import { v4 } from "uuid";
+ import type { MeResponse } from "@workadventure/messages";
+ import { MeRequest } from "@workadventure/messages";
+@@ -133,10 +134,7 @@
+                 query.providerId,
+                 query.providerScopes,
+             );
+-            res.cookie("playUri", query.playUri, {
+-                httpOnly: true, // dont let browser javascript access cookie ever
+-                secure: req.secure, // only use cookie over https
+-            });
++            res.cookie("playUri", query.playUri, transientOidcCookieOptions(req));
+ 
+             res.redirect(loginUri);
+             return;
+@@ -349,7 +347,7 @@
+                 return;
+             }
+ 
+-            res.clearCookie("playUri");
++            res.clearCookie("playUri", transientOidcCookieOptions(req));
+             // FIXME: possibly redirect to Admin instead.
+             res.redirect(playUri + "?token=" + encodeURIComponent(authToken));
+             return;
+@@ -388,7 +386,7 @@
+                 return;
+             }
+ 
+-            res.clearCookie("playUri");
++            res.clearCookie("playUri", transientOidcCookieOptions(req));
+             res.clearCookie("authToken");
+             const playUriUrl = new URL(req.cookies.playUri);
+             playUriUrl.searchParams.append("matrixLoginToken", query.loginToken);
+@@ -523,7 +521,7 @@
+ 
+             // when user logout, redirect to playUri saved in cookie
+             const logOutAdminUrl = new URL(req.cookies.playUri);
+-            res.clearCookie("playUri");
++            res.clearCookie("playUri", transientOidcCookieOptions(req));
+             res.redirect(logOutAdminUrl.toString());
+             return;
+         });
+@@ -580,10 +578,7 @@
+             }
+ 
+             // save the playUri in cookie to redirect to the world after logout
+-            res.cookie("playUri", query.playUri, {
+-                httpOnly: true, // dont let browser javascript access cookie ever
+-                secure: req.secure, // only use cookie over https
+-            });
++            res.cookie("playUri", query.playUri, transientOidcCookieOptions(req));
+             res.redirect(query.redirect);
+         });
+     }
+--- /dev/null
++++ b/play/src/pusher/services/TransientOidcCookieOptions.ts
+@@ -0,0 +1,17 @@
++import type { CookieOptions, Request } from "express";
++import { PUSHER_URL } from "../enums/EnvironmentVariable";
++
++// Only the trusted deployment URL or native TLS controls these transient cookies.
++function configuredHttps(): boolean {
++    try {
++        return new URL(PUSHER_URL).protocol === "https:";
++    } catch {
++        return false;
++    }
++}
++
++const publicHttps = configuredHttps();
++
++export function transientOidcCookieOptions(req: Request): CookieOptions {
++    return { httpOnly: true, secure: publicHttps || req.secure };
++}

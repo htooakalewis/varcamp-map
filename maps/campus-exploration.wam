@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "campus-exploration.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "welcome-directory",
+      "name": "welcome-directory",
+      "visible": true,
+      "x": 672,
+      "y": 960,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Campus Exploration"
+  }
+}

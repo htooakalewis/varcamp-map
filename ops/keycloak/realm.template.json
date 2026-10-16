@@ -1,0 +1,11 @@
+{
+ "realm":"varcamp", "enabled":true, "registrationAllowed":false,
+ "duplicateEmailsAllowed":false, "resetPasswordAllowed":false,
+ "editUsernameAllowed":false, "loginWithEmailAllowed":true,
+ "clients":[{"clientId":"workadventure","enabled":true,"publicClient":false,
+ "standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,
+ "serviceAccountsEnabled":false,"defaultClientScopes":["email","profile"],
+ "attributes":{"pkce.code.challenge.method":"S256"},
+ "protocolMappers":[{"name":"workadventure-tags","protocol":"openid-connect",
+ "protocolMapper":"oidc-usermodel-attribute-mapper","config":{"user.attribute":"wa_tags","claim.name":"tags","jsonType.label":"String","multivalued":"true","aggregate.attrs":"false","userinfo.token.claim":"true","access.token.claim":"true","id.token.claim":"true"}}]}]
+}

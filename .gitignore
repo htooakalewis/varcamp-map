@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env.secret
+dist.zip
+
+.tools/
+coverage/
+.qa/
+
+.varcamp-test-*
+
+# Production inputs, initial passwords, certificates and temporary map bundle
+ops/private/
+ops/.env
+ops/rehearsal.zip
+ops/rehearsal/
+
+# Local credentials and Python caches
+.env
+.env.*
+!**/.env.example
+__pycache__/
+*.pyc
+
+# Also ignore a local tool-directory symlink used for native renderer QA
+.tools

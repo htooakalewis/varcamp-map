@@ -1,0 +1,10 @@
+{
+  "services": {
+    "keycloak": {
+      "environment": {
+        "KC_BOOTSTRAP_ADMIN_USERNAME": "bootstrap-admin",
+        "KC_BOOTSTRAP_ADMIN_PASSWORD": "${BOOTSTRAP_ADMIN_PASSWORD:?required}"
+      }
+    }
+  }
+}

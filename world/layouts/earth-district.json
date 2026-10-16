@@ -1,0 +1,744 @@
+{
+  "id": "earth-district",
+  "width": 36,
+  "height": 34,
+  "placements": [
+    {
+      "id": "navy-foundation",
+      "sprite": "floor-charcoal",
+      "x": 0,
+      "y": 0,
+      "width": 36,
+      "height": 34,
+      "layer": "terrain"
+    },
+    {
+      "id": "interior-floor",
+      "sprite": "floor-wood",
+      "x": 1,
+      "y": 3,
+      "width": 34,
+      "height": 29,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-gold-border",
+      "sprite": "floor-inlay",
+      "x": 15,
+      "y": 25,
+      "width": 6,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-runner",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 25,
+      "width": 4,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 35,
+      "y": 2,
+      "width": 1,
+      "height": 32,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-core",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 32,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-core",
+      "sprite": "wall-charcoal",
+      "x": 20,
+      "y": 32,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "north-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 0,
+      "width": 36,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-wall",
+      "sprite": "wall-navy",
+      "x": 35,
+      "y": 2,
+      "width": 1,
+      "height": 32,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 32,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-wall",
+      "sprite": "wall-navy",
+      "x": 20,
+      "y": 32,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-door",
+      "sprite": "door-open",
+      "x": 16,
+      "y": 32,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "door-sigil",
+      "sprite": "rune-threshold",
+      "x": 16,
+      "y": 31,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "west-window",
+      "sprite": "window-white",
+      "x": 3,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-window",
+      "sprite": "window-white",
+      "x": 31,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "west-lamp",
+      "sprite": "light-amber",
+      "x": 1,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-lamp",
+      "sprite": "light-amber",
+      "x": 34,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "central-gold-route",
+      "sprite": "floor-inlay",
+      "x": 15,
+      "y": 5,
+      "width": 6,
+      "height": 23,
+      "layer": "terrain"
+    },
+    {
+      "id": "central-route",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 5,
+      "width": 4,
+      "height": 23,
+      "layer": "terrain"
+    },
+    {
+      "id": "cross-route",
+      "sprite": "floor-charcoal",
+      "x": 1,
+      "y": 23,
+      "width": 33,
+      "height": 2,
+      "layer": "terrain"
+    },
+    {
+      "id": "west-wall-core-north",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 22,
+      "layer": "props"
+    },
+    {
+      "id": "west-wall-core-south",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 26,
+      "width": 1,
+      "height": 8,
+      "layer": "props"
+    },
+    {
+      "id": "west-wall-north",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 22,
+      "layer": "props"
+    },
+    {
+      "id": "west-wall-south",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 26,
+      "width": 1,
+      "height": 8,
+      "layer": "props"
+    },
+    {
+      "id": "court-door",
+      "sprite": "door-open",
+      "x": 0,
+      "y": 24,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "court-threshold",
+      "sprite": "rune-threshold",
+      "x": 0,
+      "y": 23,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "sigil-shrine",
+      "sprite": "quest-shrine",
+      "x": 16,
+      "y": 6,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "sigil-display",
+      "sprite": "sigil-earth",
+      "x": 17,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "shrine-lamp-west",
+      "sprite": "light-amber",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shrine-lamp-east",
+      "sprite": "light-amber",
+      "x": 21,
+      "y": 7,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shrine-zodiac-west",
+      "sprite": "constellation-taurus",
+      "x": 7,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shrine-zodiac-east",
+      "sprite": "constellation-virgo",
+      "x": 26,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "archive-west-a",
+      "sprite": "bookcase",
+      "x": 3,
+      "y": 13,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-west-b",
+      "sprite": "bookcase",
+      "x": 7,
+      "y": 13,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-west-c",
+      "sprite": "bookcase",
+      "x": 11,
+      "y": 13,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-south-a",
+      "sprite": "bookcase",
+      "x": 3,
+      "y": 19,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-south-b",
+      "sprite": "bookcase",
+      "x": 7,
+      "y": 19,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-reading-workstation",
+      "sprite": "desk-cream",
+      "x": 11,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "archive-reading-seat",
+      "sprite": "chair-north-cream",
+      "x": 11,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "reading-table",
+      "sprite": "table-circular",
+      "x": 25,
+      "y": 15,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "reading-chair-west",
+      "sprite": "chair-lounge",
+      "x": 22,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "reading-chair-east",
+      "sprite": "chair-lounge",
+      "x": 30,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "reading-sofa",
+      "sprite": "sofa-cream",
+      "x": 25,
+      "y": 21,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "reading-palm",
+      "sprite": "plant-palm",
+      "x": 30,
+      "y": 12,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "archive-wall-chart",
+      "sprite": "screen-content",
+      "x": 4,
+      "y": 8,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "library-social-seat",
+      "sprite": "sofa-cream",
+      "x": 3,
+      "y": 29,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "library-social-tea",
+      "sprite": "table-small-wood",
+      "x": 8,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "library-notes-workstation",
+      "sprite": "desk-coding",
+      "x": 25,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "library-notes-laptop",
+      "sprite": "laptop",
+      "x": 26,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "library-notes-seat",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "plaza-wayfinding-backing",
+      "sprite": "floor-charcoal",
+      "x": 13,
+      "y": 31,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "sigil-label-backing",
+      "sprite": "floor-charcoal",
+      "x": 8,
+      "y": 4,
+      "width": 23,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "west-activity-label-backing",
+      "sprite": "floor-charcoal",
+      "x": 2,
+      "y": 11,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "east-activity-label-backing",
+      "sprite": "floor-charcoal",
+      "x": 22,
+      "y": 11,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-wayfinding-backing",
+      "sprite": "floor-charcoal",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-face",
+      "sprite": "sign-board-face",
+      "x": 13,
+      "y": 31,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-north",
+      "sprite": "sign-board-north",
+      "x": 13,
+      "y": 31,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-south",
+      "sprite": "sign-board-south",
+      "x": 13,
+      "y": 31,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-west",
+      "sprite": "sign-board-west",
+      "x": 13,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-east",
+      "sprite": "sign-board-east",
+      "x": 22,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-court-wayfinding-face",
+      "sprite": "sign-board-face",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-court-wayfinding-north",
+      "sprite": "sign-board-north",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-court-wayfinding-south",
+      "sprite": "sign-board-south",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-court-wayfinding-west",
+      "sprite": "sign-board-west",
+      "x": 2,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-court-wayfinding-east",
+      "sprite": "sign-board-east",
+      "x": 14,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 17,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "earth-entry",
+      "isDefault": true,
+      "x": 17,
+      "y": 28,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-earth",
+      "x": 17,
+      "y": 33,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "court-return",
+      "destination": "campus-exploration",
+      "entry": "from-earth",
+      "x": 1,
+      "y": 25,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "sigil-earth",
+      "name": "sigil-earth",
+      "x": 16,
+      "y": 10,
+      "width": 4,
+      "height": 3,
+      "properties": []
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "central-aisle",
+      "kind": "landmark",
+      "x": 17,
+      "y": 10,
+      "width": 2,
+      "height": 22
+    },
+    {
+      "name": "cross-route",
+      "kind": "landmark",
+      "x": 1,
+      "y": 23,
+      "width": 33,
+      "height": 2
+    },
+    {
+      "name": "earth-activity",
+      "kind": "room",
+      "x": 1,
+      "y": 4,
+      "width": 34,
+      "height": 23
+    },
+    {
+      "name": "arrival-vestibule",
+      "kind": "auxiliary",
+      "x": 2,
+      "y": 27,
+      "width": 32,
+      "height": 5
+    }
+  ],
+  "signs": [
+    {
+      "name": "scene-title",
+      "text": "EARTH  /  CELESTIAL LIBRARY",
+      "x": 6,
+      "y": 2,
+      "width": 24,
+      "height": 1,
+      "fontSize": 20,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "plaza-wayfinding",
+      "text": "\u2193 PLAZA \u00b7 SOUTH DOOR",
+      "x": 13,
+      "y": 31,
+      "width": 10,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "sigil-label",
+      "text": "EARTH SIGIL  /  APPROACH + ACTIVATE",
+      "x": 8,
+      "y": 4,
+      "width": 23,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "west-activity-label",
+      "text": "CELESTIAL ARCHIVE",
+      "x": 2,
+      "y": 11,
+      "width": 13,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "east-activity-label",
+      "text": "READING SALON",
+      "x": 22,
+      "y": 11,
+      "width": 12,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "court-wayfinding",
+      "text": "\u2190 EXPLORATION COURT",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    }
+  ]
+}

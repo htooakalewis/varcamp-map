@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "moon-grotto.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "grotto-conversation",
+      "name": "grotto-conversation",
+      "visible": true,
+      "x": 544,
+      "y": 768,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Moon Grotto"
+  }
+}

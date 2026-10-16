@@ -1,0 +1,279 @@
+{
+  "meeting-aries": [
+    {
+      "id": "aries-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-aries",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-aries": [],
+  "meeting-leo": [
+    {
+      "id": "leo-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-leo",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-leo": [],
+  "meeting-sagittarius": [
+    {
+      "id": "sagittarius-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-sagittarius",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-sagittarius": [],
+  "sigil-fire": [],
+  "meeting-taurus": [
+    {
+      "id": "taurus-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-taurus",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-taurus": [],
+  "meeting-virgo": [
+    {
+      "id": "virgo-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-virgo",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-virgo": [],
+  "meeting-capricorn": [
+    {
+      "id": "capricorn-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-capricorn",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-capricorn": [],
+  "sigil-earth": [],
+  "meeting-gemini": [
+    {
+      "id": "gemini-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-gemini",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-gemini": [],
+  "meeting-libra": [
+    {
+      "id": "libra-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-libra",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-libra": [],
+  "meeting-aquarius": [
+    {
+      "id": "aquarius-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-aquarius",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-aquarius": [],
+  "sigil-air": [],
+  "meeting-cancer": [
+    {
+      "id": "cancer-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-cancer",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-cancer": [],
+  "meeting-scorpio": [
+    {
+      "id": "scorpio-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-scorpio",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-scorpio": [],
+  "meeting-pisces": [
+    {
+      "id": "pisces-livekit",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-pisces",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true,
+        "raiseHandEnabled": true
+      }
+    }
+  ],
+  "beacon-pisces": [],
+  "sigil-water": [],
+  "solar-stage": [
+    {
+      "id": "solar-broadcast",
+      "type": "speakerMegaphone",
+      "name": "varcamp-solar-main",
+      "chatEnabled": false,
+      "seeAttendees": false
+    },
+    {
+      "id": "solar-stage-rights",
+      "type": "restrictedRightsPropertyData",
+      "readTags": [
+        "organizer",
+        "speaker"
+      ],
+      "writeTags": []
+    }
+  ],
+  "solar-audience": [
+    {
+      "id": "solar-listen",
+      "type": "listenerMegaphone",
+      "speakerZoneName": "solar-stage",
+      "chatEnabled": false,
+      "allowTalking": false,
+      "raiseHandEnabled": true
+    }
+  ],
+  "solar-prep": [
+    {
+      "id": "solar-meeting",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-solar-prep",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true
+      }
+    },
+    {
+      "id": "solar-prep-rights",
+      "type": "restrictedRightsPropertyData",
+      "readTags": [
+        "organizer",
+        "speaker"
+      ],
+      "writeTags": []
+    }
+  ],
+  "lunar-stage": [
+    {
+      "id": "lunar-broadcast",
+      "type": "speakerMegaphone",
+      "name": "varcamp-lunar-main",
+      "chatEnabled": false,
+      "seeAttendees": false
+    },
+    {
+      "id": "lunar-stage-rights",
+      "type": "restrictedRightsPropertyData",
+      "readTags": [
+        "organizer",
+        "speaker"
+      ],
+      "writeTags": []
+    }
+  ],
+  "lunar-audience": [
+    {
+      "id": "lunar-listen",
+      "type": "listenerMegaphone",
+      "speakerZoneName": "lunar-stage",
+      "chatEnabled": false,
+      "allowTalking": false,
+      "raiseHandEnabled": true
+    }
+  ],
+  "lunar-prep": [
+    {
+      "id": "lunar-meeting",
+      "type": "livekitRoomProperty",
+      "roomName": "varcamp-lunar-prep",
+      "livekitRoomConfig": {
+        "startWithAudioMuted": true,
+        "startWithVideoMuted": true,
+        "disableChat": true
+      }
+    },
+    {
+      "id": "lunar-prep-rights",
+      "type": "restrictedRightsPropertyData",
+      "readTags": [
+        "organizer",
+        "speaker"
+      ],
+      "writeTags": []
+    }
+  ],
+  "observatory-discovery": [],
+  "observatory-quiet": [
+    {
+      "id": "observatory-quiet-silent",
+      "type": "silent"
+    }
+  ]
+}

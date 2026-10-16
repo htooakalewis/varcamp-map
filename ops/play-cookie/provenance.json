@@ -1,0 +1,85 @@
+{
+  "schema": "local-artifact-v1",
+  "image": "varcamp/workadventure-play:oidc-cookie-e90a8ff4392c69d9-20261011",
+  "imageId": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+  "platform": "linux/arm64",
+  "archive": {
+    "file": "artifacts/h2-e90a8ff4392c69d9/play-final.docker.tar",
+    "sha256": "21c2625f798f085c914ce7e8b90704094a4fa6752199740f35821b751836a0b2"
+  },
+  "baselineSourceCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "baseImage": "thecodingmachine/workadventure-play@sha256:e063ea840b75a26cb740c642ad79fb27c5facfff53fe4e5ba40eb3f50d3f72c0",
+  "baseImageId": "sha256:e063ea840b75a26cb740c642ad79fb27c5facfff53fe4e5ba40eb3f50d3f72c0",
+  "patchSha256": "e90a8ff4392c69d9b20ee0648e112c94da2f7393e1048e4cc5db97cda05cf753",
+  "patchBytes": 5114,
+  "sourceFiles": {
+    "src/pusher/services/OpenIDClient.ts": {
+      "originalSha256": "eb7cc1c6085b5a89449ecffb276df4c8e1298a22520e6ca77b6b6380ea3869ea",
+      "patchedSha256": "ed13d1e13d2e0cbb1b5c31593c5a2cb8b0c0aad0a42659a4f157c8f53829dad0",
+      "installedSha256": "ed13d1e13d2e0cbb1b5c31593c5a2cb8b0c0aad0a42659a4f157c8f53829dad0",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "0644"
+    },
+    "src/pusher/controllers/AuthenticateController.ts": {
+      "originalSha256": "174ef7cf372536a6989e7de8d5f483894a640716093e273cc98d2479ff878062",
+      "patchedSha256": "4533fabce10d2e378ec0472f4cb4e086a6d1cc2c46b966bc852aa7cc09412117",
+      "installedSha256": "4533fabce10d2e378ec0472f4cb4e086a6d1cc2c46b966bc852aa7cc09412117",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "0644"
+    },
+    "src/pusher/services/TransientOidcCookieOptions.ts": {
+      "originalSha256": null,
+      "patchedSha256": "7b0a24bf34721663021a69dea93369a9543677cd2c3f3723bd5f6e6399e2774f",
+      "installedSha256": "7b0a24bf34721663021a69dea93369a9543677cd2c3f3723bd5f6e6399e2774f",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "0644"
+    }
+  },
+  "build": {
+    "dockerfileSha256": "248f6c3cc6a5450c2770b5a710d5d87b216f108dbe46879ea49ebfc68b8f2741",
+    "contextSha256": "23af67a6bdc6b48614e39d15b8f3f84d3cafdf4ace669299a24a0f4e3102ebda",
+    "contextFiles": {
+      "Dockerfile": "248f6c3cc6a5450c2770b5a710d5d87b216f108dbe46879ea49ebfc68b8f2741",
+      "cookie.patch": "e90a8ff4392c69d9b20ee0648e112c94da2f7393e1048e4cc5db97cda05cf753",
+      "source-files.json": "78bbbb59358fe4e9fec9d4585f477f6c078bc09366ff69f8a7a9839f6f158bb3",
+      "src/pusher/services/OpenIDClient.ts": "ed13d1e13d2e0cbb1b5c31593c5a2cb8b0c0aad0a42659a4f157c8f53829dad0",
+      "src/pusher/controllers/AuthenticateController.ts": "4533fabce10d2e378ec0472f4cb4e086a6d1cc2c46b966bc852aa7cc09412117",
+      "src/pusher/services/TransientOidcCookieOptions.ts": "7b0a24bf34721663021a69dea93369a9543677cd2c3f3723bd5f6e6399e2774f"
+    },
+    "toolchain": {
+      "tsx": "4.22.3",
+      "typescript": "5.9.3",
+      "express": "5.2.1",
+      "cookie": "0.7.2",
+      "openid-client": "5.7.1",
+      "node": "v24.21.0"
+    },
+    "engine": "29.8.2",
+    "buildx": "0.37.1",
+    "buildkit": "0.33.1",
+    "compose": "5.6.0",
+    "driver": "docker",
+    "executedBuildScriptSha256": "4bc1c86208d85de1f87f5ffdd88c39a3a5ec913f90929c9d5e747fe5e6b0a0e1",
+    "buildRunReceiptSha256": "6427b19678cc75497cbb229ec6c855e5dd7260dbca942a1d1f0d8f1f93685619"
+  },
+  "exportImport": {
+    "beforeImageId": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+    "afterImageId": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+    "archiveSha256": "21c2625f798f085c914ce7e8b90704094a4fa6752199740f35821b751836a0b2",
+    "retainedCommandReceiptSha256": "3370db9bea53ebcccad1c9d6e747ca259a0900a35d828831503d8cc7bc7aa6a6"
+  },
+  "composeFixture": {
+    "image": "varcamp/workadventure-play:oidc-cookie-e90a8ff4392c69d9-20261011",
+    "configImage": "varcamp/workadventure-play:oidc-cookie-e90a8ff4392c69d9-20261011",
+    "imageId": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+    "pullPolicy": "never"
+  },
+  "validation": {
+    "identicalGreenReceiptSha256": "6bbfe792ca61c63773e15aeaa7c78245894f277891554d48e2c99f5a9ec09455",
+    "actualScopedTypecheckReceiptSha256": "7bda45579897818b43e77166df3bcd779fc3b04514e5bc826c7b3bb1fbb8f4a0",
+    "fullPusherTypecheckStatus": "stock109/derived110 missing-development-declarations; full pass not claimed"
+  }
+}

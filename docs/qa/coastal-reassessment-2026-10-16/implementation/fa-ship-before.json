@@ -1,0 +1,1975 @@
+{
+  "id": "fa-ship",
+  "width": 48,
+  "height": 56,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "coast-sea",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 56,
+      "layer": "terrain"
+    },
+    {
+      "id": "hull-strake-3",
+      "sprite": "coast-deck-plank",
+      "x": 22,
+      "y": 3,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-3",
+      "sprite": "coast-bulwark",
+      "x": 22,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-3",
+      "sprite": "coast-bulwark",
+      "x": 25,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-4",
+      "sprite": "coast-deck-plank",
+      "x": 20,
+      "y": 4,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-4",
+      "sprite": "coast-bulwark",
+      "x": 20,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-4",
+      "sprite": "coast-bulwark",
+      "x": 27,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-5",
+      "sprite": "coast-deck-plank",
+      "x": 18,
+      "y": 5,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-5",
+      "sprite": "coast-bulwark",
+      "x": 18,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-5",
+      "sprite": "coast-bulwark",
+      "x": 29,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-6",
+      "sprite": "coast-deck-plank",
+      "x": 16,
+      "y": 6,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-6",
+      "sprite": "coast-bulwark",
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-6",
+      "sprite": "coast-bulwark",
+      "x": 31,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-7",
+      "sprite": "coast-deck-plank",
+      "x": 14,
+      "y": 7,
+      "width": 20,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-7",
+      "sprite": "coast-bulwark",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-7",
+      "sprite": "coast-bulwark",
+      "x": 33,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-8",
+      "sprite": "coast-deck-plank",
+      "x": 13,
+      "y": 8,
+      "width": 22,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-8",
+      "sprite": "coast-bulwark",
+      "x": 13,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-8",
+      "sprite": "coast-bulwark",
+      "x": 34,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-9",
+      "sprite": "coast-deck-plank",
+      "x": 12,
+      "y": 9,
+      "width": 24,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-9",
+      "sprite": "coast-bulwark",
+      "x": 12,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-9",
+      "sprite": "coast-bulwark",
+      "x": 35,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-10",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 10,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-10",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-10",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-11",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 11,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-11",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-11",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-12",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 12,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-12",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-12",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-13",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 13,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-13",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-13",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-14",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 14,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-14",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-14",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-15",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 15,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-15",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-15",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-16",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 16,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-16",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-16",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-17",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 17,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-17",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-17",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-18",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 18,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-18",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-18",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-19",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 19,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-19",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-19",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-20",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 20,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-20",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-20",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-21",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 21,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-21",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-21",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-22",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 22,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-22",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-22",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-23",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 23,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-23",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-23",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-24",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 24,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-24",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-24",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-25",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 25,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-25",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-25",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-26",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 26,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-26",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-26",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-27",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 27,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-27",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-27",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-28",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 28,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-28",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-28",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-29",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 29,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-29",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-29",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-30",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 30,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "starboard-bulwark-30",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-31",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 31,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "starboard-bulwark-31",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-32",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 32,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "starboard-bulwark-32",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-33",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 33,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "starboard-bulwark-33",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-34",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 34,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-34",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-34",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-35",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 35,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-35",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-35",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-36",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 36,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-36",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-36",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-37",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 37,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-37",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-37",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-38",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 38,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-38",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 38,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-38",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 38,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-39",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 39,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-39",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 39,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-39",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 39,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-40",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 40,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-40",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 40,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-40",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 40,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-41",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 41,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-41",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 41,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-41",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 41,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-42",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 42,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-42",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-42",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-43",
+      "sprite": "coast-deck-plank",
+      "x": 11,
+      "y": 43,
+      "width": 26,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-43",
+      "sprite": "coast-bulwark",
+      "x": 11,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-43",
+      "sprite": "coast-bulwark",
+      "x": 36,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-44",
+      "sprite": "coast-deck-plank",
+      "x": 12,
+      "y": 44,
+      "width": 24,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-44",
+      "sprite": "coast-bulwark",
+      "x": 12,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-44",
+      "sprite": "coast-bulwark",
+      "x": 35,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-45",
+      "sprite": "coast-deck-plank",
+      "x": 12,
+      "y": 45,
+      "width": 24,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-45",
+      "sprite": "coast-bulwark",
+      "x": 12,
+      "y": 45,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-45",
+      "sprite": "coast-bulwark",
+      "x": 35,
+      "y": 45,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-46",
+      "sprite": "coast-deck-plank",
+      "x": 13,
+      "y": 46,
+      "width": 22,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-46",
+      "sprite": "coast-bulwark",
+      "x": 13,
+      "y": 46,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-46",
+      "sprite": "coast-bulwark",
+      "x": 34,
+      "y": 46,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-47",
+      "sprite": "coast-deck-plank",
+      "x": 14,
+      "y": 47,
+      "width": 20,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-47",
+      "sprite": "coast-bulwark",
+      "x": 14,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-47",
+      "sprite": "coast-bulwark",
+      "x": 33,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "hull-strake-48",
+      "sprite": "coast-deck-plank",
+      "x": 16,
+      "y": 48,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "port-bulwark-48",
+      "sprite": "coast-bulwark",
+      "x": 16,
+      "y": 48,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-bulwark-48",
+      "sprite": "coast-bulwark",
+      "x": 31,
+      "y": 48,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "stern-bulwark",
+      "sprite": "coast-bulwark",
+      "x": 17,
+      "y": 48,
+      "width": 14,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "harbor-quay",
+      "sprite": "coast-dock-plank",
+      "x": 2,
+      "y": 25,
+      "width": 6,
+      "height": 28,
+      "layer": "terrain"
+    },
+    {
+      "id": "safe-gangway",
+      "sprite": "coast-dock-plank",
+      "x": 7,
+      "y": 30,
+      "width": 7,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "gangway-post-7-29",
+      "sprite": "coast-mooring-post",
+      "x": 7,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gangway-post-7-34",
+      "sprite": "coast-mooring-post",
+      "x": 7,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gangway-post-10-29",
+      "sprite": "coast-mooring-post",
+      "x": 10,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gangway-post-10-34",
+      "sprite": "coast-mooring-post",
+      "x": 10,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gangway-rope-north",
+      "sprite": "coast-rope-horizontal",
+      "x": 8,
+      "y": 29,
+      "width": 2,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "gangway-rope-south",
+      "sprite": "coast-rope-horizontal",
+      "x": 8,
+      "y": 34,
+      "width": 2,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foremast",
+      "sprite": "coast-mast",
+      "x": 22,
+      "y": 4,
+      "width": 2,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "mainmast",
+      "sprite": "coast-mast",
+      "x": 22,
+      "y": 26,
+      "width": 2,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "port-fore-canvas",
+      "sprite": "coast-square-sail",
+      "x": 8,
+      "y": 8,
+      "width": 7,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "starboard-main-canvas",
+      "sprite": "coast-square-sail",
+      "x": 31,
+      "y": 17,
+      "width": 7,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "port-aft-canvas",
+      "sprite": "coast-square-sail",
+      "x": 8,
+      "y": 34,
+      "width": 7,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "structural-yard-fore",
+      "sprite": "coast-yard-fore",
+      "x": 8,
+      "y": 4,
+      "width": 16,
+      "height": 7,
+      "layer": "rigging"
+    },
+    {
+      "id": "structural-yard-starboard",
+      "sprite": "coast-yard-starboard",
+      "x": 23,
+      "y": 4,
+      "width": 15,
+      "height": 15,
+      "layer": "rigging"
+    },
+    {
+      "id": "structural-yard-aft",
+      "sprite": "coast-yard-aft",
+      "x": 8,
+      "y": 26,
+      "width": 16,
+      "height": 10,
+      "layer": "rigging"
+    },
+    {
+      "id": "bow-pennant",
+      "sprite": "coast-flag",
+      "x": 25,
+      "y": 4,
+      "width": 2,
+      "height": 4,
+      "layer": "rigging"
+    },
+    {
+      "id": "helm-wheel",
+      "sprite": "coast-wheel",
+      "x": 18,
+      "y": 11,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fore-barrel-port",
+      "sprite": "coast-barrel",
+      "x": 16,
+      "y": 15,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fore-barrel-starboard",
+      "sprite": "coast-barrel",
+      "x": 29,
+      "y": 15,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cargo-barrel-port",
+      "sprite": "coast-barrel",
+      "x": 15,
+      "y": 25,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cargo-barrel-starboard",
+      "sprite": "coast-barrel",
+      "x": 30,
+      "y": 25,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "aft-barrel-port",
+      "sprite": "coast-barrel",
+      "x": 16,
+      "y": 44,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "aft-barrel-starboard",
+      "sprite": "coast-barrel",
+      "x": 30,
+      "y": 44,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "port-cargo-crate",
+      "sprite": "coast-crate",
+      "x": 16,
+      "y": 28,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-cargo-crate",
+      "sprite": "coast-crate",
+      "x": 28,
+      "y": 28,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "port-cargo-two",
+      "sprite": "coast-crate",
+      "x": 14,
+      "y": 35,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-cargo-two",
+      "sprite": "coast-crate",
+      "x": 31,
+      "y": 35,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "port-cannon",
+      "sprite": "coast-cannon",
+      "x": 12,
+      "y": 20,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-cannon",
+      "sprite": "coast-cannon",
+      "x": 33,
+      "y": 26,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "port-aft-cannon",
+      "sprite": "coast-cannon",
+      "x": 12,
+      "y": 42,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "starboard-aft-cannon",
+      "sprite": "coast-cannon",
+      "x": 33,
+      "y": 40,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "fore-hatch",
+      "sprite": "coast-hatch",
+      "x": 27,
+      "y": 9,
+      "width": 3,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "cargo-hatch",
+      "sprite": "coast-hatch",
+      "x": 17,
+      "y": 23,
+      "width": 3,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "crew-bench-port",
+      "sprite": "bench-park",
+      "x": 16,
+      "y": 40,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crew-bench-starboard",
+      "sprite": "bench-park",
+      "x": 28,
+      "y": 40,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crew-low-table",
+      "sprite": "table-small-wood",
+      "x": 18,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "ship-gull-port",
+      "sprite": "coast-gull",
+      "x": 2,
+      "y": 12,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "ship-gull-starboard",
+      "sprite": "coast-gull",
+      "x": 40,
+      "y": 20,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "ship-gull-aft",
+      "sprite": "coast-gull",
+      "x": 38,
+      "y": 49,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "wood-sign-harbor-return-label",
+      "sprite": "coast-sign-board",
+      "x": 2,
+      "y": 25,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-plaza-return-label",
+      "sprite": "coast-sign-board",
+      "x": 2,
+      "y": 48,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-vessel-title",
+      "sprite": "coast-sign-board",
+      "x": 18,
+      "y": 19,
+      "width": 8,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-cockpit-label",
+      "sprite": "coast-sign-board",
+      "x": 16,
+      "y": 17,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-cargo-label",
+      "sprite": "coast-sign-board",
+      "x": 20,
+      "y": 23,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-lounge-label",
+      "sprite": "coast-sign-board",
+      "x": 19,
+      "y": 36,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "harbor-direction",
+      "sprite": "arrow-north",
+      "x": 3,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "boarding-direction",
+      "sprite": "arrow-east",
+      "x": 6,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "plaza-direction",
+      "sprite": "arrow-south",
+      "x": 3,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-gangway-label",
+      "sprite": "coast-sign-board",
+      "x": 2,
+      "y": 30,
+      "width": 5,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-0",
+      "sprite": "coast-underwater-rock",
+      "x": 2,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-1",
+      "sprite": "coast-underwater-rock",
+      "x": 40,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-2",
+      "sprite": "coast-underwater-rock",
+      "x": 42,
+      "y": 33,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-3",
+      "sprite": "coast-underwater-rock",
+      "x": 35,
+      "y": 51,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-post-harbor-return-label",
+      "sprite": "coast-sign-post",
+      "x": 5,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-pointer-harbor-return-label",
+      "sprite": "coast-sign-pointer-left",
+      "x": 1,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-post-plaza-return-label",
+      "sprite": "coast-sign-post",
+      "x": 5,
+      "y": 49,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-pointer-plaza-return-label",
+      "sprite": "coast-sign-pointer-right",
+      "x": 9,
+      "y": 48,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-post-gangway-label",
+      "sprite": "coast-sign-post",
+      "x": 4,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-pointer-gangway-label",
+      "sprite": "coast-sign-pointer-right",
+      "x": 7,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "arrival",
+      "x": 3,
+      "y": 36,
+      "width": 3,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "harbor-return",
+      "destination": "shipyard-beach",
+      "entry": "from-fa-ship",
+      "x": 3,
+      "y": 27,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-shipyard",
+      "x": 3,
+      "y": 50,
+      "width": 3,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "fa-ship-cockpit",
+      "name": "fa-ship-cockpit",
+      "properties": [],
+      "x": 21,
+      "y": 12,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "fa-ship-cargo",
+      "name": "fa-ship-cargo",
+      "properties": [],
+      "x": 21,
+      "y": 26,
+      "width": 5,
+      "height": 5
+    },
+    {
+      "id": "cargo-deck",
+      "name": "cargo-deck",
+      "properties": [],
+      "x": 21,
+      "y": 32,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "fa-ship-lounge",
+      "name": "fa-ship-lounge",
+      "properties": [],
+      "x": 21,
+      "y": 38,
+      "width": 5,
+      "height": 4
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "fa-ship",
+      "kind": "landmark",
+      "x": 11,
+      "y": 7,
+      "width": 26,
+      "height": 41
+    },
+    {
+      "name": "safe-gangway",
+      "kind": "landmark",
+      "x": 7,
+      "y": 30,
+      "width": 7,
+      "height": 4
+    },
+    {
+      "name": "navigation-workstations",
+      "kind": "landmark",
+      "x": 16,
+      "y": 9,
+      "width": 15,
+      "height": 8
+    },
+    {
+      "name": "cargo-port-work-bay",
+      "kind": "landmark",
+      "x": 14,
+      "y": 24,
+      "width": 6,
+      "height": 7
+    },
+    {
+      "name": "cargo-starboard-work-bay",
+      "kind": "landmark",
+      "x": 27,
+      "y": 24,
+      "width": 7,
+      "height": 7
+    },
+    {
+      "name": "crew-shared-alcoves",
+      "kind": "landmark",
+      "x": 14,
+      "y": 37,
+      "width": 20,
+      "height": 9
+    }
+  ],
+  "signs": [
+    {
+      "name": "harbor-return-label",
+      "text": "\u2191 HARBOR",
+      "x": 2,
+      "y": 25,
+      "width": 7,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 PLAZA",
+      "x": 2,
+      "y": 48,
+      "width": 7,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "vessel-title",
+      "text": "FA SHIP",
+      "x": 18,
+      "y": 19,
+      "width": 8,
+      "height": 2,
+      "fontSize": 32,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "cockpit-label",
+      "text": "HELM DECK",
+      "x": 16,
+      "y": 17,
+      "width": 7,
+      "height": 1,
+      "fontSize": 17,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "cargo-label",
+      "text": "CARGO DECK",
+      "x": 20,
+      "y": 23,
+      "width": 7,
+      "height": 1,
+      "fontSize": 17,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "lounge-label",
+      "text": "CREW LOUNGE",
+      "x": 19,
+      "y": 36,
+      "width": 9,
+      "height": 1,
+      "fontSize": 17,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "gangway-label",
+      "text": "SHIP \u2192",
+      "x": 2,
+      "y": 30,
+      "width": 5,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    }
+  ]
+}

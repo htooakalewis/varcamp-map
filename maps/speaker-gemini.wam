@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "speaker-gemini.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "meeting-gemini",
+      "name": "meeting-gemini",
+      "visible": true,
+      "x": 64,
+      "y": 160,
+      "width": 1024,
+      "height": 640,
+      "properties": [
+        {
+          "id": "gemini-livekit",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-gemini",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true,
+            "raiseHandEnabled": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "beacon-gemini",
+      "name": "beacon-gemini",
+      "visible": true,
+      "x": 864,
+      "y": 928,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Speaker Gemini"
+  }
+}

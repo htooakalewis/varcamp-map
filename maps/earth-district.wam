@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "earth-district.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "sigil-earth",
+      "name": "sigil-earth",
+      "visible": true,
+      "x": 512,
+      "y": 320,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Earth District"
+  }
+}

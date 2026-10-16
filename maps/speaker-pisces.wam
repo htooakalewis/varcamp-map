@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "speaker-pisces.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "meeting-pisces",
+      "name": "meeting-pisces",
+      "visible": true,
+      "x": 64,
+      "y": 160,
+      "width": 1024,
+      "height": 672,
+      "properties": [
+        {
+          "id": "pisces-livekit",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-pisces",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true,
+            "raiseHandEnabled": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "beacon-pisces",
+      "name": "beacon-pisces",
+      "visible": true,
+      "x": 864,
+      "y": 928,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Speaker Pisces"
+  }
+}

@@ -1,0 +1,680 @@
+{
+  "id": "speaker-aries",
+  "width": 36,
+  "height": 36,
+  "placements": [
+    {
+      "id": "navy-foundation",
+      "sprite": "floor-charcoal",
+      "x": 0,
+      "y": 0,
+      "width": 36,
+      "height": 36,
+      "layer": "terrain"
+    },
+    {
+      "id": "interior-floor",
+      "sprite": "floor-charcoal",
+      "x": 1,
+      "y": 3,
+      "width": 34,
+      "height": 31,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-gold-border",
+      "sprite": "floor-inlay",
+      "x": 15,
+      "y": 27,
+      "width": 6,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-runner",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 27,
+      "width": 4,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 34,
+      "layer": "props"
+    },
+    {
+      "id": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 35,
+      "y": 2,
+      "width": 1,
+      "height": 34,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-core",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 34,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-core",
+      "sprite": "wall-charcoal",
+      "x": 20,
+      "y": 34,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "north-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 0,
+      "width": 36,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "west-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 34,
+      "layer": "props"
+    },
+    {
+      "id": "east-wall",
+      "sprite": "wall-navy",
+      "x": 35,
+      "y": 2,
+      "width": 1,
+      "height": 34,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 34,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-wall",
+      "sprite": "wall-navy",
+      "x": 20,
+      "y": 34,
+      "width": 16,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-door",
+      "sprite": "door-open",
+      "x": 16,
+      "y": 34,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "door-sigil",
+      "sprite": "rune-threshold",
+      "x": 16,
+      "y": 33,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "west-window",
+      "sprite": "window-white",
+      "x": 3,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-window",
+      "sprite": "window-white",
+      "x": 31,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "west-lamp",
+      "sprite": "light-amber",
+      "x": 1,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-lamp",
+      "sprite": "light-amber",
+      "x": 34,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-gold-edge",
+      "sprite": "floor-inlay",
+      "x": 3,
+      "y": 6,
+      "width": 30,
+      "height": 8,
+      "layer": "terrain"
+    },
+    {
+      "id": "stage-deck",
+      "sprite": "floor-charcoal",
+      "x": 4,
+      "y": 7,
+      "width": 28,
+      "height": 6,
+      "layer": "terrain"
+    },
+    {
+      "id": "main-aisle",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 14,
+      "width": 4,
+      "height": 20,
+      "layer": "terrain"
+    },
+    {
+      "id": "front-crossing",
+      "sprite": "floor-wood-long",
+      "x": 2,
+      "y": 14,
+      "width": 32,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "foyer-floor",
+      "sprite": "floor-cosmic",
+      "x": 1,
+      "y": 27,
+      "width": 34,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "foyer-route",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 27,
+      "width": 4,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "primary-screen",
+      "sprite": "screen-presentation",
+      "x": 15,
+      "y": 7,
+      "width": 6,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "speaker-lectern",
+      "sprite": "lectern",
+      "x": 13,
+      "y": 11,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "zodiac-constellation",
+      "sprite": "constellation-aries",
+      "x": 5,
+      "y": 7,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "zodiac-glyph",
+      "sprite": "glyph-aries",
+      "x": 29,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "stage-light-left",
+      "sprite": "light-amber",
+      "x": 4,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-light-right",
+      "sprite": "light-amber",
+      "x": 31,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-glass-west",
+      "sprite": "glass-partition",
+      "x": 1,
+      "y": 25,
+      "width": 12,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-glass-east",
+      "sprite": "glass-partition",
+      "x": 23,
+      "y": 25,
+      "width": 12,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "discovery-beacon",
+      "sprite": "beacon",
+      "x": 26,
+      "y": 28,
+      "width": 1,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-water",
+      "sprite": "water-cooler",
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "forge-relief",
+      "sprite": "forge-wall-relief",
+      "x": 27,
+      "y": 9,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "forge-workbench",
+      "sprite": "forge-aries",
+      "x": 4,
+      "y": 20,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "forum-console",
+      "sprite": "desk-coding",
+      "x": 29,
+      "y": 21,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "forum-laptop",
+      "sprite": "laptop",
+      "x": 30,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-workstation",
+      "sprite": "desk-coding",
+      "x": 4,
+      "y": 29,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-laptop",
+      "sprite": "laptop",
+      "x": 5,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "social-seat",
+      "sprite": "chair-north-slate",
+      "x": 5,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-sofa",
+      "sprite": "sofa-blue",
+      "x": 10,
+      "y": 30,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "social-table",
+      "sprite": "table-small-white",
+      "x": 14,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "seat-00",
+      "sprite": "chair-north-slate",
+      "x": 5,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-01",
+      "sprite": "chair-north-slate",
+      "x": 8,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-02",
+      "sprite": "chair-north-slate",
+      "x": 11,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-03",
+      "sprite": "chair-north-slate",
+      "x": 23,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-04",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-05",
+      "sprite": "chair-north-slate",
+      "x": 29,
+      "y": 18,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-06",
+      "sprite": "chair-north-slate",
+      "x": 11,
+      "y": 22,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-07",
+      "sprite": "chair-north-slate",
+      "x": 9,
+      "y": 22,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-08",
+      "sprite": "chair-north-slate",
+      "x": 23,
+      "y": 22,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-09",
+      "sprite": "chair-north-slate",
+      "x": 27,
+      "y": 22,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-face",
+      "sprite": "sign-board-face",
+      "x": 13,
+      "y": 33,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-north",
+      "sprite": "sign-board-north",
+      "x": 13,
+      "y": 33,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-south",
+      "sprite": "sign-board-south",
+      "x": 13,
+      "y": 33,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-west",
+      "sprite": "sign-board-west",
+      "x": 13,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-east",
+      "sprite": "sign-board-east",
+      "x": 22,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 17,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "speaker-entry",
+      "isDefault": true,
+      "x": 17,
+      "y": 30,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-speaker-aries",
+      "x": 17,
+      "y": 35,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "meeting-aries",
+      "name": "meeting-aries",
+      "x": 2,
+      "y": 5,
+      "width": 32,
+      "height": 20,
+      "properties": [
+        {
+          "id": "aries-livekit",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-aries",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true,
+            "raiseHandEnabled": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "beacon-aries",
+      "name": "beacon-aries",
+      "x": 27,
+      "y": 29,
+      "width": 3,
+      "height": 2,
+      "properties": []
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "meeting-room",
+      "kind": "room",
+      "x": 1,
+      "y": 4,
+      "width": 34,
+      "height": 22
+    },
+    {
+      "name": "central-aisle",
+      "kind": "landmark",
+      "x": 17,
+      "y": 14,
+      "width": 2,
+      "height": 20
+    },
+    {
+      "name": "front-route",
+      "kind": "landmark",
+      "x": 2,
+      "y": 14,
+      "width": 32,
+      "height": 3
+    },
+    {
+      "name": "social-pocket",
+      "kind": "auxiliary",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 7
+    }
+  ],
+  "signs": [
+    {
+      "name": "scene-title",
+      "text": "ARIES  /  FORGE FORUM",
+      "x": 6,
+      "y": 2,
+      "width": 24,
+      "height": 1,
+      "fontSize": 20,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "plaza-wayfinding",
+      "text": "\u2193 PLAZA \u00b7 SOUTH DOOR",
+      "x": 13,
+      "y": 33,
+      "width": 10,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "social-title",
+      "text": "IDEA WORKBENCH",
+      "x": 2,
+      "y": 27,
+      "width": 13,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "beacon-instructions",
+      "text": "ARIES BEACON\nSTEP CLOSE + ACTIVATE",
+      "x": 23,
+      "y": 32,
+      "width": 11,
+      "height": 2,
+      "fontSize": 11,
+      "color": "#f1d9a0",
+      "align": "left"
+    }
+  ]
+}

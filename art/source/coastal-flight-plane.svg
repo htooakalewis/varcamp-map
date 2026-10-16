@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="96" viewBox="0 0 192 96" shape-rendering="crispEdges">
+<!-- Original native pixel aircraft master:192x96, no scaling. -->
+<g fill="#142c3b">
+<path d="M16 43H52L79 6H93L124 40H164L180 46L186 51L179 59L162 65H116L94 90H81L62 65H27L14 60L22 52Z"/>
+<path d="M13 34H25L46 47L35 52L14 44ZM14 64L35 56L45 61L25 74H13Z"/>
+</g>
+<path fill="#d99b43" d="M77 8H91L120 40H99L78 18ZM79 67H112L93 87H82Z"/>
+<path fill="#f0ba54" d="M81 9H89L114 39H102L82 19ZM84 68H105L91 84H85Z"/>
+<path fill="#ffe9a9" d="M82 10H87L108 36H104L83 18ZM85 71H98L90 80H87Z"/>
+<path fill="#a56f38" d="M89 12L93 16L110 37H106ZM89 77L93 73H98L90 82Z"/>
+<path fill="#f7dd9c" d="M22 45L56 40H130L165 44L177 49V54L165 60L76 62H28L19 58L27 51Z"/>
+<path fill="#fff1c5" d="M40 43H128L158 46H58L31 49H27ZM33 57H75L84 59H37Z"/>
+<path fill="#ce9b50" d="M24 58H72L84 61H31ZM119 58H161L170 55V58L161 62H118Z"/>
+<path fill="#2b6571" d="M48 53H122V57H52L31 55V52ZM128 54H161L172 51V55L162 59H128Z"/>
+<path fill="#d99b43" d="M31 56H75V58H33ZM129 59H157V61H129Z"/>
+<path fill="#142c3b" d="M132 43H150L164 47V52H132Z"/>
+<path fill="#78bdc7" d="M135 45H145V49H135ZM148 45L160 48V50H148Z"/>
+<path fill="#d5f6e9" d="M136 45H144V46H136ZM149 46L156 48H149Z"/>
+<path fill="#bd843e" d="M18 37L39 47H31L17 42ZM16 66L31 60H37L23 70H16Z"/>
+<path fill="#f0ba54" d="M18 38L29 44H24L18 42ZM18 66L27 63H31L22 68H18Z"/>
+<path fill="#142c3b" d="M173 45H181V58H173Z"/>
+<path fill="#788d91" d="M180 46H185V56H180ZM185 28H189V75H185Z"/>
+<path fill="#d0ded2" d="M186 28H188V45H186ZM186 58H188V75H186Z"/>
+<path fill="#e89b48" d="M182 48H190V54H182Z"/>
+<g fill="#b88743"><rect x="61" y="46" width="2" height="2"/><rect x="77" y="46" width="2" height="2"/><rect x="93" y="46" width="2" height="2"/><rect x="109" y="46" width="2" height="2"/></g>
+<rect x="81" y="5" width="5" height="3" fill="#e36c54"/><rect x="86" y="88" width="5" height="3" fill="#a8d79c"/>
+<path d="M40 45L43 49L46 45" fill="none" stroke="#2b6571" stroke-width="2"/>
+</svg>

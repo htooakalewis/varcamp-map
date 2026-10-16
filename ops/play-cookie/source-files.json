@@ -1,0 +1,14 @@
+{
+  "src/pusher/services/OpenIDClient.ts": {
+    "originalSha256": "eb7cc1c6085b5a89449ecffb276df4c8e1298a22520e6ca77b6b6380ea3869ea",
+    "patchedSha256": "ed13d1e13d2e0cbb1b5c31593c5a2cb8b0c0aad0a42659a4f157c8f53829dad0"
+  },
+  "src/pusher/controllers/AuthenticateController.ts": {
+    "originalSha256": "174ef7cf372536a6989e7de8d5f483894a640716093e273cc98d2479ff878062",
+    "patchedSha256": "4533fabce10d2e378ec0472f4cb4e086a6d1cc2c46b966bc852aa7cc09412117"
+  },
+  "src/pusher/services/TransientOidcCookieOptions.ts": {
+    "originalSha256": null,
+    "patchedSha256": "7b0a24bf34721663021a69dea93369a9543677cd2c3f3723bd5f6e6399e2774f"
+  }
+}

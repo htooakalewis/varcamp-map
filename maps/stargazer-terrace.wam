@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "stargazer-terrace.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "observatory-telescope",
+      "name": "observatory-telescope",
+      "visible": true,
+      "x": 576,
+      "y": 448,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Stargazer Terrace"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "snapshot": "2026-10-16",
+  "localFreshInstall": "npm ci",
+  "maps": 33,
+  "wams": 33,
+  "sourceFilesByteExact": 303,
+  "artSpritesValidated": 739,
+  "fullLocalSuite": {
+    "files": 49,
+    "tests": 754,
+    "pythonTests": 7,
+    "failed": 0,
+    "command": "npm test -- --maxWorkers=1 --testTimeout=30000",
+    "nativeTiledRasterizerIncluded": true
+  },
+  "releaseFiles": 143,
+  "releaseZipSha256": "063f1c8dfc261a63a821bffd1b23d554590b4e1405cb866ad397ea3a01e8ca9b",
+  "independentReview": "Source byte hashes, fixture closure, license notices, credential exclusions, Pages action pins/permissions and landing links reviewed."
+}

@@ -1,0 +1,2 @@
+# Unified diff context represents empty source lines with a single space.
+ops/play-cookie/cookie.patch whitespace=-blank-at-eol

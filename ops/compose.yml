@@ -1,0 +1,257 @@
+{
+  "name": "varcamp",
+  "services": {
+    "traefik": {
+      "image": "traefik@sha256:66932e80d0538da2b2bfe95902efb6fb24a4dc8d9023ce126c6c955f3f1b278a",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "labels": {
+        "traefik.enable": "false"
+      },
+      "volumes": [
+        "/var/run/docker.sock:/var/run/docker.sock:ro",
+        "./private/traefik.yml:/etc/traefik/traefik.yml:ro",
+        "acme:/letsencrypt"
+      ],
+      "network_mode": "host"
+    },
+    "play": {
+      "image": "varcamp/workadventure-play:oidc-cookie-e90a8ff4392c69d9-20261011",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "true",
+        "traefik.docker.network": "varcamp_core",
+        "traefik.http.routers.play.rule": "Host(`${PLAY_HOST}`)",
+        "traefik.http.routers.play.entrypoints": "websecure",
+        "traefik.http.routers.play.tls.certresolver": "letsencrypt",
+        "traefik.http.routers.play.service": "play",
+        "traefik.http.services.play.loadbalancer.server.port": "3000",
+        "traefik.http.routers.play-ws.rule": "Host(`${PLAY_HOST}`) && PathPrefix(`/ws/`)",
+        "traefik.http.routers.play-ws.entrypoints": "websecure",
+        "traefik.http.routers.play-ws.tls.certresolver": "letsencrypt",
+        "traefik.http.routers.play-ws.service": "play-ws",
+        "traefik.http.services.play-ws.loadbalancer.server.port": "3001"
+      },
+      "environment": {
+        "SECRET_KEY": "${SECRET_KEY:?required}",
+        "MAP_STORAGE_API_TOKEN": "${MAP_STORAGE_API_TOKEN:?required}",
+        "REDIS_HOST": "redis",
+        "ENABLE_MAP_EDITOR": "true",
+        "PUBLIC_MAP_STORAGE_URL": "https://${MAPS_HOST}",
+        "INTERNAL_MAP_STORAGE_URL": "http://map-storage:3000",
+        "ENABLE_CHAT": "true",
+        "ENABLE_CHAT_UPLOAD": "false",
+        "PUSHER_URL": "https://${PLAY_HOST}",
+        "FRONT_URL": "https://${PLAY_HOST}/",
+        "API_URL": "back:50051",
+        "ICON_URL": "https://${ICONS_HOST}",
+        "START_ROOM_URL": "/~/varcamp/maps/core-rehearsal.wam",
+        "DISABLE_ANONYMOUS": "false",
+        "MAP_EDITOR_ALLOW_ALL_USERS": "false",
+        "MAP_EDITOR_ALLOWED_USERS": "${ORGANISER_EMAIL:?required}",
+        "OPENID_CLIENT_ISSUER": "https://${ID_HOST}/realms/varcamp",
+        "OPENID_CLIENT_ID": "workadventure",
+        "OPENID_CLIENT_SECRET": "${OPENID_CLIENT_SECRET:?required}",
+        "OPENID_SCOPE": "openid email profile",
+        "OPENID_USERNAME_CLAIM": "preferred_username",
+        "OPENID_LOCALE_CLAIM": "locale",
+        "OPENID_TAGS_CLAIM": "tags",
+        "OPENID_WOKA_NAME_POLICY": "user_input",
+        "ENABLE_TUTORIAL": "false",
+        "ENABLE_OPENAPI_ENDPOINT": "false",
+        "ROOM_API_SECRET_KEY": "${ROOM_API_SECRET_KEY:?required}",
+        "UPLOADER_URL": ""
+      },
+      "pull_policy": "never"
+    },
+    "back": {
+      "image": "thecodingmachine/workadventure-back@sha256:d177cb435d478ecadee5b852ec21d77b8700b6805415530f3770886dc9ccc065",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "false"
+      },
+      "environment": {
+        "SECRET_KEY": "${SECRET_KEY:?required}",
+        "MAP_STORAGE_API_TOKEN": "${MAP_STORAGE_API_TOKEN:?required}",
+        "REDIS_HOST": "redis",
+        "ENABLE_MAP_EDITOR": "true",
+        "PUBLIC_MAP_STORAGE_URL": "https://${MAPS_HOST}",
+        "INTERNAL_MAP_STORAGE_URL": "http://map-storage:3000",
+        "ENABLE_CHAT": "true",
+        "ENABLE_CHAT_UPLOAD": "false",
+        "PLAY_URL": "https://${PLAY_HOST}",
+        "MAP_STORAGE_URL": "map-storage:50053"
+      },
+      "ports": [
+        "127.0.0.1:18080:8080"
+      ]
+    },
+    "map-storage": {
+      "image": "thecodingmachine/workadventure-map-storage@sha256:f44a85fc0d7f26e18ad9073a932762ea9a51e5f19241e29a876ff5af7fd57707",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "true",
+        "traefik.docker.network": "varcamp_core",
+        "traefik.http.routers.maps.rule": "Host(`${MAPS_HOST}`)",
+        "traefik.http.routers.maps.entrypoints": "websecure",
+        "traefik.http.routers.maps.tls.certresolver": "letsencrypt",
+        "traefik.http.routers.maps.service": "maps",
+        "traefik.http.services.maps.loadbalancer.server.port": "3000"
+      },
+      "environment": {
+        "SECRET_KEY": "${SECRET_KEY:?required}",
+        "MAP_STORAGE_API_TOKEN": "${MAP_STORAGE_API_TOKEN:?required}",
+        "PUSHER_URL": "https://${PLAY_HOST}/",
+        "API_URL": "back:50051",
+        "ENABLE_BASIC_AUTHENTICATION": "true",
+        "ENABLE_BEARER_AUTHENTICATION": "false",
+        "ENABLE_DIGEST_AUTHENTICATION": "false",
+        "AUTHENTICATION_USER": "${UPLOAD_USER:?required}",
+        "AUTHENTICATION_PASSWORD": "${UPLOAD_PASSWORD:?required}",
+        "ENTITY_COLLECTION_URLS": "https://${PLAY_HOST}/collections/FurnitureCollection.json,https://${PLAY_HOST}/collections/OfficeCollection.json"
+      },
+      "volumes": [
+        "maps:/maps"
+      ]
+    },
+    "icons": {
+      "image": "matthiasluedtke/iconserver@sha256:80f417977e125a31b404de353b3329017ce4025ef75b2a4db3e0b6b0c7450725",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "true",
+        "traefik.docker.network": "varcamp_core",
+        "traefik.http.routers.icons.rule": "Host(`${ICONS_HOST}`)",
+        "traefik.http.routers.icons.entrypoints": "websecure",
+        "traefik.http.routers.icons.tls.certresolver": "letsencrypt",
+        "traefik.http.routers.icons.service": "icons",
+        "traefik.http.services.icons.loadbalancer.server.port": "8080"
+      }
+    },
+    "redis": {
+      "image": "redis@sha256:5f4d61d06c12e04406d5a749a6c9f8adbacd6efb73979e557ee7bc2cf846b153",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "false"
+      },
+      "volumes": [
+        "redis:/data"
+      ]
+    },
+    "postgres": {
+      "image": "postgres@sha256:9b9fb55f7e3b2149854def33c728b781dc44d1c5e86492ad62912a527ae234b3",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "false"
+      },
+      "environment": {
+        "POSTGRES_DB": "keycloak",
+        "POSTGRES_USER": "keycloak",
+        "POSTGRES_PASSWORD": "${POSTGRES_PASSWORD:?required}"
+      },
+      "volumes": [
+        "postgres:/var/lib/postgresql/data"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -U keycloak -d keycloak"
+        ],
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 20
+      }
+    },
+    "keycloak": {
+      "image": "quay.io/keycloak/keycloak@sha256:cae4f0fe0315f8c259a2e6deba8df93a5f1f297f65aa09198660add1056a8632",
+      "platform": "linux/arm64",
+      "restart": "unless-stopped",
+      "networks": [
+        "core"
+      ],
+      "labels": {
+        "traefik.enable": "true",
+        "traefik.docker.network": "varcamp_core",
+        "traefik.http.routers.identity.rule": "Host(`${ID_HOST}`)",
+        "traefik.http.routers.identity.entrypoints": "websecure",
+        "traefik.http.routers.identity.tls.certresolver": "letsencrypt",
+        "traefik.http.routers.identity.service": "identity",
+        "traefik.http.services.identity.loadbalancer.server.port": "8080"
+      },
+      "environment": {
+        "KC_DB": "postgres",
+        "KC_DB_URL": "jdbc:postgresql://postgres:5432/keycloak",
+        "KC_DB_USERNAME": "keycloak",
+        "KC_DB_PASSWORD": "${POSTGRES_PASSWORD:?required}",
+        "KC_HOSTNAME": "https://${ID_HOST}",
+        "KC_HOSTNAME_STRICT": "true",
+        "KC_HTTP_ENABLED": "true",
+        "KC_PROXY_HEADERS": "xforwarded",
+        "KC_PROXY_TRUSTED_ADDRESSES": "10.203.1.1/32",
+        "KC_HOSTNAME_BACKCHANNEL_DYNAMIC": "false"
+      },
+      "volumes": [
+        "./private/realm.json:/opt/keycloak/data/import/realm.json:ro"
+      ],
+      "command": [
+        "start",
+        "--import-realm"
+      ],
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    }
+  },
+  "networks": {
+    "core": {
+      "name": "varcamp_core",
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.203.1.0/24",
+            "gateway": "10.203.1.1"
+          }
+        ]
+      }
+    }
+  },
+  "volumes": {
+    "acme": {
+      "name": "varcamp_acme"
+    },
+    "maps": {
+      "name": "varcamp_maps"
+    },
+    "redis": {
+      "name": "varcamp_redis"
+    },
+    "postgres": {
+      "name": "varcamp_postgres"
+    }
+  }
+}

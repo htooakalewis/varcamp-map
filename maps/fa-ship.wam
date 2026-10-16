@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "fa-ship.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "fa-ship-cockpit",
+      "name": "fa-ship-cockpit",
+      "visible": true,
+      "x": 1120,
+      "y": 864,
+      "width": 64,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "fa-ship-cargo",
+      "name": "fa-ship-cargo",
+      "visible": true,
+      "x": 768,
+      "y": 960,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "cargo-deck",
+      "name": "cargo-deck",
+      "visible": true,
+      "x": 576,
+      "y": 992,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    },
+    {
+      "id": "fa-ship-lounge",
+      "name": "fa-ship-lounge",
+      "visible": true,
+      "x": 1216,
+      "y": 832,
+      "width": 64,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Fa Ship"
+  }
+}

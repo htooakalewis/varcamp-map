@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "star-garden.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "garden-conversation",
+      "name": "garden-conversation",
+      "visible": true,
+      "x": 544,
+      "y": 768,
+      "width": 192,
+      "height": 128,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Star Garden"
+  }
+}

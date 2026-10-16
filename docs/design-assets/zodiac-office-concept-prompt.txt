@@ -1,0 +1,13 @@
+Use case: stylized-concept
+Asset type: preview-only design concept art board for VarCamp Myanmar's cosmic zodiac WorkAdventure world; not final tile assets.
+Primary request: A polished orthogonal top-down pixel-art concept board showing four fully furnished rooms with open north walls, inspired by sleek glass-and-wood modern technology campuses and imaginative collaboration offices, blended with magical zodiac constellations.
+Composition/framing: Four readable panels on one cohesive board. Every panel shows an authentic usable room layout with furniture, windows, walls, walkable doorways and practical circulation. Straight overhead orthographic camera. North walls open for visibility, with decorated wall edges and ceiling-edge lighting. No isometric angle and no 3D perspective.
+Subjects:
+Aries fire lab: warm gold/amber, ram constellation hologram, coding desks, standing collaboration table.
+Libra sky studio: cyan, floating balance constellation above a rounded discussion table, glass meeting pods.
+Taurus earth workshop: jade plants and stone/crystal, curved desks and comfy lounge, bull constellation.
+Pisces water lounge: violet luminous water wall, flowing fish constellation, crescent seating and tech screens.
+Scene/backdrop: Shared navy/gold cosmic campus. All rooms, walls and furniture beautifully and meticulously decorated. Decorated floors, walls, windows, furniture and ceiling-edge lighting; luminous rune floor inlays and modern screens; subtle pixel magic motifs. Sleek technology office furnishings combined with zodiac magic.
+Style/medium: Crisp polished pixel art buildable in a 32-pixel tile game. Rich but disciplined pixel detail. Not photorealistic. All four rooms must clearly be furnished spaces rather than flat zodiac symbols.
+Text (verbatim): Small header exactly "VarCamp Myanmar" and subheader "Zodiac office concept". Only panel labels "Aries", "Libra", "Taurus", "Pisces". Render these exact words clearly; no other text.
+Constraints: No copied logos, no characters, no watermark. Clean walkable doorways and circulation. Decorate every room with a complete combination of technology office furniture and magical zodiac accents. Opaque background.

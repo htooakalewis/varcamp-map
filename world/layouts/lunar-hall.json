@@ -1,0 +1,1458 @@
+{
+  "id": "lunar-hall",
+  "width": 64,
+  "height": 56,
+  "placements": [
+    {
+      "id": "navy-foundation",
+      "sprite": "floor-charcoal",
+      "x": 0,
+      "y": 0,
+      "width": 64,
+      "height": 56,
+      "layer": "terrain"
+    },
+    {
+      "id": "interior-floor",
+      "sprite": "floor-cosmic",
+      "x": 1,
+      "y": 3,
+      "width": 62,
+      "height": 51,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-gold-border",
+      "sprite": "floor-inlay",
+      "x": 29,
+      "y": 47,
+      "width": 6,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "entry-runner",
+      "sprite": "floor-charcoal",
+      "x": 30,
+      "y": 47,
+      "width": 4,
+      "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 54,
+      "layer": "props"
+    },
+    {
+      "id": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 63,
+      "y": 2,
+      "width": 1,
+      "height": 54,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-core",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 54,
+      "width": 30,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-core",
+      "sprite": "wall-charcoal",
+      "x": 34,
+      "y": 54,
+      "width": 30,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "north-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 0,
+      "width": 64,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "west-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 54,
+      "layer": "props"
+    },
+    {
+      "id": "east-wall",
+      "sprite": "wall-navy",
+      "x": 63,
+      "y": 2,
+      "width": 1,
+      "height": 54,
+      "layer": "props"
+    },
+    {
+      "id": "south-west-wall",
+      "sprite": "wall-navy",
+      "x": 0,
+      "y": 54,
+      "width": 30,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-east-wall",
+      "sprite": "wall-navy",
+      "x": 34,
+      "y": 54,
+      "width": 30,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "south-door",
+      "sprite": "door-open",
+      "x": 30,
+      "y": 54,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "door-sigil",
+      "sprite": "rune-threshold",
+      "x": 30,
+      "y": 53,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "west-window",
+      "sprite": "window-white",
+      "x": 3,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-window",
+      "sprite": "window-white",
+      "x": 59,
+      "y": 0,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "west-lamp",
+      "sprite": "light-amber",
+      "x": 1,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "east-lamp",
+      "sprite": "light-amber",
+      "x": 62,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-gold-border",
+      "sprite": "floor-inlay",
+      "x": 16,
+      "y": 5,
+      "width": 32,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "stage-deck",
+      "sprite": "floor-charcoal",
+      "x": 17,
+      "y": 6,
+      "width": 30,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "audience-floor",
+      "sprite": "floor-charcoal",
+      "x": 16,
+      "y": 21,
+      "width": 32,
+      "height": 23,
+      "layer": "terrain"
+    },
+    {
+      "id": "staff-wing-floor",
+      "sprite": "floor-wood",
+      "x": 50,
+      "y": 5,
+      "width": 12,
+      "height": 13,
+      "layer": "terrain"
+    },
+    {
+      "id": "front-crossing",
+      "sprite": "floor-charcoal",
+      "x": 2,
+      "y": 18,
+      "width": 60,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "central-aisle-floor",
+      "sprite": "floor-charcoal",
+      "x": 29,
+      "y": 21,
+      "width": 6,
+      "height": 33,
+      "layer": "terrain"
+    },
+    {
+      "id": "foyer-floor",
+      "sprite": "floor-wood",
+      "x": 2,
+      "y": 44,
+      "width": 60,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "foyer-aisle",
+      "sprite": "floor-charcoal",
+      "x": 29,
+      "y": 44,
+      "width": 6,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "staff-north-wall",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 4,
+      "width": 12,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-side-wall-core",
+      "sprite": "wall-charcoal",
+      "x": 50,
+      "y": 6,
+      "width": 1,
+      "height": 10,
+      "layer": "props"
+    },
+    {
+      "id": "staff-side-wall",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 6,
+      "width": 1,
+      "height": 10,
+      "layer": "props"
+    },
+    {
+      "id": "staff-front-west",
+      "sprite": "wall-navy",
+      "x": 50,
+      "y": 16,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-front-east",
+      "sprite": "wall-navy",
+      "x": 58,
+      "y": 16,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-door",
+      "sprite": "door-open",
+      "x": 54,
+      "y": 16,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-workstation",
+      "sprite": "desk-coding",
+      "x": 52,
+      "y": 7,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-laptop",
+      "sprite": "laptop",
+      "x": 53,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "staff-seat",
+      "sprite": "chair-north-slate",
+      "x": 53,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-sofa",
+      "sprite": "sofa-blue",
+      "x": 57,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "staff-books",
+      "sprite": "bookcase",
+      "x": 58,
+      "y": 6,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "primary-screen",
+      "sprite": "screen-presentation",
+      "x": 29,
+      "y": 7,
+      "width": 6,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "speaker-lectern",
+      "sprite": "lectern",
+      "x": 27,
+      "y": 12,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-display-west",
+      "sprite": "screen-content",
+      "x": 18,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-display-east",
+      "sprite": "screen-content",
+      "x": 43,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-rune-west",
+      "sprite": "constellation-cancer",
+      "x": 18,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-rune-east",
+      "sprite": "constellation-pisces",
+      "x": 43,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-light-west",
+      "sprite": "light-cyan",
+      "x": 16,
+      "y": 11,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stage-light-east",
+      "sprite": "light-cyan",
+      "x": 47,
+      "y": 11,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "side-window-west",
+      "sprite": "window-white",
+      "x": 0,
+      "y": 26,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "side-window-east",
+      "sprite": "window-white",
+      "x": 62,
+      "y": 26,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-0",
+      "sprite": "chair-north-slate",
+      "x": 18,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-1",
+      "sprite": "chair-north-slate",
+      "x": 20,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-2",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-3",
+      "sprite": "chair-north-slate",
+      "x": 24,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-4",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-5",
+      "sprite": "chair-north-slate",
+      "x": 28,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-6",
+      "sprite": "chair-north-slate",
+      "x": 35,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-7",
+      "sprite": "chair-north-slate",
+      "x": 37,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-8",
+      "sprite": "chair-north-slate",
+      "x": 39,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-9",
+      "sprite": "chair-north-slate",
+      "x": 41,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-10",
+      "sprite": "chair-north-slate",
+      "x": 43,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-0-11",
+      "sprite": "chair-north-slate",
+      "x": 45,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-0",
+      "sprite": "chair-north-slate",
+      "x": 18,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-1",
+      "sprite": "chair-north-slate",
+      "x": 20,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-2",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-3",
+      "sprite": "chair-north-slate",
+      "x": 24,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-4",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-5",
+      "sprite": "chair-north-slate",
+      "x": 28,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-6",
+      "sprite": "chair-north-slate",
+      "x": 35,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-7",
+      "sprite": "chair-north-slate",
+      "x": 37,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-8",
+      "sprite": "chair-north-slate",
+      "x": 39,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-9",
+      "sprite": "chair-north-slate",
+      "x": 41,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-10",
+      "sprite": "chair-north-slate",
+      "x": 43,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-1-11",
+      "sprite": "chair-north-slate",
+      "x": 45,
+      "y": 27,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-0",
+      "sprite": "chair-north-slate",
+      "x": 18,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-1",
+      "sprite": "chair-north-slate",
+      "x": 20,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-2",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-3",
+      "sprite": "chair-north-slate",
+      "x": 24,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-4",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-5",
+      "sprite": "chair-north-slate",
+      "x": 28,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-6",
+      "sprite": "chair-north-slate",
+      "x": 35,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-7",
+      "sprite": "chair-north-slate",
+      "x": 37,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-8",
+      "sprite": "chair-north-slate",
+      "x": 39,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-9",
+      "sprite": "chair-north-slate",
+      "x": 41,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-10",
+      "sprite": "chair-north-slate",
+      "x": 43,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-2-11",
+      "sprite": "chair-north-slate",
+      "x": 45,
+      "y": 31,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-0",
+      "sprite": "chair-north-slate",
+      "x": 18,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-1",
+      "sprite": "chair-north-slate",
+      "x": 20,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-2",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-3",
+      "sprite": "chair-north-slate",
+      "x": 24,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-4",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-5",
+      "sprite": "chair-north-slate",
+      "x": 28,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-6",
+      "sprite": "chair-north-slate",
+      "x": 35,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-7",
+      "sprite": "chair-north-slate",
+      "x": 37,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-8",
+      "sprite": "chair-north-slate",
+      "x": 39,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-9",
+      "sprite": "chair-north-slate",
+      "x": 41,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-10",
+      "sprite": "chair-north-slate",
+      "x": 43,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-3-11",
+      "sprite": "chair-north-slate",
+      "x": 45,
+      "y": 35,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-0",
+      "sprite": "chair-north-slate",
+      "x": 18,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-1",
+      "sprite": "chair-north-slate",
+      "x": 20,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-2",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-3",
+      "sprite": "chair-north-slate",
+      "x": 24,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-4",
+      "sprite": "chair-north-slate",
+      "x": 26,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-5",
+      "sprite": "chair-north-slate",
+      "x": 28,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-6",
+      "sprite": "chair-north-slate",
+      "x": 35,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-7",
+      "sprite": "chair-north-slate",
+      "x": 37,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-8",
+      "sprite": "chair-north-slate",
+      "x": 39,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-9",
+      "sprite": "chair-north-slate",
+      "x": 41,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-10",
+      "sprite": "chair-north-slate",
+      "x": 43,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "seat-4-11",
+      "sprite": "chair-north-slate",
+      "x": 45,
+      "y": 39,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-palm-west",
+      "sprite": "plant-palm",
+      "x": 3,
+      "y": 24,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-palm-east",
+      "sprite": "plant-palm",
+      "x": 58,
+      "y": 24,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-sofa-west",
+      "sprite": "sofa-cream",
+      "x": 5,
+      "y": 32,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-table-west",
+      "sprite": "table-small-white",
+      "x": 10,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-books-west",
+      "sprite": "bookcase",
+      "x": 3,
+      "y": 36,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-desk-east",
+      "sprite": "desk-glass",
+      "x": 54,
+      "y": 32,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-laptop-east",
+      "sprite": "laptop",
+      "x": 55,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-seat-east",
+      "sprite": "chair-north-slate",
+      "x": 55,
+      "y": 36,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "gallery-water-east",
+      "sprite": "water-cooler",
+      "x": 60,
+      "y": 37,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-sofa-west",
+      "sprite": "sofa-blue",
+      "x": 5,
+      "y": 47,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-sofa-west-two",
+      "sprite": "sofa-cream",
+      "x": 12,
+      "y": 47,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-table-west",
+      "sprite": "table-small-wood",
+      "x": 10,
+      "y": 49,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-palm-west",
+      "sprite": "plant-palm",
+      "x": 2,
+      "y": 48,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-workstation",
+      "sprite": "desk-coding",
+      "x": 21,
+      "y": 47,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-laptop",
+      "sprite": "laptop",
+      "x": 22,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-seat",
+      "sprite": "chair-north-slate",
+      "x": 22,
+      "y": 50,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-counter",
+      "sprite": "desk-cream",
+      "x": 47,
+      "y": 47,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-coffee",
+      "sprite": "coffee-maker",
+      "x": 47,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-sofa-east",
+      "sprite": "sofa-cream",
+      "x": 52,
+      "y": 48,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-table-east",
+      "sprite": "table-small-white",
+      "x": 57,
+      "y": 50,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "foyer-palm-east",
+      "sprite": "plant-palm",
+      "x": 59,
+      "y": 47,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-face",
+      "sprite": "sign-board-face",
+      "x": 35,
+      "y": 52,
+      "width": 27,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-north",
+      "sprite": "sign-board-north",
+      "x": 35,
+      "y": 52,
+      "width": 27,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-south",
+      "sprite": "sign-board-south",
+      "x": 35,
+      "y": 52,
+      "width": 27,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-west",
+      "sprite": "sign-board-west",
+      "x": 35,
+      "y": 52,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-wayfinding-east",
+      "sprite": "sign-board-east",
+      "x": 61,
+      "y": 52,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 31,
+      "y": 53,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "lunar-entry",
+      "isDefault": true,
+      "x": 31,
+      "y": 50,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-lunar",
+      "x": 31,
+      "y": 55,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "lunar-stage",
+      "name": "Lunar stage",
+      "x": 16,
+      "y": 5,
+      "width": 32,
+      "height": 13,
+      "properties": [
+        {
+          "id": "lunar-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-lunar-main",
+          "chatEnabled": false,
+          "seeAttendees": false
+        },
+        {
+          "id": "lunar-stage-rights",
+          "type": "restrictedRightsPropertyData",
+          "readTags": [
+            "organizer",
+            "speaker"
+          ],
+          "writeTags": []
+        }
+      ]
+    },
+    {
+      "id": "lunar-audience",
+      "name": "Lunar audience",
+      "x": 16,
+      "y": 22,
+      "width": 32,
+      "height": 20,
+      "properties": [
+        {
+          "id": "lunar-listen",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "lunar-stage",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "lunar-prep",
+      "name": "Lunar preparation",
+      "x": 51,
+      "y": 6,
+      "width": 10,
+      "height": 10,
+      "properties": [
+        {
+          "id": "lunar-meeting",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-lunar-prep",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true
+          }
+        },
+        {
+          "id": "lunar-prep-rights",
+          "type": "restrictedRightsPropertyData",
+          "readTags": [
+            "organizer",
+            "speaker"
+          ],
+          "writeTags": []
+        }
+      ]
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "central-aisle",
+      "kind": "auxiliary",
+      "x": 29,
+      "y": 21,
+      "width": 6,
+      "height": 33
+    },
+    {
+      "name": "front-route",
+      "kind": "auxiliary",
+      "x": 2,
+      "y": 18,
+      "width": 60,
+      "height": 4
+    },
+    {
+      "name": "prep-route",
+      "kind": "auxiliary",
+      "x": 55,
+      "y": 16,
+      "width": 2,
+      "height": 6
+    },
+    {
+      "name": "staff-prep",
+      "kind": "room",
+      "x": 50,
+      "y": 4,
+      "width": 12,
+      "height": 14
+    },
+    {
+      "name": "stage",
+      "kind": "landmark",
+      "x": 16,
+      "y": 5,
+      "width": 32,
+      "height": 13
+    },
+    {
+      "name": "foyer",
+      "kind": "auxiliary",
+      "x": 2,
+      "y": 44,
+      "width": 60,
+      "height": 10
+    }
+  ],
+  "signs": [
+    {
+      "name": "scene-title",
+      "text": "LUNAR HALL  /  ASSEMBLY",
+      "x": 6,
+      "y": 2,
+      "width": 52,
+      "height": 1,
+      "fontSize": 20,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "plaza-wayfinding",
+      "text": "\u2190 CENTRAL AISLE \u00b7 PLAZA \u2193",
+      "x": 35,
+      "y": 52,
+      "width": 27,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "staff-label",
+      "text": "STAFF PREPARATION",
+      "x": 51,
+      "y": 4,
+      "width": 10,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "stage-label",
+      "text": "PRESENTATION STAGE",
+      "x": 25,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "fontSize": 15,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "gallery-west-label",
+      "text": "QUIET GALLERY",
+      "x": 2,
+      "y": 23,
+      "width": 12,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "gallery-east-label",
+      "text": "NOTES & RESOURCES",
+      "x": 50,
+      "y": 23,
+      "width": 12,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "lounge-label",
+      "text": "LUNAR LOUNGE",
+      "x": 3,
+      "y": 45,
+      "width": 14,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "refreshments-label",
+      "text": "REFRESHMENTS",
+      "x": 46,
+      "y": 45,
+      "width": 15,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#f1d9a0",
+      "align": "left"
+    }
+  ]
+}

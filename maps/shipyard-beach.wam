@@ -1,0 +1,41 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "shipyard-beach.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "harbor-workshop",
+      "name": "harbor-workshop",
+      "visible": true,
+      "x": 416,
+      "y": 576,
+      "width": 160,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "npc-dockmaster",
+      "name": "npc-dockmaster",
+      "visible": true,
+      "x": 928,
+      "y": 576,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "pier-lookout",
+      "name": "pier-lookout",
+      "visible": true,
+      "x": 672,
+      "y": 800,
+      "width": 160,
+      "height": 128,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Shipyard Beach"
+  }
+}

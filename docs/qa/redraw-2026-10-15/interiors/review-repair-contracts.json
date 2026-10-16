@@ -1,0 +1,396 @@
+{
+  "solar-hall": {
+    "areas": [
+      {
+        "id": "solar-stage",
+        "name": "Solar stage",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13,
+        "properties": [
+          {
+            "id": "solar-broadcast",
+            "type": "speakerMegaphone",
+            "name": "varcamp-solar-main",
+            "chatEnabled": false,
+            "seeAttendees": false
+          },
+          {
+            "id": "solar-stage-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      },
+      {
+        "id": "solar-audience",
+        "name": "Solar audience",
+        "x": 16,
+        "y": 22,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "solar-listen",
+            "type": "listenerMegaphone",
+            "speakerZoneName": "solar-stage",
+            "chatEnabled": false,
+            "allowTalking": false,
+            "raiseHandEnabled": true
+          }
+        ]
+      },
+      {
+        "id": "solar-prep",
+        "name": "Solar preparation",
+        "x": 3,
+        "y": 6,
+        "width": 10,
+        "height": 10,
+        "properties": [
+          {
+            "id": "solar-meeting",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-solar-prep",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true
+            }
+          },
+          {
+            "id": "solar-prep-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "name": "solar-entry",
+        "isDefault": true,
+        "x": 31,
+        "y": 50,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-solar",
+        "x": 31,
+        "y": 55,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "central-aisle",
+        "kind": "auxiliary",
+        "x": 29,
+        "y": 21,
+        "width": 6,
+        "height": 33
+      },
+      {
+        "name": "front-route",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 18,
+        "width": 60,
+        "height": 4
+      },
+      {
+        "name": "prep-route",
+        "kind": "auxiliary",
+        "x": 7,
+        "y": 16,
+        "width": 2,
+        "height": 6
+      },
+      {
+        "name": "staff-prep",
+        "kind": "room",
+        "x": 2,
+        "y": 4,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "stage",
+        "kind": "landmark",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13
+      },
+      {
+        "name": "foyer",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 44,
+        "width": 60,
+        "height": 10
+      }
+    ]
+  },
+  "lunar-hall": {
+    "areas": [
+      {
+        "id": "lunar-stage",
+        "name": "Lunar stage",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13,
+        "properties": [
+          {
+            "id": "lunar-broadcast",
+            "type": "speakerMegaphone",
+            "name": "varcamp-lunar-main",
+            "chatEnabled": false,
+            "seeAttendees": false
+          },
+          {
+            "id": "lunar-stage-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      },
+      {
+        "id": "lunar-audience",
+        "name": "Lunar audience",
+        "x": 16,
+        "y": 22,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "lunar-listen",
+            "type": "listenerMegaphone",
+            "speakerZoneName": "lunar-stage",
+            "chatEnabled": false,
+            "allowTalking": false,
+            "raiseHandEnabled": true
+          }
+        ]
+      },
+      {
+        "id": "lunar-prep",
+        "name": "Lunar preparation",
+        "x": 51,
+        "y": 6,
+        "width": 10,
+        "height": 10,
+        "properties": [
+          {
+            "id": "lunar-meeting",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-lunar-prep",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true
+            }
+          },
+          {
+            "id": "lunar-prep-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "name": "lunar-entry",
+        "isDefault": true,
+        "x": 31,
+        "y": 50,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-lunar",
+        "x": 31,
+        "y": 55,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "central-aisle",
+        "kind": "auxiliary",
+        "x": 29,
+        "y": 21,
+        "width": 6,
+        "height": 33
+      },
+      {
+        "name": "front-route",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 18,
+        "width": 60,
+        "height": 4
+      },
+      {
+        "name": "prep-route",
+        "kind": "auxiliary",
+        "x": 55,
+        "y": 16,
+        "width": 2,
+        "height": 6
+      },
+      {
+        "name": "staff-prep",
+        "kind": "room",
+        "x": 50,
+        "y": 4,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "stage",
+        "kind": "landmark",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13
+      },
+      {
+        "name": "foyer",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 44,
+        "width": 60,
+        "height": 10
+      }
+    ]
+  },
+  "hidden-observatory": {
+    "areas": [
+      {
+        "id": "observatory-discovery",
+        "name": "observatory-discovery",
+        "x": 5,
+        "y": 25,
+        "width": 4,
+        "height": 2,
+        "properties": []
+      },
+      {
+        "id": "observatory-quiet",
+        "name": "observatory-quiet",
+        "x": 1,
+        "y": 3,
+        "width": 38,
+        "height": 31,
+        "properties": [
+          {
+            "id": "observatory-quiet-silent",
+            "type": "silent"
+          }
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "name": "observatory-entry",
+        "isDefault": true,
+        "x": 19,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-observatory",
+        "x": 19,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 19,
+        "y": 15,
+        "width": 2,
+        "height": 19
+      },
+      {
+        "name": "gallery-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 16,
+        "width": 36,
+        "height": 3
+      },
+      {
+        "name": "telescope-court",
+        "kind": "auxiliary",
+        "x": 13,
+        "y": 5,
+        "width": 14,
+        "height": 10
+      },
+      {
+        "name": "discovery-shrine",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 20,
+        "width": 13,
+        "height": 8
+      },
+      {
+        "name": "quiet-lounge",
+        "kind": "auxiliary",
+        "x": 27,
+        "y": 20,
+        "width": 11,
+        "height": 12
+      },
+      {
+        "name": "celestial-archive",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 28,
+        "width": 13,
+        "height": 6
+      }
+    ]
+  }
+}

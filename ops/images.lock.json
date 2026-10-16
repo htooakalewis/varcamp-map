@@ -1,0 +1,72 @@
+{
+  "workadventureSource": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "images": {
+    "traefik:v3.6.1": {
+      "image": "traefik@sha256:66932e80d0538da2b2bfe95902efb6fb24a4dc8d9023ce126c6c955f3f1b278a",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:fd5932c796f7e2db9fd6bff485ef693d53797f0ee8ad03dc68aa424ea6f21958"
+    },
+    "livekit/livekit-server:v1.13.9": {
+      "image": "livekit/livekit-server@sha256:7ff89b13374929c9e908314e9fdae5d693f0ef56759d1872d56dc384434af37b",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:d0c04791bf63ca8dcea123571827d56ba9504bd57c8d5de60ee03b5408cc3154"
+    },
+    "coturn/coturn:4.18.0-r0": {
+      "image": "coturn/coturn@sha256:0a583c17085e1629e3a4ebe6c505aba82cbdd1733557f6932857e3327f5f3068",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:bbefd3e1fdfdc0d58770fe01b581fd8b00d9f3a5580d00acb77cf719a6bc78e3"
+    },
+    "quay.io/keycloak/keycloak:26.8.0": {
+      "image": "quay.io/keycloak/keycloak@sha256:cae4f0fe0315f8c259a2e6deba8df93a5f1f297f65aa09198660add1056a8632",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741"
+    },
+    "postgres:17.6-alpine": {
+      "image": "postgres@sha256:9b9fb55f7e3b2149854def33c728b781dc44d1c5e86492ad62912a527ae234b3",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94"
+    },
+    "redis:6": {
+      "image": "redis@sha256:5f4d61d06c12e04406d5a749a6c9f8adbacd6efb73979e557ee7bc2cf846b153",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:a9c881672688090a1a9fee7277c69174398acd5369f0bdb8bb58726c43b98a2a"
+    },
+    "matthiasluedtke/iconserver:v3.21.0": {
+      "image": "matthiasluedtke/iconserver@sha256:80f417977e125a31b404de353b3329017ce4025ef75b2a4db3e0b6b0c7450725",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:493c15fe3bbfbfc8cbe74a79f0105336360d1a34e2a63468167d1c3e960f9124"
+    },
+    "thecodingmachine/workadventure-back:v1.34.1": {
+      "image": "thecodingmachine/workadventure-back@sha256:d177cb435d478ecadee5b852ec21d77b8700b6805415530f3770886dc9ccc065",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:b535b7a25136559f841446fd51c4785e416ad3e50a40e086280960a13d46c1e9"
+    },
+    "thecodingmachine/workadventure-uploader:v1.34.1": {
+      "image": "thecodingmachine/workadventure-uploader@sha256:60c0f65386b001b6f4015e0e6570f84f1fdae55a66e7270bcd79af0a05b3df85",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:5aef8dccf083e14794c168937436d8679e1b791c64d581e1947ddeac000c19ea"
+    },
+    "thecodingmachine/workadventure-map-storage:v1.34.1": {
+      "image": "thecodingmachine/workadventure-map-storage@sha256:f44a85fc0d7f26e18ad9073a932762ea9a51e5f19241e29a876ff5af7fd57707",
+      "platform": "linux/arm64",
+      "indexDigest": "sha256:ded79e30a21078fade75f2e8322351469e0fff039682763551eb34a4da66dfad"
+    },
+    "varcamp/workadventure-play:oidc-cookie": {
+      "image": "varcamp/workadventure-play:oidc-cookie-e90a8ff4392c69d9-20261011",
+      "platform": "linux/arm64",
+      "identityMode": "local-artifact-v1",
+      "imageId": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+      "archive": {
+        "file": "artifacts/h2-e90a8ff4392c69d9/play-final.docker.tar",
+        "sha256": "21c2625f798f085c914ce7e8b90704094a4fa6752199740f35821b751836a0b2"
+      },
+      "provenance": {
+        "receiptFile": "artifacts/h2-e90a8ff4392c69d9/provenance.json",
+        "receiptSha256": "b479a8cd18e570ed72d2aac1fcb93f339f85035c45127f8e70f830e45700fb32",
+        "baselineSourceCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+        "baseImage": "thecodingmachine/workadventure-play@sha256:e063ea840b75a26cb740c642ad79fb27c5facfff53fe4e5ba40eb3f50d3f72c0",
+        "patchSha256": "e90a8ff4392c69d9b20ee0648e112c94da2f7393e1048e4cc5db97cda05cf753"
+      }
+    }
+  }
+}

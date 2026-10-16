@@ -1,0 +1,71 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "orbit-maze.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "maze-finish",
+      "name": "maze-finish",
+      "visible": true,
+      "x": 2208,
+      "y": 320,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "maze-quiet",
+      "name": "maze-quiet",
+      "visible": true,
+      "x": 64,
+      "y": 64,
+      "width": 2432,
+      "height": 1984,
+      "properties": [
+        {
+          "id": "maze-quiet-silent",
+          "type": "silent"
+        }
+      ]
+    },
+    {
+      "id": "quiet-garden",
+      "name": "quiet-garden",
+      "visible": true,
+      "x": 64,
+      "y": 2080,
+      "width": 1088,
+      "height": 416,
+      "properties": [
+        {
+          "id": "quiet-garden-silent",
+          "type": "silent"
+        }
+      ]
+    },
+    {
+      "id": "maze-social-alcove",
+      "name": "maze-social-alcove",
+      "visible": true,
+      "x": 2016,
+      "y": 2272,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "npc-maze-keeper",
+      "name": "npc-maze-keeper",
+      "visible": true,
+      "x": 1408,
+      "y": 2080,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Orbit Maze"
+  }
+}

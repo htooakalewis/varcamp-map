@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "speaker-aries.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "meeting-aries",
+      "name": "meeting-aries",
+      "visible": true,
+      "x": 64,
+      "y": 160,
+      "width": 1024,
+      "height": 640,
+      "properties": [
+        {
+          "id": "aries-livekit",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-aries",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true,
+            "raiseHandEnabled": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "beacon-aries",
+      "name": "beacon-aries",
+      "visible": true,
+      "x": 864,
+      "y": 928,
+      "width": 96,
+      "height": 64,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Speaker Aries"
+  }
+}

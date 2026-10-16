@@ -1,0 +1,41 @@
+{
+  "name": "varcamp-world",
+  "version": "3.3.18",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite --config web.vite.config.ts",
+    "buildmap": "tsc && vite build --config buildmap.vite.config.ts",
+    "preview": "vite preview --config buildmap.vite.config.ts --outDir dist",
+    "upload": "npm run buildmap && python3 ops/release_upload.py",
+    "upload-only": "python3 ops/release_upload.py",
+    "test": "vitest run",
+    "maps:validate": "tsx tools/maps/validate-cli.ts",
+    "maps:build": "node tools/run-tool.mjs tools/maps/build.ts",
+    "art:check": "node tools/run-tool.mjs tools/art/check.ts",
+    "maps:author": "node tools/run-tool.mjs tools/maps/author.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^20.0.0",
+    "@workadventure/iframe-api-typings": "^1.32.10",
+    "@workadventure/upload-maps": "^1.8.1",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "sharp": "0.34.5",
+    "tsx": "4.23.15",
+    "typescript": "^5.9.2",
+    "vite": "^7.3.0",
+    "vite-plugin-node": "^7.0.0",
+    "vitest": "4.1.11"
+  },
+  "dependencies": {
+    "@workadventure/map-starter-kit-core": "^1.1.5",
+    "@workadventure/scripting-api-extra": "^1.9.12",
+    "wa-map-optimizer-vite": "^1.3.1",
+    "zod": "3.25.76"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "nebula-arcade.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "stage-approach",
+      "name": "stage-approach",
+      "visible": true,
+      "x": 544,
+      "y": 448,
+      "width": 192,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "cabinet-social-west",
+      "name": "cabinet-social-west",
+      "visible": true,
+      "x": 160,
+      "y": 896,
+      "width": 160,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "cabinet-social-east",
+      "name": "cabinet-social-east",
+      "visible": true,
+      "x": 992,
+      "y": 896,
+      "width": 160,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "table-social-west",
+      "name": "table-social-west",
+      "visible": true,
+      "x": 320,
+      "y": 896,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "table-social-east",
+      "name": "table-social-east",
+      "visible": true,
+      "x": 864,
+      "y": 896,
+      "width": 96,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Nebula Arcade"
+  }
+}

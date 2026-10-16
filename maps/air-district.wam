@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "air-district.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "sigil-air",
+      "name": "sigil-air",
+      "visible": true,
+      "x": 512,
+      "y": 320,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Air District"
+  }
+}

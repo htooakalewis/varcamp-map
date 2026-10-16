@@ -1,0 +1,22 @@
+{
+  "commit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "author": "WorkAdventure",
+  "declaredLicense": "ISC",
+  "sources": [
+    {
+      "file": "MapValidator.ts.txt",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/libs/map-editor/src/GameMap/MapValidator.ts",
+      "sha256": "721b8a47ebd5010e9822320e3f2e3ba1f35ed22fe9089e173d4c503544285753"
+    },
+    {
+      "file": "ZipFileFetcher.ts.txt",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/libs/map-editor/src/GameMap/Validator/ZipFileFetcher.ts",
+      "sha256": "939e18fc63a8fba29217bbc2718aaf98bec3f290926668559cf91c82936d7339"
+    }
+  ],
+  "packageMetadata": {
+    "file": "upstream-package.json",
+    "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/libs/map-editor/package.json",
+    "sha256": "07d93e9f223958e48c9a5983c121674e2b8e96422df616f1c27541672f19f442"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "moon-cafe.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "cafe-west",
+      "name": "cafe-west",
+      "visible": true,
+      "x": 256,
+      "y": 736,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    },
+    {
+      "id": "cafe-east",
+      "name": "cafe-east",
+      "visible": true,
+      "x": 928,
+      "y": 736,
+      "width": 128,
+      "height": 96,
+      "properties": []
+    }
+  ],
+  "entityCollections": [],
+  "metadata": {
+    "name": "VarCamp · Moon Cafe"
+  }
+}

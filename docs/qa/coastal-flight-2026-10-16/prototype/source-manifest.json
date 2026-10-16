@@ -1,0 +1,74 @@
+[
+  {
+    "path": "upstream/phaser/src/tilemaps/Tileset.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/Tileset.js",
+    "sha256": "bfce6bb178c427855574be28e0242668d712476ee850d4552c06c5aa987dbb9a",
+    "bytes": 22833
+  },
+  {
+    "path": "upstream/phaser/src/tilemaps/ImageCollection.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/ImageCollection.js",
+    "sha256": "a8cdb99134b102be39130f600ef6f77e309ee8a800b3d0b72dd727271a5e5938",
+    "bytes": 5492
+  },
+  {
+    "path": "upstream/phaser/src/tilemaps/parsers/tiled/ParseGID.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/parsers/tiled/ParseGID.js",
+    "sha256": "dc2d50052edfff9606040553ed8308009662fb4b4b6597aec840096395d41dce",
+    "bytes": 3233
+  },
+  {
+    "path": "upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/parsers/tiled/ParseTilesets.js",
+    "sha256": "5e16635bbddfa0825ea9c5347233122b1624a1e157df1a3949221ee976b51437",
+    "bytes": 7491
+  },
+  {
+    "path": "upstream/phaser/src/tilemaps/parsers/tiled/ParseObject.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/parsers/tiled/ParseObject.js",
+    "sha256": "96f2d1e5d2b655e71a37f03fc982935a71a565e64161023c28ca9cce1f804f8b",
+    "bytes": 2700
+  },
+  {
+    "path": "upstream/phaser/src/tilemaps/parsers/tiled/ParseWangsets.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/tilemaps/parsers/tiled/ParseWangsets.js",
+    "sha256": "c5bd61d2940ee1e2bfa3c31b6d374f28ef38ce684bea99e58604ffb88448aca7",
+    "bytes": 4141
+  },
+  {
+    "path": "upstream/phaser/src/utils/Class.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/utils/Class.js",
+    "sha256": "59ec617be70d2d7b06ebe833aa9b9349dc8779507e2707735e6a79c1ca550909",
+    "bytes": 7023
+  },
+  {
+    "path": "upstream/phaser/src/utils/object/HasValue.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/utils/object/HasValue.js",
+    "sha256": "7381dfc71758c81d9d807d50a9197e7acfdba9f648f05cf4300f21071cf3cc79",
+    "bytes": 773
+  },
+  {
+    "path": "upstream/phaser/src/utils/object/Pick.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/utils/object/Pick.js",
+    "sha256": "28d36c299f632535e084cbff2346923a42c34dbb67971f76865c9cc171c53b48",
+    "bytes": 1030
+  },
+  {
+    "path": "upstream/phaser/src/math/Vector2.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/math/Vector2.js",
+    "sha256": "7c7d65bdd114c701fbee6d23e610af06d8ec2df59c5ebee20d8f15cb058d2270",
+    "bytes": 21207
+  },
+  {
+    "path": "upstream/phaser/src/math/fuzzy/Equal.js",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/src/math/fuzzy/Equal.js",
+    "sha256": "9289ed9541de23bae8b5a40ef174fba44ee3462d624ff3422e6812022bfa1e2d",
+    "bytes": 818
+  },
+  {
+    "path": "upstream/phaser/LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/phaserjs/phaser/v4.2.0/LICENSE.md",
+    "sha256": "c3a9ba7e38d4ef33dccf5fdd1046655c63df06714f84776118fe406f43db5cf2",
+    "bytes": 1100
+  }
+]
