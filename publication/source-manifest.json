@@ -343,7 +343,7 @@
     "ops/tests/lyra-container-config.test.ts": "55d4697528fce8e96adc04f36eea6fb0964dadda3177dce21e0e47ea1256b94c",
     "ops/tests/lyra-healthcheck.test.ts": "3be7efb6fd794b8323b3226e55b155c3c07d046dca4601e796e7ff8053cac52c",
     "ops/tests/lyra-launcher.test.ts": "a80d057f294d7771ac25dcc5a1874e22dc266a3d83f45a94bde2f79d7535d309",
-    "publication/revisions/2026-10-16-shared-guides.json": "b89c7a3518d8e1e6322d57b97e32fdeb7e800c5b27c84eb68c4674ea32f03b79",
+    "publication/revisions/2026-10-16-shared-guides.json": "2fedcc9ec32efbea8d06dc5b108d24d0aa3f817e4c49a44f7aa9bec39fc9b443",
     "publication/revisions/README.md": "3e3e2de7ffb3cee827ac613837fda846aca14fbfda4528175905662f78893e0d",
     "publication/verify-source.mjs": "9c741532360f067bc3fa8cfe0a08ff4da1f9ca808b8781f631b152a3455cac7e",
     "src/bots/controller.ts": "7fb3a42c4dce2ab8e6dc42e77f9b1877ed2ba9e4203075d9d78ec2bfaedf5797",

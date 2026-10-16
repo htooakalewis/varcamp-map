@@ -7,7 +7,7 @@ import { loadTileCatalog } from '../tools/art/catalog';
 import { buildMap } from '../tools/maps/builder';
 import { checkArt } from '../tools/art/check';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import type { MapLayout, TileRect } from '../tools/maps/types';
+import type { MapLayout, TileRect, LayoutAnimatedOverlay } from '../tools/maps/types';
 
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
 const gap=(a:TileRect,b:TileRect)=>Math.max(0,a.x-b.x-b.width,b.x-a.x-a.width)+Math.max(0,a.y-b.y-b.height,b.y-a.y-a.height);
@@ -29,8 +29,14 @@ describe('audience wayfinding in exported Tiled maps',()=>{
   try{
    cpSync(resolve(root,'art'),resolve(fixture,'art'),{recursive:true});
    cpSync(resolve(root,'assets'),resolve(fixture,'assets'),{recursive:true});
-   // The flight art compiler records its exact compiler/schema input bytes.
-   for(const file of ['tools/art/coastal-flight.ts','tools/maps/builder.ts','tools/maps/types.ts']){mkdirSync(dirname(resolve(fixture,file)),{recursive:true});cpSync(resolve(root,file),resolve(fixture,file));}
+   // Art/assets are copied above; include every animation's declared compiler/schema inputs.
+   // Derive this closure from canonical receipts so adding an overlay cannot stale a hand list.
+   for(const metadata of readdirSync(resolve(root,'art/source')).filter(file=>file.endsWith('.json'))){
+    const overlay=JSON.parse(readFileSync(resolve(root,'art/source',metadata),'utf8')).overlay as LayoutAnimatedOverlay|undefined;
+    for(const input of overlay?.provenance?.inputs??[]){
+     mkdirSync(dirname(resolve(fixture,input.path)),{recursive:true});cpSync(resolve(root,input.path),resolve(fixture,input.path));
+    }
+   }
    const file=resolve(fixture,'art/source/wayfinding.svg');
    writeFileSync(file,readFileSync(file,'utf8').replace('#0c1d30','#ff0000'));
    process.chdir(fixture);

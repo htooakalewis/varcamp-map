@@ -186,6 +186,18 @@
       "fromSha256": "6f29a43dda762f53808c5eee2d9733436d5e7f82747105e279f969d27a8b7e6b",
       "toSha256": "3ce718e76e3aeee1dc298a3c2b685fecce84742419e08c6135f8db9a2898d0ab",
       "reason": "Check deterministic Roadster atlas and metadata parity alongside every existing art check."
+    },
+    {
+      "path": "tests/author-guard.test.ts",
+      "fromSha256": "ba5383efcd1decccc36278deb197850487fb4429dd3f997b72d2fa948ef214e6",
+      "toSha256": "8cf86f1ae278df1a36232d22acb326045016dd99c454e91d779721ae399a4777",
+      "reason": "Complete the temporary author fixture with each native overlay metadata/source/compiler receipt; expose initialization failures and require the intended native-edit refusal."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "b40efe3c91dc759c7e171364b536bc6db2139b0469105041f97778c1c6905a99",
+      "toSha256": "9b1e382b8031ab23415857b55c5fd79c88931921e37470401a23ce05449513aa",
+      "reason": "Complete the isolated stale-PNG art fixture using all declared animation receipt inputs, preserving the stale-master failure assertion and production validation."
     }
   ]
 }
