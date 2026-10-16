@@ -16,7 +16,7 @@ This URL is a map asset, opened by a WorkAdventure client. GitHub Pages hosts th
 
 ## Edit or build
 
-Use Node **26.8.2**, npm and Python3. Install dependencies and validate the authored maps:
+Use Node **26.11.1**, npm and Python3. Install dependencies and validate the authored maps:
 
 ```sh
 npm ci
@@ -34,16 +34,16 @@ Read [map editing](docs/operating/map-editing.md), [the venue guide](docs/operat
 
 ## Verification and publishing
 
-The local complete suite passed **754 tests plus 7 Python checks** before publication, including the central default-spawn regression and all 25 existing named entry selections. Run it with:
+The local complete suite passed **754 tests plus 7 Python checks** before publication, including the central default-spawn regression and all 25 existing named entry selections. The full suite also uses Docker CLI 29.8.0 and Compose 5.5.1 to parse configuration fixtures; it does not require a Docker engine. Run it with:
 
 ```sh
 npm run buildmap
 npm test -- --maxWorkers=1 --testTimeout=30000
 ```
 
-One native raster comparison additionally requires official macOS Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. Linux CI explicitly excludes that single external-renderer test and runs the rest. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
+Full verification uses macOS ARM64 and official Tiled 1.12.2 at `.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer`. GitHub installs that pinned, checksum-verified tool and runs all tests. A separate Linux job verifies the flight atlas has identical decoded pixels and metadata apart from the two compressed-PNG digest fields. The exact upstream compatibility fixtures and required regression baselines are included. Local operational archives and private deployment history are excluded.
 
-Pushing `main` builds and deploys the ready-to-host maps through GitHub Pages. This publishes map assets; it does not alter the devbox or WorkAdventure server. The original public draft files `varcamp.tmj`, `tileset.png` and `build_map.py` remain for reference; the current world starts at `maps/overworld.tmj`.
+Pushing `main` runs strict artwork and build checks on macOS ARM64, independently checks Linux flight-pixel parity, and deploys the ready-to-host maps through GitHub Pages only when both jobs pass. Compressed PNG bytes can vary between native image libraries, so the canonical atlas remains frozen rather than being regenerated during publication. This publishes map assets; it does not alter the devbox or WorkAdventure server. The original public draft files `varcamp.tmj`, `tileset.png` and `build_map.py` remain for reference; the current world starts at `maps/overworld.tmj`.
 
 Sponsor marks are fictional demo placeholders for the team to replace. NPC chat can use an optional server-side OpenRouter key; it is currently offline. Never put keys in map files or client scripts.
 

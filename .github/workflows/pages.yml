@@ -14,7 +14,71 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '26.11.1'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Install the verified native Tiled renderer
+        run: |
+          test "$(uname -m)" = arm64
+          node -p 'JSON.stringify({platform: process.platform, arch: process.arch, node: process.version})'
+          tiled_zip="${RUNNER_TEMP}/Tiled-1.12.2.zip"
+          curl --fail --location --retry 3 --output "$tiled_zip" 'https://github.com/mapeditor/tiled/releases/download/v1.12.2/Tiled-1.12.2_macOS-13%2B.zip'
+          printf '%s  %s\n' '75712ec3a892701a9b2b7a12e44d636a1dbbe4caa6bb8bba729e697bd8a80433' "$tiled_zip" | shasum -a 256 -c -
+          mkdir -p .tools/tiled-1.12.2
+          ditto -x -k "$tiled_zip" .tools/tiled-1.12.2
+          .tools/tiled-1.12.2/Tiled.app/Contents/MacOS/Tiled --version
+      - name: Install verified Docker and Compose CLIs for configuration tests
+        run: |
+          docker_tools="${RUNNER_TEMP}/varcamp-cli-tools"
+          docker_archive="${RUNNER_TEMP}/varcamp-docker-cli-29.8.0.tgz"
+          mkdir -p "$docker_tools/bin" "$HOME/.docker/cli-plugins"
+          curl --fail --location --retry 3 --output "$docker_archive" 'https://download.docker.com/mac/static/stable/aarch64/docker-29.8.0.tgz'
+          printf '%s  %s\n' '3f37afe51f8f53f224192099a76a454a62eb6100d426738da17fdf8472cf4b5f' "$docker_archive" | shasum -a 256 -c -
+          tar -xzf "$docker_archive" -C "$docker_tools" docker/docker
+          install -m 0755 "$docker_tools/docker/docker" "$docker_tools/bin/docker"
+          compose_binary="$docker_tools/docker-compose"
+          curl --fail --location --retry 3 --output "$compose_binary" 'https://github.com/docker/compose/releases/download/v5.5.1/docker-compose-darwin-aarch64'
+          printf '%s  %s\n' '998735c9b6fe68a4f05895e6ea73d71ad06f9fc7046383ad89e47346781b6af5' "$compose_binary" | shasum -a 256 -c -
+          install -m 0755 "$compose_binary" "$HOME/.docker/cli-plugins/docker-compose"
+          printf '%s\n' "$docker_tools/bin" >> "$GITHUB_PATH"
+      - name: Verify CLI versions without starting a Docker engine
+        run: |
+          docker --version
+          docker compose version
+      - name: Validate native maps
+        run: npm run maps:validate
+      - name: Verify artwork and attribution
+        run: npm run art:check
+      - name: Refresh previews while preserving native maps
+        run: npm run maps:build
+      - name: Build the complete map release
+        run: npm run buildmap
+      - name: Test release and source contracts
+        run: npm test -- --maxWorkers=1 --testTimeout=30000
+      - name: Add the venue landing page and preserve the legacy map URL
+        run: |
+          cp publication/index.html dist/index.html
+          mkdir -p dist/publication
+          cp publication/*.jpg dist/publication/
+          cp varcamp.tmj tileset.png dist/
+      - name: Upload the Pages site
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+
+  linux-parity:
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Check out source
@@ -28,33 +92,68 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
-      - name: Validate native maps
-        run: npm run maps:validate
-      - name: Verify artwork and attribution
-        run: npm run art:check
-      - name: Refresh previews while preserving native maps
-        run: npm run maps:build
-      - name: Build the complete map release
-        run: npm run buildmap
-      - name: Test release and source contracts
-        # The one excluded test requires the separately installed macOS Tiled
-        # rasterizer. All other tests, including native map validation, run here.
-        run: >-
-          npm test -- --maxWorkers=1 --testTimeout=30000
-          --testNamePattern='^(?!.*\brenders all 12 PNG cells in native order through nested tile layers$).*'
-      - name: Add the venue landing page and preserve the legacy map URL
+      - name: Verify Linux flight pixels and animation metadata without rewriting sources
         run: |
-          cp publication/index.html dist/index.html
-          mkdir -p dist/publication
-          cp publication/*.jpg dist/publication/
-          cp varcamp.tmj tileset.png dist/
-      - name: Upload the Pages site
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
-        with:
-          path: dist
+          node --import tsx --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { createHash } from 'node:crypto';
+          import { readFileSync } from 'node:fs';
+          import { isDeepStrictEqual } from 'node:util';
+          import sharp from 'sharp';
+          import { renderCoastalFlight } from './tools/art/coastal-flight.ts';
+
+          const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
+          const stored = readFileSync('assets/tilesets/original/coastal-flight.png');
+          const storedMetadata = JSON.parse(readFileSync('art/source/coastal-flight.json', 'utf8'));
+          const rendered = await renderCoastalFlight();
+          const storedDecoded = await sharp(stored).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+          const renderedDecoded = await sharp(rendered.png).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+          const dimensions = decoded => ({ width: decoded.info.width, height: decoded.info.height, channels: decoded.info.channels });
+          const encoded = { stored: sha256(stored), rendered: sha256(rendered.png) };
+          const decoded = { stored: sha256(storedDecoded.data), rendered: sha256(renderedDecoded.data) };
+
+          function chunks(bytes) {
+            assert.deepEqual(bytes.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+            const result = [];
+            for (let offset = 8; offset < bytes.length;) {
+              const length = bytes.readUInt32BE(offset);
+              assert.ok(offset + length + 12 <= bytes.length, 'Truncated PNG chunk');
+              result.push({ type: bytes.toString('ascii', offset + 4, offset + 8), length, dataSha256: sha256(bytes.subarray(offset + 8, offset + 8 + length)) });
+              offset += length + 12;
+            }
+            return result;
+          }
+          function differences(left, right, path = '$') {
+            if (isDeepStrictEqual(left, right)) return [];
+            if (left !== null && right !== null && typeof left === 'object' && typeof right === 'object' && Array.isArray(left) === Array.isArray(right)) {
+              const keys = [...new Set([...Object.keys(left), ...Object.keys(right)])].sort();
+              return keys.flatMap(key => differences(left[key], right[key], `${path}.${key}`));
+            }
+            return [path];
+          }
+
+          const metadataDifferences = differences(storedMetadata, rendered.metadata);
+          console.log(JSON.stringify({ platform: process.platform, architecture: process.arch, node: process.version, sharp: sharp.versions, encodedSha256: encoded, decodedRgbaSha256: decoded, storedDimensions: dimensions(storedDecoded), renderedDimensions: dimensions(renderedDecoded), metadataDifferences, storedChunks: chunks(stored), renderedChunks: chunks(rendered.png) }, null, 2));
+
+          assert.equal(storedMetadata.atlas.sha256, encoded.stored, 'Canonical atlas hash differs from its frozen metadata');
+          assert.equal(storedMetadata.overlay.provenance.atlasSha256, encoded.stored, 'Canonical overlay provenance differs from the frozen PNG');
+          assert.equal(rendered.metadata.atlas.sha256, encoded.rendered, 'Rendered metadata does not identify its actual PNG bytes');
+          assert.equal(rendered.metadata.overlay.provenance.atlasSha256, encoded.rendered, 'Rendered overlay provenance does not identify its PNG');
+          assert.deepEqual(dimensions(storedDecoded), dimensions(renderedDecoded), 'PNG dimensions or channels differ');
+          assert.ok(storedDecoded.data.equals(renderedDecoded.data), 'Linux and canonical decoded RGBA pixels differ');
+
+          const normalizedStored = structuredClone(storedMetadata);
+          const normalizedRendered = structuredClone(rendered.metadata);
+          for (const metadata of [normalizedStored, normalizedRendered]) {
+            metadata.atlas.sha256 = 'PNG-encoding-only';
+            metadata.overlay.provenance.atlasSha256 = 'PNG-encoding-only';
+          }
+          assert.ok(isDeepStrictEqual(normalizedStored, normalizedRendered), `Animation metadata changed outside the two PNG encoding hashes: ${JSON.stringify(differences(normalizedStored, normalizedRendered))}`);
+          console.log('Linux parity verified: identical full RGBA pixels, dimensions and animation metadata; only PNG encoding hashes may differ. No source files were rewritten.');
+          JS
 
   deploy:
-    needs: build
+    needs: [build, linux-parity]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
