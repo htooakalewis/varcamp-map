@@ -11,7 +11,7 @@ npm test -- --maxWorkers=1 --testTimeout=30000
 shasum -a 256 dist/bots/lyra.js
 ```
 
-Publication and activation are separate steps. The stable public destination is `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js`. Publication is pending the complete combined change, its full canonical CI run, and HTTPS/package byte comparison; a local build does not make that URL current. This task does not publish or start a shared avatar. A built module and passing tests do not demonstrate that independent visitor sessions observe the same moving bot.
+Publication and activation are separate steps. The stable public destination is `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js`. Before activating any release, verify successful full canonical CI and Pages deployment, then compare the exact HTTPS module bytes with the reviewed artifact. Check the CLI status for the current devbox process; a build alone is not live acceptance. After those checks, test that two independent visitor sessions observe the same moving bot and shared replies.
 
 ## Behavior and commands
 
@@ -29,7 +29,7 @@ A Web Crypto SHA-256 guard checks native dimensions, layers and embedded tileset
 
 Watch the dedicated browser console for `Lyra stopped: <reason>`. A failed/cancelled move, wrong result cell, unexpected player position, changed room, incompatible map, ten-second movement timeout or sixty-second startup timeout stops all future actions. A timed-out movement remains quarantined until its native promise settles. Repeated `run` calls stop the prior controller and wait for its pending API work; they cannot stack movement loops. Closing the dedicated browser stops its session. Page lifecycle cleanup removes owned subscriptions and timers. An already-issued native move may finish after cleanup, but no later step is issued.
 
-## Official hosted registration (pending)
+## Official hosted registration
 
 The [official custom-script guide](https://docs.workadventu.re/admin/bots/custom-script/) describes dedicated headless browsers and a Custom script URL. When the intended world's Bots manager and entitlement are available:
 
@@ -41,7 +41,7 @@ The [official custom-script guide](https://docs.workadventu.re/admin/bots/custom
 
 The guide's prose describes a `run` function; its linked starter uses a default object with `run`, which this artifact preserves. No Bots manager was exposed in the inspected demo guest menu. Official hosted registration, entitlement and live behavior are unverified; no licensed administration stack is installed by this work.
 
-## Owned devbox development runner (live acceptance pending)
+## Owned devbox development runner
 
 The separate [owned development launcher](../../ops/bots/README.md) manages one additive `varcamp-lyra-dev` container through private SSH/local CLI. It joins as `Lyra [BOT]`, imports the exact reviewed HTTPS bytes only in its initialized map-script frame, and invokes `default.run({})`. Its pinned digest is `29b9a65b5880a922710ddf6b524e1ee0d772620687c7843c5b6928f633396c1f`. The launcher contains its own locked browser dependency; ordinary map visitors never activate it.
 
@@ -56,4 +56,4 @@ node ops/bots/cli.mjs stop
 
 Ownership labels and immutable container IDs restrict cleanup to the dedicated browser. Camera and microphone are denied/off, audio is muted, Chromium remains sandboxed, and CPU/memory/PID/tmpfs limits bound the detached process. The tool exposes no public administration API and modifies no core service. Private snapshots preserve the original 31-container reference outside Git. The publication manifest records 25 explicit extension hashes, including every runner and new operational test file; its original 303 hashes remain unchanged.
 
-The official manager and its entitlement remain separate and unverified. Launcher review, actual image build, public byte readback, sandbox startup, two independent visitors, early/later bubble joins and stop/restart acceptance remain required. A visitor already in a bubble when the module attaches may expose the supported `onJoin()` API's lack of initial replay; document the outcome without touching private meeting state. See the launcher guide for exact commands, failure health, core isolation and remaining live gates.
+The official manager and its entitlement remain separate and unverified. Before activation, verify successful full canonical CI and Pages deployment, compare the exact HTTPS module bytes with the reviewed artifact, and check CLI status for the current devbox process. A build alone is not live acceptance. Verify sandbox startup and exercise shared behavior with two independent visitors, including early and later bubble joins and stop/restart. A visitor already in a bubble when the module attaches may expose the supported `onJoin()` API's lack of initial replay; document the outcome without touching private meeting state. See the launcher guide for exact commands, failure health, core isolation and live acceptance steps.

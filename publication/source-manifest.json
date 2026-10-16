@@ -315,7 +315,7 @@
     "ops/bots/.dockerignore": "34d64906080275ae443ac60fdb0a9a3644c95e8469810e3cc4e6c73e82bd31c2",
     "ops/bots/Dockerfile": "104dd81a78609d88fd1cde9ae8bbccefe1c38ae8c9187d492d942cd5d23a9e62",
     "ops/bots/PLAYWRIGHT-LICENSE": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
-    "ops/bots/README.md": "862e903b885ff3ecc1e68e759b473d14bd0fad6a91d6d28f85d9699d09e435b2",
+    "ops/bots/README.md": "0c3bc55659d034b7d44eb5c473bbca4b3a1e479e66402dbd122d3fe926abce0f",
     "ops/bots/browser-session.mjs": "41addd21c41cda99d9f485dc07b311af238db2dfb946ea6c35238d683c104ada",
     "ops/bots/cli.mjs": "478e6ce240e05d93af00c4e50c778e2f9db59faf274f204d81a018cf1d77cf79",
     "ops/bots/config.mjs": "4388596aa44c1b61aeeee352b22a26ca2c0aa9e5dfe464df6a3a868f02dd1ad6",

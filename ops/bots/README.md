@@ -6,7 +6,7 @@ This is an owned development launcher, not the official WorkAdventure Bots manag
 
 ## Review, build and run on the devbox
 
-Complete the combined code review, canonical CI, Pages publication and HTTPS byte readback first. The coordinator performs the actual build/start and acceptance test; authoring this launcher does not satisfy those gates.
+Before activating any release, verify successful full canonical CI and Pages deployment, then compare the exact HTTPS module bytes with the reviewed artifact. Check CLI status for the current devbox process; a build alone is not live acceptance. After the build, use the commands below to start and inspect the process, then test shared behavior with two independent visitors.
 
 Run these commands inside the reviewed checkout through private SSH (for example, `ssh <devbox-host>`, then `cd <reviewed-checkout>`):
 
@@ -56,7 +56,7 @@ The browser image is the already inspected official ARM64 Ubuntu 24.04 Playwrigh
 
 Chromium sandboxing stays enabled. The [official Playwright Docker guidance](https://playwright.dev/docs/docker) requires a separate user and its namespace-enabled seccomp profile. `seccomp.json` is the unmodified [v1.64.1 upstream profile](https://github.com/microsoft/playwright/blob/v1.64.1/utils/docker/seccomp_profile.json), SHA-256 `cc3e61cabda6bbc1e53e54d27ba4d55a9d3be829b6dd1a596f4a7b31b1cc7849`; its default action is `SCMP_ACT_ERRNO`, with the upstream `clone`, `setns`, `unshare` allowance. The accompanying Apache-2.0 [upstream license](PLAYWRIGHT-LICENSE) has SHA-256 `45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb`. If the host kernel or AppArmor prevents sandbox startup, report that blocker. There is no SYS_ADMIN, unconfined seccomp/AppArmor, no-sandbox or host sysctl fallback.
 
-## Verification and pending live gates
+## Verification and live acceptance
 
 ```sh
 npm test -- ops/tests/lyra-launcher.test.ts ops/tests/lyra-healthcheck.test.ts ops/tests/lyra-container-config.test.ts --maxWorkers=1
@@ -67,4 +67,4 @@ shasum -a 256 dist/bots/lyra.js
 
 Unit checks use a controlled Docker boundary and real healthcheck subprocesses; they do not start Docker or browsers. The container configuration checks inspect the actual pinned inputs and generated Docker arguments. The full existing suite remains the coordinator's combined CI gate. All new runner and operational test files are included in the publication extension inventory.
 
-Live acceptance still requires: actual sandboxed ARM64 build/start; real public HTTPS byte validation; one shared bot player ID and changing positions seen by two independent visitors; the same nearby bubble reply visible to both; independent visitor movement; startup-near and later-join cases; stop/restart with only Lyra disappearing/reappearing; and unchanged original 31-container IDs/health. Local tests and earlier temporary HTTPS-interception QA do not establish those results.
+Live acceptance requires: successful full canonical CI and Pages deployment; exact public HTTPS byte validation; a sandboxed ARM64 build/start; one shared bot player ID and changing positions seen by two independent visitors; the same nearby bubble reply visible to both; independent visitor movement; startup-near and later-join cases; stop/restart with only Lyra disappearing/reappearing; and unchanged original 31-container IDs/health. Check CLI status for the current devbox process throughout; a build alone is not live acceptance. Local tests and earlier temporary HTTPS-interception QA do not establish these results.
