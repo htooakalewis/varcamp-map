@@ -25,7 +25,8 @@ async function run(_metadata: unknown): Promise<void> {
       },
       onBubble: callback => {
         const subscription = WA.player.meetings.onJoin().subscribe(meeting => {
-          if (meeting.kind !== 'proximity') return;
+          // This demo exposes its ordinary proximity bubble as default / Proximity Chat.
+          if (meeting.kind !== 'proximity' && !(meeting.kind === 'default' && meeting.name === 'Proximity Chat')) return;
           callback({
             participants: meeting.participants.map(player => player.playerId),
             onJoin: cb => { const s = meeting.onParticipantJoin().subscribe(player => cb(player.playerId)); return () => s.unsubscribe(); },

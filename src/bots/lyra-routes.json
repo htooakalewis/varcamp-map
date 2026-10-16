@@ -10,7 +10,7 @@
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
     "geometrySha256": "61c062dec87b166a0d479682591a8e2c723a6dbd3548f1f5559f3fbd109eea7d",
-    "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
+    "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [
     70,

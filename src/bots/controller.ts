@@ -126,7 +126,7 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
   const move = async (next: Tile) => {
     if (!checkRoom()) return;
     const actual = tileOf(await api.position());
-    if (!active) return;
+    if (!active || !checkRoom()) return;
     if (!same(actual, current)) throw Error('Unexpected player position before step');
     if (Math.abs(next[0] - current[0]) + Math.abs(next[1] - current[1]) !== 1) throw Error('Non-adjacent route step');
     const timeout = timer(() => stop('movement timeout; pending move remains quarantined'), 10000);
@@ -150,7 +150,8 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
       if (same(current, target)) {
         if (mode === 'escort' && escort) { reply(visitors.get(escort.owner), gateReply(escort.destination, escort.language, true)); mode = 'return'; continue; }
         if (mode === 'return') { escort = undefined; mode = 'patrol'; corner = 1; continue; }
-        corner = (corner + 1) % ROUTES.patrol.length;
+        // The authored closing waypoint repeats home; count each cyclic corner only once.
+        corner = (corner + 1) % (ROUTES.patrol.length - 1);
         await sleep(2000); continue;
       }
       await move(planRoute(current, target)[1]);

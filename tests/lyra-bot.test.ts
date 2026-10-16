@@ -160,15 +160,17 @@ describe('single movement lifecycle and conversation', () => {
 });
 
 describe('official dedicated module lifecycle',()=>{
-  it('subscribes to proximity bubbles and bubble chat, replaces runs without overlapping unresolved moves',async()=>{
+  it.each([{kind:'proximity',name:'Proximity Chat'}, {kind:'default',name:'Proximity Chat'}])('subscribes to $kind proximity bubbles and bubble chat, replaces runs without overlapping unresolved moves',async eligible=>{
     expect(existsSync('src/bots/lyra.ts'),'official bot entry missing').toBe(true);
     const {Subject}=await import('rxjs');const meetings=new Subject<any>();const joins=new Subject<any>(),leaves=new Subject<any>(),ended=new Subject<void>();
     const messages:string[]=[],moves:Point[]=[];let complete:((p:Point&{cancelled:boolean})=>void)|undefined;let chat:((text:string,event:{authorId:number|undefined})=>void)|undefined;let chatUnsubscribe=0;
     const wa={onInit:async()=>{},room:{id:'test',getTiledMap:async()=>native()},player:{getPosition:async()=>({x:2256,y:2256}),moveTo:(x:number,y:number)=>{moves.push({x,y});return new Promise<Point&{cancelled:boolean}>(resolve=>{complete=resolve;});},meetings:{onJoin:()=>meetings}},chat:{onChatMessage:(cb:typeof chat,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});chat=cb;return {unsubscribe:()=>{chatUnsubscribe++;}};},sendChatMessage:(text:string,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});messages.push(text);}}};
     vi.stubGlobal('WA',wa);vi.spyOn(console,'warn').mockImplementation(()=>{});
     const bot=(await import('../src/bots/lyra')).default;await bot.run({});await flush();expect(moves).toHaveLength(1);
-    meetings.next({kind:'area',participants:[{playerId:1}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toEqual([]);
-    meetings.next({kind:'proximity',participants:[{playerId:1}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toHaveLength(1);chat!('help',{authorId:1});expect(messages).toHaveLength(2);
+    for(const unrelated of [{kind:'area',name:'Proximity Chat'},{kind:'meeting',name:'Proximity Chat'},{kind:'listener',name:'Proximity Chat'},{kind:'speaker',name:'Proximity Chat'},{kind:'default',name:'Conference room'}]) {
+      meetings.next({...unrelated,participants:[{playerId:1,name:'QA'}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toEqual([]);
+    }
+    meetings.next({...eligible,participants:[{playerId:1,name:'QA'}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toHaveLength(1);chat!('help',{authorId:1});expect(messages).toHaveLength(2);
     const replacement=bot.run({});await flush();expect(chatUnsubscribe).toBe(1);expect(moves).toHaveLength(1);
     complete!({...moves[0],cancelled:false});await replacement;await flush();expect(moves).toHaveLength(2);
     // A page lifecycle shutdown must detach both direct and per-meeting subscriptions.
@@ -195,5 +197,66 @@ describe('response throttling preserves user control',()=>{
   it('accepts the owner stop immediately while suppressing the second reply, without overlapping moves',async()=>{
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();h.join();h.chat('go aries');const count=h.replies.length;h.chat('stop');expect(h.replies).toHaveLength(count);expect(h.moves).toHaveLength(1);
     h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2256});c.stop();h.complete();await c.done;
+  });
+});
+
+
+describe('review regressions',()=>{
+  it('rechecks the room after an awaited position response before issuing movement',async()=>{
+    const {createLyraController}=await modules();const h=harness();const original=h.adapter.position;let calls=0;let resolvePosition!: (point:Point)=>void;
+    h.adapter.position=()=>++calls===1?original():new Promise(resolve=>{resolvePosition=resolve;});
+    const c=createLyraController(h.adapter);await c.start();await flush();expect(calls).toBe(2);expect(h.moves).toEqual([]);
+    h.room('different-room');resolvePosition({x:2256,y:2256});await flush();
+    expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/room changed/);await c.done;expect(vi.getTimerCount()).toBe(0);
+  });
+  it('rests for one two-second corner interval at closing home before the next patrol circuit',async()=>{
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();
+    for(let step=0;step<30;step++) {
+      const point=h.moves.at(-1)!;
+      if(point.x===2256&&point.y===2256)break;
+      h.complete();await flush();await vi.advanceTimersByTimeAsync(100);
+      const count=h.moves.length;await vi.advanceTimersByTimeAsync(2000);
+      // No pending native move is completed here; the extra advance only expires a corner rest.
+      expect(h.moves.length-count).toBeLessThanOrEqual(1);
+    }
+    expect(h.moves.at(-1)).toEqual({x:2256,y:2256});const count=h.moves.length;
+    h.complete();await flush();await vi.advanceTimersByTimeAsync(2099);expect(h.moves).toHaveLength(count);
+    await vi.advanceTimersByTimeAsync(1);expect(h.moves).toHaveLength(count+1);expect(h.moves.at(-1)).toEqual({x:2288,y:2256});c.stop();h.complete();await c.done;
+  });
+});
+
+describe('audited WorkAdventure runtime object aliases',()=>{
+  // Reconstruct exactly the 21 additions recorded by the complete raw-vs-WA map audit.
+  const runtimeMap = () => {
+    const map = native();const layer=map.layers.find(l=>l.id===56);
+    if(layer?.type!=='objectgroup')throw Error('Missing inspection-zones fixture');
+    expect(layer.name).toBe('inspection-zones');
+    expect(layer.objects.map(o=>[o.id,o.type])).toEqual([
+      ...Array.from({length:12},(_,i)=>[i+2,'room']), ...Array.from({length:9},(_,i)=>[i+14,'landmark']),
+    ]);
+    for(const object of layer.objects)Object.assign(object,{class:object.type});
+    return map;
+  };
+  it('accepts exactly the observed redundant object classes without mutating the native/runtime map',async()=>{
+    const {guardMap}=await modules();const map=runtimeMap();const before=JSON.stringify(map);
+    // Independent canonical fixture identity must match the value observed inside WA.room.getTiledMap.
+    const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
+    const geometry={width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')};
+    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('6b0b204ed6ea2473db67d7ec616d962344fa7cac523b5fbec7452ae24559e3b2');
+    await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
+  });
+  it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{
+    const {guardMap}=await modules();
+    const firstObject=(m:TiledMap)=>{const l=m.layers.find(l=>l.id===56);if(l?.type!=='objectgroup')throw Error('Missing object fixture');return l.objects[0];};
+    for(const mutate of [
+      (m:TiledMap)=>Object.assign(firstObject(m),{class:'contradictory'}),
+      (m:TiledMap)=>Reflect.deleteProperty(firstObject(m),'type'),
+      (m:TiledMap)=>Object.assign(firstObject(m),{type:'changed',class:'changed'}),
+      (m:TiledMap)=>{firstObject(m).x+=32;},
+      (m:TiledMap)=>Object.assign(m.layers[0],{class:'tilelayer'}),
+      (m:TiledMap)=>{const l=m.layers.find(l=>l.name==='physical-collisions');if(l?.type==='tilelayer')l.data[70*128+70]=1;},
+      (m:TiledMap)=>{m.layers.find(l=>l.name==='exit-solar')!.properties![0].value='different.wam';},
+      (m:TiledMap)=>{m.tilesets.find(s=>s.name==='navigation-mask')!.tiles![0].properties![0].value=true;},
+    ]){const changed=runtimeMap();mutate(changed);await expect(guardMap(changed)).rejects.toThrow(/signature|geometry/i);}
   });
 });
