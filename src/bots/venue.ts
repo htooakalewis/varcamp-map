@@ -33,12 +33,12 @@ export function planRoute(from: Tile, to: Tile): Tile[] {
 }
 
 /** One-use prefix: actual native spawn column, straight north to row 64. */
-export function startupRoute(from: Tile): Tile[] {
-  if (allowed.has(key(from))) return planRoute(from, ROUTES.home);
+export function startupRoute(from: Tile, home: Tile = ROUTES.home): Tile[] {
+  if (allowed.has(key(from))) return planRoute(from, home);
   if (!ROUTES.startupReservedCells.some(cell => same(from, cell))) throw Error('Unknown startup position');
   const prefix: Tile[] = [];
   for (let y = from[1]; y > 64; y--) prefix.push([from[0], y]);
-  return [...prefix, ...planRoute([from[0], 64], ROUTES.home)];
+  return [...prefix, ...planRoute([from[0], 64], home)];
 }
 
 const names = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces', 'Solar Hall', 'Lunar Hall', 'Mazes', 'Park', 'Harbor', 'Exploration'];
@@ -64,9 +64,9 @@ export function label(destination: Destination, language: Language): string {
   return language === 'my' ? myNames[index] : names[index];
 }
 export const help = (language: Language) => language === 'my'
-  ? 'အကူအညီ • အခန်းများ • သွား <အမည် သို့မဟုတ် ၁–၁၂> • ရပ်။ လိုက်လျှောက်လိုပါက ကိုယ်တိုင် လိုက်လာပါ။'
-  : 'help • rooms • go <destination or 1–12> • stop. Walk along with me if you want an escort.';
-export const rooms = (language: Language) => (language === 'my' ? 'အခန်းများ: ' : 'Rooms: ') + ROUTES.destinations.map((d, i) => `${i < 12 ? `${i + 1} ` : ''}${label(d, language)}`).join(', ');
+  ? 'မေထုန် / ကရကဋ် / တူ • အကူအညီ • အခန်းများ • သွား <အမည်> • ရပ်။ အဖွဲ့တွင် Nova, Cancer သို့မဟုတ် Orion, Libra ဟု တိုက်ရိုက်တောင်းနိုင်ပါသည်။ ကိုယ်တိုင် လိုက်လာပါ။'
+  : 'Type Gemini / Cancer / Libra, help, rooms, go <destination>, or stop. In groups, address a guide: Nova, Cancer or Orion, Libra. Walk along with me if you want an escort.';
+export const rooms = (language: Language) => (language === 'my' ? 'အခန်းများ: ' : 'Rooms: ') + ROUTES.destinations.map(d => label(d, language)).join(', ');
 export const busy = (language: Language) => language === 'my' ? 'အခြားဧည့်သည်ကို လမ်းပြနေပါသည်။ ခဏစောင့်ပါ။' : 'I’m busy guiding another visitor. Please wait.';
 export const gateReply = (destination: Destination, language: Language, arrived = false) => language === 'my'
   ? `${label(destination, language)} သို့ ${arrived ? 'ရောက်ပါပြီ' : 'လမ်းပြပါမည်'}။ ရှေ့ရှိ ${destination.gate} ဝင်ပေါက်မှ ဆက်သွားနိုင်ပါသည်။ ဝင်ပေါက်မတိုင်မီ ရပ်ပါမည်။`

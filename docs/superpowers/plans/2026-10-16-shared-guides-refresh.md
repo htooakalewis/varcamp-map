@@ -53,6 +53,14 @@
 - [ ] Implement minimum persona interface and truthful greetings; no number-first prompts or hardcoded Lyra self-name for Nova/Orion. Validate metadata; no arbitrary routes/names/URLs.
 - [ ] Run focused module/artifact tests and build; record actual new module SHA/size for Task4; update docs/inventories and commit.
 
+#### Reviewed Task 3 addendum and source verification
+
+Task 3 also requires public self ID/name validation after `WA.onInit`; fixed metadata with absent-field Lyra compatibility; distinct cyclic homes `(70,70)`, `(73,73)`, `(66,70)`; participant and chat-author names; complete-snapshot classification before greetings; separate human membership and reserved-name bot candidates; deterministic rank/ID responder election independent of busy state; anchored guide prefixes with optional `[BOT]` and comma/colon delimiters; and owner-safe bare-stop fanout before election/reply cooldown. Explicit targeting retains local first-requester ownership and serialization. See the spec's reviewed interaction contract for the exact behavior.
+
+Subscribe/cache public native meeting events before async map/position checks and replay only current membership after validation. Dispose early subscriptions on invalid map/replacement/shutdown. Already-established pre-subscription meetings cannot be discovered through the supported non-replaying API; acceptance requires later real meeting entry. Divergent snapshots are a documented limitation, not a global exactly-once claim. Do not use viewport/private stores or a delay to claim correctness.
+
+Focused serial regressions cover all twelve names/Burmese/numeric compatibility, profile homes/startup routes, ordered/self-omitted snapshots, explicit escorts, bot-only patrol and author fallback, stop fanout inside cooldown with unrelated ownership preserved, join/leave and duplicate-persona numeric tie-breaks, divergent snapshots, deferred validation, invalid maps and replacement disposal. Retain existing route/provenance/cancellation/lifecycle tests and the standalone import/visitor-artifact test. Record actual emitted module digest/size after `npm run buildmap`; runner metadata/digest changes remain Task 4. Historical native runtime failures, runner error policy and deadlines remain unresolved and unchanged by Task 3.
+
 ### Task 4: Three owned runners and reproduced crash boundary correction
 
 **Files:** ops/bots/config.mjs, browser-session.mjs, runner.mjs, manager.mjs, cli.mjs, README.md; focused ops/tests; revision/extension records.
