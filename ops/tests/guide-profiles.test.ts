@@ -55,7 +55,7 @@ it('joins each fixed observed name/avatar and passes only that persona in the Do
   for (const [persona, name, avatar] of [['lyra', 'Lyra [BOT]', '#woka-female4'], ['nova', 'Nova [BOT]', '#woka-male2'], ['orion', 'Orion [BOT]', '#woka-male1']]) {
     const actions: string[] = []; const click = key => ({ async click() { actions.push(key); } });
     const page = { async goto() {}, getByTestId: () => ({ async fill(value) { actions.push(value); } }), getByRole: (_role, { name }) => click(name), locator: selector => click(selector), getByText: value => click(value) };
-    const profile = configs.selectProfile(persona); await joinRoom(page, profile);
+    const profile = configs.selectProfile(persona); await joinRoom(page, profile, {assertLive(){}});
     expect(actions).toEqual([name, 'Continue', avatar, 'Continue', 'Turn off your microphone', 'Turn off your camera', 'Save']);
     expect(configs.buildCreateArgs(image, '/repo/seccomp.json', profile)).toContain(`VARCAMP_BOT_PERSONA=${persona}`);
   }

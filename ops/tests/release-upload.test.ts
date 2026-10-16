@@ -3,10 +3,11 @@ import { expect, it } from 'vitest';
 
 it('retains the whole live tree, omits paired live WAMs, and limits replacement to reviewed metadata', () => {
   const result = execFileSync('python3', ['-c', `
-import sys,json
+import sys,json,hashlib
 sys.path.insert(0,'ops')
 from release_upload import replacement_files
-live={'maps/a.tmj':b'old','maps/a.wam':b'human','maps/preview/a.tmj':b'preview','maps/preview/a.wam':b'preview-human','assets/legacy.js':b'legacy','unpaired.wam':b'orphan'}
+def wam(name,data): return json.dumps({'mapUrl':name+'.tmj?v='+hashlib.sha256(data).hexdigest(),'entities':['human']}).encode()
+live={'maps/a.tmj':b'old','maps/a.wam':wam('a',b'new'),'maps/preview/a.tmj':b'preview','maps/preview/a.wam':wam('a',b'preview'),'assets/legacy.js':b'legacy','unpaired.wam':b'orphan'}
 release={'maps/a.tmj':b'new','maps/a.wam':b'stale','assets/new.js':b'new'}
 p=replacement_files(release,live)
 print(json.dumps({k:v.decode() for k,v in p.items()}))
@@ -16,17 +17,18 @@ print(json.dumps({k:v.decode() for k,v in p.items()}))
 
 it('uses explicitly reviewed new metadata and refuses unexpected reviewed paths', () => {
   const result = execFileSync('python3', ['-c', `
-import sys,json
+import sys,json,hashlib
 sys.path.insert(0,'ops')
 from release_upload import replacement_files
-r={'maps/a.tmj':b'new','maps/a.wam':b'source'};b={'maps/a.tmj':b'old','maps/a.wam':b'human'}
-p=replacement_files(r,b,{'maps/a.wam':b'human+reviewed'})
+def wam(data): return json.dumps({'mapUrl':'a.tmj?v='+hashlib.sha256(data).hexdigest(),'entities':['human']}).encode()
+r={'maps/a.tmj':b'new','maps/a.wam':wam(b'new')};b={'maps/a.tmj':b'old','maps/a.wam':wam(b'old')}
+p=replacement_files(r,b,{'maps/a.wam':wam(b'new')})
 rejected=False
 try: replacement_files(r,b,{'maps/nope.wam':b'wrong'})
 except ValueError: rejected=True
-print(json.dumps({'value':p['maps/a.wam'].decode(),'rejected':rejected}))
+print(json.dumps({'value':json.loads(p['maps/a.wam'])['entities'],'rejected':rejected}))
 `], { encoding: 'utf8' });
-  expect(JSON.parse(result)).toEqual({value:'human+reviewed',rejected:true});
+  expect(JSON.parse(result)).toEqual({value:['human'],rejected:true});
 });
 
 it('accepts exactly the complete twelve-map catalog and rejects incomplete or extra map pairs', () => {
@@ -50,7 +52,7 @@ print(json.dumps({'pairs':sum(p.endswith('.tmj') for p in r),'rejected':rejected
 
 it('prepares the complete 33-map release through the actual publisher entry point', () => {
   const result=execFileSync('python3',['-c',`
-import sys,json,os,tempfile,pathlib
+import sys,json,os,tempfile,pathlib,hashlib
 from unittest.mock import patch
 sys.path.insert(0,str(pathlib.Path('ops').resolve()))
 import release_upload
@@ -62,7 +64,7 @@ with tempfile.TemporaryDirectory() as directory:
  os.chdir(directory)
  pathlib.Path('dist/maps').mkdir(parents=True)
  for i in ids:
-  for e in ('tmj','wam'): pathlib.Path('dist/maps/'+i+'.'+e).write_bytes(b'x')
+  for e in ('tmj','wam'): pathlib.Path('dist/maps/'+i+'.'+e).write_bytes(b'x' if e == 'tmj' else json.dumps({'mapUrl':i+'.tmj?v='+hashlib.sha256(b'x').hexdigest()}).encode())
  with patch.object(release_upload,'Storage',Storage),patch.object(sys,'argv',['release_upload','prepare','--plan','plan','--target','candidate']): release_upload.main()
  plan=json.loads(pathlib.Path('plan/plan.json').read_text())
  print(json.dumps({'mapPairs':sum(p.endswith('.tmj') for p in plan['package']),'files':len(plan['package'])}))
@@ -132,4 +134,8 @@ it.each(transport.ordinary)('accepts ordinary $method response through the actua
   expect(receipt.requests).toHaveLength(1);
   expect(receipt.requests[0].dummyAuthorizationPresent).toBe(true);
   expect(receipt.requests[0].hostHeaderPresent).toBe(true);
+});
+
+it('enforces the effective WAM graph through actual release preparation and apply', () => {
+  execFileSync('python3', ['ops/tests/release_graph_harness.py'], { encoding: 'utf8' });
 });

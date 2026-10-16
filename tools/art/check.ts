@@ -41,7 +41,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   if(readFileSync('art/source/exterior-gates.svg','utf8')!==renderExteriorGates())errors.push('exterior-gates: SVG differs from deterministic native gate master');
   const hubMasters=renderHubMasters(JSON.parse(readFileSync('art/source/hub-nameplates.json','utf8')));
   for(const [name,expected] of Object.entries({'hub-labels':hubMasters.labels,'hub-buildings':hubMasters.buildings}))if(readFileSync(`art/source/${name}.svg`,'utf8')!==expected)errors.push(`${name}: SVG differs from deterministic hub-art master`);
-  for(const name of ['zodiac','magic','campus','amenities','guides','wayfinding','hub-buildings','hub-labels', 'coastal','exterior-gates','naval-details']) {
+  for(const name of ['zodiac','magic','campus','amenities','guides','wayfinding','hub-buildings','hub-labels', 'coastal','exterior-gates','naval-details','beach-lounge','beach-surf']) {
     const png=`assets/tilesets/original/${name}.png`;
     if(!existsSync(png)) { errors.push(`${name}: missing custom PNG export`); continue; }
     const expected=await sharp(`art/source/${name}.svg`,{density:72}).ensureAlpha().raw().toBuffer();

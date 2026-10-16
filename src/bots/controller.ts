@@ -1,4 +1,4 @@
-import { failureRecord } from '../../ops/bots/evidence.mjs';
+import { failureRecord, OPERATION_BUDGET_MS, withControllerLease } from '../../ops/bots/evidence.mjs';
 import { guardMap } from './map-guard';
 import { addressedCommand, PERSONAS, personaByName, type Persona } from './personas';
 import { busy, center, gateReply, help, parseCommand, planRoute, rooms, startupRoute, tileOf, type Destination, type Language, type Tile } from './venue';
@@ -59,21 +59,43 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     const value = lastFailure?.error;
     return value && typeof value === 'object' && 'message' in value && typeof value.message === 'string' ? value.message : 'controller rejection';
   };
-  const receipt = (record: Record<string, unknown>) => { if (finished && record.state !== 'terminal') return; try { api.receipt?.(record); } catch { /* Evidence cannot change terminal authority. */ } };
-  const operation = <T>(name: string, phase: string, action: () => Promise<T>, attemptedCell?: Tile): Promise<T> => {
-    const context = { operation: name, phase, sequence: ++sequence, startedAt: scheduler.now(), persona: persona.key,
-      controllerGeneration, attemptedCell, steps };
-    receipt({ ...context, state: 'pending' });
-    const rejected = (error: unknown) => {
-      lastFailure = failureRecord(error, { ...context, event: 'controller-terminal', settledAt: scheduler.now() });
-      receipt({ ...context, state: 'failed', settledAt: scheduler.now() });
+  let pending: Record<string, unknown> | undefined;
+  let quarantine = false;
+  const diagnosticFailures: Record<string, unknown>[] = [];
+  const cleanupFailures: Record<string, unknown>[] = [];
+  let lastState: Record<string, unknown> = {};
+  const receipt = (record: Record<string, unknown>) => {
+    const at = scheduler.now();
+    lastState = { ...withControllerLease(record, at), persona: persona.key, controllerGeneration, playerId: self.id, name: self.name,
+      roomId: room, steps, at, quarantine, failure: lastFailure ?? null, cleanupFailures: [...cleanupFailures], diagnosticFailures: [...diagnosticFailures] };
+    try { api.receipt?.(lastState); } catch (error) { if (diagnosticFailures.length < 16) diagnosticFailures.push(failureRecord(error, { phase: 'receipt' })); }
+  };
+  const assertLive = () => { if (!active || finished) throw Error('Controller is terminal'); };
+  const operation = async <T>(name: string, phase: string, action: () => Promise<T>, attemptedCell?: Tile): Promise<T> => {
+    assertLive();
+    if (pending) throw Error('Overlapping controller operation');
+    const startedAt = scheduler.now();
+    const context = { operation: name, phase, sequence: ++sequence, startedAt, deadline: startedAt + OPERATION_BUDGET_MS,
+      persona: persona.key, controllerGeneration, attemptedCell, steps };
+    pending = context; receipt({ ...context, state: 'pending' });
+    const expire = () => {
+      if (scheduler.now() < context.deadline) return;
+      lastFailure ??= failureRecord(Error(`${name} deadline expired; pending continuation quarantined`), { ...context, event: 'controller-terminal', settledAt: scheduler.now() });
+      quarantine = true; stop(failureReason());
     };
+    const timeout = timer(expire, OPERATION_BUDGET_MS);
+    const assertOperationLive = () => { expire(); assertLive(); };
     try {
-      // Observe the original promise without adding a scheduling or cancellation layer.
-      const pending = action();
-      void pending.then(() => receipt({ ...context, state: 'settled', settledAt: scheduler.now() }), rejected);
-      return pending;
-    } catch (error) { rejected(error); throw error; }
+      assertOperationLive(); const result = await action(); assertOperationLive();
+      receipt({ ...context, state: 'progress', settledAt: scheduler.now() }); return result;
+    } catch (error) {
+      expire();
+      lastFailure ??= failureRecord(error, { ...context, event: 'controller-terminal', settledAt: scheduler.now() });
+      throw error;
+    } finally {
+      cancel(timeout); pending = undefined; quarantine = false;
+      if (finished) receipt({ ...lastState, state: 'terminal', settledAt: scheduler.now() });
+    }
   };
   let finish!: () => void;
   const done = new Promise<void>(resolve => { finish = resolve; });
@@ -83,16 +105,18 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
   const cancel = (handle: ReturnType<typeof setTimeout>) => { scheduler.clearTimeout(handle); timers.delete(handle); };
   const stop = (reason = 'operator stop') => {
     if (finished) return;
-    active = false; finished = true;
+    active = false; finished = true; quarantine = pending !== undefined;
+    lastFailure ??= failureRecord(reason, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() });
     for (const handle of timers) scheduler.clearTimeout(handle); timers.clear();
-    for (const off of [...subscriptions.splice(0), ...meetingSubscriptions.splice(0)]) { try { off(); } catch { /* Continue exact owned cleanup. */ } }
+    for (const off of [...subscriptions.splice(0), ...meetingSubscriptions.splice(0)]) { try { off(); } catch (error) { if (cleanupFailures.length < 16) cleanupFailures.push(failureRecord(error)); } }
     participants.clear(); botCandidates.clear(); visitors.clear(); wake?.(); wake = undefined;
-    receipt({ state: 'terminal', persona: persona.key, controllerGeneration, sequence, steps, at: scheduler.now() });
-    try { api.diagnostic(`${persona.name} stopped: ${reason}`, lastFailure ?? failureRecord(reason, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() })); } catch { /* Logger failure must not prevent stop/done. */ }
+    receipt({ ...pending, state: 'terminal', persona: persona.key, controllerGeneration, sequence, steps, at: scheduler.now() });
+    try { api.diagnostic(`${persona.name} stopped: ${reason}`, lastFailure ?? failureRecord(reason, { event: 'controller-terminal', persona: persona.key, controllerGeneration, sequence, steps, settledAt: scheduler.now() })); } catch (error) { if (diagnosticFailures.length < 16) diagnosticFailures.push(failureRecord(error, { phase: 'diagnostic' })); receipt({ ...lastState, state: 'terminal' }); }
     if (!started) finish();
   };
-  const sleep = (ms: number) => new Promise<void>(resolve => {
+  const sleep = (ms: number, reason: 'step-rest' | 'rest' | 'conversation' = 'step-rest', idleStartedAt?: number) => new Promise<void>(resolve => {
     if (!active) { resolve(); return; }
+    receipt({ state: 'allowed-idle', reason, idleStartedAt });
     wake = resolve; timer(() => { wake = undefined; resolve(); }, ms);
   });
   const checkRoom = () => {
@@ -120,7 +144,7 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
   const elected = () => ![...botCandidates].some(([id, candidate]) =>
     candidate.rank < persona.rank || candidate.rank === persona.rank && id < self.id);
   const greet = (id: number) => {
-    if (!ready || !elected()) return;
+    if (!active || !ready || !elected()) return;
     const value = visitor(id);
     if (value && scheduler.now() - value.greeted >= 120000) {
       value.greeted = scheduler.now();
@@ -160,7 +184,7 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     if (ready) for (const id of participants) greet(id);
   };
   const reply = (value: Visitor | undefined, text: string) => {
-    if (!value || scheduler.now() - value.replied < 2000) return;
+    if (!active || !value || scheduler.now() - value.replied < 2000) return;
     value.replied = scheduler.now(); api.say(text);
   };
   const onChat = ({ text, authorId, authorName }: ChatEvent) => {
@@ -209,9 +233,8 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     if (!active || !checkRoom()) return;
     if (!same(actual, current)) throw Error('Unexpected player position before step');
     if (Math.abs(next[0] - current[0]) + Math.abs(next[1] - current[1]) !== 1) throw Error('Non-adjacent route step');
-    const timeout = timer(() => stop('movement timeout; pending move remains quarantined'), 10000);
     // Do not race this promise against a timeout: a timeout is not native cancellation.
-    const result = await operation('move', 'pre-step', () => api.move(center(next)), next); cancel(timeout);
+    const result = await operation('move', 'pre-step', () => api.move(center(next)), next);
     if (!active || !checkRoom()) return;
     if (result.cancelled) throw Error('Native movement cancelled');
     if (!same(tileOf(result), next)) throw Error('Movement result outside intended cell');
@@ -226,14 +249,14 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
         if (next) { await move(next); continue; }
         mode = escort ? 'escort' : 'patrol';
       }
-      if (mode === 'patrol' && participants.size > 0 && scheduler.now() - lastActivity < 20000) { await sleep(100); continue; }
+      if (mode === 'patrol' && participants.size > 0 && scheduler.now() - lastActivity < 20000) { await sleep(100, 'conversation', lastActivity); continue; }
       const target = mode === 'escort' && escort ? escort.destination.tile : mode === 'return' ? persona.home : persona.patrol[corner];
       if (same(current, target)) {
         if (mode === 'escort' && escort) { reply(visitors.get(escort.owner), gateReply(escort.destination, escort.language, true)); mode = 'return'; continue; }
         if (mode === 'return') { escort = undefined; mode = 'patrol'; corner = 1; continue; }
         // The authored closing waypoint repeats home; count each cyclic corner only once.
         corner = (corner + 1) % (persona.patrol.length - 1);
-        await sleep(2000); continue;
+        await sleep(2000, 'rest'); continue;
       }
       await move(planRoute(current, target)[1]);
     }

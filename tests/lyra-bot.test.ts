@@ -106,7 +106,7 @@ describe('audited native navigation', () => {
 describe('commands', () => {
   const goals = [['aries',101,71],['taurus',96,90],['gemini',82,104],['cancer',63,109],['leo',44,104],['virgo',30,90],['libra',25,71],['scorpio',30,52],['sagittarius',44,38],['capricorn',63,33],['aquarius',82,38],['pisces',96,52],['solar hall',20,24],['lunar hall',106,24],['mazes',68,5],['park',5,68],['harbor',118,63],['exploration',63,120]] as const;
   it.each(goals)('escorts %s to its safe preportal point and returns home', async (alias, x, y) => {
-    const { createLyraController } = await modules(); const h = harness(); const c = createLyraController(h.adapter); await c.start(); h.join(); h.chat(` GO   ${alias.toUpperCase()} `); await flush();
+    const { createLyraController } = await modules(); const h = harness(); const c = createLyraController(h.adapter); await c.start();await flush(); h.join(); h.chat(` GO   ${alias.toUpperCase()} `); await flush();
     let reached = false;
     for (let i = 0; i < 300; i++) {
       if (!h.moves.length || h.moves.at(-1)!.x === 2256 && h.moves.at(-1)!.y === 2256 && reached) break;
@@ -124,40 +124,40 @@ describe('commands', () => {
       expect(parseCommand(`သွား ${mm}`)).toMatchObject({kind:'go', destination:{id:`speaker-${signs[i-1]}`}, language:'my'});
     }
     expect(parseCommand('အကူအညီ')).toMatchObject({kind:'help',language:'my'}); expect(parseCommand('အခန်းများ')).toMatchObject({kind:'rooms',language:'my'}); expect(parseCommand('ရပ်')).toMatchObject({kind:'stop',language:'my'});
-    const h=harness(); const c=(await modules()).createLyraController(h.adapter);await c.start();h.join();h.chat('သွား ၁');expect(h.replies.at(-1)).toMatch(/[က-အ]/);c.stop();await flush();
+    const h=harness(); const c=(await modules()).createLyraController(h.adapter);await c.start();await flush();h.join();h.chat('သွား ၁');expect(h.replies.at(-1)).toMatch(/[က-အ]/);c.stop();await flush();
   });
 });
 
 describe('single movement lifecycle and conversation', () => {
   it('starts from native spawn, reaches home, patrols adjacent cells and rests at corners', async () => {
-    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();await flush();
+    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();await flush();await flush();
     expect(h.moves[0]).toEqual({x:2032,y:2096});h.complete();await flush();await vi.advanceTimersByTimeAsync(99);expect(h.moves).toHaveLength(1);await vi.advanceTimersByTimeAsync(1);expect(h.moves[1]).toEqual({x:2032,y:2064});
     for(let i=0;i<60&&!(h.moves.at(-1)!.x===2352&&h.moves.at(-1)!.y===2256);i++){h.complete();await flush();await vi.advanceTimersByTimeAsync(100);}
     expect(h.moves.at(-1)).toEqual({x:2352,y:2256});h.complete();await flush();const count=h.moves.length;await vi.advanceTimersByTimeAsync(1999);expect(h.moves).toHaveLength(count);await vi.advanceTimersByTimeAsync(101);expect(h.moves.length).toBeGreaterThan(count);c.stop();await flush();
   });
   it('pauses only for bubble members, greets once per 120s, resumes after 20s idle and cleans subscriptions', async () => {
-    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();h.chat('help',9);expect(h.replies).toHaveLength(0);
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.chat('help',9);expect(h.replies).toHaveLength(0);
     const meeting=h.join();expect(h.replies).toHaveLength(1);h.complete();await flush();await vi.advanceTimersByTimeAsync(19999);expect(h.moves).toHaveLength(1);await vi.advanceTimersByTimeAsync(101);expect(h.moves).toHaveLength(2);
     meeting.leave(1);meeting.enter(1);expect(h.replies).toHaveLength(1);h.automatic();await vi.advanceTimersByTimeAsync(120000);meeting.leave(1);meeting.enter(1);expect(h.replies).toHaveLength(2);meeting.end();c.stop();await flush();expect(h.unsubscribed.sort()).toEqual(['bubble','chat','meeting-end','participant-join','participant-leave']);expect(vi.getTimerCount()).toBe(0);
   });
   it('honors escort ownership, cooldown, own-message ignore and stop during an unresolved move', async () => {
-    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();h.join([1,2]);const greetings=h.replies.length;
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.join([1,2]);const greetings=h.replies.length;
     h.chat('go aries',undefined);expect(h.replies).toHaveLength(greetings);h.chat('go aries');h.chat('help');expect(h.replies).toHaveLength(greetings+1);
     h.chat('go lunar hall',2);expect(h.replies.at(-1)).toMatch(/busy/i);await vi.advanceTimersByTimeAsync(2000);h.chat('stop',2);expect(h.replies.at(-1)).toMatch(/busy/i);h.chat('stop',1);expect(h.replies.at(-1)).toMatch(/stop|home/i);expect(h.moves).toHaveLength(1);
     h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2256});c.stop();await flush();
   });
   it('bounds and expires visitor reply/greeting bookkeeping without flooding unsupported text', async () => {
-    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();const b=h.join();h.chat('weather');const count=h.replies.length;h.chat('weather');expect(h.replies).toHaveLength(count);
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();const b=h.join();h.chat('weather');const count=h.replies.length;h.chat('weather');expect(h.replies).toHaveLength(count);
     for(let id=2;id<=260;id++){b.enter(id);b.leave(id);}b.leave(1);b.enter(1);expect(h.replies).toHaveLength(count+255);
     const bounded=h.replies.length;b.enter(257);h.chat('help',257);expect(h.replies).toHaveLength(bounded);b.leave(257);
     h.automatic();await vi.advanceTimersByTimeAsync(600001);b.leave(1);const before=h.replies.length;b.enter(1);expect(h.replies).toHaveLength(before+1);c.stop();await flush();
   });
   it.each(['reject','cancel','wrong-cell','timeout','room-change','unknown-position'] as const)('stops safely on %s and ignores late completion', async reason => {
-    const {createLyraController}=await modules();const h=harness(reason==='unknown-position'?{x:0,y:0}:undefined);const c=createLyraController(h.adapter);await c.start();await flush();
+    const {createLyraController}=await modules();const h=harness(reason==='unknown-position'?{x:0,y:0}:undefined);const c=createLyraController(h.adapter);await c.start();await flush();await flush();
     if(reason==='reject')h.reject();if(reason==='cancel')h.complete({cancelled:true});if(reason==='wrong-cell')h.complete({x:0,y:0});if(reason==='timeout')await vi.advanceTimersByTimeAsync(15000);if(reason==='room-change'){h.room('other');await vi.advanceTimersByTimeAsync(100);}
     await flush();expect(h.diagnostics.join(' ')).toMatch(/stop|unknown|failed|cancel|timeout|room|position/i);const count=h.moves.length;if(reason==='timeout'||reason==='room-change')h.complete();await flush();await vi.advanceTimersByTimeAsync(60000);expect(h.moves).toHaveLength(count);expect(vi.getTimerCount()).toBe(0);expect(h.unsubscribed).toContain('bubble');if(reason!=='unknown-position')expect(h.unsubscribed).toContain('chat');
   });
-  it('rejects an incompatible map before chat or movement and disposes the early meeting subscription',async()=>{const {createLyraController}=await modules();const h=harness();h.adapter.map=async()=>({...native(),width:64});const c=createLyraController(h.adapter);await c.start();expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/map|geometry/i);c.stop();});
+  it('rejects an incompatible map before chat or movement and disposes the early meeting subscription',async()=>{const {createLyraController}=await modules();const h=harness();h.adapter.map=async()=>({...native(),width:64});const c=createLyraController(h.adapter);await c.start();await flush();expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/map|geometry/i);c.stop();});
 });
 
 describe('official dedicated module lifecycle',()=>{
@@ -184,10 +184,10 @@ describe('official dedicated module lifecycle',()=>{
 
 describe('startup deadline and deferred actions',()=>{
   it('applies commands after the in-flight adjacent step and keeps the reserved northward escape intact',async()=>{
-    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();h.join();h.chat('go lunar hall');expect(h.moves).toEqual([{x:2032,y:2096}]);h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2032,y:2064});c.stop();h.complete();await c.done;expect(vi.getTimerCount()).toBe(0);
+    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();await flush();h.join();h.chat('go lunar hall');expect(h.moves).toEqual([{x:2032,y:2096}]);h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2032,y:2064});c.stop();h.complete();await c.done;expect(vi.getTimerCount()).toBe(0);
   });
   it('enforces a total startup deadline even when every individual move settles before its timeout',async()=>{
-    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();
+    const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();await flush();
     for(let i=0;i<7;i++){await vi.advanceTimersByTimeAsync(9000);h.complete();await flush();await vi.advanceTimersByTimeAsync(100);}
     await c.done;expect(h.diagnostics.join()).toMatch(/startup timeout/);const count=h.moves.length;await vi.advanceTimersByTimeAsync(60000);expect(h.moves).toHaveLength(count);expect(vi.getTimerCount()).toBe(0);
   });
@@ -196,7 +196,7 @@ describe('startup deadline and deferred actions',()=>{
 
 describe('response throttling preserves user control',()=>{
   it('accepts the owner stop immediately while suppressing the second reply, without overlapping moves',async()=>{
-    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();h.join();h.chat('go aries');const count=h.replies.length;h.chat('stop');expect(h.replies).toHaveLength(count);expect(h.moves).toHaveLength(1);
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.join();h.chat('go aries');const count=h.replies.length;h.chat('stop');expect(h.replies).toHaveLength(count);expect(h.moves).toHaveLength(1);
     h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2256});c.stop();h.complete();await c.done;
   });
 });
@@ -206,12 +206,12 @@ describe('review regressions',()=>{
   it('rechecks the room after an awaited position response before issuing movement',async()=>{
     const {createLyraController}=await modules();const h=harness();const original=h.adapter.position;let calls=0;let resolvePosition!: (point:Point)=>void;
     h.adapter.position=()=>++calls===1?original():new Promise(resolve=>{resolvePosition=resolve;});
-    const c=createLyraController(h.adapter);await c.start();await flush();expect(calls).toBe(2);expect(h.moves).toEqual([]);
+    const c=createLyraController(h.adapter);await c.start();await flush();await flush();expect(calls).toBe(2);expect(h.moves).toEqual([]);
     h.room('different-room');resolvePosition({x:2256,y:2256});await flush();
     expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/room changed/);await c.done;expect(vi.getTimerCount()).toBe(0);
   });
   it('rests for one two-second corner interval at closing home before the next patrol circuit',async()=>{
-    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();
+    const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();
     for(let step=0;step<30;step++) {
       const point=h.moves.at(-1)!;
       if(point.x===2256&&point.y===2256)break;

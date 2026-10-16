@@ -10714,5 +10714,481 @@
     "blockingCells": [],
     "level": "aboveAvatar",
     "sourceId": "lpc-ship"
+  },
+  "beach-palm": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-parasol-coral": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 3,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-parasol-teal": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 6,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-recliner": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 9,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-woven-towel": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 11,
+      "y": 0,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-shrub": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 13,
+      "y": 0,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-0": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-1": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 1,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-2": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 2,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-3": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 3,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-4": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 4,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-5": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 5,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-6": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 6,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-7": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 7,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-8": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 0,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-9": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 1,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-10": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 2,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-11": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 3,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-12": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 4,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-13": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-14": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 6,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sand-15": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 7,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-sea-veil": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-grass": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 9,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-pebbles": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 10,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "beach-cabana": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 0,
+      "y": 7,
+      "width": 5,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-tiki-bar": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 5,
+      "y": 7,
+      "width": 6,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "beach-low-table": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 11,
+      "y": 7,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
   }
 }

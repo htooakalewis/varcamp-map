@@ -150,7 +150,7 @@ describe('isolated CDP media permissions', () => {
   }
   it('denies microphone and camera using W3C descriptors scoped to the intended origin and isolated context', async () => {
     const cdp = protocol();
-    await denyMediaPermissions(cdp);
+    await denyMediaPermissions(cdp, { assertLive() {} });
     expect(cdp.calls).toEqual([
       { method: 'Browser.setPermission', params: { permission: { name: 'microphone' }, setting: 'denied', origin: 'https://varcamp.3-1-133-135.sslip.io', browserContextId: 'isolated-lyra-context' } },
       { method: 'Browser.setPermission', params: { permission: { name: 'camera' }, setting: 'denied', origin: 'https://varcamp.3-1-133-135.sslip.io', browserContextId: 'isolated-lyra-context' } },
@@ -158,19 +158,19 @@ describe('isolated CDP media permissions', () => {
   });
   it.each(['microphone', 'camera'])('propagates the %s denial failure without a fallback or later permission command', async name => {
     const cdp = protocol(name);
-    await expect(denyMediaPermissions(cdp)).rejects.toBe(cdp.failure);
+    await expect(denyMediaPermissions(cdp, { assertLive() {} })).rejects.toBe(cdp.failure);
     expect(cdp.calls).toHaveLength(name === 'microphone' ? 1 : 2);
   });
   it('refuses a missing isolated context before changing permissions', async () => {
     const calls: string[] = [];
     const cdp = { async send(method: string) { calls.push(method); return { targetInfo: {} }; } };
-    await expect(denyMediaPermissions(cdp)).rejects.toThrow('Missing isolated browser context ID');
+    await expect(denyMediaPermissions(cdp, { assertLive() {} })).rejects.toThrow('Missing isolated browser context ID');
     expect(calls).toEqual(['Target.getTargetInfo']);
   });
   it('propagates context lookup failure before changing permissions', async () => {
     const failure = Error('Target unavailable'); const calls: string[] = [];
     const cdp = { async send(method: string) { calls.push(method); throw failure; } };
-    await expect(denyMediaPermissions(cdp)).rejects.toBe(failure);
+    await expect(denyMediaPermissions(cdp, { assertLive() {} })).rejects.toBe(failure);
     expect(calls).toEqual(['Target.getTargetInfo']);
   });
 });

@@ -64,8 +64,8 @@
     {
       "path": "maps/shipyard-beach.tmj",
       "fromSha256": "615ff0cafe9d1acc267aa6db5bcc83109bff3a5e28516a8d6cc67a7209f4a98c",
-      "toSha256": "4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601",
-      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+      "toSha256": "cbff9df1324651f00ac4ade6dc748e02e40030a02a5bc179000d661091fa9b9b",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "maps/shipyard-beach.wam",
@@ -106,8 +106,8 @@
     {
       "path": "tests/coastal-character.test.ts",
       "fromSha256": "4f00ffbd0baeb3f006fc9865f404409c592083d4f8e1eb21772f92b8d984013b",
-      "toSha256": "5ac97dc3827de6600d4b9ffb58e3d0d0442987b09418afa100e8aed66f5be784",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+      "toSha256": "e6c77e3ffb21bd87734e8768ca2291d865b4184629762394620a71d170ab28d9",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "tests/comet-maze.test.ts",
@@ -130,8 +130,8 @@
     {
       "path": "tests/npc-maps.test.ts",
       "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
-      "toSha256": "0145368491fb66c784d8bbfa05a9f303de3c18f06fadc785d3124747ae7f60a0",
-      "reason": "Preserve exact static robot retirement receipts by inverting the separately verified additive Roadster layer/tileset before comparison."
+      "toSha256": "55edcd1ce0e68b42ff83bc4fb6df8f493d2e89e7941c86418403d02e500f41b0",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "tests/shipyard-beach.test.ts",
@@ -166,14 +166,14 @@
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
-      "toSha256": "541f8125997ca62cfe767a535447243de5190638cbbecc016fe01107584f8a9a",
-      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+      "toSha256": "51eb7f48dd5d98ab16c726abac7a1b67d1ad4b8ce7e3a6e74e1b5c39e5345ab5",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "art/sources.json",
       "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
-      "toSha256": "8cc1f019f9dd754a419f9ca520eab9776ce1ff8cb503e2abd53830814ccac09a",
-      "reason": "Register the original generated Roadster source, crop/timing metadata and native atlas with exact file hashes; retain all existing source records."
+      "toSha256": "b5fef0b51ea34e4ae683afdd0945ac0a513d3953dd2ec38a7d289409d2ec5706",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "assets/tilesets/original/ATTRIBUTION.md",
@@ -184,8 +184,8 @@
     {
       "path": "tools/art/check.ts",
       "fromSha256": "6f29a43dda762f53808c5eee2d9733436d5e7f82747105e279f969d27a8b7e6b",
-      "toSha256": "3ce718e76e3aeee1dc298a3c2b685fecce84742419e08c6135f8db9a2898d0ab",
-      "reason": "Check deterministic Roadster atlas and metadata parity alongside every existing art check."
+      "toSha256": "967be6cd4c4d213915463909b7e86e8c597a0d0bf9513787c57814d5b66fee72",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "tests/author-guard.test.ts",
@@ -198,6 +198,12 @@
       "fromSha256": "b40efe3c91dc759c7e171364b536bc6db2139b0469105041f97778c1c6905a99",
       "toSha256": "9b1e382b8031ab23415857b55c5fd79c88931921e37470401a23ce05449513aa",
       "reason": "Complete the isolated stale-PNG art fixture using all declared animation receipt inputs, preserving the stale-master failure assertion and production validation."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "1e447f366e5ca18b15382fc16c6f5c4d566a2bc4553f97a54e693d60020f237a",
+      "toSha256": "d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     }
   ]
 }

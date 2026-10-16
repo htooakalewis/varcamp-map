@@ -1,10 +1,10 @@
 import { createHash } from 'node:crypto';
-import { TERMINAL_PREFIX, failureRecord } from './evidence.mjs';
+import { failureRecord, hasLiveControllerLease, controllerObservation } from './evidence.mjs';
 import { config, selectProfile, isMapFrame, verifyModule } from './config.mjs';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-const noop = () => {};
-const guarded = async (assertLive, action) => { assertLive(); const value = await action(); assertLive(); return value; };
+const requireAuthority = assertLive => { if (typeof assertLive !== 'function') throw Error('Lifecycle assertLive authority is required'); assertLive(); };
+const guarded = async (assertLive, action) => { requireAuthority(assertLive); const value = await action(); assertLive(); return value; };
 const createdContexts = new WeakMap(), freshGrants = new WeakMap();
 
 /** Only this runner lifecycle path creates the context that can issue a fresh bootstrap grant. */
@@ -20,7 +20,7 @@ export function claimFreshBootstrap(context, page, profile = config) {
   const grant = Object.freeze({}); freshGrants.set(grant, { context, page, profile }); return grant;
 }
 
-export async function denyMediaPermissions(cdp, { assertLive = noop } = {}) {
+export async function denyMediaPermissions(cdp, { assertLive } = {}) {
   const { targetInfo } = await guarded(assertLive, () => cdp.send('Target.getTargetInfo'));
   if (!targetInfo.browserContextId) throw Error('Missing isolated browser context ID');
   // Browser.setPermission accepts W3C PermissionDescriptor names.
@@ -29,7 +29,7 @@ export async function denyMediaPermissions(cdp, { assertLive = noop } = {}) {
   }
 }
 
-export async function joinRoom(page, profile = config, { assertLive = noop } = {}) {
+export async function joinRoom(page, profile = config, { assertLive } = {}) {
   await guarded(assertLive, () => page.goto(profile.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 }));
   await guarded(assertLive, () => page.getByTestId('loginSceneNameInput').fill(profile.botName));
   await guarded(assertLive, () => page.getByRole('button', { name: 'Continue', exact: true }).click());
@@ -40,7 +40,7 @@ export async function joinRoom(page, profile = config, { assertLive = noop } = {
   await guarded(assertLive, () => page.getByRole('button', { name: 'Save', exact: true }).click());
 }
 
-export async function findMapFrame(page, { assertLive = noop } = {}) {
+export async function findMapFrame(page, { assertLive } = {}) {
   const deadline = Date.now() + 45000;
   while (Date.now() < deadline) {
     assertLive();
@@ -67,7 +67,7 @@ export async function findMapFrame(page, { assertLive = noop } = {}) {
   throw Error('Initialized map-script iframe was not found');
 }
 
-export async function startModule(page, frame, fail, profile = config, { assertLive = noop } = {}) {
+export async function startModule(page, frame, fail, profile = config, { assertLive } = {}) {
   let verified = false;
   await guarded(assertLive, () => page.route(config.moduleUrl, async route => {
     assertLive();
@@ -81,47 +81,30 @@ export async function startModule(page, frame, fail, profile = config, { assertL
       await route.abort().catch(() => {}); fail(error);
     }
   }));
-  const identity = await guarded(assertLive, () => frame.evaluate(async ({ moduleUrl, roomUrl, botName, persona, terminalPrefix }) => {
+  const identity = await guarded(assertLive, () => frame.evaluate(async ({ moduleUrl, roomUrl, botName, persona }) => {
     const wa = globalThis.WA;
     if (wa.room.id !== roomUrl || wa.player.name !== botName) throw Error('Dedicated player identity mismatch');
-    const state = { started: false, stopped: null, playerId: wa.player.playerId };
-    globalThis.__lyraDevelopmentHealth = state;
-    const warn = console.warn.bind(console);
-    console.warn = (...args) => {
-      const message = args.map(String).join(' ');
-      if (message.startsWith(terminalPrefix)) state.stopped = message;
-      warn(...args);
-    };
     const module = await import(moduleUrl);
     if (typeof module.default?.run !== 'function') throw Error('Expected default.run module');
     await module.default.run({ persona });
-    if (state.stopped) throw Error(state.stopped);
-    state.started = true;
     return { playerId: wa.player.playerId, name: wa.player.name, roomId: wa.room.id };
-  }, { ...profile, terminalPrefix: TERMINAL_PREFIX }));
+  }, profile));
   if (!verified) throw Error('Module ran without a verified response');
   return identity;
 }
 
-export async function readIdentity(frame, profile = config) {
-  return frame.evaluate(({ botName, roomUrl }) => {
-    const state = globalThis.__lyraDevelopmentHealth;
-    if (['terminal', 'failed'].includes(globalThis.__varcampGuideEvidence?.state)) throw Error('Controller is terminal');
-    if (!state?.started || state.stopped) throw Error(state?.stopped ?? 'Controller not started');
-    const wa = globalThis.WA;
-    if (wa.player.playerId !== state.playerId || wa.player.name !== botName || wa.room.id !== roomUrl) throw Error('Dedicated player identity changed');
-    return { playerId: wa.player.playerId, name: wa.player.name, roomId: wa.room.id };
-  }, profile);
+export async function readIdentity(frame, profile = config, options) {
+  return (await controllerObserver(frame, profile, options).read()).identity;
 }
 
-export async function checkDevices(page, { assertLive = noop } = {}) {
+export async function checkDevices(page, { assertLive } = {}) {
   for (const id of ['microphone-button', 'camera-button']) {
     const control = page.getByTestId(id);
     await guarded(assertLive, () => control.waitFor({ state: 'visible', timeout: 15000 }));
     if (!/(^|\s)bg-danger(\s|$)/.test(await guarded(assertLive, () => control.getAttribute('class')) ?? '')) throw Error(`${id} is not off`);
   }
 }
-export async function dismissMediaPrompt(page, { assertLive = noop, beforeMedia = async () => {} } = {}) {
+export async function dismissMediaPrompt(page, { assertLive, beforeMedia = async () => {} } = {}) {
   await guarded(assertLive, beforeMedia);
   const button = page.getByRole('button', { name: 'Continue without webcam and microphone', exact: true });
   if (await guarded(assertLive, () => button.isVisible())) {
@@ -141,7 +124,7 @@ async function assertWelcomeAbsent(page, assertLive) {
   if (await guarded(assertLive, () => page.getByText('Open the welcome directory', { exact: true }).isVisible())) throw Error('Consumed welcome action returned or remains');
   await assertNoModal(page, assertLive);
 }
-export async function verifyRoomUI(page, { assertLive = noop, initial = false } = {}) {
+export async function verifyRoomUI(page, { assertLive, initial = false } = {}) {
   await dismissMediaPrompt(page, { assertLive, beforeMedia: initial ? () => assertWelcomeAbsent(page, assertLive) : async () => {} });
   await checkDevices(page, { assertLive });
   const permissions = await guarded(assertLive, () => page.evaluate(async () => Promise.all(['microphone', 'camera'].map(async name =>
@@ -178,18 +161,63 @@ export async function verifyRoomUI(page, { assertLive = noop, initial = false } 
   const welcomeVisible = await guarded(assertLive, () => page.getByText('Open the welcome directory', { exact: true }).isVisible());
   if (welcomeVisible !== (knownPanels === 1)) throw Error('Unclassified welcome action panel');
 }
-export async function settleWelcome(page) {
-  const welcome = page.getByText('Open the welcome directory', { exact: true });
-  const close = page.getByTestId('close-modal-button');
-  if (await close.isVisible()) throw Error('Unexpected visible modal before UI settlement');
-  if (await welcome.isVisible()) {
-    await welcome.click(); await close.waitFor({ state: 'visible' });
-    await close.click(); await close.waitFor({ state: 'hidden' });
-  } else if (await close.isVisible()) throw Error('Unexpected visible modal before UI settlement');
+/** A host owns the deadline and single flight; the frame never owns admission polling. */
+export function createControllerObserver(frame, profile = config, { assertLive, timeout = 5000, now = Date.now } = {}) {
+  requireAuthority(assertLive);
+  let inFlight, terminal, binding, lastKnown;
+  const reject = error => { terminal ??= error; throw terminal; };
+  const inspect = async () => {
+    requireAuthority(assertLive);
+    const observed = await frame.evaluate(() => {
+      const wa = globalThis.WA;
+      return { identity: { playerId: wa.player.playerId, name: wa.player.name, roomId: wa.room.id }, evidence: globalThis.__varcampGuideEvidence };
+    });
+    requireAuthority(assertLive); if (terminal) throw terminal;
+    const { identity, evidence: e } = observed ?? {};
+    if (!identity || identity.name !== profile.botName || identity.roomId !== profile.roomUrl || !Number.isFinite(identity.playerId)) throw Error('Controller identity mismatch');
+    if (!e || !['pending', 'progress', 'allowed-idle', 'terminal'].includes(e.state) ||
+        e.persona !== profile.persona || e.name !== identity.name || e.roomId !== identity.roomId || e.playerId !== identity.playerId ||
+        !Number.isInteger(e.controllerGeneration) || !Number.isFinite(e.steps) || e.steps < 0) throw Error('Invalid controller lifecycle binding');
+    const key = JSON.stringify([identity, e.controllerGeneration, e.persona]);
+    if (binding && binding !== key) throw Error('Controller generation or identity changed');
+    binding = key;
+    const observation = controllerObservation(e);
+    lastKnown = observation.evidence;
+    if (e.state === 'terminal') throw Error('Controller is terminal');
+    if (!hasLiveControllerLease(observation, now())) throw Error('Controller lifecycle lease or operation deadline expired');
+    return { identity, ...observation };
+  };
+  return {
+    get lastKnown() { return lastKnown; },
+    read(absoluteDeadline = Infinity) {
+      if (terminal) return Promise.reject(terminal);
+      try { requireAuthority(assertLive); } catch (error) { return Promise.reject(error); }
+      if (inFlight) return inFlight;
+      const deadline = Math.min(now() + timeout, absoluteDeadline); let timer;
+      if (now() >= deadline) { terminal = Error('Controller observation deadline expired'); return Promise.reject(terminal); }
+      const work = inspect();
+      inFlight = Promise.race([work, new Promise((_, fail) => { timer = setTimeout(() => fail(Error('Controller observation deadline expired')), Math.max(0, deadline - now())); })])
+        .then(value => { requireAuthority(assertLive); if (now() >= deadline) throw Error('Controller observation deadline expired'); return value; })
+        .catch(error => { const record = failureRecord(error); const failure = Error(typeof record.error?.message === 'string' ? record.error.message : 'Controller observation failed', { cause: { failure: record, lastKnown } }); failure.lastKnown = lastKnown; return reject(failure); })
+        .finally(() => { clearTimeout(timer); inFlight = undefined; });
+      return inFlight;
+    },
+  };
 }
-export async function waitForControllerProgress(frame, profile = config, { assertLive = noop } = {}) {
-  await guarded(assertLive, () => frame.waitForFunction(() => (globalThis.__varcampGuideEvidence?.steps ?? 0) > 0, undefined, { timeout: 5000 }));
-  return guarded(assertLive, () => readIdentity(frame, profile));
+const observers = new WeakMap();
+export function controllerObserver(frame, profile, options) {
+  if (!observers.has(frame)) observers.set(frame, createControllerObserver(frame, profile, options));
+  return observers.get(frame);
+}
+export async function waitForControllerProgress(frame, profile = config, { assertLive } = {}) {
+  const observer = controllerObserver(frame, profile, { assertLive });
+  const deadline = Date.now() + 5000;
+  while (Date.now() < deadline) {
+    requireAuthority(assertLive); const status = await observer.read(deadline); requireAuthority(assertLive);
+    if (status.evidence.steps > 0 && status.outcome !== 'pending') return status.identity;
+    await guarded(assertLive, () => delay(Math.min(100, Math.max(0, deadline - Date.now()))));
+  }
+  throw Object.assign(Error('Controller progress admission deadline expired'), { lastKnown: observer.lastKnown });
 }
 async function readFreshJoin(frame, profile, assertLive, original) {
   assertLive();
@@ -233,9 +261,9 @@ async function settleFreshWelcome(page, assertLive) {
   return { consumedAfterActivation, consumedAfterClose: true };
 }
 /** Only a single lifecycle-issued grant can enter this fixed fresh-world handshake. */
-export async function bootstrapSession(page, { profile = config, fresh, fail = error => { throw error; }, assertLive = noop,
+export async function bootstrapSession(page, { profile = config, fresh, fail = error => { throw error; }, assertLive,
   join = joinRoom, find = findMapFrame, start = startModule, progress = waitForControllerProgress } = {}) {
-  assertLive(); const owned = freshGrants.get(fresh);
+  requireAuthority(assertLive); const owned = freshGrants.get(fresh);
   if (!owned || owned.page !== page || owned.profile !== profile || page.context() !== owned.context || owned.context.pages().length !== 1 || owned.context.pages()[0] !== page || page.url() !== 'about:blank') throw Error('Require an unused fresh owned guide bootstrap grant');
   freshGrants.delete(fresh);
   await guarded(assertLive, () => join(page, profile, { assertLive }));

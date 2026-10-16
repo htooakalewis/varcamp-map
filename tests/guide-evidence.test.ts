@@ -41,10 +41,11 @@ it('a hostile original Error getter still reaches terminal cleanup and settled d
   await expect(c.start()).resolves.toBeUndefined(); await c.done; expect(disposed).toBe(true);
 });
 it('read-only controller health remains terminal when logging fails and a stopped position later settles', async () => {
+  const { config } = await import('../ops/bots/config.mjs');
   const { readIdentity } = await import('../ops/bots/browser-session.mjs');
-  vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null }); vi.stubGlobal('WA', { player: { playerId: 4, name: 'Lyra [BOT]' }, room: { id: 'overworld' } });
+  vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null }); vi.stubGlobal('WA', { player: { playerId: 4, name: 'Lyra [BOT]' }, room: { id: config.roomUrl } });
   let release!: (p: { x: number; y: number }) => void; let positions = 0;
-  const c = createLyraController({ map: async () => native, roomId: () => 'overworld', position: () => ++positions === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise(r => { release = r; }), move: async p => ({ ...p, cancelled: false }), say() {}, diagnostic() { throw Error('logger unavailable'); }, receipt: record => { vi.stubGlobal('__varcampGuideEvidence', record); }, onChat: () => () => {}, onBubble: () => () => {} });
+  const c = createLyraController({ self: () => ({id:4,name:'Lyra [BOT]'}), map: async () => native, roomId: () => config.roomUrl, position: () => ++positions === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise(r => { release = r; }), move: async p => ({ ...p, cancelled: false }), say() {}, diagnostic() { throw Error('logger unavailable'); }, receipt: record => { vi.stubGlobal('__varcampGuideEvidence', record); }, onChat: () => () => {}, onBubble: () => () => {} });
   await c.start(); c.stop(); release({ x: 2256, y: 2256 }); await c.done;
-  await expect(readIdentity({ evaluate: async (fn: (value: unknown) => unknown, value: unknown) => fn(value) })).rejects.toThrow(/terminal|stopped/);
+  await expect(readIdentity({ evaluate: async (fn: (value: unknown) => unknown, value: unknown) => fn(value) }, config, {assertLive(){}})).rejects.toThrow(/terminal|stopped/);
 });

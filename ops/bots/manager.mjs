@@ -1,3 +1,4 @@
+import { failureRecord } from './evidence.mjs';
 import { selectProfile, assertOwned, buildCreateArgs } from './config.mjs';
 const pause = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 
@@ -33,10 +34,12 @@ export class BotManager {
       await this.engine.start(id);
       return await this.waitReady(id);
     } catch (error) {
-      let diagnostic = '';
-      try { diagnostic = await this.engine.logs(id); } catch { /* Keep the primary error. */ }
-      await this.removeOwned(id);
-      throw Error(`${this.profile.persona} startup failed: ${error.message}\n${diagnostic}`);
+      let diagnostic, cleanup;
+      try { diagnostic = failureRecord(await this.engine.logs(id)); } catch (failure) { diagnostic = failureRecord(failure); }
+      try { await this.removeOwned(id); } catch (failure) { cleanup = failureRecord(failure); }
+      const failure = Error(`${this.profile.persona} startup failed: ${failureRecord(error).error?.message ?? 'startup rejected'}\n${JSON.stringify(diagnostic)}${cleanup ? '\nCleanup: ' + JSON.stringify(cleanup) : ''}`, { cause: error });
+      Object.assign(failure, { containerId: id, diagnostic, cleanup: cleanup ?? null });
+      throw failure;
     }
   }
   async waitReady(id) {

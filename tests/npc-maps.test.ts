@@ -41,11 +41,25 @@ const receipts = [
  ['shipyard-beach','c656d02d3e7675dc3cbe54ac20649c1be6c93aec8969be5249c805bc918db11e','7cffc6dff554af782ae81458003778d0f35d2b9356145d4fb4c370386df62b4e','8e25036aa5030b792cb3661955b9508f84b9c207b166f75a49935b3a44510f3c'],
 ];
 it.each(receipts)('removes only reviewed %s native robot data while preserving collisions and every unrelated field', (id, tmjHash, wamHash, maskHash) => {
- const tmj=JSON.parse(readFileSync(`maps/${id}.tmj`,'utf8')),wam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
+ // Later reviewed beach artwork has a separate strict delta receipt. Keep this
+ // historical retirement proof against its exact committed native snapshot, so
+ // shallow CI needs no git history and none of the old receipts are repinned.
+ const nativePath=id==='shipyard-beach'?'tests/fixtures/beach-retirement/retired-native.tmj':`maps/${id}.tmj`;
+ const tmj=JSON.parse(readFileSync(nativePath,'utf8')),wam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
  // The separate Roadster test verifies this sole additive overlay before inversion.
  if(id==='overworld'){tmj.layers=tmj.layers.filter((l:{name:string})=>l.name!=='roadster');tmj.tilesets=tmj.tilesets.filter((s:{name:string})=>s.name!=='roadster');tmj.nextlayerid--;}
  expect(digest(tmj)).toBe(tmjHash);expect(digest(wam)).toBe(wamHash);
  expect(digest(tmj.layers.find((l:{name:string})=>l.name==='physical-collisions').data)).toBe(maskHash);
+});
+it('applies the actual retirement function to the historical beach layout without unrelated drift',()=>{
+ const input=JSON.parse(readFileSync('tests/fixtures/beach-retirement/before-layout.json','utf8')) as MapLayout;
+ // Exact d669f9b source and independently extracted 888dd3c post-retirement
+ // authored result; these protect the historical behavior, not current artwork.
+ expect(digest(input)).toBe('4c7fb658839bec9b85f05ae6b8bc017c9b721d0d730fa83209f7603e6af8d7a5');
+ const before=structuredClone(input),retired=addNpcGuides([input])[0];
+ expect(input).toEqual(before);expect(addNpcGuides([retired])[0]).toEqual(retired);
+ expect(digest(retired)).toBe('2be30eb4c14bc7e19b4513e48d8664ed5531471338f1c7d2c63716a9010e3af7');
+ expect(retired.areas.some(a=>a.name==='npc-dockmaster')).toBe(false);
 });
 it('has no visible robot tile or name in any native map and keeps the ordinary BEACH BAR sign', () => {
  for(const file of readdirSync('maps').filter(f=>f.endsWith('.tmj'))){

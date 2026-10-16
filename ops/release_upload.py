@@ -2,6 +2,8 @@
 import base64
 import hashlib
 import io
+import json
+import re
 import pathlib
 import secrets
 import urllib.error
@@ -12,15 +14,90 @@ import zipfile
 from verified_transport import create_opener
 
 
-def replacement_files(release, baseline, reviewed_wams=None):
-    """Keep every legacy file; omit only live WAMs with an exact paired TMJ.
+def wam_reference(path, data):
+    """Validate a root reference and locate its literal hash without reserializing."""
+    def unique_object(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise ValueError(f'{path}: duplicate JSON key {key}')
+            obj[key] = value
+        return obj
 
-    This preserves saved WAMs under the pinned server exception. It does not
-    protect concurrent editor writes; callers must establish a quiet window.
+    def invalid_constant(value):
+        raise ValueError(f'non-JSON constant {value}')
+
+    try:
+        text = data.decode('utf-8')
+        obj = json.loads(text, object_pairs_hook=unique_object, parse_constant=invalid_constant)
+    except (UnicodeError, ValueError) as error:
+        raise ValueError(f'{path}: malformed WAM: {error}') from error
+    basename = pathlib.PurePosixPath(path).with_suffix('.tmj').name
+    pattern = re.escape(basename) + r'\?v=([0-9a-f]{64})'
+    if not isinstance(obj, dict) or not isinstance(obj.get('mapUrl'), str):
+        raise ValueError(f'{path}: root mapUrl string required')
+    match = re.fullmatch(pattern, obj['mapUrl'])
+    if not match:
+        raise ValueError(f'{path}: mapUrl must be {basename}?v=<64 lowercase hex>')
+    # Scan root members with the JSON decoder so nested mapUrl fields cannot
+    # accidentally become the migration target. Full JSON was validated above.
+    decoder = json.JSONDecoder()
+    position = text.index('{') + 1
+    while True:
+        position = re.match(r'\s*', text[position:]).end() + position
+        key, position = decoder.raw_decode(text, position)
+        position = text.index(':', position) + 1
+        position = re.match(r'\s*', text[position:]).end() + position
+        start = position
+        _, position = decoder.raw_decode(text, position)
+        if key == 'mapUrl':
+            literal = text[start:position]
+            if literal != '"' + obj['mapUrl'] + '"':
+                raise ValueError(f'{path}: mapUrl must use a literal version token')
+            token_start = position - 65
+            return match.group(1), (text[:token_start] + '<VERSION>' + text[token_start + 64:]).encode('utf-8')
+        position = re.match(r'\s*', text[position:]).end() + position
+        position += 1  # comma; a root mapUrl is known to exist
+
+
+def wam_dependencies(release, baseline, reviewed_wams=None):
+    """Own generated references while preserving all live organizer bytes."""
+    reviewed_wams = reviewed_wams or {}
+    if any(p not in release or not p.endswith('.wam') or p not in baseline
+           or p[:-4] + '.tmj' not in release for p in reviewed_wams):
+        raise ValueError('Reviewed WAM must be an explicit paired release and baseline WAM path')
+    final = dict(baseline)
+    final.update(release)
+    dependencies = {}
+    for path in sorted(p for p in final if p.endswith('.wam') and p[:-4] + '.tmj' in final):
+        source = baseline.get(path, release.get(path))
+        candidate = reviewed_wams.get(path, source)
+        pin, protected = wam_reference(path, candidate)
+        tmj = path[:-4] + '.tmj'
+        expected_pin = hashlib.sha256(final[tmj]).hexdigest()
+        if pin != expected_pin:
+            raise ValueError(f'{path}: stale mapUrl pin {pin}; final {tmj} requires {expected_pin}; supply an explicit reviewed token-only migration')
+        if path in reviewed_wams:
+            _, original_protected = wam_reference(path, baseline[path])
+            if protected != original_protected:
+                raise ValueError(f'{path}: reviewed migration must preserve every byte outside the mapUrl version token')
+        dependencies[path] = {
+            'tmj': tmj, 'tmjSha256': expected_pin,
+            'fromWamSha256': hashlib.sha256(source).hexdigest(),
+            'toWamSha256': hashlib.sha256(candidate).hexdigest(),
+            'reviewed': path in reviewed_wams,
+        }
+    return dependencies
+
+
+def replacement_files(release, baseline, reviewed_wams=None):
+    """Preserve saved WAMs only when their final TMJ dependency is exact.
+
+    Explicit reviewed migrations may replace only version-token bytes. Callers
+    must still establish a quiet window to protect concurrent editor writes.
     """
     reviewed_wams = reviewed_wams or {}
-    if any(p not in release or not p.endswith('.wam') for p in reviewed_wams):
-        raise ValueError('Reviewed WAM must be an explicit release WAM path')
+    wam_dependencies(release, baseline, reviewed_wams)
     files = dict(baseline)
     files.update(release)
     for path in baseline:
@@ -147,7 +224,7 @@ def main():
         (plan / 'baseline.zip').write_bytes(baseline_bytes)
         (plan / 'release.zip').write_bytes(zip_bytes(release))
         (plan / 'package.zip').write_bytes(zip_bytes(package))
-        manifest = {'target': args.target, 'baseline': inventory(baseline), 'package': inventory(package), 'expected': inventory(expected), 'reviewedWams': inventory(reviewed), 'preservedWams': [p for p in baseline if p.endswith('.wam') and p not in package]}
+        manifest = {'planVersion': 2, 'target': args.target, 'baseline': inventory(baseline), 'package': inventory(package), 'expected': inventory(expected), 'reviewedWams': inventory(reviewed), 'wamDependencies': wam_dependencies(release, baseline, reviewed), 'preservedWams': [p for p in baseline if p.endswith('.wam') and p not in package]}
         (plan / 'plan.json').write_text(json.dumps(manifest, indent=2) + '\n')
         print(json.dumps({'prepared': str(plan), 'target': args.target, 'releaseFiles': len(release), 'uploadFiles': len(package), 'expectedLiveFiles': len(expected), 'preservedWams': len(manifest['preservedWams'])}))
     else:
@@ -155,8 +232,29 @@ def main():
             parser.error('Coordinate and confirm a quiet editor window before --quiet-editor-window')
         manifest = json.loads((plan / 'plan.json').read_text())
         package = read_zip((plan / 'package.zip').read_bytes())
-        if inventory(package) != manifest['package'] or inventory(read_zip((plan / 'baseline.zip').read_bytes())) != manifest['baseline']:
+        if manifest.get('planVersion') != 2 or not isinstance(manifest.get('wamDependencies'), dict):
+            raise ValueError('Legacy or missing release dependency contract; prepare a new reviewed plan')
+        baseline = read_zip((plan / 'baseline.zip').read_bytes())
+        release = read_zip((plan / 'release.zip').read_bytes())
+        if inventory(package) != manifest['package'] or inventory(baseline) != manifest['baseline']:
             raise ValueError('Prepared artifact changed; prepare a new reviewed plan')
+        reviewed_records = manifest.get('reviewedWams')
+        if not isinstance(reviewed_records, dict) or any(path not in package for path in reviewed_records):
+            raise ValueError('Invalid reviewed WAM identities; prepare a new reviewed plan')
+        reviewed = {path: package[path] for path in reviewed_records}
+        if inventory(reviewed) != reviewed_records:
+            raise ValueError('Reviewed WAM bytes changed; prepare a new reviewed plan')
+        # Rebuild from retained inputs. This validates the exact effective graph,
+        # migration ownership, and from/to identities before any live upload.
+        dependencies = wam_dependencies(release, baseline, reviewed)
+        rebuilt_package = replacement_files(release, baseline, reviewed)
+        expected = dict(baseline)
+        expected.update(package)
+        preserved = [path for path in baseline if path.endswith('.wam') and path not in package]
+        if (dependencies != manifest['wamDependencies'] or package != rebuilt_package
+                or inventory(expected) != manifest['expected']
+                or preserved != manifest.get('preservedWams')):
+            raise ValueError('Prepared release graph or dependency identities changed; prepare a new reviewed plan')
         receipts = apply_plan(storage, manifest['target'], manifest['baseline'], package, manifest['expected'])
         for i, data in enumerate(receipts):
             (plan / ('readback-' + str(i + 1) + '.zip')).write_bytes(data)

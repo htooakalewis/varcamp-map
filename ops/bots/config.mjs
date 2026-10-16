@@ -1,8 +1,9 @@
+import { hasLiveControllerLease } from './evidence.mjs';
 import { createHash } from 'node:crypto';
 import { isAbsolute } from 'node:path';
 
-const moduleSha256 = '4d8b19bcbcc8193dbcfe5ddc7e419b61fbf7d6ae24fcc88b0dc1d27d82d44391';
-const shared = Object.freeze({ moduleSha256, moduleBytes: 23410,
+const moduleSha256 = 'c47edd7c428a6172762e79d2dc99da6b3d3b2c8545c41d52e93f67d7be4f65e5';
+const shared = Object.freeze({ moduleSha256, moduleBytes: 26538,
   moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',
 });
@@ -58,6 +59,8 @@ export function isMapFrame(candidate) {
 
 export class RuntimeHealth {
   constructor(profile = config) { this.profile = profile; }
+  #observation;
+  observe(observation) { this.#observation = observation; }
   #error; #ready = false; #updatedAt = 0; #identity;
   fail(reason) { this.#error ??= String(reason); this.#ready = false; }
   ready(identity, now = Date.now()) {
@@ -65,7 +68,7 @@ export class RuntimeHealth {
     this.#identity = identity; this.#ready = true; this.#updatedAt = now;
   }
   snapshot(now = Date.now()) {
-    return { healthy: this.#ready && !this.#error && now >= this.#updatedAt && now - this.#updatedAt < 15000,
-      updatedAt: this.#updatedAt, identity: this.#identity, error: this.#error ?? null, moduleSha256: this.profile.moduleSha256, persona: this.profile.persona };
+    return { healthy: this.#ready && !this.#error && (!this.#observation || hasLiveControllerLease(this.#observation, now)) && now >= this.#updatedAt && now - this.#updatedAt < 15000,
+      controller: this.#observation ?? null, updatedAt: this.#updatedAt, identity: this.#identity, error: this.#error ?? null, moduleSha256: this.profile.moduleSha256, persona: this.profile.persona };
   }
 }

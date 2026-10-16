@@ -11,13 +11,28 @@ const cells=(r:TileRect,w:number)=>Array.from({length:r.width*r.height},(_,i)=>(
 function walk(l:MapLayout){const {tmj}=buildMap(addNpcGuides([l])[0],loadTileCatalog()),mask=tmj.layers.find(a=>a.name==='physical-collisions') as TileLayer,start=l.entries.find(e=>e.isDefault)!,q=[start.y*l.width+start.x],seen=new Set(q);for(let h=0;h<q.length;h++){const n=q[h],x=n%l.width,y=Math.floor(n/l.width);for(const [nx,ny] of [[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const c=ny*l.width+nx;if(nx>=0&&ny>=0&&nx<l.width&&ny<l.height&&!mask.data[c]&&!seen.has(c)){seen.add(c);q.push(c);}}}return {tmj,mask,seen};}
 
 describe('coastal event character and preserved journeys',()=>{
-  it.each(['shipyard-beach','constellation-shore'])('%s has a golden beach rather than a navy office forecourt',id=>{
-    const l=load(id),surface=Array(l.width*l.height).fill('');
+  it.each(['shipyard-beach','constellation-shore'])('%s has a golden beach rather than a navy office forecourt',async id=>{
+    const l=load(id),surface=Array(l.width*l.height).fill(''),catalog=loadTileCatalog();
     for(const p of l.placements.filter(p=>p.layer==='terrain'))for(const n of cells(p,l.width))surface[n]=p.sprite;
-    expect(surface.filter(id=>['ground-sand','coast-sand','coast-wet-sand'].includes(id)).length).toBeGreaterThanOrEqual(id==='shipyard-beach'?500:450);
+    const reviewedSand=Array.from({length:16},(_,i)=>`beach-sand-${i}`);
+    const sandIds=['ground-sand','coast-sand','coast-wet-sand',...(id==='shipyard-beach'?reviewedSand:[])];
+    expect(surface.filter(sprite=>sandIds.includes(sprite)).length).toBeGreaterThanOrEqual(id==='shipyard-beach'?500:450);
     expect(l.placements.some(p=>p.sprite==='night-wash')).toBe(false);
-    expect(l.placements.some(p=>p.sprite==='coast-foam-south')).toBe(true);
-    expect(l.placements.some(p=>p.sprite==='coast-parasol')).toBe(true);
+    if(id==='shipyard-beach'){
+      // New native names must still be actual opaque golden sand, not arbitrary
+      // sprites admitted by a prefix. Check the source pixels and catalog geometry.
+      for(const sprite of reviewedSand){
+        const tile=catalog[sprite];expect(tile).toMatchObject({sheet:'assets/tilesets/original/beach-lounge.png',sourceId:'original',blockingCells:[],level:'belowAvatar'});expect([tile.rect.width,tile.rect.height]).toEqual([1,1]);
+        const pixels=await sharp(tile.sheet).extract({left:tile.rect.x*32,top:tile.rect.y*32,width:32,height:32}).ensureAlpha().raw().toBuffer();let golden=0;
+        for(let i=0;i<pixels.length;i+=4){const[r,g,b,a]=pixels.subarray(i,i+4);if(a===255&&r>180&&g>150&&b<190&&r>g&&g>b)golden++;}
+        expect(golden,`${sprite} must retain warm golden pixels`).toBeGreaterThanOrEqual(32*32*.95);
+      }
+      const surf=l.animatedOverlays!.find(o=>o.name==='beach-surf-south')!;expect(surf).toBeDefined();expect(surf.animations.every(a=>a.frames.length===4&&new Set(a.frames.map(f=>f.tileid)).size===4)).toBe(true);
+      expect(l.placements.filter(p=>['beach-parasol-coral','beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
+    }else{
+      expect(l.placements.some(p=>p.sprite==='coast-foam-south')).toBe(true);
+      expect(l.placements.some(p=>p.sprite==='coast-parasol')).toBe(true);
+    }
   });
   it('assembles the native licensed horizontal vessel with timber structure and canvas rigging',async()=>{
     const l=load('shipyard-beach'),catalog=loadTileCatalog(),ship=l.inspectionZones.find(z=>z.name==='fa-ship-exterior')!;

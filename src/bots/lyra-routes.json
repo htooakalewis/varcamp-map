@@ -6,7 +6,7 @@
       "maps/overworld.tmj": "87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad",
       "maps/overworld.wam": "2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9",
       "tests/exterior-gates.test.ts": "0840ed2ef92b534d129581a4e4ece4e7fd46319dc948dff74fd112104ea34c52",
-      "tests/npc-maps.test.ts": "0145368491fb66c784d8bbfa05a9f303de3c18f06fadc785d3124747ae7f60a0"
+      "tests/npc-maps.test.ts": "55edcd1ce0e68b42ff83bc4fb6df8f493d2e89e7941c86418403d02e500f41b0"
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
     "geometrySha256": "9054589be481dc44d8a4305cbb5219ad3035bdd3cb5298a5dd91d344a3c7ffcc",

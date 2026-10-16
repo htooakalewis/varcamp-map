@@ -1,0 +1,38 @@
+{
+  "portalLayerSha256": {
+    "shipyard-entry": "486a85209040df422f34012b81d1e8980d224e31a1e1297a487a18da0c0d85e0",
+    "from-fa-ship": "57f53ff23f83111bd14e6d95b2dd1f482b06ca14db3cd72e30c25cbdaafeede4",
+    "from-constellation-shore": "bbefd9cd1e90d4fce72b4b202598ebf463a14546f57b0bc8d2f2ebb6fd6f3949",
+    "exit-plaza-return": "e7829c8a139b06274c02f66b6c727b4f8c06ed930a30bee2583a239d061e578c",
+    "exit-board-fa-ship": "e1bcef6b250896d5ce619a14f18a0f73d16db562dc229b0e294c096adfe809ca",
+    "exit-shore-gate": "8f728408ebd5c180f8efc9523d3759484dd6d97379e309e94d9d685546a4da48"
+  },
+  "mapProperties": [
+    {
+      "name": "script",
+      "type": "string",
+      "value": "../src/main.ts"
+    },
+    {
+      "name": "worldMapId",
+      "type": "string",
+      "value": "shipyard-beach"
+    },
+    {
+      "name": "mapName",
+      "type": "string",
+      "value": "VarCamp \u00b7 Shipyard Beach"
+    },
+    {
+      "name": "defaultCameraState",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "name": "defaultMicrophoneState",
+      "type": "bool",
+      "value": false
+    }
+  ],
+  "wamSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887"
+}

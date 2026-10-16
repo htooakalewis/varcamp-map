@@ -61,7 +61,7 @@ function nativeFixture(variant = 'known') {
   const identity = { playerId: 4, name: config.botName, roomId: config.roomUrl };
   vi.stubGlobal('WA', { player: { playerId: 4, name: config.botName }, room: { id: config.roomUrl } });
   vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 4 });
-  vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1 });
+  const evidenceAt=Date.now(); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1,at:evidenceAt,leaseDeadline:evidenceAt+10000,operationBudgetMs:10000,persona:'lyra',controllerGeneration:7,playerId:4,name:config.botName,roomId:config.roomUrl });
   const frame = { async waitForFunction(fn) { expect(fn()).toBe(true); events.push('step-progress'); }, async evaluate(fn, value) { events.push('identity'); return fn(value); } };
   return { page, frame, events, identity, wrappersHandles, get modal() { return modal; }, get welcomeVisible() { return wrappers.length > 0; } };
 }
@@ -76,7 +76,7 @@ it.each(['known', 'absent', 'whitespace'])('post-start room observation accepts 
 const rejected = ['unknown-sibling', 'extra-text', 'changed-text', 'extra-button', 'extra-input', 'extra-select', 'extra-textarea', 'extra-a', 'extra-iframe', 'extra-div', 'role-control', 'editable-trigger', 'tab-control', 'panel-dialog', 'alertdialog', 'aria-modal', 'duplicate', 'ambiguous', 'wrong-wrapper', 'wrong-container', 'wrong-message-shape', 'iframe-message', 'external-dialog', 'hidden-action', 'unreadable', 'open-modal', 'stuck-modal', 'unresolved-media', 'media-on', 'missing-control', 'permissions-prompt'];
 it.each(rejected)('post-start strict room observation rejects %s without treating it as a known panel', async variant => {
   const f = nativeFixture(variant);
-  await expect(verifyRoomUI(f.page)).rejects.toThrow();
+  await expect(verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow();
   expect(f.events).not.toContain('welcome-click'); expect(f.events).not.toContain('modal-close');
 });
 it('the production heartbeat accepts only the same known panel without reopening its directory', async () => {

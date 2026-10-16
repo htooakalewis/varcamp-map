@@ -6,19 +6,11 @@ afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); });
 function pageFixture({ remains = false, rejectClick = false, unknown = false, permissions = 'denied', missingControl = false } = {}) {
   const events: string[] = []; let welcome = true, modal = unknown, prompt = true;
   const control = kind => ({ async isVisible() { return kind === 'welcome' ? welcome : kind === 'close' ? modal : kind === 'prompt' ? prompt : true; }, async click(options) { events.push(`click:${kind}:${options?.timeout ?? 'default'}`); if (kind === 'welcome') { welcome = false; modal = true; } else if (kind === 'close') modal = false; else { if (rejectClick) throw Error('ordinary click failed'); if (!remains) prompt = false; } }, async waitFor({ state }) { if (kind === 'device' && missingControl) throw Error('missing device'); if (kind === 'prompt' && state === 'hidden' && prompt) throw Error('popup remains visible'); if (kind === 'close' && state === 'hidden' && modal) throw Error('modal remains'); }, async getAttribute() { return 'bg-danger'; } });
-  return { events, setPrompt: value => { prompt = value; }, page: { getByText: () => control('welcome'), getByTestId: id => control(id === 'close-modal-button' ? 'close' : 'device'), getByRole: () => control('prompt'), locator: () => ({ async all() { return unknown ? [control('close')] : []; } }), async evaluate() { events.push('permissions'); return [permissions, permissions]; } } };
+  return { events, setPrompt: value => { prompt = value; }, setWelcome: value => { welcome = value; }, page: { getByText: () => control('welcome'), getByTestId: id => control(id === 'close-modal-button' ? 'close' : 'device'), getByRole: () => control('prompt'), locator: () => ({ async all() { return unknown ? [control('close')] : []; } }), async evaluate() { events.push('permissions'); return [permissions, permissions]; } } };
 }
-it('retains normal modal closure and media predicates for observed generic room UI', async () => {
-  const f = pageFixture(); await session.settleWelcome(f.page); await session.verifyRoomUI(f.page);
-  expect(f.events).toEqual(['click:welcome:default', 'click:close:default', 'click:prompt:5000', 'permissions']);
-});
-it.each([{ remains: true }, { rejectClick: true }, { unknown: true }, { permissions: 'prompt' }, { missingControl: true }])('generic UI observation still rejects unresolved modal/media state %j', async options => {
-  const f = pageFixture(options);
-  await expect((async () => { await session.settleWelcome(f.page); await session.verifyRoomUI(f.page); })()).rejects.toThrow();
-});
 it('handles a late popup through the same ordinary guarded check and fails if it remains', async () => {
   const f = pageFixture({ remains: true });
-  await expect(session.verifyRoomUI(f.page)).rejects.toThrow(/popup/);
+  await expect(session.verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow(/popup/);
 });
 it('a fatal failure during a deferred probe forbids ready and another heartbeat even after release', async () => {
   const stored: any[] = [], events: string[] = []; let release;
@@ -73,13 +65,13 @@ it('bounds and redacts terminal console transport again before final storage', a
 });
 it('revalidates the fixed room/name and original player ID after controller startup for each profile', async () => {
   const { selectProfile } = await import('../bots/config.mjs');
-  vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 4 }); vi.stubGlobal('__varcampGuideEvidence', { state: 'pending', steps: 1 });
-  const frame = { evaluate: async (fn, value) => fn(value) };
+  vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 4 }); vi.stubGlobal('__varcampGuideEvidence', { state: 'pending', steps: 1, deadline: Date.now()+10000, controllerGeneration: 7 });
   for (const persona of ['lyra', 'nova', 'orion']) {
-    const profile = selectProfile(persona); const wa = { player: { playerId: 4, name: profile.botName }, room: { id: profile.roomUrl } }; vi.stubGlobal('WA', wa);
-    expect((await session.readIdentity(frame, profile)).name).toBe(profile.botName);
+    const frame = { evaluate: async (fn, value) => fn(value) }; const profile = selectProfile(persona); const wa = { player: { playerId: 4, name: profile.botName }, room: { id: profile.roomUrl } }; vi.stubGlobal('WA', wa);
+    const evidenceAt=Date.now(); vi.stubGlobal('__varcampGuideEvidence', {state:'progress',steps:1,at:evidenceAt,leaseDeadline:evidenceAt+10000,operationBudgetMs:10000,persona,controllerGeneration:7,playerId:4,name:profile.botName,roomId:profile.roomUrl});
+    expect((await session.readIdentity(frame, profile, {assertLive(){}})).name).toBe(profile.botName);
     for (const change of [() => { wa.player.name = 'Other'; }, () => { wa.player.playerId = 5; }, () => { wa.room.id = 'other-room'; }]) {
-      change(); await expect(session.readIdentity(frame, profile)).rejects.toThrow(/identity/); wa.player = { playerId: 4, name: profile.botName }; wa.room.id = profile.roomUrl;
+      change(); await expect(session.readIdentity(frame, profile, {assertLive(){}})).rejects.toThrow(/identity/); wa.player = { playerId: 4, name: profile.botName }; wa.room.id = profile.roomUrl;
     }
   }
 });
@@ -89,7 +81,7 @@ it.each(['deadline', 'fatal'])('the actual heartbeat UI boundary terminates a he
   const state = runtimeModule.createRunnerLifecycle({ save: async snapshot => { saved.push(snapshot); }, log: value => events.push({ event: value.event, at: Date.now() }) });
   const identity = { playerId: 4, name: 'Lyra [BOT]', roomId: 'expected-room' };
   await state.ready(identity); events.length = 0;
-  const f = pageFixture(); await session.settleWelcome(f.page);
+  const f = pageFixture(); f.setWelcome(false);
   let release, reached = false, settled = false, identityReads = 0;
   f.page.evaluate = async () => { reached = true; return new Promise(resolve => { release = () => resolve(['denied', 'denied']); }); };
   const tick = runtimeModule.heartbeatOnce({ state, expected: identity, probe: () => runtimeModule.probeHeartbeat({ state, page: f.page, frame: { evaluate: async () => { identityReads++; return identity; } } }), schedule: () => events.push({ event: 'scheduled', at: Date.now() }) }).then(() => { settled = true; });

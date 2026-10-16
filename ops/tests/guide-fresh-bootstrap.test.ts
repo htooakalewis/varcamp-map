@@ -103,7 +103,7 @@ function fixture(options: any = {}) {
   const browser = { async newContext(settings) { record('fresh-context', settings); return context; } };
   vi.stubGlobal('document', { location: { get href() { return state.location; } }, scripts: [{ src: 'https://maps.3-1-133-135.sslip.io/varcamp-demo/assets/src-main-reviewed.js' }] });
   vi.stubGlobal('WA', { room: { get id() { return state.room; } }, player: { playerId: 7, get name() { return state.name; }, async getPosition() { positionReads++; if (options.positionError) throw options.positionError; return { ...state.position }; }, async moveTo() { moves++; throw Error('movement forbidden before controller start'); } } });
-  const frame = { isDetached: () => state.frameLost, async evaluate(fn, value) { if (state.frameLost) throw Error('frame lost'); record('frame-read'); return fn(value); }, async waitForFunction(fn) { expect(fn()).toBe(true); record('step-progress'); } };
+  const frame = { isDetached: () => state.frameLost, async evaluate(fn, value) { if (state.frameLost) throw Error('frame lost'); record('frame-read'); if (starts) record('step-progress'); return fn(value); } };
   const health = runner.createRunnerLifecycle({ profile });
   const launch = async (overrides: any = {}) => {
     const freshContext = await session.createFreshRunnerContext(browser);
@@ -111,7 +111,7 @@ function fixture(options: any = {}) {
     const action = async () => {
       const result = await session.bootstrapSession(page, { profile, fresh, assertLive: health.assertLive,
         join: async () => { url = profile.roomUrl; record('joined'); }, find: async () => { record('frame-ready'); return frame; },
-        start: async () => { record('module-start'); starts++; if (options.returnAfterStart) update({ welcome: 1 }); vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 7 }); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1 }); return { playerId: 7, name: state.name, roomId: state.room }; }, ...overrides });
+        start: async () => { record('module-start'); starts++; if (options.returnAfterStart) update({ welcome: 1 }); vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 7 }); const evidenceAt=Date.now(); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1,at:evidenceAt,leaseDeadline:evidenceAt+10000,operationBudgetMs:10000,persona:profile.persona,controllerGeneration:7,playerId:7,name:state.name,roomId:state.room }); return { playerId: 7, name: state.name, roomId: state.room }; }, ...overrides });
       await health.ready(result.identity); return result;
     };
     return runner.startupBoundary(health, action);
@@ -246,7 +246,7 @@ it('the production startup boundary closes owned resources at the unchanged120s 
 it('refuses missing/forged fresh grants and does not apply the handshake to arbitrary existing contexts', async () => {
   const f = fixture();
   for (const fresh of [undefined, {}, { fresh: true }]) {
-    await expect(session.bootstrapSession(f.page, { fresh })).rejects.toThrow(/fresh|owned/i);
+    await expect(session.bootstrapSession(f.page, { fresh, assertLive() {} })).rejects.toThrow(/fresh|owned/i);
   }
   expect(f.starts).toBe(0); expect(f.events.filter(row => row.name === 'welcome-click')).toHaveLength(0);
   expect(() => session.claimFreshBootstrap(f.context, f.page, f.profile)).toThrow(/fresh|owned/i);
@@ -257,7 +257,7 @@ it('a lifecycle grant is claimed once and cannot replay a completed fresh bootst
     await vi.advanceTimersByTimeAsync(0); await task;
     expect(() => session.claimFreshBootstrap(f.context, f.page, f.profile)).toThrow(/new owned/i);
     f.page.url = () => 'about:blank';
-    await expect(session.bootstrapSession(f.page, { profile: f.profile, fresh: f.grant, join: async () => { throw Error('grant unexpectedly replayed'); } })).rejects.toThrow(/unused fresh owned/i);
+    await expect(session.bootstrapSession(f.page, { profile: f.profile, fresh: f.grant, assertLive() {}, join: async () => { throw Error('grant unexpectedly replayed'); } })).rejects.toThrow(/unused fresh owned/i);
     expect(f.starts).toBe(1);
     expect(f.events.find(row => row.name === 'fresh-context')?.details).toEqual({ permissions: [], viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', acceptDownloads: false });
   } finally { f.close(); await task.catch(() => {}); }

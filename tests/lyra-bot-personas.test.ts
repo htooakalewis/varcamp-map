@@ -86,7 +86,7 @@ describe('three-guide public bubble simulations', () => {
   });
   it('uses truthful per-persona greetings, ignores bot chat via member name and event fallback, and keeps bot-only patrol moving', async () => {
     for (const [i, key] of (['lyra', 'nova', 'orion'] as const).entries()) {
-      const h = fixture(key, bots[i].id); await h.c.start();
+      const h = fixture(key, bots[i].id); await h.c.start();await flush();
       h.meeting([...bots.filter((_, j) => i !== j), { id: 99 }]); // fallback catches a bot whose participant name was unavailable
       h.chat('help', bots[(i + 1) % 3].id); h.chat('Gemini', 99, '  NOVA [BOT]  '); h.chat('help', bots[i].id); h.chat('help', 700); h.chat('help', undefined);
       // Unknown 99 is a human until its public author name identifies it; known bots never greet.
@@ -97,7 +97,7 @@ describe('three-guide public bubble simulations', () => {
     }
   });
   it('removes a nameless participant from human activity when public chat author identity reveals a reserved bot', async () => {
-    const h = fixture('lyra', 10); await h.c.start(); h.meeting([{ id: 99 }]);
+    const h = fixture('lyra', 10); await h.c.start();await flush(); h.meeting([{ id: 99 }]);
     const count = h.replies.length; h.chat('Gemini', 99, 'Nova [BOT]');
     expect(h.replies).toHaveLength(count); await h.step();
     expect(h.moves.length, 'a known bot must not retain a human patrol pause').toBeGreaterThan(1);
@@ -117,7 +117,7 @@ describe('three-guide public bubble simulations', () => {
     await Promise.all(hs.map(h => h.stop()));
   });
   it('reelects on joins/leaves, tie-breaks duplicate personas numerically, and only recognizes anchored prefixes', async () => {
-    const h = fixture('nova', 20); await h.c.start(); const b = h.meeting([human, bots[2]]);
+    const h = fixture('nova', 20); await h.c.start();await flush(); const b = h.meeting([human, bots[2]]);
     expect(h.replies).toHaveLength(1); b.join(bots[0]); h.chat('help'); expect(h.replies).toHaveLength(1);
     b.leave(10); h.chat('help'); expect(h.replies).toHaveLength(2); await vi.advanceTimersByTimeAsync(2000);
     b.join({ id: 19, name: 'nova [bot]' }); h.chat('Cancer'); expect(h.replies).toHaveLength(2);

@@ -2,12 +2,14 @@ import { writeFile, rename } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import { RuntimeHealth, selectProfile } from './config.mjs';
 import { failureRecord, TERMINAL_PREFIX } from './evidence.mjs';
-import { denyMediaPermissions, createFreshRunnerContext, claimFreshBootstrap, bootstrapSession, readIdentity, verifyRoomUI, captureScriptResponses } from './browser-session.mjs';
+import { denyMediaPermissions, createFreshRunnerContext, claimFreshBootstrap, bootstrapSession, verifyRoomUI, captureScriptResponses, controllerObserver } from './browser-session.mjs';
 
 export function createRunnerLifecycle({ profile = selectProfile(), save = async (_snapshot) => {}, log = (_event) => {} } = {}) {
   const health = new RuntimeHealth(profile); let terminal = false, first, queue = Promise.resolve(), scripts = [], artifacts = 'not-requested';
+  const secondaryFailures = [];
+  const secondary = (error, phase) => { if (secondaryFailures.length < 16) secondaryFailures.push(failureRecord(error, { phase })); };
   let rejectFailure; const failure = new Promise((_, reject) => { rejectFailure = reject; }); void failure.catch(() => {});
-  const snapshot = () => ({ ...health.snapshot(), failure: first ?? null, scripts, artifacts });
+  const snapshot = () => ({ ...health.snapshot(), failure: first ?? null, scripts, artifacts, secondaryFailures: [...secondaryFailures] });
   const flush = () => { queue = queue.catch(() => {}).then(() => save(snapshot())); return queue; };
   const fail = (error, context = {}) => {
     if (terminal) return; terminal = true;
@@ -15,10 +17,11 @@ export function createRunnerLifecycle({ profile = selectProfile(), save = async 
     health.fail(first.error?.message ?? 'Terminal browser/controller failure');
     // Latch and enqueue evidence before any optional artifacts or cleanup. Never throw from a listener.
     void flush().catch(() => {}); rejectFailure(error instanceof Error ? error : Error('Terminal browser/controller failure'));
-    try { log({ event: 'failed', ...snapshot() }); } catch { /* Logging cannot bypass shutdown. */ }
+    try { log({ event: 'failed', ...snapshot() }); } catch (error) { secondary(error, 'logger'); }
   };
   const assertLive = () => { if (terminal) throw Error('Runner is terminal'); };
-  return { failure, fail, assertLive, snapshot, flush,
+  return { failure, fail, assertLive, snapshot, flush, secondary,
+    observe(value) { assertLive(); health.observe(value); },
     setScripts(value) { scripts = value; }, setArtifacts(value) { artifacts = value; },
     console(message) {
       if (!message.startsWith(TERMINAL_PREFIX)) return;
@@ -76,21 +79,23 @@ export async function heartbeatOnce({ state, probe, expected, schedule }) {
 }
 // Export the same production probe for controlled host/page-boundary regressions.
 export async function probeHeartbeat({ state, page, frame, profile = selectProfile(), provenance }) {
-  await Promise.race([deadline(verifyRoomUI(page), 5000, 'Heartbeat UI probe'), state.failure]); state.assertLive();
-  const current = await Promise.race([deadline(readIdentity(frame, profile), 5000, 'Identity probe'), state.failure]); state.assertLive();
+  await Promise.race([deadline(verifyRoomUI(page, { assertLive: state.assertLive }), 5000, 'Heartbeat UI probe'), state.failure]); state.assertLive();
+  const observation = await Promise.race([controllerObserver(frame, profile, { assertLive: state.assertLive }).read(), state.failure]); state.assertLive();
+  state.observe(observation);
+  const current = observation.identity;
   if (provenance) state.setScripts(provenance.snapshot());
   return current;
 }
 export async function shutdownOwned({ state, artifact, close, artifactTimeout = 1000 }) {
-  await deadline(state.flush(), 1000, 'Failure evidence storage').catch(() => {});
+  await deadline(state.flush(), 1000, 'Failure evidence storage').catch(error => state.secondary(error, 'storage'));
   if (artifact) {
     try { await deadline(artifact(), artifactTimeout, 'Optional diagnostic artifact'); state.setArtifacts('complete'); }
-    catch { state.setArtifacts('incomplete'); }
+    catch (error) { state.secondary(error, 'artifact'); state.setArtifacts('incomplete'); }
   }
   // Closure begins despite a hung artifact or storage. The outer process deadline covers all of this.
-  const closing = close();
+  const closing = Promise.resolve().then(close);
   void state.flush().catch(() => {});
-  await closing;
+  try { await closing; } catch (error) { state.secondary(error, 'close'); await state.flush().catch(() => {}); throw error; }
 }
 
 export async function main() {
@@ -122,7 +127,7 @@ export async function main() {
       const cdp = await context.newCDPSession(page); state.assertLive();
       await denyMediaPermissions(cdp, { assertLive: state.assertLive }); state.assertLive();
       const result = await bootstrapSession(page, { profile, fresh, fail: state.fail, assertLive: state.assertLive });
-      state.setScripts(provenance.snapshot()); await state.ready(result.identity); state.assertLive();
+      state.setScripts(provenance.snapshot()); state.observe(await controllerObserver(result.frame, profile, { assertLive: state.assertLive }).read()); await state.ready(result.identity); state.assertLive();
       return { ...result, page };
     });
     const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); },
