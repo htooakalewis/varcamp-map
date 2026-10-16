@@ -62,11 +62,12 @@ describe('short Comet Maze journey',()=>{
     for(const e of l.exits)for(const p of cells(e))expect(seen.has(String(p))).toBe(true);
   });
   // Optional gate furniture must not close Orbit's old hints, restart, finish, or campus exit.
-  it('retains Orbit Maze original journey and provides a safe visible keeper area',()=>{
+  it('retains Orbit Maze original journey and its connected side gate after keeper retirement',()=>{
     const l=load('orbit-maze'),{tmj}=buildMap(l,loadTileCatalog()),free=grid(tmj),seen=reachable(tmj,[10,68]);
+    expect(l.areas.some(a=>a.name==='npc-maze-keeper')).toBe(false);
     const hint:Point[]=JSON.parse(readFileSync('world/maze-route.json','utf8')).route;
     for(const [x,y] of hint)for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)expect(free(x+dx,y+dy),`original hint blocked ${x},${y}`).toBe(true);
-    for(const name of ['from-comet','comet-gate','npc-maze-keeper']){
+    for(const name of ['from-comet','comet-gate']){
       const r=[...l.entries,...l.exits,...l.areas].find(r=>r.name===name);expect(r,`${name} absent`).toBeDefined();
       for(const p of cells(r!))expect(seen.has(String(p)),`${name} tile ${p} blocked`).toBe(true);
     }

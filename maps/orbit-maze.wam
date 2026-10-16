@@ -52,16 +52,6 @@
       "width": 128,
       "height": 96,
       "properties": []
-    },
-    {
-      "id": "npc-maze-keeper",
-      "name": "npc-maze-keeper",
-      "visible": true,
-      "x": 1408,
-      "y": 2080,
-      "width": 96,
-      "height": 96,
-      "properties": []
     }
   ],
   "entityCollections": [],

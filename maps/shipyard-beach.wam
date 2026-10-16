@@ -14,16 +14,6 @@
       "properties": []
     },
     {
-      "id": "npc-dockmaster",
-      "name": "npc-dockmaster",
-      "visible": true,
-      "x": 928,
-      "y": 576,
-      "width": 96,
-      "height": 96,
-      "properties": []
-    },
-    {
       "id": "pier-lookout",
       "name": "pier-lookout",
       "visible": true,

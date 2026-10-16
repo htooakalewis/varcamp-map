@@ -12476,15 +12476,6 @@
       "width": 4,
       "height": 2,
       "properties": []
-    },
-    {
-      "id": "npc-guide",
-      "name": "npc-guide",
-      "x": 76,
-      "y": 71,
-      "width": 3,
-      "height": 3,
-      "properties": []
     }
   ],
   "inspectionZones": [

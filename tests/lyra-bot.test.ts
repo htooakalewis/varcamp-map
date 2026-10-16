@@ -95,6 +95,7 @@ describe('audited native navigation', () => {
     await expect(guardMap(release)).resolves.toBeUndefined();
     for (const mutate of [
       (m: TiledMap) => { m.width = 127; },
+      (m: TiledMap) => { const l=m.layers.find(l=>l.name==='scenery-belowAvatar-1'); if(l?.type==='tilelayer')l.data[70*128+77]=3984; },
       (m: TiledMap) => { const l = m.layers.find(l => l.name === 'physical-collisions'); if (l?.type === 'tilelayer') l.data[70 * 128 + 70] = 1; },
       (m: TiledMap) => { m.tilesets.find(s=>s.name==='navigation-mask')!.tiles![0].properties![0].value = true; },
       (m: TiledMap) => { m.layers.find(l => l.name === 'exit-solar')!.properties![0].value = 'different.wam'; },
@@ -239,10 +240,10 @@ describe('audited WorkAdventure runtime object aliases',()=>{
   };
   it('accepts exactly the observed redundant object classes without mutating the native/runtime map',async()=>{
     const {guardMap}=await modules();const map=runtimeMap();const before=JSON.stringify(map);
-    // Independent canonical fixture identity must match the value observed inside WA.room.getTiledMap.
+    // Independent canonical fixture after exact robot retirement, with the same 21 observed WA class aliases.
     const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
     const geometry={width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')};
-    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('6b0b204ed6ea2473db67d7ec616d962344fa7cac523b5fbec7452ae24559e3b2');
+    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('70d5eca2d70d0cf4f8f10d98ed149c15491e9857aafca25a716815c6af57fc33');
     await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
   });
   it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{

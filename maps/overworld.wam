@@ -12,16 +12,6 @@
       "width": 128,
       "height": 64,
       "properties": []
-    },
-    {
-      "id": "npc-guide",
-      "name": "npc-guide",
-      "visible": true,
-      "x": 2432,
-      "y": 2272,
-      "width": 96,
-      "height": 96,
-      "properties": []
     }
   ],
   "entityCollections": [],

@@ -44,10 +44,10 @@ describe('coastal event character and preserved journeys',()=>{
     expect(l.placements.some(p=>['copy-machine','desk-coding','screen-wide'].includes(p.sprite))).toBe(false);
     for(const area of l.areas)for(const n of cells(area,l.width)){expect(mask.data[n],area.name).toBe(0);expect(seen.has(n),area.name).toBe(true);}
   });
-  it('keeps the dockmaster name readable against bright beach sand',()=>{
-    const l=addNpcGuides([load('shipyard-beach')])[0],label=l.signs!.find(s=>s.name==='npc-name-dockmaster')!;
-    const luminance=(hex:string)=>{const c=hex.match(/[a-f\d]{2}/gi)!.map(n=>parseInt(n,16)/255).map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4);return c[0]*0.2126+c[1]*0.7152+c[2]*0.0722;};
-    const a=luminance(label.color!),b=luminance('#efd293');expect((Math.max(a,b)+0.05)/(Math.min(a,b)+0.05)).toBeGreaterThanOrEqual(4.5);
+  it('retires the dockmaster label while preserving the ordinary beach bar sign',()=>{
+    const l=addNpcGuides([load('shipyard-beach')])[0];
+    expect(l.signs!.some(s=>s.name==='npc-name-dockmaster')).toBe(false);
+    expect(l.signs!.find(s=>s.name==='dockmaster-station')!.text).toBe('BEACH BAR');
   });
   it.each(['shipyard-beach','constellation-shore','fa-ship'])('%s keeps every entry, exit and activity area clear and connected',id=>{
     const l=load(id),{mask,seen}=walk(l);

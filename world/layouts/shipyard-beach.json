@@ -33404,15 +33404,6 @@
       "height": 3
     },
     {
-      "id": "npc-dockmaster",
-      "name": "npc-dockmaster",
-      "properties": [],
-      "x": 29,
-      "y": 18,
-      "width": 3,
-      "height": 3
-    },
-    {
       "id": "pier-lookout",
       "name": "pier-lookout",
       "properties": [],

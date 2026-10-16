@@ -4401,15 +4401,6 @@
       "width": 4,
       "height": 3,
       "properties": []
-    },
-    {
-      "id": "npc-maze-keeper",
-      "name": "npc-maze-keeper",
-      "x": 44,
-      "y": 65,
-      "width": 3,
-      "height": 3,
-      "properties": []
     }
   ],
   "entries": [

@@ -1,4 +1,173 @@
 {
   "schemaVersion": 1,
-  "revisions": []
+  "revisions": [
+    {
+      "path": "maps/comet-maze.tmj",
+      "fromSha256": "ee088f0d2ff68df5149fd97dd4fffe0ffe5839bc47c70e34b9c947203f672428",
+      "toSha256": "ecd4bb38ad032e6d54a7769dde86d10fbc12fe3be4f27be2f22f78e115bbbcf7",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+    },
+    {
+      "path": "maps/comet-maze.wam",
+      "fromSha256": "a4a5af8e8a7fb2618edda289e3ba01385911ff4078fd09f118afd032abd70294",
+      "toSha256": "a99a45e44e9482adf7ccac399f0eec87db2e331e5972df3d7d3ea6c0cf3a257e",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "fromSha256": "9f210d0598c1baf41e133599615f338b30780c6474c18cd29ba8cf22f02b107c",
+      "toSha256": "14b350d8dae381776dd60f9a4140c682874f20d42d10238877ec99eb9f143528",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+    },
+    {
+      "path": "maps/orbit-maze.wam",
+      "fromSha256": "03ab6053659bf5cc68048a2e48f74bb9ef2d356e260a2a98c40f63affb85eb55",
+      "toSha256": "5a9297f37c82ae771a08a6c95095d9364b9d1af3e910bc273354bed154c319be",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "6a94d48491f93d0a07581919f5196d32efb141225c051407ead62be414702548",
+      "toSha256": "f75ace0a391e667af25516835ad6445dd58e0c78cb82cd5cf91c7e19b5626a07",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+    },
+    {
+      "path": "maps/overworld.wam",
+      "fromSha256": "065f6d2245f49a1bba855da98233da18224078a628a210839d34311bdd9d0fad",
+      "toSha256": "2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+    },
+    {
+      "path": "maps/preview/comet-maze.tmj",
+      "fromSha256": "37e83b0ae6e78d5cb5ede750e5fa65015b7ed9293a662a40dcf2a3154728008c",
+      "toSha256": "bb938050f5e41e771ba7abbc60c2e90474f1b40035b26ef0504d967d05a368cb",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+    },
+    {
+      "path": "maps/preview/orbit-maze.tmj",
+      "fromSha256": "80e6751e497dc52c767a567d834cdd998b968581e887900cf4b92be507771abc",
+      "toSha256": "1cc8853b47c5b82401654a18f80d0ca5010cb5273102f089910dda14ae138dde",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "e8427a3680c82ec80866f00a687faa8e9e99823d30d743a0b778e35e0d71c3ed",
+      "toSha256": "9a4b99d4b98a04da24f3fbef6aab38a9e032425a764ae5269838722202ed9b7f",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "ee1475ddc49502813a5750273b05ad3918bacc82cae23d27b263b855d10dbd4f",
+      "toSha256": "a7d2c0dd5c40a87b14e2363a36bf7abde61491146b94a48dbe0d42277ae938a1",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "615ff0cafe9d1acc267aa6db5bcc83109bff3a5e28516a8d6cc67a7209f4a98c",
+      "toSha256": "4e179e1cd7e2018bf136e03ee075a2973e27ee236f7b1c2c2ef44ca2e172b601",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+    },
+    {
+      "path": "maps/shipyard-beach.wam",
+      "fromSha256": "5fd938052ed693d080a1fa79c81e61b261b0d452f7843235217e5b11aeb11d36",
+      "toSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+    },
+    {
+      "path": "src/npc/interactions.ts",
+      "fromSha256": "e3a311faa0fa6b1fa606b2526f41d2885474ab56511d9d65ac83fece2baade17",
+      "toSha256": "fa43672e9b6985a5087bc7146e01ac9850fa98c986b01238c9cde522da985c72",
+      "reason": "Retire legacy area-triggered Q&A registration so older live WAM conversation areas cannot offer invisible Talk actions."
+    },
+    {
+      "path": "src/runtime.ts",
+      "fromSha256": "3d4e2d1356b25fb7fcc33b879b92c7f182e225e350f007ba914ca19e7462c4fa",
+      "toSha256": "bc3100fb4625ce5d28b7f83a96ece624738263caf6b3d724614e289d378567ee",
+      "reason": "Stop initializing legacy static Q&A robot interactions; retain quest registration and scene disposal."
+    },
+    {
+      "path": "tests/authored-activities.test.ts",
+      "fromSha256": "28fe397cf16abcf8ccb243d30aeda11dfc343d25c4a0ab6567821761419d7659",
+      "toSha256": "6bf01e8361d01435ba87d3affffe1c87772c8e6578ec41603907eaca76ee3d6c",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/campus-decoration.test.ts",
+      "fromSha256": "fdf2e220d4e78def057122607b4edd63d93d47104ef42926136a02a1aec9e73c",
+      "toSha256": "0e851c37dea1b06921d3a74a573bd9f4899f70cc70cfc075def457227dfd525c",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
+      "toSha256": "66e63885c2c818d733bcec1350060569e749f1363e1f9a0efffc84b2f9ed963f",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "4f00ffbd0baeb3f006fc9865f404409c592083d4f8e1eb21772f92b8d984013b",
+      "toSha256": "5ac97dc3827de6600d4b9ffb58e3d0d0442987b09418afa100e8aed66f5be784",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/comet-maze.test.ts",
+      "fromSha256": "3817303a98c03c77e5973dc67f5d44cc779fb59f74cf0ad7670db284944c0e31",
+      "toSha256": "01d18e77bb2d42bf4d9e28361bb01eb022836cc781a0ed1e61cde9bd4ceb1b38",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "352e0a1162cc45e848966c3858c964909e44679870a4c21d6486be585c290f85",
+      "toSha256": "0840ed2ef92b534d129581a4e4ece4e7fd46319dc948dff74fd112104ea34c52",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/npc-interactions.test.ts",
+      "fromSha256": "0d3fb396771f628005ceaa632b7bfa5dd1f6996d4a5060ee395668d734d557bf",
+      "toSha256": "7cbe774045993f7ad9f7cd41ed926ae5635f953dd7b095fdd7865fcb573f5b05",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/npc-maps.test.ts",
+      "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
+      "toSha256": "b78d2200a288af1dd1f2b0957c44d59e12fa386b05f54346c40970b73e24a217",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/shipyard-beach.test.ts",
+      "fromSha256": "851bb8a18701d6f5ea8245fc5489ed97a9d959731672d05f3a7a83e8ceda3507",
+      "toSha256": "61ba1f67ff7e7040dda3f3a405c8b177c79420ae1cb2f940b3836b97593ed35e",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/zodiac-wheel.test.ts",
+      "fromSha256": "bd77e1484413397e7e6bdf36bfbe6e75fb5821b03be913866bd6cd99fab89101",
+      "toSha256": "649895b3211dd2689af5402415e978b1fa4878ae92ecde6623d379ecc3e30174",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tools/maps/npc-guides.ts",
+      "fromSha256": "b6a4b29573c7112d8ac49b95acd931917b1f0ddba629d33ff84ed7e393abef17",
+      "toSha256": "5167bffcfbd3745de9247316680b522adcb6e9b7b5701210d0981d9ead3337d0",
+      "reason": "Keep the authoring API compatible while idempotently removing only the four retired static Q&A hosts and their labels/areas instead of reinjecting them."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "f907b7a7810471d341c9d16a6cdcc7a6054e73442af0f8a5def1cb44f6a1e725",
+      "toSha256": "a6a237bca783012fa1b3f7f30e653e21b63a7692c977736ece06789eeb918b0c",
+      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
+      "toSha256": "4f80ae57e635a8eb1efe1ba7e44eaca109a750ec455f7db169259c725a31a351",
+      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
+      "toSha256": "541f8125997ca62cfe767a535447243de5190638cbbecc016fe01107584f8a9a",
+      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
+    }
+  ]
 }

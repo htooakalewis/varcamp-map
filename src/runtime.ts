@@ -5,7 +5,6 @@ import { registerInteractions } from './quests/interactions';
 import { venueDestination } from './navigation';
 import { WORLD_CATALOG } from './world/catalog';
 import { emptyJournalView, JOURNAL_KEY, type JournalView } from './journal/view';
-import { registerNpcInteractions } from './npc/interactions';
 
 /** Structural subset of the installed 1.32.10 API; no administration metadata. */
 export interface WorkAdventureApi {
@@ -37,6 +36,5 @@ export async function initializeWorld(api: WorkAdventureApi): Promise<void> {
  publishView(api, emptyJournalView);
  // Interactions own load errors and retain this store for the entire map scene.
  const dispose = registerInteractions(api, store, WORLD_CATALOG);
- const disposeNpcs = registerNpcInteractions(api);
- if (typeof window !== 'undefined') window.addEventListener('pagehide', () => { dispose(); disposeNpcs(); }, { once: true });
+ if (typeof window !== 'undefined') window.addEventListener('pagehide', () => { dispose(); }, { once: true });
 }

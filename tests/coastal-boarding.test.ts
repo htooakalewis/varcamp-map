@@ -14,7 +14,7 @@ const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y
 function built(id:string){const l=addNpcGuides([source(id)])[0],{tmj}=buildMap(l,loadTileCatalog());return{l,tmj,mask:(tmj.layers.find(t=>t.name==='physical-collisions') as TileLayer).data};}
 function walk(l:MapLayout,mask:number[],size=1){const e=l.entries.find(e=>e.isDefault)!,start=e.y*l.width+e.x,q=[start],seen=new Set(q);const clear=(x:number,y:number)=>x>=0&&y>=0&&x+size<=l.width&&y+size<=l.height&&!cells({x,y,width:size,height:size},l.width).some(n=>mask[n]);expect(clear(e.x,e.y),'default cannot accommodate a clear arrival footprint').toBe(true);for(let h=0;h<q.length;h++){const n=q[h],x=n%l.width,y=Math.floor(n/l.width);for(const[nx,ny]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const k=ny*l.width+nx;if(clear(nx,ny)&&!seen.has(k)){seen.add(k);q.push(k);}}}return seen;}
 describe('native coastal boarding and nautical proportions',()=>{
- it('preserves the other maps and assets except the separately verified central start alias',()=>{const before=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-sha256.json','utf8')) as Record<string,string>;for(const[path,hash]of Object.entries(before))if((path.startsWith('maps/')&&!/^maps\/(?:shipyard-beach|fa-ship)\.(?:tmj|wam)$/.test(path))||path.startsWith('assets/')||path.startsWith('world/layouts/')&&!['world/layouts/shipyard-beach.json','world/layouts/fa-ship.json'].includes(path)){
+ it('preserves other maps/assets except the separately verified start alias and exact robot retirement',()=>{const before=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-sha256.json','utf8')) as Record<string,string>;for(const[path,hash]of Object.entries(before))if((path.startsWith('maps/')&&!/^maps\/(?:shipyard-beach|fa-ship)\.(?:tmj|wam)$/.test(path))||path.startsWith('assets/')||path.startsWith('world/layouts/')&&!['world/layouts/shipyard-beach.json','world/layouts/fa-ship.json'].includes(path)){
   if(path==='maps/overworld.tmj'||path==='world/layouts/overworld.json'){
    const frozen=readFileSync(`docs/qa/plaza-start-2026-10-16/before/${path}`);
    expect(createHash('sha256').update(frozen).digest('hex'),path+' retained pre-fix baseline').toBe(hash);
@@ -31,7 +31,18 @@ describe('native coastal boarding and nautical proportions',()=>{
     expect(aliases).toEqual([{name:'start',x:63,y:65,width:2,height:2}]);
     current.entries=current.entries.filter((e:{name:string})=>e.name!=='start');
    }
-   expect(current,path+' changed beyond its start alias').toEqual(original);
+   if(path.endsWith('.tmj')){
+    const l=original.layers.find((l:{name:string})=>l.name==='scenery-belowAvatar-1');l.data[70*128+77]=0;l.data[71*128+77]=0;
+    const names=original.layers.find((l:{name:string})=>l.name==='wayfinding-text');names.objects=names.objects.filter((o:{name:string})=>o.name!=='npc-name-guide');
+   }else original.areas=original.areas.filter((a:{name:string})=>a.name!=='npc-guide');
+   expect(current,path+' changed beyond its start alias and exact robot removal').toEqual(original);
+  }else if(['maps/comet-maze.tmj','maps/comet-maze.wam','maps/orbit-maze.tmj','maps/orbit-maze.wam','maps/overworld.wam','world/layouts/orbit-maze.json'].includes(path)){
+   // The old coastal receipt stays immutable; exact native semantic deltas are
+   // independently checked in npc-maps.test.ts, and publication pins their bytes.
+   const revisions=JSON.parse(readFileSync('publication/revisions/2026-10-16-shared-guides.json','utf8')).revisions;
+   const revision=revisions.find((r:{path:string})=>r.path===path);expect(revision,path+' reviewed retirement').toBeDefined();
+   expect(revision.fromSha256,path+' original coastal receipt').toBe(hash);
+   expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(revision.toSha256);
   }else expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(hash);
  }const old=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-inputs/art/tile-catalog.json.before','utf8')),catalog=loadTileCatalog();for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);});
 

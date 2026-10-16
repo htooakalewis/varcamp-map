@@ -36,7 +36,7 @@ describe('separate harbor, shore and ship journeys',()=>{
     expect(wam.mapUrl).toBe('shipyard-beach.tmj');expect(validateWam(wam)).toEqual([]);
   });
   it('keeps harbor workshop, shore games and vessel destinations in their owning scenes',()=>{
-    const ownership={'shipyard-beach':['harbor-workshop','npc-dockmaster','pier-lookout'],'constellation-shore':['beach-games','picnic-bay','shore-lounge'],'fa-ship':['fa-ship-cockpit','fa-ship-cargo','cargo-deck','fa-ship-lounge']};
+    const ownership={'shipyard-beach':['harbor-workshop','pier-lookout'],'constellation-shore':['beach-games','picnic-bay','shore-lounge'],'fa-ship':['fa-ship-cockpit','fa-ship-cargo','cargo-deck','fa-ship-lounge']};
     for(const[id,names]of Object.entries(ownership)){const l=load(id),{tmj,wam}=buildMap(l,loadTileCatalog()),{seen,blocked}=physical(tmj,l.entries.find(e=>e.isDefault)!);expect(l.areas.map(a=>a.name).sort()).toEqual([...names].sort());
      for(const r of [...l.entries,...l.exits,...l.areas])for(const c of cells(r,l.width)){expect(blocked[c],`${id} ${r.name} blocked ${c}`).toBe(0);expect(seen.has(c),`${id} ${r.name} unreachable ${c}`).toBe(true);}
      expect(wam.areas.some(a=>a.properties.some(p=>p.type==='livekitRoomProperty'))).toBe(false);

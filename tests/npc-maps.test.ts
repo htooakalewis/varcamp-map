@@ -1,44 +1,57 @@
+import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { expect, it } from 'vitest';
-import { composeZodiacWheel } from '../tools/maps/zodiac-wheel';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import { buildMap } from '../tools/maps/builder';
-import { loadTileCatalog } from '../tools/art/catalog';
 import type { MapLayout } from '../tools/maps/types';
 
-it('renders reachable guide characters on the plaza, both mazes and beach without introducing collision', () => {
- const layouts = addNpcGuides(composeZodiacWheel(readdirSync('world/layouts').filter(f => f.endsWith('.json')).map(f => JSON.parse(readFileSync(`world/layouts/${f}`, 'utf8')) as MapLayout)));
- const tiles = loadTileCatalog();
- for (const [map, npc] of [['overworld','guide'],['orbit-maze','maze-keeper'],['comet-maze','maze-keeper'],['shipyard-beach','dockmaster']]) {
-  const layout = layouts.find(l => l.id === map)!;
-  const character = layout.placements.find(p => p.id === `npc-character-${npc}`);
-  expect(character, `visible character in ${map}`).toBeDefined();
-  expect(tiles[character!.sprite].blockingCells).toEqual([]);
-  const area = layout.areas.find(a => a.name === `npc-${npc}`)!; expect(area).toBeDefined();
-  const { tmj } = buildMap(layout, tiles); const mask = tmj.layers.find(l => l.name === 'physical-collisions');
-  if (mask?.type !== 'tilelayer') throw Error('missing collision mask');
-  const entry = layout.entries.find(e => e.isDefault)!; const start = entry.y * layout.width + entry.x;
-  const queue = [start], seen = new Set(queue);
-  for (let head = 0; head < queue.length; head++) for (const next of [queue[head]-layout.width,queue[head]+layout.width,queue[head]-1,queue[head]+1]) if (next >= 0 && next < layout.width*layout.height && Math.abs(next%layout.width-queue[head]%layout.width)<=1 && !mask.data[next] && !seen.has(next)) { seen.add(next); queue.push(next); }
-  for (let y=area.y;y<area.y+area.height;y++) for(let x=area.x;x<area.x+area.width;x++) expect(seen.has(y*layout.width+x), `${map} conversation reachable`).toBe(true);
- }
-// The composite fixture builds four scenes. Its cold hub validates three sponsor PNGs
-// in separate bounded decoder processes (5 s each), plus collision/export traversal.
-}, 20_000);
+const load = (id: string): MapLayout => JSON.parse(readFileSync(`world/layouts/${id}.json`, 'utf8'));
+const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const hosts = [['overworld','guide'],['orbit-maze','maze-keeper'],['comet-maze','maze-keeper'],['shipyard-beach','dockmaster']] as const;
 
-it('adds readable guide names once without mutating the authored furniture or conversation zones',()=>{
- const input=composeZodiacWheel(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
- const before=structuredClone(input),once=addNpcGuides(input),twice=addNpcGuides(once);
- expect(input).toEqual(before);
- for(const [map,npc] of [['overworld','guide'],['orbit-maze','maze-keeper'],['comet-maze','maze-keeper'],['shipyard-beach','dockmaster']]){
-  const layout=twice.find(l=>l.id===map)!;
-  expect(layout.placements.filter(p=>p.id===`npc-character-${npc}`)).toHaveLength(1);
-  const labels=layout.signs!.filter(s=>s.name===`npc-name-${npc}`);expect(labels).toHaveLength(1);
-  const label=labels[0];expect(label.text).toMatch(/Lyra|Aster|Nova/);
-  for(const p of layout.placements.filter(p=>p.layer==='props'))expect(label.x<p.x+p.width&&label.x+label.width>p.x&&label.y<p.y+p.height&&label.y+label.height>p.y,`${map} name covered by ${p.id}`).toBe(false);
-  for(const s of layout.signs!.filter(s=>s!==label))expect(label.x<s.x+s.width&&label.x+label.width>s.x&&label.y<s.y+s.height&&label.y+label.height>s.y,`${map} name covers ${s.name}`).toBe(false);
-  const existing=before.find(l=>l.id===map)!;
-  expect(layout.placements.filter(p=>!p.id.startsWith('npc-character-'))).toEqual(existing.placements);
-  expect(layout.areas.filter(a=>a.name!==`npc-${npc}`)).toEqual(existing.areas.filter(a=>a.name!==`npc-${npc}`));
+it.each(hosts)('retires %s robots and conversation areas even when older authored layouts contain them', (map, npc) => {
+ const input=load(map),area=`npc-${npc}`;
+ input.areas.push({id:area,name:area,x:1,y:1,width:3,height:3,properties:[]});
+ input.placements.push({id:`npc-character-${npc}`,sprite:area,x:2,y:0,width:1,height:2,layer:'props'});
+ input.signs ??= [];input.signs.push({name:`npc-name-${npc}`,text:'Retired robot',x:1,y:4,width:9,height:1});
+ const before=structuredClone(input),once=addNpcGuides([input])[0],twice=addNpcGuides([once])[0];
+ expect(input).toEqual(before);expect(twice).toEqual(once);
+ expect(once.placements).toEqual(before.placements.filter(p=>p.id!==`npc-character-${npc}`));
+ expect(once.signs).toEqual(before.signs!.filter(s=>s.name!==`npc-name-${npc}`));
+ expect(once.areas).toEqual(before.areas.filter(a=>a.name!==area));
+});
+
+it('never recreates the retired robots from any of the 33 authored layouts', () => {
+ const layouts=readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>load(f.slice(0,-5)));
+ const output=addNpcGuides(layouts);
+ for(const l of output){
+  expect(l.placements.filter(p=>p.id.startsWith('npc-character-'))).toEqual([]);
+  expect(l.signs?.filter(s=>s.name.startsWith('npc-name-'))??[]).toEqual([]);
+  expect(l.areas.filter(a=>a.name.startsWith('npc-'))).toEqual([]);
  }
+ for(const l of layouts.filter(l=>!hosts.some(([id])=>id===l.id)))expect(output.find(o=>o.id===l.id)).toEqual(l);
+});
+
+// Independently derived from d669f9b native sources by deleting only the eight
+// reviewed tile values, four npc-name objects and four named WAM areas. These
+// exact semantic receipts protect every unrelated GID/object/area/tileset/id.
+const receipts = [
+ ['overworld','0e2d4fff09d8476eed187ae8a25bfdbd72182a35846ad02b1f89a62fcd8647d1','d814b31d260514f738f6a84bc6da27ce9f16daf7e2076209a79e7b17b9e047d2','52144728bfac5871f254558ad6ab8219c6771f45192fccc5417d995807f7a202'],
+ ['orbit-maze','83089e4f3bde8114a9d6af7a740b4d188507197045cbd7a1ce2040e5e755dc96','d68e937981c85baa78afcefe8c1307612cad57e6132846fa1751b0c3c8cd9251','7d5488c561aa1edc382d50a3bf300097f07b6c751613ee7bad50a5acd549673d'],
+ ['comet-maze','eda31556f69606df4710529b3fb857860b11478ce0af7a886e6c07e7daf83844','f5a3e2ac2ceefd0dbaa580bf64c246321c4fdfeb863bc7a8e327076d77b059b3','a3ca03b872ca67d4f31e0137c9d839836f1058a92998a0552a077d74d5e722d4'],
+ ['shipyard-beach','c656d02d3e7675dc3cbe54ac20649c1be6c93aec8969be5249c805bc918db11e','7cffc6dff554af782ae81458003778d0f35d2b9356145d4fb4c370386df62b4e','8e25036aa5030b792cb3661955b9508f84b9c207b166f75a49935b3a44510f3c'],
+];
+it.each(receipts)('removes only reviewed %s native robot data while preserving collisions and every unrelated field', (id, tmjHash, wamHash, maskHash) => {
+ const tmj=JSON.parse(readFileSync(`maps/${id}.tmj`,'utf8')),wam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
+ expect(digest(tmj)).toBe(tmjHash);expect(digest(wam)).toBe(wamHash);
+ expect(digest(tmj.layers.find((l:{name:string})=>l.name==='physical-collisions').data)).toBe(maskHash);
+});
+it('has no visible robot tile or name in any native map and keeps the ordinary BEACH BAR sign', () => {
+ for(const file of readdirSync('maps').filter(f=>f.endsWith('.tmj'))){
+  const tmj=JSON.parse(readFileSync(`maps/${file}`,'utf8'));
+  for(const s of tmj.tilesets.filter((s:{image:string})=>s.image.endsWith('/guides.png')))
+   for(const l of tmj.layers)expect((l.data??[]).filter((g:number)=>g>=s.firstgid&&g<s.firstgid+s.tilecount)).toEqual([]);
+  for(const l of tmj.layers)expect((l.objects??[]).filter((o:{name:string})=>o.name.startsWith('npc-name-'))).toEqual([]);
+ }
+ const beach=JSON.parse(readFileSync('maps/shipyard-beach.tmj','utf8'));
+ expect(beach.layers.flatMap((l:{objects?:unknown[]})=>l.objects??[]).find((o:{name:string})=>o.name==='dockmaster-station').text.text).toBe('BEACH BAR');
 });
