@@ -22,9 +22,9 @@ it('pins one browser dependency separately and keeps the browser image build con
   expect(readdirSync(new URL('../bots/', import.meta.url))).toContain('PLAYWRIGHT-LICENSE');
 });
 
-it('uses the byte-pinned official default-deny seccomp profile for Chromium namespaces without privilege escalation', () => {
+it('uses the byte-pinned derived default-deny seccomp profile for Chromium namespaces without privilege escalation', () => {
   const profileBytes = read('seccomp.json'); const profile = JSON.parse(profileBytes);
-  expect(createHash('sha256').update(profileBytes).digest('hex')).toBe('cc3e61cabda6bbc1e53e54d27ba4d55a9d3be829b6dd1a596f4a7b31b1cc7849');
+  expect(createHash('sha256').update(profileBytes).digest('hex')).toBe('f922c7c9bfc1ece0b72b244e56dc85756ded002c837fb46054cfd8b275c74b6b');
   expect(profile.defaultAction).toBe('SCMP_ACT_ERRNO');
   expect(profile.archMap.some(a => a.architecture === 'SCMP_ARCH_AARCH64')).toBe(true);
   const namespaceRule = profile.syscalls.find(rule => rule.comment === 'Allow create user namespaces');
@@ -33,4 +33,35 @@ it('uses the byte-pinned official default-deny seccomp profile for Chromium name
   const args = buildCreateArgs(`sha256:${'a'.repeat(64)}`, '/project/ops/bots/seccomp.json');
   expect(args.filter((_, index) => args[index - 1] === '--security-opt')).toEqual(['no-new-privileges:true', 'seccomp=/project/ops/bots/seccomp.json']);
   expect(args).not.toContain('unconfined'); expect(args).not.toContain('SYS_ADMIN');
+});
+
+
+it('retains the chroot sandbox-sealing syscall when Docker filters rules against an empty bounding capability set', () => {
+  const profile = JSON.parse(read('seccomp.json'));
+  const boundingCapabilities: string[] = [];
+  // Docker 29.8.2 / Moby 8af9fe3 seccomp loader excludes Includes.Caps rules
+  // when a required capability is missing from the initial OCI bounding set.
+  const effectiveRules = profile.syscalls.filter(rule =>
+    rule.names.includes('chroot') &&
+    (rule.includes?.caps ?? []).every(cap => boundingCapabilities.includes(cap)) &&
+    !(rule.excludes?.caps ?? []).some(cap => boundingCapabilities.includes(cap)));
+  expect(effectiveRules.map(rule => rule.action)).toEqual(['SCMP_ACT_ALLOW']);
+  expect(effectiveRules[0].includes).toEqual({});
+  expect(effectiveRules[0].excludes).toEqual({});
+  expect(effectiveRules[0].args).toEqual([]);
+  const args = buildCreateArgs(`sha256:${'a'.repeat(64)}`, '/project/ops/bots/seccomp.json');
+  expect(args[args.indexOf('--cap-drop') + 1]).toBe('ALL');
+  expect(args).not.toContain('--cap-add');
+  expect(args).toContain('no-new-privileges:true');
+  expect(args[args.indexOf('--user') + 1]).toBe('1000:1000');
+});
+
+it('reconstructs the exact upstream profile bytes by restoring only the chroot capability condition', () => {
+  const profile = JSON.parse(read('seccomp.json'));
+  const chrootRules = profile.syscalls.filter(rule => rule.names.includes('chroot'));
+  expect(chrootRules).toHaveLength(1);
+  expect(chrootRules[0].names).toEqual(['chroot']);
+  chrootRules[0].includes = { caps: ['CAP_SYS_CHROOT'] };
+  const upstreamBytes = JSON.stringify(profile, null, '\t') + '\n';
+  expect(createHash('sha256').update(upstreamBytes).digest('hex')).toBe('cc3e61cabda6bbc1e53e54d27ba4d55a9d3be829b6dd1a596f4a7b31b1cc7849');
 });
