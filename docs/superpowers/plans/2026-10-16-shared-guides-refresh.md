@@ -73,6 +73,12 @@ Focused serial regressions cover all twelve names/Burmese/numeric compatibility,
 - [ ] Build actual final module, pin exact SHA/size into all profiles/docs, rebuild for deterministic digest; update exact inventories preserving all 303 original receipts. Focused serial tests only, source checker/build/diff check, self-review and source commit. No browser/server/AWS/push/runtime rollout by this source worker.
 - [ ] Coordinator obtains independent final source/security/isolation review and current resource preflight before authorizing one finite ARM64 canary. A separate decision based on real canary evidence gates sibling rollout. No error allowlists, retries, autorestarts, SDK/core changes or deadline increases.
 
+#### Task 4 reviewed fix3 amendment: positive fresh welcome acknowledgement
+
+The approved third-round reassessment replaces the optional instantaneous welcome decision only for the production runner's own fresh isolated context/single page and fixed overworld/profile/spawn. Issue a single-use lifecycle grant, validate public map/room/name/spawn without movement, await the unique exact welcome action, normally activate, validate native title plus named modal iframe's actual reviewed source ending `#directory`, close normally, then await final action absence and recheck before normal media. Observe consumed/pending immediately after activation; removal may span closure, so never await absence before closing. Initial startup cannot use the known-panel classifier as an exemption; post-start strict observation stays separate and never reopens welcome.
+
+Failing-first asynchronous tests must deliver welcome independently after API/frame readiness while media is already visible, exercise residual removal across close, all three profile/media variants, invalid UI/map/spawn/context/frame and fatal late-continuation paths. Preserve default15s actions, outer120s startup, normal media5s, identity5s, actual cleanup10s, no retries/forced input/native writes/movement/classifier expansion. The observed canary interception identifies neither blocker text nor exact welcome timing; do not infer a historical native/Abort fix. Build/checker/exact source hashes, unchanged module/maps and independent scoped review precede another coordinator runtime decision.
+
 ### Task 5: Coordinator release and actual user acceptance
 
 **Files:** Private QA/release plans only; source documentation corrections if review requires them through implementer.

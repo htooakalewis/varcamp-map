@@ -1,5 +1,5 @@
 import { afterEach, expect, it, vi } from 'vitest';
-import { bootstrapSession, verifyRoomUI } from '../bots/browser-session.mjs';
+import { verifyRoomUI } from '../bots/browser-session.mjs';
 import { createRunnerLifecycle, heartbeatOnce, probeHeartbeat } from '../bots/runner.mjs';
 import { config } from '../bots/config.mjs';
 
@@ -21,7 +21,7 @@ function panel() {
   return { wrapper: node('DIV', 'popupwrapper popupwrapper-0 w-full flex-1 svelte-x7qetx', [container]), container, inner, trigger };
 }
 function nativeFixture(variant = 'known') {
-  const tree = panel(), events: string[] = []; let modal = variant === 'open-modal', prompt = true;
+  const tree = panel(), events: string[] = []; let modal = ['open-modal', 'stuck-modal'].includes(variant), prompt = true;
   const wrappers: any[] = variant === 'absent' ? [] : [tree.wrapper];
   const dialogs: any[] = [];
   if (variant === 'extra-text') tree.inner.content.push('Unexpected text');
@@ -65,22 +65,19 @@ function nativeFixture(variant = 'known') {
   const frame = { async waitForFunction(fn) { expect(fn()).toBe(true); events.push('step-progress'); }, async evaluate(fn, value) { events.push('identity'); return fn(value); } };
   return { page, frame, events, identity, wrappersHandles, get modal() { return modal; }, get welcomeVisible() { return wrappers.length > 0; } };
 }
-it.each(['known', 'absent', 'whitespace'])('the production bootstrap reaches ready with one start when native welcome panel is %s after modal close', async variant => {
-  const f = nativeFixture(variant); let starts = 0;
-  const state = createRunnerLifecycle();
-  const result = await bootstrapSession(f.page, { join: async () => {}, find: async () => f.frame, start: async () => { starts++; return f.identity; }, assertLive: state.assertLive });
-  await state.ready(result.identity);
-  expect(starts).toBe(1); expect(state.snapshot().healthy).toBe(true); expect(f.modal).toBe(false);
-  expect(f.events.filter(value => value === 'welcome-click')).toHaveLength(variant !== 'absent' ? 1 : 0);
-  expect(f.events.filter(value => value === 'modal-close')).toHaveLength(variant !== 'absent' ? 1 : 0);
-  expect(f.events).toContain('step-progress'); expect(f.events).toContain('identity'); expect(f.events).toContain('media-click:5000');
+it.each(['known', 'absent', 'whitespace'])('post-start room observation accepts %s native panel state without replaying fresh onboarding', async variant => {
+  const f = nativeFixture(variant); let scheduled = 0; const state = createRunnerLifecycle();
+  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame }), schedule: () => { scheduled++; } });
+  expect(state.snapshot().healthy).toBe(true); expect(scheduled).toBe(1); expect(f.modal).toBe(false);
+  expect(f.events).not.toContain('welcome-click'); expect(f.events).not.toContain('modal-close');
+  expect(f.events).toContain('identity'); expect(f.events).toContain('media-click:5000');
   expect(f.welcomeVisible).toBe(variant !== 'absent');
 });
 const rejected = ['unknown-sibling', 'extra-text', 'changed-text', 'extra-button', 'extra-input', 'extra-select', 'extra-textarea', 'extra-a', 'extra-iframe', 'extra-div', 'role-control', 'editable-trigger', 'tab-control', 'panel-dialog', 'alertdialog', 'aria-modal', 'duplicate', 'ambiguous', 'wrong-wrapper', 'wrong-container', 'wrong-message-shape', 'iframe-message', 'external-dialog', 'hidden-action', 'unreadable', 'open-modal', 'stuck-modal', 'unresolved-media', 'media-on', 'missing-control', 'permissions-prompt'];
-it.each(rejected)('the production bootstrap rejects %s before any module start', async variant => {
-  const f = nativeFixture(variant); let starts = 0;
-  await expect(bootstrapSession(f.page, { join: async () => {}, find: async () => f.frame, start: async () => { starts++; return f.identity; } })).rejects.toThrow();
-  expect(starts).toBe(0);
+it.each(rejected)('post-start strict room observation rejects %s without treating it as a known panel', async variant => {
+  const f = nativeFixture(variant);
+  await expect(verifyRoomUI(f.page)).rejects.toThrow();
+  expect(f.events).not.toContain('welcome-click'); expect(f.events).not.toContain('modal-close');
 });
 it('the production heartbeat accepts only the same known panel without reopening its directory', async () => {
   const f = nativeFixture(); const state = createRunnerLifecycle(); let scheduled = 0;

@@ -2,7 +2,7 @@ import { writeFile, rename } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import { RuntimeHealth, selectProfile } from './config.mjs';
 import { failureRecord, TERMINAL_PREFIX } from './evidence.mjs';
-import { denyMediaPermissions, bootstrapSession, readIdentity, verifyRoomUI, captureScriptResponses } from './browser-session.mjs';
+import { denyMediaPermissions, createFreshRunnerContext, claimFreshBootstrap, bootstrapSession, readIdentity, verifyRoomUI, captureScriptResponses } from './browser-session.mjs';
 
 export function createRunnerLifecycle({ profile = selectProfile(), save = async (_snapshot) => {}, log = (_event) => {} } = {}) {
   const health = new RuntimeHealth(profile); let terminal = false, first, queue = Promise.resolve(), scripts = [], artifacts = 'not-requested';
@@ -62,6 +62,11 @@ const deadline = async (promise, milliseconds, label) => {
   try { return await Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(Error(`${label} timed out`)), milliseconds); })]); }
   finally { clearTimeout(timer); }
 };
+export async function startupBoundary(state, operation) {
+  state.assertLive();
+  try { return await Promise.race([deadline(operation(), 120000, 'Browser startup'), state.failure]); }
+  catch (error) { state.fail(error, { source: 'startup' }); throw error; }
+}
 export async function heartbeatOnce({ state, probe, expected, schedule }) {
   try {
     state.assertLive(); const current = await probe(); state.assertLive();
@@ -98,28 +103,28 @@ export async function main() {
   };
   const state = createRunnerLifecycle({ profile, save, log: value => console.log(JSON.stringify(value)) });
   let browser, context, timer, provenance, stopping = false;
-  const bounded = (promise, ms, label) => Promise.race([deadline(promise, ms, label), state.failure]);
   const signal = name => { stopping = true; state.fail(Error(name), { source: 'operator' }); };
   process.once('SIGTERM', () => signal('SIGTERM')); process.once('SIGINT', () => signal('SIGINT'));
   process.on('unhandledRejection', state.fail);
   try {
     await state.flush();
-    const { identity, frame, page } = await bounded((async () => {
+    const { identity, frame, page } = await startupBoundary(state, async () => {
       browser = await chromium.launch({ headless: true, chromiumSandbox: true, args: ['--mute-audio'], timeout: 30000 }); state.assertLive();
       browser.on('disconnected', () => state.fail(Error('Browser disconnected'), { source: 'browser' }));
-      context = await browser.newContext({ permissions: [], viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', acceptDownloads: false }); state.assertLive();
+      context = await createFreshRunnerContext(browser); state.assertLive();
       const page = await context.newPage(); state.assertLive(); page.setDefaultTimeout(15000);
+      const fresh = claimFreshBootstrap(context, page, profile);
       provenance = captureScriptResponses(page);
       page.on('pageerror', error => { state.setScripts(provenance.snapshot()); state.fail(error, { source: 'pageerror' }); });
       page.on('crash', () => state.fail(Error('Browser page crashed'), { source: 'page' }));
       page.on('close', () => state.fail(Error('Browser page closed'), { source: 'page' }));
       page.on('console', message => { state.setScripts(provenance.snapshot()); state.console(message.text()); });
       const cdp = await context.newCDPSession(page); state.assertLive();
-      await denyMediaPermissions(cdp); state.assertLive();
-      const result = await bootstrapSession(page, { profile, fail: state.fail, assertLive: state.assertLive });
+      await denyMediaPermissions(cdp, { assertLive: state.assertLive }); state.assertLive();
+      const result = await bootstrapSession(page, { profile, fresh, fail: state.fail, assertLive: state.assertLive });
       state.setScripts(provenance.snapshot()); await state.ready(result.identity); state.assertLive();
       return { ...result, page };
-    })(), 120000, 'Browser startup');
+    });
     const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); },
       probe: () => probeHeartbeat({ state, page, frame, profile, provenance }) });
     state.assertLive(); timer = setTimeout(heartbeat, 3000); await state.failure;

@@ -1,31 +1,49 @@
 import { createHash } from 'node:crypto';
 import { TERMINAL_PREFIX, failureRecord } from './evidence.mjs';
-import { config, isMapFrame, verifyModule } from './config.mjs';
+import { config, selectProfile, isMapFrame, verifyModule } from './config.mjs';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-export async function denyMediaPermissions(cdp) {
-  const { targetInfo } = await cdp.send('Target.getTargetInfo');
+const noop = () => {};
+const guarded = async (assertLive, action) => { assertLive(); const value = await action(); assertLive(); return value; };
+const createdContexts = new WeakMap(), freshGrants = new WeakMap();
+
+/** Only this runner lifecycle path creates the context that can issue a fresh bootstrap grant. */
+export async function createFreshRunnerContext(browser) {
+  const context = await browser.newContext({ permissions: [], viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', acceptDownloads: false });
+  if (createdContexts.has(context)) throw Error('Refusing reused runner context');
+  createdContexts.set(context, { claimed: false }); return context;
+}
+export function claimFreshBootstrap(context, page, profile = config) {
+  const record = createdContexts.get(context);
+  if (!record || record.claimed || page.context() !== context || context.pages().length !== 1 || context.pages()[0] !== page || page.url() !== 'about:blank' || selectProfile(profile?.persona) !== profile) throw Error('Require a new owned isolated context and one blank guide page');
+  record.claimed = true;
+  const grant = Object.freeze({}); freshGrants.set(grant, { context, page, profile }); return grant;
+}
+
+export async function denyMediaPermissions(cdp, { assertLive = noop } = {}) {
+  const { targetInfo } = await guarded(assertLive, () => cdp.send('Target.getTargetInfo'));
   if (!targetInfo.browserContextId) throw Error('Missing isolated browser context ID');
   // Browser.setPermission accepts W3C PermissionDescriptor names.
   for (const name of ['microphone', 'camera']) {
-    await cdp.send('Browser.setPermission', { permission: { name }, setting: 'denied', origin: new URL(config.roomUrl).origin, browserContextId: targetInfo.browserContextId });
+    await guarded(assertLive, () => cdp.send('Browser.setPermission', { permission: { name }, setting: 'denied', origin: new URL(config.roomUrl).origin, browserContextId: targetInfo.browserContextId }));
   }
 }
 
-export async function joinRoom(page, profile = config) {
-  await page.goto(profile.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  await page.getByTestId('loginSceneNameInput').fill(profile.botName);
-  await page.getByRole('button', { name: 'Continue', exact: true }).click();
-  await page.locator(`#${profile.avatar}`).click();
-  await page.getByRole('button', { name: 'Continue', exact: true }).click();
-  await page.getByText('Turn off your microphone', { exact: true }).click();
-  await page.getByText('Turn off your camera', { exact: true }).click();
-  await page.getByRole('button', { name: 'Save', exact: true }).click();
+export async function joinRoom(page, profile = config, { assertLive = noop } = {}) {
+  await guarded(assertLive, () => page.goto(profile.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 }));
+  await guarded(assertLive, () => page.getByTestId('loginSceneNameInput').fill(profile.botName));
+  await guarded(assertLive, () => page.getByRole('button', { name: 'Continue', exact: true }).click());
+  await guarded(assertLive, () => page.locator(`#${profile.avatar}`).click());
+  await guarded(assertLive, () => page.getByRole('button', { name: 'Continue', exact: true }).click());
+  await guarded(assertLive, () => page.getByText('Turn off your microphone', { exact: true }).click());
+  await guarded(assertLive, () => page.getByText('Turn off your camera', { exact: true }).click());
+  await guarded(assertLive, () => page.getByRole('button', { name: 'Save', exact: true }).click());
 }
 
-export async function findMapFrame(page) {
+export async function findMapFrame(page, { assertLive = noop } = {}) {
   const deadline = Date.now() + 45000;
   while (Date.now() < deadline) {
+    assertLive();
     for (const frame of page.frames()) {
       if (frame === page.mainFrame()) continue;
       // Modal/NPC frames can also expose WA: select the known srcdoc map module first.
@@ -34,33 +52,36 @@ export async function findMapFrame(page) {
         scripts: Array.from(document.scripts, script => script.src),
         hasWA: typeof globalThis.WA === 'object' && typeof globalThis.WA.onInit === 'function',
       })).catch(() => null);
+      assertLive();
       if (!candidate?.hasWA || !isMapFrame({ ...candidate, initialized: true, roomId: config.roomUrl })) continue;
       const roomId = await frame.evaluate(async () => {
         await Promise.race([globalThis.WA.onInit(), new Promise((_, reject) => setTimeout(() => reject(Error('WA init timeout')), 10000))]);
         return globalThis.WA.room.id;
       });
+      assertLive();
       if (!isMapFrame({ ...candidate, initialized: true, roomId })) throw Error('Map script initialized in an unexpected room');
       return frame;
     }
-    await delay(250);
+    await guarded(assertLive, () => delay(250));
   }
   throw Error('Initialized map-script iframe was not found');
 }
 
-export async function startModule(page, frame, fail, profile = config) {
+export async function startModule(page, frame, fail, profile = config, { assertLive = noop } = {}) {
   let verified = false;
-  await page.route(config.moduleUrl, async route => {
+  await guarded(assertLive, () => page.route(config.moduleUrl, async route => {
+    assertLive();
     try {
       if (route.request().frame() !== frame) throw Error('Module requested outside the dedicated map frame');
-      const response = await route.fetch({ maxRedirects: 0, timeout: 15000 });
-      const body = verifyModule({ url: response.url(), status: response.status(), body: await response.body() });
+      const response = await guarded(assertLive, () => route.fetch({ maxRedirects: 0, timeout: 15000 }));
+      const body = verifyModule({ url: response.url(), status: response.status(), body: await guarded(assertLive, () => response.body()) });
       // Deliver those same verified HTTPS bytes, closing the fetch/import TOCTOU gap.
-      verified = true; await route.fulfill({ response, body });
+      verified = true; await guarded(assertLive, () => route.fulfill({ response, body }));
     } catch (error) {
       await route.abort().catch(() => {}); fail(error);
     }
-  });
-  const identity = await frame.evaluate(async ({ moduleUrl, roomUrl, botName, persona, terminalPrefix }) => {
+  }));
+  const identity = await guarded(assertLive, () => frame.evaluate(async ({ moduleUrl, roomUrl, botName, persona, terminalPrefix }) => {
     const wa = globalThis.WA;
     if (wa.room.id !== roomUrl || wa.player.name !== botName) throw Error('Dedicated player identity mismatch');
     const state = { started: false, stopped: null, playerId: wa.player.playerId };
@@ -77,7 +98,7 @@ export async function startModule(page, frame, fail, profile = config) {
     if (state.stopped) throw Error(state.stopped);
     state.started = true;
     return { playerId: wa.player.playerId, name: wa.player.name, roomId: wa.room.id };
-  }, { ...profile, terminalPrefix: TERMINAL_PREFIX });
+  }, { ...profile, terminalPrefix: TERMINAL_PREFIX }));
   if (!verified) throw Error('Module ran without a verified response');
   return identity;
 }
@@ -93,39 +114,46 @@ export async function readIdentity(frame, profile = config) {
   }, profile);
 }
 
-export async function checkDevices(page) {
+export async function checkDevices(page, { assertLive = noop } = {}) {
   for (const id of ['microphone-button', 'camera-button']) {
     const control = page.getByTestId(id);
-    await control.waitFor({ state: 'visible', timeout: 15000 });
-    if (!/(^|\s)bg-danger(\s|$)/.test(await control.getAttribute('class') ?? '')) throw Error(`${id} is not off`);
+    await guarded(assertLive, () => control.waitFor({ state: 'visible', timeout: 15000 }));
+    if (!/(^|\s)bg-danger(\s|$)/.test(await guarded(assertLive, () => control.getAttribute('class')) ?? '')) throw Error(`${id} is not off`);
   }
 }
-
-export async function dismissMediaPrompt(page) {
+export async function dismissMediaPrompt(page, { assertLive = noop, beforeMedia = async () => {} } = {}) {
+  await guarded(assertLive, beforeMedia);
   const button = page.getByRole('button', { name: 'Continue without webcam and microphone', exact: true });
-  if (await button.isVisible()) {
-    await button.click({ timeout: 5000 });
-    await button.waitFor({ state: 'hidden', timeout: 5000 });
+  if (await guarded(assertLive, () => button.isVisible())) {
+    await guarded(assertLive, beforeMedia);
+    await guarded(assertLive, () => button.click({ timeout: 5000 }));
+    await guarded(assertLive, () => button.waitFor({ state: 'hidden', timeout: 5000 }));
   }
-  if (await button.isVisible()) throw Error('No-media popup remains visible');
+  if (await guarded(assertLive, () => button.isVisible())) throw Error('No-media popup remains visible');
 }
-
-export async function verifyRoomUI(page) {
-  await dismissMediaPrompt(page);
-  await checkDevices(page);
-  const permissions = await page.evaluate(async () => Promise.all(['microphone', 'camera'].map(async name =>
-    (await navigator.permissions.query({ name })).state)));
-  if (permissions.length !== 2 || permissions.some(state => state !== 'denied')) throw Error('Media permissions are not denied');
-  if (await page.getByTestId('close-modal-button').isVisible()) throw Error('Unresolved directory modal');
-  if (await page.getByRole('button', { name: 'Continue without webcam and microphone', exact: true }).isVisible()) throw Error('No-media popup returned');
-  // Modal semantics are independent of popup text; a matching descendant never excuses them.
-  for (const modal of await page.locator('[role="dialog"], [role="alertdialog"], [aria-modal]').all()) {
-    if (await modal.isVisible()) throw Error('Unknown visible modal');
+async function assertNoModal(page, assertLive) {
+  if (await guarded(assertLive, () => page.getByTestId('close-modal-button').isVisible())) throw Error('Unexpected visible directory modal');
+  for (const modal of await guarded(assertLive, () => page.locator('[role="dialog"], [role="alertdialog"], [aria-modal]').all())) {
+    if (await guarded(assertLive, () => modal.isVisible())) throw Error('Unknown visible modal');
   }
+}
+async function assertWelcomeAbsent(page, assertLive) {
+  if (await guarded(assertLive, () => page.getByText('Open the welcome directory', { exact: true }).isVisible())) throw Error('Consumed welcome action returned or remains');
+  await assertNoModal(page, assertLive);
+}
+export async function verifyRoomUI(page, { assertLive = noop, initial = false } = {}) {
+  await dismissMediaPrompt(page, { assertLive, beforeMedia: initial ? () => assertWelcomeAbsent(page, assertLive) : async () => {} });
+  await checkDevices(page, { assertLive });
+  const permissions = await guarded(assertLive, () => page.evaluate(async () => Promise.all(['microphone', 'camera'].map(async name =>
+    (await navigator.permissions.query({ name })).state))));
+  if (permissions.length !== 2 || permissions.some(state => state !== 'denied')) throw Error('Media permissions are not denied');
+  await assertNoModal(page, assertLive);
+  if (await guarded(assertLive, () => page.getByRole('button', { name: 'Continue without webcam and microphone', exact: true }).isVisible())) throw Error('No-media popup returned');
   let knownPanels = 0;
-  for (const popup of await page.locator('.popupwrapper').all()) {
-    if (!await popup.isVisible()) continue;
-    const known = await popup.evaluate(root => {
+  for (const popup of await guarded(assertLive, () => page.locator('.popupwrapper').all())) {
+    if (!await guarded(assertLive, () => popup.isVisible())) continue;
+    if (initial) throw Error('Initial welcome action or unknown popup remains');
+    const known = await guarded(assertLive, () => popup.evaluate(root => {
       // The observed action div remains clickable after the native directory closes.
       // Inspect only its wrapper, with the exact four-DIV chain and complete normalized text.
       const required = [
@@ -144,10 +172,10 @@ export async function verifyRoomUI(page) {
         element = element.children[0];
       }
       return true;
-    });
+    }));
     if (!known || ++knownPanels > 1) throw Error('Unknown or ambiguous visible popup');
   }
-  const welcomeVisible = await page.getByText('Open the welcome directory', { exact: true }).isVisible();
+  const welcomeVisible = await guarded(assertLive, () => page.getByText('Open the welcome directory', { exact: true }).isVisible());
   if (welcomeVisible !== (knownPanels === 1)) throw Error('Unclassified welcome action panel');
 }
 export async function settleWelcome(page) {
@@ -159,21 +187,65 @@ export async function settleWelcome(page) {
     await close.click(); await close.waitFor({ state: 'hidden' });
   } else if (await close.isVisible()) throw Error('Unexpected visible modal before UI settlement');
 }
-export async function waitForControllerProgress(frame, profile = config) {
-  await frame.waitForFunction(() => (globalThis.__varcampGuideEvidence?.steps ?? 0) > 0, undefined, { timeout: 5000 });
-  return readIdentity(frame, profile);
+export async function waitForControllerProgress(frame, profile = config, { assertLive = noop } = {}) {
+  await guarded(assertLive, () => frame.waitForFunction(() => (globalThis.__varcampGuideEvidence?.steps ?? 0) > 0, undefined, { timeout: 5000 }));
+  return guarded(assertLive, () => readIdentity(frame, profile));
 }
-// The same exported path is exercised with controlled page boundaries in source-only tests.
-export async function bootstrapSession(page, { profile = config, fail = error => { throw error; }, assertLive = () => {},
+async function readFreshJoin(frame, profile, assertLive, original) {
+  assertLive();
+  if (frame.isDetached()) throw Error('Fresh guide frame lost');
+  const observed = await guarded(assertLive, () => frame.evaluate(async () => {
+    const position = await globalThis.WA.player.getPosition();
+    return { location: document.location.href, scripts: Array.from(document.scripts, script => script.src),
+      roomId: globalThis.WA.room.id, name: globalThis.WA.player.name, playerId: globalThis.WA.player.playerId, position };
+  }));
+  const p = observed.position;
+  if (!isMapFrame({ ...observed, initialized: true }) || observed.roomId !== profile.roomUrl || observed.name !== profile.botName || !Number.isFinite(observed.playerId)) throw Error('Fresh guide room/frame/identity mismatch');
+  if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y) || ![[63,65],[64,65],[63,66],[64,66]].some(([x,y]) => Math.floor(p.x / 32) === x && Math.floor(p.y / 32) === y)) throw Error('Fresh guide outside reviewed welcome spawn');
+  if (original && (observed.playerId !== original.playerId || p.x !== original.position.x || p.y !== original.position.y)) throw Error('Fresh guide moved or changed identity during settlement');
+  return observed;
+}
+async function settleFreshWelcome(page, assertLive) {
+  const welcome = page.getByText('Open the welcome directory', { exact: true });
+  const close = page.getByTestId('close-modal-button');
+  await assertNoModal(page, assertLive);
+  await guarded(assertLive, () => welcome.waitFor({ state: 'visible', timeout: 15000 }));
+  if (!await guarded(assertLive, () => welcome.isVisible())) throw Error('Fresh welcome action not observed');
+  await assertNoModal(page, assertLive);
+  await guarded(assertLive, () => welcome.click({ timeout: 15000 }));
+  const consumedAfterActivation = !await guarded(assertLive, () => welcome.isVisible());
+  // Removal may still be pending. Close the positively identified directory before waiting for it.
+  await guarded(assertLive, () => close.waitFor({ state: 'visible', timeout: 15000 }));
+  await guarded(assertLive, () => page.getByText('VarCamp Quest Journal', { exact: true }).waitFor({ state: 'visible', timeout: 15000 }));
+  const directory = page.locator('iframe[name="modalIframe"][src$="#directory"]');
+  await guarded(assertLive, () => directory.waitFor({ state: 'visible', timeout: 15000 }));
+  const src = await guarded(assertLive, () => directory.getAttribute('src'));
+  let source; try { source = new URL(src); } catch { throw Error('Invalid directory modal source'); }
+  if (source.origin !== 'https://maps.3-1-133-135.sslip.io' || source.pathname !== '/varcamp-demo/src/journal/index.html' || source.hash !== '#directory') throw Error('Unexpected directory modal source');
+  await guarded(assertLive, () => close.click({ timeout: 15000 }));
+  await guarded(assertLive, () => close.waitFor({ state: 'hidden', timeout: 15000 }));
+  await guarded(assertLive, () => welcome.waitFor({ state: 'hidden', timeout: 15000 }));
+  await assertWelcomeAbsent(page, assertLive);
+  return { consumedAfterActivation, consumedAfterClose: true };
+}
+/** Only a single lifecycle-issued grant can enter this fixed fresh-world handshake. */
+export async function bootstrapSession(page, { profile = config, fresh, fail = error => { throw error; }, assertLive = noop,
   join = joinRoom, find = findMapFrame, start = startModule, progress = waitForControllerProgress } = {}) {
-  await join(page, profile); assertLive();
-  const frame = await find(page); assertLive();
-  await settleWelcome(page); assertLive();
-  await verifyRoomUI(page); assertLive();
-  const identity = await start(page, frame, fail, profile); assertLive();
-  await progress(frame, profile); assertLive();
-  await verifyRoomUI(page); assertLive();
-  return { identity, frame };
+  assertLive(); const owned = freshGrants.get(fresh);
+  if (!owned || owned.page !== page || owned.profile !== profile || page.context() !== owned.context || owned.context.pages().length !== 1 || owned.context.pages()[0] !== page || page.url() !== 'about:blank') throw Error('Require an unused fresh owned guide bootstrap grant');
+  freshGrants.delete(fresh);
+  await guarded(assertLive, () => join(page, profile, { assertLive }));
+  const frame = await guarded(assertLive, () => find(page, { assertLive }));
+  const original = await readFreshJoin(frame, profile, assertLive);
+  const welcome = await settleFreshWelcome(page, assertLive);
+  await readFreshJoin(frame, profile, assertLive, original);
+  await verifyRoomUI(page, { assertLive, initial: true });
+  await readFreshJoin(frame, profile, assertLive, original);
+  await assertWelcomeAbsent(page, assertLive);
+  const identity = await guarded(assertLive, () => start(page, frame, fail, profile, { assertLive }));
+  await guarded(assertLive, () => progress(frame, profile, { assertLive }));
+  await verifyRoomUI(page, { assertLive, initial: true });
+  return { identity, frame, welcome };
 }
 
 /** Hash only selected response bodies delivered during this page session, never refetch. */

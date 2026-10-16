@@ -8,15 +8,13 @@ function pageFixture({ remains = false, rejectClick = false, unknown = false, pe
   const control = kind => ({ async isVisible() { return kind === 'welcome' ? welcome : kind === 'close' ? modal : kind === 'prompt' ? prompt : true; }, async click(options) { events.push(`click:${kind}:${options?.timeout ?? 'default'}`); if (kind === 'welcome') { welcome = false; modal = true; } else if (kind === 'close') modal = false; else { if (rejectClick) throw Error('ordinary click failed'); if (!remains) prompt = false; } }, async waitFor({ state }) { if (kind === 'device' && missingControl) throw Error('missing device'); if (kind === 'prompt' && state === 'hidden' && prompt) throw Error('popup remains visible'); if (kind === 'close' && state === 'hidden' && modal) throw Error('modal remains'); }, async getAttribute() { return 'bg-danger'; } });
   return { events, setPrompt: value => { prompt = value; }, page: { getByText: () => control('welcome'), getByTestId: id => control(id === 'close-modal-button' ? 'close' : 'device'), getByRole: () => control('prompt'), locator: () => ({ async all() { return unknown ? [control('close')] : []; } }), async evaluate() { events.push('permissions'); return [permissions, permissions]; } } };
 }
-it('verifies the observed welcome/modal and normal five-second media dismissal before module start', async () => {
-  const f = pageFixture();
-  await session.bootstrapSession(f.page, { join: async () => f.events.push('join'), find: async () => ({}), start: async () => { f.events.push('start'); return { playerId: 2 }; }, progress: async () => { f.events.push('progress'); }, assertLive() {} });
-  expect(f.events).toEqual(['join', 'click:welcome:default', 'click:close:default', 'click:prompt:5000', 'permissions', 'start', 'progress', 'permissions']);
+it('retains normal modal closure and media predicates for observed generic room UI', async () => {
+  const f = pageFixture(); await session.settleWelcome(f.page); await session.verifyRoomUI(f.page);
+  expect(f.events).toEqual(['click:welcome:default', 'click:close:default', 'click:prompt:5000', 'permissions']);
 });
-it.each([{ remains: true }, { rejectClick: true }, { unknown: true }, { permissions: 'prompt' }, { missingControl: true }])('never imports/starts on an unresolved UI/media handoff %j', async options => {
-  const f = pageFixture(options); let started = false;
-  await expect(session.bootstrapSession(f.page, { join: async () => {}, find: async () => ({}), start: async () => { started = true; }, progress: async () => {}, assertLive() {} })).rejects.toThrow();
-  expect(started).toBe(false);
+it.each([{ remains: true }, { rejectClick: true }, { unknown: true }, { permissions: 'prompt' }, { missingControl: true }])('generic UI observation still rejects unresolved modal/media state %j', async options => {
+  const f = pageFixture(options);
+  await expect((async () => { await session.settleWelcome(f.page); await session.verifyRoomUI(f.page); })()).rejects.toThrow();
 });
 it('handles a late popup through the same ordinary guarded check and fails if it remains', async () => {
   const f = pageFixture({ remains: true });
