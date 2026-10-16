@@ -85,3 +85,29 @@ it('revalidates the fixed room/name and original player ID after controller star
     }
   }
 });
+it.each(['deadline', 'fatal'])('the actual heartbeat UI boundary terminates a held permission evaluation on %s before late resolution', async reason => {
+  vi.useFakeTimers();
+  const events: { event: string; at: number }[] = []; const saved: any[] = [];
+  const state = runtimeModule.createRunnerLifecycle({ save: async snapshot => { saved.push(snapshot); }, log: value => events.push({ event: value.event, at: Date.now() }) });
+  const identity = { playerId: 4, name: 'Lyra [BOT]', roomId: 'expected-room' };
+  await state.ready(identity); events.length = 0;
+  const f = pageFixture(); await session.settleWelcome(f.page);
+  let release, reached = false, settled = false, identityReads = 0;
+  f.page.evaluate = async () => { reached = true; return new Promise(resolve => { release = () => resolve(['denied', 'denied']); }); };
+  const tick = runtimeModule.heartbeatOnce({ state, expected: identity, probe: () => runtimeModule.probeHeartbeat({ state, page: f.page, frame: { evaluate: async () => { identityReads++; return identity; } } }), schedule: () => events.push({ event: 'scheduled', at: Date.now() }) }).then(() => { settled = true; });
+  const closed = state.failure.catch(() => runtimeModule.shutdownOwned({ state, close: async () => { events.push({ event: 'owned-close', at: Date.now() }); } }));
+  try {
+    await vi.advanceTimersByTimeAsync(0); expect(reached).toBe(true);
+    const began = Date.now();
+    if (reason === 'deadline') {
+      await vi.advanceTimersByTimeAsync(4999); expect(state.snapshot().healthy).toBe(true);
+      await vi.advanceTimersByTimeAsync(1);
+    } else { state.fail(new Error('native fatal during permissions'), { source: 'pageerror' }); await vi.advanceTimersByTimeAsync(0); }
+    expect(state.snapshot().healthy).toBe(false); expect(settled).toBe(true); expect(identityReads).toBe(0);
+    await closed; await state.flush();
+    expect(events.find(row => row.event === 'owned-close')?.at - began).toBeLessThanOrEqual(reason === 'deadline' ? 5000 : 0);
+    expect(saved.at(-1).failure.error.message).toBe(reason === 'deadline' ? 'Heartbeat UI probe timed out' : 'native fatal during permissions');
+    release(); await tick; await vi.advanceTimersByTimeAsync(10000); expect(identityReads).toBe(0);
+    expect(state.snapshot().healthy).toBe(false); expect(events.map(row => row.event)).not.toContain('ready'); expect(events.map(row => row.event)).not.toContain('scheduled');
+  } finally { release?.(); await tick; }
+});

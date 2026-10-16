@@ -69,6 +69,13 @@ export async function heartbeatOnce({ state, probe, expected, schedule }) {
     await state.ready(current); state.assertLive(); schedule();
   } catch (error) { state.fail(error, { source: 'heartbeat' }); }
 }
+// Export the same production probe for controlled host/page-boundary regressions.
+export async function probeHeartbeat({ state, page, frame, profile = selectProfile(), provenance }) {
+  await Promise.race([deadline(verifyRoomUI(page), 5000, 'Heartbeat UI probe'), state.failure]); state.assertLive();
+  const current = await Promise.race([deadline(readIdentity(frame, profile), 5000, 'Identity probe'), state.failure]); state.assertLive();
+  if (provenance) state.setScripts(provenance.snapshot());
+  return current;
+}
 export async function shutdownOwned({ state, artifact, close, artifactTimeout = 1000 }) {
   await deadline(state.flush(), 1000, 'Failure evidence storage').catch(() => {});
   if (artifact) {
@@ -113,11 +120,8 @@ export async function main() {
       state.setScripts(provenance.snapshot()); await state.ready(result.identity); state.assertLive();
       return { ...result, page };
     })(), 120000, 'Browser startup');
-    const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); }, probe: async () => {
-      await verifyRoomUI(page); state.assertLive();
-      const current = await bounded(readIdentity(frame, profile), 5000, 'Identity probe'); state.assertLive();
-      state.setScripts(provenance.snapshot()); return current;
-    } });
+    const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); },
+      probe: () => probeHeartbeat({ state, page, frame, profile, provenance }) });
     state.assertLive(); timer = setTimeout(heartbeat, 3000); await state.failure;
   } catch (error) { state.fail(error, { source: 'runner' }); if (!stopping) process.exitCode = 1; }
   finally {
