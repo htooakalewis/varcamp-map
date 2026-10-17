@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import type { TileCatalog } from '../art/catalog';
+import editorCollections from '../../world/editor-collections.json';
 import type { MapLayout, TileRect, TileLayer, TiledLayer, TiledMap, TiledTileset, WamFile } from './types';
 
 const decodedSponsors = new Map<string, Buffer>();
@@ -177,6 +178,11 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   layers.push({id:0,name:'inspection-zones',type:'objectgroup',visible:false,opacity:1,objects:layout.inspectionZones.map(z=>({id:objectId++,name:z.name,type:z.kind,x:z.x*32,y:z.y*32,width:z.width*32,height:z.height*32,visible:false}))});
   const names=new Set<string>();for(const [i,l] of layers.entries()){if(names.has(l.name))throw new Error(`Duplicate flattened layer name: ${l.name}`);names.add(l.name);l.id=i+1;}
   const tmj:TiledMap={type:'map',version:'1.10',tiledversion:'1.12.2',orientation:'orthogonal',renderorder:'right-down',infinite:false,width:layout.width,height:layout.height,tilewidth:32,tileheight:32,backgroundcolor:'#101c2c',layers,tilesets,nextlayerid:layers.length+1,nextobjectid:objectId,properties:[{name:'script',type:'string',value:'../src/main.ts'},{name:'worldMapId',type:'string',value:layout.id},{name:'mapName',type:'string',value:mapName},{name:'defaultCameraState',type:'bool',value:false},{name:'defaultMicrophoneState',type:'bool',value:false}]};
-  const wam:WamFile={version:'2.1.0',mapUrl:`${layout.id}.tmj`,entities:{},areas:layout.areas.map((a,i)=>{bounds(a,a.name);return {id:a.id??`${layout.id}-area-${i}`,name:a.name,visible:true,x:a.x*32,y:a.y*32,width:a.width*32,height:a.height*32,properties:a.properties};}),entityCollections:[],metadata:{name:mapName}};
+  // Keep the native inline-editor catalog policy shared with the intentional WAM migration.
+  const entityCollections:WamFile['entityCollections']=editorCollections.map(({url,type})=>{
+    if(type!=='file')throw new Error('Native editor defaults require file collections');
+    return {url,type};
+  });
+  const wam:WamFile={version:'2.1.0',mapUrl:`${layout.id}.tmj`,entities:{},areas:layout.areas.map((a,i)=>{bounds(a,a.name);return {id:a.id??`${layout.id}-area-${i}`,name:a.name,visible:true,x:a.x*32,y:a.y*32,width:a.width*32,height:a.height*32,properties:a.properties};}),entityCollections,metadata:{name:mapName}};
   return {tmj,wam};
 }

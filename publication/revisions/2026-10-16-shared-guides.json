@@ -4,8 +4,8 @@
     {
       "path": "art/source/coastal-flight.json",
       "fromSha256": "8c24c94618c4ee043e546553c269078512b65bdbd07d13c4ab01b7d66303bf86",
-      "toSha256": "b3926b21a9b5c1ac0c668204154f2f1621a632681f2f8580fbcbd1bb23309526",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+      "toSha256": "5d8c34847fab5e2ebe427dbc0fce41bb0e06934ff291d2322af8d2de41a1a6fd",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "art/sources.json",
@@ -32,10 +32,22 @@
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
+      "path": "maps/air-district.wam",
+      "fromSha256": "c9346cc6898815907020fcb247e1d7f0afdd9a09cd7cd174fc22202c00bbc7bd",
+      "toSha256": "d826e06b803e02ed1927d2f9d59ee224cd0d1e75643adabf3fb9cb5bf11a0f0c",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/campus-exploration.tmj",
       "fromSha256": "4639e7a9d5df6003fd81808f83461255abd298a165d3f8ad00ddcced50eb5e0f",
       "toSha256": "94f55dcf15ed34d24dd92835fe3fb305487570ef78ae625e4b503ba20a76a4d0",
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/campus-exploration.wam",
+      "fromSha256": "431244d4e600839906c92689c51fa23bf1dfd8a50b81b00eccf856d14d65edff",
+      "toSha256": "dce2b026acf5c0f7535eb641cd3ed41ea8ddf737568153b400b9d341203e79d1",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/comet-maze.tmj",
@@ -46,8 +58,14 @@
     {
       "path": "maps/comet-maze.wam",
       "fromSha256": "a4a5af8e8a7fb2618edda289e3ba01385911ff4078fd09f118afd032abd70294",
-      "toSha256": "a99a45e44e9482adf7ccac399f0eec87db2e331e5972df3d7d3ea6c0cf3a257e",
-      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+      "toSha256": "9bc9c08ee62056fe3c849e837433af0feb3d920e36dd55afd7e4d697a94220da",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "maps/constellation-shore.wam",
+      "fromSha256": "7cb3658de00abd13e7c9e8cec9fdabe18b5b4f0abdccb2e4311a4e539b68f3c9",
+      "toSha256": "e1bde7a0ac049c0217219f3c7d98a2981c13303d734ac6d8ffff7c24d642ab1f",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/earth-district.tmj",
@@ -56,10 +74,28 @@
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
+      "path": "maps/earth-district.wam",
+      "fromSha256": "81837c79f31a2302732365397f72bbfcc7869740f8f0b888442f499caa77b6f8",
+      "toSha256": "6f9525ee614e09fd9123ced5a71e4a41d31be1015d1b2cc112aa64c9188cb87f",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "maps/fa-ship.wam",
+      "fromSha256": "d039a754eb9fe7e31342ac90a1ce1ddc596eb8d8a6216bee2006f2c2e8534a42",
+      "toSha256": "19f765e8fd4b314f84a7d00c37469c80d8061e28c435acbec5fa6917809a2786",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/fire-district.tmj",
       "fromSha256": "b7569b25a36492c3b66c20eba49701086b8ac4c4fd20e0165f4bb8973ca667d2",
       "toSha256": "5130dd33523528ded89153996b2779c7250da948e96630a2013875930c5f4ad9",
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/fire-district.wam",
+      "fromSha256": "a44f366eded88694bf28d1c471f06077bcc72f5ac6b432867dbabadf33cdc539",
+      "toSha256": "741ea3fcb7508bd75341db1f862c0f89870c7be091ee5239605eef7650ff732a",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/hidden-observatory.tmj",
@@ -68,10 +104,22 @@
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
+      "path": "maps/hidden-observatory.wam",
+      "fromSha256": "fbfe58f1b7146fc5ef9e7d5c4b2bb7e479f33e9806f248612023c866ebeaaad3",
+      "toSha256": "0007ab32b3d2e8a5e11d5587ebca3ed5d87dae81706569c8846cd7095552429c",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/lunar-hall.tmj",
       "fromSha256": "4f29a9be84adfa66476d2d87da613b094c8bf5227841bd67f7e305f8915ecdb3",
       "toSha256": "016b66caf5e4709f4c7db8ff6f7cbc2fdc4be92906d53bfb071853d5eeaac263",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/lunar-hall.wam",
+      "fromSha256": "61bec60be5a75daeee0fe2374074c9585a528204139b90ee049fb277e8398962",
+      "toSha256": "1cc27f7c67c0124369ea6ac6443e6542106cfb98bc1a6f2aebd8f473abe46ebc",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/moon-cafe.tmj",
@@ -80,10 +128,28 @@
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
+      "path": "maps/moon-cafe.wam",
+      "fromSha256": "386302651b4cd1020887ec7360844b9ab6d4c457a687dbbf6dd9494dd1843a89",
+      "toSha256": "595081627a27e1890fcef7b600ee933c901a8cefe65a1036e220953b25e540d3",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "maps/moon-grotto.wam",
+      "fromSha256": "eebc89cc34bf1a96282ac3a8ad4f3b51db0584fa811ca4d7d01d293ef50d7be6",
+      "toSha256": "003bcd8e813606b232565c4a323074c7b568b6d0c52b03d0e8e5971be24268ec",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/nebula-arcade.tmj",
       "fromSha256": "d16cbb4a57f937ea934ce9c7d43072ce2346f2ca4caec2b430e16a880be005e5",
       "toSha256": "bb3f8682ff3c7e63fab1f7898abb1fdcc8ad1c8a85476b3ce1c8637ee191cd29",
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/nebula-arcade.wam",
+      "fromSha256": "5517e34ea418b0bc9795d3032e496be8732176026dfccfcd0b1e1d7cb56b23b6",
+      "toSha256": "256c0dbdd167ad3f29d2423401138df81a214edb9682b62c9d03382aa7a51543",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/orbit-maze.tmj",
@@ -94,8 +160,14 @@
     {
       "path": "maps/orbit-maze.wam",
       "fromSha256": "03ab6053659bf5cc68048a2e48f74bb9ef2d356e260a2a98c40f63affb85eb55",
-      "toSha256": "5a9297f37c82ae771a08a6c95095d9364b9d1af3e910bc273354bed154c319be",
-      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+      "toSha256": "632d4a3621e971722fd54b79f3518bdffc0e8abc00d393df47ec2acc2afd72c9",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "maps/orbit-playground.wam",
+      "fromSha256": "684e635fa8db055c4c512ff53bfe525267ae9d992cd72ab15d0387fecacc2de0",
+      "toSha256": "5c0d69ccb000ca8b2d41c4e3e7099affa608372b46cec9011aebf79acc38d747",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/overworld.tmj",
@@ -106,8 +178,8 @@
     {
       "path": "maps/overworld.wam",
       "fromSha256": "065f6d2245f49a1bba855da98233da18224078a628a210839d34311bdd9d0fad",
-      "toSha256": "2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9",
-      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+      "toSha256": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/preview/air-district.tmj",
@@ -286,8 +358,8 @@
     {
       "path": "maps/shipyard-beach.wam",
       "fromSha256": "5fd938052ed693d080a1fa79c81e61b261b0d452f7843235217e5b11aeb11d36",
-      "toSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887",
-      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+      "toSha256": "d631432218098ec0d1ac7991959418245d9614d30ef5c6a6ea7d23ff868b9018",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/solar-hall.tmj",
@@ -296,10 +368,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/solar-hall.wam",
+      "fromSha256": "0bd5476169b7754a9612bf2541e902e0a82071032c7cd153b37df996178e1306",
+      "toSha256": "e9f71bb8f9ead7a93234ddac27df181efd051144783592f9f58e2b099da90813",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-aquarius.tmj",
       "fromSha256": "9410cfc24d8f51398d64734bde99b965fdd939d39fa3334a3ebc5ae8d0f97c9a",
       "toSha256": "f29be76ee6d664c580c59704385d4f3a9334fed879cd5e03ab454fe6e0b4d513",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-aquarius.wam",
+      "fromSha256": "bf733e7b3da037f8d42e550fc21fc9f7e9dd3e4285ef98991284121f8890506f",
+      "toSha256": "1f4f2b4fd53e944cb79f9888580b73fdebc49acd386c0327e639399436dae5fc",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-aries.tmj",
@@ -308,10 +392,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-aries.wam",
+      "fromSha256": "193ca771e95f874613f3a7393c9661e4f1b73490fca46755ee848d3d2c53978f",
+      "toSha256": "e9e697714a7ae9eebb0e2c24aec7b5292a5dbfe21ce503396ac29dbb1b840f21",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-cancer.tmj",
       "fromSha256": "85ab8457e4e7d4531f51fee74d8fe0eb75112e40275b6aba78783b0e8b2a04b4",
       "toSha256": "e30835cd5b026a1d6ad862008f02d4642a7d2292b36bfb0f59e7708deb4644e3",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-cancer.wam",
+      "fromSha256": "a51c410a24f93815e8149ecf73721e2c56ed34ec9b3009e52b1fa4bc42601daa",
+      "toSha256": "efe476c8da6bc880aafe95855c4981d8bc1c4fb85890f46dd92ff8d14f9606ea",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-capricorn.tmj",
@@ -320,10 +416,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-capricorn.wam",
+      "fromSha256": "3f44d3aed415c0d9193d6c48a9e90ed9ca6c071eacba584654526cd99cb13de3",
+      "toSha256": "16d30bf98a7d683e5f6cb50a97450c8a10bd8d3bc3f17fb4765cfdf5359c5f45",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-gemini.tmj",
       "fromSha256": "41604505a14db580b7e1a91ee5223595b321ebdc9c65f4521aa6b0db1c63a2fd",
       "toSha256": "6a74f23740efbe346cbdad99f3d5db5276fc6e828434d51f7f42681f97e751b1",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-gemini.wam",
+      "fromSha256": "097d23d2d270ec76c793e1c77247ce1b412e62629933d3e4aa3439c9d9cf48ad",
+      "toSha256": "b15451ce09db8358b71813c3da9231d4ec474393281ebd006591f766ce0ae4fc",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-leo.tmj",
@@ -332,10 +440,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-leo.wam",
+      "fromSha256": "b3f0d9a28b9a78b89c3b6a1c14ad7f7055508ee9a25e6346d4edf89e5f306bd3",
+      "toSha256": "4c7f80504c882fd7e0e7c33e8a6e9659ba8ed7f716f8daf8716836a634eae830",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-libra.tmj",
       "fromSha256": "22e2b20a7baa02c738aa595b4367d87dfc9408f4808d0ee060f478c72a836c85",
       "toSha256": "6fb7ded448f09e7b6f9e37ec58b2bdcdd520a33c417e4828f418a55a168378c9",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-libra.wam",
+      "fromSha256": "7004793f7fba65b99385f1a6fbfb342ea99a3e485fdd94d75fc2071135848819",
+      "toSha256": "c304712fcff78621ae9c1369e44f66cf6ca2e50d7822ecdfb3aea0f9decad6c7",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-pisces.tmj",
@@ -344,10 +464,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-pisces.wam",
+      "fromSha256": "74f6e370a0c37ccb50ccaf457eed7da872f632e08b88bb6b15029a22b7e34b91",
+      "toSha256": "0431794a019888ff185d542dee9884e419244ffa0a53149ea47c64dca2fd2f4e",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-sagittarius.tmj",
       "fromSha256": "d1d068c94cf05ea27ef47f7560952e70ad408c2fe70d654c200aae37eb46a6af",
       "toSha256": "6b0ef43a570089809b302340487d0b0bf76ac30fff71589a6794957b4fdb5b5c",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-sagittarius.wam",
+      "fromSha256": "f2b39026f85dc4867056f4c737cb833a96fa0aa637f313a7f2bdd609c9dfe28f",
+      "toSha256": "960f7769e95e03d139fcc004190a3404ce49677c39f34aee5af2b5c28e06cfdc",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-scorpio.tmj",
@@ -356,10 +488,22 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-scorpio.wam",
+      "fromSha256": "fb4a65daf284bd1dba8d6d2ba03827c8cbacd5befa31a1b39e24eec8a558da66",
+      "toSha256": "96b7f5f8314ff56f179f6e72823c9b84ba6f89a6b626b7e9f0911e326de358dc",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/speaker-taurus.tmj",
       "fromSha256": "887c750849c95f8108f6a9f8250464584c4983437a7b68c22a9958a49677962a",
       "toSha256": "0d906ae96b7f73054fc96904bd43a3c6ab3458b215e5039825d662a67cf4f45f",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-taurus.wam",
+      "fromSha256": "77c56e35a16fbc939d4c0175da4250338ef5a959e6af25e822fbc019e79a9c03",
+      "toSha256": "3f6a9de3dd28ad687046904ad4d050b7389af9376e5c739218cbca9453a722af",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/speaker-virgo.tmj",
@@ -368,10 +512,28 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/speaker-virgo.wam",
+      "fromSha256": "954d6b9830a2dbf28f5d2aad9b0d3054f84d5a20f85871c7b4d73b41f8f636f9",
+      "toSha256": "6127578146c17c0a8699288aa7dfbafa81ac8ce4830459b5faf3ddc5df69db1b",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "maps/star-garden.wam",
+      "fromSha256": "a50a470d8d4954e03ae829be50510a1342f32bc567e293ac04a7db133258c3a6",
+      "toSha256": "9be64b84a6e75a3165fc9429c6afaac61717a5f167e604b87bf570e0431b5354",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/stargazer-terrace.tmj",
       "fromSha256": "a2e31b225d8c0344b8fcae8fcb1fcaf8c6c132badfa4c9b099ff0fe34bc3ff1f",
       "toSha256": "8cf1215da3c8f5561d6548649e2f17b13670e03be23d54f59f537644b8cca93d",
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/stargazer-terrace.wam",
+      "fromSha256": "e26c12c05558247e31781570d4c0d5dcaa1803ce4d2f2679d19125f450cbeba8",
+      "toSha256": "01cb9cc9f613e725924e3790b7316b9ada982f7bab095630763d82b86facc962",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "maps/water-district.tmj",
@@ -380,10 +542,22 @@
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
+      "path": "maps/water-district.wam",
+      "fromSha256": "154422eb4d85bc01102ec4f8b09a6851acc2821450e1557c2eb5ba490d63d16e",
+      "toSha256": "cb53821e2892425675fc61647c03f9c754ecfb37944aad96aed9c72583bd6256",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
       "path": "maps/zodiac-festival-park.tmj",
       "fromSha256": "1cf56aeb12bcd58a2696a8f677205a3d0f66b4cf27ae210f730f6803aebf7d79",
       "toSha256": "5366af817c2416bd0b6baa130306232b0c2edbd1b0b4c24bcf8f66028dc5c582",
       "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/zodiac-festival-park.wam",
+      "fromSha256": "18d255c54c48ee0de8cffcbf0f4ed223db6a9aeed4d3bffd8942bd93de63ed5c",
+      "toSha256": "c6adf05374629f1493f602b623e1c6f9a41882603577f2fca6afea27fc063658",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "src/npc/interactions.ts",
@@ -418,8 +592,8 @@
     {
       "path": "tests/coastal-boarding.test.ts",
       "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
-      "toSha256": "7496e9727af442249bc68f0684c14379850f95f8ed130eb2149c69e5a8e383f7",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse."
+      "toSha256": "ffde92fc07f047e72d4c033d4a74cdd75130e5b43a74fafe12cb5aeca42faee8",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "tests/coastal-character.test.ts",
@@ -454,8 +628,14 @@
     {
       "path": "tests/npc-maps.test.ts",
       "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
-      "toSha256": "53b7405b49aa49deb7c3eff71157ba3d0b6db7ef58857198551f9b97b2fb1be7",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse."
+      "toSha256": "9cd575f37488deb6370857ab2d6b15740578bd14da7c6e6e68601749fe293d92",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
+    },
+    {
+      "path": "tests/overworld.test.ts",
+      "fromSha256": "2beb97e68ad608132a55548621510cffe13c472217ca1d94cb92dc9ff6b3501c",
+      "toSha256": "012289cd0ecc7abfd29e9581450ca34c9de61883d7ac5c729e25c95adf925515",
+      "reason": "Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "tests/runtime-contract.test.ts",
@@ -490,8 +670,8 @@
     {
       "path": "tools/maps/builder.ts",
       "fromSha256": "b7846e75cf8ce2239eb28de6a97de72a64c0f6cc80dc234a9f6580ebdace8836",
-      "toSha256": "03e48ed4e32bdb9a6d001c52456787459e72229be8d59c7422403dde72f4d1bb",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+      "toSha256": "b4c8e8c6fcd6e0fcdc8b2685214c18bf412fbd1f510b2ad73820632e7755ed69",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "tools/maps/npc-guides.ts",
@@ -574,14 +754,14 @@
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
-      "toSha256": "0545bd3f6b7bc9cce661f2914e4f17bb55ec45889587dabe4b71784c5f2f5deb",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+      "toSha256": "49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
-      "toSha256": "2da9c7fa27c41580337cdc81786fd588b73f0c66f8293d93b428e6203b39466b",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+      "toSha256": "dc9b379a2955e015c684baf6720fd59d30d8e25533c0ee9bfcacae46be043ac4",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed native editor catalog registration: two existing self-hosted WorkAdventure catalogs; preserve all non-collection WAM bytes and map geometry, reconcile exact builder provenance and historical source proofs."
     },
     {
       "path": "world/layouts/solar-hall.json",

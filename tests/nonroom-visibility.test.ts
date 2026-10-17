@@ -1,3 +1,4 @@
+import { historicalEditorMetadataBytes } from './helpers/editor-catalog-history';
 import { mkdtempSync, rmSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -20,7 +21,7 @@ const catalog=loadTileCatalog();
 describe('confirmed nonroom avatar visibility',()=>{
  it('keeps deliberate canopies and all six excluded map sources unchanged',()=>{
   expect(hash(readFileSync('art/tile-catalog.json'))).toBe('d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498');
-  for(const [path,digest]of Object.entries(untouched))expect(hash(readFileSync(path)),path).toBe(digest);
+  for(const [path,digest]of Object.entries(untouched))expect(hash(path==='world/layouts/shipyard-beach.json'?historicalEditorMetadataBytes(path):readFileSync(path)),path).toBe(digest);
  });
  for(const [id,before]of Object.entries(preservation)){
   const source=json(`world/layouts/${id}.json`) as MapLayout;

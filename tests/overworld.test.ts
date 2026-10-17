@@ -1,3 +1,4 @@
+import { approvedEditorCollections } from './helpers/editor-catalog-history';
 import { existsSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { WORLD_CATALOG } from '../src/world/catalog';
@@ -39,7 +40,7 @@ describe('outdoor campus contract',()=>{
     expect(validateMap(tmj,WORLD_CATALOG)).toEqual([]);
     expect(l.exits.map(e=>e.destination).sort()).toEqual(['fire-district','earth-district','air-district','water-district','star-garden','moon-cafe','moon-grotto','stargazer-terrace','overworld'].sort());
     expect(l.entries.map(e=>e.name).sort()).toEqual([...WORLD_CATALOG['campus-exploration'].entries].sort());
-    expect(wam).toMatchObject({version:'2.1.0',mapUrl:'campus-exploration.tmj',entities:{},entityCollections:[]});
+    expect(wam).toMatchObject({version:'2.1.0',mapUrl:'campus-exploration.tmj',entities:{},entityCollections:approvedEditorCollections});
     for(const e of l.exits) {
       const layer=tmj.layers.find(x=>x.name===`exit-${e.name}`) as TileLayer;
       expect(layer.properties).toContainEqual({name:'exitUrl',type:'string',value:`${e.destination}.wam#${e.entry}`});

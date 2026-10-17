@@ -1,0 +1,3109 @@
+{
+  "sourceCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "frontendOrigin": "https://varcamp.3-1-133-135.sslip.io",
+  "catalogs": [
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json",
+      "status": 200,
+      "bytes": 18188,
+      "sha256": "05daa675a68392c566a86c10572e16cc815de3e7ba88dc01a857cc73937f907e",
+      "cors": null,
+      "sameOriginWithFrontend": true,
+      "matchesPinned": true
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json",
+      "status": 200,
+      "bytes": 7948,
+      "sha256": "297bf20a6c7d73c59d0e6a2aa3cd0da2ccc009ba1c116c92a45dd41f208535b4",
+      "cors": null,
+      "sameOriginWithFrontend": true,
+      "matchesPinned": true
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackDown.png",
+      "status": 200,
+      "bytes": 6783,
+      "sha256": "35f17a3294cb8c03ec94360d6bc4c21b36ee03cc2e13b683408dacbb2bbaeac3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackLeft.png",
+      "status": 200,
+      "bytes": 6837,
+      "sha256": "0aa5db3cfb2e235c2818f975460d7d5ae4b86aea98ef13fd3de7b412b8d6fab3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackRight.png",
+      "status": 200,
+      "bytes": 6872,
+      "sha256": "3dafab94bfe2572a2ae9ccfed64e30f8d184ea8e1eab0610f7048a4f61ee671b",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlackUp.png",
+      "status": 200,
+      "bytes": 6823,
+      "sha256": "b93582b11dba11f157dd269f4e939d0bb5d726e628975eb91434ad3111c0d097",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueDown.png",
+      "status": 200,
+      "bytes": 6871,
+      "sha256": "317d066754cacff83a87bec665d27cba2213b0e2f1d5d4d1fc0af4c66de875d9",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueLeft.png",
+      "status": 200,
+      "bytes": 7000,
+      "sha256": "bf9ff5454b117c7a4f51d33204d6baeb6ab0c3eb41053e18f9e6d5dd3b483dfe",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueRight.png",
+      "status": 200,
+      "bytes": 6794,
+      "sha256": "61bb137865f53190d361c97b535402b4862d58e6ff92fd4bb6f594d80498538a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairBlueUp.png",
+      "status": 200,
+      "bytes": 6784,
+      "sha256": "4440b49232b0f2d1352c0211c13b6249ee0c0f1e03416291e396e3c3a2ccc424",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenDown.png",
+      "status": 200,
+      "bytes": 7089,
+      "sha256": "2050946510734fe1859057ceb00a8e1c7a6cc5233760bdfdad19ee7ec608e875",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenLeft.png",
+      "status": 200,
+      "bytes": 6996,
+      "sha256": "6b19fb615594b77ef1597567c79fa0270fc5a3fd636fa2b792251ec371e4ab9e",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenRight.png",
+      "status": 200,
+      "bytes": 7015,
+      "sha256": "fdb538f196114c7e7cf02a256990fc0695bd79b2f975ca93dc86700294ac987d",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreenUp.png",
+      "status": 200,
+      "bytes": 6912,
+      "sha256": "5e7c85cf2d27680a2392dc39e98c949646aab8d1fe53fc44eebb53855766f560",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyDown.png",
+      "status": 200,
+      "bytes": 859,
+      "sha256": "6ceeda3399734bcdc100426cb1b74192249a59c2dfe28c82b46a68c008132a63",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyLeft.png",
+      "status": 200,
+      "bytes": 881,
+      "sha256": "1d324a9b633b6a672296bb9caf361f1964f6c1eb1055d3d8f58c91db1d6b79ee",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyRight.png",
+      "status": 200,
+      "bytes": 878,
+      "sha256": "01e29562ded83107ed1389b5da449319165167d822e1194b729489e37ec30b2a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairGreyUp.png",
+      "status": 200,
+      "bytes": 799,
+      "sha256": "2ab43efac3863eebd68920d6bd6de9919cf68f06a1f51e1925ee4286e9ae6c5a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedDown.png",
+      "status": 200,
+      "bytes": 6818,
+      "sha256": "150b0a61b6a2aefb81fd04ade7627489a0b1f17b669e560d7cd430a132e72dba",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedLeft.png",
+      "status": 200,
+      "bytes": 6743,
+      "sha256": "1ba5de6b66b479c4044f84395730a912aec0e51d4d75541ff3bf341397d41dd5",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedRight.png",
+      "status": 200,
+      "bytes": 6788,
+      "sha256": "a960e535f474b57340e55a02d9e65282c6111c487081632f471e60ec50e1507f",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Armchair/ArmchairRedUp.png",
+      "status": 200,
+      "bytes": 6710,
+      "sha256": "f47970505a49d94a9700c8fcffede2ef3c7aa562aa4a7df5c5f300ad1900ddd1",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Bathroom/Sink.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Bathroom/Sink.png",
+      "status": 200,
+      "bytes": 810,
+      "sha256": "c347db0fc58d0c3f3516f4e524df474e908e69ef45d4d7cff5a3423060381227",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Bathroom/Toilet.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Bathroom/Toilet.png",
+      "status": 200,
+      "bytes": 879,
+      "sha256": "9c8503ef540338b0a425b8f02a615232512f82dd58868ac8c017df9395866944",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueDown.png",
+      "status": 200,
+      "bytes": 5628,
+      "sha256": "1bf849aba9e9f4f297d4f6b8cd2fa2ec05551e1cc05677ef059a650395a4cbf4",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueLeft.png",
+      "status": 200,
+      "bytes": 5522,
+      "sha256": "baa7041ea0d2e08297dff4d738bcfa0263448d78f9a6253c072e97b2541a1aaa",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueRight.png",
+      "status": 200,
+      "bytes": 5564,
+      "sha256": "f0a3e5a55e7bdd0bc4749520fd124a766f7f91422ec614d60c51efa550b998c4",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairBlueUp.png",
+      "status": 200,
+      "bytes": 5539,
+      "sha256": "84499c866ed9a70314584d422fc7ffe03d90156a6e3c4eedc6dcd9182ccaebb1",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenDown.png",
+      "status": 200,
+      "bytes": 5738,
+      "sha256": "fc23fadbc7fc1956dc7cf987f023592f3e7cdd0b6cb9763012d0e95795301648",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenLeft.png",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "112259b2d6f7b1b87e83319f19990e1435160eb262ad7b32d6b0c081788b7bc5",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenRight.png",
+      "status": 200,
+      "bytes": 5643,
+      "sha256": "a14a6439f9b17abd70916201c4f2603644cdc26e237ec6529e40de09fb0e9f82",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreenUp.png",
+      "status": 200,
+      "bytes": 5570,
+      "sha256": "7f88751a9cffc9bfd0d0f177159027d402bcdcbf791cf1761cb53e1b8a38c1c2",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyDown.png",
+      "status": 200,
+      "bytes": 755,
+      "sha256": "33253b99103bb247ac16af68916b5f9157ca47f9ca63f7684ec2c9bba74ffcaf",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyLeft.png",
+      "status": 200,
+      "bytes": 705,
+      "sha256": "262ee847a8c98aef33706a098aaca102fddfe1e1dc37f602b088a0f654be71c7",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyRight.png",
+      "status": 200,
+      "bytes": 714,
+      "sha256": "282d5fda68c35b661dbd35651fdf8ce44b47d7bf187d2b09f4c2a02336b434d4",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairGreyUp.png",
+      "status": 200,
+      "bytes": 696,
+      "sha256": "8a790a39d2c76076a651ecb94dc6dd7eaabf3026f57c74cc79075262839cc43a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedDown.png",
+      "status": 200,
+      "bytes": 5707,
+      "sha256": "c6e93eb11a1642153751db2bf78a8cf2a3ea7211064d0d4336af177b066b1d53",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedLeft.png",
+      "status": 200,
+      "bytes": 5567,
+      "sha256": "29e3cef1312fe4d4bee184f11ede837d2734e6d36096405aac610e16b377e8e3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedRight.png",
+      "status": 200,
+      "bytes": 5593,
+      "sha256": "63e0d83e735c955c7163a615c80ed4f5ccbfd90fae6db949141dab8864f6f706",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairLightRedUp.png",
+      "status": 200,
+      "bytes": 5549,
+      "sha256": "82263daad9a4ff8536b5bea6aaed7a47fe984ba828070aa71c587c9cd05d76da",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedDown.png",
+      "status": 200,
+      "bytes": 5756,
+      "sha256": "cfc55da03237ccf2847e85b6979e28794eb3d83c00dc01be6d4401d181e3b18d",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedLeft.png",
+      "status": 200,
+      "bytes": 5548,
+      "sha256": "dd8656d63a32ac33f1ba8f77c5794b59c07ba22bc40223d9eb6b388c9f6d80db",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedRight.png",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "38b41a0608c5edc5714a6ad68c805965960818bac2ad50f459439772fa40ed94",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Chair/ChairRedUp.png",
+      "status": 200,
+      "bytes": 5573,
+      "sha256": "0fc7ece5c5246de5bfe1b4ebace00664cf24ca92ef6852bda766531b955c3da3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueDown.png",
+      "status": 200,
+      "bytes": 7103,
+      "sha256": "5a84f7d664d407a5a4e81b9b7265bcb47d5e676098e34b9544cc5c3e77377f47",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueLeft.png",
+      "status": 200,
+      "bytes": 6773,
+      "sha256": "65da6990ed393a57168876f896876780e41497eaface36e08331330954fa4a70",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueRight.png",
+      "status": 200,
+      "bytes": 881,
+      "sha256": "941e42e1ec0dad5fea5005d015dbb406d82a35730aca5b66f79d6cb556371690",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBlueUp.png",
+      "status": 200,
+      "bytes": 796,
+      "sha256": "c25f58fee38b7ad7d2b7611af1dabace767a772c871f775888bd89b33191d010",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownDown.png",
+      "status": 200,
+      "bytes": 873,
+      "sha256": "e614482431ac78542915a474b862578e4896118bc9adc801fc8fbcfb49c50609",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownLeft.png",
+      "status": 200,
+      "bytes": 6510,
+      "sha256": "b36c1d6064d183f0ef7f7cd21432f4a1e1e06abbd14475b5e4445ce1a035cac1",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownRight.png",
+      "status": 200,
+      "bytes": 876,
+      "sha256": "9f2872728cd3bcbb1d971678fe9612c39fb0c4629f255346d49c4555c4fdbfe2",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchBrownUp.png",
+      "status": 200,
+      "bytes": 795,
+      "sha256": "ef0b7c9c988d2c29f0deb14f321161a06e499259f3bedb0aa8c59049c2263346",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenDown.png",
+      "status": 200,
+      "bytes": 879,
+      "sha256": "c3585660f1ed598cc96c8f8466ee087507b6501ea42538cc364fd5d87b42fde3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenLeft.png",
+      "status": 200,
+      "bytes": 6545,
+      "sha256": "3fb20c9851a5b78e3ba95f82204927489ddef250fd47b53ac63fd311ce1d5ff5",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenRight.png",
+      "status": 200,
+      "bytes": 876,
+      "sha256": "ca4fa44ed381ec435af6dc9408c559e7103a7082e896abce06eb364b5d26ef61",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreenUp.png",
+      "status": 200,
+      "bytes": 795,
+      "sha256": "e6c953e7f9a8ac813a9f21c54f928cb37c33c5cc6ea37f1c822591d09945067b",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyDown.png",
+      "status": 200,
+      "bytes": 886,
+      "sha256": "8fe5a34fc0792b7fd9fe78f537650a6cfab0490e22a18d93b39add9af962b156",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyLeft.png",
+      "status": 200,
+      "bytes": 6469,
+      "sha256": "e5f6e773a48a8909b7bcfe7f7f20894b3fbaa59e0f5ae7a73a0b5c0e99fab3ab",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyRight.png",
+      "status": 200,
+      "bytes": 887,
+      "sha256": "78876f3c36bc3781b1ba3d0ba6f3d4ae57691577d9b2ce492ad42a2e54277e75",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchGreyUp.png",
+      "status": 200,
+      "bytes": 799,
+      "sha256": "f15c832d299b4bb50f27f5ce5a2386278a8ec4a6fb0b0dc715b016ebb304bfd2",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedDown.png",
+      "status": 200,
+      "bytes": 6776,
+      "sha256": "7cc7620e5a4a57d245c1c6a56e09e7fd11b47b778453e54752a063c14b93850a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedLeft.png",
+      "status": 200,
+      "bytes": 863,
+      "sha256": "3c9d7a384d1d29494bbbacf6718041e711b7f2492aad22fdd8a3816e7800d65b",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedRight.png",
+      "status": 200,
+      "bytes": 877,
+      "sha256": "5b63885eada2ff4cdf935ecdacc731ce9b776830ae250f0018bb61f1c84bed13",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Couch/CouchRedUp.png",
+      "status": 200,
+      "bytes": 796,
+      "sha256": "66ea3c8bdf4532457e316c3d5d035860088e83ecc305fc4bc07a80bfb6892c5c",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Pannel/PannelLeft.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Pannel/PannelLeft.png",
+      "status": 200,
+      "bytes": 1162,
+      "sha256": "e575285ddc8be428853ac96a1d9536bd45cea331691d91036481ec4814965ce3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Pannel/PannelRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Pannel/PannelRight.png",
+      "status": 200,
+      "bytes": 1051,
+      "sha256": "90c42bc8d64203ba2968fa1bc8f6397f0729e3bf153142f0edf79250c56f4ca9",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/PoufBrown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/PoufBrown.png",
+      "status": 200,
+      "bytes": 5886,
+      "sha256": "a2c8d333022471ecece5d8c48bc98d9e9d3908a8deb3d856b1008a436a832a59",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/PoufOrange.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/PoufOrange.png",
+      "status": 200,
+      "bytes": 842,
+      "sha256": "b954f502abe2c8291be550fca7ad6d5872d3e59ba5300220c48fbe8271977dc9",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/MuralShelf.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/MuralShelf.png",
+      "status": 200,
+      "bytes": 939,
+      "sha256": "74765ab479e35256becfbd148d53b858d4b1975255943f434d0c981bbf393cfa",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/Shelf.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/Shelf.png",
+      "status": 200,
+      "bytes": 902,
+      "sha256": "6b270bd99ada7b0cf188f639873f7e7ed1bf1af617e83e3abaa5c9fdbc428671",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/ShelfBig.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Shelf/ShelfBig.png",
+      "status": 200,
+      "bytes": 913,
+      "sha256": "8e700133f491e83d5ec85968b3df8d2a68b29a335bda9cce1afc9a833e44628f",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableBrown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableBrown.png",
+      "status": 200,
+      "bytes": 884,
+      "sha256": "6c8d4a4f5cae9d40456d855a5026002d2d071e2284306007c6c935e6a531f990",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableDarkBrown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableDarkBrown.png",
+      "status": 200,
+      "bytes": 6226,
+      "sha256": "8e6baf26cf5792ba5e31c6025e55c99c98bb895c0cb1a5bec71c6e7d8d8df7f1",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableNarrowBrown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableNarrowBrown.png",
+      "status": 200,
+      "bytes": 807,
+      "sha256": "1c519634ff8ee4878bde46aad81d1db0af2b77cd56dab493c53bb906ea478097",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableNarrowDarkBrown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableNarrowDarkBrown.png",
+      "status": 200,
+      "bytes": 800,
+      "sha256": "de846adfd32db92e03e27918bee222c1f2217302a161fbaa3ac140a525108349",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableSmallGrey.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableSmallGrey.png",
+      "status": 200,
+      "bytes": 771,
+      "sha256": "e9aeac75d055a4f87a1d43afc6d57fd1cdb84d53870bd7e29b8a77347b216d08",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableSmallWhite.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Furniture/Table/TableSmallWhite.png",
+      "status": 200,
+      "bytes": 763,
+      "sha256": "c2c8354adac9676ac75ef82eedd81c0e380716f7243d84e20686df7e0a0c8d78",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenBlackDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenBlackDown.png",
+      "status": 200,
+      "bytes": 745,
+      "sha256": "185e9b995c8f1cdf2b55734a2990a16d2d7c67858dabced8b41214f82016e1a3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenBlackUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenBlackUp.png",
+      "status": 200,
+      "bytes": 749,
+      "sha256": "c8c1b175b2848d435a435153cd862880de07a762c9819d365f146a1c5d4ade78",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenWhiteDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenWhiteDown.png",
+      "status": 200,
+      "bytes": 732,
+      "sha256": "91e96c2fced6e0cae074a4533f2989386926ab71f8eb452b045d3b5027c22425",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenWhiteUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/BigScreenWhiteUp.png",
+      "status": 200,
+      "bytes": 757,
+      "sha256": "d529314e0ed62b8a929a71f14525534b48c49f526db381037dd31971edb1c9c2",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/LaptopBlackDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/LaptopBlackDown.png",
+      "status": 200,
+      "bytes": 801,
+      "sha256": "98b7b1414b0e0a1c30c65982b51734b469657a9f263362d2ef79c4ec6a75846c",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/LaptopBlackRight.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/LaptopBlackRight.png",
+      "status": 200,
+      "bytes": 780,
+      "sha256": "8a2866df4621d7ac7f649d287d448d81e84d24fd922f4726bdfe3c67ddca4a16",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/Printer.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/Printer.png",
+      "status": 200,
+      "bytes": 946,
+      "sha256": "064d1d4c72fb50f37ceb401dca212730384974c437576994adf02af486cf3787",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenBlackDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenBlackDown.png",
+      "status": 200,
+      "bytes": 767,
+      "sha256": "c858098b7e8894d2f846504c8d7ebb5f84243a9f4a2c0d4b124b2ac539770302",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenBlackUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenBlackUp.png",
+      "status": 200,
+      "bytes": 707,
+      "sha256": "afb65559904b772d179e4fa1f1fdb8e4c13dae1cab12f1a44da3395ea634668a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenWhiteDown.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenWhiteDown.png",
+      "status": 200,
+      "bytes": 766,
+      "sha256": "8816aa58a91434102609381190a37b51f2c29ee51cdd41f77edf81f42d454abe",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenWhiteUp.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Computer/ScreenWhiteUp.png",
+      "status": 200,
+      "bytes": 712,
+      "sha256": "058ab0ced78cd1611fbc34685cc44395df2272eccdd865c1b353931ae33951d5",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/MuralPlant.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/MuralPlant.png",
+      "status": 200,
+      "bytes": 1410,
+      "sha256": "d3f6484cbd8e92fc54f41b64fe49ff8d9d10bfb82142912232509fccbc1ebaa8",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/Plant.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/Plant.png",
+      "status": 200,
+      "bytes": 2007,
+      "sha256": "beb8a08b5c9291efa87820265f859edbebc8e996b3a066eb3869d59a129f5b7a",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantBlue.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantBlue.png",
+      "status": 200,
+      "bytes": 13373,
+      "sha256": "fb632a4665e61cfd5cbdf1f4548c2b43be8960cc8b61e2610ecf6fd2305ad641",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantCyan.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantCyan.png",
+      "status": 200,
+      "bytes": 14568,
+      "sha256": "cb590289f5f60fec41c4800917b6e35336acc810ffdf800b180b800267e686ce",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantLarge.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantLarge.png",
+      "status": 200,
+      "bytes": 1170,
+      "sha256": "a43b476c62753804bda567cc2da09e95f5f29013da64c2bd3a862e1034b91560",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantRed.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantRed.png",
+      "status": 200,
+      "bytes": 13757,
+      "sha256": "81c089ed7ec9d20388e61d74d57d6dc1a4a8b9fda36d405497d7c3cf56382421",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmall.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmall.png",
+      "status": 200,
+      "bytes": 1217,
+      "sha256": "d42560fbe15c6c8f23c4212e4e4cb5d2cf85848ae39aeb88ea2eee2abb34c97b",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallBlue.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallBlue.png",
+      "status": 200,
+      "bytes": 9645,
+      "sha256": "ce0338c8c2965b035bd36da5831dc3132d1e95b202a4c290a98252f3fe803e33",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallCyan.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallCyan.png",
+      "status": 200,
+      "bytes": 9874,
+      "sha256": "1a6283eeb59ef4b880a52746a8c2cc8ac8d12716aefc56a9788110b7ab43266d",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallRed.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Plant/PlantSmallRed.png",
+      "status": 200,
+      "bytes": 9633,
+      "sha256": "a3487e815d5cc37034fa6ce2c4418143dbc608019ad41613b22349a1b845cca3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Basket.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Basket.png",
+      "status": 200,
+      "bytes": 818,
+      "sha256": "62e519aabcf937cfb9fd8248679979abcd7a418f5c6a8a0d48b03a1fdc7aeb0e",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Bin.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Bin.png",
+      "status": 200,
+      "bytes": 776,
+      "sha256": "d9dfe964892a5ea9f19c02eb8b40d373f4718a9537b3920a99629aa090f1840c",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book1.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book1.png",
+      "status": 200,
+      "bytes": 721,
+      "sha256": "4870cd7748ccf8760778694678b33d63ed6f3f6680a0bf984bb7873348fa35cc",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book2.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book2.png",
+      "status": 200,
+      "bytes": 700,
+      "sha256": "22d401b9907bcbf79c593d0bce395d7f4e754d9cfff4b729523f2218ff4a2b0f",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book3.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book3.png",
+      "status": 200,
+      "bytes": 715,
+      "sha256": "436c4b466859659f276262bcf30d23763487f6aef2d2db0c9cb0b772fe106d2b",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book4.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book4.png",
+      "status": 200,
+      "bytes": 730,
+      "sha256": "7bb3d6b3760c1e7cfcdd830f707c7f542f0062670dd8ec177b72dc9fa766c73e",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book5.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Book5.png",
+      "status": 200,
+      "bytes": 709,
+      "sha256": "ef9bdd433bd81a24005c9f8f3802afa28c13058e372f2d3284e9db2e48a88d05",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Clock.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Clock.png",
+      "status": 200,
+      "bytes": 745,
+      "sha256": "0329993787e4237292997ec02e7679f3a2c9e2988e435988f06d18e852cc3105",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/CoffeeDispenser.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/CoffeeDispenser.png",
+      "status": 200,
+      "bytes": 828,
+      "sha256": "c46ed5771c418da0233cde9c5b7bba191a5d2fbf82c56ae185069f80237f2df5",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Folders.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Folders.png",
+      "status": 200,
+      "bytes": 701,
+      "sha256": "1c5fbd2282e0dd2aa73d7878d396e92b4bc3f38817dd54b317fed08f12eb8200",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Mirror.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Mirror.png",
+      "status": 200,
+      "bytes": 700,
+      "sha256": "0c37377a598c3297064b5a89e68af3c7198fa7fb83befd2beb67640ea0170a4e",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Mugs.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/Mugs.png",
+      "status": 200,
+      "bytes": 687,
+      "sha256": "cfad4f57c32dde621dc2ae6f217b10346e263c40d1cee8b7e5ca94a2ebe7bfe3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/ToiletBrush.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/ToiletBrush.png",
+      "status": 200,
+      "bytes": 722,
+      "sha256": "b1ebec1bbc80be95fa47a903ef185cad3beb858cbac443fd47355e8057c0cab3",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/ToiletPaper.png",
+      "finalUrl": "https://varcamp.3-1-133-135.sslip.io/collections/Office/Props/ToiletPaper.png",
+      "status": 200,
+      "bytes": 686,
+      "sha256": "be1a21dc54173c61af4baa817673edc21fb133ba5bbd5f0e6aaa0294c31435be",
+      "matchesPinnedOfficialBytes": true,
+      "contentType": "image/png",
+      "corsRequired": false,
+      "reason": "same origin as actual frontend"
+    }
+  ],
+  "officialAssets": [
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackDown.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlackDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6783,
+      "sha256": "35f17a3294cb8c03ec94360d6bc4c21b36ee03cc2e13b683408dacbb2bbaeac3",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "d6e38ae5b40fbb2db856b6a58a287f8d6a97b3a7",
+      "actualGitBlobSha1": "d6e38ae5b40fbb2db856b6a58a287f8d6a97b3a7",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackLeft.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlackLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6837,
+      "sha256": "0aa5db3cfb2e235c2818f975460d7d5ae4b86aea98ef13fd3de7b412b8d6fab3",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "c176a485783a86d2e601b8932d24cce4542ecad4",
+      "actualGitBlobSha1": "c176a485783a86d2e601b8932d24cce4542ecad4",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackRight.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlackRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6872,
+      "sha256": "3dafab94bfe2572a2ae9ccfed64e30f8d184ea8e1eab0610f7048a4f61ee671b",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "55f3b277cba0268ff5a0d1cd32318a9b755f55b4",
+      "actualGitBlobSha1": "55f3b277cba0268ff5a0d1cd32318a9b755f55b4",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackUp.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlackUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlackUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6823,
+      "sha256": "b93582b11dba11f157dd269f4e939d0bb5d726e628975eb91434ad3111c0d097",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "67d34ebfbb4cc0c6b8732301007843d23f5c0dd9",
+      "actualGitBlobSha1": "67d34ebfbb4cc0c6b8732301007843d23f5c0dd9",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueDown.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlueDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6871,
+      "sha256": "317d066754cacff83a87bec665d27cba2213b0e2f1d5d4d1fc0af4c66de875d9",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "9f44c8d1532d0b588dc28a446e300de1c5d0db9a",
+      "actualGitBlobSha1": "9f44c8d1532d0b588dc28a446e300de1c5d0db9a",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueLeft.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlueLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 7000,
+      "sha256": "bf9ff5454b117c7a4f51d33204d6baeb6ab0c3eb41053e18f9e6d5dd3b483dfe",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "aa83ec2f8956f711a5019d1aa08c65876f8f36b5",
+      "actualGitBlobSha1": "aa83ec2f8956f711a5019d1aa08c65876f8f36b5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueRight.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlueRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6794,
+      "sha256": "61bb137865f53190d361c97b535402b4862d58e6ff92fd4bb6f594d80498538a",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "6029555d6c793c7bad1177e05c973d4066e693b7",
+      "actualGitBlobSha1": "6029555d6c793c7bad1177e05c973d4066e693b7",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueUp.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairBlueUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairBlueUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6784,
+      "sha256": "4440b49232b0f2d1352c0211c13b6249ee0c0f1e03416291e396e3c3a2ccc424",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "2f11e4a34096ee4a100dc9baaf47fa9f695a0090",
+      "actualGitBlobSha1": "2f11e4a34096ee4a100dc9baaf47fa9f695a0090",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenDown.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreenDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 7089,
+      "sha256": "2050946510734fe1859057ceb00a8e1c7a6cc5233760bdfdad19ee7ec608e875",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "756051c7a1ec63b8668033b2826cbd4dd08fa31a",
+      "actualGitBlobSha1": "756051c7a1ec63b8668033b2826cbd4dd08fa31a",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenLeft.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreenLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6996,
+      "sha256": "6b19fb615594b77ef1597567c79fa0270fc5a3fd636fa2b792251ec371e4ab9e",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "8e87f21a00f11259b83f27292298986b8cb4788b",
+      "actualGitBlobSha1": "8e87f21a00f11259b83f27292298986b8cb4788b",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenRight.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreenRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 7015,
+      "sha256": "fdb538f196114c7e7cf02a256990fc0695bd79b2f975ca93dc86700294ac987d",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "d1f4922978aa67871485aafb5fde37506d1b599c",
+      "actualGitBlobSha1": "d1f4922978aa67871485aafb5fde37506d1b599c",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenUp.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreenUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreenUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6912,
+      "sha256": "5e7c85cf2d27680a2392dc39e98c949646aab8d1fe53fc44eebb53855766f560",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "1135c6d356db89c031b659bc2ec0868cf0846566",
+      "actualGitBlobSha1": "1135c6d356db89c031b659bc2ec0868cf0846566",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyDown.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreyDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 859,
+      "sha256": "6ceeda3399734bcdc100426cb1b74192249a59c2dfe28c82b46a68c008132a63",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "dc21b1fe9a2b9bd2003b57404d1a087a22ed07d4",
+      "actualGitBlobSha1": "dc21b1fe9a2b9bd2003b57404d1a087a22ed07d4",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyLeft.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreyLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 881,
+      "sha256": "1d324a9b633b6a672296bb9caf361f1964f6c1eb1055d3d8f58c91db1d6b79ee",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "5f39c50b553f6c27d37ea56555ddb9d226b72a25",
+      "actualGitBlobSha1": "5f39c50b553f6c27d37ea56555ddb9d226b72a25",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyRight.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreyRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 878,
+      "sha256": "01e29562ded83107ed1389b5da449319165167d822e1194b729489e37ec30b2a",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "54e2ec6f13d4664a1f7402f11c4af3836a1fa7fb",
+      "actualGitBlobSha1": "54e2ec6f13d4664a1f7402f11c4af3836a1fa7fb",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyUp.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairGreyUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairGreyUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 799,
+      "sha256": "2ab43efac3863eebd68920d6bd6de9919cf68f06a1f51e1925ee4286e9ae6c5a",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "d97e58f5bf767204c0d6f3c6d9724e369de258d2",
+      "actualGitBlobSha1": "d97e58f5bf767204c0d6f3c6d9724e369de258d2",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedDown.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairRedDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6818,
+      "sha256": "150b0a61b6a2aefb81fd04ade7627489a0b1f17b669e560d7cd430a132e72dba",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "f5a3a5c9bfe9a6f72755c3458813d86c08417b1c",
+      "actualGitBlobSha1": "f5a3a5c9bfe9a6f72755c3458813d86c08417b1c",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedLeft.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairRedLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6743,
+      "sha256": "1ba5de6b66b479c4044f84395730a912aec0e51d4d75541ff3bf341397d41dd5",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "6a529828b0fe9167e4ac85fc9158c243ec813660",
+      "actualGitBlobSha1": "6a529828b0fe9167e4ac85fc9158c243ec813660",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedRight.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairRedRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6788,
+      "sha256": "a960e535f474b57340e55a02d9e65282c6111c487081632f471e60ec50e1507f",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "39ac57b1f21a4c3cd40a15c7d0d0a07dccf06eae",
+      "actualGitBlobSha1": "39ac57b1f21a4c3cd40a15c7d0d0a07dccf06eae",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedUp.png",
+      "path": "play/public/collections/Furniture/Armchair/ArmchairRedUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Armchair/ArmchairRedUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6710,
+      "sha256": "f47970505a49d94a9700c8fcffede2ef3c7aa562aa4a7df5c5f300ad1900ddd1",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "af2398c343be113f9fc001e4d24e5942e9acf139",
+      "actualGitBlobSha1": "af2398c343be113f9fc001e4d24e5942e9acf139",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Bathroom/Sink.png",
+      "path": "play/public/collections/Furniture/Bathroom/Sink.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Bathroom/Sink.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 810,
+      "sha256": "c347db0fc58d0c3f3516f4e524df474e908e69ef45d4d7cff5a3423060381227",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "1a75fd6877c07d35cdea049567bea6e609a85523",
+      "actualGitBlobSha1": "1a75fd6877c07d35cdea049567bea6e609a85523",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Bathroom/Toilet.png",
+      "path": "play/public/collections/Furniture/Bathroom/Toilet.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Bathroom/Toilet.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 879,
+      "sha256": "9c8503ef540338b0a425b8f02a615232512f82dd58868ac8c017df9395866944",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "fe1f10857d7ed778c7cb7d43622193798cc7007f",
+      "actualGitBlobSha1": "fe1f10857d7ed778c7cb7d43622193798cc7007f",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueDown.png",
+      "path": "play/public/collections/Furniture/Chair/ChairBlueDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5628,
+      "sha256": "1bf849aba9e9f4f297d4f6b8cd2fa2ec05551e1cc05677ef059a650395a4cbf4",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "766f29a2c33feadaf92ff987ffaad138503049bd",
+      "actualGitBlobSha1": "766f29a2c33feadaf92ff987ffaad138503049bd",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueLeft.png",
+      "path": "play/public/collections/Furniture/Chair/ChairBlueLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5522,
+      "sha256": "baa7041ea0d2e08297dff4d738bcfa0263448d78f9a6253c072e97b2541a1aaa",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "5da5c01536fc755a8c0b1976f23ce93369438dc6",
+      "actualGitBlobSha1": "5da5c01536fc755a8c0b1976f23ce93369438dc6",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueRight.png",
+      "path": "play/public/collections/Furniture/Chair/ChairBlueRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5564,
+      "sha256": "f0a3e5a55e7bdd0bc4749520fd124a766f7f91422ec614d60c51efa550b998c4",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "198c2c2763bb4fa2d70a24c878c4c8b09e56fbaa",
+      "actualGitBlobSha1": "198c2c2763bb4fa2d70a24c878c4c8b09e56fbaa",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueUp.png",
+      "path": "play/public/collections/Furniture/Chair/ChairBlueUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairBlueUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5539,
+      "sha256": "84499c866ed9a70314584d422fc7ffe03d90156a6e3c4eedc6dcd9182ccaebb1",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "bd043c8475066490291ee0dbff3e58a03d7f3ab2",
+      "actualGitBlobSha1": "bd043c8475066490291ee0dbff3e58a03d7f3ab2",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenDown.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreenDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5738,
+      "sha256": "fc23fadbc7fc1956dc7cf987f023592f3e7cdd0b6cb9763012d0e95795301648",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "6177f1bff026be63f5494e10b64d082350d25004",
+      "actualGitBlobSha1": "6177f1bff026be63f5494e10b64d082350d25004",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenLeft.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreenLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5580,
+      "sha256": "112259b2d6f7b1b87e83319f19990e1435160eb262ad7b32d6b0c081788b7bc5",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "e57cc82bfa13af24337d0dd10fb4906dd5485976",
+      "actualGitBlobSha1": "e57cc82bfa13af24337d0dd10fb4906dd5485976",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenRight.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreenRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5643,
+      "sha256": "a14a6439f9b17abd70916201c4f2603644cdc26e237ec6529e40de09fb0e9f82",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "e9100fb0b16568f8951819a014a10795d8011bf5",
+      "actualGitBlobSha1": "e9100fb0b16568f8951819a014a10795d8011bf5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenUp.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreenUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreenUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5570,
+      "sha256": "7f88751a9cffc9bfd0d0f177159027d402bcdcbf791cf1761cb53e1b8a38c1c2",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "b26628716ea24dbefa2f2cb79df081c920ee04e2",
+      "actualGitBlobSha1": "b26628716ea24dbefa2f2cb79df081c920ee04e2",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyDown.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreyDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 755,
+      "sha256": "33253b99103bb247ac16af68916b5f9157ca47f9ca63f7684ec2c9bba74ffcaf",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "1099f7da82fab3064a589a81cf98050811bf3442",
+      "actualGitBlobSha1": "1099f7da82fab3064a589a81cf98050811bf3442",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyLeft.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreyLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 705,
+      "sha256": "262ee847a8c98aef33706a098aaca102fddfe1e1dc37f602b088a0f654be71c7",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "14c3619861c85b755660ba4751d295abafba83f2",
+      "actualGitBlobSha1": "14c3619861c85b755660ba4751d295abafba83f2",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyRight.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreyRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 714,
+      "sha256": "282d5fda68c35b661dbd35651fdf8ce44b47d7bf187d2b09f4c2a02336b434d4",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "76136d553a075c3ee346b1855b946f7241225e64",
+      "actualGitBlobSha1": "76136d553a075c3ee346b1855b946f7241225e64",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyUp.png",
+      "path": "play/public/collections/Furniture/Chair/ChairGreyUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairGreyUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 696,
+      "sha256": "8a790a39d2c76076a651ecb94dc6dd7eaabf3026f57c74cc79075262839cc43a",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "43629d7dd1c6c46ab548c2927cd87d4822bce8f0",
+      "actualGitBlobSha1": "43629d7dd1c6c46ab548c2927cd87d4822bce8f0",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedDown.png",
+      "path": "play/public/collections/Furniture/Chair/ChairLightRedDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5707,
+      "sha256": "c6e93eb11a1642153751db2bf78a8cf2a3ea7211064d0d4336af177b066b1d53",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "9ac53c9019dd123b1755d7bea6a46ae089715fe3",
+      "actualGitBlobSha1": "9ac53c9019dd123b1755d7bea6a46ae089715fe3",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedLeft.png",
+      "path": "play/public/collections/Furniture/Chair/ChairLightRedLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5567,
+      "sha256": "29e3cef1312fe4d4bee184f11ede837d2734e6d36096405aac610e16b377e8e3",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "6ae23cfaf644550c284fbd926aabf318a6e668a6",
+      "actualGitBlobSha1": "6ae23cfaf644550c284fbd926aabf318a6e668a6",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedRight.png",
+      "path": "play/public/collections/Furniture/Chair/ChairLightRedRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5593,
+      "sha256": "63e0d83e735c955c7163a615c80ed4f5ccbfd90fae6db949141dab8864f6f706",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "ee6623f93460c7ad7053cac930947d08c5e1e6d3",
+      "actualGitBlobSha1": "ee6623f93460c7ad7053cac930947d08c5e1e6d3",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedUp.png",
+      "path": "play/public/collections/Furniture/Chair/ChairLightRedUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairLightRedUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5549,
+      "sha256": "82263daad9a4ff8536b5bea6aaed7a47fe984ba828070aa71c587c9cd05d76da",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "a5681d1da2cbdef666c9ae98d6924fa6c64e74d4",
+      "actualGitBlobSha1": "a5681d1da2cbdef666c9ae98d6924fa6c64e74d4",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedDown.png",
+      "path": "play/public/collections/Furniture/Chair/ChairRedDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5756,
+      "sha256": "cfc55da03237ccf2847e85b6979e28794eb3d83c00dc01be6d4401d181e3b18d",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "8283f56f0d8833ac42983be2852ba23daa1a472b",
+      "actualGitBlobSha1": "8283f56f0d8833ac42983be2852ba23daa1a472b",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedLeft.png",
+      "path": "play/public/collections/Furniture/Chair/ChairRedLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5548,
+      "sha256": "dd8656d63a32ac33f1ba8f77c5794b59c07ba22bc40223d9eb6b388c9f6d80db",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "c75ed380daad7a532438216352ebc027d50a1a01",
+      "actualGitBlobSha1": "c75ed380daad7a532438216352ebc027d50a1a01",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedRight.png",
+      "path": "play/public/collections/Furniture/Chair/ChairRedRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5580,
+      "sha256": "38b41a0608c5edc5714a6ad68c805965960818bac2ad50f459439772fa40ed94",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "9d67cef94468cb8c7241d3810d400ecb02fe8531",
+      "actualGitBlobSha1": "9d67cef94468cb8c7241d3810d400ecb02fe8531",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedUp.png",
+      "path": "play/public/collections/Furniture/Chair/ChairRedUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Chair/ChairRedUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5573,
+      "sha256": "0fc7ece5c5246de5bfe1b4ebace00664cf24ca92ef6852bda766531b955c3da3",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "8ff5850a952b18ba87f1037ba730d4c532bad336",
+      "actualGitBlobSha1": "8ff5850a952b18ba87f1037ba730d4c532bad336",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueDown.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBlueDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 7103,
+      "sha256": "5a84f7d664d407a5a4e81b9b7265bcb47d5e676098e34b9544cc5c3e77377f47",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "4a702559290fd0a3e00772b5f678166c481ead5c",
+      "actualGitBlobSha1": "4a702559290fd0a3e00772b5f678166c481ead5c",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueLeft.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBlueLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6773,
+      "sha256": "65da6990ed393a57168876f896876780e41497eaface36e08331330954fa4a70",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "c559fc9aea1a397f389f4c40e57fe0ddcf54bb26",
+      "actualGitBlobSha1": "c559fc9aea1a397f389f4c40e57fe0ddcf54bb26",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueRight.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBlueRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 881,
+      "sha256": "941e42e1ec0dad5fea5005d015dbb406d82a35730aca5b66f79d6cb556371690",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "c283ca002ff81955ad7d8050c02d1ddd2f9a71db",
+      "actualGitBlobSha1": "c283ca002ff81955ad7d8050c02d1ddd2f9a71db",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueUp.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBlueUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBlueUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 796,
+      "sha256": "c25f58fee38b7ad7d2b7611af1dabace767a772c871f775888bd89b33191d010",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "c0fadc46c15f191deb06accfb6bd3243a2081d2f",
+      "actualGitBlobSha1": "c0fadc46c15f191deb06accfb6bd3243a2081d2f",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownDown.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBrownDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 873,
+      "sha256": "e614482431ac78542915a474b862578e4896118bc9adc801fc8fbcfb49c50609",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "8815daf0ac3495213528bc78b6e2804c78dd8275",
+      "actualGitBlobSha1": "8815daf0ac3495213528bc78b6e2804c78dd8275",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownLeft.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBrownLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6510,
+      "sha256": "b36c1d6064d183f0ef7f7cd21432f4a1e1e06abbd14475b5e4445ce1a035cac1",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "756a6c799f8a0216568172a5f8b302d9290c4d72",
+      "actualGitBlobSha1": "756a6c799f8a0216568172a5f8b302d9290c4d72",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownRight.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBrownRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 876,
+      "sha256": "9f2872728cd3bcbb1d971678fe9612c39fb0c4629f255346d49c4555c4fdbfe2",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "8692d99a2a14d87cfe83a30badd153866dc8186c",
+      "actualGitBlobSha1": "8692d99a2a14d87cfe83a30badd153866dc8186c",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownUp.png",
+      "path": "play/public/collections/Furniture/Couch/CouchBrownUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchBrownUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 795,
+      "sha256": "ef0b7c9c988d2c29f0deb14f321161a06e499259f3bedb0aa8c59049c2263346",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "95977b9279b667d9a9ed1bfa5f01fabf53936e7b",
+      "actualGitBlobSha1": "95977b9279b667d9a9ed1bfa5f01fabf53936e7b",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenDown.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreenDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 879,
+      "sha256": "c3585660f1ed598cc96c8f8466ee087507b6501ea42538cc364fd5d87b42fde3",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "8b30e6bc0c88fefb8562f41e701022fbf8bc4028",
+      "actualGitBlobSha1": "8b30e6bc0c88fefb8562f41e701022fbf8bc4028",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenLeft.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreenLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6545,
+      "sha256": "3fb20c9851a5b78e3ba95f82204927489ddef250fd47b53ac63fd311ce1d5ff5",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "bb1ed88661285e4b7d4c30c04cfe8706aa647eea",
+      "actualGitBlobSha1": "bb1ed88661285e4b7d4c30c04cfe8706aa647eea",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenRight.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreenRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 876,
+      "sha256": "ca4fa44ed381ec435af6dc9408c559e7103a7082e896abce06eb364b5d26ef61",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "276c7d221814559fa6606dd1fcd15871f333ccad",
+      "actualGitBlobSha1": "276c7d221814559fa6606dd1fcd15871f333ccad",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenUp.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreenUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreenUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 795,
+      "sha256": "e6c953e7f9a8ac813a9f21c54f928cb37c33c5cc6ea37f1c822591d09945067b",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "2ac223da2d91f430a16c009d30914256160fbe50",
+      "actualGitBlobSha1": "2ac223da2d91f430a16c009d30914256160fbe50",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyDown.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreyDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 886,
+      "sha256": "8fe5a34fc0792b7fd9fe78f537650a6cfab0490e22a18d93b39add9af962b156",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "5991fbc578f7360dce73de9b50c5ffa6460e482a",
+      "actualGitBlobSha1": "5991fbc578f7360dce73de9b50c5ffa6460e482a",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyLeft.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreyLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6469,
+      "sha256": "e5f6e773a48a8909b7bcfe7f7f20894b3fbaa59e0f5ae7a73a0b5c0e99fab3ab",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "3c04a2aa9b4a83444ebc4d4ae7f30b46e68dd6aa",
+      "actualGitBlobSha1": "3c04a2aa9b4a83444ebc4d4ae7f30b46e68dd6aa",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyRight.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreyRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 887,
+      "sha256": "78876f3c36bc3781b1ba3d0ba6f3d4ae57691577d9b2ce492ad42a2e54277e75",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "ee34156541aef39951084af3b738b5d5e8f99ef5",
+      "actualGitBlobSha1": "ee34156541aef39951084af3b738b5d5e8f99ef5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyUp.png",
+      "path": "play/public/collections/Furniture/Couch/CouchGreyUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchGreyUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 799,
+      "sha256": "f15c832d299b4bb50f27f5ce5a2386278a8ec4a6fb0b0dc715b016ebb304bfd2",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "675ceb05de828d2d57f9d0b7d128ce3a30e7d40d",
+      "actualGitBlobSha1": "675ceb05de828d2d57f9d0b7d128ce3a30e7d40d",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedDown.png",
+      "path": "play/public/collections/Furniture/Couch/CouchRedDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6776,
+      "sha256": "7cc7620e5a4a57d245c1c6a56e09e7fd11b47b778453e54752a063c14b93850a",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "a632276e0c30770df788f7cd86eeb9681945a1bb",
+      "actualGitBlobSha1": "a632276e0c30770df788f7cd86eeb9681945a1bb",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedLeft.png",
+      "path": "play/public/collections/Furniture/Couch/CouchRedLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 863,
+      "sha256": "3c9d7a384d1d29494bbbacf6718041e711b7f2492aad22fdd8a3816e7800d65b",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "6446f525a3e802d790c2777b16abb3b3c148c0a1",
+      "actualGitBlobSha1": "6446f525a3e802d790c2777b16abb3b3c148c0a1",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedRight.png",
+      "path": "play/public/collections/Furniture/Couch/CouchRedRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 877,
+      "sha256": "5b63885eada2ff4cdf935ecdacc731ce9b776830ae250f0018bb61f1c84bed13",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "ef7399b2e9dbfb64aa931dd73904c71e006a6018",
+      "actualGitBlobSha1": "ef7399b2e9dbfb64aa931dd73904c71e006a6018",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedUp.png",
+      "path": "play/public/collections/Furniture/Couch/CouchRedUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Couch/CouchRedUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 796,
+      "sha256": "66ea3c8bdf4532457e316c3d5d035860088e83ecc305fc4bc07a80bfb6892c5c",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "cf06c3db24dd39902d873d5b84e1798e49f8555b",
+      "actualGitBlobSha1": "cf06c3db24dd39902d873d5b84e1798e49f8555b",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Pannel/PannelLeft.png",
+      "path": "play/public/collections/Furniture/Pannel/PannelLeft.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Pannel/PannelLeft.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 1162,
+      "sha256": "e575285ddc8be428853ac96a1d9536bd45cea331691d91036481ec4814965ce3",
+      "pngDimensions": [
+        64,
+        128
+      ],
+      "pinnedGitBlobSha1": "168a13ddcd8ef1ee3cc438fef22270b8fa2115ff",
+      "actualGitBlobSha1": "168a13ddcd8ef1ee3cc438fef22270b8fa2115ff",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Pannel/PannelRight.png",
+      "path": "play/public/collections/Furniture/Pannel/PannelRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Pannel/PannelRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 1051,
+      "sha256": "90c42bc8d64203ba2968fa1bc8f6397f0729e3bf153142f0edf79250c56f4ca9",
+      "pngDimensions": [
+        64,
+        128
+      ],
+      "pinnedGitBlobSha1": "c7e7d9bd01110b517aa9ed1cfe99b3045ee0d116",
+      "actualGitBlobSha1": "c7e7d9bd01110b517aa9ed1cfe99b3045ee0d116",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/PoufBrown.png",
+      "path": "play/public/collections/Furniture/PoufBrown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/PoufBrown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 5886,
+      "sha256": "a2c8d333022471ecece5d8c48bc98d9e9d3908a8deb3d856b1008a436a832a59",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "036d2283de38361b6cac059054c6d9b097b104a0",
+      "actualGitBlobSha1": "036d2283de38361b6cac059054c6d9b097b104a0",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/PoufOrange.png",
+      "path": "play/public/collections/Furniture/PoufOrange.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/PoufOrange.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 842,
+      "sha256": "b954f502abe2c8291be550fca7ad6d5872d3e59ba5300220c48fbe8271977dc9",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "8095935e940af9144f40e78ab8d989755aad940d",
+      "actualGitBlobSha1": "8095935e940af9144f40e78ab8d989755aad940d",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Shelf/MuralShelf.png",
+      "path": "play/public/collections/Furniture/Shelf/MuralShelf.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Shelf/MuralShelf.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 939,
+      "sha256": "74765ab479e35256becfbd148d53b858d4b1975255943f434d0c981bbf393cfa",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "f0a9192a77ba20bcbef3b2547e4b81d3e3d2573d",
+      "actualGitBlobSha1": "f0a9192a77ba20bcbef3b2547e4b81d3e3d2573d",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Shelf/Shelf.png",
+      "path": "play/public/collections/Furniture/Shelf/Shelf.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Shelf/Shelf.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 902,
+      "sha256": "6b270bd99ada7b0cf188f639873f7e7ed1bf1af617e83e3abaa5c9fdbc428671",
+      "pngDimensions": [
+        64,
+        96
+      ],
+      "pinnedGitBlobSha1": "9b65916d6151e51e9f3dd0586557327d52231ae6",
+      "actualGitBlobSha1": "9b65916d6151e51e9f3dd0586557327d52231ae6",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Shelf/ShelfBig.png",
+      "path": "play/public/collections/Furniture/Shelf/ShelfBig.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Shelf/ShelfBig.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 913,
+      "sha256": "8e700133f491e83d5ec85968b3df8d2a68b29a335bda9cce1afc9a833e44628f",
+      "pngDimensions": [
+        64,
+        96
+      ],
+      "pinnedGitBlobSha1": "de317a5f8848abb3a6d85a06c25376f9cccce5f5",
+      "actualGitBlobSha1": "de317a5f8848abb3a6d85a06c25376f9cccce5f5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableBrown.png",
+      "path": "play/public/collections/Furniture/Table/TableBrown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableBrown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 884,
+      "sha256": "6c8d4a4f5cae9d40456d855a5026002d2d071e2284306007c6c935e6a531f990",
+      "pngDimensions": [
+        64,
+        96
+      ],
+      "pinnedGitBlobSha1": "5e644ce9cc34dc5ddf62b7190dc3a3cf8fba51f5",
+      "actualGitBlobSha1": "5e644ce9cc34dc5ddf62b7190dc3a3cf8fba51f5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableDarkBrown.png",
+      "path": "play/public/collections/Furniture/Table/TableDarkBrown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableDarkBrown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 6226,
+      "sha256": "8e6baf26cf5792ba5e31c6025e55c99c98bb895c0cb1a5bec71c6e7d8d8df7f1",
+      "pngDimensions": [
+        64,
+        96
+      ],
+      "pinnedGitBlobSha1": "6a02dff7979b4acd02258552faa14e64a24e85b7",
+      "actualGitBlobSha1": "6a02dff7979b4acd02258552faa14e64a24e85b7",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableNarrowBrown.png",
+      "path": "play/public/collections/Furniture/Table/TableNarrowBrown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableNarrowBrown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 807,
+      "sha256": "1c519634ff8ee4878bde46aad81d1db0af2b77cd56dab493c53bb906ea478097",
+      "pngDimensions": [
+        32,
+        96
+      ],
+      "pinnedGitBlobSha1": "c96d736ec135dda7bd5b844290e79dd90ff8407d",
+      "actualGitBlobSha1": "c96d736ec135dda7bd5b844290e79dd90ff8407d",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableNarrowDarkBrown.png",
+      "path": "play/public/collections/Furniture/Table/TableNarrowDarkBrown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableNarrowDarkBrown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 800,
+      "sha256": "de846adfd32db92e03e27918bee222c1f2217302a161fbaa3ac140a525108349",
+      "pngDimensions": [
+        32,
+        96
+      ],
+      "pinnedGitBlobSha1": "5f1cc6cbc7e744ae0e1f67168d623abaf99dd025",
+      "actualGitBlobSha1": "5f1cc6cbc7e744ae0e1f67168d623abaf99dd025",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableSmallGrey.png",
+      "path": "play/public/collections/Furniture/Table/TableSmallGrey.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableSmallGrey.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 771,
+      "sha256": "e9aeac75d055a4f87a1d43afc6d57fd1cdb84d53870bd7e29b8a77347b216d08",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "dae938e18258b0815de624a0dc3cd96d0e909866",
+      "actualGitBlobSha1": "dae938e18258b0815de624a0dc3cd96d0e909866",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Furniture/Table/TableSmallWhite.png",
+      "path": "play/public/collections/Furniture/Table/TableSmallWhite.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Furniture/Table/TableSmallWhite.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 763,
+      "sha256": "c2c8354adac9676ac75ef82eedd81c0e380716f7243d84e20686df7e0a0c8d78",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "0ccfc50d9a50b81fc3fefa408da69f5f6881c1de",
+      "actualGitBlobSha1": "0ccfc50d9a50b81fc3fefa408da69f5f6881c1de",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/BigScreenBlackDown.png",
+      "path": "play/public/collections/Office/Computer/BigScreenBlackDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/BigScreenBlackDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 745,
+      "sha256": "185e9b995c8f1cdf2b55734a2990a16d2d7c67858dabced8b41214f82016e1a3",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "0ce1b9099da6eebd4ee14dd94d2f5bfd632500ca",
+      "actualGitBlobSha1": "0ce1b9099da6eebd4ee14dd94d2f5bfd632500ca",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/BigScreenBlackUp.png",
+      "path": "play/public/collections/Office/Computer/BigScreenBlackUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/BigScreenBlackUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 749,
+      "sha256": "c8c1b175b2848d435a435153cd862880de07a762c9819d365f146a1c5d4ade78",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "cf84e5dddb7f6b0a66be124b55b22a15ffb2f548",
+      "actualGitBlobSha1": "cf84e5dddb7f6b0a66be124b55b22a15ffb2f548",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/BigScreenWhiteDown.png",
+      "path": "play/public/collections/Office/Computer/BigScreenWhiteDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/BigScreenWhiteDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 732,
+      "sha256": "91e96c2fced6e0cae074a4533f2989386926ab71f8eb452b045d3b5027c22425",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "6c06af5b3f12de9e3105f0fdc1373c32dcee98df",
+      "actualGitBlobSha1": "6c06af5b3f12de9e3105f0fdc1373c32dcee98df",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/BigScreenWhiteUp.png",
+      "path": "play/public/collections/Office/Computer/BigScreenWhiteUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/BigScreenWhiteUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 757,
+      "sha256": "d529314e0ed62b8a929a71f14525534b48c49f526db381037dd31971edb1c9c2",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "30ea1d9c8dc3cf0528b83083045550a511d33d75",
+      "actualGitBlobSha1": "30ea1d9c8dc3cf0528b83083045550a511d33d75",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/LaptopBlackDown.png",
+      "path": "play/public/collections/Office/Computer/LaptopBlackDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/LaptopBlackDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 801,
+      "sha256": "98b7b1414b0e0a1c30c65982b51734b469657a9f263362d2ef79c4ec6a75846c",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "e53869ceb7355a7a55c0ed8ca7a4fa5319541de6",
+      "actualGitBlobSha1": "e53869ceb7355a7a55c0ed8ca7a4fa5319541de6",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/LaptopBlackRight.png",
+      "path": "play/public/collections/Office/Computer/LaptopBlackRight.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/LaptopBlackRight.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 780,
+      "sha256": "8a2866df4621d7ac7f649d287d448d81e84d24fd922f4726bdfe3c67ddca4a16",
+      "pngDimensions": [
+        33,
+        32
+      ],
+      "pinnedGitBlobSha1": "b479ed1a7b162b611b4f2c3fd65000bc3b33e48c",
+      "actualGitBlobSha1": "b479ed1a7b162b611b4f2c3fd65000bc3b33e48c",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/Printer.png",
+      "path": "play/public/collections/Office/Computer/Printer.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/Printer.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 946,
+      "sha256": "064d1d4c72fb50f37ceb401dca212730384974c437576994adf02af486cf3787",
+      "pngDimensions": [
+        64,
+        64
+      ],
+      "pinnedGitBlobSha1": "43f47d237cd53f325f41592167df168f0ea8e4dc",
+      "actualGitBlobSha1": "43f47d237cd53f325f41592167df168f0ea8e4dc",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/ScreenBlackDown.png",
+      "path": "play/public/collections/Office/Computer/ScreenBlackDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/ScreenBlackDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 767,
+      "sha256": "c858098b7e8894d2f846504c8d7ebb5f84243a9f4a2c0d4b124b2ac539770302",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "5e586f16d09e426983aba381c5f579d8a557a2b0",
+      "actualGitBlobSha1": "5e586f16d09e426983aba381c5f579d8a557a2b0",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/ScreenBlackUp.png",
+      "path": "play/public/collections/Office/Computer/ScreenBlackUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/ScreenBlackUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 707,
+      "sha256": "afb65559904b772d179e4fa1f1fdb8e4c13dae1cab12f1a44da3395ea634668a",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "8ef31c99c0ff35908c7150fd79e8841a6daa502f",
+      "actualGitBlobSha1": "8ef31c99c0ff35908c7150fd79e8841a6daa502f",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/ScreenWhiteDown.png",
+      "path": "play/public/collections/Office/Computer/ScreenWhiteDown.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/ScreenWhiteDown.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 766,
+      "sha256": "8816aa58a91434102609381190a37b51f2c29ee51cdd41f77edf81f42d454abe",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "ca8b3cb6e05e5d5bd7f3b950b5dd390d0601f585",
+      "actualGitBlobSha1": "ca8b3cb6e05e5d5bd7f3b950b5dd390d0601f585",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Computer/ScreenWhiteUp.png",
+      "path": "play/public/collections/Office/Computer/ScreenWhiteUp.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Computer/ScreenWhiteUp.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 712,
+      "sha256": "058ab0ced78cd1611fbc34685cc44395df2272eccdd865c1b353931ae33951d5",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "978af2bd6378ec9c6abae3041603cca162e78d5f",
+      "actualGitBlobSha1": "978af2bd6378ec9c6abae3041603cca162e78d5f",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/MuralPlant.png",
+      "path": "play/public/collections/Office/Plant/MuralPlant.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/MuralPlant.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 1410,
+      "sha256": "d3f6484cbd8e92fc54f41b64fe49ff8d9d10bfb82142912232509fccbc1ebaa8",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "31b3c1b11ab94a9327a12f76b739c76d2749adad",
+      "actualGitBlobSha1": "31b3c1b11ab94a9327a12f76b739c76d2749adad",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/Plant.png",
+      "path": "play/public/collections/Office/Plant/Plant.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/Plant.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 2007,
+      "sha256": "beb8a08b5c9291efa87820265f859edbebc8e996b3a066eb3869d59a129f5b7a",
+      "pngDimensions": [
+        96,
+        96
+      ],
+      "pinnedGitBlobSha1": "fcd6f04a462dbcd9019c4cfae877a0172b53c3fe",
+      "actualGitBlobSha1": "fcd6f04a462dbcd9019c4cfae877a0172b53c3fe",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantBlue.png",
+      "path": "play/public/collections/Office/Plant/PlantBlue.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantBlue.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 13373,
+      "sha256": "fb632a4665e61cfd5cbdf1f4548c2b43be8960cc8b61e2610ecf6fd2305ad641",
+      "pngDimensions": [
+        96,
+        96
+      ],
+      "pinnedGitBlobSha1": "54fe6f0781fe2918c1bfdf29e95b87fb13e46baa",
+      "actualGitBlobSha1": "54fe6f0781fe2918c1bfdf29e95b87fb13e46baa",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantCyan.png",
+      "path": "play/public/collections/Office/Plant/PlantCyan.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantCyan.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 14568,
+      "sha256": "cb590289f5f60fec41c4800917b6e35336acc810ffdf800b180b800267e686ce",
+      "pngDimensions": [
+        96,
+        96
+      ],
+      "pinnedGitBlobSha1": "547d6df585b80c8139ea35b4fd8d73580bbda7d1",
+      "actualGitBlobSha1": "547d6df585b80c8139ea35b4fd8d73580bbda7d1",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantLarge.png",
+      "path": "play/public/collections/Office/Plant/PlantLarge.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantLarge.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 1170,
+      "sha256": "a43b476c62753804bda567cc2da09e95f5f29013da64c2bd3a862e1034b91560",
+      "pngDimensions": [
+        64,
+        32
+      ],
+      "pinnedGitBlobSha1": "5c7c83721447030bca2f5a63e5ee5b06684b7a08",
+      "actualGitBlobSha1": "5c7c83721447030bca2f5a63e5ee5b06684b7a08",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantRed.png",
+      "path": "play/public/collections/Office/Plant/PlantRed.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantRed.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 13757,
+      "sha256": "81c089ed7ec9d20388e61d74d57d6dc1a4a8b9fda36d405497d7c3cf56382421",
+      "pngDimensions": [
+        96,
+        96
+      ],
+      "pinnedGitBlobSha1": "f990a154acdecbd3e09f04b4f330944b0e7f125e",
+      "actualGitBlobSha1": "f990a154acdecbd3e09f04b4f330944b0e7f125e",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantSmall.png",
+      "path": "play/public/collections/Office/Plant/PlantSmall.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantSmall.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 1217,
+      "sha256": "d42560fbe15c6c8f23c4212e4e4cb5d2cf85848ae39aeb88ea2eee2abb34c97b",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "5960788accde3ef63851f1b8a5c484768b52bef9",
+      "actualGitBlobSha1": "5960788accde3ef63851f1b8a5c484768b52bef9",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantSmallBlue.png",
+      "path": "play/public/collections/Office/Plant/PlantSmallBlue.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantSmallBlue.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 9645,
+      "sha256": "ce0338c8c2965b035bd36da5831dc3132d1e95b202a4c290a98252f3fe803e33",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "fa7ac16f9fdc4f24590836e60f6aafa8f716a8c3",
+      "actualGitBlobSha1": "fa7ac16f9fdc4f24590836e60f6aafa8f716a8c3",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantSmallCyan.png",
+      "path": "play/public/collections/Office/Plant/PlantSmallCyan.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantSmallCyan.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 9874,
+      "sha256": "1a6283eeb59ef4b880a52746a8c2cc8ac8d12716aefc56a9788110b7ab43266d",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "6e9a27d220d1afb00856b6f056b01bff5fe2a395",
+      "actualGitBlobSha1": "6e9a27d220d1afb00856b6f056b01bff5fe2a395",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Plant/PlantSmallRed.png",
+      "path": "play/public/collections/Office/Plant/PlantSmallRed.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Plant/PlantSmallRed.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 9633,
+      "sha256": "a3487e815d5cc37034fa6ce2c4418143dbc608019ad41613b22349a1b845cca3",
+      "pngDimensions": [
+        32,
+        64
+      ],
+      "pinnedGitBlobSha1": "ca8a0f078943f65dabe6cbcedff369d1ecc80708",
+      "actualGitBlobSha1": "ca8a0f078943f65dabe6cbcedff369d1ecc80708",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Basket.png",
+      "path": "play/public/collections/Office/Props/Basket.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Basket.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 818,
+      "sha256": "62e519aabcf937cfb9fd8248679979abcd7a418f5c6a8a0d48b03a1fdc7aeb0e",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "879cc6eee7d91ff355b095925d3578c647ca5a8e",
+      "actualGitBlobSha1": "879cc6eee7d91ff355b095925d3578c647ca5a8e",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Bin.png",
+      "path": "play/public/collections/Office/Props/Bin.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Bin.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 776,
+      "sha256": "d9dfe964892a5ea9f19c02eb8b40d373f4718a9537b3920a99629aa090f1840c",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "4fffab7e192756a423f24192392148cd50b909f6",
+      "actualGitBlobSha1": "4fffab7e192756a423f24192392148cd50b909f6",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Book1.png",
+      "path": "play/public/collections/Office/Props/Book1.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Book1.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 721,
+      "sha256": "4870cd7748ccf8760778694678b33d63ed6f3f6680a0bf984bb7873348fa35cc",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "596df555de2504244dd938a19260e6f6e402a0be",
+      "actualGitBlobSha1": "596df555de2504244dd938a19260e6f6e402a0be",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Book2.png",
+      "path": "play/public/collections/Office/Props/Book2.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Book2.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 700,
+      "sha256": "22d401b9907bcbf79c593d0bce395d7f4e754d9cfff4b729523f2218ff4a2b0f",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "c3899a85b416dc3551d39b3aa07ed859ac678050",
+      "actualGitBlobSha1": "c3899a85b416dc3551d39b3aa07ed859ac678050",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Book3.png",
+      "path": "play/public/collections/Office/Props/Book3.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Book3.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 715,
+      "sha256": "436c4b466859659f276262bcf30d23763487f6aef2d2db0c9cb0b772fe106d2b",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "03b4de32626836be035dce3137d5b76c930d0ad4",
+      "actualGitBlobSha1": "03b4de32626836be035dce3137d5b76c930d0ad4",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Book4.png",
+      "path": "play/public/collections/Office/Props/Book4.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Book4.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 730,
+      "sha256": "7bb3d6b3760c1e7cfcdd830f707c7f542f0062670dd8ec177b72dc9fa766c73e",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "5552176163ce84f289d3b710ce21c97751e41c00",
+      "actualGitBlobSha1": "5552176163ce84f289d3b710ce21c97751e41c00",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Book5.png",
+      "path": "play/public/collections/Office/Props/Book5.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Book5.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 709,
+      "sha256": "ef9bdd433bd81a24005c9f8f3802afa28c13058e372f2d3284e9db2e48a88d05",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "b780b2bc8df6a23afa8d6967e42acd4c7a622287",
+      "actualGitBlobSha1": "b780b2bc8df6a23afa8d6967e42acd4c7a622287",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Clock.png",
+      "path": "play/public/collections/Office/Props/Clock.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Clock.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 745,
+      "sha256": "0329993787e4237292997ec02e7679f3a2c9e2988e435988f06d18e852cc3105",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "2901a502fc3a7f50d7a2926e667b43da029a9888",
+      "actualGitBlobSha1": "2901a502fc3a7f50d7a2926e667b43da029a9888",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/CoffeeDispenser.png",
+      "path": "play/public/collections/Office/Props/CoffeeDispenser.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/CoffeeDispenser.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 828,
+      "sha256": "c46ed5771c418da0233cde9c5b7bba191a5d2fbf82c56ae185069f80237f2df5",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "7fd5832e88da5b8c5190a6ff4bf392f1a4b0bd69",
+      "actualGitBlobSha1": "7fd5832e88da5b8c5190a6ff4bf392f1a4b0bd69",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Folders.png",
+      "path": "play/public/collections/Office/Props/Folders.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Folders.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 701,
+      "sha256": "1c5fbd2282e0dd2aa73d7878d396e92b4bc3f38817dd54b317fed08f12eb8200",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "6b97e70efb2e4508f584e96e99c1b8e1a61b6eba",
+      "actualGitBlobSha1": "6b97e70efb2e4508f584e96e99c1b8e1a61b6eba",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Mirror.png",
+      "path": "play/public/collections/Office/Props/Mirror.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Mirror.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 700,
+      "sha256": "0c37377a598c3297064b5a89e68af3c7198fa7fb83befd2beb67640ea0170a4e",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "464ef1a99ef4da6302db142e810196b44b8d7b17",
+      "actualGitBlobSha1": "464ef1a99ef4da6302db142e810196b44b8d7b17",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/Mugs.png",
+      "path": "play/public/collections/Office/Props/Mugs.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/Mugs.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 687,
+      "sha256": "cfad4f57c32dde621dc2ae6f217b10346e263c40d1cee8b7e5ca94a2ebe7bfe3",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "27280723d4d529e8c1933b39764a7ef48a6325d5",
+      "actualGitBlobSha1": "27280723d4d529e8c1933b39764a7ef48a6325d5",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/ToiletBrush.png",
+      "path": "play/public/collections/Office/Props/ToiletBrush.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/ToiletBrush.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 722,
+      "sha256": "b1ebec1bbc80be95fa47a903ef185cad3beb858cbac443fd47355e8057c0cab3",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "e641970791e3a236d67c3119b87ad36024703502",
+      "actualGitBlobSha1": "e641970791e3a236d67c3119b87ad36024703502",
+      "exactPinnedSourceBytes": true
+    },
+    {
+      "url": "https://play.workadventu.re/collections/Office/Props/ToiletPaper.png",
+      "path": "play/public/collections/Office/Props/ToiletPaper.png",
+      "status": 200,
+      "finalUrl": "https://play.workadventu.re/collections/Office/Props/ToiletPaper.png",
+      "contentType": "image/png",
+      "cors": "*",
+      "bytes": 686,
+      "sha256": "be1a21dc54173c61af4baa817673edc21fb133ba5bbd5f0e6aaa0294c31435be",
+      "pngDimensions": [
+        32,
+        32
+      ],
+      "pinnedGitBlobSha1": "b787603ff14c5a8b33b17a3cd8c1af19d675bd20",
+      "actualGitBlobSha1": "b787603ff14c5a8b33b17a3cd8c1af19d675bd20",
+      "exactPinnedSourceBytes": true
+    }
+  ],
+  "verification": "Public HTTP reads2026-10-17; same-origin does not require CORS; offline receipts are not a fresh availability claim."
+}

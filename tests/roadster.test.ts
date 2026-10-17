@@ -1,3 +1,4 @@
+import { approvedEditorCollections, editorCatalogHistoryMaps, historicalEditorWamBytes, editorMetadataHistoryPaths, historicalEditorMetadataBytes } from './helpers/editor-catalog-history';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { historicalLayout, historicalNative } from './helpers/visibility-history';
@@ -122,4 +123,36 @@ it('resolves every complete pose and loop through the pinned deployed Phaser par
   expect(out.equals(frames[phase%16]),`native pose ${phase} at${time}ms`).toBe(true);
  }
  expect(set.tiles!.every(t=>t.properties?.some(p=>p.name==='collides'&&p.value===false))).toBe(true);
+});
+
+it('proves all33 editor registrations against independent raw and semantic8dc WAM receipts', () => {
+ expect(editorCatalogHistoryMaps).toHaveLength(33);
+ for (const id of editorCatalogHistoryMaps) expect(JSON.parse(historicalEditorWamBytes(id).toString()).entityCollections).toEqual([]);
+});
+it('refuses entity, area, vendor, mapUrl and collection drift outside catalog registration', () => {
+ const raw=readFileSync('maps/overworld.wam','utf8');
+ // This candidate changes only the root array, so negatives cannot pass merely
+ // because JSON.stringify changed unrelated historical whitespace.
+ const candidate=raw.replace(/"entityCollections": \[[\s\S]*?\]/, '"entityCollections": '+JSON.stringify(approvedEditorCollections));
+ expect(()=>historicalEditorWamBytes('overworld',candidate)).not.toThrow();
+ const changes=[
+  candidate.replace('"entities": {}','"entities": {"unexpected": {"name": "existing entity drift"}}'),
+  candidate.replace('welcome-directory','changed-directory'),
+  candidate.replace('"version":','"vendor": {"keep": true},\n  "version":'),
+  candidate.replace('overworld.tmj','changed.tmj'),
+  candidate.replace('OfficeCollection.json','UnapprovedCollection.json'),
+  candidate.replace(JSON.stringify(approvedEditorCollections),JSON.stringify([...approvedEditorCollections,{url:'https://example.invalid/extra.json',type:'file'}])),
+ ];
+ for(const changed of changes){expect(changed).not.toBe(candidate);expect(()=>historicalEditorWamBytes('overworld',changed)).toThrow();}
+});
+
+it('proves all four editor builder metadata changes before historical composition and refuses unrelated drift', () => {
+ expect(editorMetadataHistoryPaths).toHaveLength(4);
+ for(const path of editorMetadataHistoryPaths){
+  const raw=readFileSync(path,'utf8');
+  expect(()=>historicalEditorMetadataBytes(path)).not.toThrow();
+  const changed=raw.replace('"sha256":','"unexpected":true,"sha256":');
+  expect(changed).not.toBe(raw);
+  expect(()=>historicalEditorMetadataBytes(path,changed)).toThrow(/Metadata changed outside/);
+ }
 });

@@ -1,0 +1,138 @@
+{
+  "commit": "8dc37e1239456ca3165f3bbd7f47238735e27169",
+  "builderSha256": "03e48ed4e32bdb9a6d001c52456787459e72229be8d59c7422403dde72f4d1bb",
+  "maps": {
+    "air-district": {
+      "native": "afacc535986d9cfc72c17c8dd9e2ba78101368ba8b9b4c5ca725a503e8ba3d53",
+      "wamExceptEntityCollections": "342a73adbe95f07265fbe59e84b186a417eeac1be6d4d18c471a9c6333009911"
+    },
+    "campus-exploration": {
+      "native": "fdbb644169bbf77831d25893969f4587beba11f4f7a9a67ee328f168ae73af3c",
+      "wamExceptEntityCollections": "51e1c1ae6ea6482024dcae25ef6646b14b2f5a37b897974f474ea00697119c7f"
+    },
+    "comet-maze": {
+      "native": "aaa1d1c770ea15db253e21e2e18a64921dfafb1e2f5db783f6c13ed92cc9256e",
+      "wamExceptEntityCollections": "858345572207c85c514f2cf094c2c5cec082f006c7f36ab470782a4ea6c7bd55"
+    },
+    "constellation-shore": {
+      "native": "add945c76b0bb1777012aa79505d8baffb6eaee026a3ef4438408604a8c9c598",
+      "wamExceptEntityCollections": "9d6accad9db474d7ac669d26da4f504b9cf18c7f7b5ea0d793f6a3b9ce75f9da"
+    },
+    "earth-district": {
+      "native": "e29269e9364377d51e47ec7fd1105eb2119db11536f0ad73b8de1f20dc34faa0",
+      "wamExceptEntityCollections": "6bcb63f7c8d993fe959551940054a75b6ac77bc3f25d9702243428ce8d9b4268"
+    },
+    "fa-ship": {
+      "native": "6ee1b101bf428f0508194f31ac3e49fd89377d68d5e1ce0a48f744b4132a851a",
+      "wamExceptEntityCollections": "47c72e0710353fa826487e7ac80e91ae9f22af096d280d0cbcd8c353d4ebe3f8"
+    },
+    "fire-district": {
+      "native": "e23f9b0dd369cd0b8ad71470ffcafd85eb15942b415ad24cf421ed4059f21705",
+      "wamExceptEntityCollections": "a71758f44522bf467697eb84a5c4e9ec5e15c75cf31c95340f1b3e89e749ab56"
+    },
+    "hidden-observatory": {
+      "native": "3932409d558cecac94c798df650cad1378544490ec3548baef0a12fdf4be11e7",
+      "wamExceptEntityCollections": "b6f5fcb26bb6ec6e9dcb754865b30237f9b14e39f3dd1e57a977aaa9e7e47e2e"
+    },
+    "lunar-hall": {
+      "native": "b4d12b4cc8c06559e8f6ae33f072cf4d9389f098a541282b0906cabf3aece3e7",
+      "wamExceptEntityCollections": "afbe9086600e5aa86692fbdf372e107413306a6f683bb8fca783ce0813409c24"
+    },
+    "moon-cafe": {
+      "native": "094b0c077656f499a55d8571ff91e11b583cd502eada6f96bd75afb5bfd6f563",
+      "wamExceptEntityCollections": "f6dfca33ef79b4080eebe24aadedf40391a03ec8e317ef7525de4152b9e6247f"
+    },
+    "moon-grotto": {
+      "native": "4b781370b5ca32b6eb690ae691c98fc3feffce10f1cf89e7e8cd683af1bdce81",
+      "wamExceptEntityCollections": "77db4bdfa0bea04a601385b9b6d8c145f7f46d86052be27d0d178a533dc9b97f"
+    },
+    "nebula-arcade": {
+      "native": "369f12c0d9b480da7dda471b27c7879e6b75b4636880169eebd3a139e017b781",
+      "wamExceptEntityCollections": "fde6a2104d5070da68d290702b7f4d0590c514ee4883940084084fbe55897236"
+    },
+    "orbit-maze": {
+      "native": "0eb927539804b15163ab9971ecc3dc7c81d7ec8aea524a90d12c12ffb4264a92",
+      "wamExceptEntityCollections": "6eefe1aa7cd958648fcc2a3518a2b1c0add9f19189bd565470e1bfb1117594ef"
+    },
+    "orbit-playground": {
+      "native": "d4225fda99fe3bab3a4b4642792dec7cccc207652695e574e756ce33d90c4b51",
+      "wamExceptEntityCollections": "6988a97e7d3d1d23b32dc7e81459422a744a792a2b7f12b5644e7d851ec49b58"
+    },
+    "overworld": {
+      "native": "3c5262954b00b8c04ee52ed62fb607ea69ee6b3bfdbf606e607f2e0165027c78",
+      "wamExceptEntityCollections": "f066d1c7876af1105ca1140d2ab48c072a41ac6e06969182d14989da5ca9a5b5"
+    },
+    "shipyard-beach": {
+      "native": "c35c6dd6ca6ee6a9258dd7487d8c466965a431409c3633a2b8f013049ff33aa8",
+      "wamExceptEntityCollections": "4213f530f9a8d2ad18adfce46ba01a46d6bc9899eb5b3875eac0d7380f37a5af"
+    },
+    "solar-hall": {
+      "native": "30958d8f17f2cd07f3e1b63ba14876fac3cbf1e4b894feb0f2f43c18b330ef2b",
+      "wamExceptEntityCollections": "067515c2e57d582da2b8bce669f263f3a7b381dbc4220a55cf39583b4cb5720f"
+    },
+    "speaker-aquarius": {
+      "native": "a2c190c983816e0c960b22cbaa1eab7981e7bcd0855d88a688d2b5cb9006377f",
+      "wamExceptEntityCollections": "2283fe03d92b3769d6b01e8af1af8f3c61accf870238113606e697b8cd1d96f9"
+    },
+    "speaker-aries": {
+      "native": "9e832bf6e3489f61303f926139387c1ad95315e9292de2b673e426fae18ce9de",
+      "wamExceptEntityCollections": "8f5a171f4cd3cc4dc656d62e9d3953b6f073e39e61ebafc05389fa3efc4256a8"
+    },
+    "speaker-cancer": {
+      "native": "b46b24aa6427f494586dbb26788b51c0916fa24efc7dd529745b27ee2ad96d43",
+      "wamExceptEntityCollections": "51432438a9cc2045782a2dac49e8ba81f6c8af84e29b7f3090e013ccb3d751e9"
+    },
+    "speaker-capricorn": {
+      "native": "eaa9a7591b5d8aad5a99225fd2f46aed9b20892ecacb82f47a0bcf3d0c23e24c",
+      "wamExceptEntityCollections": "7829971e060e07a14e49ce9a2f5780d5623b65212c35df9439fdda8becb5475e"
+    },
+    "speaker-gemini": {
+      "native": "927204c96dc63a66aacb023fad7f1df9ee39b7894d208de2193a1b31a295f435",
+      "wamExceptEntityCollections": "3011024473acd9a34239692f6fd720abf34d54183cff83b275b5f67522e2a305"
+    },
+    "speaker-leo": {
+      "native": "255e5fa89e3a21f0762ec05d16f0a58f1e5fd88bdf5b11fde2c0108bbfa774b1",
+      "wamExceptEntityCollections": "fff62a0adc2a13a4dc63f6bcb8c860132a043e43e6a4e8232e8aed623ebf07d4"
+    },
+    "speaker-libra": {
+      "native": "3e21b88ea3d15082107624b036400ffc9ad890481403988d9d99aa6f444a7154",
+      "wamExceptEntityCollections": "4d26907d15d40df416318dca996cbb7ef76033b5e89337f00b4061a1011ca6fd"
+    },
+    "speaker-pisces": {
+      "native": "90750d414c8449a3e658aee8eac0d3734fa6cba034c26f98d3f0e13fe5c92f79",
+      "wamExceptEntityCollections": "7429b5e5da96bfe6c3f84958bb4c139cee89b7f2496d224a6790cfc17d5f4365"
+    },
+    "speaker-sagittarius": {
+      "native": "a318fc8c4009b532dc641c39234bfa70d9199077957b05e487b3cdf7cf8501e1",
+      "wamExceptEntityCollections": "5de0ae8a101d4428b07718d2cb82483cc6dcb43ae1fc1d49b6cf405e2d815777"
+    },
+    "speaker-scorpio": {
+      "native": "cb8dcfcdfae71944e12b759b3a420936f4554ecb3c92a0827456067e46934c14",
+      "wamExceptEntityCollections": "b4a448cdbd348b4ad250e0664bd563f0a648b1e84d8f9aebadac5ac85718bc0f"
+    },
+    "speaker-taurus": {
+      "native": "9927be51c6cc61108e3970a3f86d4499c9528b2ae997bd46dbb1be81d54cdaac",
+      "wamExceptEntityCollections": "f972b3751695a7c135cab8440f1c4732bdb5bfc434672de168da42983c25c6f8"
+    },
+    "speaker-virgo": {
+      "native": "7379b1530a7dcb0096b136720c4b640f835a5e82d01af5cad0653ef86021958d",
+      "wamExceptEntityCollections": "f25cdf350ebb4bdb6ed54c941d8b961ef392efdff422cf93887108096cedf8e3"
+    },
+    "star-garden": {
+      "native": "3d697ba4a82d72df915a4a667bfa56b3c2fce1a79dfcfaeb66a7d2bee51cdcf3",
+      "wamExceptEntityCollections": "cec85b699f5cf363b39ae32671554c20c72870a1e2b521e0e9186de3ef39e198"
+    },
+    "stargazer-terrace": {
+      "native": "39e771fe5a8c48d1e076412785846872e60791e605b495880efa50cbb7ecf842",
+      "wamExceptEntityCollections": "ba3b6e55d00bf740635f7e7e20675470fd80ff62b175943150c1aeb1c2f9d4c8"
+    },
+    "water-district": {
+      "native": "a9999671ddb56475fa01b24aa37221e4cf2b456e8068bb880d5cccfa32d19b2b",
+      "wamExceptEntityCollections": "1ed5ec1df2f4d5e8a31867d72358330287939caa66335ff557edefeecfd352b7"
+    },
+    "zodiac-festival-park": {
+      "native": "0ee241ce3a2aa427a0aec45c35c3ccf0c214ecb0be65fe398cdaa687e21a8bb6",
+      "wamExceptEntityCollections": "80e7e32ed1e5a0ad8452ce1ae91b6f561752251acaac4ba8eb02e5a37f0066ad"
+    }
+  }
+}

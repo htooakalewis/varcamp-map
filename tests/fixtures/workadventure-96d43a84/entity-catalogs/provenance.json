@@ -1,0 +1,43 @@
+{
+  "sourceCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "sources": {
+    "types.ts.txt": {
+      "upstreamPath": "libs/map-editor/src/types.ts",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/libs/map-editor/src/types.ts",
+      "sha256": "b4b9b380a22f5062437bc6888d634fc649ca495fe48148720ed527d9ade0aa12"
+    },
+    "EntitiesFileMigration.ts.txt": {
+      "upstreamPath": "libs/map-editor/src/Migrations/EntitiesFileMigration.ts",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/libs/map-editor/src/Migrations/EntitiesFileMigration.ts",
+      "sha256": "85feaf31bb2629e21363b593e5fc8f5dd3d938b6d50f1ef4ea6341cedbc2b015"
+    },
+    "EntitiesCollectionsManager.ts.txt": {
+      "upstreamPath": "play/src/front/Phaser/Game/MapEditor/EntitiesCollectionsManager.ts",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/play/src/front/Phaser/Game/MapEditor/EntitiesCollectionsManager.ts",
+      "sha256": "1bbe0100f1e170a6d94112f264ca9398a1e25f047ad20f71c215985e9643c705"
+    },
+    "EntityPropertiesEditor.svelte.txt": {
+      "upstreamPath": "play/src/front/Components/MapEditor/EntityEditor/EntityPropertiesEditor.svelte",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/play/src/front/Components/MapEditor/EntityEditor/EntityPropertiesEditor.svelte",
+      "sha256": "413d19dafcc3a7725accdc497a725418f15cc042e6209399b003a90f3216b1a9"
+    },
+    "FurnitureCollection.json": {
+      "upstreamPath": "play/public/collections/FurnitureCollection.json",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/play/public/collections/FurnitureCollection.json",
+      "sha256": "05daa675a68392c566a86c10572e16cc815de3e7ba88dc01a857cc73937f907e"
+    },
+    "OfficeCollection.json": {
+      "upstreamPath": "play/public/collections/OfficeCollection.json",
+      "url": "https://raw.githubusercontent.com/workadventure/workadventure/96d43a841766b22418c061744e7ed2aafd9870d3/play/public/collections/OfficeCollection.json",
+      "sha256": "297bf20a6c7d73c59d0e6a2aa3cd0da2ccc009ba1c116c92a45dd41f208535b4"
+    }
+  },
+  "license": {
+    "file": "LICENSE.txt",
+    "sha256": "12aae5db7f9d80223d418b1dc97deb235ab207fa3cd4821e16c6ac00072cea41",
+    "notice": "Exact upstream play/LICENSE.txt; AGPLv3 plus Commons Clause. Original native assets remain on existing deployed frontend; no PNG copied or relicensed."
+  },
+  "extraction": "Original schema declarations through WAMEntityData, exact migration module and exact five manager methods; TypeScript transpilation only. No application code changed.",
+  "httpClosureSha256": "f124174f887a30197ae930fa62c9c0b6666f873710bd6fbf334f66ffad275ad1",
+  "builderBaselineSha256": "33734f5aeb6cc07f121a4b441f8d6e33d0a8dbac23de09f977cbfd311e83b876"
+}

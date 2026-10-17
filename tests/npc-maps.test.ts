@@ -1,3 +1,4 @@
+import { historicalEditorWam } from './helpers/editor-catalog-history';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { expect, it } from 'vitest';
@@ -46,7 +47,7 @@ it.each(receipts)('removes only reviewed %s native robot data while preserving c
  // historical retirement proof against its exact committed native snapshot, so
  // shallow CI needs no git history and none of the old receipts are repinned.
  const nativePath=id==='shipyard-beach'?'tests/fixtures/beach-retirement/retired-native.tmj':`maps/${id}.tmj`;
- const tmj=id==='shipyard-beach'?JSON.parse(readFileSync(nativePath,'utf8')):historicalNative(id),wam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
+ const tmj=id==='shipyard-beach'?JSON.parse(readFileSync(nativePath,'utf8')):historicalNative(id),wam=historicalEditorWam(id);
  // First prove the exact frozen17d4 state through the explicit role-only inverse;
  // only then apply the independently verified historical Roadster inversion.
  if(id==='overworld'){tmj.layers=tmj.layers.filter((l:{name:string})=>l.name!=='roadster');tmj.tilesets=tmj.tilesets.filter((s:{name:string})=>s.name!=='roadster');tmj.nextlayerid--;}

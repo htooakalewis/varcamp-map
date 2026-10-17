@@ -2,12 +2,14 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "0545bd3f6b7bc9cce661f2914e4f17bb55ec45889587dabe4b71784c5f2f5deb",
+      "world/layouts/overworld.json": "49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093",
       "maps/overworld.tmj": "fc1fd22b1b4d515944425ab48b7d29b2d89fa1e040fb05396ee3a04e9987eb05",
-      "maps/overworld.wam": "2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9",
+      "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "f9cbfc2494078c7511798e51fdff3092a9a0e268e2a897bd49e993aaee8d69d0",
-      "tests/npc-maps.test.ts": "53b7405b49aa49deb7c3eff71157ba3d0b6db7ef58857198551f9b97b2fb1be7",
-      "tests/helpers/visibility-history.ts": "28034cd93257e779ffb88bf601782da3172daec7b693a39220d26b6d979288b2"
+      "tests/npc-maps.test.ts": "9cd575f37488deb6370857ab2d6b15740578bd14da7c6e6e68601749fe293d92",
+      "tests/helpers/visibility-history.ts": "12aa4f359784a935834d2ad15d209d172c6220c9146619af9d7e09b2cec356f4",
+      "tests/helpers/editor-catalog-history.ts": "7fa9ca198b99dbbd188775c70574704ccadbe8a0da2a378c55e82502418608f0",
+      "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0"
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
     "geometrySha256": "12b1b55c6867473ae9699007a68159e003026c17501c25abe7c3b33c53259ca4",

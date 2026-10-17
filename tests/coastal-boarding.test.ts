@@ -1,3 +1,4 @@
+import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import{readFileSync}from'node:fs';
 import{historicalNative,historicalLayout,historicalBytes,visibilityHistoryMaps}from'./helpers/visibility-history';
 import{createHash}from'node:crypto';
@@ -47,14 +48,21 @@ describe('native coastal boarding and nautical proportions',()=>{
    const revisions=JSON.parse(readFileSync('publication/revisions/2026-10-16-shared-guides.json','utf8')).revisions;
    const revision=revisions.find((r:{path:string})=>r.path===path);expect(revision,path+' reviewed retirement').toBeDefined();
    expect(revision.fromSha256,path+' original coastal receipt').toBe(hash);
-   expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(revision.toSha256);
+   const retiredWamReceipts: Record<string,string> = {
+    'maps/comet-maze.wam':'a99a45e44e9482adf7ccac399f0eec87db2e331e5972df3d7d3ea6c0cf3a257e',
+    'maps/orbit-maze.wam':'5a9297f37c82ae771a08a6c95095d9364b9d1af3e910bc273354bed154c319be',
+    'maps/overworld.wam':'2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9',
+   };
+   // Keep original8dc retirement receipts independent of later publication pins.
+   if(path.endsWith('.wam'))expect(createHash('sha256').update(historicalEditorWamBytes(path.slice(5,-4))).digest('hex'),path+' original retirement bytes').toBe(retiredWamReceipts[path]);
+   expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path+' current reviewed replacement').toBe(revision.toSha256);
   }else if(visibilityHistoryMaps.some(id=>path===`maps/${id}.tmj`||path===`world/layouts/${id}.json`)){
    // Exact17d4 normalization precedes the older coastal byte receipt. No
    // publication 'from' hash is substituted for this independent baseline.
    const id=path.split('/').at(-1)!.replace(/\.(tmj|json)$/,'');
    const restored=historicalBytes(id,path.endsWith('.tmj')?'tmj':'json');
    expect(createHash('sha256').update(restored).digest('hex'),path+' original coastal composition').toBe(hash);
-  }else expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(hash);
+  }else expect(createHash('sha256').update(path.endsWith('.wam')?historicalEditorWamBytes(path.slice(5,-4)):readFileSync(path)).digest('hex'),path).toBe(hash);
  }const old=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-inputs/art/tile-catalog.json.before','utf8')),catalog=loadTileCatalog();for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);});
 
  it('lands directly aboard or on the actual gangway instead of a second quay',()=>{const l=source('fa-ship'),e=l.entries.find(e=>e.isDefault)!,hull=l.inspectionZones.find(z=>z.name==='fa-ship')!,gangway=l.inspectionZones.find(z=>z.name==='safe-gangway')!;expect(contains(hull,e)||contains(gangway,e),'the physical boarding destination is on an unrelated pier').toBe(true);});

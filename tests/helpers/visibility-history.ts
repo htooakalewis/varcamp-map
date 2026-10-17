@@ -1,3 +1,4 @@
+import { historicalEditorLayout, editorCompilerProofCopy } from './editor-catalog-history';
 // Frozen 17d4 receipts and the independently approved 133+24 role transformation.
 // This inverse first verifies current visual semantics, then restores ONLY scenery
 // data/explicit added layers and proves the entire original native/layout receipt.
@@ -310,13 +311,13 @@ const receipts = {
 export function historicalLayout(id:string,input:MapLayout=json(`world/layouts/${id}.json`)):MapLayout {
  const proof=receipts[id as keyof typeof receipts];if(!proof)throw Error(`No approved visibility receipt: ${id}`);
  requireEqual(Object.fromEntries(input.placements.filter(p=>p.renderRole).map(p=>[p.id,p.renderRole])),proof.roles,`${id}: unapproved role transformation`);
- const restored=structuredClone(input);for(const p of restored.placements)delete p.renderRole;
+ const restored=historicalEditorLayout(id,input);for(const p of restored.placements)delete p.renderRole;
  requireEqual(sha(restored),proof.layout,`${id}: frozen 17d4 authored receipt`);return restored;
 }
 export function historicalNative(id:string,input:TiledMap=json(`maps/${id}.tmj`)):TiledMap {
  const proof=receipts[id as keyof typeof receipts];if(!proof)throw Error(`No approved visibility receipt: ${id}`);
  const current=json(`world/layouts/${id}.json`) as MapLayout,prior=historicalLayout(id,current),catalog=loadTileCatalog();
- const now=buildMap(current,catalog).tmj,old=buildMap(prior,catalog).tmj;
+ const now=buildMap(current,catalog).tmj,old=buildMap(editorCompilerProofCopy(id,prior),catalog).tmj;
  function pixels(map:TiledMap,source:TiledMap,layer:any):number[]{
   const expected=source.layers.find(l=>l.name===layer.name) as any;
   return (expected?.data??Array(map.width*map.height).fill(0)).map((gid:number)=>{
