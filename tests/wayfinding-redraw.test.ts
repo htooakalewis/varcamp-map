@@ -1,3 +1,5 @@
+import{assertNativeStandingCaptions}from'../tools/maps/standing-captions';
+import{readStandingCaptions}from'../tools/art/standing-captions';
 import {standingFace as declaredFace} from './helpers/physical-prop-contracts';
 import { readFileSync, readdirSync, cpSync, mkdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -8,7 +10,7 @@ import { loadTileCatalog } from '../tools/art/catalog';
 import { buildMap } from '../tools/maps/builder';
 import { checkArt } from '../tools/art/check';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement } from '../tools/maps/types';
+import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement, TiledMap } from '../tools/maps/types';
 
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
 // One predicate is used by both fixture cases and the complete production-layout audit.
@@ -28,7 +30,34 @@ const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y
 const names:Record<string,RegExp>={overworld:/PLAZA/, 'campus-exploration':/EXPLORATION/, 'shipyard-beach':/HARBOR/, 'zodiac-festival-park':/FESTIVAL|PARK/, 'orbit-maze':/ORBIT|MAZE/, 'comet-maze':/COMET/, 'solar-hall':/SOLAR/, 'lunar-hall':/LUNAR/, 'nebula-arcade':/ARCADE/, 'orbit-playground':/PLAYGROUND/, 'constellation-shore':/SHORE/, 'fa-ship':/FA SHIP/, 'star-garden':/GARDEN/, 'moon-cafe':/CAF[ÉE]/, 'moon-grotto':/GROTTO/, 'stargazer-terrace':/STARGAZER/, 'fire-district':/FIRE/, 'earth-district':/EARTH/, 'air-district':/AIR/, 'water-district':/WATER/};
 const arrow=/[↑↓←→↗↘↙↖]/;
 
+function nativeLabels(tmj:TiledMap,layout:MapLayout){
+ const ordinary=tmj.layers.flatMap(layer=>layer.type==='objectgroup'?layer.objects:[]).filter(o=>o.text).map(o=>({x:o.x/32,y:o.y/32,width:o.width/32,height:o.height/32,text:(o.text as {text:string}).text,size:(o.text as {pixelsize:number}).pixelsize}));
+ // A semantic copy alone is not evidence that pixels were exported. Production
+ // validation binds atlas bytes, exact local tiles, plane/order and source text.
+ assertNativeStandingCaptions(tmj,layout);
+ const captions=(readStandingCaptions(layout)?.rows??[]).map(row=>{
+  const layer=tmj.layers.find(l=>l.name==='standing-caption-'+row.sign.name)!;
+  if(layer.type!=='tilelayer')throw Error('Caption is not a native tile plane');
+  const cells=layer.data.flatMap((gid,index)=>gid?[{x:index%tmj.width,y:Math.floor(index/tmj.width)}]:[]),x=Math.min(...cells.map(c=>c.x)),y=Math.min(...cells.map(c=>c.y));
+  return{x,y,width:Math.max(...cells.map(c=>c.x))-x+1,height:Math.max(...cells.map(c=>c.y))-y+1,text:layer.properties!.find(p=>p.name==='captionText')!.value as string,size:7*Math.max(1,Math.floor((row.sign.fontSize??18)/7))};
+ });
+ return [...ordinary,...captions];
+}
+const captionLayouts=layouts.filter(l=>['constellation-shore','shipyard-beach'].includes(l.id));
 describe('audience wayfinding in exported Tiled maps',()=>{
+ it('observes all twelve actual native coastal pixel captions with their readable footprints',()=>{
+  const actual=captionLayouts.flatMap(l=>nativeLabels(JSON.parse(readFileSync(`maps/${l.id}.tmj`,'utf8')),l));
+  expect(actual).toHaveLength(12);
+  for(const l of captionLayouts){const labels=nativeLabels(JSON.parse(readFileSync(`maps/${l.id}.tmj`,'utf8')),l);expect(labels.map(x=>x.text)).toEqual(readStandingCaptions(l)!.rows.map(r=>r.sign.text));for(const label of labels)expect(label.size).toBeGreaterThanOrEqual(14);}
+ });
+ it.each(['missing-plane','semantic-text','local-tile'])('refuses %s rather than observing unvalidated caption copy',kind=>{
+  const l=captionLayouts.find(l=>l.id==='constellation-shore')!,map=JSON.parse(readFileSync(`maps/${l.id}.tmj`,'utf8'))as TiledMap;
+  const index=map.layers.findIndex(x=>x.name.startsWith('standing-caption-')),layer=map.layers[index];
+  if(kind==='missing-plane')map.layers.splice(index,1);
+  if(kind==='semantic-text')layer.properties!.find(p=>p.name==='captionText')!.value='FAKE PLAZA';
+  if(kind==='local-tile'&&layer.type==='tilelayer')layer.data[layer.data.findIndex(Boolean)]++;
+  expect(()=>nativeLabels(map,l)).toThrow(/Caption|caption/);
+ });
  it('exports production labels at their native top-left coordinates in both Tiled and the pinned Phaser client',()=>{
   const catalog=loadTileCatalog();
   for(const l of layouts){
@@ -80,7 +109,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
    }
    return;
   }
-  const labels=tmj.layers.flatMap(layer=>layer.type==='objectgroup'?layer.objects:[]).filter(o=>o.text).map(o=>({x:o.x/32,y:o.y/32,width:o.width/32,height:o.height/32,text:(o.text as {text:string}).text,size:(o.text as {pixelsize:number}).pixelsize}));
+  const labels=nativeLabels(tmj,l);
   for(const e of l.exits){const name=e.destination.startsWith('speaker-')?new RegExp(e.destination.replace('speaker-','').toUpperCase()):names[e.destination]!;
    expect(labels.some(s=>name.test(s.text)&&arrow.test(s.text)&&s.size>=14&&gap(s,e)<=6),`${l.id}/${e.name}: no readable arrow sign names its actual destination`).toBe(true);
   }

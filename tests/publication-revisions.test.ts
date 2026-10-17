@@ -13,6 +13,7 @@ const closureRevisionPath='publication/revisions/2026-10-17-beach-ci-closure.jso
 const propsRevisionPath='publication/revisions/2026-10-17-solid-props.json';
 const propsClosurePath='publication/revisions/2026-10-17-solid-props-ci-closure.json';
 const captionsPath='publication/revisions/2026-10-18-standing-captions.json';
+const captionsClosurePath='publication/revisions/2026-10-18-standing-captions-ci-closure.json';
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
 const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
@@ -57,6 +58,7 @@ describe('publication exact reviewed replacements', () => {
   }
   function pinPropsClosure(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(propsClosurePath,bytes);manifest.extensionInventory[propsClosurePath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCaptions(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(captionsPath,bytes);manifest.extensionInventory[captionsPath]=createHash('sha256').update(bytes).digest('hex');}
+  function pinCaptionsClosure(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(captionsClosurePath,bytes);manifest.extensionInventory[captionsClosurePath]=createHash('sha256').update(bytes).digest('hex');}
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -69,6 +71,7 @@ describe('publication exact reviewed replacements', () => {
   }
   it('accepts exact sixth document chaining and refuses a wrong prior hash',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'sixth');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'sixth').digest('hex')};pinPropsClosure({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinPropsClosure({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts exact seventh caption document and refuses wrong prior',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'captions');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'captions').digest('hex')};pinCaptions({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinCaptions({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
+  it('accepts exact eighth caption observer document and refuses wrong prior',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'observer');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'observer').digest('hex')};pinCaptionsClosure({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinCaptionsClosure({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -86,6 +89,7 @@ describe('publication exact reviewed replacements', () => {
     pinClosure();
     pinPropsClosure();
     pinCaptions();
+    pinCaptionsClosure();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

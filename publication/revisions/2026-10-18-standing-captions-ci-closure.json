@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "65d60948b078618ee420d2d4fda8fa9cface4e7d44e0198960facae223026819",
+      "toSha256": "8f5da64acbaf6b5e9c01704525446fbcec759229900f1c832df30d08e5815d5f",
+      "reason": "Observe both existing Arial objects and strictly validated native pixel captions in the unchanged all-destination name/arrow/size/proximity audit. Refuse missing plane, forged semantic copy and native tile tampering; no runtime or map change."
+    }
+  ]
+}

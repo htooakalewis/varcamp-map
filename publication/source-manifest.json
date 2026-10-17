@@ -322,7 +322,7 @@
     "assets/tilesets/original/beach-surf.png": "879bb15a937246deb1e020f831185c7e078ae3f2ddb903db0873112bca66ab7e",
     "assets/tilesets/original/roadster.png": "f0d01aa3c4f9835b1d35fa6ae3c8534ebdb8e4a647d3cdb30f43309b13a63fe1",
     "buildmap.vite.config.ts": "ae2f20b36f3eb305e71e1e745e083d92d2e7625b75a2f9ab78549f3561271404",
-    "docs/current-release-facts.md": "95c33b2ceebf71adaf995e9301a0b46f3d64af975f4a1361cf758597153c5bcb",
+    "docs/current-release-facts.md": "502e9fd5830ab59b0889ebaf40b649f34d85f2e3bc0efe1d529e074a7a5a75f2",
     "docs/dependencies.md": "79a33a84449278b6c85c2463278aba829c4104b8c31c16c118fec877d2ad811e",
     "docs/entity-editor-catalogs.md": "ab575b70290ee67a5c91022396c40b2bcbf64c9c326068709ed0541054212e2c",
     "docs/operating/github-publication.md": "cd59113154b545a54e0e587d7f5d026aa2175cf985073de8f2bf8b620f39cc2c",
@@ -368,7 +368,7 @@
     "ops/tests/test_editor_catalogs.py": "68416f15c8dba005aff08818838950d093bbe5a81b3c9eeaae0317db9ed28d33",
     "publication/revisions/2026-10-16-shared-guides.json": "dfdc793c833264b47e6473d9d4b021037a06b6096b53ec02bb15a2dc40a050cf",
     "publication/revisions/README.md": "3e3e2de7ffb3cee827ac613837fda846aca14fbfda4528175905662f78893e0d",
-    "publication/verify-source.mjs": "7053c8e78463c884554af0bd7984d0da1c294bd450bc703a17c85f98fc5327a1",
+    "publication/verify-source.mjs": "f25f52a2f515722c88307bbd87cdf5b9edb0847057b0895f8fc800269db97921",
     "src/bots/controller.ts": "7620159a83df7e38d43b92dbab2ff32489f8101dcaccc05359b7e0a1c1733ea6",
     "src/bots/lyra-routes.json": "310ff0fa5b51848fb70eeacdb5014937bb969c5a6892fc72c72e0f03532cc7aa",
     "src/bots/lyra.ts": "7d731385835495bdfcfcf208ae331ed054ea9ca1e3bf8e2f472c4af7185f01b0",
@@ -407,9 +407,9 @@
     "tests/lyra-bot.test.ts": "ed84ec1806b915bdc24223915cb65c1a579f60022b085654419d83cfe8387944",
     "tests/native-tileset-binding.test.ts": "097429df0ad1bfbddbddc0bd4c2c7e487252c41600d663829f2c91dc38e479ba",
     "tests/nonroom-visibility.test.ts": "0b5ff89c66870a3a54f6235ba238aeb4c808a737f578157d87e427e3c782df0a",
-    "tests/publication-integrity.test.ts": "1cc67bc29cf7f4155d59d3fb668c20ebaca29a1f20c8f69158ad785235f9d0d6",
-    "tests/publication-revisions.test.ts": "097082e18b6e6c5bc2cf51f124f8fa902b70f9b3b95f91bbb9c56b64972ad78b",
-    "tests/roadster.test.ts": "50e095f75c9247d6f5779aaed8b25f62915afcb663765e8d914d5172523cd90d",
+    "tests/publication-integrity.test.ts": "31cb43a88920f45197c0f7335147147016cc01656a7c1b3e29ba874c4297be26",
+    "tests/publication-revisions.test.ts": "2d33e1be000d30ce71d0db5eefb9628e6942048514489b63a43bda6511cc5c5f",
+    "tests/roadster.test.ts": "11d92ddcefb09bc0bcd2596e1479c586015723ec81b1196b4a6c4bf63a83d7c9",
     "tests/room-cutaway.test.ts": "93d712d0bd3aa9b785397389ab784e1a09a902babb202f1aa6f28d847060e2d8",
     "tools/art/beach-lounge.py": "d0e0b674ee4f4a863ebc6202e1fd2bf9a19abc17efbedf3adf74a9418bae397e",
     "tools/art/roadster.ts": "238c572ebd95f86a231cb128f144ea1845709ba3d08bf70932030f9f218c03e0",
@@ -465,6 +465,7 @@
     "tests/fixtures/standing-captions/GameMapFrontWrapper.ts.txt": "8127a77f1ff4d1d48a93a08dd96c7dfc0654a8b398c95d7bfe3bdb58ae1b41c2",
     "tests/fixtures/standing-captions/LICENSE.txt": "0f93235833b76564550ea93731d9b1132973b900b33a9909a86646a553cbc2d0",
     "tests/fixtures/standing-captions/before-overworld.json": "74b45d5f9a0433d944b1995e956b32b734695f0d34f69cc3f2421f60acc83620",
-    "publication/revisions/2026-10-18-standing-captions.json": "51d0eafa8dffe5663eef8cf3f4a072ec5d2c36adf112b76038c1d72f182a88dc"
+    "publication/revisions/2026-10-18-standing-captions.json": "51d0eafa8dffe5663eef8cf3f4a072ec5d2c36adf112b76038c1d72f182a88dc",
+    "publication/revisions/2026-10-18-standing-captions-ci-closure.json": "89ad4fe289818bfaf1f6031666fc90bd310f215da442ee051047b9dee82000eb"
   }
 }

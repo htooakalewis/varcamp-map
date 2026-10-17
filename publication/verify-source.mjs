@@ -7,8 +7,8 @@ const root = resolve(process.argv[2] ?? '.');
 const manifest = JSON.parse(readFileSync(resolve(root, 'publication/source-manifest.json'), 'utf8'));
 const inventory = manifest.sourceInventory;
 const extensions = manifest.extensionInventory ?? {};
-// Exactly seven reviewed releases; original receipts and first document stay immutable.
-const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json'];
+// Exactly eight reviewed releases; original receipts and first document stay immutable.
+const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json'];
 assert.equal(Object.keys(inventory).length, 303);
 for (const path of Object.keys(extensions)) {
   assert.ok(!Object.hasOwn(inventory, path), `Extension overlaps frozen source: ${path}`);
