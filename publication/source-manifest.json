@@ -375,7 +375,7 @@
     "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15",
     "src/bots/personas.ts": "312f833fa62c005670efd89002da91df30c34accf8e21126a1d00f438bdbf0e9",
     "src/bots/venue.ts": "aebd4972dace56c45987849d7a06182cedfd784e097665adf025b2a56ff13a45",
-    "tests/beach-refinement.test.ts": "4fca16e4ff04c389622165081a93285a2e009017cbeeaf0ee48668fad612dec7",
+    "tests/beach-refinement.test.ts": "c2e1cf2951b7b0bc802896a27cd36610a8b2c8fb6a1f374d6d5d0410faed4ab8",
     "tests/entity-catalogs.test.ts": "3d97daef390044f2cd931b2181bb82753cbde45c8a88b5b72cdfe7c054ae6cfa",
     "tests/fixtures/beach-refinement-receipt.json": "b8a8a513bbbe3014a2eb8975653cd7e4091d42d19260ed962b29dadb17a4967b",
     "tests/fixtures/beach-retirement/README.md": "020856f7846b76ec32f62892309b88482a2b640b4d352f71cdf62a4697dde9df",

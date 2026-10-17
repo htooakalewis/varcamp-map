@@ -1,3 +1,4 @@
+import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import { readFileSync, mkdtempSync, cpSync, mkdirSync, writeFileSync, symlinkSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
@@ -30,7 +31,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  it('preserves every existing native entrance/exit ID, GID, property and WAM byte',()=>{
   const map=native(),contract=json('tests/fixtures/beach-semantic-contract.json');
   for(const [name,expected] of Object.entries(contract.portalLayerSha256))expect(hash(JSON.stringify(map.layers.find(l=>l.name===name))),name).toBe(expected);
-  expect(map.properties).toEqual(contract.mapProperties);expect(hash(readFileSync('maps/shipyard-beach.wam'))).toBe(contract.wamSha256);
+  expect(map.properties).toEqual(contract.mapProperties);expect(hash(historicalEditorWamBytes('shipyard-beach'))).toBe(contract.wamSha256);
  });
  it('keeps the proposed layout authoritative and all native layers valid',()=>{
   const source=layout(),{tmj}=buildMap(source,loadTileCatalog());expect(validateMap(native(),WORLD_CATALOG)).toEqual([]);expect(validateMap(tmj,WORLD_CATALOG)).toEqual([]);
@@ -75,6 +76,9 @@ describe('relaxed native beach with retained harbor contracts',()=>{
   try{
    for(const dir of ['assets','art','tools'])cpSync(dir,resolve(temp,dir),{recursive:true});
    mkdirSync(resolve(temp,'world/layouts'),{recursive:true});mkdirSync(resolve(temp,'maps'));
+   // The isolated tool copy must include its actual shared configuration dependency.
+   cpSync('world/editor-collections.json',resolve(temp,'world/editor-collections.json'));
+   expect(readFileSync(resolve(temp,'world/editor-collections.json'))).toEqual(readFileSync('world/editor-collections.json'));
    const before=native();writeFileSync(resolve(temp,'maps/shipyard-beach.tmj'),JSON.stringify(before));writeFileSync(resolve(temp,'package.json'),'{"type":"module"}');symlinkSync(realpathSync('node_modules'),resolve(temp,'node_modules'));
    const source=layout(),overlay=source.animatedOverlays!.find(o=>o.name==='beach-surf-west')!;
    for(const animation of overlay.animations)animation.frames[0].duration+=80;
@@ -93,7 +97,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  it('keeps the reviewed live art delta scoped to beach scenery while preserving historic retirement and native journeys',()=>{
   const map=native(),source=layout(),baseline=json('tests/fixtures/beach-retirement/retired-native.tmj') as TiledMap,receipt=json('tests/fixtures/beach-refinement-receipt.json');
   expect(hash(JSON.stringify(baseline))).toBe(receipt.baselineNativeSha256);expect(hash(JSON.stringify(map))).toBe(receipt.nativeSha256);
-  expect(hash(readFileSync('maps/shipyard-beach.wam'))).toBe(receipt.wamFileSha256);
+  expect(hash(historicalEditorWamBytes('shipyard-beach'))).toBe(receipt.wamFileSha256);
   const visual=(name:string)=>name==='terrain'||name.startsWith('scenery-')||name==='physical-collisions'||name.startsWith('beach-surf-');
   const {layers:oldLayers,tilesets:oldTilesets,nextlayerid:oldNext,...oldFields}=baseline;
   const {layers:newLayers,tilesets:newTilesets,nextlayerid:newNext,...newFields}=map;
