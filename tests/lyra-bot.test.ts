@@ -52,7 +52,15 @@ describe('audited native navigation', () => {
     const collect = (ls: TiledLayer[]) => { for (const l of ls) { layers.push(l); if (l.type === 'group') collect(l.layers); } }; collect(map.layers);
     const blocked = new Set<number>(), portals = new Set<number>();
     for (const l of layers) if (l.type === 'tilelayer') l.data.forEach((gid, i) => { if (collisionGids.has((gid >>> 0) & 0x1fffffff)) blocked.add(i); if (gid && l.properties?.some(p => p.name === 'exitUrl')) portals.add(i); });
-    expect(portals.size).toBe(48); expect(blocked.size).toBe(6336);
+    expect(portals.size).toBe(48);
+    const priorMap = JSON.parse(readFileSync('tests/fixtures/solid-props/before-overworld.tmj', 'utf8')) as TiledMap;
+    const priorCollisionGids = new Set<number>();
+    for (const sheet of priorMap.tilesets) for (const tile of sheet.tiles ?? []) if (tile.properties?.some(p => p.name === 'collides' && p.value === true)) priorCollisionGids.add(sheet.firstgid + tile.id);
+    const priorBlocked = new Set<number>();
+    const priorCensus = (rows: TiledLayer[]) => { for (const row of rows) { if (row.type === 'group') priorCensus(row.layers); else if (row.type === 'tilelayer') row.data.forEach((gid, i) => { if (priorCollisionGids.has((gid >>> 0) & 0x1fffffff)) priorBlocked.add(i); }); } };
+    priorCensus(priorMap.layers);
+    expect(priorBlocked.size).toBe(6336);
+    expect(blocked.size).toBe(6336 + 20);
     const layout = JSON.parse(readFileSync('world/layouts/overworld.json', 'utf8'));
     const rects = [...layout.placements.filter((p: { layer: string; sprite: string }) => p.layer === 'props' && !p.sprite.startsWith('exterior-road-')), ...layout.images];
     const terrain = new Map<string, string>();
@@ -240,10 +248,15 @@ describe('audited WorkAdventure runtime object aliases',()=>{
   };
   it('accepts exactly the observed redundant object classes without mutating the native/runtime map',async()=>{
     const {guardMap}=await modules();const map=runtimeMap();const before=JSON.stringify(map);
-    // Independent current fixture after the reviewed three return-mask changes; the same 21 observed WA class aliases and object IDs remain exact.
+    // Independent current fixture after the reviewed solid support/depth changes; the same 21 observed WA class aliases and object IDs remain exact.
     const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
     const geometry={width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')};
-    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('4d4ac17adb4be1f3bf94bcc287978b0f11e805b6a6f958bd1ab492f902f8793c');
+    // Preserve the prior published alias receipt independently of this new release.
+    const prior=JSON.parse(readFileSync('tests/fixtures/solid-props/before-overworld.tmj','utf8'));
+    for(const object of prior.layers.find((l:any)=>l.id===56).objects)object.class=object.type;
+    const priorGeometry={width:prior.width,height:prior.height,tilewidth:prior.tilewidth,tileheight:prior.tileheight,layers:prior.layers,tilesets:prior.tilesets.map((t:Record<string,unknown>)=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:prior.properties.filter((p:{name:string})=>p.name!=='script')};
+    expect(createHash('sha256').update(JSON.stringify(sorted(priorGeometry))).digest('hex')).toBe('4d4ac17adb4be1f3bf94bcc287978b0f11e805b6a6f958bd1ab492f902f8793c');
+    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('687b7189a946a2d4c246f30e64ccd4f87e1a7da86c514557d598bff5211fe37f');
     await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
   });
   it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{

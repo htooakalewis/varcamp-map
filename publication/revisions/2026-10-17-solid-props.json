@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "5d8c34847fab5e2ebe427dbc0fce41bb0e06934ff291d2322af8d2de41a1a6fd",
+      "toSha256": "35123d7320b99f980ee49f21fdca0e3c3a4a53a7410f867fac77250847845614",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "0bd1aeb4c2260a3638623aec0070727ec91ed16c79353c439894d5cd1520dc12",
+      "toSha256": "27551f9bd3a59eb14685aa297e82aa1b67e93ec07e81d2c3649876fd44c3509c",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498",
+      "toSha256": "43104f9a7cb04d07b008b6ebe9dfd74a2e9d2e22ccd4bc542d22e044419f26ff",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "fromSha256": "076d80938106a715b2b6b652997b068aa428d3640a653e394af62749b7a6ef21",
+      "toSha256": "74092084ab9bad710d414c1464983311755c8fcdfc5d28088563f0dce0ab9480",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "4003e45a8e731da13fc684a13ec0b923c5fb3f58feecf3d64030bea34393d953",
+      "toSha256": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/preview/constellation-shore.tmj",
+      "fromSha256": "116ad20ad791c97ed6db5a292344a32e18aa1746856f86669ac9df8e559b5bfa",
+      "toSha256": "739ffe0cb14532f0617e431843531ef4dee15b13d05d2fcec859ef75b2c85b3c",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "80721b2ac69e346ed40d1a32812143eabcfef180d3fe6a684a05d599cff9fc83",
+      "toSha256": "e075fec10b4b72d19ca682d519a9a0d510fba44d8aba53aefe7b46140259ee0d",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "8a196900b1af1dbeef7d4e4d90237cc34df09e08bb6b084fa0cc7a4f6bb12da7",
+      "toSha256": "9d767779dc66b4a12f4c1b7dfe4d466b61d86e3090efc5aaf4ddc5b9b67fe23e",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "6231c0b2abef56cae4ee1e79cc777d94c2c983fc5cf8ede77079c0fff58a433a",
+      "toSha256": "c69c23f8372021771ba04091a4c5d0ad61cbac38d50b1e63a9233c23b2726a4f",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "e54a09c2994e789dd618a5d5d87d2a39120299e919ba993cdfff199d9e2d5ff9",
+      "toSha256": "c1ab0b846209f81de9a5a35f0b145e67fa706ae4066f5532811a0a20a20032df",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "tools/art/catalog.ts",
+      "fromSha256": "20b923f7152f89f2b82e07d0f82aa0f849f707053b5455eb43d6651296d12813",
+      "toSha256": "5ce702014378f6122763a076bbcd19c9739704ccb109d883ce61cb1944288916",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "967be6cd4c4d213915463909b7e86e8c597a0d0bf9513787c57814d5b66fee72",
+      "toSha256": "341b065db15d9225ad7fa39aa1e462891c2b401df2701a5dbc9edece7f6b01bd",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "fromSha256": "b4c8e8c6fcd6e0fcdc8b2685214c18bf412fbd1f510b2ad73820632e7755ed69",
+      "toSha256": "96e2164beff2c521b00c744f46d113ef606125dd68816bebdd442a8ff694de53",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "tools/maps/types.ts",
+      "fromSha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b",
+      "toSha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "481b9dd92e830d419295b82c1807a4df44ad51d90b3d29fd29eda79054ea14d8",
+      "toSha256": "bb32c4a41536c81ac643da49a5923c46203abe9f01e9752bf82bf8f40fe2b8d3",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "30675fde749568f668e50eec82d6290d8ade2520767eaed76a34304d69ec67a9",
+      "toSha256": "74b45d5f9a0433d944b1995e956b32b734695f0d34f69cc3f2421f60acc83620",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "d3f58ff77783bd6bd65e84f68512c7ed4ec801b9562d16edf23ce0f47e6174a2",
+      "toSha256": "82e43c6d1fd602fe738cbb572cdcfba821e6697efa87411453b7653ea6ed5f03",
+      "reason": "Reviewed solid-prop visual-depth/support compiler, 30 standing assemblies and exact51 collision additions; atlas reservations, historical receipts, artwork, entries and WAMs preserved."
+    }
+  ]
+}

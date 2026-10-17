@@ -10,6 +10,7 @@ import { loadTileCatalog } from '../tools/art/catalog';
 import type { MapLayout } from '../tools/maps/types';
 const hash=(value:string|Buffer)=>createHash('sha256').update(value).digest('hex');
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+const solidBase=(id:string,kind:string)=>{const path=`tests/fixtures/solid-props/before-${id}.${kind}`;expect(hash(readFileSync(path))).toBe(json('tests/fixtures/solid-props/delta.json').maps[id].before[kind]);return json(path);};
 const canonical=(value:unknown)=>JSON.stringify(value);
 const preservation = {"air-district":{"placements":"abd7e923cd1a75d4770a7ad3a23e949eebbee2618a462438d996fe0d921848ae","navigation":"47faa537ac94ab8587220116b54911dc66597db772e38dfb3194d797cb69b671","collision":"2a366d717ecc1b9e5d6d59e51c864152a0f587496ea8bda23113f7dfc6be4e9f"},"campus-exploration":{"placements":"38fb471a6e1e65d9ab3ef4c6c8525e7b1f55b830118ca9162c140491e0cf9be3","navigation":"105d9902b4fffeb259fe951af9dba7131f20206236e98a7e74560c74646beae7","collision":"767b1c830138ad4c42c8c4f71d19f90326adff0f3ee310417fc3b045ad41020e"},"comet-maze":{"placements":"9845a07937c67d47e55232e03ac50007bf63eead286a47d6db3c5e2dc7087797","navigation":"4f85fc17bb3f0a19a8e8e3b34e765f676462b74d8ceb7bfde7da27fc261bb60d","collision":"856b16f2b64d77df9339ff514d164bf4a4ab7aff8c280980f2df559c4dd35b73"},"earth-district":{"placements":"9e3d4d81d95d0dd6660259ba0b1c0ef662fcd3c703276bd11bd270c385d1d63d","navigation":"9e092569cf2f646ff040087d5bca6e6eaa6dc9bd5497e89df9228fe268678ee2","collision":"85c5855efd79ef2868521a18236bcf015178e27bbe2c1ca63c99481dc87c3e81"},"fire-district":{"placements":"b7ee3048c0873107e3b9c64ec011453a4792298792689ed486fedb09ad1a34aa","navigation":"4fe4821fecb4ad0c08ff8848a8d73cbdafdb6f3baf6fad7ff1eb3dc6960fd07e","collision":"1f3f3532769ea054d785f811d7f20254b0cb221754b0ae31ba4765f02cc0d797"},"hidden-observatory":{"placements":"dd640bd04fb8603fae9f84de9e79debd433b25d2f0e2163c2345218efc6e152d","navigation":"eaf09d862e44af061040098e153f37ec4fcbbd8d8daad7654c97e13d1985f9d6","collision":"d8b4e72c4f2d5892d986319509dedbff2c2651952b3a6689365df9a15f115c3e"},"moon-cafe":{"placements":"30f4d5b8012f79586fb2e3ce19dff2520366cafa3c2adcf1db27b662aad7cd2b","navigation":"64547137e8a1815dfbaea5ee24b20d0b056a07bff37268ae23468d029f275960","collision":"e24b9fcdbff9b8ca1067be22ec7bd706e38e7b12e268ecffa481084c48d8f861"},"nebula-arcade":{"placements":"ec862fabf0c8e3a196a3b803b5385ff998b1b1f4f9406c565fe29fc22aceeee7","navigation":"e2505b4da7503e1558c5b8a2d85fbfd1a93a8ee9f38531397844c2f628f28944","collision":"fe5fa8b9f15c8fbc07a597d304c8e1c66dd12fe67537be94de73690381a365d0"},"orbit-maze":{"placements":"4ebdb0fe060b8db00dc137770694688fe66cabdedc98bbbf2f0a999faaf0f2a8","navigation":"79c0cdf3a0777b1951dc84441940618fe0890c924a093c612c74ec0eea4fc6e9","collision":"e849dd7ec6f676b46c41f713ffcabce687da927eea7071de062b7cf8d40262ad"},"overworld":{"placements":"6f5eba1b9adfc556e5582a25dc51e28e0fd5bfb314cee9be55c0f7668d48dcfc","navigation":"d176b934d04169459efa116fccf6ccf73274aceec2279300470ec735d0569767","collision":"359f6a290bcd109c88d9af16928c3bdec5969da7e4f3d13b91605f529398e478"},"stargazer-terrace":{"placements":"e00102ad3e85920f9879e5daa7b1366ed59092127266838f86cc959b33703f40","navigation":"6814d13676e139e4c906d086b5bfbc592e924ab99b3b2005200755cefff628b2","collision":"37dcc4138edbe2577e389694d3c3ec6ee32b7dc22778ddd0f535cad0416b6f14"},"water-district":{"placements":"e9e39cee27e5edba3da5edc0fd2f3b4475dd840e9b9e27cfa99db6d7bba188ae","navigation":"ccc2d08bcea7782727c3ff7071dcd1c5651cc6d784ed3c0188aea4599bd8101e","collision":"6de7c73622ab593821b83a7c2096575e8c6154b974f5b9bbfef049c3b18a3c6e"},"zodiac-festival-park":{"placements":"1a8e6616b1f4c0b685b85c9532f4e41c573061856fb796f7ba836acb15666065","navigation":"e05b805deb9bebf44e3c2455c742baa02c20cc486f7d8bc99d33f41c36c1e98e","collision":"7af303514cf8936e3001956eb781ece03ddfe8ab8aee032bfee60e5a733aeb1d"}};
 const untouched = {"world/layouts/constellation-shore.json":"481b9dd92e830d419295b82c1807a4df44ad51d90b3d29fd29eda79054ea14d8","maps/constellation-shore.tmj":"076d80938106a715b2b6b652997b068aa428d3640a653e394af62749b7a6ef21","world/layouts/fa-ship.json":"5b72da42a573909ef4d7a016b11a74f69b8798a7d35c07bd8f968a4d753dc7a4","maps/fa-ship.tmj":"4bc2c0935c02c3c961e2c3b37f650f7743bb64ea90484a827190db2e8ceb9a4b","world/layouts/moon-grotto.json":"700d5673a37538af103509fbb4cfac4d8e83285584701d4e1c42c35d86783551","maps/moon-grotto.tmj":"4adda4c79d5f5a1d93748118ace536aa8a017840d5b74c1d2054fe9142abd539","world/layouts/orbit-playground.json":"7f9f0d0200a65ced8b82bf62cfba9ab1121938366e75222ccfc974b180ccbf60","maps/orbit-playground.tmj":"a1a4cbf46e10ef9a505b3b12b1aa5eb86f7fe0d8f482e529edf50b6bfe0d5629","world/layouts/shipyard-beach.json":"2da9c7fa27c41580337cdc81786fd588b73f0c66f8293d93b428e6203b39466b","maps/shipyard-beach.tmj":"3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac","world/layouts/star-garden.json":"4bba7fe4bffa4c0438bcce2125f5827c847565bed551301438095323e4199d3d","maps/star-garden.tmj":"4f1b9f3990dc7ebf4140b62f763fa84545950147fcbe4c97d145bfa0eb067f45"};
@@ -19,10 +20,12 @@ const assemblyAdditions = [{"id":"aries-building","sprite":"hub-building-south",
 const catalog=loadTileCatalog();
 describe('confirmed nonroom avatar visibility',()=>{
  it('keeps deliberate canopies and the original six-map exclusion receipt on exact published historical inputs',()=>{
-  expect(hash(readFileSync('art/tile-catalog.json'))).toBe('d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498');
+  expect(hash(readFileSync('tests/fixtures/solid-props/before-tile-catalog.json'))).toBe('d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498');
   // Exact published bytes, not an inverse of the current layout. Current beach changes
   // are independently constrained by beach-composition.test.ts's complete native deltas.
   const historical:Record<string,string>={
+   'world/layouts/constellation-shore.json':'tests/fixtures/solid-props/before-constellation-shore.json',
+   'maps/constellation-shore.tmj':'tests/fixtures/solid-props/before-constellation-shore.tmj',
    'world/layouts/fa-ship.json':'tests/fixtures/beach-composition/before-fa-ship.json',
    'maps/fa-ship.tmj':'tests/fixtures/beach-composition/before-fa-ship.tmj',
    'world/layouts/shipyard-beach.json':'tests/fixtures/beach-composition/published-8dc-shipyard-beach.json',
@@ -31,9 +34,9 @@ describe('confirmed nonroom avatar visibility',()=>{
   for(const [path,digest]of Object.entries(untouched))expect(hash(readFileSync(historical[path]??path)),path).toBe(digest);
  });
  for(const [id,before]of Object.entries(preservation)){
-  const source=json(`world/layouts/${id}.json`) as MapLayout;
+  const source=(id==='overworld'?solidBase(id,'json'):json(`world/layouts/${id}.json`)) as MapLayout;
   const layout=source;
-  const generated=buildMap(layout,catalog).tmj;
+  const generated=id==='overworld'?json('tests/fixtures/solid-props/historical-catalog-builder-overworld.json').tmj:buildMap(layout,catalog).tmj;
   it(`${id} preserves placements/collision and its independently scoped navigation receipt`,()=>{
    expect(source.placements.filter(p=>p.renderRole).map(p=>p.id).sort()).toEqual([...approved.filter(p=>p.map===id).map(p=>p.placement),...(id==='overworld'?assemblyAdditions.map(p=>p.id):[])].sort());
    expect(hash(canonical(source.placements.map(({renderRole:_,...p})=>p)))).toBe(before.placements);
@@ -43,20 +46,20 @@ describe('confirmed nonroom avatar visibility',()=>{
    if(frozen)expect(hash(frozen)).toBe('6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
    const navigation=frozen?JSON.parse(frozen.toString()):source;
    expect(hash(canonical(Object.fromEntries(['entries','exits','areas','signs'].map(k=>[k,(navigation as any)[k]]))))).toBe(before.navigation);
-   for(const map of [generated,json(`maps/${id}.tmj`)]){
+   for(const map of [generated,id==='overworld'?solidBase(id,'tmj'):json(`maps/${id}.tmj`)]){
     const collision=map.layers.find((l:any)=>l.name==='physical-collisions');
     expect(hash(canonical(collision.data.flatMap((gid:number,i:number)=>gid?[i]:[])))).toBe(before.collision);
    }
   });
-  it(`${id} native visual semantics match the existing role-aware builder`,()=>{
-   const native=json(`maps/${id}.tmj`);
+  it(`${id} published historical native visual semantics match the actual historical builder evidence`,()=>{
+   const native=id==='overworld'?solidBase(id,'tmj'):json(`maps/${id}.tmj`);
    for(const level of ['belowAvatar','aboveAvatar'])expect(sceneryPixels(native,level)).toEqual(sceneryPixels(generated,level));
   });
   it(`${id} applies only the approved role changes and clears confirmed upper artwork`,()=>{
    for(const proof of approved.filter(p=>p.map===id)){
     const placement=source.placements.find(p=>p.id===proof.placement)!;
     expect(proof.centerOpaquePixels).toBeGreaterThanOrEqual(192);
-    for(const map of [generated,json(`maps/${id}.tmj`)]){
+    for(const map of [generated,id==='overworld'?solidBase(id,'tmj'):json(`maps/${id}.tmj`)]){
      const cell=proof.cell[1]*map.width+proof.cell[0];
      const collision=map.layers.find((l:any)=>l.name==='physical-collisions');expect(collision.data[cell]).toBe(0);
      const floor=map.layers.findIndex((l:any)=>l.name==='floorLayer');
@@ -92,9 +95,9 @@ describe('overworld complete house assembly regression',()=>{
    }
   });
  }
- it('preserves every static native overworld pixel including bold names and emblems',async()=>{
+ it('retains the historical published static overworld pixels including bold names and emblems',async()=>{
   const dir=mkdtempSync(join(tmpdir(),'varcamp-house-render-'));
-  try{const file=join(dir,'overworld.png');await renderMap(native,file);
+  try{const file=join(dir,'overworld.png');await renderMap(solidBase('overworld','tmj'),file);
    const {data,info}=await sharp(file).ensureAlpha().raw().toBuffer({resolveWithObject:true});
    expect([info.width,info.height]).toEqual([4096,4096]);
    expect(hash(data)).toBe('a751f33c121c0667cf50e970ea60847352950eace120595e9913014045190f93');

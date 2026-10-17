@@ -338,7 +338,7 @@
     },
     {
       "id": "shore-parasol-west",
-      "sprite": "coast-parasol",
+      "sprite": "solid-coast-parasol",
       "x": 7,
       "y": 18,
       "width": 3,
@@ -347,7 +347,7 @@
     },
     {
       "id": "shore-parasol-east",
-      "sprite": "coast-parasol",
+      "sprite": "solid-coast-parasol",
       "x": 28,
       "y": 18,
       "width": 3,
@@ -356,7 +356,7 @@
     },
     {
       "id": "shore-parasol-lounge",
-      "sprite": "coast-parasol",
+      "sprite": "solid-coast-parasol",
       "x": 14,
       "y": 20,
       "width": 3,
@@ -365,7 +365,7 @@
     },
     {
       "id": "shore-chair-west",
-      "sprite": "coast-deck-chair",
+      "sprite": "solid-coast-deck-chair",
       "x": 4,
       "y": 22,
       "width": 2,
@@ -374,7 +374,7 @@
     },
     {
       "id": "shore-chair-west-two",
-      "sprite": "coast-deck-chair",
+      "sprite": "solid-coast-deck-chair",
       "x": 11,
       "y": 22,
       "width": 2,
@@ -383,7 +383,7 @@
     },
     {
       "id": "shore-chair-east",
-      "sprite": "coast-deck-chair",
+      "sprite": "solid-coast-deck-chair",
       "x": 32,
       "y": 23,
       "width": 2,
@@ -392,7 +392,7 @@
     },
     {
       "id": "shore-chair-lounge",
-      "sprite": "coast-deck-chair",
+      "sprite": "solid-coast-deck-chair",
       "x": 23,
       "y": 22,
       "width": 2,
@@ -446,7 +446,7 @@
     },
     {
       "id": "shore-beach-bar",
-      "sprite": "coast-beach-bar",
+      "sprite": "solid-coast-beach-bar",
       "x": 26,
       "y": 10,
       "width": 6,
@@ -455,7 +455,7 @@
     },
     {
       "id": "shore-sandcastle",
-      "sprite": "coast-sandcastle",
+      "sprite": "solid-coast-sandcastle",
       "x": 7,
       "y": 28,
       "width": 2,
@@ -464,7 +464,7 @@
     },
     {
       "id": "shore-volley-net",
-      "sprite": "coast-volley-net",
+      "sprite": "solid-coast-volley-net",
       "x": 5,
       "y": 20,
       "width": 5,
@@ -635,7 +635,7 @@
     },
     {
       "id": "wood-sign-plaza-return-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 18,
       "y": 5,
       "width": 7,
@@ -644,7 +644,7 @@
     },
     {
       "id": "wood-sign-harbor-return-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 6,
       "y": 12,
       "width": 8,
@@ -653,7 +653,7 @@
     },
     {
       "id": "wood-sign-shore-title",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 12,
       "y": 15,
       "width": 14,
@@ -662,7 +662,7 @@
     },
     {
       "id": "wood-sign-games-pocket-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 4,
       "y": 16,
       "width": 7,
@@ -671,7 +671,7 @@
     },
     {
       "id": "wood-sign-picnic-pocket-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 27,
       "y": 16,
       "width": 7,
@@ -680,7 +680,7 @@
     },
     {
       "id": "wood-sign-lounge-pocket-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 17,
       "y": 21,
       "width": 7,
@@ -842,7 +842,7 @@
     },
     {
       "id": "wood-sign-post-plaza-return-label",
-      "sprite": "coast-sign-post",
+      "sprite": "solid-coast-sign-post",
       "x": 21,
       "y": 6,
       "width": 1,
@@ -860,7 +860,7 @@
     },
     {
       "id": "wood-sign-post-harbor-return-label",
-      "sprite": "coast-sign-post",
+      "sprite": "solid-coast-sign-post",
       "x": 9,
       "y": 13,
       "width": 1,
@@ -5699,6 +5699,69 @@
       "width": 1,
       "height": 1,
       "layer": "terrain"
+    },
+    {
+      "id": "wood-sign-shore-title-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 12,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-shore-title-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 25,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-games-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 4,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-games-pocket-label-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 10,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-picnic-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 27,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-picnic-pocket-label-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 33,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-lounge-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 17,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -5882,6 +5945,53 @@
       "color": "#fff2c7",
       "align": "left",
       "padding": 4
+    }
+  ],
+  "standingSigns": [
+    {
+      "face": "wood-sign-plaza-return-label",
+      "supports": [
+        "wood-sign-post-plaza-return-label"
+      ],
+      "text": "plaza-return-label"
+    },
+    {
+      "face": "wood-sign-harbor-return-label",
+      "supports": [
+        "wood-sign-post-harbor-return-label"
+      ],
+      "text": "harbor-return-label"
+    },
+    {
+      "face": "wood-sign-shore-title",
+      "supports": [
+        "wood-sign-shore-title-support-0",
+        "wood-sign-shore-title-support-1"
+      ],
+      "text": "shore-title"
+    },
+    {
+      "face": "wood-sign-games-pocket-label",
+      "supports": [
+        "wood-sign-games-pocket-label-support-0",
+        "wood-sign-games-pocket-label-support-1"
+      ],
+      "text": "games-pocket-label"
+    },
+    {
+      "face": "wood-sign-picnic-pocket-label",
+      "supports": [
+        "wood-sign-picnic-pocket-label-support-0",
+        "wood-sign-picnic-pocket-label-support-1"
+      ],
+      "text": "picnic-pocket-label"
+    },
+    {
+      "face": "wood-sign-lounge-pocket-label",
+      "supports": [
+        "wood-sign-lounge-pocket-label-support-0"
+      ],
+      "text": "lounge-pocket-label"
     }
   ]
 }

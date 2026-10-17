@@ -11190,5 +11190,593 @@
     ],
     "level": "belowAvatar",
     "sourceId": "original"
+  },
+  "solid-sign-post": {
+    "sheet": "assets/tilesets/original/wayfinding.png",
+    "rect": {
+      "x": 6,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [],
+    "standingRole": "support"
+  },
+  "solid-coast-sign-post": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 54,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [],
+    "standingRole": "support"
+  },
+  "solid-coast-sign-board": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 48,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "standingRole": "face"
+  },
+  "solid-coast-parasol": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 3,
+      "y": 22,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "solid-coast-deck-chair": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 6,
+      "y": 22,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "solid-coast-beach-bar": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 10,
+      "y": 22,
+      "width": 6,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ]
+    ]
+  },
+  "solid-coast-sandcastle": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 41,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "solid-coast-volley-net": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 49,
+      "y": 22,
+      "width": 5,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ]
+  },
+  "solid-beach-recliner": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 9,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "solid-beach-low-table": {
+    "sheet": "assets/tilesets/original/beach-lounge.png",
+    "rect": {
+      "x": 11,
+      "y": 7,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "standing-hub-nav-brand": {
+    "sheet": "assets/tilesets/original/hub-labels.png",
+    "rect": {
+      "x": 0,
+      "y": 36,
+      "width": 6,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-hub-nav-welcome": {
+    "sheet": "assets/tilesets/original/hub-labels.png",
+    "rect": {
+      "x": 0,
+      "y": 24,
+      "width": 5,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-hub-nav-directory": {
+    "sheet": "assets/tilesets/original/hub-labels.png",
+    "rect": {
+      "x": 0,
+      "y": 35,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-hub-nav-you-are-here": {
+    "sheet": "assets/tilesets/original/hub-labels.png",
+    "rect": {
+      "x": 0,
+      "y": 38,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-hub-nav-arrival-crosspost": {
+    "sheet": "assets/tilesets/original/hub-labels.png",
+    "rect": {
+      "x": 0,
+      "y": 45,
+      "width": 6,
+      "height": 3
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-exterior-road-north": {
+    "sheet": "assets/tilesets/original/exterior-gates.png",
+    "rect": {
+      "x": 0,
+      "y": 18,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-exterior-road-west": {
+    "sheet": "assets/tilesets/original/exterior-gates.png",
+    "rect": {
+      "x": 4,
+      "y": 18,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-exterior-road-east": {
+    "sheet": "assets/tilesets/original/exterior-gates.png",
+    "rect": {
+      "x": 8,
+      "y": 18,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-exterior-road-south": {
+    "sheet": "assets/tilesets/original/exterior-gates.png",
+    "rect": {
+      "x": 12,
+      "y": 18,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "standing-exterior-road-plaza": {
+    "sheet": "assets/tilesets/original/exterior-gates.png",
+    "rect": {
+      "x": 0,
+      "y": 19,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
   }
 }

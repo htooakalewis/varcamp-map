@@ -10,6 +10,7 @@ const revisionPath = 'publication/revisions/2026-10-16-shared-guides.json';
 const navigationRevisionPath = 'publication/revisions/2026-10-17-return-approaches.json';
 const beachRevisionPath='publication/revisions/2026-10-17-beach-composition.json';
 const closureRevisionPath='publication/revisions/2026-10-17-beach-ci-closure.json';
+const propsRevisionPath='publication/revisions/2026-10-17-solid-props.json';
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
 const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
@@ -48,6 +49,10 @@ describe('publication exact reviewed replacements', () => {
     const bytes=JSON.stringify(value);write(closureRevisionPath,bytes);
     manifest.extensionInventory[closureRevisionPath]=createHash('sha256').update(bytes).digest('hex');
   }
+  function pinProps(value:unknown={schemaVersion:1,revisions:[]}) {
+    const bytes=JSON.stringify(value);write(propsRevisionPath,bytes);
+    manifest.extensionInventory[propsRevisionPath]=createHash('sha256').update(bytes).digest('hex');
+  }
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -71,6 +76,7 @@ describe('publication exact reviewed replacements', () => {
     pinRevisions();
     pinNavigation();
     pinBeach();
+    pinProps();
     pinClosure();
     baselineManifest=structuredClone(manifest);track=true;
   });
@@ -278,6 +284,22 @@ describe('publication exact reviewed replacements', () => {
     write('src/main.ts',final);const accepted=verify();expect(accepted.status,accepted.output).toBe(0);
     pinClosure({schemaVersion:1,revisions:[{...reviewed(),fromSha256:baselineHash,toSha256:digest}]});
     rejects('Reviewed revision prior mismatch: src/main.ts');
+  });
+
+  it('composes the fixed fifth props document only from the actual prior effective receipt',()=>{
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});
+    const fourth='fourth release\n',fourthHash=createHash('sha256').update(fourth).digest('hex');
+    pinClosure({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:fourthHash}]});
+    const final='physical props release\n',finalHash=createHash('sha256').update(final).digest('hex');
+    pinProps({schemaVersion:1,revisions:[{...reviewed(),fromSha256:fourthHash,toSha256:finalHash}]});
+    write('src/main.ts',final);const positive=verify();expect(positive.status,positive.output).toBe(0);
+    pinProps({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:finalHash}]});rejects('Reviewed revision prior mismatch: src/main.ts');
+  });
+  it.each(['maps/overworld.tmj','maps/constellation-shore.tmj','maps/shipyard-beach.tmj','world/layouts/overworld.json','world/layouts/constellation-shore.json','world/layouts/shipyard-beach.json'])('actual CLI rejects current physical support/scenery mutation %s after a positive baseline',path=>{
+    const raw=readFileSync(path,'utf8');pinProps({schemaVersion:1,revisions:[{path,fromSha256:baselineHash,toSha256:createHash('sha256').update(raw).digest('hex'),reason:'Exact reviewed physical prop artifact'}]});
+    write(path,raw);const positive=verify();expect(positive.status,positive.output).toBe(0);
+    const changed=JSON.parse(raw);if(path.endsWith('.tmj')){const l=changed.layers.find((l:any)=>l.name==='physical-collisions'),i=l.data.findIndex((v:number)=>v!==0);l.data[i]=0;}else changed.standingSigns[0].supports=[];
+    write(path,JSON.stringify(changed));rejects('Reviewed source changed: '+path);
   });
 
 });

@@ -10454,43 +10454,39 @@
     },
     {
       "id": "varcamp-nameplate",
-      "sprite": "hub-nav-brand",
+      "sprite": "standing-hub-nav-brand",
       "x": 54,
       "y": 60,
       "width": 6,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "welcome-control-sign",
-      "sprite": "hub-nav-welcome",
+      "sprite": "standing-hub-nav-welcome",
       "x": 55,
       "y": 63,
       "width": 5,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "directory-prompt",
-      "sprite": "hub-nav-directory",
+      "sprite": "standing-hub-nav-directory",
       "x": 61,
       "y": 70,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "arrival-position-label",
-      "sprite": "hub-nav-you-are-here",
+      "sprite": "standing-hub-nav-you-are-here",
       "x": 61,
       "y": 73,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "arrival-compass",
@@ -10503,7 +10499,7 @@
     },
     {
       "id": "reception-post-brand-left",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 55,
       "y": 61,
       "width": 1,
@@ -10512,7 +10508,7 @@
     },
     {
       "id": "reception-post-brand-right",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 58,
       "y": 61,
       "width": 1,
@@ -10521,7 +10517,7 @@
     },
     {
       "id": "reception-post-welcome-left",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 56,
       "y": 64,
       "width": 1,
@@ -10530,7 +10526,7 @@
     },
     {
       "id": "reception-post-welcome-right",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 59,
       "y": 64,
       "width": 1,
@@ -10539,7 +10535,7 @@
     },
     {
       "id": "reception-post-directory",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 62,
       "y": 71,
       "width": 1,
@@ -10548,7 +10544,7 @@
     },
     {
       "id": "reception-post-position",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 62,
       "y": 74,
       "width": 1,
@@ -10586,17 +10582,16 @@
     },
     {
       "id": "arrival-direction-crosspost",
-      "sprite": "hub-nav-arrival-crosspost",
+      "sprite": "standing-hub-nav-arrival-crosspost",
       "x": 66,
       "y": 61,
       "width": 6,
       "height": 3,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "arrival-crosspost-pole",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 68,
       "y": 64,
       "width": 1,
@@ -11694,17 +11689,16 @@
     },
     {
       "id": "exterior-road-sign-north",
-      "sprite": "exterior-road-north",
+      "sprite": "standing-exterior-road-north",
       "x": 58,
       "y": 43,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "exterior-road-post-north",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 59,
       "y": 44,
       "width": 1,
@@ -11722,17 +11716,16 @@
     },
     {
       "id": "exterior-road-sign-west",
-      "sprite": "exterior-road-west",
+      "sprite": "standing-exterior-road-west",
       "x": 33,
       "y": 58,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "exterior-road-post-west",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 34,
       "y": 59,
       "width": 1,
@@ -11750,17 +11743,16 @@
     },
     {
       "id": "exterior-road-sign-east",
-      "sprite": "exterior-road-east",
+      "sprite": "standing-exterior-road-east",
       "x": 90,
       "y": 58,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "exterior-road-post-east",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 91,
       "y": 59,
       "width": 1,
@@ -11778,17 +11770,16 @@
     },
     {
       "id": "exterior-road-sign-south",
-      "sprite": "exterior-road-south",
+      "sprite": "standing-exterior-road-south",
       "x": 58,
       "y": 90,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "exterior-road-post-south",
-      "sprite": "sign-post",
+      "sprite": "solid-sign-post",
       "x": 59,
       "y": 91,
       "width": 1,
@@ -11824,13 +11815,12 @@
     },
     {
       "id": "gate-plaza-return-solar",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 25,
       "y": 19,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-solar",
@@ -11861,13 +11851,12 @@
     },
     {
       "id": "gate-plaza-return-lunar",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 98,
       "y": 19,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-lunar",
@@ -11898,13 +11887,12 @@
     },
     {
       "id": "gate-plaza-return-maze",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 70,
       "y": 4,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-maze",
@@ -11935,13 +11923,12 @@
     },
     {
       "id": "gate-plaza-return-festival",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 0,
       "y": 69,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-festival",
@@ -11972,13 +11959,12 @@
     },
     {
       "id": "gate-plaza-return-shipyard",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 124,
       "y": 69,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-shipyard",
@@ -12009,13 +11995,12 @@
     },
     {
       "id": "gate-plaza-return-campus",
-      "sprite": "exterior-road-plaza",
+      "sprite": "standing-exterior-road-plaza",
       "x": 68,
       "y": 123,
       "width": 4,
       "height": 1,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gate-plaza-pad-campus",
@@ -12168,6 +12153,114 @@
       "y": 115,
       "width": 2,
       "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-solar-support-0",
+      "sprite": "solid-sign-post",
+      "x": 26,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-lunar-support-0",
+      "sprite": "solid-sign-post",
+      "x": 99,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-maze-support-0",
+      "sprite": "solid-sign-post",
+      "x": 71,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-festival-support-0",
+      "sprite": "solid-sign-post",
+      "x": 1,
+      "y": 70,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-shipyard-support-0",
+      "sprite": "solid-sign-post",
+      "x": 125,
+      "y": 70,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "gate-plaza-return-campus-support-0",
+      "sprite": "solid-sign-post",
+      "x": 69,
+      "y": 124,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-0-support-0",
+      "sprite": "solid-sign-post",
+      "x": 53,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-0-support-1",
+      "sprite": "solid-sign-post",
+      "x": 58,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-1-support-0",
+      "sprite": "solid-sign-post",
+      "x": 61,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-1-support-1",
+      "sprite": "solid-sign-post",
+      "x": 66,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-2-support-0",
+      "sprite": "solid-sign-post",
+      "x": 69,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "standing-sponsor-2-support-1",
+      "sprite": "solid-sign-post",
+      "x": 74,
+      "y": 68,
+      "width": 1,
+      "height": 1,
       "layer": "props"
     }
   ],
@@ -12709,7 +12802,8 @@
       "x": 53,
       "y": 67,
       "width": 6,
-      "height": 2
+      "height": 2,
+      "standing": true
     },
     {
       "name": "Sponsors / Demo 02",
@@ -12717,7 +12811,8 @@
       "x": 61,
       "y": 67,
       "width": 6,
-      "height": 2
+      "height": 2,
+      "standing": true
     },
     {
       "name": "Sponsors / Demo 03",
@@ -12725,7 +12820,8 @@
       "x": 69,
       "y": 67,
       "width": 6,
-      "height": 2
+      "height": 2,
+      "standing": true
     }
   ],
   "animatedOverlays": [
@@ -14509,14 +14605,132 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "b4c8e8c6fcd6e0fcdc8b2685214c18bf412fbd1f510b2ad73820632e7755ed69"
+            "sha256": "96e2164beff2c521b00c744f46d113ef606125dd68816bebdd442a8ff694de53"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b"
+            "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f"
           }
         ]
       }
+    }
+  ],
+  "standingSigns": [
+    {
+      "face": "varcamp-nameplate",
+      "supports": [
+        "reception-post-brand-left",
+        "reception-post-brand-right"
+      ]
+    },
+    {
+      "face": "welcome-control-sign",
+      "supports": [
+        "reception-post-welcome-left",
+        "reception-post-welcome-right"
+      ]
+    },
+    {
+      "face": "directory-prompt",
+      "supports": [
+        "reception-post-directory"
+      ]
+    },
+    {
+      "face": "arrival-position-label",
+      "supports": [
+        "reception-post-position"
+      ]
+    },
+    {
+      "face": "arrival-direction-crosspost",
+      "supports": [
+        "arrival-crosspost-pole"
+      ]
+    },
+    {
+      "face": "exterior-road-sign-north",
+      "supports": [
+        "exterior-road-post-north"
+      ]
+    },
+    {
+      "face": "exterior-road-sign-west",
+      "supports": [
+        "exterior-road-post-west"
+      ]
+    },
+    {
+      "face": "exterior-road-sign-east",
+      "supports": [
+        "exterior-road-post-east"
+      ]
+    },
+    {
+      "face": "exterior-road-sign-south",
+      "supports": [
+        "exterior-road-post-south"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-solar",
+      "supports": [
+        "gate-plaza-return-solar-support-0"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-lunar",
+      "supports": [
+        "gate-plaza-return-lunar-support-0"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-maze",
+      "supports": [
+        "gate-plaza-return-maze-support-0"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-festival",
+      "supports": [
+        "gate-plaza-return-festival-support-0"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-shipyard",
+      "supports": [
+        "gate-plaza-return-shipyard-support-0"
+      ]
+    },
+    {
+      "face": "gate-plaza-return-campus",
+      "supports": [
+        "gate-plaza-return-campus-support-0"
+      ]
+    },
+    {
+      "faceKind": "image",
+      "face": "Sponsors / Demo 01",
+      "supports": [
+        "standing-sponsor-0-support-0",
+        "standing-sponsor-0-support-1"
+      ]
+    },
+    {
+      "faceKind": "image",
+      "face": "Sponsors / Demo 02",
+      "supports": [
+        "standing-sponsor-1-support-0",
+        "standing-sponsor-1-support-1"
+      ]
+    },
+    {
+      "faceKind": "image",
+      "face": "Sponsors / Demo 03",
+      "supports": [
+        "standing-sponsor-2-support-0",
+        "standing-sponsor-2-support-1"
+      ]
     }
   ]
 }

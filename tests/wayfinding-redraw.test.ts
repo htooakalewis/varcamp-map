@@ -12,6 +12,7 @@ import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement } from '../t
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
 // One predicate is used by both fixture cases and the complete production-layout audit.
 const labelCatalog=loadTileCatalog();
+const standingFace=(l:MapLayout,id:string)=>{const assembly=l.standingSigns?.find(s=>s.face===id&&s.faceKind===undefined);if(!assembly)throw Error(`Missing physical standing face ${id}`);const p=l.placements.find(p=>p.id===assembly.face);if(!p)throw Error(`Missing standing placement ${id}`);return p;};
 const obstructsLabel=(p:Placement,catalog:ReturnType<typeof loadTileCatalog>)=>{
  // Terrain and atmospheric backdrops were already outside the scenery audit.
  if(['terrain','atmosphere'].includes(p.layer))return false;
@@ -19,7 +20,7 @@ const obstructsLabel=(p:Placement,catalog:ReturnType<typeof loadTileCatalog>)=>{
  // Match the builder's existing render-role precedence. Background art may sit
  // beneath labels; solid physical objects and foreground decoration may not.
  const level=p.renderRole==='canopy'?'aboveAvatar':p.renderRole?'belowAvatar':sprite.level;
- return level==='aboveAvatar'||sprite.blockingCells.length>0;
+ return (sprite.upperCells===undefined?level==='aboveAvatar':sprite.upperCells.length>0)||sprite.blockingCells.length>0;
 };
 const gap=(a:TileRect,b:TileRect)=>Math.max(0,a.x-b.x-b.width,b.x-a.x-a.width)+Math.max(0,a.y-b.y-b.height,b.y-a.y-a.height);
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
@@ -57,10 +58,10 @@ describe('audience wayfinding in exported Tiled maps',()=>{
  it('uses concise physical cardinal pointers and raster controls at first arrival',()=>{
   const l=layouts.find(l=>l.id==='overworld')!;
   for(const [id,copy]of [['north','HALLS / MAZES'],['west','PARK / ARCADE'],['east','BEACH / SHIP'],['south','GARDEN / CAFE']]){
-   const p=l.placements.find(p=>p.sprite===`exterior-road-${id}`)!;expect(p).toBeDefined();
+   const p=standingFace(l,`exterior-road-sign-${id}`);expect(p).toBeDefined();
    expect(EXTERIOR_ROAD_COPY[id]).toBe(copy);
   }
-  expect(l.placements.some(p=>p.sprite==='hub-nav-welcome')).toBe(true);
+  expect(standingFace(l,'welcome-control-sign')).toBeDefined();
   expect(l.signs?.some(s=>s.text.split('\n').length>3)).toBe(false);
  });
  it.each(layouts.map(l=>[l.id,l] as const))('%s labels every physical destination with a nearby readable direction',(_id,l)=>{
@@ -85,7 +86,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
  });
  it.each(layouts.map(l=>[l.id,l] as const))('%s explains the route to new arrivals without covering the spawn',(_id,l)=>{
   const e=l.entries.find(e=>e.isDefault)!;
-  if(l.id==='overworld'){const welcome=l.placements.find(p=>p.sprite==='hub-nav-welcome')!;expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(true);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
+  if(l.id==='overworld'){const welcome=standingFace(l,'welcome-control-sign');expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(true);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
  });
  it('points first-time visitors north toward the Festival and Exploration pavilion doors',()=>{
   for(const id of ['zodiac-festival-park','campus-exploration']){

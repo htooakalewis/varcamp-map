@@ -1,3 +1,4 @@
+import {validateSpriteDepth} from '../maps/solid-props';
 import {renderRoadster} from './roadster';
 import {renderCoastalFlight} from './coastal-flight';
 import {renderExteriorGates} from './exterior-gates';
@@ -26,6 +27,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
     }
   }
   for (const [id,s] of Object.entries(catalog)) {
+    try{validateSpriteDepth(id,s);}catch(error){errors.push(String(error));}
     if(!sources[s.sourceId]) errors.push(`${id}: unknown source ${s.sourceId}`);
     else if(!sources[s.sourceId].files.some(file=>file.path===s.sheet)) errors.push(`${id}: sheet absent from source manifest`);
     if(!existsSync(s.sheet)) { errors.push(`${id}: missing PNG ${s.sheet}`); continue; }

@@ -2169,11 +2169,11 @@
         },
         {
           "path": "tools/maps/builder.ts",
-          "sha256": "b4c8e8c6fcd6e0fcdc8b2685214c18bf412fbd1f510b2ad73820632e7755ed69"
+          "sha256": "96e2164beff2c521b00c744f46d113ef606125dd68816bebdd442a8ff694de53"
         },
         {
           "path": "tools/maps/types.ts",
-          "sha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b"
+          "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f"
         }
       ]
     }

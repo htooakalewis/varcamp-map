@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import type { TileCatalog } from '../art/catalog';
+import {validateSpriteDepth,validateStandingSigns} from './solid-props';
 import editorCollections from '../../world/editor-collections.json';
 import type { MapLayout, TileRect, TileLayer, TiledLayer, TiledMap, TiledTileset, WamFile } from './types';
 
@@ -59,6 +60,7 @@ export function readSponsorTileset(tileset: TiledTileset): { path: string; bytes
  * and a bridge replaces water without erasing unrelated furniture collisions.
  */
 export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap; wam: WamFile } {
+  validateStandingSigns(layout,tiles);
   const mapName = layout.id === 'overworld' ? 'VarCamp · Constellation Campus' : `VarCamp · ${layout.id.split('-').map(word=>word[0].toUpperCase()+word.slice(1)).join(' ')}`;
   const size=layout.width*layout.height, layers:TiledLayer[]=[], tilesets:TiledTileset[]=[];
   const sources=JSON.parse(readFileSync('art/sources.json','utf8'));
@@ -83,6 +85,8 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   for(const p of layout.placements) {
     if(ids.has(p.id))throw new Error(`Duplicate placement ID: ${p.id}`);ids.add(p.id);bounds(p,p.id);
     const s=tiles[p.sprite];if(!s)throw new Error(`Unknown sprite: ${p.sprite}`);
+    validateSpriteDepth(p.sprite,s);
+    if(s.upperCells!==undefined&&(p.layer==='terrain'||p.renderRole))throw Error(`${p.id}: explicit upper partition cannot be overridden`);
     if(p.renderRole && !['grounded','canopy','cutaway'].includes(p.renderRole))throw new Error(`${p.id}: invalid render role`);
     if(p.layer==='terrain'&&p.renderRole)throw new Error(`${p.id}: render roles apply to scenery only`);
     if(p.width%s.rect.width||p.height%s.rect.height)throw new Error(`${p.id}: dimensions must be native sprite multiples`);
@@ -90,18 +94,21 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     const visual=p.renderRole==='cutaway'?tiles['floor-inlay']:s;
     const ref=sheet(p.renderRole==='cutaway'?'floor-inlay':p.sprite),mask=new Set(s.blockingCells.map(([x,y])=>y*s.rect.width+x));
     const level=p.renderRole==='canopy'?'aboveAvatar':p.renderRole?'belowAvatar':s.level;
-    const cells:number[]=[];for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++)cells.push((p.y+y)*layout.width+p.x+x);
-    let target=terrain;
-    if(p.layer!=='terrain') {
-      const stack=stacks[level==='aboveAvatar'?1:0];
+    const upper=s.upperCells===undefined?undefined:new Set(s.upperCells.map(([x,y])=>y*s.rect.width+x));
+    const side=(x:number,y:number)=>upper===undefined?(level==='aboveAvatar'?1:0):(upper.has((y%s.rect.height)*s.rect.width+x%s.rect.width)?1:0);
+    const targets:TileLayer[]=[terrain,terrain];
+    if(p.layer!=='terrain')for(const which of [0,1]) {
+      const cells:number[]=[];for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++)if(side(x,y)===which)cells.push((p.y+y)*layout.width+p.x+x);
+      if(!cells.length)continue;
+      const stack=stacks[which],name=which?'aboveAvatar':'belowAvatar';
       const depth=1+Math.max(-1,...cells.map(i=>stack.depth[i]));
-      while(stack.layers.length<=depth)stack.layers.push(layer(`scenery-${level}-${stack.layers.length}`));
-      target=stack.layers[depth];for(const i of cells)stack.depth[i]=depth;
+      while(stack.layers.length<=depth)stack.layers.push(layer(`scenery-${name}-${stack.layers.length}`));
+      targets[which]=stack.layers[depth];for(const i of cells)stack.depth[i]=depth;
     }
     for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++) {
       const i=(p.y+y)*layout.width+p.x+x,dx=x%s.rect.width,dy=y%s.rect.height;
       // A cutaway keeps a thin floor-level sill, never a tall opaque wall/door plane.
-      if(p.renderRole!=='cutaway'||y===p.height-1)target.data[i]=ref.firstgid+(visual.rect.y+y%visual.rect.height)*ref.columns+visual.rect.x+x%visual.rect.width;
+      if(p.renderRole!=='cutaway'||y===p.height-1)targets[side(x,y)].data[i]=ref.firstgid+(visual.rect.y+y%visual.rect.height)*ref.columns+visual.rect.x+x%visual.rect.width;
       const collides=mask.has(dy*s.rect.width+dx)?1:0;
       if(p.layer==='terrain')groundMask[i]=collides;else if(collides)propMask[i]=1;
     }

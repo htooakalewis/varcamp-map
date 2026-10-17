@@ -3,9 +3,9 @@ import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
 const json = (p:string) => JSON.parse(readFileSync(p,'utf8'));
 const before = (id:string, ext:string) => json(`tests/fixtures/beach-composition/before-${id}.${ext}`);
-const current = (id:string,ext:string) => json(ext==='json'?`world/layouts/${id}.json`:`maps/${id}.tmj`);
+const current = (id:string,ext:string) => {if(id==='shipyard-beach'){const path=`tests/fixtures/solid-props/before-${id}.${ext}`;expect(sha(path)).toBe(json('tests/fixtures/solid-props/delta.json').maps[id].before[ext]);return json(path);}return json(ext==='json'?`world/layouts/${id}.json`:`maps/${id}.tmj`);};
 const sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
-describe('current beach composition preserves native history',()=>{
+describe('published beach composition preserves its immutable native history',()=>{
  it('pins the unchanged historical inputs',()=>{
   for(const [p,h] of Object.entries({
    'before-fa-ship.tmj':'4bc2c0935c02c3c961e2c3b37f650f7743bb64ea90484a827190db2e8ceb9a4b',
@@ -48,7 +48,7 @@ describe('current beach composition preserves native history',()=>{
   beach.signs=beach.signs.filter((s:any)=>s.name!=='harbor-title');beach.signs.find((s:any)=>s.name==='arrival-routes').text='FA SHIP ↓   SHORE →';
   expect(current('shipyard-beach','json')).toEqual(beach);
  });
- it('keeps current protected native layers and collision/navigation objects exact',()=>{
+ it('keeps the published composition protected native layers and collision/navigation objects exact',()=>{
   for(const id of ['fa-ship','shipyard-beach']){
    const old=before(id,'tmj'),now=current(id,'tmj');
    const floor=old.layers.findIndex((l:any)=>l.name==='floorLayer');expect(floor).toBeGreaterThan(0);
@@ -66,7 +66,7 @@ describe('current beach composition preserves native history',()=>{
  });
  it('keeps previews the exact complete native projection',()=>{
   for(const id of ['fa-ship','shipyard-beach']){
-   const map=current(id,'tmj');
+   const map=json(`maps/${id}.tmj`);
    for(const p of map.properties??[])if(p.name==='script')p.value='../'+p.value;
    for(const t of map.tilesets)if(t.image)t.image='../'+t.image;
    const visit=(v:any)=>{if(!v||typeof v!=='object')return;if(v.name==='exitUrl'&&typeof v.value==='string')v.value=v.value.replace('.wam#','.tmj#');for(const child of Object.values(v))visit(child);};visit(map);

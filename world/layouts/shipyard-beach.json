@@ -50738,7 +50738,7 @@
     },
     {
       "id": "wood-sign-plaza-return-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 22,
       "y": 2,
       "width": 5,
@@ -50747,7 +50747,7 @@
     },
     {
       "id": "wood-sign-workshop-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 7,
       "y": 10,
       "width": 8,
@@ -50756,7 +50756,7 @@
     },
     {
       "id": "wood-sign-dockmaster-station",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 33,
       "y": 10,
       "width": 7,
@@ -50765,7 +50765,7 @@
     },
     {
       "id": "wood-sign-boarding-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 18,
       "y": 32,
       "width": 3,
@@ -50774,7 +50774,7 @@
     },
     {
       "id": "wood-sign-shore-label",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 44,
       "y": 30,
       "width": 3,
@@ -50783,7 +50783,7 @@
     },
     {
       "id": "wood-sign-arrival-routes",
-      "sprite": "coast-sign-board",
+      "sprite": "solid-coast-sign-board",
       "x": 19,
       "y": 15,
       "width": 10,
@@ -50918,7 +50918,7 @@
     },
     {
       "id": "beach-seat-west-a",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 4,
       "y": 18,
       "width": 2,
@@ -50927,7 +50927,7 @@
     },
     {
       "id": "beach-seat-west-b",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 7,
       "y": 20,
       "width": 2,
@@ -50936,7 +50936,7 @@
     },
     {
       "id": "beach-seat-arrival-a",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 17,
       "y": 10,
       "width": 2,
@@ -50945,7 +50945,7 @@
     },
     {
       "id": "beach-seat-arrival-b",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 20,
       "y": 10,
       "width": 2,
@@ -50954,7 +50954,7 @@
     },
     {
       "id": "beach-seat-bar-a",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 35,
       "y": 20,
       "width": 2,
@@ -50963,7 +50963,7 @@
     },
     {
       "id": "beach-seat-bar-b",
-      "sprite": "beach-recliner",
+      "sprite": "solid-beach-recliner",
       "x": 40,
       "y": 20,
       "width": 2,
@@ -51242,7 +51242,7 @@
     },
     {
       "id": "beach-cafe-table",
-      "sprite": "beach-low-table",
+      "sprite": "solid-beach-low-table",
       "x": 29,
       "y": 9,
       "width": 2,
@@ -51269,7 +51269,7 @@
     },
     {
       "id": "beach-west-side-table",
-      "sprite": "beach-low-table",
+      "sprite": "solid-beach-low-table",
       "x": 8,
       "y": 17,
       "width": 2,
@@ -51278,11 +51278,92 @@
     },
     {
       "id": "beach-bar-side-table",
-      "sprite": "beach-low-table",
+      "sprite": "solid-beach-low-table",
       "x": 38,
       "y": 19,
       "width": 2,
       "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-plaza-return-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 26,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-workshop-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 7,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-workshop-label-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 14,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-dockmaster-station-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 33,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-dockmaster-station-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 39,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-boarding-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 18,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-shore-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 44,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-arrival-routes-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 19,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-arrival-routes-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 28,
+      "y": 16,
+      "width": 1,
+      "height": 1,
       "layer": "props"
     }
   ],
@@ -81583,11 +81664,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "b4c8e8c6fcd6e0fcdc8b2685214c18bf412fbd1f510b2ad73820632e7755ed69"
+            "sha256": "96e2164beff2c521b00c744f46d113ef606125dd68816bebdd442a8ff694de53"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b"
+            "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f"
           }
         ]
       }
@@ -94530,6 +94611,53 @@
           ]
         }
       ]
+    }
+  ],
+  "standingSigns": [
+    {
+      "face": "wood-sign-plaza-return-label",
+      "supports": [
+        "wood-sign-plaza-return-label-support-0"
+      ],
+      "text": "plaza-return-label"
+    },
+    {
+      "face": "wood-sign-workshop-label",
+      "supports": [
+        "wood-sign-workshop-label-support-0",
+        "wood-sign-workshop-label-support-1"
+      ],
+      "text": "workshop-label"
+    },
+    {
+      "face": "wood-sign-dockmaster-station",
+      "supports": [
+        "wood-sign-dockmaster-station-support-0",
+        "wood-sign-dockmaster-station-support-1"
+      ],
+      "text": "dockmaster-station"
+    },
+    {
+      "face": "wood-sign-boarding-label",
+      "supports": [
+        "wood-sign-boarding-label-support-0"
+      ],
+      "text": "boarding-label"
+    },
+    {
+      "face": "wood-sign-shore-label",
+      "supports": [
+        "wood-sign-shore-label-support-0"
+      ],
+      "text": "shore-label"
+    },
+    {
+      "face": "wood-sign-arrival-routes",
+      "supports": [
+        "wood-sign-arrival-routes-support-0",
+        "wood-sign-arrival-routes-support-1"
+      ],
+      "text": "arrival-routes"
     }
   ]
 }

@@ -10,7 +10,7 @@ export interface Placement extends TileRect {
 }
 export interface LayoutSign extends TileRect { name: string; text: string; fontSize?: number; color?: string; align?: 'left' | 'center'; padding?: number; }
 /** Separate native 192×64 PNG, exported as a 6×2 sheet and tile layer for WorkAdventure. */
-export interface LayoutImage extends TileRect { name: string; image: string; }
+export interface LayoutImage extends TileRect { name: string; image: string; standing?: boolean; }
 export interface TileAnimationFrame { tileid: number; duration: number; }
 /** One bounded native atlas/clock, kept separate from scenery stacking and collision masks. */
 export interface LayoutAnimatedOverlay extends TileRect {
@@ -32,6 +32,7 @@ export interface MapLayout {
   exits: Exit[];
   areas: LayoutArea[];
   inspectionZones: InspectionZone[];
+  standingSigns?: {face:string; supports:string[]; text?:string; faceKind?:'image'}[];
   signs?: LayoutSign[];
   images?: LayoutImage[];
   animatedOverlays?: LayoutAnimatedOverlay[];
