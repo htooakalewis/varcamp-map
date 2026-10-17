@@ -71,3 +71,5 @@ export function refineSolidProps(original:TiledMap,intended:TiledMap):TiledMap {
  tile(output,'physical-collisions').data=tile(intended,'physical-collisions').data.map(remap);
  return output;
 }
+
+export{refineStandingCaptions}from'./standing-captions';

@@ -1,3 +1,4 @@
+import{readStandingCaptions}from'../art/standing-captions';
 import { readFileSync, realpathSync, statSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -178,10 +179,20 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     for(let y=exit.y;y<exit.y+exit.height;y++)for(let x=exit.x;x<exit.x+exit.width;x++)l.data[y*layout.width+x]=marker;
     layers.push(l);
   }
+  const captions=readStandingCaptions(layout);
+  const captionNames=new Set(captions?.rows.map(r=>r.sign.name)??[]);
+  if(captions){
+    const firstgid=nextgid,columns=captions.width/32,tilecount=columns*captions.height/32;
+    tilesets.push({firstgid,name:'standing-captions',tilewidth:32,tileheight:32,columns,tilecount,image:relative('maps',captions.image),imagewidth:captions.width,imageheight:captions.height,properties:[{name:'tilesetCopyright',type:'string',value:'Original VarCamp pixel glyph captions; CC0-1.0'},{name:'captionAtlasSha256',type:'string',value:captions.pngSha256}]});nextgid+=tilecount;
+    for(const row of captions.rows){const caption=layer(`standing-caption-${row.sign.name}`);caption.properties=[{name:'captionText',type:'string',value:row.sign.text},{name:'captionFace',type:'string',value:row.face}];
+      for(let y=0;y<row.sign.height;y++)for(let x=0;x<row.sign.width;x++)caption.data[(row.sign.y+y)*layout.width+row.sign.x+x]=firstgid+(row.atlasY+y)*columns+row.atlasX+x;
+      layers.push(caption);
+    }
+  }
   let objectId=1;
   layers.push({id:0,name:'wayfinding-text',type:'objectgroup',visible:true,opacity:1,objects:(layout.signs??[]).map(s=>{
     bounds(s,s.name);const padding=s.padding??0;if(!Number.isInteger(padding)||padding<0||padding*2>=s.width*32||padding*2>=s.height*32)throw new Error(`${s.name}: padding must be a nonnegative integer leaving a nonempty native text rectangle`);return {id:objectId++,name:s.name,x:s.x*32+padding,y:s.y*32+padding,width:s.width*32-padding*2,height:s.height*32-padding*2,rotation:0,visible:true,text:{text:s.text,color:s.color??'#f1d9a0',fontfamily:'Arial',pixelsize:s.fontSize??18,bold:false,wrap:true,halign:s.align??'left',valign:'top',backgroundcolor:s.name==='wheel-welcome-board'?'#101c2c':undefined,backgroundopacity:s.name==='wheel-welcome-board'?0.92:undefined}};
-  })});
+  }).filter(o=>!captionNames.has(o.name))});
   layers.push({id:0,name:'inspection-zones',type:'objectgroup',visible:false,opacity:1,objects:layout.inspectionZones.map(z=>({id:objectId++,name:z.name,type:z.kind,x:z.x*32,y:z.y*32,width:z.width*32,height:z.height*32,visible:false}))});
   const names=new Set<string>();for(const [i,l] of layers.entries()){if(names.has(l.name))throw new Error(`Duplicate flattened layer name: ${l.name}`);names.add(l.name);l.id=i+1;}
   const tmj:TiledMap={type:'map',version:'1.10',tiledversion:'1.12.2',orientation:'orthogonal',renderorder:'right-down',infinite:false,width:layout.width,height:layout.height,tilewidth:32,tileheight:32,backgroundcolor:'#101c2c',layers,tilesets,nextlayerid:layers.length+1,nextobjectid:objectId,properties:[{name:'script',type:'string',value:'../src/main.ts'},{name:'worldMapId',type:'string',value:layout.id},{name:'mapName',type:'string',value:mapName},{name:'defaultCameraState',type:'bool',value:false},{name:'defaultMicrophoneState',type:'bool',value:false}]};

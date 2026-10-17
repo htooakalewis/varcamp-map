@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "specs": [
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-plaza-return-label",
+      "sign": {
+        "name": "plaza-return-label",
+        "text": "↑ PLAZA",
+        "x": 18,
+        "y": 5,
+        "width": 7,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-harbor-return-label",
+      "sign": {
+        "name": "harbor-return-label",
+        "text": "↓ HARBOR",
+        "x": 6,
+        "y": 12,
+        "width": 8,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-shore-title",
+      "sign": {
+        "name": "shore-title",
+        "text": "CONSTELLATION SHORE",
+        "x": 12,
+        "y": 15,
+        "width": 14,
+        "height": 1,
+        "fontSize": 20,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-games-pocket-label",
+      "sign": {
+        "name": "games-pocket-label",
+        "text": "VOLLEYBALL",
+        "x": 4,
+        "y": 16,
+        "width": 7,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-picnic-pocket-label",
+      "sign": {
+        "name": "picnic-pocket-label",
+        "text": "BEACH BAR",
+        "x": 27,
+        "y": 16,
+        "width": 7,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "constellation-shore",
+      "face": "wood-sign-lounge-pocket-label",
+      "sign": {
+        "name": "lounge-pocket-label",
+        "text": "BAY LOUNGE",
+        "x": 17,
+        "y": 21,
+        "width": 7,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-plaza-return-label",
+      "sign": {
+        "name": "plaza-return-label",
+        "text": "↑ PLAZA",
+        "x": 22,
+        "y": 2,
+        "width": 5,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-workshop-label",
+      "sign": {
+        "name": "workshop-label",
+        "text": "BOAT WORKSHOP",
+        "x": 7,
+        "y": 10,
+        "width": 8,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-dockmaster-station",
+      "sign": {
+        "name": "dockmaster-station",
+        "text": "BEACH BAR",
+        "x": 33,
+        "y": 10,
+        "width": 7,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-boarding-label",
+      "sign": {
+        "name": "boarding-label",
+        "text": "↓ FA SHIP",
+        "x": 18,
+        "y": 32,
+        "width": 3,
+        "height": 1,
+        "fontSize": 14,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-shore-label",
+      "sign": {
+        "name": "shore-label",
+        "text": "↓ SHORE",
+        "x": 44,
+        "y": 30,
+        "width": 3,
+        "height": 1,
+        "fontSize": 14,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    },
+    {
+      "map": "shipyard-beach",
+      "face": "wood-sign-arrival-routes",
+      "sign": {
+        "name": "arrival-routes",
+        "text": "FA SHIP ↓   SHORE →",
+        "x": 19,
+        "y": 15,
+        "width": 10,
+        "height": 1,
+        "fontSize": 16,
+        "color": "#fff2c7",
+        "align": "left",
+        "padding": 4
+      }
+    }
+  ],
+  "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+  "producerSha256": "1f73bebab6c29ba4e3a2aa4a5621477ff9dd6b2b26add33ae96046aa70836266",
+  "svgSha256": "071588a46b0eca25307aa0f4014d3da3bb36b0360b3f39fbe3e118193c838d8d",
+  "pngSha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b"
+}

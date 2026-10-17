@@ -79,5 +79,6 @@ it('has no visible robot tile or name in any native map and keeps the ordinary B
   for(const l of tmj.layers)expect((l.objects??[]).filter((o:{name:string})=>o.name.startsWith('npc-name-'))).toEqual([]);
  }
  const beach=JSON.parse(readFileSync('maps/shipyard-beach.tmj','utf8'));
- expect(beach.layers.flatMap((l:{objects?:unknown[]})=>l.objects??[]).find((o:{name:string})=>o.name==='dockmaster-station').text.text).toBe('BEACH BAR');
+ const caption=beach.layers.find((l:{name:string})=>l.name==='standing-caption-dockmaster-station');expect(caption?.properties).toContainEqual({name:'captionText',type:'string',value:'BEACH BAR'});expect(caption.data.filter(Boolean)).toHaveLength(7);
+ expect(beach.layers.flatMap((l:{objects?:unknown[]})=>l.objects??[]).some((o:{name:string})=>o.name==='dockmaster-station')).toBe(false);
 });

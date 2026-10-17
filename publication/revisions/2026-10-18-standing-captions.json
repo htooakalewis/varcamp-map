@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "35123d7320b99f980ee49f21fdca0e3c3a4a53a7410f867fac77250847845614",
+      "toSha256": "f1172239ffbe53ddc0d11760e7b96b9553de0c0b30a8422199ee0e52778b68b4",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "27551f9bd3a59eb14685aa297e82aa1b67e93ec07e81d2c3649876fd44c3509c",
+      "toSha256": "4d44320e794dec6a6cbc50efc1740280de84c5b479413f7948773f80763326e8",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "fromSha256": "74092084ab9bad710d414c1464983311755c8fcdfc5d28088563f0dce0ab9480",
+      "toSha256": "aa46986b3791c2c50840a32d3a3d7aaddc1df3f0f683acd1f218ee85513764c7",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "maps/preview/constellation-shore.tmj",
+      "fromSha256": "739ffe0cb14532f0617e431843531ef4dee15b13d05d2fcec859ef75b2c85b3c",
+      "toSha256": "9cc36d2552bf87073ad080edd824476c074518ce0d6c6801f7c231caeee5a729",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "9d767779dc66b4a12f4c1b7dfe4d466b61d86e3090efc5aaf4ddc5b9b67fe23e",
+      "toSha256": "b0bb150ebb6c0a0e32cfdb4716bf5a5733b5cbf7702a44b683ff288b07af785e",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "c69c23f8372021771ba04091a4c5d0ad61cbac38d50b1e63a9233c23b2726a4f",
+      "toSha256": "2710cb17d4829ed5df199618c4f333f44d5d80dae0b6ad77da423144d2e23d9c",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "tests/npc-maps.test.ts",
+      "fromSha256": "95cff94cd326009ebfeb07a523c717d6ef493a02e864128485a5ea019f9fac8a",
+      "toSha256": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "341b065db15d9225ad7fa39aa1e462891c2b401df2701a5dbc9edece7f6b01bd",
+      "toSha256": "09e2836c2422259fca2f414a472f8d5af6d2657445779659ca3d6dfaf0582a2b",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "tools/maps/build.ts",
+      "fromSha256": "6dc706af0dc23f99855b7a95b655980e9ac5b44f6e71e5b10f992f0370b9b523",
+      "toSha256": "61d2838f836874555c2c20da677dbdb1169629080344011dfcc92b67764c58b8",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "fromSha256": "96e2164beff2c521b00c744f46d113ef606125dd68816bebdd442a8ff694de53",
+      "toSha256": "74289a920f153b48d8973960d42010b1788f5d794cd31aae6fda0b74ce2ef056",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "74b45d5f9a0433d944b1995e956b32b734695f0d34f69cc3f2421f60acc83620",
+      "toSha256": "90d67a0289dd5776f572dffb9c941c3c07d712ded66672af4fa81f8b6a96f42b",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "82e43c6d1fd602fe738cbb572cdcfba821e6697efa87411453b7653ea6ed5f03",
+      "toSha256": "a049fb2e3ee0ef00a20a5e9d572de10328d18953dca7a607dc30b091c043a71d",
+      "reason": "Portable standing captions: twelve linked semantic labels become validated original pixel tiles at the board overlay plane; preserve old atlas IDs, collision, routes and unlinked text. Explicit compiler/art provenance and current versus historical test closure."
+    }
+  ]
+}

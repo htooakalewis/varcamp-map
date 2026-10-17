@@ -1,0 +1,17 @@
+{
+  "upstreamCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "source": "verified actual compiler source context",
+  "files": {
+    "TextUtils.ts.txt": "c38dc317ca5dd69927d56728922c9093f81396d6b0534e439ffa4f7a1bae8da1",
+    "GameMapFrontWrapper.ts.txt": "8127a77f1ff4d1d48a93a08dd96c7dfc0654a8b398c95d7bfe3bdb58ae1b41c2",
+    "DepthIndexes.ts.txt": "53322c5f6c7148e1593c9aaa219302987ab360c63f98d339d2b2dbaf7e984781"
+  },
+  "beforeCommit": "fcf5bbddff9471b545328b41d112e56d17e206a0",
+  "beforeFiles": {
+    "before-overworld.json": "74b45d5f9a0433d944b1995e956b32b734695f0d34f69cc3f2421f60acc83620",
+    "before-constellation-shore.json": "bb32c4a41536c81ac643da49a5923c46203abe9f01e9752bf82bf8f40fe2b8d3",
+    "before-constellation-shore.tmj": "74092084ab9bad710d414c1464983311755c8fcdfc5d28088563f0dce0ab9480",
+    "before-shipyard-beach.json": "82e43c6d1fd602fe738cbb572cdcfba821e6697efa87411453b7653ea6ed5f03",
+    "before-shipyard-beach.tmj": "c69c23f8372021771ba04091a4c5d0ad61cbac38d50b1e63a9233c23b2726a4f"
+  }
+}

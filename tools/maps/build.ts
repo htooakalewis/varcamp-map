@@ -1,3 +1,5 @@
+import{assertNativeStandingCaptions}from'./standing-captions';
+import type{MapLayout}from'./types';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { validateMap, validateWam } from './validate';
 import { WORLD_CATALOG } from '../../src/world/catalog';
@@ -9,6 +11,7 @@ await mkdir('maps/preview',{recursive:true});
 for(const file of (await readdir('maps')).filter(f=>f.endsWith('.tmj')).sort()) {
   const tmj=JSON.parse(await readFile(`maps/${file}`,'utf8')) as TiledMap;
   const wam=JSON.parse(await readFile(`maps/${file.replace('.tmj','.wam')}`,'utf8'));
+  const layout=JSON.parse(await readFile(`world/layouts/${file.replace('.tmj','.json')}`,'utf8'))as MapLayout;assertNativeStandingCaptions(tmj,layout);
   const issues=[...validateMap(tmj,WORLD_CATALOG),...validateWam(wam)];
   if(issues.length)throw new Error(`${file}: ${JSON.stringify(issues)}`);
   const preview=structuredClone(tmj);

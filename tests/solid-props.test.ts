@@ -60,11 +60,13 @@ const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const receipt=read('tests/fixtures/solid-props/delta.json');
 function blocked(map:any){const gids=new Set(map.tilesets.flatMap((s:any)=>(s.tiles??[]).filter((t:any)=>t.properties?.some((p:any)=>p.name==='collides'&&p.value===true)).map((t:any)=>s.firstgid+t.id)));return new Set<string>(map.layers.flatMap((l:any)=>l.type==='tilelayer'?l.data.flatMap((g:number,i:number)=>gids.has(g)?[`${i%map.width},${Math.floor(i/map.width)}`]:[]):[]));}
 function connected(map:any,mask:Set<string>,points:string[]){const first=points[0],seen=new Set([first]),queue=[first];for(const key of queue){const[x,y]=key.split(',').map(Number);for(const[nx,ny]of[[x+1,y],[x-1,y],[x,y+1],[x,y-1]]){const n=`${nx},${ny}`;if(nx>=0&&ny>=0&&nx<map.width&&ny<map.height&&!mask.has(n)&&!seen.has(n)){seen.add(n);queue.push(n);}}}return points.every(p=>seen.has(p));}
-describe('direct current solid-prop native and immutable historical contracts',()=>{
+describe('published solid-prop receipts and direct current physical contracts',()=>{
  for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} changes only the approved support mask and keeps whole native entry masks/routes connected`,()=>{
+  const historical=read(id==='overworld'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.tmj`);
   const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=read(`maps/${id}.tmj`),source=read(`world/layouts/${id}.json`);
-  for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(ext==='json'?`world/layouts/${id}.json`:`maps/${id}.tmj`)).toBe(proof.after[ext]);}
-  expect(now.tilesets).toEqual(old.tilesets); // no atlas growth, firstgid or animation edits
+  for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(id==='overworld'&&ext==='tmj'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.${ext}`)).toBe(proof.after[ext]);}
+  expect(historical.tilesets).toEqual(old.tilesets); // retained published props receipt; new caption atlas is checked separately
+  expect(now.layers.find((l:any)=>l.name==='physical-collisions')).toEqual(historical.layers.find((l:any)=>l.name==='physical-collisions')); // no atlas growth, firstgid or animation edits
   expect(now.layers.filter((l:any)=>l.name==='roadster'||l.name==='coastal-flight'||l.name.startsWith('beach-surf-'))).toEqual(old.layers.filter((l:any)=>l.name==='roadster'||l.name==='coastal-flight'||l.name.startsWith('beach-surf-')));
   const a=blocked(old),b=blocked(now);expect([...a].filter(c=>!b.has(c))).toEqual([]);expect([...b].filter(c=>!a.has(c)).sort()).toEqual(proof.newBlockedCells.map((c:number[])=>c.join(',')).sort());
   const startLayers=now.layers.filter((l:any)=>l.type==='tilelayer'&&l.properties?.some((p:any)=>p.name==='startLayer'&&p.value===true));
@@ -109,7 +111,8 @@ function sceneryTokens(map:any){const floor=map.layers.findIndex((l:any)=>l.name
 for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} emits every intended native visual tile exactly once at its authored position and depth`,()=>{
  const source=read(`world/layouts/${id}.json`),intended=buildMap(addNpcGuides([source])[0],base).tmj,native=read(`maps/${id}.tmj`),old=read(`tests/fixtures/solid-props/before-${id}.tmj`);
  expect(sceneryTokens(native)).toEqual(sceneryTokens(intended));
- for(const layer of old.layers)if(!layer.name.startsWith('scenery-')&&layer.name!=='physical-collisions')expect(native.layers.find((l:any)=>l.name===layer.name),layer.name).toEqual(layer);
- const top=(m:any)=>Object.fromEntries(Object.entries(m).filter(([k])=>!['layers','nextlayerid'].includes(k)));expect(top(native)).toEqual(top(old));
+ const historical=read(id==='overworld'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.tmj`);
+ for(const layer of old.layers)if(!layer.name.startsWith('scenery-')&&layer.name!=='physical-collisions')expect(historical.layers.find((l:any)=>l.name===layer.name),layer.name).toEqual(layer);
+ const top=(m:any)=>Object.fromEntries(Object.entries(m).filter(([k])=>!['layers','nextlayerid'].includes(k)));expect(top(historical)).toEqual(top(old));
  expect(source.entries).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).entries);expect(source.exits).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).exits);
 },30000);

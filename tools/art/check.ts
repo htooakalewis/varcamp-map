@@ -1,3 +1,4 @@
+import{checkStandingCaptionArt}from'./standing-captions';
 import {validateSpriteDepth} from '../maps/solid-props';
 import {renderRoadster} from './roadster';
 import {renderCoastalFlight} from './coastal-flight';
@@ -15,6 +16,7 @@ import { SIGN_IDS, ELEMENT_IDS } from '../../src/world/catalog';
 interface SourceRecord { attribution: string; url: string; license: string; licenseFile: string; changes: string; files: { path: string; sha256: string }[]; }
 export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promise<string[]> {
   const errors: string[]=[];
+  try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
   const sources=JSON.parse(readFileSync('art/sources.json','utf8')) as Record<string,SourceRecord>;
   for (const id of [...SIGN_IDS.flatMap(sign=>[`glyph-${sign}`,`constellation-${sign}`]), ...ELEMENT_IDS.map(el=>`sigil-${el}`), 'telescope','quest-shrine','door-open','npc-guide','npc-maze-keeper','npc-dockmaster']) {
     if(!catalog[id]) errors.push(`${id}: missing required sprite`);
