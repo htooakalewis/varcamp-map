@@ -1,7 +1,7 @@
 """Intentional editor collection migration: preserve editor-owned bytes and scope."""
-import unittest,json,sys,pathlib
+import unittest,json,sys,pathlib,tempfile
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]))
-from editor_catalogs import register_collections, make_package
+from editor_catalogs import register_collections, make_package, source_policy
 REQUIRED=[{'url':'https://venue.example/collections/FurnitureCollection.json','type':'file'},{'url':'https://venue.example/collections/OfficeCollection.json','type':'file'}]
 class CatalogMigration(unittest.TestCase):
  def test_preserves_every_noncollection_byte_and_existing_user_collection(self):
@@ -34,4 +34,26 @@ class CatalogMigration(unittest.TestCase):
  def test_missing_or_unpaired_path_refuses_before_output(self):
   for base,paths in [({},['maps/a.wam']),({'maps/a.wam':b'{"entityCollections":[]}'},['maps/a.wam']),({'x':b'{}'},['../x'])]:
    with self.subTest(paths=paths),self.assertRaises(ValueError):make_package(base,REQUIRED,paths)
+class CurrentSourcePolicy(unittest.TestCase):
+ def fixture(self, root, kind):
+  ids=['overworld','campus-exploration','solar-hall','lunar-hall','fire-district','earth-district','air-district','water-district','orbit-maze','hidden-observatory','nebula-arcade','zodiac-festival-park','shipyard-beach','comet-maze','orbit-playground','constellation-shore','fa-ship','star-garden','moon-cafe','moon-grotto','stargazer-terrace']+['speaker-'+x for x in ('aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces')]
+  original={f'maps/{i}.{ext}':'0'*64 for i in ids for ext in ('wam','tmj')}
+  extension={f'maps/fa-ship-interior.{ext}':'1'*64 for ext in ('wam','tmj')}
+  if kind=='missing':extension.pop('maps/fa-ship-interior.wam')
+  if kind=='unpaired':extension.pop('maps/fa-ship-interior.tmj')
+  if kind=='extra':extension.update({'maps/foreign.wam':'2'*64,'maps/foreign.tmj':'2'*64})
+  if kind=='replaced':
+   extension.pop('maps/fa-ship-interior.wam');extension.pop('maps/fa-ship-interior.tmj');extension.update({'maps/foreign.wam':'2'*64,'maps/foreign.tmj':'2'*64})
+  (root/'world').mkdir();(root/'publication').mkdir()
+  (root/'world/editor-collections.json').write_text(json.dumps(REQUIRED))
+  (root/'publication/source-manifest.json').write_text(json.dumps({'sourceInventory':original,'extensionInventory':extension}))
+ def test_complete_current34_source_closure(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d);self.fixture(root,'complete');catalogs,_,paths=source_policy(root)
+   self.assertEqual(catalogs,REQUIRED);self.assertEqual(len(paths),34);self.assertIn('maps/fa-ship-interior.wam',paths)
+ def test_missing_extra_replaced_or_unpaired_current_map_refuses(self):
+  for kind in ('missing','extra','replaced','unpaired'):
+   with self.subTest(kind=kind),tempfile.TemporaryDirectory() as d:
+    root=pathlib.Path(d);self.fixture(root,kind)
+    with self.assertRaisesRegex(ValueError,'34|paired'):source_policy(root)
 if __name__=='__main__':unittest.main(verbosity=2)

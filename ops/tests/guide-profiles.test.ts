@@ -52,9 +52,9 @@ it('rejects caller-supplied profile settings and keeps each manager bound to its
 });
 it('joins each fixed observed name/avatar and passes only that persona in the Docker environment', async () => {
   const { joinRoom } = await import('../bots/browser-session.mjs');
-  for (const [persona, name, avatar] of [['lyra', 'Lyra [BOT]', '#woka-female4'], ['nova', 'Nova [BOT]', '#woka-male2'], ['orion', 'Orion [BOT]', '#woka-male1']]) {
+  for (const [persona, name, avatar] of [['lyra', 'Lyra[BOT]', '#woka-female4'], ['nova', 'Nova[BOT]', '#woka-male2'], ['orion', 'Orion[BOT]', '#woka-male1']]) {
     const actions: string[] = []; const click = key => ({ async click() { actions.push(key); } });
-    const page = { async goto() {}, getByTestId: () => ({ async fill(value) { actions.push(value); } }), getByRole: (_role, { name }) => click(name), locator: selector => click(selector), getByText: value => click(value) };
+    const page = { async goto() {}, getByTestId: () => ({ async getAttribute() { return '10'; }, async fill(value) { actions.push(value); }, async inputValue() { return actions[0]; } }), getByRole: (_role, { name }) => click(name), locator: selector => click(selector), getByText: value => click(value) };
     const profile = configs.selectProfile(persona); await joinRoom(page, profile, {assertLive(){}});
     expect(actions).toEqual([name, 'Continue', avatar, 'Continue', 'Turn off your microphone', 'Turn off your camera', 'Save']);
     expect(configs.buildCreateArgs(image, '/repo/seccomp.json', profile)).toContain(`VARCAMP_BOT_PERSONA=${persona}`);

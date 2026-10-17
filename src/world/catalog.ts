@@ -1,4 +1,4 @@
-export type MapId = `speaker-${SignId}` | 'air-district' | 'campus-exploration' | 'comet-maze' | 'constellation-shore' | 'earth-district' | 'fa-ship' | 'fire-district' | 'hidden-observatory' | 'lunar-hall' | 'moon-cafe' | 'moon-grotto' | 'nebula-arcade' | 'orbit-maze' | 'orbit-playground' | 'overworld' | 'shipyard-beach' | 'solar-hall' | 'star-garden' | 'stargazer-terrace' | 'water-district' | 'zodiac-festival-park';
+export type MapId = `speaker-${SignId}` | 'air-district' | 'campus-exploration' | 'comet-maze' | 'constellation-shore' | 'earth-district' | 'fa-ship' | 'fa-ship-interior' | 'fire-district' | 'hidden-observatory' | 'lunar-hall' | 'moon-cafe' | 'moon-grotto' | 'nebula-arcade' | 'orbit-maze' | 'orbit-playground' | 'overworld' | 'shipyard-beach' | 'solar-hall' | 'star-garden' | 'stargazer-terrace' | 'water-district' | 'zodiac-festival-park';
 export type SignId = 'aries' | 'taurus' | 'gemini' | 'cancer' | 'leo' | 'virgo' | 'libra' | 'scorpio' | 'sagittarius' | 'capricorn' | 'aquarius' | 'pisces';
 export type ElementId = 'fire' | 'earth' | 'air' | 'water';
 export interface MapDefinition {
@@ -9,6 +9,7 @@ export interface MapDefinition {
 }
 
 export const WORLD_CATALOG = {
+  "fa-ship-interior": {"width":40,"height":26,"defaultEntry":"from-upper-deck","entries":["from-upper-deck"]},
   "air-district": {
     "width": 36,
     "height": 34,
@@ -69,6 +70,7 @@ export const WORLD_CATALOG = {
     "height": 56,
     "defaultEntry": "arrival",
     "entries": [
+      "from-lower-deck",
       "arrival"
     ]
   },

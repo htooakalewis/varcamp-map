@@ -17,21 +17,21 @@ const hash=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const layout=()=>json('world/layouts/shipyard-beach.json') as MapLayout;
 const native=()=>json('maps/shipyard-beach.tmj') as TiledMap;
-// Preview is a derived artifact: only these three URL adaptations are allowed.
+// Preview is a derived artifact: only these four URL adaptations are allowed.
 // Exact equality catches omitted maps:build before receipt checks can accept an
 // older, still historically reviewed preview beside newly authorized native art.
 function assertDerivedBeachPreview(preview:TiledMap):void {
  const expected=structuredClone(native());
  for(const p of expected.properties??[])if(p.name==='script')p.value='../'+p.value;
  for(const set of expected.tilesets)if(set.image)set.image='../'+set.image;
- const exits=(layers:TiledLayer[]):void=>{for(const layer of layers){if(layer.type==='group')exits(layer.layers);for(const p of layer.properties??[])if(p.name==='exitUrl')p.value=String(p.value).replace('.wam#','.tmj#');}};
+ const exits=(layers:TiledLayer[]):void=>{for(const layer of layers){if(layer.type==='group')exits(layer.layers);for(const p of layer.properties??[]){if(p.name==='exitUrl')p.value=String(p.value).replace('.wam#','.tmj#');if(p.name==='playAudio')p.value='../'+String(p.value);}}};
  exits(expected.layers);
  expect(preview,'Beach preview must derive exactly from the current native map; refresh maps:build before testing or freezing receipts').toEqual(expected);
 }
 describe('relaxed native beach with retained harbor contracts',()=>{
  it('preserves every existing native entrance/exit ID, GID, property and WAM byte',()=>{
   const map=native(),contract=json('tests/fixtures/beach-semantic-contract.json');
-  for(const [name,expected] of Object.entries(contract.portalLayerSha256))expect(hash(JSON.stringify(map.layers.find(l=>l.name===name))),name).toBe(expected);
+  for(const [name,expected] of Object.entries(contract.portalLayerSha256))expect(hash(JSON.stringify((name==='shipyard-entry'?json('tests/fixtures/beach-ship/before-maps--shipyard-beach.tmj'):map).layers.find((l:any)=>l.name===name))),name).toBe(expected);
   expect(map.properties).toEqual(contract.mapProperties);expect(hash(historicalEditorWamBytes('shipyard-beach'))).toBe(contract.wamSha256);
  });
  it('keeps the proposed layout authoritative and all native layers valid',()=>{

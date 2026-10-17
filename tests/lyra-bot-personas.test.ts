@@ -32,7 +32,7 @@ function fixture(key: 'lyra' | 'nova' | 'orion', id: number) {
   };
 }
 const human = { id: 1, name: 'Visitor' }, other = { id: 2, name: 'Other visitor' };
-const bots = [{ id: 10, name: 'Lyra [BOT]' }, { id: 20, name: 'Nova [BOT]' }, { id: 30, name: 'Orion [BOT]' }];
+const bots = [{ id: 10, name: 'Lyra[BOT]' }, { id: 20, name: 'Nova[BOT]' }, { id: 30, name: 'Orion[BOT]' }];
 beforeEach(() => vi.useFakeTimers());
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); vi.restoreAllMocks(); });
 
@@ -73,7 +73,7 @@ describe('three-guide public bubble simulations', () => {
     const hs = [fixture('lyra', 10), fixture('nova', 20), fixture('orion', 30)];
     await Promise.all(hs.map(h => h.c.start()));
     hs.forEach((h, i) => h.meeting([human, ...bots.filter((_, j) => j !== i).reverse()]));
-    expect(hs.map(h => h.replies.length)).toEqual([1, 0, 0]); expect(hs[0].replies[0]).toContain('Lyra [BOT]');
+    expect(hs.map(h => h.replies.length)).toEqual([1, 0, 0]); expect(hs[0].replies[0]).toContain('Lyra[BOT]');
     hs.forEach(h => h.chat('  gEmInI  ')); expect(hs.map(h => h.replies.length)).toEqual([2, 0, 0]);
     hs.forEach(h => h.chat('nOvA [bot]: Cancer')); hs.forEach(h => h.chat('Orion, Libra'));
     expect(hs[1].replies.at(-1)).toContain('Cancer'); expect(hs[2].replies.at(-1)).toContain('Libra');
@@ -88,7 +88,7 @@ describe('three-guide public bubble simulations', () => {
     for (const [i, key] of (['lyra', 'nova', 'orion'] as const).entries()) {
       const h = fixture(key, bots[i].id); await h.c.start();await flush();
       h.meeting([...bots.filter((_, j) => i !== j), { id: 99 }]); // fallback catches a bot whose participant name was unavailable
-      h.chat('help', bots[(i + 1) % 3].id); h.chat('Gemini', 99, '  NOVA [BOT]  '); h.chat('help', bots[i].id); h.chat('help', 700); h.chat('help', undefined);
+      h.chat('help', bots[(i + 1) % 3].id); h.chat('Gemini', 99, '  NOVA[BOT]  '); h.chat('help', bots[i].id); h.chat('help', 700); h.chat('help', undefined);
       // Unknown 99 is a human until its public author name identifies it; known bots never greet.
       expect(h.replies.every(r => r.includes(bots[i].name))).toBe(true);
       const b = h.meeting(bots.filter((_, j) => i !== j)); const count = h.replies.length;
@@ -98,7 +98,7 @@ describe('three-guide public bubble simulations', () => {
   });
   it('removes a nameless participant from human activity when public chat author identity reveals a reserved bot', async () => {
     const h = fixture('lyra', 10); await h.c.start();await flush(); h.meeting([{ id: 99 }]);
-    const count = h.replies.length; h.chat('Gemini', 99, 'Nova [BOT]');
+    const count = h.replies.length; h.chat('Gemini', 99, 'Nova[BOT]');
     expect(h.replies).toHaveLength(count); await h.step();
     expect(h.moves.length, 'a known bot must not retain a human patrol pause').toBeGreaterThan(1);
     await h.stop();
@@ -120,8 +120,8 @@ describe('three-guide public bubble simulations', () => {
     const h = fixture('nova', 20); await h.c.start();await flush(); const b = h.meeting([human, bots[2]]);
     expect(h.replies).toHaveLength(1); b.join(bots[0]); h.chat('help'); expect(h.replies).toHaveLength(1);
     b.leave(10); h.chat('help'); expect(h.replies).toHaveLength(2); await vi.advanceTimersByTimeAsync(2000);
-    b.join({ id: 19, name: 'nova [bot]' }); h.chat('Cancer'); expect(h.replies).toHaveLength(2);
-    b.leave(19); b.join({ id: 21, name: 'Nova [BOT]' }); h.chat('Cancer'); expect(h.replies.at(-1)).toContain('Cancer');
+    b.join({ id: 19, name: 'nova[bot]' }); h.chat('Cancer'); expect(h.replies).toHaveLength(2);
+    b.leave(19); b.join({ id: 21, name: 'Nova[BOT]' }); h.chat('Cancer'); expect(h.replies.at(-1)).toContain('Cancer');
     await vi.advanceTimersByTimeAsync(2000); h.chat('please ask Orion, Libra'); expect(h.replies.at(-1)).toContain('Nova, Cancer');
     h.chat('Lyra, stop'); const count = h.replies.length; await vi.advanceTimersByTimeAsync(2000); h.chat('Nova: stop'); expect(h.replies.length).toBe(count + 1); expect(h.replies.at(-1)).toMatch(/stopped|home/i); await h.stop();
   });
@@ -141,7 +141,7 @@ describe('three-guide public bubble simulations', () => {
 });
 
 describe('public adapter identity and non-replaying meetings', () => {
-  async function nativeAdapter(name = 'Nova [BOT]', id = 20) {
+  async function nativeAdapter(name = 'Nova[BOT]', id = 20) {
     const { Subject } = await import('rxjs');
     const meetings = new Subject<any>(), joins = new Subject<any>(), leaves = new Subject<any>(), ended = new Subject<void>();
     const messages: string[] = [], moves: Point[] = [];
@@ -161,13 +161,13 @@ describe('public adapter identity and non-replaying meetings', () => {
     h.wa.room.getTiledMap = () => new Promise(resolve => { resolveMap = resolve; });
     const bot = (await import('../src/bots/lyra')).default; const running = bot.run({ persona: 'nova' }); await flush();
     expect(h.meetings.observers).toHaveLength(1);
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }, { playerId: 10, name: 'Lyra [BOT]' }]));
-    h.leaves.next({ playerId: 10, name: 'Lyra [BOT]' }); h.leaves.next({ playerId: 1, name: 'Visitor' }); h.joins.next({ playerId: 2, name: 'Other visitor' });
+    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }, { playerId: 10, name: 'Lyra[BOT]' }]));
+    h.leaves.next({ playerId: 10, name: 'Lyra[BOT]' }); h.leaves.next({ playerId: 1, name: 'Visitor' }); h.joins.next({ playerId: 2, name: 'Other visitor' });
     expect(h.messages).toEqual([]); resolveMap(native()); await running; await flush();
-    expect(h.messages).toHaveLength(1); expect(h.messages[0]).toContain('Nova [BOT]');
+    expect(h.messages).toHaveLength(1); expect(h.messages[0]).toContain('Nova[BOT]');
     h.chat('Cancer', 1, 'Visitor'); expect(h.messages).toHaveLength(1);
     h.joins.next({ playerId: 99 }); const beforeFallback = h.messages.length;
-    h.chat('Cancer', 99, 'Orion [BOT]'); expect(h.messages).toHaveLength(beforeFallback);
+    h.chat('Cancer', 99, 'Orion[BOT]'); expect(h.messages).toHaveLength(beforeFallback);
     h.chat('Nova, Cancer', 2, 'Other visitor'); expect(h.messages.at(-1)).toContain('Cancer');
     h.wa.room.getTiledMap = async () => ({ ...native(), width: 64 }); const replaced = bot.run({ persona: 'nova' });
     await flush(); expect(h.meetings.observers).toHaveLength(0); expect(h.joins.observers).toHaveLength(0); expect(h.leaves.observers).toHaveLength(0); expect(h.ended.observers).toHaveLength(0);
@@ -183,15 +183,15 @@ describe('public adapter identity and non-replaying meetings', () => {
     expect(h.meetings.observers).toHaveLength(0); expect(h.joins.observers).toHaveLength(0);
     resolveMap(native()); await running; await replacement; expect(h.messages).toEqual([]); expect(h.moves).toHaveLength(1);
     // A real later native meeting entry is observable, unlike the pre-subscription event.
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Nova [BOT]');
+    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Nova[BOT]');
     await h.finishMove(); expect(h.meetings.observers).toHaveLength(0);
   });
   it('rejects explicit invalid metadata and mismatched public identity before any map access or action', async () => {
-    const h = await nativeAdapter('Orion [BOT]', 30); const map = vi.spyOn(h.wa.room, 'getTiledMap');
+    const h = await nativeAdapter('Orion[BOT]', 30); const map = vi.spyOn(h.wa.room, 'getTiledMap');
     const bot = (await import('../src/bots/lyra')).default;
     await expect(bot.run({ persona: 'aster' })).rejects.toThrow(/persona/i);
     await expect(bot.run({ persona: 'nova' })).rejects.toThrow(/identity/i);
     expect(map).not.toHaveBeenCalled(); expect(h.meetings.observers).toHaveLength(0); expect(h.moves).toEqual([]); expect(h.messages).toEqual([]);
-    await bot.run({ persona: 'orion' }); h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Orion [BOT]'); await h.finishMove();
+    await bot.run({ persona: 'orion' }); h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Orion[BOT]'); await h.finishMove();
   });
 });

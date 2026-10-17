@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "svgSha256": "5cbfdb75953417995a3b989010b4064e147fd70c8311851e7200e49f7e4eb637",
+  "atlasSha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415",
+  "producerSha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364",
+  "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+  "floorLabels": [
+    {
+      "sprite": "ship-lower-deck-label",
+      "text": "← LOWER DECK",
+      "rect": {
+        "x": 0,
+        "y": 4,
+        "width": 5,
+        "height": 1
+      },
+      "size": 14
+    },
+    {
+      "sprite": "ship-helm-label",
+      "text": "HELM",
+      "rect": {
+        "x": 5,
+        "y": 4,
+        "width": 4,
+        "height": 1
+      },
+      "size": 14
+    }
+  ]
+}

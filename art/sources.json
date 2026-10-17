@@ -184,6 +184,42 @@
       {
         "path": "assets/tilesets/original/standing-captions.png",
         "sha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b"
+      },
+      {
+        "path": "art/source/rolling-breaker-master.svg",
+        "sha256": "236bf015dde56f0ff14638a680e47ff08fca9e505fb69e9e2211779384c45eb1"
+      },
+      {
+        "path": "art/source/rolling-breaker.svg",
+        "sha256": "239e20a73b36246b0685c94c221dcc968bae84657426e19946f9ac987b7ffa38"
+      },
+      {
+        "path": "art/source/rolling-breaker.json",
+        "sha256": "669b168b595c8f89dd686e6f8b851a4df7e26edd77862ec7270066fb1e5c71e6"
+      },
+      {
+        "path": "assets/tilesets/original/rolling-breaker.png",
+        "sha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503"
+      },
+      {
+        "path": "art/source/ship-interior.svg",
+        "sha256": "5cbfdb75953417995a3b989010b4064e147fd70c8311851e7200e49f7e4eb637"
+      },
+      {
+        "path": "assets/tilesets/original/ship-interior.png",
+        "sha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415"
+      },
+      {
+        "path": "art/source/rolling-breaker-west.json",
+        "sha256": "7ed945c5006eee8c03bd6dc874afb30c0741e38d6381b7eea629a8465196e4ab"
+      },
+      {
+        "path": "art/source/rolling-breaker-east.json",
+        "sha256": "9d0e357b78e684827d73633c8c96e3594a75bc9e3817dba15108cff924326bc1"
+      },
+      {
+        "path": "art/source/ship-interior.json",
+        "sha256": "835b51dc4aeea4eea269107639064370ef7f24aef27b90ffa8030a1432fd69b5"
       }
     ]
   },
@@ -296,6 +332,31 @@
       {
         "path": "assets/tilesets/lpc-water/water.png",
         "sha256": "6107522405d8c27b9bab7278f5dc14cd7cc0445592f5967d748cb81ede4b0d47"
+      }
+    ]
+  },
+  "ocean-audio": {
+    "attribution": "jasinski / OpenGameArt beach-ocean-waves; original recordings and CC0 attribution retained",
+    "url": "https://opengameart.org/content/beach-ocean-waves",
+    "license": "CC0-1.0",
+    "licenseFile": "assets/audio/LICENSE.txt",
+    "changes": "Two CC0 recordings mixed, filtered and crossfaded to a quiet local MP3. No perceptual listening claim.",
+    "files": [
+      {
+        "path": "assets/audio/ocean-loop.mp3",
+        "sha256": "df5758cfdafeecbbebc94943902e9deb4a65684582200e435e0b2c9f348897bc"
+      },
+      {
+        "path": "assets/audio/LICENSE.txt",
+        "sha256": "8f6e9dafb5097b57b6a81b45ab442d890e3d3cdda07cb3702e4f47da8abcb62f"
+      },
+      {
+        "path": "art/source/ocean-audio.json",
+        "sha256": "1a5e349e8d9d9c2988b4d0f715443ba5e43745237afb55e32471836271840c1f"
+      },
+      {
+        "path": "assets/audio/ATTRIBUTION.md",
+        "sha256": "ea2073ab40d06fd0a1da626f04e8c320bb09cc17060f52f90e3e30624ebfaad9"
       }
     ]
   }

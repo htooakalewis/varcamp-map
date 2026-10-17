@@ -9,9 +9,9 @@ const profile = (key: PersonaKey, name: string, rank: number, offset: number): P
 };
 /** Fixed rotations of the already audited patrol: metadata cannot supply paths or names. */
 export const PERSONAS: Readonly<Record<PersonaKey, Persona>> = Object.freeze({
-  lyra: profile('lyra', 'Lyra [BOT]', 0, 0),
-  nova: profile('nova', 'Nova [BOT]', 1, 2),
-  orion: profile('orion', 'Orion [BOT]', 2, 4),
+  lyra: profile('lyra', 'Lyra[BOT]', 0, 0),
+  nova: profile('nova', 'Nova[BOT]', 1, 2),
+  orion: profile('orion', 'Orion[BOT]', 2, 4),
 });
 export const normalizedName = (name: string) => name.trim().toLowerCase().replace(/\s+/g, ' ');
 export function personaByName(name: string | undefined): Persona | undefined {

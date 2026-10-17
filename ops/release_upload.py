@@ -12,6 +12,7 @@ import urllib.request
 import zipfile
 
 from verified_transport import create_opener
+from map_roster import MAP_IDS
 
 
 def wam_reference(path, data):
@@ -207,13 +208,7 @@ def main():
         if plan.exists():
             parser.error('Use a new plan directory; retained recovery must not be overwritten')
         release = {str(p.relative_to('dist')): p.read_bytes() for p in pathlib.Path('dist').rglob('*') if p.is_file()}
-        validate_release_maps(release, (
-            'overworld','campus-exploration','solar-hall','lunar-hall','fire-district','earth-district',
-            'air-district','water-district','orbit-maze','hidden-observatory','nebula-arcade','zodiac-festival-park',
-            'shipyard-beach','comet-maze',
-            'orbit-playground','constellation-shore','fa-ship','star-garden','moon-cafe','moon-grotto','stargazer-terrace',
-            *('speaker-' + sign for sign in ('aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces')),
-        ))
+        validate_release_maps(release, MAP_IDS)
         baseline_bytes = storage.download(args.target)
         baseline = read_zip(baseline_bytes)
         reviewed = read_zip(args.reviewed_wams.read_bytes()) if args.reviewed_wams else {}

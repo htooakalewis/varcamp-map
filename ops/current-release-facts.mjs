@@ -7,11 +7,16 @@ const json = (root, path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'
 const text = (root, path) => readFileSync(resolve(root, path), 'utf8');
 const sorted = values => [...values].sort();
 const same = (a, b) => JSON.stringify(sorted(a)) === JSON.stringify(sorted(b));
-export function currentFacts(root) {
+export function catalogMapIds(root) {
   const source = text(root, 'src/world/catalog.ts');
   const match = source.match(/export const WORLD_CATALOG\s*=\s*(\{[\s\S]*?\})\s+as const/);
   requireFact(match, 'Catalog must retain its explicit JSON object contract');
   const ids = Object.keys(JSON.parse(match[1]));
+  requireFact(ids.length > 0 && ids.every(id => /^[a-z][a-z0-9-]*$/.test(id)), 'Invalid current catalog map identities');
+  return ids.sort();
+}
+export function currentFacts(root) {
+  const ids = catalogMapIds(root);
   const maps = readdirSync(resolve(root, 'maps'));
   const native = suffix => maps.filter(p => p.endsWith(suffix)).map(p => p.slice(0, -suffix.length));
   const manifest = json(root, 'publication/source-manifest.json');

@@ -1,0 +1,1661 @@
+{
+  "id": "fa-ship-interior",
+  "width": 40,
+  "height": 26,
+  "placements": [
+    {
+      "id": "exterior-water",
+      "sprite": "naval-water-0",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 26
+    },
+    {
+      "id": "central-partition-4",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-5",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 4,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-6",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 5,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-7",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 6,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-17",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 16,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-18",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 17,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-19",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 18,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-20",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 19,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-21",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 20,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "central-partition-22",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 21,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "mess-room-name",
+      "sprite": "ship-mess-label",
+      "layer": "decor",
+      "x": 5,
+      "y": 4,
+      "width": 8,
+      "height": 1
+    },
+    {
+      "id": "captain-room-name",
+      "sprite": "ship-captain-label",
+      "layer": "decor",
+      "x": 24,
+      "y": 4,
+      "width": 8,
+      "height": 1
+    },
+    {
+      "id": "bunks-room-name",
+      "sprite": "ship-bunks-label",
+      "layer": "decor",
+      "x": 5,
+      "y": 17,
+      "width": 8,
+      "height": 1
+    },
+    {
+      "id": "cargo-room-name",
+      "sprite": "ship-cargo-label",
+      "layer": "decor",
+      "x": 24,
+      "y": 17,
+      "width": 8,
+      "height": 1
+    },
+    {
+      "id": "galley-copper",
+      "sprite": "ship-galley",
+      "layer": "decor",
+      "x": 4,
+      "y": 6,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "pantry-locker",
+      "sprite": "ship-pantry",
+      "layer": "decor",
+      "x": 4,
+      "y": 9,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "mess-table-a",
+      "sprite": "ship-mess-table",
+      "layer": "decor",
+      "x": 9,
+      "y": 7,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "mess-table-b",
+      "sprite": "ship-mess-table",
+      "layer": "decor",
+      "x": 14,
+      "y": 7,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "captain-charts",
+      "sprite": "ship-chart-table",
+      "layer": "decor",
+      "x": 26,
+      "y": 7,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "captain-storage",
+      "sprite": "ship-pantry",
+      "layer": "decor",
+      "x": 32,
+      "y": 7,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "captain-compass",
+      "sprite": "ship-compass",
+      "layer": "decor",
+      "x": 33,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "crew-bunk-a",
+      "sprite": "ship-bunk",
+      "layer": "decor",
+      "x": 4,
+      "y": 19,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "crew-bunk-b",
+      "sprite": "ship-bunk",
+      "layer": "decor",
+      "x": 9,
+      "y": 19,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "crew-bunk-c",
+      "sprite": "ship-bunk",
+      "layer": "decor",
+      "x": 14,
+      "y": 19,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "lower-stair-flight",
+      "sprite": "ship-stairs",
+      "layer": "decor",
+      "x": 18,
+      "y": 9,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cargo-crate-a",
+      "sprite": "ship-cargo-crate",
+      "layer": "decor",
+      "x": 24,
+      "y": 20,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "cargo-crate-b",
+      "sprite": "ship-cargo-crate",
+      "layer": "decor",
+      "x": 28,
+      "y": 20,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "cargo-barrel-a",
+      "sprite": "ship-cargo-barrel",
+      "layer": "decor",
+      "x": 32,
+      "y": 20,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "cargo-barrel-b",
+      "sprite": "ship-cargo-barrel",
+      "layer": "decor",
+      "x": 34,
+      "y": 20,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "warm-lantern-3-3",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 3,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "warm-lantern-36-3",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 36,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "warm-lantern-3-21",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 3,
+      "y": 21,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "warm-lantern-36-21",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 36,
+      "y": 21,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-floor-1",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 9,
+      "y": 1,
+      "width": 22,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-2",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 6,
+      "y": 2,
+      "width": 28,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-3",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 4,
+      "y": 3,
+      "width": 32,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-4",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 3,
+      "y": 4,
+      "width": 34,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-5",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 5,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-6",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 6,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-7",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 7,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-8",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 8,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-9",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 9,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-10",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 10,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-11",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 11,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-12",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 12,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-13",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 13,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-14",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 14,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-15",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 15,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-16",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 16,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-17",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 17,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-18",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 18,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-19",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 2,
+      "y": 19,
+      "width": 36,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-20",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 3,
+      "y": 20,
+      "width": 34,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-21",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 4,
+      "y": 21,
+      "width": 32,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-22",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 6,
+      "y": 22,
+      "width": 28,
+      "height": 1
+    },
+    {
+      "id": "hull-floor-23",
+      "sprite": "ship-plank",
+      "layer": "terrain",
+      "x": 9,
+      "y": 23,
+      "width": 22,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-2-5",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 4,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-6",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 5,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-7",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 6,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-8",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 7,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-9",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 8,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-10",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-11",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 10,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-12",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 11,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-13",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 12,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-14",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 13,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-15",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 14,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-16",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 15,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-17",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 16,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-18",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 2,
+      "y": 17,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-2-19",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 2,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-3-4",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 3,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-3-20",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 3,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-4-3",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 4,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-4-21",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 4,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-5-3",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 5,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-5-21",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 5,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-6-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 6,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-6-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 6,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-7-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 7,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-7-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 7,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-8-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 8,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-8-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 8,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-9-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 9,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-9-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 9,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-10-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 10,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-10-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 10,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-11-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 11,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-11-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 11,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-12-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 12,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-12-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 12,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-13-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 13,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-13-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 13,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-14-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 14,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-14-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 14,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-15-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 15,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-15-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 15,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-16-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 16,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-16-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 16,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-17-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 17,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-17-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 17,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-18-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 18,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-18-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 18,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-19-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 19,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-19-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 19,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-20-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 20,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-20-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 20,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-21-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 21,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-21-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 21,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-22-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 22,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-22-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 22,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-23-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 23,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-23-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 23,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-24-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 24,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-24-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 24,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-25-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 25,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-25-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 25,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-26-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 26,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-26-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 26,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-27-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 27,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-27-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 27,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-28-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 28,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-28-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 28,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-29-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 29,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-29-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 29,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-30-1",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 30,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-30-23",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 30,
+      "y": 23,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-31-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 31,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-31-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 31,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-32-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 32,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-32-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 32,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-33-2",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 33,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-33-22",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 33,
+      "y": 22,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-34-3",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 34,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-34-21",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 34,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-35-3",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 35,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-35-21",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 35,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-36-4",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 36,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-36-20",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 36,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "hull-boundary-37-5",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 4,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-6",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 5,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-7",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 6,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-8",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 7,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-9",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 8,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-10",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-11",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 10,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-12",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 11,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-13",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 12,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-14",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 13,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-15",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 14,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-16",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 15,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-17",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 16,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-18",
+      "sprite": "ship-wall",
+      "layer": "decor",
+      "x": 37,
+      "y": 17,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "hull-boundary-37-19",
+      "sprite": "coast-bulwark",
+      "layer": "decor",
+      "x": 37,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "brass-porthole-10",
+      "sprite": "ship-porthole",
+      "layer": "decor",
+      "x": 10,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "brass-porthole-16",
+      "sprite": "ship-porthole",
+      "layer": "decor",
+      "x": 16,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "brass-porthole-23",
+      "sprite": "ship-porthole",
+      "layer": "decor",
+      "x": 23,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "brass-porthole-29",
+      "sprite": "ship-porthole",
+      "layer": "decor",
+      "x": 29,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "mess-bench-a",
+      "sprite": "ship-mess-bench",
+      "layer": "decor",
+      "x": 9,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "mess-bench-b",
+      "sprite": "ship-mess-bench",
+      "layer": "decor",
+      "x": 14,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "captain-compass-rug",
+      "sprite": "ship-compass-rug",
+      "layer": "decor",
+      "x": 30,
+      "y": 10,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "cargo-extra-crate-a",
+      "sprite": "ship-cargo-crate",
+      "layer": "decor",
+      "x": 24,
+      "y": 18,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "cargo-extra-crate-b",
+      "sprite": "ship-cargo-crate",
+      "layer": "decor",
+      "x": 28,
+      "y": 18,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "cargo-rope-a",
+      "sprite": "ship-rope-coil",
+      "layer": "decor",
+      "x": 32,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "cargo-rope-b",
+      "sprite": "ship-rope-coil",
+      "layer": "decor",
+      "x": 34,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "crew-personal-chest-a",
+      "sprite": "naval-crate",
+      "layer": "decor",
+      "x": 7,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "crew-personal-chest-b",
+      "sprite": "naval-crate",
+      "layer": "decor",
+      "x": 12,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "mess-wall-lamp",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 19,
+      "y": 4,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "captain-wall-lamp",
+      "sprite": "ship-lantern",
+      "layer": "decor",
+      "x": 19,
+      "y": 18,
+      "width": 1,
+      "height": 2
+    }
+  ],
+  "entries": [
+    {
+      "name": "from-upper-deck",
+      "x": 18,
+      "y": 13,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "stairs-up",
+      "destination": "fa-ship",
+      "entry": "from-lower-deck",
+      "x": 18,
+      "y": 9,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-shipyard",
+      "x": 35,
+      "y": 13,
+      "width": 1,
+      "height": 2
+    }
+  ],
+  "areas": [
+    {
+      "id": "mess-and-galley",
+      "name": "mess-and-galley",
+      "properties": [],
+      "x": 4,
+      "y": 5,
+      "width": 13,
+      "height": 6
+    },
+    {
+      "id": "captains-chart-room",
+      "name": "captains-chart-room",
+      "properties": [],
+      "x": 23,
+      "y": 5,
+      "width": 12,
+      "height": 6
+    },
+    {
+      "id": "crew-bunks",
+      "name": "crew-bunks",
+      "properties": [],
+      "x": 4,
+      "y": 18,
+      "width": 13,
+      "height": 5
+    },
+    {
+      "id": "cargo-hold",
+      "name": "cargo-hold",
+      "properties": [],
+      "x": 23,
+      "y": 18,
+      "width": 12,
+      "height": 5
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "mess-and-galley",
+      "kind": "room",
+      "x": 4,
+      "y": 5,
+      "width": 13,
+      "height": 6
+    },
+    {
+      "name": "captains-chart-room",
+      "kind": "room",
+      "x": 23,
+      "y": 5,
+      "width": 12,
+      "height": 6
+    },
+    {
+      "name": "crew-bunks",
+      "kind": "room",
+      "x": 4,
+      "y": 18,
+      "width": 13,
+      "height": 5
+    },
+    {
+      "name": "cargo-hold",
+      "kind": "room",
+      "x": 23,
+      "y": 18,
+      "width": 12,
+      "height": 5
+    }
+  ],
+  "signs": [
+    {
+      "name": "upper-deck-direction",
+      "text": "\u2191 FA SHIP / UPPER DECK",
+      "x": 17,
+      "y": 8,
+      "width": 9,
+      "height": 1,
+      "fontSize": 16,
+      "align": "left"
+    },
+    {
+      "name": "plaza-direction",
+      "text": "PLAZA \u2192",
+      "x": 31,
+      "y": 12,
+      "width": 6,
+      "height": 1,
+      "fontSize": 16,
+      "align": "left"
+    }
+  ]
+}

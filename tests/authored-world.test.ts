@@ -25,7 +25,7 @@ describe('medium authored event world',()=>{
    expect(layouts.find(l=>l.id===id),`${id} is still combined with another activity`).toBeDefined();
    expect(Object.hasOwn(WORLD_CATALOG,id),`${id} cannot be navigated to`).toBe(true);
   }
-  expect(layouts).toHaveLength(33);
+  expect(layouts).toHaveLength(34);
  });
  it('limits the arrival footprint and contains no event activities',()=>{
   const hub=scenes().find(l=>l.id==='overworld')!;

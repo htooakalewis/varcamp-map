@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "baseCommit": "5d69cee6809d71cc8346878684f32f045f5dc64a",
+  "beforeNativeSha256": {
+    "shipyard-beach": "2710cb17d4829ed5df199618c4f333f44d5d80dae0b6ad77da423144d2e23d9c",
+    "fa-ship": "34d96436d05b9ac44dc19c11601ea61b370ba1248fdd3b2a3981f31c3cb97ea7"
+  },
+  "waterTileIds": [
+    15,
+    16,
+    17
+  ],
+  "waterFrameMs": 600,
+  "audio": {
+    "playAudio": "../assets/audio/ocean-loop.mp3",
+    "audioLoop": true,
+    "audioVolume": 0.2,
+    "audioCopyright": "Ocean waves: jasinski / OpenGameArt; CC0. Locally edited quiet loop; see art/source/ocean-audio.json."
+  }
+}

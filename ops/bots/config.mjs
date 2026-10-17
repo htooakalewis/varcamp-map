@@ -2,13 +2,13 @@ import { hasLiveControllerLease } from './evidence.mjs';
 import { createHash } from 'node:crypto';
 import { isAbsolute } from 'node:path';
 
-const moduleSha256 = '9479c9cf069c7a5b090cde4aadf6ccbaaaea9e1759b4e6ef3a90fbbf726da8aa';
-const shared = Object.freeze({ moduleSha256, moduleBytes: 26832,
+const moduleSha256 = '855218598652fa2328d781984c7a655c445976d163c32caed6443a12a83faf5a';
+const shared = Object.freeze({ moduleSha256, moduleBytes: 26829,
   moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',
 });
 export const profiles = Object.freeze(Object.fromEntries([
-  ['lyra', 'Lyra [BOT]', 'woka-female4'], ['nova', 'Nova [BOT]', 'woka-male2'], ['orion', 'Orion [BOT]', 'woka-male1'],
+  ['lyra', 'Lyra[BOT]', 'woka-female4'], ['nova', 'Nova[BOT]', 'woka-male2'], ['orion', 'Orion[BOT]', 'woka-male1'],
 ].map(([persona, botName, avatar]) => [persona, Object.freeze({ ...shared, persona, botName, avatar,
   name: `varcamp-${persona}-dev`, owner: `varcamp-${persona}-development-v1` })])));
 export function selectProfile(persona = 'lyra') {

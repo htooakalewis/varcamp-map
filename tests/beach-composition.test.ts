@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
 const json = (p:string) => JSON.parse(readFileSync(p,'utf8'));
 const before = (id:string, ext:string) => json(`tests/fixtures/beach-composition/before-${id}.${ext}`);
-const current = (id:string,ext:string) => {if(id==='shipyard-beach'){const path=`tests/fixtures/solid-props/before-${id}.${ext}`;expect(sha(path)).toBe(json('tests/fixtures/solid-props/delta.json').maps[id].before[ext]);return json(path);}return json(ext==='json'?`world/layouts/${id}.json`:`maps/${id}.tmj`);};
+const current = (id:string,ext:string) => {if(id==='shipyard-beach'){const path=`tests/fixtures/solid-props/before-${id}.${ext}`;expect(sha(path)).toBe(json('tests/fixtures/solid-props/delta.json').maps[id].before[ext]);return json(path);}const file=ext==='json'?`world/layouts/${id}.json`:`maps/${id}.tmj`,receipt=json('tests/fixtures/beach-ship/provenance.json').files[file],path=`tests/fixtures/beach-ship/${receipt.fixture}`;expect(sha(path)).toBe(receipt.sha256);return json(path);};
 const sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
 describe('published beach composition preserves its immutable native history',()=>{
  it('pins the unchanged historical inputs',()=>{
@@ -69,7 +69,7 @@ describe('published beach composition preserves its immutable native history',()
    const map=json(`maps/${id}.tmj`);
    for(const p of map.properties??[])if(p.name==='script')p.value='../'+p.value;
    for(const t of map.tilesets)if(t.image)t.image='../'+t.image;
-   const visit=(v:any)=>{if(!v||typeof v!=='object')return;if(v.name==='exitUrl'&&typeof v.value==='string')v.value=v.value.replace('.wam#','.tmj#');for(const child of Object.values(v))visit(child);};visit(map);
+   const visit=(v:any)=>{if(!v||typeof v!=='object')return;if(v.name==='exitUrl'&&typeof v.value==='string')v.value=v.value.replace('.wam#','.tmj#');if(v.name==='playAudio'&&typeof v.value==='string')v.value='../'+v.value;for(const child of Object.values(v))visit(child);};visit(map);
    expect(json(`maps/preview/${id}.tmj`)).toEqual(map);
    expect(readFileSync(`maps/preview/${id}.tmj`,'utf8')).toBe(JSON.stringify(map)+'\n');
   }

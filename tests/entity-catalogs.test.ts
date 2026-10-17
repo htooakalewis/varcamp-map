@@ -169,6 +169,6 @@ describe('actual native collection loader',()=>{
 // Root owns the separate source/live WAM migration. This assertion is intentionally
 // distinct from builder defaults; generated data is never a live organizer overwrite.
 it('source WAM registrations match the reviewed shared data policy',()=>{
- const paths=readdirSync('maps').filter(name=>name.endsWith('.wam'));expect(paths).toHaveLength(33);
+ const paths=readdirSync('maps').filter(name=>name.endsWith('.wam'));expect(paths).toHaveLength(34);
  for(const path of paths){const wam=JSON.parse(readFileSync('maps/'+path,'utf8'));expect(wam.entityCollections,path).toEqual(descriptors);}
 });

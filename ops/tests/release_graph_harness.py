@@ -10,7 +10,8 @@ from unittest.mock import patch
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import release_upload as publisher
 
-IDS = ['overworld','campus-exploration','solar-hall','lunar-hall','fire-district','earth-district','air-district','water-district','orbit-maze','hidden-observatory','nebula-arcade','zodiac-festival-park','shipyard-beach','comet-maze','orbit-playground','constellation-shore','fa-ship','star-garden','moon-cafe','moon-grotto','stargazer-terrace'] + ['speaker-'+s for s in ('aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces')]
+from map_roster import MAP_IDS
+IDS = list(MAP_IDS)
 FINAL = b'final native map'
 PIN = hashlib.sha256(FINAL).hexdigest()
 OLD = '0'*64

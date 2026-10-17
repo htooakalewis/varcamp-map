@@ -1,0 +1,15 @@
+rolling-breaker.svg, generate-breaker.py, rendered breaker PNGs and draft preview outputs:
+Original project pixel geometry generated for VarCamp, 2026-10-17.
+CC0-1.0 dedication: https://creativecommons.org/publicdomain/zero/1.0/
+No imported LPC or restricted reference-art pixels are included in this original atlas.
+The existing coastal color palette was used for visual consistency; artwork geometry is new.
+
+Ocean audio is separately sourced CC0:
+jasinski — alkaibeach, https://freesound.org/people/jasinski/sounds/18363/
+qubodup — Beach Ocean Waves extracts, https://opengameart.org/content/beach-ocean-waves
+Selected wave_01 and wave_04; exact FLAC hashes and modification commands in audio-provenance.json.
+Modified: mono mix, 750ms crossfade, 90Hz highpass/8500Hz lowpass, gain0.45,
+500ms wrap crossfade,96kbpsMP3. CC0-1.0.
+Credit retained voluntarily; CC0 does not require attribution.
+NOT AUDITIONED: no voice-free or perceptually seamless/browserloop claim.
+Public reference images/source assets used for research are NOT included in the original atlas.

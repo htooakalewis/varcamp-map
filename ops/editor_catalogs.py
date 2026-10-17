@@ -6,6 +6,7 @@ import pathlib
 import re
 import urllib.parse
 from release_upload import Storage, read_zip, zip_bytes, inventory, apply_plan
+from map_roster import MAP_IDS
 
 def require(value, message):
     if not value:
@@ -89,8 +90,12 @@ def source_policy(root):
     catalogs = strict_json(catalogs_raw.decode('utf8'))
     validate_catalogs(catalogs)
     manifest = strict_json((root / 'publication/source-manifest.json').read_text())
-    paths = sorted(path for path in manifest['sourceInventory'] if re.fullmatch(r'maps/[a-z0-9-]+\.wam', path))
-    require(len(paths) == 33, 'Reviewed VarCamp33-map scope required')
+    original, extensions = manifest['sourceInventory'], manifest.get('extensionInventory', {})
+    require(type(original) is dict and type(extensions) is dict and not set(original).intersection(extensions), 'Distinct source inventories required')
+    source = set(original) | set(extensions)
+    paths = sorted(path for path in source if re.fullmatch(r'maps/[a-z0-9-]+\.wam', path))
+    require(set(paths) == {'maps/' + map_id + '.wam' for map_id in MAP_IDS}, 'Reviewed exact VarCamp34-map scope required')
+    require(all(path[:-4] + '.tmj' in source for path in paths), 'Every current WAM must have a paired source TMJ')
     return catalogs, hashlib.sha256(catalogs_raw).hexdigest(), paths
 
 def main():

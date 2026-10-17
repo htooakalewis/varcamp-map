@@ -1,3 +1,4 @@
+import{readShipFloorLabels}from'../tools/maps/beach-ship';
 import{assertNativeStandingCaptions}from'../tools/maps/standing-captions';
 import{readStandingCaptions}from'../tools/art/standing-captions';
 import {standingFace as declaredFace} from './helpers/physical-prop-contracts';
@@ -27,7 +28,7 @@ const obstructsLabel=(p:Placement,catalog:ReturnType<typeof loadTileCatalog>)=>{
 };
 const gap=(a:TileRect,b:TileRect)=>Math.max(0,a.x-b.x-b.width,b.x-a.x-a.width)+Math.max(0,a.y-b.y-b.height,b.y-a.y-a.height);
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
-const names:Record<string,RegExp>={overworld:/PLAZA/, 'campus-exploration':/EXPLORATION/, 'shipyard-beach':/HARBOR/, 'zodiac-festival-park':/FESTIVAL|PARK/, 'orbit-maze':/ORBIT|MAZE/, 'comet-maze':/COMET/, 'solar-hall':/SOLAR/, 'lunar-hall':/LUNAR/, 'nebula-arcade':/ARCADE/, 'orbit-playground':/PLAYGROUND/, 'constellation-shore':/SHORE/, 'fa-ship':/FA SHIP/, 'star-garden':/GARDEN/, 'moon-cafe':/CAF[ÉE]/, 'moon-grotto':/GROTTO/, 'stargazer-terrace':/STARGAZER/, 'fire-district':/FIRE/, 'earth-district':/EARTH/, 'air-district':/AIR/, 'water-district':/WATER/};
+const names:Record<string,RegExp>={overworld:/PLAZA/, 'campus-exploration':/EXPLORATION/, 'shipyard-beach':/HARBOR/, 'zodiac-festival-park':/FESTIVAL|PARK/, 'orbit-maze':/ORBIT|MAZE/, 'comet-maze':/COMET/, 'solar-hall':/SOLAR/, 'lunar-hall':/LUNAR/, 'nebula-arcade':/ARCADE/, 'orbit-playground':/PLAYGROUND/, 'constellation-shore':/SHORE/, 'fa-ship':/FA SHIP/, 'fa-ship-interior':/LOWER DECK/, 'star-garden':/GARDEN/, 'moon-cafe':/CAF[ÉE]/, 'moon-grotto':/GROTTO/, 'stargazer-terrace':/STARGAZER/, 'fire-district':/FIRE/, 'earth-district':/EARTH/, 'air-district':/AIR/, 'water-district':/WATER/};
 const arrow=/[↑↓←→↗↘↙↖]/;
 
 function nativeLabels(tmj:TiledMap,layout:MapLayout){
@@ -41,7 +42,7 @@ function nativeLabels(tmj:TiledMap,layout:MapLayout){
   const cells=layer.data.flatMap((gid,index)=>gid?[{x:index%tmj.width,y:Math.floor(index/tmj.width)}]:[]),x=Math.min(...cells.map(c=>c.x)),y=Math.min(...cells.map(c=>c.y));
   return{x,y,width:Math.max(...cells.map(c=>c.x))-x+1,height:Math.max(...cells.map(c=>c.y))-y+1,text:layer.properties!.find(p=>p.name==='captionText')!.value as string,size:7*Math.max(1,Math.floor((row.sign.fontSize??18)/7))};
  });
- return [...ordinary,...captions];
+ return [...ordinary,...captions,...readShipFloorLabels(tmj,layout,labelCatalog)];
 }
 const captionLayouts=layouts.filter(l=>['constellation-shore','shipyard-beach'].includes(l.id));
 describe('audience wayfinding in exported Tiled maps',()=>{

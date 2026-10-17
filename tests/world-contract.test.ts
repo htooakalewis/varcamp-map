@@ -4,9 +4,9 @@ import { previewDestination, roomDestination } from '../src/navigation';
 
 describe('world destinations', () => {
   // Removing a destination/sign/element makes a contracted venue unreachable.
-  it('provides all 33 maps, twelve unique zodiac signs and four elements', () => {
-    expect(Object.keys(WORLD_CATALOG)).toHaveLength(33);
-    expect(Object.keys(WORLD_CATALOG).sort()).toEqual(['air-district', 'campus-exploration', 'comet-maze', 'constellation-shore', 'fa-ship', 'moon-cafe', 'moon-grotto', 'orbit-playground', 'star-garden', 'stargazer-terrace', 'earth-district', 'fire-district', 'hidden-observatory', 'lunar-hall', 'nebula-arcade', 'orbit-maze', 'overworld', 'shipyard-beach', 'solar-hall', 'water-district', 'zodiac-festival-park', ...SIGN_IDS.map(sign => `speaker-${sign}`)].sort());
+  it('provides all 34 maps, twelve unique zodiac signs and four elements', () => {
+    expect(Object.keys(WORLD_CATALOG)).toHaveLength(34);
+    expect(Object.keys(WORLD_CATALOG).sort()).toEqual(['air-district', 'campus-exploration', 'comet-maze', 'constellation-shore', 'fa-ship', 'fa-ship-interior', 'moon-cafe', 'moon-grotto', 'orbit-playground', 'star-garden', 'stargazer-terrace', 'earth-district', 'fire-district', 'hidden-observatory', 'lunar-hall', 'nebula-arcade', 'orbit-maze', 'overworld', 'shipyard-beach', 'solar-hall', 'water-district', 'zodiac-festival-park', ...SIGN_IDS.map(sign => `speaker-${sign}`)].sort());
     expect(new Set(SIGN_IDS).size).toBe(12);
     expect([...SIGN_IDS].sort()).toEqual(['aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo', 'libra', 'pisces', 'sagittarius', 'scorpio', 'taurus', 'virgo']);
     expect(ELEMENT_IDS).toEqual(['fire', 'earth', 'air', 'water']);

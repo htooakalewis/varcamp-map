@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "90d67a0289dd5776f572dffb9c941c3c07d712ded66672af4fa81f8b6a96f42b",
-      "maps/overworld.tmj": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
+      "world/layouts/overworld.json": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed",
+      "maps/overworld.tmj": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
@@ -13,7 +13,7 @@
       "tests/helpers/physical-prop-contracts.ts": "e9eeb98998ab7e793407d4472e4998c6e0d7c6c9911756a72080384241db3afd"
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
-    "geometrySha256": "62a33d15bed288ff0fea99ca70cba6eaa3cfe42196855a5cb04b53ee1445acce",
+    "geometrySha256": "d35e4eaa230c3b9cff7a734f63e0a7b5b689ebcbc5e47e8c9e41f86b1ffe91df",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

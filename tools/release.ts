@@ -33,6 +33,14 @@ export function uiReleaseIdentity(root = process.cwd()): string {
   return hash.digest('hex');
 }
 
+/** Fixed same-origin ocean resource; no remote URLs or implicit public-directory copying. */
+export function emitNativeOceanAudio(layer:TiledLayer,mapPath:string,emit:(path:string,bytes:Buffer)=>unknown):void{
+ const entries=layer.properties?.filter(p=>p.name==='playAudio')??[];if(!entries.length)return;
+ const property=(name:string)=>{const found=layer.properties!.filter(p=>p.name===name);if(found.length!==1)throw Error('Ocean audio property missing/ambiguous: '+name);return found[0].value;};
+ if(entries.length!==1||!['maps/shipyard-beach.tmj','maps/fa-ship.tmj'].includes(mapPath)||property('playAudio')!=='../assets/audio/ocean-loop.mp3'||property('audioLoop')!==true||property('audioVolume')!==0.2||typeof property('audioCopyright')!=='string'||!String(property('audioCopyright')).includes('CC0'))throw Error('Ocean audio requires the fixed local quiet looping resource');
+ const bytes=readFileSync('assets/audio/ocean-loop.mp3'),proof=JSON.parse(readFileSync('art/source/ocean-audio.json','utf8'));if(proof.encodedMp3?.sha256!==digest(bytes)||proof.encodedMp3?.bytes!==bytes.length)throw Error('Ocean audio source bytes changed');const file=`assets/audio/ocean-loop.${digest(bytes)}.mp3`;emit(file,bytes);entries[0].value='../'+file;
+}
+
 /** Faithful release: preserve separate licensed sheets, pixels and embedded credits. */
 export function worldRelease(): Plugin {
   return {
@@ -78,6 +86,7 @@ export function worldRelease(): Plugin {
         const checkLayers = (layers: TiledLayer[]): void => {
           for (const layer of layers) {
             if (layer.type === 'group') checkLayers(layer.layers);
+            emitNativeOceanAudio(layer,mapPath,emit);
             if (layer.type === 'imagelayer') throw new Error(`Image layer unsupported by pinned WorkAdventure; use sponsor tile layers: ${layer.name}`);
           }
         };
@@ -96,10 +105,11 @@ export function worldRelease(): Plugin {
         if (bytes === undefined) throw new Error(`Missing credit dependency: ${path}`);
         return escape(`${path}?v=${digest(bytes)}`);
       };
-      const titles: Record<string,string> = {workadventure:'WorkAdventure starter tilesets','lpc-office':'LPC Revised: The Office','lpc-space':'LPC goes to space',original:'Original VarCamp art', 'lpc-ship':'LPC Ship', 'lpc-dock':'Reid Dock tileset', 'lpc-containers':'LPC Containers', 'lpc-water':'LPC Base Water'};
+      const titles: Record<string,string> = {workadventure:'WorkAdventure starter tilesets','lpc-office':'LPC Revised: The Office','lpc-space':'LPC goes to space',original:'Original VarCamp art', 'lpc-ship':'LPC Ship', 'lpc-dock':'Reid Dock tileset', 'lpc-containers':'LPC Containers', 'lpc-water':'LPC Base Water','ocean-audio':'Ocean wave loop'};
       const fullCredits: Record<string,string> = {'lpc-office':'Credits.txt', 'lpc-ship':'CREDITS-ship.txt', 'lpc-containers':'CREDITS-container.txt', 'lpc-water':'AUTHORS'};
       const sections = Object.entries(sources).map(([id, s]) => {
-        for (const file of readdirSync(`assets/tilesets/${id}`)) if (!file.endsWith('.png')) emit(`credits/${id}/${file}`, readFileSync(`assets/tilesets/${id}/${file}`));
+        const directory=id==='ocean-audio'?'assets/audio':`assets/tilesets/${id}`;
+        for (const file of readdirSync(directory)) if (!/\.(png|mp3)$/.test(file)) emit(`credits/${id}/${file}`, readFileSync(`${directory}/${file}`));
         return `<section><h2>${escape(titles[id])}</h2><p>${escape(s.attribution)}</p><p><a href="${escape(s.url)}">Source</a> · <a href="${creditLink(`${id}/${basename(s.licenseFile)}`)}">${escape(s.license)}</a> · <a href="${creditLink(`${id}/ATTRIBUTION.md`)}">Attribution record</a></p><p>${escape(s.changes)}</p>${fullCredits[id] ? `<p><a href="${creditLink(`${id}/${fullCredits[id]}`)}">Full upstream artist credits</a></p>` : ''}</section>`;
       }).join('\n');
       emit('credits/LICENSE.starter', readFileSync('docs/dependencies/LICENSE.starter'));

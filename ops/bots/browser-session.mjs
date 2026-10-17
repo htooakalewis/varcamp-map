@@ -30,8 +30,14 @@ export async function denyMediaPermissions(cdp, { assertLive } = {}) {
 }
 
 export async function joinRoom(page, profile = config, { assertLive } = {}) {
+  if (selectProfile(profile?.persona) !== profile) throw Error('Require a fixed profile for name entry');
   await guarded(assertLive, () => page.goto(profile.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 }));
-  await guarded(assertLive, () => page.getByTestId('loginSceneNameInput').fill(profile.botName));
+  const input = page.getByTestId('loginSceneNameInput');
+  const rawMaximum = await guarded(assertLive, () => input.getAttribute('maxlength'));
+  const maximum = typeof rawMaximum === 'string' && /^[1-9][0-9]*$/.test(rawMaximum) ? Number(rawMaximum) : NaN;
+  if (!Number.isSafeInteger(maximum) || profile.botName.length > maximum) throw Error('Dedicated name input maximum cannot represent fixed identity');
+  await guarded(assertLive, () => input.fill(profile.botName));
+  if (await guarded(assertLive, () => input.inputValue()) !== profile.botName) throw Error('Dedicated name input identity mismatch before Continue');
   await guarded(assertLive, () => page.getByRole('button', { name: 'Continue', exact: true }).click());
   await guarded(assertLive, () => page.locator(`#${profile.avatar}`).click());
   await guarded(assertLive, () => page.getByRole('button', { name: 'Continue', exact: true }).click());

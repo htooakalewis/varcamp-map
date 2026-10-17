@@ -17,6 +17,7 @@ export const DIRECTORY_DESTINATIONS: { id: MapId; label: string }[] = [
  { id: 'shipyard-beach', label: 'Star Harbor · Shipyard' },
  { id: 'constellation-shore', label: 'Constellation Shore' },
  { id: 'fa-ship', label: 'FA SHIP' },
+ { id: 'fa-ship-interior', label: 'FA SHIP · Lower Deck' },
  { id: 'campus-exploration', label: 'Exploration Court' },
  { id: 'fire-district', label: 'Fire Workshop' },
  { id: 'earth-district', label: 'Earth Library' },

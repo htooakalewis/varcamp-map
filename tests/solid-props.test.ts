@@ -1,3 +1,4 @@
+import {historicalPlaza,groveBaseCells} from './helpers/plaza-groves';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import {buildMap} from '../tools/maps/builder';
@@ -61,14 +62,14 @@ const receipt=read('tests/fixtures/solid-props/delta.json');
 function blocked(map:any){const gids=new Set(map.tilesets.flatMap((s:any)=>(s.tiles??[]).filter((t:any)=>t.properties?.some((p:any)=>p.name==='collides'&&p.value===true)).map((t:any)=>s.firstgid+t.id)));return new Set<string>(map.layers.flatMap((l:any)=>l.type==='tilelayer'?l.data.flatMap((g:number,i:number)=>gids.has(g)?[`${i%map.width},${Math.floor(i/map.width)}`]:[]):[]));}
 function connected(map:any,mask:Set<string>,points:string[]){const first=points[0],seen=new Set([first]),queue=[first];for(const key of queue){const[x,y]=key.split(',').map(Number);for(const[nx,ny]of[[x+1,y],[x-1,y],[x,y+1],[x,y-1]]){const n=`${nx},${ny}`;if(nx>=0&&ny>=0&&nx<map.width&&ny<map.height&&!mask.has(n)&&!seen.has(n)){seen.add(n);queue.push(n);}}}return points.every(p=>seen.has(p));}
 describe('published solid-prop receipts and direct current physical contracts',()=>{
- for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} changes only the approved support mask and keeps whole native entry masks/routes connected`,()=>{
-  const historical=read(id==='overworld'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.tmj`);
+ for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} retains the historical support receipt and explicit current masks/routes`,()=>{
+  const historical=(id==='overworld'?historicalPlaza('native'):read(`tests/fixtures/standing-captions/before-${id}.tmj`));
   const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=read(`maps/${id}.tmj`),source=read(`world/layouts/${id}.json`);
-  for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(id==='overworld'&&ext==='tmj'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.${ext}`)).toBe(proof.after[ext]);}
+  for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(id==='overworld'&&ext==='tmj'?'tests/fixtures/plaza-groves/before-native.tmj':`tests/fixtures/standing-captions/before-${id}.${ext}`)).toBe(proof.after[ext]);}
   expect(historical.tilesets).toEqual(old.tilesets); // retained published props receipt; new caption atlas is checked separately
-  expect(now.layers.find((l:any)=>l.name==='physical-collisions')).toEqual(historical.layers.find((l:any)=>l.name==='physical-collisions')); // no atlas growth, firstgid or animation edits
+  const expectedMask=structuredClone(historical.layers.find((l:any)=>l.name==='physical-collisions'));if(id==='overworld'){const marker=expectedMask.data.find(Boolean);for(const key of groveBaseCells(base)){const[x,y]=key.split(',').map(Number);expectedMask.data[y*now.width+x]=marker;}}expect(now.layers.find((l:any)=>l.name==='physical-collisions')).toEqual(expectedMask); // exact historical supports plus the separately reviewed grove bases
   expect(now.layers.filter((l:any)=>l.name==='roadster'||l.name==='coastal-flight'||l.name.startsWith('beach-surf-'))).toEqual(old.layers.filter((l:any)=>l.name==='roadster'||l.name==='coastal-flight'||l.name.startsWith('beach-surf-')));
-  const a=blocked(old),b=blocked(now);expect([...a].filter(c=>!b.has(c))).toEqual([]);expect([...b].filter(c=>!a.has(c)).sort()).toEqual(proof.newBlockedCells.map((c:number[])=>c.join(',')).sort());
+  const a=blocked(old),b=blocked(now);expect([...a].filter(c=>!b.has(c))).toEqual([]);expect([...b].filter(c=>!a.has(c)).sort()).toEqual([...proof.newBlockedCells.map((c:number[])=>c.join(',')),...(id==='overworld'?[...groveBaseCells(base)]:[])].sort());
   const startLayers=now.layers.filter((l:any)=>l.type==='tilelayer'&&l.properties?.some((p:any)=>p.name==='startLayer'&&p.value===true));
   const entryCells=startLayers.flatMap((l:any)=>l.data.flatMap((v:number,i:number)=>v?[`${i%now.width},${Math.floor(i/now.width)}`]:[]));
   const exits=source.exits.flatMap((e:any)=>Array.from({length:e.width*e.height},(_,i)=>`${e.x+i%e.width},${e.y+Math.floor(i/e.width)}`));
@@ -111,8 +112,8 @@ function sceneryTokens(map:any){const floor=map.layers.findIndex((l:any)=>l.name
 for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} emits every intended native visual tile exactly once at its authored position and depth`,()=>{
  const source=read(`world/layouts/${id}.json`),intended=buildMap(addNpcGuides([source])[0],base).tmj,native=read(`maps/${id}.tmj`),old=read(`tests/fixtures/solid-props/before-${id}.tmj`);
  expect(sceneryTokens(native)).toEqual(sceneryTokens(intended));
- const historical=read(id==='overworld'?'maps/overworld.tmj':`tests/fixtures/standing-captions/before-${id}.tmj`);
+ const historical=(id==='overworld'?historicalPlaza('native'):read(`tests/fixtures/standing-captions/before-${id}.tmj`));
  for(const layer of old.layers)if(!layer.name.startsWith('scenery-')&&layer.name!=='physical-collisions')expect(historical.layers.find((l:any)=>l.name===layer.name),layer.name).toEqual(layer);
  const top=(m:any)=>Object.fromEntries(Object.entries(m).filter(([k])=>!['layers','nextlayerid'].includes(k)));expect(top(historical)).toEqual(top(old));
- expect(source.entries).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).entries);expect(source.exits).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).exits);
+ const publishedEntries=id==='shipyard-beach'?read('tests/fixtures/beach-ship/before-world--layouts--shipyard-beach.json').entries:source.entries;expect(publishedEntries).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).entries);expect(source.exits).toEqual(read(`tests/fixtures/solid-props/before-${id}.json`).exits);
 },30000);

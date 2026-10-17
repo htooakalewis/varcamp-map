@@ -11778,5 +11778,478 @@
     "level": "aboveAvatar",
     "sourceId": "original",
     "standingRole": "face"
+  },
+  "ship-plank": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-wall": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-bunk": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 2,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-mess-table": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 3,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-galley": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 7,
+      "y": 0,
+      "width": 3,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-pantry": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 10,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-lantern": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-stairs": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 13,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-chart-table": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 4,
+      "y": 2,
+      "width": 3,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-compass": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 7,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-lower-deck-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 5,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-helm-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 5,
+      "y": 4,
+      "width": 4,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-mess-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 0,
+      "y": 5,
+      "width": 8,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-captain-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 8,
+      "y": 5,
+      "width": 8,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-bunks-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 0,
+      "y": 6,
+      "width": 8,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-cargo-label": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 8,
+      "y": 6,
+      "width": 8,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-porthole": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 12,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "ship-cargo-crate": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 25,
+      "y": 22,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "ship-cargo-barrel": {
+    "sheet": "assets/tilesets/original/coastal.png",
+    "rect": {
+      "x": 24,
+      "y": 22,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "ship-compass-rug": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 8,
+      "y": 2,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-mess-bench": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 10,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "ship-rope-coil": {
+    "sheet": "assets/tilesets/original/ship-interior.png",
+    "rect": {
+      "x": 12,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
   }
 }

@@ -1,0 +1,56 @@
+{
+  "sourceRecordings": [
+    {
+      "url": "https://opengameart.org/sites/default/files/wave_01_cc0-18363__jasinski__alkaibeach.flac",
+      "file": "audio-reference/wave_01_cc0-18363__jasinski__alkaibeach.flac",
+      "bytes": 626248,
+      "sha256": "fcfca178eca2eac536e8c2a4ed5cf8096e44c921acd587047b3d9f1d7845435c",
+      "license": "CC0",
+      "sourcePage": "https://opengameart.org/content/beach-ocean-waves"
+    },
+    {
+      "url": "https://opengameart.org/sites/default/files/wave_04_cc0-18363__jasinski__alkaibeach.flac",
+      "file": "audio-reference/wave_04_cc0-18363__jasinski__alkaibeach.flac",
+      "bytes": 591767,
+      "sha256": "3c490e736365fdd617ce8405470d8878fc6146d9a8dba448d622addb01cfff3b",
+      "license": "CC0",
+      "sourcePage": "https://opengameart.org/content/beach-ocean-waves"
+    }
+  ],
+  "filterArgv": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "/Users/htooayelwin/Documents/Codex/2026-10-10/computer-plugin-computer-use-openai-bundled/outputs/beach-ship-animation-research-2026-10-17/audio-reference/wave_01_cc0-18363__jasinski__alkaibeach.flac",
+    "-i",
+    "/Users/htooayelwin/Documents/Codex/2026-10-10/computer-plugin-computer-use-openai-bundled/outputs/beach-ship-animation-research-2026-10-17/audio-reference/wave_04_cc0-18363__jasinski__alkaibeach.flac",
+    "-filter_complex",
+    "[0:a]aformat=sample_rates=44100:channel_layouts=mono[a];[1:a]aformat=sample_rates=44100:channel_layouts=mono[b];[a][b]acrossfade=d=0.75:c1=tri:c2=tri,highpass=f=90,lowpass=f=8500,volume=0.45[out]",
+    "-map",
+    "[out]",
+    "-c:a",
+    "pcm_s16le",
+    "-y",
+    "/Users/htooayelwin/Documents/Codex/2026-10-10/computer-plugin-computer-use-openai-bundled/outputs/beach-animation-asset-draft/joined.wav"
+  ],
+  "loopCrossfadeSamples": 22050,
+  "samples": 276110,
+  "durationSeconds": 6.260997732426304,
+  "sampleRate": 44100,
+  "channels": 1,
+  "peakDbfs": -17.125893080381765,
+  "rmsDbfs": -36.56175663643572,
+  "loopBoundarySampleStep": 49,
+  "maxAdjacentSampleStep": 1297,
+  "auditioned": false,
+  "voiceFreeVerified": false,
+  "browserLoopVerified": false,
+  "license": "CC0-1.0",
+  "credit": "jasinski, alkaibeach; wave extracts by qubodup; CC0; mixed/filtered/looped for VarCamp draft.",
+  "encodedMp3": {
+    "sha256": "df5758cfdafeecbbebc94943902e9deb4a65684582200e435e0b2c9f348897bc",
+    "bytes": 75903
+  }
+}

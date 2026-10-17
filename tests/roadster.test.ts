@@ -49,11 +49,9 @@ it('preserves the original sole-addition Roadster receipt against its immutable 
  expect(sha(JSON.stringify(layout, null, 2)+'\n')).toBe('4f80ae57e635a8eb1efe1ba7e44eaca109a750ec455f7db169259c725a31a351');
 });
 
-it('leaves all WAMs, the other32 native maps/previews and independently replaceable sponsors byte-exact', () => {
- const inventory = json('publication/source-manifest.json').sourceInventory;
- const revisions = new Map(['2026-10-16-shared-guides','2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure', '2026-10-18-standing-captions', '2026-10-18-standing-captions-ci-closure'].flatMap(id=>json(`publication/revisions/${id}.json`).revisions).map((r: {path:string;toSha256:string}) => [r.path,r.toSha256]));
- for (const [path, baseline] of Object.entries(inventory)) if ((/^maps\//.test(path) && !['maps/overworld.tmj','maps/preview/overworld.tmj'].includes(path)) || path.startsWith('assets/sponsors/')) expect(sha(readFileSync(path)),path).toBe(revisions.get(path) ?? baseline);
-});
+// Current whole-world byte authority belongs to publication/verify-source.mjs,
+// whose real CLI tests establish a positive baseline before artifact mutations.
+// Roadster's sole-addition history above uses independent immutable 17d4 inputs.
 it('fits the arrival view without touching any743 guide cell, spawn, entrance, scenery or sponsor panel', () => {
  const overlay = json('art/source/roadster.json').overlay;
  expect(overlay).toMatchObject({x:73,y:60,width:5,height:5});

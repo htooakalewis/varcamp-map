@@ -50,13 +50,13 @@ print(json.dumps({'pairs':sum(p.endswith('.tmj') for p in r),'rejected':rejected
   expect(JSON.parse(result)).toEqual({ pairs: 12, rejected: [true, true] });
 });
 
-it('prepares the complete 33-map release through the actual publisher entry point', () => {
+it('prepares the complete 34-map release through the actual publisher entry point', () => {
   const result=execFileSync('python3',['-c',`
 import sys,json,os,tempfile,pathlib,hashlib
 from unittest.mock import patch
 sys.path.insert(0,str(pathlib.Path('ops').resolve()))
 import release_upload
-ids=['overworld','campus-exploration','solar-hall','lunar-hall','fire-district','earth-district','air-district','water-district','orbit-maze','hidden-observatory','nebula-arcade','zodiac-festival-park','shipyard-beach','comet-maze','orbit-playground','constellation-shore','fa-ship','star-garden','moon-cafe','moon-grotto','stargazer-terrace']+['speaker-'+s for s in ('aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces')]
+ids=['overworld','campus-exploration','solar-hall','lunar-hall','fire-district','earth-district','air-district','water-district','orbit-maze','hidden-observatory','nebula-arcade','zodiac-festival-park','shipyard-beach','comet-maze','orbit-playground','constellation-shore','fa-ship','fa-ship-interior','star-garden','moon-cafe','moon-grotto','stargazer-terrace']+['speaker-'+s for s in ('aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces')]
 class Storage:
  def __init__(self,*args): pass
  def download(self,target): return release_upload.zip_bytes({})
@@ -69,7 +69,7 @@ with tempfile.TemporaryDirectory() as directory:
  plan=json.loads(pathlib.Path('plan/plan.json').read_text())
  print(json.dumps({'mapPairs':sum(p.endswith('.tmj') for p in plan['package']),'files':len(plan['package'])}))
 `],{encoding:'utf8'});
-  expect(JSON.parse(result.trim().split('\n').at(-1)!)).toEqual({mapPairs:33,files:66});
+  expect(JSON.parse(result.trim().split('\n').at(-1)!)).toEqual({mapPairs:34,files:68});
 });
 
 it('aborts a changed baseline before upload and checks complete delayed readback', () => {
@@ -138,4 +138,27 @@ it.each(transport.ordinary)('accepts ordinary $method response through the actua
 
 it('enforces the effective WAM graph through actual release preparation and apply', () => {
   execFileSync('python3', ['ops/tests/release_graph_harness.py'], { encoding: 'utf8' });
+});
+it.each(['missing','extra'])('actual publisher refuses %s34-map fixture before baseline access',mode=>{
+ const result=execFileSync('python3',['-c',`
+import sys,json,os,tempfile,pathlib,hashlib,re
+from unittest.mock import patch
+sys.path.insert(0,str(pathlib.Path('ops').resolve()))
+import release_upload
+ids=re.findall(r'^  "([^"]+)": \\{',pathlib.Path('src/world/catalog.ts').read_text(),re.M)
+assert len(ids)==34
+if ${JSON.stringify(mode)}=='missing': ids.remove('fa-ship-interior')
+else: ids.append('unreviewed-room')
+class Storage:
+ def __init__(self,*args): pass
+ def download(self,target): raise AssertionError('Map roster refusal must precede baseline access')
+with tempfile.TemporaryDirectory() as directory:
+ os.chdir(directory);pathlib.Path('dist/maps').mkdir(parents=True)
+ for i in ids:
+  for e in ('tmj','wam'): pathlib.Path('dist/maps/'+i+'.'+e).write_bytes(b'x' if e=='tmj' else json.dumps({'mapUrl':i+'.tmj?v='+hashlib.sha256(b'x').hexdigest()}).encode())
+ try:
+  with patch.object(release_upload,'Storage',Storage),patch.object(sys,'argv',['release_upload','prepare','--plan','plan','--target','candidate']): release_upload.main()
+ except ValueError as exc: print(str(exc))
+ else: raise AssertionError('Unexpected accepted roster')
+`],{encoding:'utf8'});expect(result).toContain('exactly the catalog map pairs');
 });

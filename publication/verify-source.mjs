@@ -2,13 +2,14 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
+import { catalogMapIds } from '../ops/current-release-facts.mjs';
 
 const root = resolve(process.argv[2] ?? '.');
 const manifest = JSON.parse(readFileSync(resolve(root, 'publication/source-manifest.json'), 'utf8'));
 const inventory = manifest.sourceInventory;
 const extensions = manifest.extensionInventory ?? {};
-// Exactly eight reviewed releases; original receipts and first document stay immutable.
-const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json'];
+// Explicit reviewed release chain; all earlier receipts and documents stay immutable.
+const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json', 'publication/revisions/2026-10-18-beach-groves-guide-identity.json'];
 assert.equal(Object.keys(inventory).length, 303);
 for (const path of Object.keys(extensions)) {
   assert.ok(!Object.hasOwn(inventory, path), `Extension overlaps frozen source: ${path}`);
@@ -58,9 +59,10 @@ const reviewedFiles = [...Object.keys(inventory), ...Object.keys(extensions)]
 assert.deepEqual(files, reviewedFiles, 'Source inventory has missing or additional files');
 const maps = readdirSync(resolve(root, 'maps'));
 const ids = extension => maps.filter(path => path.endsWith(extension)).map(path => path.slice(0, -extension.length)).sort();
-assert.equal(ids('.tmj').length, 33);
 assert.deepEqual(ids('.tmj'), ids('.wam'), 'Native TMJ and WAM map IDs differ');
-assert.equal(manifest.maps, 33);
-assert.equal(manifest.wams, 33);
+const currentIds = catalogMapIds(root);
+assert.deepEqual(ids('.tmj'), currentIds, 'Native map IDs differ from current catalog');
+assert.equal(manifest.maps, currentIds.length);
+assert.equal(manifest.wams, currentIds.length);
 assert.equal(manifest.sourceFilesByteExact, 303);
-console.log(`Verified 303 original source receipts: ${303 - revisions.size} unchanged source hashes and ${revisions.size} exact reviewed replacement${revisions.size === 1 ? '' : 's'}, ${Object.keys(extensions).length} reviewed extension hashes and 33 native TMJ/WAM map pairs.`);
+console.log(`Verified 303 original source receipts: ${303 - revisions.size} unchanged source hashes and ${revisions.size} exact reviewed replacement${revisions.size === 1 ? '' : 's'}, ${Object.keys(extensions).length} reviewed extension hashes and ${currentIds.length} native TMJ/WAM map pairs.`);

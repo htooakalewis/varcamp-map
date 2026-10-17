@@ -9,6 +9,9 @@ const checker = resolve('publication/verify-source.mjs');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e'; // "baseline\n"
 const extensionHash = 'f7315289ab7085fe7c2c0cde78d3fb1f1ec0b5d324ca49c50954f991eeb32aca'; // "extension\n"
 const baselinePaths = Object.keys(JSON.parse(readFileSync('publication/source-manifest.json', 'utf8')).sourceInventory);
+const catalogSource = readFileSync('src/world/catalog.ts', 'utf8');
+const catalogIds = Object.keys(JSON.parse(catalogSource.match(/export const WORLD_CATALOG\s*=\s*(\{[\s\S]*?\})\s+as const/)![1]));
+const combinedRevision = 'publication/revisions/2026-10-18-beach-groves-guide-identity.json';
 
 describe('publication source integrity CLI', () => {
   let root: string;
@@ -25,7 +28,7 @@ describe('publication source integrity CLI', () => {
   beforeEach(() => {
     root = mkdtempSync(join(tmpdir(), 'varcamp-publication-'));
     manifest = {
-      maps: 33, wams: 33, sourceFilesByteExact: 303,
+      maps: catalogIds.length, wams: catalogIds.length, sourceFilesByteExact: 303,
       sourceInventory: Object.fromEntries(baselinePaths.map(path => [path, baselineHash])),
       extensionInventory: {
         'src/bots/reviewed.ts': extensionHash,
@@ -35,11 +38,19 @@ describe('publication source integrity CLI', () => {
     };
     for (const path of baselinePaths) write(path, 'baseline\n');
     for (const path of Object.keys(manifest.extensionInventory)) write(path, 'extension\n');
+    write('src/world/catalog.ts', catalogSource);
+    manifest.sourceInventory['src/world/catalog.ts'] = createHash('sha256').update(catalogSource).digest('hex');
+    for (const id of catalogIds) for (const ext of ['tmj', 'wam']) {
+      const path = `maps/${id}.${ext}`;
+      if (!Object.hasOwn(manifest.sourceInventory, path)) { write(path, 'extension\n'); manifest.extensionInventory[path] = extensionHash; }
+    }
     const revisions = JSON.stringify({ schemaVersion: 1, revisions: [] });
     for(const revisionPath of ['publication/revisions/2026-10-16-shared-guides.json','publication/revisions/2026-10-17-return-approaches.json','publication/revisions/2026-10-17-beach-composition.json','publication/revisions/2026-10-17-beach-ci-closure.json','publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json']){
       write(revisionPath, revisions);
       manifest.extensionInventory[revisionPath] = createHash('sha256').update(revisions).digest('hex');
     }
+    write(combinedRevision, revisions);
+    manifest.extensionInventory[combinedRevision] = createHash('sha256').update(revisions).digest('hex');
   });
   afterEach(() => rmSync(root, { recursive: true, force: true }));
 
@@ -86,7 +97,7 @@ describe('publication source integrity CLI', () => {
     expect(result.output).toContain('Extension overlaps frozen source: src/main.ts');
   });
 
-  it('keeps the 33 native map-pair gate even when renamed map bytes are approved', () => {
+  it('keeps exact native map-pair identities even when renamed map bytes are approved', () => {
     const oldPath = 'maps/overworld.wam';
     const newPath = 'maps/unpaired.wam';
     rmSync(join(root, oldPath));
@@ -96,5 +107,14 @@ describe('publication source integrity CLI', () => {
     const result = verify();
     expect(result.status).not.toBe(0);
     expect(result.output).toContain('Native TMJ and WAM map IDs differ');
+  });
+  it('refuses a paired same-count foreign map even when both new paths are pinned', () => {
+    for (const ext of ['tmj', 'wam']) {
+      const oldPath = `maps/overworld.${ext}`, path = `maps/foreign.${ext}`;
+      rmSync(join(root, oldPath)); delete manifest.sourceInventory[oldPath];
+      write(path, 'baseline\n'); manifest.sourceInventory[path] = baselineHash;
+    }
+    const result = verify(); expect(result.status).not.toBe(0);
+    expect(result.output).toContain('Native map IDs differ from current catalog');
   });
 });

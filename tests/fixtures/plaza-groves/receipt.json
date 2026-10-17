@@ -1,0 +1,35 @@
+{
+  "baseline": "5d69cee6809d71cc8346878684f32f045f5dc64a",
+  "candidateFreeze": "56eff5361e37e16860c1cdd62ca46abee7c846e2986b23baeadf79f16b777310",
+  "before": {
+    "before-layout.json": "90d67a0289dd5776f572dffb9c941c3c07d712ded66672af4fa81f8b6a96f42b",
+    "before-native.tmj": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
+    "before-preview.tmj": "e075fec10b4b72d19ca682d519a9a0d510fba44d8aba53aefe7b46140259ee0d",
+    "before-routes.json": "310ff0fa5b51848fb70eeacdb5014937bb969c5a6892fc72c72e0f03532cc7aa",
+    "before-catalog.json": "43104f9a7cb04d07b008b6ebe9dfd74a2e9d2e22ccd4bc542d22e044419f26ff"
+  },
+  "placementsSha256": "8a47e6ce5fd8c7e7910d434be9c7a414776e543232f668104f7f901f31ca6dce",
+  "current": {
+    "world/layouts/overworld.json": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed",
+    "maps/overworld.tmj": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
+    "maps/preview/overworld.tmj": "d744c411eeac7c30190c702fcc4e40400e6cf09e5c3660a938cb1a4a4c25b184"
+  },
+  "addedAtlas": {
+    "firstgid": 4570,
+    "name": "groves-WA-Decoration",
+    "tilewidth": 32,
+    "tileheight": 32,
+    "columns": 12,
+    "tilecount": 96,
+    "image": "../assets/tilesets/workadventure/WA_Decoration.png",
+    "imagewidth": 384,
+    "imageheight": 256,
+    "properties": [
+      {
+        "name": "tilesetCopyright",
+        "type": "string",
+        "value": "WorkAdventure / The Coding Machine; preserve all authors and terms in LICENSE.assets; WorkAdventure assets license \u2014 redistribution only with a WorkAdventure map; not a standalone asset pack"
+      }
+    ]
+  }
+}

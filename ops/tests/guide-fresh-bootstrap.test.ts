@@ -157,7 +157,7 @@ it('waits for delayed native world registration before media or import although 
     await vi.advanceTimersByTimeAsync(0); expect(f.events.some(row => row.name === 'frame-ready')).toBe(true);
     expect(f.events.filter(row => row.name === 'media-click')).toHaveLength(0); expect(f.starts).toBe(0);
     await vi.advanceTimersByTimeAsync(1000); const result = await task;
-    expect(result.identity.name).toBe('Lyra [BOT]'); expect(f.starts).toBe(1); expect(f.health.snapshot().healthy).toBe(true);
+    expect(result.identity.name).toBe('Lyra[BOT]'); expect(f.starts).toBe(1); expect(f.health.snapshot().healthy).toBe(true);
     expect(f.events.filter(row => row.name === 'welcome-click')).toHaveLength(1); expect(f.events.filter(row => row.name === 'modal-close')).toHaveLength(1);
     expect(f.events.find(row => row.name === 'media-click')?.at).toBeGreaterThanOrEqual(f.events.find(row => row.name === 'modal-close')!.at);
     expect(f.state.modal).toBe(false); expect(f.state.welcome).toBe(0); expect(f.moves).toBe(0);

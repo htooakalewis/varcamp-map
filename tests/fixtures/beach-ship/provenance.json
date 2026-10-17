@@ -1,0 +1,58 @@
+{
+  "baseCommit": "5d69cee6809d71cc8346878684f32f045f5dc64a",
+  "files": {
+    "maps/fa-ship.tmj": {
+      "fixture": "before-maps--fa-ship.tmj",
+      "sha256": "34d96436d05b9ac44dc19c11601ea61b370ba1248fdd3b2a3981f31c3cb97ea7"
+    },
+    "maps/shipyard-beach.tmj": {
+      "fixture": "before-maps--shipyard-beach.tmj",
+      "sha256": "2710cb17d4829ed5df199618c4f333f44d5d80dae0b6ad77da423144d2e23d9c"
+    },
+    "world/layouts/fa-ship.json": {
+      "fixture": "before-world--layouts--fa-ship.json",
+      "sha256": "c03578ac9cf8f0cc1ae6794e492ad15745d5c792803ac2a645a1dbfd30accbdc"
+    },
+    "world/layouts/shipyard-beach.json": {
+      "fixture": "before-world--layouts--shipyard-beach.json",
+      "sha256": "a049fb2e3ee0ef00a20a5e9d572de10328d18953dca7a607dc30b091c043a71d"
+    }
+  },
+  "unchanged": {
+    "maps/constellation-shore.wam": "e1bde7a0ac049c0217219f3c7d98a2981c13303d734ac6d8ffff7c24d642ab1f",
+    "maps/nebula-arcade.wam": "256c0dbdd167ad3f29d2423401138df81a214edb9682b62c9d03382aa7a51543",
+    "maps/speaker-scorpio.wam": "96b7f5f8314ff56f179f6e72823c9b84ba6f89a6b626b7e9f0911e326de358dc",
+    "maps/moon-cafe.wam": "595081627a27e1890fcef7b600ee933c901a8cefe65a1036e220953b25e540d3",
+    "maps/orbit-maze.wam": "632d4a3621e971722fd54b79f3518bdffc0e8abc00d393df47ec2acc2afd72c9",
+    "maps/speaker-sagittarius.wam": "960f7769e95e03d139fcc004190a3404ce49677c39f34aee5af2b5c28e06cfdc",
+    "maps/earth-district.wam": "6f9525ee614e09fd9123ced5a71e4a41d31be1015d1b2cc112aa64c9188cb87f",
+    "maps/speaker-virgo.wam": "6127578146c17c0a8699288aa7dfbafa81ac8ce4830459b5faf3ddc5df69db1b",
+    "maps/star-garden.wam": "9be64b84a6e75a3165fc9429c6afaac61717a5f167e604b87bf570e0431b5354",
+    "maps/speaker-cancer.wam": "efe476c8da6bc880aafe95855c4981d8bc1c4fb85890f46dd92ff8d14f9606ea",
+    "maps/air-district.wam": "d826e06b803e02ed1927d2f9d59ee224cd0d1e75643adabf3fb9cb5bf11a0f0c",
+    "maps/campus-exploration.wam": "dce2b026acf5c0f7535eb641cd3ed41ea8ddf737568153b400b9d341203e79d1",
+    "maps/speaker-taurus.wam": "3f6a9de3dd28ad687046904ad4d050b7389af9376e5c739218cbca9453a722af",
+    "maps/zodiac-festival-park.wam": "c6adf05374629f1493f602b623e1c6f9a41882603577f2fca6afea27fc063658",
+    "maps/water-district.wam": "cb53821e2892425675fc61647c03f9c754ecfb37944aad96aed9c72583bd6256",
+    "maps/speaker-capricorn.wam": "16d30bf98a7d683e5f6cb50a97450c8a10bd8d3bc3f17fb4765cfdf5359c5f45",
+    "maps/fa-ship.wam": "19f765e8fd4b314f84a7d00c37469c80d8061e28c435acbec5fa6917809a2786",
+    "maps/comet-maze.wam": "9bc9c08ee62056fe3c849e837433af0feb3d920e36dd55afd7e4d697a94220da",
+    "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
+    "maps/moon-grotto.wam": "003bcd8e813606b232565c4a323074c7b568b6d0c52b03d0e8e5971be24268ec",
+    "maps/stargazer-terrace.wam": "01cb9cc9f613e725924e3790b7316b9ada982f7bab095630763d82b86facc962",
+    "maps/shipyard-beach.wam": "d631432218098ec0d1ac7991959418245d9614d30ef5c6a6ea7d23ff868b9018",
+    "maps/solar-hall.wam": "e9f71bb8f9ead7a93234ddac27df181efd051144783592f9f58e2b099da90813",
+    "maps/speaker-leo.wam": "4c7f80504c882fd7e0e7c33e8a6e9659ba8ed7f716f8daf8716836a634eae830",
+    "maps/speaker-aquarius.wam": "1f4f2b4fd53e944cb79f9888580b73fdebc49acd386c0327e639399436dae5fc",
+    "maps/speaker-pisces.wam": "0431794a019888ff185d542dee9884e419244ffa0a53149ea47c64dca2fd2f4e",
+    "maps/lunar-hall.wam": "1cc27f7c67c0124369ea6ac6443e6542106cfb98bc1a6f2aebd8f473abe46ebc",
+    "maps/speaker-gemini.wam": "b15451ce09db8358b71813c3da9231d4ec474393281ebd006591f766ce0ae4fc",
+    "maps/speaker-aries.wam": "e9e697714a7ae9eebb0e2c24aec7b5292a5dbfe21ce503396ac29dbb1b840f21",
+    "maps/speaker-libra.wam": "c304712fcff78621ae9c1369e44f66cf6ca2e50d7822ecdfb3aea0f9decad6c7",
+    "maps/hidden-observatory.wam": "0007ab32b3d2e8a5e11d5587ebca3ed5d87dae81706569c8846cd7095552429c",
+    "maps/orbit-playground.wam": "5c0d69ccb000ca8b2d41c4e3e7099affa608372b46cec9011aebf79acc38d747",
+    "maps/fire-district.wam": "741ea3fcb7508bd75341db1f862c0f89870c7be091ee5239605eef7650ff732a",
+    "maps/overworld.tmj": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
+    "src/bots/lyra-routes.json": "310ff0fa5b51848fb70eeacdb5014937bb969c5a6892fc72c72e0f03532cc7aa"
+  }
+}

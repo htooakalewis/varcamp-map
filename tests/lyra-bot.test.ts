@@ -1,3 +1,4 @@
+import {historicalPlaza,groveBaseCells} from './helpers/plaza-groves';
 import {arrivalPlaques} from './helpers/physical-prop-contracts';
 import {loadTileCatalog} from '../tools/art/catalog';
 import { createHash } from 'node:crypto';
@@ -62,7 +63,7 @@ describe('audited native navigation', () => {
     const priorCensus = (rows: TiledLayer[]) => { for (const row of rows) { if (row.type === 'group') priorCensus(row.layers); else if (row.type === 'tilelayer') row.data.forEach((gid, i) => { if (priorCollisionGids.has((gid >>> 0) & 0x1fffffff)) priorBlocked.add(i); }); } };
     priorCensus(priorMap.layers);
     expect(priorBlocked.size).toBe(6336);
-    expect(blocked.size).toBe(6336 + 20);
+    expect(blocked.size).toBe(6336 + 20 + groveBaseCells(loadTileCatalog()).size);
     const layout = JSON.parse(readFileSync('world/layouts/overworld.json', 'utf8'));
     expect(arrivalPlaques(layout,loadTileCatalog())).toHaveLength(9);
     const rects = [...layout.placements.filter((p: { layer: string }) => p.layer === 'props'), ...layout.images];
@@ -176,7 +177,7 @@ describe('official dedicated module lifecycle',()=>{
     expect(existsSync('src/bots/lyra.ts'),'official bot entry missing').toBe(true);
     const {Subject}=await import('rxjs');const meetings=new Subject<any>();const joins=new Subject<any>(),leaves=new Subject<any>(),ended=new Subject<void>();
     const messages:string[]=[],moves:Point[]=[];let complete:((p:Point&{cancelled:boolean})=>void)|undefined;let chat:((text:string,event:{authorId:number|undefined})=>void)|undefined;let chatUnsubscribe=0;
-    const wa={onInit:async()=>{},room:{id:'test',getTiledMap:async()=>native()},player:{playerId:10,name:'Lyra [BOT]',getPosition:async()=>({x:2256,y:2256}),moveTo:(x:number,y:number)=>{moves.push({x,y});return new Promise<Point&{cancelled:boolean}>(resolve=>{complete=resolve;});},meetings:{onJoin:()=>meetings}},chat:{onChatMessage:(cb:typeof chat,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});chat=cb;return {unsubscribe:()=>{chatUnsubscribe++;}};},sendChatMessage:(text:string,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});messages.push(text);}}};
+    const wa={onInit:async()=>{},room:{id:'test',getTiledMap:async()=>native()},player:{playerId:10,name:'Lyra[BOT]',getPosition:async()=>({x:2256,y:2256}),moveTo:(x:number,y:number)=>{moves.push({x,y});return new Promise<Point&{cancelled:boolean}>(resolve=>{complete=resolve;});},meetings:{onJoin:()=>meetings}},chat:{onChatMessage:(cb:typeof chat,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});chat=cb;return {unsubscribe:()=>{chatUnsubscribe++;}};},sendChatMessage:(text:string,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});messages.push(text);}}};
     vi.stubGlobal('WA',wa);vi.spyOn(console,'warn').mockImplementation(()=>{});
     const bot=(await import('../src/bots/lyra')).default;await bot.run({});await flush();expect(moves).toHaveLength(1);
     for(const unrelated of [{kind:'area',name:'Proximity Chat'},{kind:'meeting',name:'Proximity Chat'},{kind:'listener',name:'Proximity Chat'},{kind:'speaker',name:'Proximity Chat'},{kind:'default',name:'Conference room'}]) {
@@ -259,7 +260,11 @@ describe('audited WorkAdventure runtime object aliases',()=>{
     for(const object of prior.layers.find((l:any)=>l.id===56).objects)object.class=object.type;
     const priorGeometry={width:prior.width,height:prior.height,tilewidth:prior.tilewidth,tileheight:prior.tileheight,layers:prior.layers,tilesets:prior.tilesets.map((t:Record<string,unknown>)=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:prior.properties.filter((p:{name:string})=>p.name!=='script')};
     expect(createHash('sha256').update(JSON.stringify(sorted(priorGeometry))).digest('hex')).toBe('4d4ac17adb4be1f3bf94bcc287978b0f11e805b6a6f958bd1ab492f902f8793c');
-    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('687b7189a946a2d4c246f30e64ccd4f87e1a7da86c514557d598bff5211fe37f');
+    const propsPublished=historicalPlaza('native');
+    for(const object of propsPublished.layers.find((l:any)=>l.id===56).objects)object.class=object.type;
+    const propsGeometry={width:propsPublished.width,height:propsPublished.height,tilewidth:propsPublished.tilewidth,tileheight:propsPublished.tileheight,layers:propsPublished.layers,tilesets:propsPublished.tilesets.map((t:Record<string,unknown>)=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:propsPublished.properties.filter((p:{name:string})=>p.name!=='script')};
+    expect(createHash('sha256').update(JSON.stringify(sorted(propsGeometry))).digest('hex')).toBe('687b7189a946a2d4c246f30e64ccd4f87e1a7da86c514557d598bff5211fe37f');
+    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('f1ac2d7ff9cc00205b425cc35736913e2fd8a4354b3b91060a0d0ba7bbbaab42');
     await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
   });
   it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{

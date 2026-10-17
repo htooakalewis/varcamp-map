@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "4d44320e794dec6a6cbc50efc1740280de84c5b479413f7948773f80763326e8",
+      "toSha256": "46752db62a26631fd4f85247ab730e4b8ac0feb6390081142ed56516377abee8",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: register original wave/deck art and licensed wave audio with complete attribution; preserve prior sprites."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "43104f9a7cb04d07b008b6ebe9dfd74a2e9d2e22ccd4bc542d22e044419f26ff",
+      "toSha256": "07cc419186c4e4d20751a01bfac7b264d81b5d29edafacf29878f7e0e7e87d51",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: register original wave/deck art and licensed wave audio with complete attribution; preserve prior sprites."
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "fromSha256": "34d96436d05b9ac44dc19c11601ea61b370ba1248fdd3b2a3981f31c3cb97ea7",
+      "toSha256": "eb36cff3ef90b7691a94eac7729cfb73b89bf8359857e3b0e03fd6eac7e7db57",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
+      "toSha256": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
+      "reason": "PLAZA-GROVES: append exactly 48 trees and 48 plants with 120 solid bases; preserve existing controls, artwork, standing supports and all 743 guide cells."
+    },
+    {
+      "path": "maps/preview/fa-ship.tmj",
+      "fromSha256": "92cf9f863bc9de529e8d89caf9678b37aa22a360e2b70ef1d049ecaa5a4e46d8",
+      "toSha256": "71ca46b0a5e732cb821495a5d8331c8f98659774b46cfed8569a5febd948c0ab",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "e075fec10b4b72d19ca682d519a9a0d510fba44d8aba53aefe7b46140259ee0d",
+      "toSha256": "d744c411eeac7c30190c702fcc4e40400e6cf09e5c3660a938cb1a4a4c25b184",
+      "reason": "PLAZA-GROVES: append exactly 48 trees and 48 plants with 120 solid bases; preserve existing controls, artwork, standing supports and all 743 guide cells."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "b0bb150ebb6c0a0e32cfdb4716bf5a5733b5cbf7702a44b683ff288b07af785e",
+      "toSha256": "28d3ac3eb2dcf6e3661300edec5fd90c9e92521a91b04b19c5136b898ee0ad5b",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "2710cb17d4829ed5df199618c4f333f44d5d80dae0b6ad77da423144d2e23d9c",
+      "toSha256": "96e29d9fa3bec117d87b2b7037efbc6066007a6e97283b07e37150aaf204c679",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    },
+    {
+      "path": "src/journal/view.ts",
+      "fromSha256": "b1a2580151265e0fd4b856dcfd10c330499f8356e886a6fd2311002eba35844f",
+      "toSha256": "a5286d754442edf6a18d67e0ec66fcb3e141a596fe6cfac03cfb9dc74ee399ae",
+      "reason": "SHIP-INTERIOR: expose the separate FA SHIP lower deck in the closed current map catalog and venue directory."
+    },
+    {
+      "path": "src/world/catalog.ts",
+      "fromSha256": "3543c11b3363235692130d344f0e369b30f1bfcca601b021436ff60cd1705e2e",
+      "toSha256": "95fbb4c9f5a762a34576252d32c3c9c497b850c56efef6bce1a54180a85f5920",
+      "reason": "SHIP-INTERIOR: expose the separate FA SHIP lower deck in the closed current map catalog and venue directory."
+    },
+    {
+      "path": "tests/authored-world.test.ts",
+      "fromSha256": "f359abf5a0144a9897785deaacd205be04910ac4799e6af89a2d77a597af1f2d",
+      "toSha256": "d8eedac4c6daf3f17fe734c6de73b29fa0ae4ebc05a005649112c5749bcb212e",
+      "reason": "CURRENT-CONSUMER-CLOSURE: verify reviewed current geometry and catalog while preserving authentic historical inputs; remove duplicate epoch-coupled Roadster byte authority in favor of the tested publication CLI."
+    },
+    {
+      "path": "tests/speaker-maps.test.ts",
+      "fromSha256": "5f601c09301efcccb98e31dc2c073c32e2a4227ab96400a2d7ccdb13c538e47c",
+      "toSha256": "0bfb3c6b06f5b87f11c93642302464293070a903a5f6f7e2c4216172951b97d8",
+      "reason": "CURRENT-CONSUMER-CLOSURE: verify reviewed current geometry and catalog while preserving authentic historical inputs; remove duplicate epoch-coupled Roadster byte authority in favor of the tested publication CLI."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "8f5da64acbaf6b5e9c01704525446fbcec759229900f1c832df30d08e5815d5f",
+      "toSha256": "d659414bc92070048e6602e1676ecce9f0b2abfc59d35c7c03dbffbf57933a46",
+      "reason": "CURRENT-CONSUMER-CLOSURE: verify reviewed current geometry and catalog while preserving authentic historical inputs; remove duplicate epoch-coupled Roadster byte authority in favor of the tested publication CLI."
+    },
+    {
+      "path": "tests/world-contract.test.ts",
+      "fromSha256": "82c6371ae28d9655ba55ce03b0f87113b234937a61ba5fdd69ee7e79fe86f302",
+      "toSha256": "12d291c4dfaaf5c6143a6b5224725c0281614c616489a75f4152feea28f70758",
+      "reason": "CURRENT-CONSUMER-CLOSURE: verify reviewed current geometry and catalog while preserving authentic historical inputs; remove duplicate epoch-coupled Roadster byte authority in favor of the tested publication CLI."
+    },
+    {
+      "path": "tests/world-package.test.ts",
+      "fromSha256": "163aec50b27ead37a267081aeba4617e7ba67107eef18e1c5a87b995ac250af3",
+      "toSha256": "369565f9cc7d7d22ccb3de9ea87187f3fd8bad97081e16802d20d3c6d301939a",
+      "reason": "CURRENT-CONSUMER-CLOSURE: verify reviewed current geometry and catalog while preserving authentic historical inputs; remove duplicate epoch-coupled Roadster byte authority in favor of the tested publication CLI."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "09e2836c2422259fca2f414a472f8d5af6d2657445779659ca3d6dfaf0582a2b",
+      "toSha256": "c4188e170d1ac17e4b46e76aba8ffb586594e4cbc5da9e986c3a83e712cec12e",
+      "reason": "CURRENT-CONSUMER-CLOSURE: validate and preserve the reviewed 34-map native sources, original animated art and audio through the normal production build."
+    },
+    {
+      "path": "tools/maps/build.ts",
+      "fromSha256": "61d2838f836874555c2c20da677dbdb1169629080344011dfcc92b67764c58b8",
+      "toSha256": "a726aa1399c526e71dc24eb6375ce15ce77e270f59f9f061ef13f9bb85041d1e",
+      "reason": "CURRENT-CONSUMER-CLOSURE: validate and preserve the reviewed 34-map native sources, original animated art and audio through the normal production build."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "9c1a2e1bf03827eccf36bfc80fe4072c094c5d465c6a503d95d17e1b3c762dd2",
+      "toSha256": "53e59395e86c190717674ee5ed12015b884b511ebf07373bf4e2afc3c2d17dd4",
+      "reason": "AUDIO-RELEASE: emit verified local MP3 bytes and credits, rewriting the actual native playAudio URL to its content-addressed release asset."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "c03578ac9cf8f0cc1ae6794e492ad15745d5c792803ac2a645a1dbfd30accbdc",
+      "toSha256": "f463d33eddaf07b0feb1b219fb0e4143abf46efc88bc5565dfe7830636b83b8b",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "90d67a0289dd5776f572dffb9c941c3c07d712ded66672af4fa81f8b6a96f42b",
+      "toSha256": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed",
+      "reason": "PLAZA-GROVES: append exactly 48 trees and 48 plants with 120 solid bases; preserve existing controls, artwork, standing supports and all 743 guide cells."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "a049fb2e3ee0ef00a20a5e9d572de10328d18953dca7a607dc30b091c043a71d",
+      "toSha256": "fd2ae22c43494fb3c58702c256467b9e1dacc6acc8fa6f07389c12151aac6fa2",
+      "reason": "BEACH-ANIMATION/SHIP-INTERIOR: native moving water, two rolling crests, quiet local wave audio and paired stairs into a connected furnished lower deck; keep published controls and licensed source art."
+    }
+  ]
+}

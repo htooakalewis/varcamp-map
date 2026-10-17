@@ -20,7 +20,7 @@ function reference(from: string, value: string): string {
 const nativeImage = (value: string) => value.replace(/\.[a-f0-9]{64}(?=\.png$)/, '');
 
 describe('finished release artifact (run npm run buildmap first)', () => {
-  it('passes the actual pinned archive tileset validator for all 33 emitted maps', async () => {
+  it('passes the actual pinned archive tileset validator for all 34 emitted maps', async () => {
     const maps = Object.fromEntries(ids.map(id => [`maps/${id}.tmj`, json(resolve(root, `maps/${id}.tmj`))]));
     expect(await pinnedTilesetValidation(maps, files)).toEqual({ rejectedReferences: 0, mapsRejected: 0 });
   });
@@ -41,7 +41,7 @@ describe('finished release artifact (run npm run buildmap first)', () => {
       expect(readFileSync(reference(resolve(root,'maps/overworld.tmj'),sheet.image!))).toEqual(readFileSync(`assets/sponsors/demo-0${n}.png`));
     }
   });
-  it('ships exactly the 33 catalog map pairs, excluding previews and samples', () => {
+  it('ships exactly the 34 catalog map pairs, excluding previews and samples', () => {
     expect(files.filter(p => p.endsWith('.tmj')).sort()).toEqual(ids.map(id => `maps/${id}.tmj`).sort());
     expect(files.filter(p => p.endsWith('.wam')).sort()).toEqual(ids.map(id => `maps/${id}.wam`).sort());
   });
@@ -59,6 +59,7 @@ describe('finished release artifact (run npm run buildmap first)', () => {
       expect(map.tilesets[index].image).toBe(original.replace(/\.png$/, `.${createHash('sha256').update(bytes).digest('hex')}.png`));
       tileset.image = map.tilesets[index].image;
     }
+    for(const layer of source.layers)for(const p of layer.properties??[])if(p.name==='playAudio'){const original=String(p.value),bytes=readFileSync(reference(resolve(`maps/${id}.tmj`),original)),hash=createHash('sha256').update(bytes).digest('hex');p.value=original.replace(/\.mp3$/,`.${hash}.mp3`);expect(readFileSync(reference(path,String(p.value)))).toEqual(bytes);}
     expect(JSON.stringify(map)).toBe(JSON.stringify(source));
     expect(existsSync(resolve(root, `maps/${id}.wam`))).toBe(true);
     const wam = json(resolve(root, `maps/${id}.wam`));

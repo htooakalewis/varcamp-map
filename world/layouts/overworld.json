@@ -12262,6 +12262,870 @@
       "width": 1,
       "height": 1,
       "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 60,
+      "y": 14,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-tree-1",
+      "sprite": "tree-evergreen",
+      "x": 64,
+      "y": 14,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-tree-2",
+      "sprite": "tree-flowering",
+      "x": 62,
+      "y": 14,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-tree-3",
+      "sprite": "tree-round",
+      "x": 67,
+      "y": 14,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-tree-0",
+      "sprite": "tree-evergreen",
+      "x": 40,
+      "y": 19,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-tree-1",
+      "sprite": "tree-flowering",
+      "x": 44,
+      "y": 18,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-tree-2",
+      "sprite": "tree-round",
+      "x": 42,
+      "y": 19,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-tree-3",
+      "sprite": "tree-round",
+      "x": 47,
+      "y": 17,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-tree-0",
+      "sprite": "tree-flowering",
+      "x": 80,
+      "y": 17,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-tree-1",
+      "sprite": "tree-round",
+      "x": 84,
+      "y": 19,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-tree-2",
+      "sprite": "tree-round",
+      "x": 82,
+      "y": 18,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-tree-3",
+      "sprite": "tree-evergreen",
+      "x": 87,
+      "y": 20,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 22,
+      "y": 37,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-tree-1",
+      "sprite": "tree-round",
+      "x": 25,
+      "y": 33,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-tree-2",
+      "sprite": "tree-evergreen",
+      "x": 19,
+      "y": 43,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-tree-3",
+      "sprite": "tree-flowering",
+      "x": 20,
+      "y": 40,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 104,
+      "y": 37,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-tree-1",
+      "sprite": "tree-evergreen",
+      "x": 106,
+      "y": 40,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-tree-2",
+      "sprite": "tree-flowering",
+      "x": 107,
+      "y": 43,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-tree-3",
+      "sprite": "tree-round",
+      "x": 108,
+      "y": 46,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-tree-0",
+      "sprite": "tree-evergreen",
+      "x": 13,
+      "y": 59,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-tree-1",
+      "sprite": "tree-flowering",
+      "x": 15,
+      "y": 61,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-tree-2",
+      "sprite": "tree-round",
+      "x": 13,
+      "y": 65,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-tree-3",
+      "sprite": "tree-round",
+      "x": 15,
+      "y": 66,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-tree-0",
+      "sprite": "tree-flowering",
+      "x": 112,
+      "y": 59,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-tree-1",
+      "sprite": "tree-round",
+      "x": 113,
+      "y": 62,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-tree-2",
+      "sprite": "tree-round",
+      "x": 112,
+      "y": 65,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-tree-3",
+      "sprite": "tree-evergreen",
+      "x": 113,
+      "y": 68,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 19,
+      "y": 82,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-tree-1",
+      "sprite": "tree-round",
+      "x": 20,
+      "y": 85,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-tree-2",
+      "sprite": "tree-evergreen",
+      "x": 22,
+      "y": 88,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-tree-3",
+      "sprite": "tree-flowering",
+      "x": 24,
+      "y": 91,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 107,
+      "y": 82,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-tree-1",
+      "sprite": "tree-evergreen",
+      "x": 106,
+      "y": 85,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-tree-2",
+      "sprite": "tree-flowering",
+      "x": 104,
+      "y": 88,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-tree-3",
+      "sprite": "tree-round",
+      "x": 106,
+      "y": 88,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-tree-0",
+      "sprite": "tree-evergreen",
+      "x": 38,
+      "y": 104,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-tree-1",
+      "sprite": "tree-flowering",
+      "x": 40,
+      "y": 106,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-tree-2",
+      "sprite": "tree-round",
+      "x": 36,
+      "y": 104,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-tree-3",
+      "sprite": "tree-round",
+      "x": 46,
+      "y": 109,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-tree-0",
+      "sprite": "tree-flowering",
+      "x": 81,
+      "y": 109,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-tree-1",
+      "sprite": "tree-round",
+      "x": 86,
+      "y": 105,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-tree-2",
+      "sprite": "tree-round",
+      "x": 88,
+      "y": 105,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-tree-3",
+      "sprite": "tree-evergreen",
+      "x": 90,
+      "y": 104,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-tree-0",
+      "sprite": "tree-round",
+      "x": 59,
+      "y": 111,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-tree-1",
+      "sprite": "tree-round",
+      "x": 67,
+      "y": 111,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-tree-2",
+      "sprite": "tree-evergreen",
+      "x": 69,
+      "y": 112,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-tree-3",
+      "sprite": "tree-flowering",
+      "x": 71,
+      "y": 111,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 58,
+      "y": 15,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 69,
+      "y": 14,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 66,
+      "y": 15,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-north-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 69,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 38,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 45,
+      "y": 16,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 37,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northwest-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 46,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 78,
+      "y": 17,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 89,
+      "y": 20,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 86,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-northeast-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 88,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 18,
+      "y": 46,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 27,
+      "y": 31,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 22,
+      "y": 40,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westnorth-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 25,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 101,
+      "y": 34,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 103,
+      "y": 35,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 105,
+      "y": 40,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastnorth-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 108,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-low-0",
+      "sprite": "flower-bed",
+      "x": 13,
+      "y": 63,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-low-1",
+      "sprite": "flower-bed",
+      "x": 15,
+      "y": 59,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-low-2",
+      "sprite": "plant-grass",
+      "x": 13,
+      "y": 68,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-west-middle-low-3",
+      "sprite": "plant-flower",
+      "x": 16,
+      "y": 64,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-low-0",
+      "sprite": "flower-bed",
+      "x": 112,
+      "y": 71,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-low-1",
+      "sprite": "flower-bed",
+      "x": 121,
+      "y": 58,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-low-2",
+      "sprite": "plant-grass",
+      "x": 112,
+      "y": 68,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-east-middle-low-3",
+      "sprite": "plant-flower",
+      "x": 114,
+      "y": 61,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 20,
+      "y": 88,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 17,
+      "y": 82,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 21,
+      "y": 90,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-westsouth-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 22,
+      "y": 86,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 102,
+      "y": 91,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 109,
+      "y": 82,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 104,
+      "y": 91,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-eastsouth-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 108,
+      "y": 86,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 34,
+      "y": 104,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 44,
+      "y": 109,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 39,
+      "y": 107,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southwest-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 48,
+      "y": 108,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 79,
+      "y": 109,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 92,
+      "y": 101,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 83,
+      "y": 109,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-southeast-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 88,
+      "y": 104,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-low-0",
+      "sprite": "flower-bed",
+      "x": 65,
+      "y": 113,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-low-1",
+      "sprite": "flower-bed",
+      "x": 72,
+      "y": 120,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-low-2",
+      "sprite": "plant-grass",
+      "x": 58,
+      "y": 112,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "draft-grove-south-inner-low-3",
+      "sprite": "plant-flower",
+      "x": 67,
+      "y": 114,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
     }
   ],
   "entries": [
