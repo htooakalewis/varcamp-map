@@ -10,8 +10,8 @@
     {
       "path": "art/sources.json",
       "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
-      "toSha256": "00d05c990f39c9550879066a2236d3709efb8f86ef14fc7de40c125ac07a0ff5",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+      "toSha256": "0bd1aeb4c2260a3638623aec0070727ec91ed16c79353c439894d5cd1520dc12",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reconcile exactly two parent-manifest hashes for accepted metadata-only editor catalog builder provenance; preserve artwork pixels and every other source record."
     },
     {
       "path": "art/tile-catalog.json",

@@ -366,7 +366,7 @@
     "ops/tests/release-upload.test.ts": "6d0fcea08c25e2cc366c7dbf7ad51bd3b9882b4626f04b259e65670ab4e62050",
     "ops/tests/release_graph_harness.py": "1a28644932654a5155c7a753eeb5c86e09f40fb89837d79722e8d251cc05516c",
     "ops/tests/test_editor_catalogs.py": "68416f15c8dba005aff08818838950d093bbe5a81b3c9eeaae0317db9ed28d33",
-    "publication/revisions/2026-10-16-shared-guides.json": "a5c6ff6db24b991d5b118a5da9ac04c0147d8c75efab4b610e5d50eb7ab0750c",
+    "publication/revisions/2026-10-16-shared-guides.json": "dfdc793c833264b47e6473d9d4b021037a06b6096b53ec02bb15a2dc40a050cf",
     "publication/revisions/README.md": "3e3e2de7ffb3cee827ac613837fda846aca14fbfda4528175905662f78893e0d",
     "publication/verify-source.mjs": "9c741532360f067bc3fa8cfe0a08ff4da1f9ca808b8781f631b152a3455cac7e",
     "src/bots/controller.ts": "7620159a83df7e38d43b92dbab2ff32489f8101dcaccc05359b7e0a1c1733ea6",
