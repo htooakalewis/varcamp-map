@@ -48,7 +48,7 @@ node ops/private/lyra-legacy-04b6d56/ops/bots/cli.mjs stop
 
 ## Readiness, evidence and failure authority
 
-All profiles pin `cb61aea75d5468999861a02571a05eeaa89428d3a8afa067f29a00d7ac6d54cc`, exactly 26,832 bytes, at `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=cb61aea75d5468999861a02571a05eeaa89428d3a8afa067f29a00d7ac6d54cc`. The runner verifies the exact HTTPS response with no redirects and fulfills the original browser import with those same bytes. It selects only the initialized expected `about:srcdoc` map frame and calls `default.run({ persona })` once. Ordinary visitors never activate the module.
+All profiles pin `60a002bd91e4a6e8966746a82796388290cdd2b1a3f320e3d99f89ebd4fae1ba`, exactly 26,832 bytes, at `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=60a002bd91e4a6e8966746a82796388290cdd2b1a3f320e3d99f89ebd4fae1ba`. The runner verifies the exact HTTPS response with no redirects and fulfills the original browser import with those same bytes. It selects only the initialized expected `about:srcdoc` map frame and calls `default.run({ persona })` once. Ordinary visitors never activate the module.
 
 For the production runner's freshly created isolated context only, readiness uses a positive welcome handshake. The lifecycle creates one blank guide page and issues an opaque, single-use grant; arbitrary/resumed contexts cannot enter this bootstrap. Public APIs must report the fixed room/name, expected map frame and one of the four reviewed native spawn cells, with unchanged identity/position at the subsequent settlement boundaries. No movement is commanded during UI settlement.
 

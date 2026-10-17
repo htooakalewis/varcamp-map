@@ -51,8 +51,11 @@ describe('builder catalog defaults',()=>{
   expect(descriptors).toEqual(expected);
  });
  for(const [id,proof]of Object.entries(before.maps) as [string,any][]){
-  it(`${id} adds native catalogs while preserving every other builder output`,()=>{
-   const layout=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8')) as MapLayout;
+  it(`${id} adds native catalogs while preserving every other builder output${id==='overworld'?' of its frozen historical input':''}`,()=>{
+   // This catalog-only receipt predates the separate return-navigation release.
+   const raw=readFileSync(id==='overworld'?'tests/fixtures/overworld-history/pre-return-layout.json':`world/layouts/${id}.json`,'utf8');
+   if(id==='overworld')expect(sha(raw)).toBe('49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093');
+   const layout=JSON.parse(raw) as MapLayout;
    const{tmj,wam}=buildMap(layout,catalog),{entityCollections,...rest}=wam;
    expect(entityCollections).toEqual(descriptors);
    expect(semantic(tmj)).toBe(proof.native);

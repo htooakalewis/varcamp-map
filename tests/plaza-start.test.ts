@@ -62,12 +62,31 @@ describe('fresh plaza arrival uses the central welcome court in the pinned clien
       expect(startPosition(map, sample, 'from-speaker-aries')).toEqual(aries[sample]);
     }
   });
-  it('preserves the selected positions of every prior named entry', () => {
+  it('historically preserved the selected positions of every prior named entry', () => {
     const before = JSON.parse(readFileSync('docs/qa/plaza-start-2026-10-16/before/maps/overworld.tmj', 'utf8')) as TiledMap;
     const names = before.layers.filter(l => l.type === 'tilelayer' && l.properties?.some(p => p.name === 'startLayer' && p.value === true)).map(l => l.name);
     expect(names).toHaveLength(25);
-    for (const map of Object.values(maps())) for (const name of names) for (let sample = 0; sample < 4; sample++) {
-      expect(startPosition(map, sample, name), name).toEqual(startPosition(before, sample, name));
+    const historicalBytes = readFileSync('tests/fixtures/overworld-history/17d4-native.tmj');
+    expect(createHash('sha256').update(historicalBytes).digest('hex')).toBe('87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad');
+    const historical = JSON.parse(historicalBytes.toString()) as TiledMap;
+    for (const name of names) for (let sample = 0; sample < 4; sample++) {
+      expect(startPosition(historical, sample, name), name).toEqual(startPosition(before, sample, name));
+    }
+  });
+  it('selects every corrected return cell and preserves all other prior named entries', () => {
+    const before = JSON.parse(readFileSync('docs/qa/plaza-start-2026-10-16/before/maps/overworld.tmj', 'utf8')) as TiledMap;
+    const names = before.layers.filter(l => l.type === 'tilelayer' && l.properties?.some(p => p.name === 'startLayer' && p.value === true)).map(l => l.name);
+    const corrected: Record<string, { x: number; y: number }[]> = {
+      'from-festival': [{ x: 304, y: 2032 }, { x: 336, y: 2032 }, { x: 304, y: 2064 }, { x: 336, y: 2064 }],
+      'from-arcade': [{ x: 304, y: 2032 }, { x: 336, y: 2032 }, { x: 304, y: 2064 }, { x: 336, y: 2064 }],
+      'from-maze': [{ x: 2032, y: 304 }, { x: 2064, y: 304 }, { x: 2032, y: 336 }, { x: 2064, y: 336 }],
+    };
+    expect(names).toHaveLength(25);
+    expect(names.filter(name => name in corrected).sort()).toEqual(Object.keys(corrected).sort());
+    for (const [kind, map] of Object.entries(maps())) for (const name of names) for (let sample = 0; sample < 4; sample++) {
+      expect(startPosition(map, sample, name), `${kind}, ${name}, sample ${sample}`).toEqual(
+        corrected[name]?.[sample] ?? startPosition(before, sample, name),
+      );
     }
   });
   it('reproduces the Aries fallback if the literal start alias is removed', () => {

@@ -1,12 +1,15 @@
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 
 const checker = resolve('publication/verify-source.mjs');
 const revisionPath = 'publication/revisions/2026-10-16-shared-guides.json';
+const navigationRevisionPath = 'publication/revisions/2026-10-17-return-approaches.json';
+const currentNative=readFileSync('maps/overworld.tmj','utf8');
+const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
 const replacement = 'reviewed replacement\n';
 const replacementHash = createHash('sha256').update(replacement).digest('hex');
@@ -16,7 +19,13 @@ const reviewed = () => ({ path: 'src/main.ts', fromSha256: baselineHash, toSha25
 describe('publication exact reviewed replacements', () => {
   let root: string;
   let manifest: { maps: number; wams: number; sourceFilesByteExact: number; sourceInventory: Record<string, string>; extensionInventory: Record<string, string> };
+  let baselineManifest: typeof manifest;
+  const touched=new Map<string,Buffer|undefined>();
+  let track=false;
+  function remember(path:string){if(track&&!touched.has(path))touched.set(path,existsSync(join(root,path))?readFileSync(join(root,path)):undefined);}
+  function remove(path:string){remember(path);rmSync(join(root,path));}
   function write(path: string, content: string) {
+    remember(path);
     mkdirSync(dirname(join(root, path)), { recursive: true });
     writeFileSync(join(root, path), content);
   }
@@ -24,6 +33,10 @@ describe('publication exact reviewed replacements', () => {
     const bytes = JSON.stringify(value);
     write(revisionPath, bytes);
     manifest.extensionInventory[revisionPath] = createHash('sha256').update(bytes).digest('hex');
+  }
+  function pinNavigation(value:unknown={schemaVersion:1,revisions:[]}) {
+    const bytes=JSON.stringify(value);write(navigationRevisionPath,bytes);
+    manifest.extensionInventory[navigationRevisionPath]=createHash('sha256').update(bytes).digest('hex');
   }
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
@@ -35,7 +48,8 @@ describe('publication exact reviewed replacements', () => {
     expect(result.status).not.toBe(0);
     expect(result.output).toContain(message);
   }
-  beforeEach(() => {
+  beforeAll(() => {
+    // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
     manifest = {
       maps: 33, wams: 33, sourceFilesByteExact: 303,
@@ -45,8 +59,18 @@ describe('publication exact reviewed replacements', () => {
     for (const path of originalPaths) write(path, 'baseline\n');
     write('src/bots/reviewed.ts', 'baseline\n');
     pinRevisions();
+    pinNavigation();
+    baselineManifest=structuredClone(manifest);track=true;
   });
-  afterEach(() => rmSync(root, { recursive: true, force: true }));
+  beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});
+  afterEach(()=>{
+    for(const[path,bytes]of touched){
+      if(bytes===undefined)rmSync(join(root,path),{force:true});
+      else{mkdirSync(dirname(join(root,path)),{recursive:true});writeFileSync(join(root,path),bytes);}
+    }
+    touched.clear();
+  });
+  afterAll(()=>rmSync(root,{recursive:true,force:true}));
 
   it('accepts an empty pinned revision list with all original bytes unchanged', () => {
     expect(verify().status).toBe(0);
@@ -80,7 +104,7 @@ describe('publication exact reviewed replacements', () => {
   });
 
   it('rejects a missing revision file', () => {
-    rmSync(join(root, revisionPath));
+    remove(revisionPath);
     rejects(`Missing extension source: ${revisionPath}`);
   });
 
@@ -91,7 +115,7 @@ describe('publication exact reviewed replacements', () => {
 
   it('rejects a missing reviewed source', () => {
     pinRevisions({ schemaVersion: 1, revisions: [reviewed()] });
-    rmSync(join(root, 'src/main.ts'));
+    remove('src/main.ts');
     rejects('Missing frozen source: src/main.ts');
   });
 
@@ -170,4 +194,54 @@ describe('publication exact reviewed replacements', () => {
     pinRevisions(value);
     rejects('Invalid reviewed revision schema');
   });
+  it('composes the fixed second document from the exact prior effective receipt',()=>{
+    const final='navigation replacement\n',digest=createHash('sha256').update(final).digest('hex');
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});
+    pinNavigation({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:digest}]});
+    write('src/main.ts',final);const result=verify();expect(result.status,result.output).toBe(0);
+    expect(manifest.sourceInventory['src/main.ts']).toBe(baselineHash);
+  });
+  it('requires the second fixed document to be explicitly pinned',()=>{
+    delete manifest.extensionInventory[navigationRevisionPath];
+    rejects('Reviewed revision file must be pinned in extensionInventory');
+  });
+  it('rejects a wrong prior link even when the first document bytes still match',()=>{
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement);
+    pinNavigation({schemaVersion:1,revisions:[{...reviewed(),fromSha256:baselineHash}]});
+    rejects('Reviewed revision prior mismatch: src/main.ts');
+  });
+  it('rejects duplicates within the second document, not legitimate cross-document succession',()=>{
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement);
+    const next={...reviewed(),fromSha256:replacementHash};pinNavigation({schemaVersion:1,revisions:[next,next]});
+    rejects('Duplicate reviewed revision: src/main.ts');
+  });
+  it('rejects a missing second-document link to final replacement bytes',()=>{
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts','unlinked next release\n');
+    rejects('Reviewed source changed: src/main.ts');
+  });
+  it('rejects a second-document row for an unlisted source',()=>{
+    pinNavigation({schemaVersion:1,revisions:[{...reviewed(),path:'src/unlisted.ts'}]});
+    rejects('Reviewed revision path is not an exact original source');
+  });
+  it('rejects a missing second document even when every original byte is unchanged',()=>{
+    remove(navigationRevisionPath);rejects(`Missing extension source: ${navigationRevisionPath}`);
+  });
+  it.each([null,{schemaVersion:2,revisions:[]},{schemaVersion:1,revisions:[],extra:true},{schemaVersion:1,revisions:[null]}])('enforces the unchanged closed schema for the second document %#',value=>{
+    pinNavigation(value);rejects('Invalid reviewed revision schema');
+  });
+  it.each(['scenery','layer-order','collision','metadata','role','placement'])('actual publication CLI rejects %s drift after a positive current artifact baseline',kind=>{
+    const rows=[['maps/overworld.tmj',currentNative],['world/layouts/overworld.json',currentLayout]].map(([path,raw])=>({path,fromSha256:baselineHash,toSha256:createHash('sha256').update(raw).digest('hex'),reason:'Exact current navigation artifact fixture'}));
+    pinNavigation({schemaVersion:1,revisions:rows});write('maps/overworld.tmj',currentNative);write('world/layouts/overworld.json',currentLayout);
+    const positive=verify();expect(positive.status,positive.output).toBe(0); // Establish genuine success BEFORE the mutation.
+    const map=JSON.parse(currentNative),layout=JSON.parse(currentLayout);
+    if(kind==='scenery'){const l=map.layers.find((l:{name:string})=>l.name==='scenery-belowAvatar-0');l.data[l.data.findIndex(Boolean)]=0;}
+    if(kind==='layer-order'){const l=map.layers.find((l:{name:string})=>l.name==='scenery-belowAvatar-2');map.layers=map.layers.filter((x:unknown)=>x!==l);map.layers.push(l);}
+    if(kind==='collision'){const l=map.layers.find((l:{name:string})=>l.name==='physical-collisions');l.data[65*128+63]=l.data.find(Boolean);}
+    if(kind==='metadata')map.nextobjectid++;
+    if(kind==='role')layout.placements.find((p:{id:string})=>p.id==='aries-building').renderRole='canopy';
+    if(kind==='placement')layout.placements[0].x++;
+    const path=kind==='role'||kind==='placement'?'world/layouts/overworld.json':'maps/overworld.tmj';
+    write(path,JSON.stringify(path.endsWith('.tmj')?map:layout)+'\n');rejects('Reviewed source changed: '+path);
+  });
+
 });

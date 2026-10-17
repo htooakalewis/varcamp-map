@@ -27,10 +27,15 @@ describe('confirmed nonroom avatar visibility',()=>{
   const source=json(`world/layouts/${id}.json`) as MapLayout;
   const layout=source;
   const generated=buildMap(layout,catalog).tmj;
-  it(`${id} preserves placements, collision and navigation exactly`,()=>{
+  it(`${id} preserves placements/collision and its independently scoped navigation receipt`,()=>{
    expect(source.placements.filter(p=>p.renderRole).map(p=>p.id).sort()).toEqual([...approved.filter(p=>p.map===id).map(p=>p.placement),...(id==='overworld'?assemblyAdditions.map(p=>p.id):[])].sort());
    expect(hash(canonical(source.placements.map(({renderRole:_,...p})=>p)))).toBe(before.placements);
-   expect(hash(canonical(Object.fromEntries(['entries','exits','areas','signs'].map(k=>[k,(source as any)[k]]))))).toBe(before.navigation);
+   // The visibility release's navigation claim belongs to its immutable input;
+   // current overworld navigation has a separate exact three-placement receipt.
+   const frozen=id==='overworld'?readFileSync('tests/fixtures/overworld-history/17d4-layout.json'):undefined;
+   if(frozen)expect(hash(frozen)).toBe('6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
+   const navigation=frozen?JSON.parse(frozen.toString()):source;
+   expect(hash(canonical(Object.fromEntries(['entries','exits','areas','signs'].map(k=>[k,(navigation as any)[k]]))))).toBe(before.navigation);
    for(const map of [generated,json(`maps/${id}.tmj`)]){
     const collision=map.layers.find((l:any)=>l.name==='physical-collisions');
     expect(hash(canonical(collision.data.flatMap((gid:number,i:number)=>gid?[i]:[])))).toBe(before.collision);

@@ -35,10 +35,11 @@ describe('publication source integrity CLI', () => {
     };
     for (const path of baselinePaths) write(path, 'baseline\n');
     for (const path of Object.keys(manifest.extensionInventory)) write(path, 'extension\n');
-    const revisionPath = 'publication/revisions/2026-10-16-shared-guides.json';
     const revisions = JSON.stringify({ schemaVersion: 1, revisions: [] });
-    write(revisionPath, revisions);
-    manifest.extensionInventory[revisionPath] = createHash('sha256').update(revisions).digest('hex');
+    for(const revisionPath of ['publication/revisions/2026-10-16-shared-guides.json','publication/revisions/2026-10-17-return-approaches.json']){
+      write(revisionPath, revisions);
+      manifest.extensionInventory[revisionPath] = createHash('sha256').update(revisions).digest('hex');
+    }
   });
   afterEach(() => rmSync(root, { recursive: true, force: true }));
 

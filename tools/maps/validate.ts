@@ -1,4 +1,5 @@
 import { emittedWamSchema } from './wam-schema';
+import overworldLayout from '../../world/layouts/overworld.json';
 import type { MapId, WORLD_CATALOG } from '../../src/world/catalog';
 import { tiledMapSchema } from './schema';
 import type { TiledLayer, TiledProperty, TileLayer } from './types';
@@ -107,6 +108,63 @@ export function validateMap(map: unknown, catalog: typeof WORLD_CATALOG): Valida
     for (const cell of cells) {
       if (blocked.has(cell)) add('SPAWN_BLOCKED', path, `Spawn tile ${cell} overlaps collision`);
       if (exits.has(cell)) add('SPAWN_EXIT_OVERLAP', path, `Spawn tile ${cell} immediately triggers an exit`);
+    }
+  }
+  // These public/legacy hashes are one closed wayfinding contract. Validate the
+  // emitted tiles in BOTH author exports and native-preserving builds, so an
+  // alias can never silently drift to the wrong side of a decorative gate.
+  if (mapId === 'overworld') {
+    const families = {
+      solar: ['from-solar'], lunar: ['from-lunar'], maze: ['from-maze'],
+      festival: ['from-festival', 'from-arcade'], shipyard: ['from-shipyard'],
+      campus: ['from-campus', 'from-fire', 'from-earth', 'from-air', 'from-water', 'from-observatory'],
+    };
+    const expected = Object.values(families).flat().sort();
+    const actual = spawnLayers.filter(s => s.layer.name.startsWith('from-') && !s.layer.name.startsWith('from-speaker-'));
+    if (JSON.stringify(actual.map(s => s.layer.name).sort()) !== JSON.stringify(expected)) {
+      add('RETURN_ALIAS_SET', 'layers', 'Public return aliases must match the closed six gate families');
+    }
+    for (const [family, aliases] of Object.entries(families)) {
+      const gates = layers.filter(({ layer }) => layer.name === `exit-${family}` && layer.type === 'tilelayer');
+      if (gates.length !== 1) { add('RETURN_APPROACH', family, 'Require one concrete gate aperture'); continue; }
+      const gate = gates[0];
+      const layer = gate.layer as TileLayer;
+      // A named painted aperture alone is not a working destination. The
+      // authored exit owns its route; the existing catalog owns valid entries.
+      const authored = overworldLayout.exits.find(exit => exit.name === family);
+      const destination = authored && Object.hasOwn(catalog, authored.destination) ? catalog[authored.destination as MapId] : undefined;
+      const urls = layer.properties?.filter(p => p.name === 'exitUrl') ?? [];
+      if (!authored || !destination?.entries.some(entry => entry === authored.entry) || urls.length !== 1 || urls[0].type !== 'string' || urls[0].value !== `${authored.destination}.wam#${authored.entry}`) {
+        add('RETURN_DESTINATION', layer.name, 'Gate must retain its authored destination and a catalog entry');
+      }
+      const targets = new Set(layer.data.flatMap((v, i) => v ? [`${i % layer.width + gate.offsetX},${Math.floor(i / layer.width) + gate.offsetY}`] : []));
+      const points = [...targets].map(c => c.split(',').map(Number));
+      const xs = new Set(points.map(p => p[0])), ys = new Set(points.map(p => p[1]));
+      if (!points.length || (xs.size !== 1 && ys.size !== 1)) { add('RETURN_APPROACH', family, 'Gate aperture must be a nonempty straight tile segment'); continue; }
+      const dx = xs.size === 1 ? (points[0][0] < tmj.width / 2 ? -1 : 1) : 0;
+      const dy = xs.size === 1 ? 0 : (points[0][1] < tmj.height / 2 ? -1 : 1);
+      let anchor: string | undefined;
+      for (const alias of aliases) {
+        const matches = actual.filter(s => s.layer.name === alias);
+        if (matches.length !== 1) continue; // The closed-set check reports missing/duplicate aliases.
+        const cells = matches[0].cells;
+        const shape = JSON.stringify([...cells].sort());
+        const sx = new Set(cells.map(c => Number(c.split(',')[0]))), sy = new Set(cells.map(c => Number(c.split(',')[1])));
+        if (cells.length !== 4 || new Set(cells).size !== 4 || sx.size !== 2 || sy.size !== 2 || Math.max(...sx) - Math.min(...sx) !== 1 || Math.max(...sy) - Math.min(...sy) !== 1 || (anchor !== undefined && anchor !== shape)) {
+          add('RETURN_FAMILY', alias, 'Every family alias must share the same four spawn tiles');
+        }
+        anchor ??= shape;
+        for (const start of cells) {
+          const [x, y] = start.split(',').map(Number);
+          let reached = false;
+          for (let n = 0; n <= tmj.width + tmj.height; n++) {
+            const nx = x + dx * n, ny = y + dy * n, cell = `${nx},${ny}`;
+            if (nx < 0 || ny < 0 || nx >= tmj.width || ny >= tmj.height || blocked.has(cell) || (exits.has(cell) && !targets.has(cell))) break;
+            if (targets.has(cell)) { reached = true; break; }
+          }
+          if (!reached) add('RETURN_APPROACH', alias, `Spawn ${start} needs a clear straight approach to its own gate aperture`);
+        }
+      }
     }
   }
   return issues;

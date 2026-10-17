@@ -1,13 +1,20 @@
 import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import{readFileSync}from'node:fs';
-import{historicalNative,historicalLayout,historicalBytes,visibilityHistoryMaps}from'./helpers/visibility-history';
+import{historicalBytes,visibilityHistoryMaps}from'./helpers/visibility-history';
 import{createHash}from'node:crypto';
 import{describe,it,expect}from'vitest';
 import sharp from'sharp';
 import{buildMap}from'../tools/maps/builder';
 import{addNpcGuides}from'../tools/maps/npc-guides';
 import{loadTileCatalog}from'../tools/art/catalog';
-import type{MapLayout,TileRect,TileLayer}from'../tools/maps/types';
+import type{MapLayout,TileRect,TileLayer,TiledMap}from'../tools/maps/types';
+function frozenOverworld(kind:'tmj'):TiledMap;
+function frozenOverworld(kind:'json'):MapLayout;
+function frozenOverworld(kind:'tmj'|'json'):TiledMap|MapLayout{
+ const raw=readFileSync(`tests/fixtures/overworld-history/17d4-${kind==='tmj'?'native.tmj':'layout.json'}`);
+ expect(createHash('sha256').update(raw).digest('hex')).toBe(kind==='tmj'?'87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad':'6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
+ return JSON.parse(raw.toString());
+}
 const source=(id:string)=>JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8')) as MapLayout;
 const before=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/fa-ship-before.json','utf8')) as MapLayout;
 const cells=(r:TileRect,w:number)=>Array.from({length:r.width*r.height},(_,i)=>(r.y+Math.floor(i/r.width))*w+r.x+i%r.width);
@@ -20,28 +27,28 @@ describe('native coastal boarding and nautical proportions',()=>{
   if(path==='maps/overworld.tmj'||path==='world/layouts/overworld.json'){
    const frozen=readFileSync(`docs/qa/plaza-start-2026-10-16/before/${path}`);
    expect(createHash('sha256').update(frozen).digest('hex'),path+' retained pre-fix baseline').toBe(hash);
-   const nativeCurrent=path.endsWith('.tmj')?historicalNative('overworld'):undefined;
-   const authoredCurrent=nativeCurrent?undefined:historicalLayout('overworld');
-   const current=nativeCurrent??authoredCurrent!,original=JSON.parse(frozen.toString());
+   const nativeHistorical=path.endsWith('.tmj')?frozenOverworld('tmj'):undefined;
+   const authoredHistorical=nativeHistorical?undefined:frozenOverworld('json');
+   const historical=nativeHistorical??authoredHistorical!,original=JSON.parse(frozen.toString());
    // Independently verified additive native display; preserve the older coastal receipt.
-   if(nativeCurrent){nativeCurrent.layers=nativeCurrent.layers.filter(l=>l.name!=='roadster');nativeCurrent.tilesets=nativeCurrent.tilesets.filter(s=>s.name!=='roadster');nativeCurrent.nextlayerid!--;}else delete authoredCurrent!.animatedOverlays;
-   if(nativeCurrent){
-    const aliases=nativeCurrent.layers.filter((l:{name:string})=>l.name==='start');expect(aliases).toHaveLength(1);
-    const welcome=nativeCurrent.layers.find((l:{name:string})=>l.name==='welcome');
+   if(nativeHistorical){nativeHistorical.layers=nativeHistorical.layers.filter(l=>l.name!=='roadster');nativeHistorical.tilesets=nativeHistorical.tilesets.filter(s=>s.name!=='roadster');nativeHistorical.nextlayerid!--;}else delete authoredHistorical!.animatedOverlays;
+   if(nativeHistorical){
+    const aliases=nativeHistorical.layers.filter((l:{name:string})=>l.name==='start');expect(aliases).toHaveLength(1);
+    const welcome=nativeHistorical.layers.find((l:{name:string})=>l.name==='welcome');
     expect(aliases[0]).toEqual({...welcome,id:aliases[0].id,name:'start',properties:[{name:'startLayer',type:'bool',value:true}]});
-    const aliasIndex=nativeCurrent.layers.indexOf(aliases[0]);expect(aliases[0].id).toBe(aliasIndex+1);
-    nativeCurrent.layers=nativeCurrent.layers.filter((l:{name:string})=>l.name!=='start');
-    nativeCurrent.layers.forEach((l:{id:number},i:number)=>{if(i>=aliasIndex)l.id--;});nativeCurrent.nextlayerid!--;
+    const aliasIndex=nativeHistorical.layers.indexOf(aliases[0]);expect(aliases[0].id).toBe(aliasIndex+1);
+    nativeHistorical.layers=nativeHistorical.layers.filter((l:{name:string})=>l.name!=='start');
+    nativeHistorical.layers.forEach((l:{id:number},i:number)=>{if(i>=aliasIndex)l.id--;});nativeHistorical.nextlayerid!--;
    }else{
-    const aliases=authoredCurrent!.entries.filter((e:{name:string})=>e.name==='start');
+    const aliases=authoredHistorical!.entries.filter((e:{name:string})=>e.name==='start');
     expect(aliases).toEqual([{name:'start',x:63,y:65,width:2,height:2}]);
-    authoredCurrent!.entries=authoredCurrent!.entries.filter((e:{name:string})=>e.name!=='start');
+    authoredHistorical!.entries=authoredHistorical!.entries.filter((e:{name:string})=>e.name!=='start');
    }
    if(path.endsWith('.tmj')){
     const l=original.layers.find((l:{name:string})=>l.name==='scenery-belowAvatar-1');l.data[70*128+77]=0;l.data[71*128+77]=0;
     const names=original.layers.find((l:{name:string})=>l.name==='wayfinding-text');names.objects=names.objects.filter((o:{name:string})=>o.name!=='npc-name-guide');
    }else original.areas=original.areas.filter((a:{name:string})=>a.name!=='npc-guide');
-   expect(current,path+' changed beyond its start alias and exact robot removal').toEqual(original);
+   expect(historical,path+' historical changes beyond its start alias and exact robot removal').toEqual(original);
   }else if(['maps/comet-maze.tmj','maps/comet-maze.wam','maps/orbit-maze.tmj','maps/orbit-maze.wam','maps/overworld.wam','world/layouts/orbit-maze.json'].includes(path)||/^(?:maps\/(?:preview\/)?(?:speaker-(?:aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)|solar-hall|lunar-hall)\.tmj|world\/layouts\/(?:speaker-(?:aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)|solar-hall|lunar-hall)\.json)$/.test(path)){
    // The old coastal receipt stays immutable; exact native semantic deltas are
    // independently checked in npc-maps.test.ts and room-cutaway.test.ts; publication pins exact replacement bytes.

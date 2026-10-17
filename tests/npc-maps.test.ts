@@ -4,8 +4,15 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { expect, it } from 'vitest';
 import { historicalNative } from './helpers/visibility-history';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import type { MapLayout } from '../tools/maps/types';
+import type { MapLayout, TiledMap } from '../tools/maps/types';
 
+function frozenOverworld(kind:'tmj'):TiledMap;
+function frozenOverworld(kind:'json'):MapLayout;
+function frozenOverworld(kind:'tmj'|'json'):TiledMap|MapLayout{
+ const raw=readFileSync(`tests/fixtures/overworld-history/17d4-${kind==='tmj'?'native.tmj':'layout.json'}`);
+ expect(createHash('sha256').update(raw).digest('hex')).toBe(kind==='tmj'?'87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad':'6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
+ return JSON.parse(raw.toString());
+}
 const load = (id: string): MapLayout => JSON.parse(readFileSync(`world/layouts/${id}.json`, 'utf8'));
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const hosts = [['overworld','guide'],['orbit-maze','maze-keeper'],['comet-maze','maze-keeper'],['shipyard-beach','dockmaster']] as const;
@@ -47,8 +54,8 @@ it.each(receipts)('removes only reviewed %s native robot data while preserving c
  // historical retirement proof against its exact committed native snapshot, so
  // shallow CI needs no git history and none of the old receipts are repinned.
  const nativePath=id==='shipyard-beach'?'tests/fixtures/beach-retirement/retired-native.tmj':`maps/${id}.tmj`;
- const tmj=id==='shipyard-beach'?JSON.parse(readFileSync(nativePath,'utf8')):historicalNative(id),wam=historicalEditorWam(id);
- // First prove the exact frozen17d4 state through the explicit role-only inverse;
+ const tmj=id==='shipyard-beach'?JSON.parse(readFileSync(nativePath,'utf8')):id==='overworld'?frozenOverworld('tmj'):historicalNative(id),wam=historicalEditorWam(id);
+ // First prove the exact frozen17d4 fixture without consulting current navigation;
  // only then apply the independently verified historical Roadster inversion.
  if(id==='overworld'){tmj.layers=tmj.layers.filter((l:{name:string})=>l.name!=='roadster');tmj.tilesets=tmj.tilesets.filter((s:{name:string})=>s.name!=='roadster');tmj.nextlayerid--;}
  expect(digest(tmj)).toBe(tmjHash);expect(digest(wam)).toBe(wamHash);

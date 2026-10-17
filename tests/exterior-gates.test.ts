@@ -1,11 +1,18 @@
 import {readFileSync} from 'node:fs';
-import {historicalLayout} from './helpers/visibility-history';
+import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
 import {buildMap} from '../tools/maps/builder';
 import {addNpcGuides} from '../tools/maps/npc-guides';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {WORLD_CATALOG} from '../src/world/catalog';
-import type {MapLayout,TileRect,TileLayer} from '../tools/maps/types';
+import type {MapLayout,TileRect,TileLayer,TiledMap} from '../tools/maps/types';
+function frozenOverworld(kind:'tmj'):TiledMap;
+function frozenOverworld(kind:'json'):MapLayout;
+function frozenOverworld(kind:'tmj'|'json'):TiledMap|MapLayout{
+ const raw=readFileSync(`tests/fixtures/overworld-history/17d4-${kind==='tmj'?'native.tmj':'layout.json'}`);
+ expect(createHash('sha256').update(raw).digest('hex')).toBe(kind==='tmj'?'87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad':'6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
+ return JSON.parse(raw.toString());
+}
 const before=JSON.parse(readFileSync('docs/qa/exterior-gates-2026-10-16/overworld-before.json','utf8')) as MapLayout;
 const source=()=>JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout;
 const cells=(r:TileRect,w:number)=>Array.from({length:r.width*r.height},(_,i)=>(r.y+Math.floor(i/r.width))*w+r.x+i%r.width);
@@ -16,7 +23,7 @@ function walk(w:number,mask:number[],start:number,forbidden=new Set<number>()){c
 const radius=(n:number,w:number)=>Math.hypot(n%w-63.5,Math.floor(n/w)-63.5);
 describe('exterior circle road keeps public destinations out of the speaker plaza',()=>{
  it('preserves the complete speaker and compact arrival composition at native scale on128²',()=>{
-  const l=historicalLayout('overworld');expect([l.width,l.height]).toEqual([128,128]);expect([WORLD_CATALOG.overworld.width,WORLD_CATALOG.overworld.height]).toEqual([128,128]);
+  const l=frozenOverworld('json');expect([l.width,l.height]).toEqual([128,128]);expect([WORLD_CATALOG.overworld.width,WORLD_CATALOG.overworld.height]).toEqual([128,128]);
   for(const p of before.placements.filter(p=>/-building$|-bold-nameplate$|-zodiac-emblem$/.test(p.id)||['varcamp-nameplate','welcome-control-sign','directory-prompt','arrival-position-label','arrival-direction-crosspost','arrival-compass','welcome-seat','welcome-table','reception-desk','reception-screen','reception-screen-content'].includes(p.id)||p.id.startsWith('reception-post-')||p.id.startsWith('sponsor-')))expect(l.placements.find(q=>q.id===p.id),p.id).toEqual(translated(p));
   expect(l.images).toEqual(before.images!.map(translated));expect(l.areas).toEqual(before.areas.filter(a=>a.name!=='npc-guide').map(translated));
   for(const e of before.exits.filter(e=>e.destination.startsWith('speaker-')))expect(l.exits.find(q=>q.name===e.name)).toEqual(translated(e));

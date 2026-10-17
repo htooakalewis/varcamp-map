@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "fc1fd22b1b4d515944425ab48b7d29b2d89fa1e040fb05396ee3a04e9987eb05",
+      "toSha256": "4003e45a8e731da13fc684a13ec0b923c5fb3f58feecf3d64030bea34393d953",
+      "reason": "Three invisible return start masks only; exact24cell delta, no visible/collision/portal change. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "f41fe466894dc15c42a78f6e7ce2da3fca6af26b67af0307d04c13dce27305b0",
+      "toSha256": "80721b2ac69e346ed40d1a32812143eabcfef180d3fe6a684a05d599cff9fc83",
+      "reason": "Same3invisible masks through unchanged complete preview projection; other32previews unchanged. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "ffde92fc07f047e72d4c033d4a74cdd75130e5b43a74fafe12cb5aeca42faee8",
+      "toSha256": "ca87833b023f8459e418b2d54b20f487e6557c9e4a343ae39f8fddf923e8555d",
+      "reason": "Historical17d4 snapshot input retains original coastal/start/robot/Roadster assertions. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "f9cbfc2494078c7511798e51fdff3092a9a0e268e2a897bd49e993aaee8d69d0",
+      "toSha256": "370bfd0bc8bfab9acdad4c990e3275f16ce3c91ac009410415774c0de0ff1acd",
+      "reason": "Historical17d4 snapshot input separated from current return approach checks; original receipts retained. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "tests/npc-maps.test.ts",
+      "fromSha256": "9cd575f37488deb6370857ab2d6b15740578bd14da7c6e6e68601749fe293d92",
+      "toSha256": "95cff94cd326009ebfeb07a523c717d6ef493a02e864128485a5ea019f9fac8a",
+      "reason": "Historical17d4 snapshot input retains original exact robot retirement receipts. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "tests/plaza-start.test.ts",
+      "fromSha256": "8075c3ff84f9d9891c91357af5009ba7c5796da9f43758589acb69e3f0a7ab38",
+      "toSha256": "e49b9296e5a176687c63e0f27927e8807e391e2bf913a2f0f8b4b1c061f88dc5",
+      "reason": "Original25 historical entry selector proof retained on exact17d4fixture; actualcurrent selectors prove3corrected plus22unchanged returns. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "tools/maps/validate.ts",
+      "fromSha256": "8daa3d1167f15fc9df1fd79a27139bc4754ce08bd85a950dc0a45b036a49518a",
+      "toSha256": "ae95f1482edebb82156dbcf990eedfb7570693bd58b89bb092a71da5a576ab51",
+      "reason": "Closed12alias/6family/all4spawncell approach and authored/catalog functional destination validation. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093",
+      "toSha256": "30675fde749568f668e50eec82d6290d8ade2520767eaed76a34304d69ec67a9",
+      "reason": "Three approved return x/y placements only; all other authored fields preserved. See tests/fixtures/overworld-history/return-navigation-delta.json and the reviewed return-navigation source checkpoint."
+    }
+  ]
+}

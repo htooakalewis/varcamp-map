@@ -1,0 +1,132 @@
+{
+  "baselineCommit": "e7f45e61735ecfb5890b8f1b469582bc80aaf19c",
+  "before": {
+    "layout": {
+      "rawSha256": "49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093",
+      "semanticSha256": "b8c6027d6d311a452c1a76f3839f366d5dc48e6597ba216ff5f7ec571e1292e5"
+    },
+    "native": {
+      "rawSha256": "fc1fd22b1b4d515944425ab48b7d29b2d89fa1e040fb05396ee3a04e9987eb05",
+      "semanticSha256": "372436247a73008b6f7dd274a0b3d90dc1ab2780642baf321136d797f7b9a2c7"
+    }
+  },
+  "after": {
+    "layout": {
+      "rawSha256": "30675fde749568f668e50eec82d6290d8ade2520767eaed76a34304d69ec67a9",
+      "semanticSha256": "66cacf454c873b51930538f12663e13fafdf0cc2f65c5103dcceac53ae79fa01"
+    },
+    "native": {
+      "rawSha256": "4003e45a8e731da13fc684a13ec0b923c5fb3f58feecf3d64030bea34393d953",
+      "semanticSha256": "8067c8c9d9de0d2509ea870c2a4e37f3d757b5626a99ead6adde06b497752a3c"
+    }
+  },
+  "unchangedLayoutProjectionSha256": "a50fab1efadcee635eb054f7dd23de5f822ad0acbab8a7d70fab8c32f7363b71",
+  "unchangedNativeProjectionSha256": "f7be5b6708a94480ee0d8e5c9b02f092fd4cb5703aa79c2b49260f0162c97ddf",
+  "changes": [
+    {
+      "name": "from-festival",
+      "before": {
+        "name": "from-festival",
+        "x": 5,
+        "y": 68,
+        "width": 2,
+        "height": 2
+      },
+      "after": {
+        "name": "from-festival",
+        "x": 9,
+        "y": 63,
+        "width": 2,
+        "height": 2
+      },
+      "nativeCells": [
+        {
+          "index": 8073,
+          "gid": 3990
+        },
+        {
+          "index": 8074,
+          "gid": 3990
+        },
+        {
+          "index": 8201,
+          "gid": 3990
+        },
+        {
+          "index": 8202,
+          "gid": 3990
+        }
+      ]
+    },
+    {
+      "name": "from-arcade",
+      "before": {
+        "name": "from-arcade",
+        "x": 5,
+        "y": 68,
+        "width": 2,
+        "height": 2
+      },
+      "after": {
+        "name": "from-arcade",
+        "x": 9,
+        "y": 63,
+        "width": 2,
+        "height": 2
+      },
+      "nativeCells": [
+        {
+          "index": 8073,
+          "gid": 3990
+        },
+        {
+          "index": 8074,
+          "gid": 3990
+        },
+        {
+          "index": 8201,
+          "gid": 3990
+        },
+        {
+          "index": 8202,
+          "gid": 3990
+        }
+      ]
+    },
+    {
+      "name": "from-maze",
+      "before": {
+        "name": "from-maze",
+        "x": 68,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "after": {
+        "name": "from-maze",
+        "x": 63,
+        "y": 9,
+        "width": 2,
+        "height": 2
+      },
+      "nativeCells": [
+        {
+          "index": 1215,
+          "gid": 3990
+        },
+        {
+          "index": 1216,
+          "gid": 3990
+        },
+        {
+          "index": 1343,
+          "gid": 3990
+        },
+        {
+          "index": 1344,
+          "gid": 3990
+        }
+      ]
+    }
+  ]
+}

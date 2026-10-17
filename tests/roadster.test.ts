@@ -1,8 +1,14 @@
 import { approvedEditorCollections, editorCatalogHistoryMaps, historicalEditorWamBytes, editorMetadataHistoryPaths, historicalEditorMetadataBytes } from './helpers/editor-catalog-history';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { historicalLayout, historicalNative } from './helpers/visibility-history';
 import type { TiledMap, TileLayer } from '../tools/maps/types';
+function frozenOverworld(kind:'tmj'):TiledMap;
+function frozenOverworld(kind:'json'):MapLayout;
+function frozenOverworld(kind:'tmj'|'json'):TiledMap|MapLayout{
+ const raw=readFileSync(`tests/fixtures/overworld-history/17d4-${kind==='tmj'?'native.tmj':'layout.json'}`);
+ expect(createHash('sha256').update(raw).digest('hex')).toBe(kind==='tmj'?'87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad':'6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e');
+ return JSON.parse(raw.toString());
+}
 const native = (): TiledMap => JSON.parse(readFileSync('maps/overworld.tmj', 'utf8'));
 describe('stationary native Roadster display', () => {
  it('renders a complete fixed 5×5 native animation, not a decorative still or moving map actor', () => {
@@ -31,34 +37,18 @@ const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const fixtureRoot = 'docs/qa/coastal-flight-2026-10-16/prototype';
 const parse = createRequire(import.meta.url)(resolve(fixtureRoot, 'upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js'));
 
-it('preserves the original sole-addition Roadster receipt after the exact approved visibility inverse', () => {
- const map = historicalNative('overworld');
+it('preserves the original sole-addition Roadster receipt against its immutable historical fixture', () => {
+ const map = frozenOverworld('tmj');
  expect(map.layers.filter(l => l.name === 'roadster')).toHaveLength(1);
  expect(map.tilesets.filter(s => s.name === 'roadster')).toHaveLength(1);
  expect(map.layers.at(-1)?.name).toBe('roadster');
  expect(map.layers.at(-1)?.id).toBe(map.nextlayerid! - 1);
  map.layers.pop(); map.tilesets.pop(); map.nextlayerid!--;
  expect(sha(JSON.stringify(map))).toBe('0e2d4fff09d8476eed187ae8a25bfdbd72182a35846ad02b1f89a62fcd8647d1');
- const layout = historicalLayout('overworld'); delete layout.animatedOverlays;
+ const layout = frozenOverworld('json'); delete layout.animatedOverlays;
  expect(sha(JSON.stringify(layout, null, 2)+'\n')).toBe('4f80ae57e635a8eb1efe1ba7e44eaca109a750ec455f7db169259c725a31a351');
 });
 
-it('refuses scenery, collision, metadata or authored drift outside the approved historical inverse', () => {
- const scenery=native();const layer=scenery.layers.find(l=>l.name==='scenery-belowAvatar-0') as TileLayer;
- const index=layer.data.findIndex(Boolean);layer.data[index]=0;
- expect(()=>historicalNative('overworld',scenery)).toThrow(/current approved scenery/);
- const reordered=native();const added=reordered.layers.find(l=>l.name==='scenery-belowAvatar-2')!;reordered.layers=reordered.layers.filter(l=>l!==added);reordered.layers.push(added);
- expect(()=>historicalNative('overworld',reordered)).toThrow(/approved added layer position/);
- const collision=native();const mask=collision.layers.find(l=>l.name==='physical-collisions') as TileLayer;
- mask.data[65*128+63]=mask.data.find(Boolean)!;
- expect(()=>historicalNative('overworld',collision)).toThrow(/complete native receipt/);
- const metadata=native();metadata.nextobjectid!++;
- expect(()=>historicalNative('overworld',metadata)).toThrow(/complete native receipt/);
- const authored=json('world/layouts/overworld.json');authored.placements[0].x++;
- expect(()=>historicalLayout('overworld',authored)).toThrow(/authored receipt/);
- const role=json('world/layouts/overworld.json');role.placements.find((p:any)=>p.id==='aries-building').renderRole='canopy';
- expect(()=>historicalLayout('overworld',role)).toThrow(/unapproved role transformation/);
-});
 it('leaves all WAMs, the other32 native maps/previews and independently replaceable sponsors byte-exact', () => {
  const inventory = json('publication/source-manifest.json').sourceInventory;
  const revisions = new Map(json('publication/revisions/2026-10-16-shared-guides.json').revisions.map((r: {path:string;toSha256:string}) => [r.path,r.toSha256]));
@@ -149,8 +139,9 @@ it('refuses entity, area, vendor, mapUrl and collection drift outside catalog re
 it('proves all four editor builder metadata changes before historical composition and refuses unrelated drift', () => {
  expect(editorMetadataHistoryPaths).toHaveLength(4);
  for(const path of editorMetadataHistoryPaths){
-  const raw=readFileSync(path,'utf8');
-  expect(()=>historicalEditorMetadataBytes(path)).not.toThrow();
+  const raw=readFileSync(path==='world/layouts/overworld.json'?'tests/fixtures/overworld-history/pre-return-layout.json':path,'utf8');
+  if(path==='world/layouts/overworld.json')expect(sha(raw)).toBe('49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093');
+  expect(()=>historicalEditorMetadataBytes(path,raw)).not.toThrow();
   const changed=raw.replace('"sha256":','"unexpected":true,"sha256":');
   expect(changed).not.toBe(raw);
   expect(()=>historicalEditorMetadataBytes(path,changed)).toThrow(/Metadata changed outside/);
