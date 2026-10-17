@@ -82,8 +82,8 @@
     {
       "path": "src/runtime.ts",
       "fromSha256": "3d4e2d1356b25fb7fcc33b879b92c7f182e225e350f007ba914ca19e7462c4fa",
-      "toSha256": "bc3100fb4625ce5d28b7f83a96ece624738263caf6b3d724614e289d378567ee",
-      "reason": "Stop initializing legacy static Q&A robot interactions; retain quest registration and scene disposal."
+      "toSha256": "64ef4e76e31c4057c0c85c6ee30d98912e68233824c658bb56af957577a68790",
+      "reason": "Disable native ground-tap/right-click walking through the supported map controls API; preserve joystick and keyboard."
     },
     {
       "path": "tests/authored-activities.test.ts",
@@ -100,8 +100,8 @@
     {
       "path": "tests/coastal-boarding.test.ts",
       "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
-      "toSha256": "a5e4e681ece4e214ae0a46b6cd63c29306307b6da0234d421b2ee181d5b95ccd",
-      "reason": "Preserve prior coastal/start/robot receipts by inverting only the separately verified Roadster overlay before comparison."
+      "toSha256": "f44fdc1c8afe7332cbe188b940478c2c85a39eb8d66cdee6b7b67fdba1135cbd",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
       "path": "tests/coastal-character.test.ts",
@@ -160,20 +160,20 @@
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
-      "toSha256": "12c46804a9f134ba98330d324bf2942083b276beb115d045c4e394c9278bde9a",
-      "reason": "Retain static robot retirement; add only the fixed Roadster LayoutAnimatedOverlay with exact source receipts."
+      "toSha256": "6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
-      "toSha256": "51eb7f48dd5d98ab16c726abac7a1b67d1ad4b8ce7e3a6e74e1b5c39e5345ab5",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+      "toSha256": "2da9c7fa27c41580337cdc81786fd588b73f0c66f8293d93b428e6203b39466b",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
       "path": "art/sources.json",
       "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
-      "toSha256": "b5fef0b51ea34e4ae683afdd0945ac0a513d3953dd2ec38a7d289409d2ec5706",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+      "toSha256": "00d05c990f39c9550879066a2236d3709efb8f86ef14fc7de40c125ac07a0ff5",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
       "path": "assets/tilesets/original/ATTRIBUTION.md",
@@ -216,6 +216,282 @@
       "fromSha256": "679e63838160b2e9e05f1ea805c9184abe33a2a41767cbe7dfa3b233fb1a9c72",
       "toSha256": "8daa3d1167f15fc9df1fd79a27139bc4754ce08bd85a950dc0a45b036a49518a",
       "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "8c24c94618c4ee043e546553c269078512b65bdbd07d13c4ab01b7d66303bf86",
+      "toSha256": "b3926b21a9b5c1ac0c668204154f2f1621a632681f2f8580fbcbd1bb23309526",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "4f29a9be84adfa66476d2d87da613b094c8bf5227841bd67f7e305f8915ecdb3",
+      "toSha256": "016b66caf5e4709f4c7db8ff6f7cbc2fdc4be92906d53bfb071853d5eeaac263",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/lunar-hall.tmj",
+      "fromSha256": "6f6f06aa1191260e78ad3dd0131e52612298aed139e6b581e8cd46ff570cd770",
+      "toSha256": "4b329796d1ec9d7f3618e887c8a479503e37f4a918da54cee9dc76a9b81fb059",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/solar-hall.tmj",
+      "fromSha256": "1eed43811cad478a87b6d4751abdd3d119a70f005c79b69abd0c5c4437fac9ca",
+      "toSha256": "ee97954ce14d23a703cf425dfd813487117b0913f3b3f245bc3bfad6d56ae193",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-aquarius.tmj",
+      "fromSha256": "55d6cb27af8666cec5562f23a311c6fdbde7ec6717a96fa1c2590712cb22f512",
+      "toSha256": "d250e6242d92b432e6c4ec331c3cee3b112fdd8c9139df3c18f6e115acd870a7",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-aries.tmj",
+      "fromSha256": "7e051679b03cb855776bfecbe271a96e48765bbec9e456b1843457585d422eff",
+      "toSha256": "334ed8bcba566deda11970c09ea7701a60946c6491467f11c9df05fe6c67eea4",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-cancer.tmj",
+      "fromSha256": "315f618b7bd1bd05117defdf2caee2860e69a3890a20208937158e7a4e4553e6",
+      "toSha256": "b2232eca3d91d4a264597d3ad5542c27c42600bb32bd5a780703c4e751e7ecfe",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-capricorn.tmj",
+      "fromSha256": "f3e9f41da0d73b58fc4ecf205ecd42436068bcb6d09b06a35e0462e7e08217e1",
+      "toSha256": "4e21451ab25305885a054f700b4af41eb726ff051464834d73c74d2257027886",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-gemini.tmj",
+      "fromSha256": "0f7ce799575ad2eda3ef1a586e89b55e0df9e6911a47bc40403421b94fc3f941",
+      "toSha256": "a8f53004eaa256ff21cf4a1c90818a4694a4c0d77d40f1a4431bff7b193eb523",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-leo.tmj",
+      "fromSha256": "ef82fb65f2c0687125fe98c1272876a5cc8456ca85224895d19e5612abfc2cd7",
+      "toSha256": "2bd59070a3ef83838694818b6b50fbbccd835b5d9ff78673bf1f8e0b00be9cd3",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-libra.tmj",
+      "fromSha256": "a30aeb95caee6984cd22d46a6919849606d3f70a07f444369dcf2bb3c9e46912",
+      "toSha256": "a18f153c828ecd5f2f1b5817286b2fa8272b68dfeabe30c7c17ccd40555651b1",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-pisces.tmj",
+      "fromSha256": "e353efc779994291cca50d94c8c3a385622e00c51d71429227b66733a74680c5",
+      "toSha256": "ed77c5b27a4b30f6a652b85cfeae4699c9b2259edd242a92e860502133ac32c9",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-sagittarius.tmj",
+      "fromSha256": "e2f92bc776695fba21c2e72bd6f5244cb18d382f4f63f2b8fd3df37cd0fc09eb",
+      "toSha256": "27b04120930d240fb3345a7c6d2eaaaaea547a240665a6b0aaa3404297fb9592",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-scorpio.tmj",
+      "fromSha256": "aaa30bde49780ff5f756e10a468067e49ef0c9a48d77955ffc1a501429b92675",
+      "toSha256": "cd538e11785eb433fc900341454fe91bddc1ed1dd40e795203527ef1e0248f86",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-taurus.tmj",
+      "fromSha256": "79dd23e1f1e1f103abdc247c7454f28f1048d286ffb1a88ca62c07a4bfe27b14",
+      "toSha256": "055ab952ad8fc90262e32756f32b4ff9e7986cd11af11342f0f148bb54ecbd89",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/speaker-virgo.tmj",
+      "fromSha256": "e554d149d380d76bf6c98f24fcd7aa8bb224bc339b22c882041670fdc4142084",
+      "toSha256": "67036e1b0ba096194360ea7d7ce23ce23210c4570768ea14c2cc023b1289145c",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "fromSha256": "c46519bcc42c538f96c02af836d28788e5fad1b26bc01728985852ecebe6d758",
+      "toSha256": "dda08c2c3e176e07a067042dc9aa0c60e9db5c95863e4879fb602e5f1b16b4e6",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "fromSha256": "9410cfc24d8f51398d64734bde99b965fdd939d39fa3334a3ebc5ae8d0f97c9a",
+      "toSha256": "f29be76ee6d664c580c59704385d4f3a9334fed879cd5e03ab454fe6e0b4d513",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "fromSha256": "c464c5826b22b83f0eb9e30534cbd5a3b0975976a460cddf838b6ac03539436a",
+      "toSha256": "47f25515cce9cdc38c65545c7110a4315ab2f7b7c4394d045a3c7172a3700390",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "fromSha256": "85ab8457e4e7d4531f51fee74d8fe0eb75112e40275b6aba78783b0e8b2a04b4",
+      "toSha256": "e30835cd5b026a1d6ad862008f02d4642a7d2292b36bfb0f59e7708deb4644e3",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "fromSha256": "dc349fdbc120a70865ad1a955a9196fce80deb9ab8b80e09460fbd66d7c25731",
+      "toSha256": "ca8d6549bb3965b84ee2340b19999355d3018b514f511f0a34cc5dcf4b15bcd3",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "fromSha256": "41604505a14db580b7e1a91ee5223595b321ebdc9c65f4521aa6b0db1c63a2fd",
+      "toSha256": "6a74f23740efbe346cbdad99f3d5db5276fc6e828434d51f7f42681f97e751b1",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "fromSha256": "64851a7c3c7e0f705ff0662ab1ff5831644bf809a4fa2e0daeb294dbb9c17689",
+      "toSha256": "331320408e01829eb5d64c3eb2868cd26974e5c66bad729b981183d115883a6e",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "fromSha256": "22e2b20a7baa02c738aa595b4367d87dfc9408f4808d0ee060f478c72a836c85",
+      "toSha256": "6fb7ded448f09e7b6f9e37ec58b2bdcdd520a33c417e4828f418a55a168378c9",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "fromSha256": "16a4f7964c72ec555e77227ca608e2ea88b38d431c63174443de6c2902d019df",
+      "toSha256": "70b0578fdfb0e62da2dee61374b80016d00cdd2c9e2256470da309e30dda0d8a",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "fromSha256": "d1d068c94cf05ea27ef47f7560952e70ad408c2fe70d654c200aae37eb46a6af",
+      "toSha256": "6b0ef43a570089809b302340487d0b0bf76ac30fff71589a6794957b4fdb5b5c",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "fromSha256": "f5d7b7b1d1e3115622daa2a392cc28cd9c30d579be5962c03990e489451fd81c",
+      "toSha256": "50d02077b59e090b1ae8b44344041fa10454abddd91457421b0d5617fd68eb20",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "fromSha256": "887c750849c95f8108f6a9f8250464584c4983437a7b68c22a9958a49677962a",
+      "toSha256": "0d906ae96b7f73054fc96904bd43a3c6ab3458b215e5039825d662a67cf4f45f",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "fromSha256": "8409bcf45ef6221870f2f6cfbe92986991ffc24e82591402b0594c7d9c38e46a",
+      "toSha256": "bd4185e83bf82091b0fbab4eb184981f1a7a296d86cfa80e291fee627b73e823",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "tests/runtime-contract.test.ts",
+      "fromSha256": "37ab413cb69731b91180caf364e605bbd260a20ae6c6b3e1d8a91cd10f6752e1",
+      "toSha256": "6f13bdb60b7682307c5aeb21047102e97fb3675ff2c8075c0463db674fc32e13",
+      "reason": "Disable native ground-tap/right-click walking through the supported map controls API; preserve joystick and keyboard."
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "fromSha256": "b7846e75cf8ce2239eb28de6a97de72a64c0f6cc80dc234a9f6580ebdace8836",
+      "toSha256": "03e48ed4e32bdb9a6d001c52456787459e72229be8d59c7422403dde72f4d1bb",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "tools/maps/types.ts",
+      "fromSha256": "b46672f965489269e0387242d1270a9cd8b857175a7c656ed7e52799967b4006",
+      "toSha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "8229d07be55da199438d23bc2490ba150346b0346cece40607eb5d9990de3c61",
+      "toSha256": "210c28865e2439b2871e9208884d8ef5a4cfd58977df29b2e24fd29337e6dab2",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "e4989fcd5fdd82baca1eb1081486424f9487897e5aca7a9dcf11090a2c81fd21",
+      "toSha256": "c15cd1988fe4305acdbb7aeaec3e65372218a9f68ff61b65b2c76e6bbd718acf",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "5acf31badc587d89a18534f14eedffae7cb2f7a4990241327cb43695c115a8ac",
+      "toSha256": "715ef222a226f2741b4a068ccc624368084d8181417560a3814e08f7c2aff39d",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-aries.json",
+      "fromSha256": "4ba5d2729f63320d4ec669ef09912f369521e92202ac5852c5f26032377b73fb",
+      "toSha256": "11567c854965661f39d36a0bdbcd97b63a06e97b39cd449045c8b9a58fcc468a",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "bb03a31adb66489a58a1058eb511787ec596bcc54c32cec51d307366761db922",
+      "toSha256": "49fb2d5ad86663966f5068653d3cb918e2435a0e4b60790b31096539578a347a",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "cc25cb02abe603515502de1e618c10a4873b752b49c79cbdefb52f9b2b653edc",
+      "toSha256": "5fb3709e9bfc20069354dc869ce768175159ef7a5ed3315e8e5ff3c94053f02c",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "7e272577c4e73289c8568b9e81df0f56a0c10dcce1f9396c43e4e67c85bf8ef2",
+      "toSha256": "bb4a1a91ca97b04fe898fa93a7a2fbe5df81a6ec3bb4f2a99b64144e36849fe8",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "f437c5dbd9bf69d6758bb765b02cdd9503d20532b169235b898056809f647502",
+      "toSha256": "6c1ca843b995cf23a100aa1cb4e95dbffba5b5b244c0311cceeca2bb51b63aa2",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "ca288c720d0f9d64a440221e72b885d23ee5cbf02f680c0ac69e392736c791a9",
+      "toSha256": "e5e8e97c88b94ec3a864149ab5da4afe071b625ade75f53341d1b843379aa908",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "dc6fa2a06b20090e4339da5031c4e948a32bc722910af70a7d1649ba9f3d8f96",
+      "toSha256": "91ef4581d58aad05a641b54b6abbd9daec8897d32ba4ee91b0338ccea24210a7",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "aba6a0295057ce3c6f0c04c97c6e769326a50bbe00f4bdb830c670195450021d",
+      "toSha256": "6960d471f50927f562ed7c342d6ed1ea48a9cb61f796f064dd5cd9a99bab24e1",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "9758e8b651f62a3343a4cb0bd3b874f4f466ffd32523881ba34fccd365eeed77",
+      "toSha256": "cc444d48a19a382e22cf564e15d5b57c3a3ed1c4854298d8680f7a113523d4d6",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "a4734e8707cc0de1eaf4ad4415ae3d8e670f9c03ea932daf317072ddc03ed679",
+      "toSha256": "0c6cfc874bcd27f82d53dcfaea5087f882c6ad8240e0ba638affc6836189cf84",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "3c28ee0494ad871075b0217eb33775f39dc374d3a20bd614d58b6a14b725a28d",
+      "toSha256": "86d8e84fecc6fce84a15864234dfec4b99eaef4ab38fda7b0b5b9d10a113107c",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     }
   ]
 }

@@ -2,8 +2,8 @@ import { hasLiveControllerLease } from './evidence.mjs';
 import { createHash } from 'node:crypto';
 import { isAbsolute } from 'node:path';
 
-const moduleSha256 = 'c47edd7c428a6172762e79d2dc99da6b3d3b2c8545c41d52e93f67d7be4f65e5';
-const shared = Object.freeze({ moduleSha256, moduleBytes: 26538,
+const moduleSha256 = '4ca233321d91f15d3141f3fd60912168806edf6acd5487da4dd4cfca009f1732';
+const shared = Object.freeze({ moduleSha256, moduleBytes: 26832,
   moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',
 });

@@ -82,7 +82,8 @@
       "y": 0,
       "width": 64,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "west-wall",
@@ -91,7 +92,8 @@
       "y": 2,
       "width": 1,
       "height": 54,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-wall",
@@ -100,7 +102,8 @@
       "y": 2,
       "width": 1,
       "height": 54,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "south-west-wall",
@@ -109,7 +112,8 @@
       "y": 54,
       "width": 30,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "south-east-wall",
@@ -118,7 +122,8 @@
       "y": 54,
       "width": 30,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "south-door",
@@ -127,7 +132,8 @@
       "y": 54,
       "width": 4,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "door-sigil",
@@ -145,7 +151,8 @@
       "y": 0,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-window",
@@ -154,7 +161,8 @@
       "y": 0,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "west-lamp",
@@ -163,7 +171,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-lamp",
@@ -172,7 +181,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-gold-border",
@@ -253,7 +263,8 @@
       "y": 4,
       "width": 12,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "staff-side-wall-core",
@@ -271,7 +282,8 @@
       "y": 6,
       "width": 1,
       "height": 10,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "staff-front-west",
@@ -280,7 +292,8 @@
       "y": 16,
       "width": 4,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "staff-front-east",
@@ -289,7 +302,8 @@
       "y": 16,
       "width": 4,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "staff-door",
@@ -298,7 +312,8 @@
       "y": 16,
       "width": 4,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "staff-workstation",
@@ -352,7 +367,8 @@
       "y": 7,
       "width": 6,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "speaker-lectern",
@@ -370,7 +386,8 @@
       "y": 10,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-display-east",
@@ -379,7 +396,8 @@
       "y": 10,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-rune-west",
@@ -388,7 +406,8 @@
       "y": 6,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-rune-east",
@@ -397,7 +416,8 @@
       "y": 6,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-light-west",
@@ -406,7 +426,8 @@
       "y": 11,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-light-east",
@@ -415,7 +436,8 @@
       "y": 11,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "side-window-west",
@@ -424,7 +446,8 @@
       "y": 26,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "side-window-east",
@@ -433,7 +456,8 @@
       "y": 26,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "seat-0-0",
@@ -982,7 +1006,8 @@
       "y": 24,
       "width": 3,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "gallery-palm-east",
@@ -991,7 +1016,8 @@
       "y": 24,
       "width": 3,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "gallery-sofa-west",
@@ -1090,7 +1116,8 @@
       "y": 48,
       "width": 3,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "foyer-workstation",
@@ -1162,7 +1189,8 @@
       "y": 47,
       "width": 3,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "wayfinding-wallboard-plaza-wayfinding-face",

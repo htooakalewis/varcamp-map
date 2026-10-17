@@ -51417,7 +51417,7 @@
     },
     {
       "name": "plaza-return-label",
-      "text": "\u2191 PLAZA",
+      "text": "↑ PLAZA",
       "x": 22,
       "y": 2,
       "width": 5,
@@ -51453,7 +51453,7 @@
     },
     {
       "name": "boarding-label",
-      "text": "\u2193 FA SHIP",
+      "text": "↓ FA SHIP",
       "x": 18,
       "y": 32,
       "width": 3,
@@ -51465,7 +51465,7 @@
     },
     {
       "name": "shore-label",
-      "text": "\u2193 SHORE",
+      "text": "↓ SHORE",
       "x": 44,
       "y": 30,
       "width": 3,
@@ -51477,7 +51477,7 @@
     },
     {
       "name": "arrival-routes",
-      "text": "SHIP \u2193   SHORE \u2192",
+      "text": "SHIP ↓   SHORE →",
       "x": 19,
       "y": 15,
       "width": 10,
@@ -81604,11 +81604,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "b7846e75cf8ce2239eb28de6a97de72a64c0f6cc80dc234a9f6580ebdace8836"
+            "sha256": "03e48ed4e32bdb9a6d001c52456787459e72229be8d59c7422403dde72f4d1bb"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "b46672f965489269e0387242d1270a9cd8b857175a7c656ed7e52799967b4006"
+            "sha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b"
           }
         ]
       }

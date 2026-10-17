@@ -82,20 +82,25 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   for(const p of layout.placements) {
     if(ids.has(p.id))throw new Error(`Duplicate placement ID: ${p.id}`);ids.add(p.id);bounds(p,p.id);
     const s=tiles[p.sprite];if(!s)throw new Error(`Unknown sprite: ${p.sprite}`);
+    if(p.renderRole && !['grounded','canopy','cutaway'].includes(p.renderRole))throw new Error(`${p.id}: invalid render role`);
+    if(p.layer==='terrain'&&p.renderRole)throw new Error(`${p.id}: render roles apply to scenery only`);
     if(p.width%s.rect.width||p.height%s.rect.height)throw new Error(`${p.id}: dimensions must be native sprite multiples`);
     if(p.layer==='terrain'&&s.level==='aboveAvatar')throw new Error(`${p.id}: foreground sprite cannot replace terrain`);
-    const ref=sheet(p.sprite),mask=new Set(s.blockingCells.map(([x,y])=>y*s.rect.width+x));
+    const visual=p.renderRole==='cutaway'?tiles['floor-inlay']:s;
+    const ref=sheet(p.renderRole==='cutaway'?'floor-inlay':p.sprite),mask=new Set(s.blockingCells.map(([x,y])=>y*s.rect.width+x));
+    const level=p.renderRole==='canopy'?'aboveAvatar':p.renderRole?'belowAvatar':s.level;
     const cells:number[]=[];for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++)cells.push((p.y+y)*layout.width+p.x+x);
     let target=terrain;
     if(p.layer!=='terrain') {
-      const stack=stacks[s.level==='aboveAvatar'?1:0];
+      const stack=stacks[level==='aboveAvatar'?1:0];
       const depth=1+Math.max(-1,...cells.map(i=>stack.depth[i]));
-      while(stack.layers.length<=depth)stack.layers.push(layer(`scenery-${s.level}-${stack.layers.length}`));
+      while(stack.layers.length<=depth)stack.layers.push(layer(`scenery-${level}-${stack.layers.length}`));
       target=stack.layers[depth];for(const i of cells)stack.depth[i]=depth;
     }
     for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++) {
       const i=(p.y+y)*layout.width+p.x+x,dx=x%s.rect.width,dy=y%s.rect.height;
-      target.data[i]=ref.firstgid+(s.rect.y+dy)*ref.columns+s.rect.x+dx;
+      // A cutaway keeps a thin floor-level sill, never a tall opaque wall/door plane.
+      if(p.renderRole!=='cutaway'||y===p.height-1)target.data[i]=ref.firstgid+(visual.rect.y+y%visual.rect.height)*ref.columns+visual.rect.x+x%visual.rect.width;
       const collides=mask.has(dy*s.rect.width+dx)?1:0;
       if(p.layer==='terrain')groundMask[i]=collides;else if(collides)propMask[i]=1;
     }

@@ -82,7 +82,8 @@
       "y": 0,
       "width": 40,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "west-wall",
@@ -91,7 +92,8 @@
       "y": 2,
       "width": 1,
       "height": 34,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-wall",
@@ -100,7 +102,8 @@
       "y": 2,
       "width": 1,
       "height": 34,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "south-west-wall",
@@ -109,7 +112,8 @@
       "y": 34,
       "width": 18,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "south-east-wall",
@@ -118,7 +122,8 @@
       "y": 34,
       "width": 18,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "south-door",
@@ -127,7 +132,8 @@
       "y": 34,
       "width": 4,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "door-sigil",
@@ -145,7 +151,8 @@
       "y": 0,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-window",
@@ -154,7 +161,8 @@
       "y": 0,
       "width": 2,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "west-lamp",
@@ -163,7 +171,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-lamp",
@@ -172,7 +181,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-gold-edge",
@@ -235,7 +245,8 @@
       "y": 7,
       "width": 6,
       "height": 3,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "speaker-lectern",
@@ -253,7 +264,8 @@
       "y": 7,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "zodiac-glyph",
@@ -271,7 +283,8 @@
       "y": 10,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "stage-light-right",
@@ -280,7 +293,8 @@
       "y": 10,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "foyer-glass-west",
@@ -289,7 +303,8 @@
       "y": 25,
       "width": 12,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "foyer-glass-east",
@@ -298,7 +313,8 @@
       "y": 25,
       "width": 12,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "cutaway"
     },
     {
       "id": "discovery-beacon",
@@ -334,7 +350,8 @@
       "y": 10,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "horizon-bench-west",

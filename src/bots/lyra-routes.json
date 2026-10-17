@@ -2,7 +2,7 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "12c46804a9f134ba98330d324bf2942083b276beb115d045c4e394c9278bde9a",
+      "world/layouts/overworld.json": "6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e",
       "maps/overworld.tmj": "87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad",
       "maps/overworld.wam": "2cd15ea221dc094b2b46fac86729a196787621284adc181b8a5f5183a96d2fb9",
       "tests/exterior-gates.test.ts": "0840ed2ef92b534d129581a4e4ece4e7fd46319dc948dff74fd112104ea34c52",

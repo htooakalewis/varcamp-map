@@ -4,27 +4,47 @@ export const TERMINAL_PREFIX = 'VARCAMP_GUIDE_TERMINAL ';
 const sensitiveField = name => /authorization|cookie|token|password|secret|credential|apikey|headers?|chat|participant|body|content/.test(name.replace(/[^a-z0-9]/gi, '').toLowerCase());
 export function failureRecord(value, context = {}) {
   let redacted = false, truncated = false, serializationFailed = false, budget = 10000;
-  const bytes = value => new TextEncoder().encode(value).length;
+  const encoder = new TextEncoder();
+  const bytes = value => encoder.encode(value).length;
+  // Select bounded UTF-8 input before any parser; discarded tails never enter evidence.
+  const prefix = (input, limit) => {
+    const selected = input.slice(0, limit);
+    const { read } = encoder.encodeInto(selected, new Uint8Array(limit));
+    if (read < input.length) truncated = true;
+    return selected.slice(0, read);
+  };
   const seen = new Set();
   const text = input => {
-    let result = input.replace(/https?:\/\/[^\s)<>"']+/gi, raw => {
+    const limit = Math.min(4096, budget);
+    let result = prefix(input, limit).replace(/https?:\/\/[^\s)<>"']+/gi, raw => {
       try { const url = new URL(raw); if (url.username || url.password || url.search || url.hash) { redacted = true; url.username = ''; url.password = ''; url.search = url.search ? '?REDACTED' : ''; url.hash = url.hash ? '#REDACTED' : ''; } return url.href; } catch { return '[invalid URL]'; }
     }).replace(/\b(?:Bearer|Basic)\s+[^\s,;]+/gi, () => { redacted = true; return '[REDACTED authorization]'; });
     // Scan key prefixes independently: a harmless outer `Error:` cannot swallow a
     // nested credential assignment, and quoted JSON keys use the same classifier.
-    const assignment = /["']?([a-z][a-z0-9_-]*)["']?\s*[:=]\s*/gi;
-    let match, cursor = 0, normalized = '';
-    while ((match = assignment.exec(result))) {
-      if (!sensitiveField(match[1])) continue;
-      const rest = result.slice(assignment.lastIndex), length = rest.search(/[\r\n,;]/);
-      const end = length < 0 ? result.length : assignment.lastIndex + length;
-      normalized += result.slice(cursor, match.index) + `${match[1]}=[REDACTED]`;
-      cursor = end; assignment.lastIndex = end; redacted = true;
+    const letter = c => !!c && /[a-z]/i.test(c);
+    const token = c => !!c && /[a-z0-9_-]/i.test(c);
+    const space = c => !!c && /\s/.test(c);
+    let index = 0, cursor = 0;
+    const normalized = [];
+    while (index < result.length) {
+      const start = index;
+      if (result[index] === '"' || result[index] === "'") index++;
+      if (!letter(result[index])) { index = Math.max(index, start + 1); continue; }
+      const keyStart = index++;
+      while (token(result[index])) index++;
+      const key = result.slice(keyStart, index);
+      if (result[index] === '"' || result[index] === "'") index++;
+      while (space(result[index])) index++;
+      if (result[index] !== ':' && result[index] !== '=') continue;
+      index++;
+      while (space(result[index])) index++;
+      if (!sensitiveField(key)) continue;
+      while (index < result.length && !/[\r\n,;]/.test(result[index])) index++;
+      normalized.push(result.slice(cursor, start), `${key}=[REDACTED]`);
+      cursor = index; redacted = true;
     }
-    result = normalized + result.slice(cursor);
-    const limit = Math.min(4096, budget); if (bytes(result) > limit) {
-      result = result.slice(0, limit); while (bytes(result) > limit) result = result.slice(0, -1); truncated = true;
-    }
+    normalized.push(result.slice(cursor));
+    result = prefix(normalized.join(''), limit);
     budget -= bytes(result); return result;
   };
   const read = (object, key) => { try { return object[key]; } catch { serializationFailed = true; return '[unreadable]'; } };

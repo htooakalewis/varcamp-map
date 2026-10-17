@@ -143,7 +143,7 @@
       },
       {
         "path": "art/source/coastal-flight.json",
-        "sha256": "8c24c94618c4ee043e546553c269078512b65bdbd07d13c4ab01b7d66303bf86"
+        "sha256": "b3926b21a9b5c1ac0c668204154f2f1621a632681f2f8580fbcbd1bb23309526"
       },
       {
         "path": "assets/tilesets/original/coastal-flight.png",
@@ -159,7 +159,7 @@
       },
       {
         "path": "art/source/roadster.json",
-        "sha256": "c558783659961d8bb1636a5fdf1676b9224a943890bb2950b1dcffa2f1b52d9c"
+        "sha256": "4b1a87bfbfde83818f67b31932fabf51d3d03599ce32d6fe6878e1d4fe8f1650"
       },
       {
         "path": "assets/tilesets/original/roadster.png",

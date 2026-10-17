@@ -3,7 +3,11 @@ import type { MapId } from '../../src/world/catalog';
 /** All layout coordinates are integer tiles; Tiled/WAM object coordinates are pixels. */
 export interface TileRect { x: number; y: number; width: number; height: number; }
 /** Native sprite repeated without scaling. "terrain" replaces earlier ground; other layers preserve overlapping pixels. */
-export interface Placement extends TileRect { id: string; sprite: string; layer: string; }
+export interface Placement extends TileRect {
+ id: string; sprite: string; layer: string;
+ /** Grounded decor is below avatars; cutaways show low trim while retaining the original physical footprint. */
+ renderRole?: 'grounded' | 'canopy' | 'cutaway';
+}
 export interface LayoutSign extends TileRect { name: string; text: string; fontSize?: number; color?: string; align?: 'left' | 'center'; padding?: number; }
 /** Separate native 192×64 PNG, exported as a 6×2 sheet and tile layer for WorkAdventure. */
 export interface LayoutImage extends TileRect { name: string; image: string; }

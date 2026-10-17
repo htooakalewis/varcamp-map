@@ -9,6 +9,7 @@ import { emptyJournalView, JOURNAL_KEY, type JournalView } from './journal/view'
 /** Structural subset of the installed 1.32.10 API; no administration metadata. */
 export interface WorkAdventureApi {
  onInit: typeof WA.onInit;
+ controls: Pick<typeof WA.controls, 'disableRightClick'>;
  room: Pick<typeof WA.room, 'id'>;
  mapEditor: { area: Pick<typeof WA.mapEditor.area, 'onEnter' | 'onLeave'> };
  player: { state: Pick<typeof WA.player.state, 'loadVariable' | 'saveVariable' | 'onVariableChange'> };
@@ -28,6 +29,8 @@ export function publishView(api: WorkAdventureApi, view: JournalView): void {
 }
 export async function initializeWorld(api: WorkAdventureApi): Promise<void> {
  await api.onInit();
+ // Keep movement deliberate: keyboard/joystick only; also disables native mobile tap walking.
+ api.controls.disableRightClick();
  for (const [label, map] of [['Return to Plaza', 'overworld'], ['Go to Solar Hall', 'solar-hall'], ['Go to Lunar Hall', 'lunar-hall']] as const) {
   api.ui.registerMenuCommand(label, { key: label, callback: () => api.nav.goToRoom(venueDestination(api.room.id, map)) });
  }

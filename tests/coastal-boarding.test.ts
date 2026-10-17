@@ -38,9 +38,9 @@ describe('native coastal boarding and nautical proportions',()=>{
     const names=original.layers.find((l:{name:string})=>l.name==='wayfinding-text');names.objects=names.objects.filter((o:{name:string})=>o.name!=='npc-name-guide');
    }else original.areas=original.areas.filter((a:{name:string})=>a.name!=='npc-guide');
    expect(current,path+' changed beyond its start alias and exact robot removal').toEqual(original);
-  }else if(['maps/comet-maze.tmj','maps/comet-maze.wam','maps/orbit-maze.tmj','maps/orbit-maze.wam','maps/overworld.wam','world/layouts/orbit-maze.json'].includes(path)){
+  }else if(['maps/comet-maze.tmj','maps/comet-maze.wam','maps/orbit-maze.tmj','maps/orbit-maze.wam','maps/overworld.wam','world/layouts/orbit-maze.json'].includes(path)||/^(?:maps\/(?:preview\/)?(?:speaker-(?:aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)|solar-hall|lunar-hall)\.tmj|world\/layouts\/(?:speaker-(?:aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)|solar-hall|lunar-hall)\.json)$/.test(path)){
    // The old coastal receipt stays immutable; exact native semantic deltas are
-   // independently checked in npc-maps.test.ts, and publication pins their bytes.
+   // independently checked in npc-maps.test.ts and room-cutaway.test.ts; publication pins exact replacement bytes.
    const revisions=JSON.parse(readFileSync('publication/revisions/2026-10-16-shared-guides.json','utf8')).revisions;
    const revision=revisions.find((r:{path:string})=>r.path===path);expect(revision,path+' reviewed retirement').toBeDefined();
    expect(revision.fromSha256,path+' original coastal receipt').toBe(hash);
