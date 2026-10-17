@@ -398,7 +398,7 @@
     "tests/fixtures/workadventure-96d43a84/entity-catalogs/provenance.json": "bfd8b88d9c8291e43b2716bc6086db2599d7e3585ae24b27d99eb9a78cbef145",
     "tests/fixtures/workadventure-96d43a84/entity-catalogs/types.ts.txt": "b4b9b380a22f5062437bc6888d634fc649ca495fe48148720ed527d9ade0aa12",
     "tests/guide-evidence.test.ts": "14978051895d37b7e6930c5bc8978960fb3e68d0cfe97cc8acd7dcd5557168ae",
-    "tests/guide-lifecycle.test.ts": "16ff3cc6f76b4597173b733ae208ca78f774446f889be979d40599cd145d6c3b",
+    "tests/guide-lifecycle.test.ts": "525cc3f9d806ab716334c62f46262c87fb5577dfa18eba1c6adc8a79940437f5",
     "tests/guide-retained-proofs.test.ts": "ec5175198d08c282c9572e6db4c36b93706a6158aacc5f5e7661bc81edb8a7da",
     "tests/helpers/editor-catalog-history.ts": "7fa9ca198b99dbbd188775c70574704ccadbe8a0da2a378c55e82502418608f0",
     "tests/helpers/visibility-history.ts": "12aa4f359784a935834d2ad15d209d172c6220c9146619af9d7e09b2cec356f4",
