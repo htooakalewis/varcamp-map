@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {historicalLayout} from './helpers/visibility-history';
 import {describe,it,expect} from 'vitest';
 import {buildMap} from '../tools/maps/builder';
 import {addNpcGuides} from '../tools/maps/npc-guides';
@@ -15,7 +16,7 @@ function walk(w:number,mask:number[],start:number,forbidden=new Set<number>()){c
 const radius=(n:number,w:number)=>Math.hypot(n%w-63.5,Math.floor(n/w)-63.5);
 describe('exterior circle road keeps public destinations out of the speaker plaza',()=>{
  it('preserves the complete speaker and compact arrival composition at native scale on128²',()=>{
-  const l=source();expect([l.width,l.height]).toEqual([128,128]);expect([WORLD_CATALOG.overworld.width,WORLD_CATALOG.overworld.height]).toEqual([128,128]);
+  const l=historicalLayout('overworld');expect([l.width,l.height]).toEqual([128,128]);expect([WORLD_CATALOG.overworld.width,WORLD_CATALOG.overworld.height]).toEqual([128,128]);
   for(const p of before.placements.filter(p=>/-building$|-bold-nameplate$|-zodiac-emblem$/.test(p.id)||['varcamp-nameplate','welcome-control-sign','directory-prompt','arrival-position-label','arrival-direction-crosspost','arrival-compass','welcome-seat','welcome-table','reception-desk','reception-screen','reception-screen-content'].includes(p.id)||p.id.startsWith('reception-post-')||p.id.startsWith('sponsor-')))expect(l.placements.find(q=>q.id===p.id),p.id).toEqual(translated(p));
   expect(l.images).toEqual(before.images!.map(translated));expect(l.areas).toEqual(before.areas.filter(a=>a.name!=='npc-guide').map(translated));
   for(const e of before.exits.filter(e=>e.destination.startsWith('speaker-')))expect(l.exits.find(q=>q.name===e.name)).toEqual(translated(e));
@@ -43,7 +44,8 @@ describe('exterior circle road keeps public destinations out of the speaker plaz
  });
  it('keeps the new verge bounded by water outside deliberate native gate decks',()=>{
   const{l,mask}=built();const decks=l.placements.filter(p=>p.layer==='terrain'&&/^(exterior-court-|exterior-court-inlay-|exterior-spur-|gate-plaza-pad-|maze-return-|festival-return-)/.test(p.id));
-  for(let n=0;n<l.width*l.height;n++)if(radius(n,l.width)>60&&!decks.some(r=>cells(r,l.width).includes(n)))expect(mask[n],`unbounded walkable exterior at${n%l.width},${Math.floor(n/l.width)}`).not.toBe(0);
+  const deckCells=new Set(decks.flatMap(r=>cells(r,l.width)));
+  for(let n=0;n<l.width*l.height;n++)if(radius(n,l.width)>60&&!deckCells.has(n))expect(mask[n],`unbounded walkable exterior at${n%l.width},${Math.floor(n/l.width)}`).not.toBe(0);
  });
  it('reaches all twelve speaker doors while every non-speaker exit is forbidden',()=>{
   const{l,mask}=built(),portals=new Set(l.exits.filter(e=>!e.destination.startsWith('speaker-')).flatMap(e=>cells(e,l.width)));

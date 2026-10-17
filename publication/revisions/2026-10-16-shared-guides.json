@@ -2,10 +2,46 @@
   "schemaVersion": 1,
   "revisions": [
     {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "8c24c94618c4ee043e546553c269078512b65bdbd07d13c4ab01b7d66303bf86",
+      "toSha256": "b3926b21a9b5c1ac0c668204154f2f1621a632681f2f8580fbcbd1bb23309526",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
+      "toSha256": "00d05c990f39c9550879066a2236d3709efb8f86ef14fc7de40c125ac07a0ff5",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "1e447f366e5ca18b15382fc16c6f5c4d566a2bc4553f97a54e693d60020f237a",
+      "toSha256": "d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "assets/tilesets/original/ATTRIBUTION.md",
+      "fromSha256": "d642d99c504d6d57aa6933120c93b8b9d8ee8feeb04f651c5589aa469781c800",
+      "toSha256": "f1fa1ad94f416b799af047c1f8f56d3f0f1b7461e87e582b324c474bad38a950",
+      "reason": "Add Roadster generation and asset-compilation attribution; distribute no private reference photographs."
+    },
+    {
+      "path": "maps/air-district.tmj",
+      "fromSha256": "705f495d712e43cc50332ec9690f904c8bdeeed9d0fee4267ec6d0016e736808",
+      "toSha256": "01bd8a4e666db8740097b15a319a347456f99af549b396eb2a9b5891bfa21ac8",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "fromSha256": "4639e7a9d5df6003fd81808f83461255abd298a165d3f8ad00ddcced50eb5e0f",
+      "toSha256": "94f55dcf15ed34d24dd92835fe3fb305487570ef78ae625e4b503ba20a76a4d0",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
       "path": "maps/comet-maze.tmj",
       "fromSha256": "ee088f0d2ff68df5149fd97dd4fffe0ffe5839bc47c70e34b9c947203f672428",
-      "toSha256": "ecd4bb38ad032e6d54a7769dde86d10fbc12fe3be4f27be2f22f78e115bbbcf7",
-      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+      "toSha256": "dd46bd81d2b104c3b3c81aaab2346fbaf1847adfa320b9e79a33d14b61684c19",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
       "path": "maps/comet-maze.wam",
@@ -14,10 +50,46 @@
       "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
     },
     {
+      "path": "maps/earth-district.tmj",
+      "fromSha256": "b8d84d07fe529d7088f0e1ac21560bd248207424678ece64d6e0ac4dc8c96720",
+      "toSha256": "04503f093c80d97980ea489a6a7041d99184baa736e51f522395c63772d5db09",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/fire-district.tmj",
+      "fromSha256": "b7569b25a36492c3b66c20eba49701086b8ac4c4fd20e0165f4bb8973ca667d2",
+      "toSha256": "5130dd33523528ded89153996b2779c7250da948e96630a2013875930c5f4ad9",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/hidden-observatory.tmj",
+      "fromSha256": "ff9085f0631e4354ba9af65e2f0771992e2ff15fcaca9945049194b2f32aacee",
+      "toSha256": "f26c14723499e0ff0e2b697d56558105622d82ee305d6a64605cdfa02376d343",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "4f29a9be84adfa66476d2d87da613b094c8bf5227841bd67f7e305f8915ecdb3",
+      "toSha256": "016b66caf5e4709f4c7db8ff6f7cbc2fdc4be92906d53bfb071853d5eeaac263",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "fromSha256": "5b1ace9d5bd6b33e43adb9d68490b82bc8346acb9c76e0ff7e9467c5527ccbdc",
+      "toSha256": "95d2a47e91bfa405eff906cf80ed85a4cd2fd25f09ef2783c54060951683ee7c",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "fromSha256": "d16cbb4a57f937ea934ce9c7d43072ce2346f2ca4caec2b430e16a880be005e5",
+      "toSha256": "bb3f8682ff3c7e63fab1f7898abb1fdcc8ad1c8a85476b3ce1c8637ee191cd29",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
       "path": "maps/orbit-maze.tmj",
       "fromSha256": "9f210d0598c1baf41e133599615f338b30780c6474c18cd29ba8cf22f02b107c",
-      "toSha256": "14b350d8dae381776dd60f9a4140c682874f20d42d10238877ec99eb9f143528",
-      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier."
+      "toSha256": "dd9f7922fbc572f8aafa877a11c90bb46253e996768ea41b7c25a632f2b1fbea",
+      "reason": "Remove only the retired static Q&A robot two tile values and its npc-name text object; preserve every other native field, collision value, GID and identifier. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
       "path": "maps/orbit-maze.wam",
@@ -28,8 +100,8 @@
     {
       "path": "maps/overworld.tmj",
       "fromSha256": "6a94d48491f93d0a07581919f5196d32efb141225c051407ead62be414702548",
-      "toSha256": "87e88dd082910b789578188147e9b91b1f060c9d62309c158b785c2bf4cbbaad",
-      "reason": "Retain the exact static robot retirement; append only the stationary noncolliding Roadster layer and native tileset, increment nextlayerid, preserve all prior fields/GIDs/collisions."
+      "toSha256": "fc1fd22b1b4d515944425ab48b7d29b2d89fa1e040fb05396ee3a04e9987eb05",
+      "reason": "Retain the exact static robot retirement; append only the stationary noncolliding Roadster layer and native tileset, increment nextlayerid, preserve all prior fields/GIDs/collisions. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
       "path": "maps/overworld.wam",
@@ -38,202 +110,76 @@
       "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
     },
     {
+      "path": "maps/preview/air-district.tmj",
+      "fromSha256": "73608f3e907a0871791237394fd8fbf40ad8c8aaf5a53cf309adfafcb3e5a17f",
+      "toSha256": "b1a9ac9edba3312378bedabf69f4d6461744bad1e97dbe31a2c2ca46534afc42",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/campus-exploration.tmj",
+      "fromSha256": "eca1f510b50d8eb823e4d82341e30ed31bbcd56315cc942edf8b3a60bef6be79",
+      "toSha256": "13381095dc0b46efecc50bd78d27564b7ac6659af321c52576f7d20d65c56c58",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
       "path": "maps/preview/comet-maze.tmj",
       "fromSha256": "37e83b0ae6e78d5cb5ede750e5fa65015b7ed9293a662a40dcf2a3154728008c",
-      "toSha256": "bb938050f5e41e771ba7abbc60c2e90474f1b40035b26ef0504d967d05a368cb",
-      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+      "toSha256": "bca07d922256ca29c914ce1e36dc06eb80e3ebe659a926c02bc6617b658aa40b",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
-      "path": "maps/preview/orbit-maze.tmj",
-      "fromSha256": "80e6751e497dc52c767a567d834cdd998b968581e887900cf4b92be507771abc",
-      "toSha256": "1cc8853b47c5b82401654a18f80d0ca5010cb5273102f089910dda14ae138dde",
-      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation."
+      "path": "maps/preview/earth-district.tmj",
+      "fromSha256": "7f1075bfadbb27a6bdd79ab16c16a9fc40571a8028358455e4c02c9b041e23f2",
+      "toSha256": "37368295c26986942da8c4a630a843d591f35ceb3f873bab6cd6591cbec8d50b",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
-      "path": "maps/preview/overworld.tmj",
-      "fromSha256": "e8427a3680c82ec80866f00a687faa8e9e99823d30d743a0b778e35e0d71c3ed",
-      "toSha256": "7ae0c1575a467ac48fac7caf70a5a8fcd9d72a88d79b324f1dd0057f3484980b",
-      "reason": "Refresh the overworld native preview for the sole additive Roadster display while preserving the existing URL transformation and static robot retirement."
+      "path": "maps/preview/fire-district.tmj",
+      "fromSha256": "ed6eadf8fc4f808c1bcfbac9fbfc0c7e613f12fce5cf1ed0c49cc95923644915",
+      "toSha256": "1ced8cbce82f6ffddce8b9207b2bab3f412868b73b00ff254d9c5cb9be28935a",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
-      "path": "maps/preview/shipyard-beach.tmj",
-      "fromSha256": "ee1475ddc49502813a5750273b05ad3918bacc82cae23d27b263b855d10dbd4f",
-      "toSha256": "1cd3bfe55b565f7764f8d2a6816ed7211fa9384c838d30026a17f8790409c9f6",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "maps/shipyard-beach.tmj",
-      "fromSha256": "615ff0cafe9d1acc267aa6db5bcc83109bff3a5e28516a8d6cc67a7209f4a98c",
-      "toSha256": "3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "maps/shipyard-beach.wam",
-      "fromSha256": "5fd938052ed693d080a1fa79c81e61b261b0d452f7843235217e5b11aeb11d36",
-      "toSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887",
-      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
-    },
-    {
-      "path": "src/npc/interactions.ts",
-      "fromSha256": "e3a311faa0fa6b1fa606b2526f41d2885474ab56511d9d65ac83fece2baade17",
-      "toSha256": "fa43672e9b6985a5087bc7146e01ac9850fa98c986b01238c9cde522da985c72",
-      "reason": "Retire legacy area-triggered Q&A registration so older live WAM conversation areas cannot offer invisible Talk actions."
-    },
-    {
-      "path": "src/runtime.ts",
-      "fromSha256": "3d4e2d1356b25fb7fcc33b879b92c7f182e225e350f007ba914ca19e7462c4fa",
-      "toSha256": "64ef4e76e31c4057c0c85c6ee30d98912e68233824c658bb56af957577a68790",
-      "reason": "Disable native ground-tap/right-click walking through the supported map controls API; preserve joystick and keyboard."
-    },
-    {
-      "path": "tests/authored-activities.test.ts",
-      "fromSha256": "28fe397cf16abcf8ccb243d30aeda11dfc343d25c4a0ab6567821761419d7659",
-      "toSha256": "6bf01e8361d01435ba87d3affffe1c87772c8e6578ec41603907eaca76ee3d6c",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/campus-decoration.test.ts",
-      "fromSha256": "fdf2e220d4e78def057122607b4edd63d93d47104ef42926136a02a1aec9e73c",
-      "toSha256": "0e851c37dea1b06921d3a74a573bd9f4899f70cc70cfc075def457227dfd525c",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/coastal-boarding.test.ts",
-      "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
-      "toSha256": "f44fdc1c8afe7332cbe188b940478c2c85a39eb8d66cdee6b7b67fdba1135cbd",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
-    },
-    {
-      "path": "tests/coastal-character.test.ts",
-      "fromSha256": "4f00ffbd0baeb3f006fc9865f404409c592083d4f8e1eb21772f92b8d984013b",
-      "toSha256": "e6c77e3ffb21bd87734e8768ca2291d865b4184629762394620a71d170ab28d9",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "tests/comet-maze.test.ts",
-      "fromSha256": "3817303a98c03c77e5973dc67f5d44cc779fb59f74cf0ad7670db284944c0e31",
-      "toSha256": "01d18e77bb2d42bf4d9e28361bb01eb022836cc781a0ed1e61cde9bd4ceb1b38",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/exterior-gates.test.ts",
-      "fromSha256": "352e0a1162cc45e848966c3858c964909e44679870a4c21d6486be585c290f85",
-      "toSha256": "0840ed2ef92b534d129581a4e4ece4e7fd46319dc948dff74fd112104ea34c52",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/npc-interactions.test.ts",
-      "fromSha256": "0d3fb396771f628005ceaa632b7bfa5dd1f6996d4a5060ee395668d734d557bf",
-      "toSha256": "7cbe774045993f7ad9f7cd41ed926ae5635f953dd7b095fdd7865fcb573f5b05",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/npc-maps.test.ts",
-      "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
-      "toSha256": "55edcd1ce0e68b42ff83bc4fb6df8f493d2e89e7941c86418403d02e500f41b0",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "tests/shipyard-beach.test.ts",
-      "fromSha256": "851bb8a18701d6f5ea8245fc5489ed97a9d959731672d05f3a7a83e8ceda3507",
-      "toSha256": "61ba1f67ff7e7040dda3f3a405c8b177c79420ae1cb2f940b3836b97593ed35e",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tests/zodiac-wheel.test.ts",
-      "fromSha256": "bd77e1484413397e7e6bdf36bfbe6e75fb5821b03be913866bd6cd99fab89101",
-      "toSha256": "649895b3211dd2689af5402415e978b1fa4878ae92ecde6623d379ecc3e30174",
-      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
-    },
-    {
-      "path": "tools/maps/npc-guides.ts",
-      "fromSha256": "b6a4b29573c7112d8ac49b95acd931917b1f0ddba629d33ff84ed7e393abef17",
-      "toSha256": "5167bffcfbd3745de9247316680b522adcb6e9b7b5701210d0981d9ead3337d0",
-      "reason": "Keep the authoring API compatible while idempotently removing only the four retired static Q&A hosts and their labels/areas instead of reinjecting them."
-    },
-    {
-      "path": "world/layouts/orbit-maze.json",
-      "fromSha256": "f907b7a7810471d341c9d16a6cdcc7a6054e73442af0f8a5def1cb44f6a1e725",
-      "toSha256": "a6a237bca783012fa1b3f7f30e653e21b63a7692c977736ece06789eeb918b0c",
-      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it."
-    },
-    {
-      "path": "world/layouts/overworld.json",
-      "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
-      "toSha256": "6e1ba3eaec7223e9b64bbd7aff48863bbfe2992a84ff199c7574857c781e533e",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
-    },
-    {
-      "path": "world/layouts/shipyard-beach.json",
-      "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
-      "toSha256": "2da9c7fa27c41580337cdc81786fd588b73f0c66f8293d93b428e6203b39466b",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
-    },
-    {
-      "path": "art/sources.json",
-      "fromSha256": "019893baf7b51562210e8fe9e0b3a6e04131329b8358d9fcf0adc768ff9a73e1",
-      "toSha256": "00d05c990f39c9550879066a2236d3709efb8f86ef14fc7de40c125ac07a0ff5",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
-    },
-    {
-      "path": "assets/tilesets/original/ATTRIBUTION.md",
-      "fromSha256": "d642d99c504d6d57aa6933120c93b8b9d8ee8feeb04f651c5589aa469781c800",
-      "toSha256": "f1fa1ad94f416b799af047c1f8f56d3f0f1b7461e87e582b324c474bad38a950",
-      "reason": "Add Roadster generation and asset-compilation attribution; distribute no private reference photographs."
-    },
-    {
-      "path": "tools/art/check.ts",
-      "fromSha256": "6f29a43dda762f53808c5eee2d9733436d5e7f82747105e279f969d27a8b7e6b",
-      "toSha256": "967be6cd4c4d213915463909b7e86e8c597a0d0bf9513787c57814d5b66fee72",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "tests/author-guard.test.ts",
-      "fromSha256": "ba5383efcd1decccc36278deb197850487fb4429dd3f997b72d2fa948ef214e6",
-      "toSha256": "8cf86f1ae278df1a36232d22acb326045016dd99c454e91d779721ae399a4777",
-      "reason": "Complete the temporary author fixture with each native overlay metadata/source/compiler receipt; expose initialization failures and require the intended native-edit refusal."
-    },
-    {
-      "path": "tests/wayfinding-redraw.test.ts",
-      "fromSha256": "b40efe3c91dc759c7e171364b536bc6db2139b0469105041f97778c1c6905a99",
-      "toSha256": "9b1e382b8031ab23415857b55c5fd79c88931921e37470401a23ce05449513aa",
-      "reason": "Complete the isolated stale-PNG art fixture using all declared animation receipt inputs, preserving the stale-master failure assertion and production validation."
-    },
-    {
-      "path": "art/tile-catalog.json",
-      "fromSha256": "1e447f366e5ca18b15382fc16c6f5c4d566a2bc4553f97a54e693d60020f237a",
-      "toSha256": "d2d9102334aaa93afcff3c7c9fe71553e4ffd6377162de6e74afa45b75037498",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "tests/map-validation.test.ts",
-      "fromSha256": "06e29d5802eafe63c8efaa2096a94c622144c18f3d59663e7af3a48f62e15f72",
-      "toSha256": "bf462e344fda1874632c2b19ad7f34dc9f692fa9d866e6f7e2faf6ff5888749a",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "tools/maps/validate.ts",
-      "fromSha256": "679e63838160b2e9e05f1ea805c9184abe33a2a41767cbe7dfa3b233fb1a9c72",
-      "toSha256": "8daa3d1167f15fc9df1fd79a27139bc4754ce08bd85a950dc0a45b036a49518a",
-      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
-    },
-    {
-      "path": "art/source/coastal-flight.json",
-      "fromSha256": "8c24c94618c4ee043e546553c269078512b65bdbd07d13c4ab01b7d66303bf86",
-      "toSha256": "b3926b21a9b5c1ac0c668204154f2f1621a632681f2f8580fbcbd1bb23309526",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
-    },
-    {
-      "path": "maps/lunar-hall.tmj",
-      "fromSha256": "4f29a9be84adfa66476d2d87da613b094c8bf5227841bd67f7e305f8915ecdb3",
-      "toSha256": "016b66caf5e4709f4c7db8ff6f7cbc2fdc4be92906d53bfb071853d5eeaac263",
-      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+      "path": "maps/preview/hidden-observatory.tmj",
+      "fromSha256": "c6c2ca5c5cd73671ce9ff2f7ab9f8a9c6df22d91d959466af460f86bf0ef854d",
+      "toSha256": "68941e14bf07da14a86bdd379f9927ad86ba5bc2f8c740bbec6d7a242ee5faa5",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     },
     {
       "path": "maps/preview/lunar-hall.tmj",
       "fromSha256": "6f6f06aa1191260e78ad3dd0131e52612298aed139e6b581e8cd46ff570cd770",
       "toSha256": "4b329796d1ec9d7f3618e887c8a479503e37f4a918da54cee9dc76a9b81fb059",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "maps/preview/moon-cafe.tmj",
+      "fromSha256": "79c97a7dab13f412bb0ce84a829c79975a3037510f010dd95b5a3fe0104bd2e2",
+      "toSha256": "373fad7a0b77580e316ae4b70f5b620df8a07f704cea4e84286412956e2a3d3b",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/nebula-arcade.tmj",
+      "fromSha256": "9837033bc6d8e6955b222d8f6c3a89174e4b8f128240434106caa4658ddede2a",
+      "toSha256": "99a7511794c555e1071a754c4887d9f50fd86acc7712e56142419fd356675e0d",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/orbit-maze.tmj",
+      "fromSha256": "80e6751e497dc52c767a567d834cdd998b968581e887900cf4b92be507771abc",
+      "toSha256": "fa639b050f6d66651224abbe964f5c79983223094b1fa3dbe8280276021c7b88",
+      "reason": "Refresh the native authoring preview after the authorized exact static Q&A robot removal; preserve the existing preview URL transformation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "e8427a3680c82ec80866f00a687faa8e9e99823d30d743a0b778e35e0d71c3ed",
+      "toSha256": "f41fe466894dc15c42a78f6e7ce2da3fca6af26b67af0307d04c13dce27305b0",
+      "reason": "Refresh the overworld native preview for the sole additive Roadster display while preserving the existing URL transformation and static robot retirement. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "ee1475ddc49502813a5750273b05ad3918bacc82cae23d27b263b855d10dbd4f",
+      "toSha256": "1cd3bfe55b565f7764f8d2a6816ed7211fa9384c838d30026a17f8790409c9f6",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "maps/preview/solar-hall.tmj",
@@ -314,6 +260,36 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/preview/stargazer-terrace.tmj",
+      "fromSha256": "c455bfda38e1bf89189446d148765af9a3643fff0bd81e4e216ba5dd9c2d197a",
+      "toSha256": "eff73f3f50068d25e84d8018b344cced8e8ec31adb9ce844921b97f9c4f8e1b2",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/water-district.tmj",
+      "fromSha256": "d9e7832e001cc906a5bdde19d0038b637e662ef8498f15c2c5d03f735a1309a7",
+      "toSha256": "d0cae13f51a9c9e28206582421fcb4cb9aaf2ece54793080466a757835be4fb3",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/preview/zodiac-festival-park.tmj",
+      "fromSha256": "b1e486d80ef6159f5b9ff8547977df53bdd31b37456e812b2a48620ba07e0e68",
+      "toSha256": "aa5d887116e3434dc1af8a6f9c21f38571a05f250d45408d6b8788e6c63255e3",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "615ff0cafe9d1acc267aa6db5bcc83109bff3a5e28516a8d6cc67a7209f4a98c",
+      "toSha256": "3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "maps/shipyard-beach.wam",
+      "fromSha256": "5fd938052ed693d080a1fa79c81e61b261b0d452f7843235217e5b11aeb11d36",
+      "toSha256": "c3a03ca2620f43fe11abe50baf408d2129d1a4306d0d839ae61851a79d669887",
+      "reason": "Remove only the named retired static Q&A robot conversation area; preserve every other area, entity and metadata field."
+    },
+    {
       "path": "maps/solar-hall.tmj",
       "fromSha256": "c46519bcc42c538f96c02af836d28788e5fad1b26bc01728985852ecebe6d758",
       "toSha256": "dda08c2c3e176e07a067042dc9aa0c60e9db5c95863e4879fb602e5f1b16b4e6",
@@ -392,10 +368,124 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "maps/stargazer-terrace.tmj",
+      "fromSha256": "a2e31b225d8c0344b8fcae8fcb1fcaf8c6c132badfa4c9b099ff0fe34bc3ff1f",
+      "toSha256": "8cf1215da3c8f5561d6548649e2f17b13670e03be23d54f59f537644b8cca93d",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "fromSha256": "ce7f4a6382107554150cbb8a77a6e6effe53877aaef39adefff9df31b5a9bafb",
+      "toSha256": "d3e39d4a42ae5f1a3bc73a94c3d8e7b9c7669b9e4287f773c9640b5bc7005d52",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "fromSha256": "1cf56aeb12bcd58a2696a8f677205a3d0f66b4cf27ae210f730f6803aebf7d79",
+      "toSha256": "5366af817c2416bd0b6baa130306232b0c2edbd1b0b4c24bcf8f66028dc5c582",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "src/npc/interactions.ts",
+      "fromSha256": "e3a311faa0fa6b1fa606b2526f41d2885474ab56511d9d65ac83fece2baade17",
+      "toSha256": "fa43672e9b6985a5087bc7146e01ac9850fa98c986b01238c9cde522da985c72",
+      "reason": "Retire legacy area-triggered Q&A registration so older live WAM conversation areas cannot offer invisible Talk actions."
+    },
+    {
+      "path": "src/runtime.ts",
+      "fromSha256": "3d4e2d1356b25fb7fcc33b879b92c7f182e225e350f007ba914ca19e7462c4fa",
+      "toSha256": "64ef4e76e31c4057c0c85c6ee30d98912e68233824c658bb56af957577a68790",
+      "reason": "Disable native ground-tap/right-click walking through the supported map controls API; preserve joystick and keyboard."
+    },
+    {
+      "path": "tests/author-guard.test.ts",
+      "fromSha256": "ba5383efcd1decccc36278deb197850487fb4429dd3f997b72d2fa948ef214e6",
+      "toSha256": "8cf86f1ae278df1a36232d22acb326045016dd99c454e91d779721ae399a4777",
+      "reason": "Complete the temporary author fixture with each native overlay metadata/source/compiler receipt; expose initialization failures and require the intended native-edit refusal."
+    },
+    {
+      "path": "tests/authored-activities.test.ts",
+      "fromSha256": "28fe397cf16abcf8ccb243d30aeda11dfc343d25c4a0ab6567821761419d7659",
+      "toSha256": "6bf01e8361d01435ba87d3affffe1c87772c8e6578ec41603907eaca76ee3d6c",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/campus-decoration.test.ts",
+      "fromSha256": "fdf2e220d4e78def057122607b4edd63d93d47104ef42926136a02a1aec9e73c",
+      "toSha256": "0e851c37dea1b06921d3a74a573bd9f4899f70cc70cfc075def457227dfd525c",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "9fe21e08b10dda3d84bd34a061460ae2e9190e45c83eb2655b65eb8aa4d9a883",
+      "toSha256": "7496e9727af442249bc68f0684c14379850f95f8ed130eb2149c69e5a8e383f7",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "4f00ffbd0baeb3f006fc9865f404409c592083d4f8e1eb21772f92b8d984013b",
+      "toSha256": "e6c77e3ffb21bd87734e8768ca2291d865b4184629762394620a71d170ab28d9",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "tests/comet-maze.test.ts",
+      "fromSha256": "3817303a98c03c77e5973dc67f5d44cc779fb59f74cf0ad7670db284944c0e31",
+      "toSha256": "01d18e77bb2d42bf4d9e28361bb01eb022836cc781a0ed1e61cde9bd4ceb1b38",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "352e0a1162cc45e848966c3858c964909e44679870a4c21d6486be585c290f85",
+      "toSha256": "f9cbfc2494078c7511798e51fdff3092a9a0e268e2a897bd49e993aaee8d69d0",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse."
+    },
+    {
+      "path": "tests/map-validation.test.ts",
+      "fromSha256": "06e29d5802eafe63c8efaa2096a94c622144c18f3d59663e7af3a48f62e15f72",
+      "toSha256": "bf462e344fda1874632c2b19ad7f34dc9f692fa9d866e6f7e2faf6ff5888749a",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "tests/npc-interactions.test.ts",
+      "fromSha256": "0d3fb396771f628005ceaa632b7bfa5dd1f6996d4a5060ee395668d734d557bf",
+      "toSha256": "7cbe774045993f7ad9f7cd41ed926ae5635f953dd7b095fdd7865fcb573f5b05",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/npc-maps.test.ts",
+      "fromSha256": "196cffd2dc97813da6611e6970f4a849429480f75a6d373ba3c77981ee7bdfcc",
+      "toSha256": "53b7405b49aa49deb7c3eff71157ba3d0b6db7ef58857198551f9b97b2fb1be7",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained. Independent historical-composition review 40b88cfeb36ad7e539a087d62a97e9dc0f2fb3930a03e94eee2f29c16ef44020: retain original receipts and exact approved visual inverse."
+    },
+    {
       "path": "tests/runtime-contract.test.ts",
       "fromSha256": "37ab413cb69731b91180caf364e605bbd260a20ae6c6b3e1d8a91cd10f6752e1",
       "toSha256": "6f13bdb60b7682307c5aeb21047102e97fb3675ff2c8075c0463db674fc32e13",
       "reason": "Disable native ground-tap/right-click walking through the supported map controls API; preserve joystick and keyboard."
+    },
+    {
+      "path": "tests/shipyard-beach.test.ts",
+      "fromSha256": "851bb8a18701d6f5ea8245fc5489ed97a9d959731672d05f3a7a83e8ceda3507",
+      "toSha256": "61ba1f67ff7e7040dda3f3a405c8b177c79420ae1cb2f940b3836b97593ed35e",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "b40efe3c91dc759c7e171364b536bc6db2139b0469105041f97778c1c6905a99",
+      "toSha256": "9b1e382b8031ab23415857b55c5fd79c88931921e37470401a23ce05449513aa",
+      "reason": "Complete the isolated stale-PNG art fixture using all declared animation receipt inputs, preserving the stale-master failure assertion and production validation."
+    },
+    {
+      "path": "tests/zodiac-wheel.test.ts",
+      "fromSha256": "bd77e1484413397e7e6bdf36bfbe6e75fb5821b03be913866bd6cd99fab89101",
+      "toSha256": "649895b3211dd2689af5402415e978b1fa4878ae92ecde6623d379ecc3e30174",
+      "reason": "Verify the authorized four static Q&A robot retirement while preserving existing route, quest, furniture, source-receipt and native-map regression coverage."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "6f29a43dda762f53808c5eee2d9733436d5e7f82747105e279f969d27a8b7e6b",
+      "toSha256": "967be6cd4c4d213915463909b7e86e8c597a0d0bf9513787c57814d5b66fee72",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
     },
     {
       "path": "tools/maps/builder.ts",
@@ -404,15 +494,93 @@
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "tools/maps/npc-guides.ts",
+      "fromSha256": "b6a4b29573c7112d8ac49b95acd931917b1f0ddba629d33ff84ed7e393abef17",
+      "toSha256": "5167bffcfbd3745de9247316680b522adcb6e9b7b5701210d0981d9ead3337d0",
+      "reason": "Keep the authoring API compatible while idempotently removing only the four retired static Q&A hosts and their labels/areas instead of reinjecting them."
+    },
+    {
       "path": "tools/maps/types.ts",
       "fromSha256": "b46672f965489269e0387242d1270a9cd8b857175a7c656ed7e52799967b4006",
       "toSha256": "a34efee0719f72233bd4d6508a3937732d4009ae5f83dc15feedefa2984a3b6b",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
+      "path": "tools/maps/validate.ts",
+      "fromSha256": "679e63838160b2e9e05f1ea805c9184abe33a2a41767cbe7dfa3b233fb1a9c72",
+      "toSha256": "8daa3d1167f15fc9df1fd79a27139bc4754ce08bd85a950dc0a45b036a49518a",
+      "reason": "Reviewed 2026-10-17 guide lifecycle, release dependency contract and native beach refinement with preserved historical retirement proofs; independent task and integration reviews retained."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "378aedecefe87dea292a6ddb3ccf929d91ed283a95089e7cc829e06e0a4fc05f",
+      "toSha256": "a81f87dcde9930c3d0b69e837fe4884cefc5cc4ad2ba7937e6e4aad4f313ee35",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "9ba7d0fe00c512003e23c5433279e4a058011ae386d9095600768302e995c807",
+      "toSha256": "bd9db51bfe1d1de85b826d56f5dda78ca43bf4d2b4a331acb67000071c518171",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "6da54aaf8722ea2d7ba21d169895a427c3ec3af24d52d8e73ac4bb80662cde07",
+      "toSha256": "8397748f909fa7d479b8d5d193f56e53bc472419e78384d67e15f00375819f44",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "cdffde19bce99cde3527405730c81dce7dcbd76222d19f23b34bc1cabfea6205",
+      "toSha256": "60c7de030d1dcbaaf60452e308f2fcf5a00baa3c61c529b4631ac952341726f0",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "8854c245cbb1d8dfc695510a107dc396df5fece72e7cca82a4fd5283d0827be6",
+      "toSha256": "1311e29625504a97ac6aaace7eee15b7f8567a64f47ea03b1104cff197272fab",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "9a9346d9875673c177372dbbaaedb2221b9b554906ea28297f4cb6b66d8e73ad",
+      "toSha256": "30862362c551fe4b449750702a91e2c1cefebf356a8f1849e4218636ef7a880b",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
       "path": "world/layouts/lunar-hall.json",
       "fromSha256": "8229d07be55da199438d23bc2490ba150346b0346cece40607eb5d9990de3c61",
       "toSha256": "210c28865e2439b2871e9208884d8ef5a4cfd58977df29b2e24fd29337e6dab2",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "8e0b8d3be4180a6e969e078e3e43abe2680cb8f7cc69db466aaae9e602a7f1c2",
+      "toSha256": "6534421217942c5a6d7d8947f71b12bb610ec66d2f93bc31da8674e306c2946b",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "d62f803cf934faa28fabd549e528f9715506852b9ebfedbce3d61e0c5fcf9362",
+      "toSha256": "e3cc86da66821be85965d5c35456a26a64ef686b8bdfeeb20cb4bbfd3bc25a7e",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "f907b7a7810471d341c9d16a6cdcc7a6054e73442af0f8a5def1cb44f6a1e725",
+      "toSha256": "85108739dfed2ac69bdb60990444c0d9c296a3a4a0135460d954625db32b062d",
+      "reason": "Remove only the retired static Q&A robot conversation area from this authored layout so future exports cannot restore it. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "71286046294c0488ba94e9ac0aeb0ed2b8443f35b486bd0156c3a3a5dd60253e",
+      "toSha256": "0545bd3f6b7bc9cce661f2914e4f17bb55ec45889587dabe4b71784c5f2f5deb",
+      "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation. Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "5635b749473ea26afa6d692195a9ab78539c0aa875a0cb82f053b25f7bab89a9",
+      "toSha256": "2da9c7fa27c41580337cdc81786fd588b73f0c66f8293d93b428e6203b39466b",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
     },
     {
@@ -492,6 +660,24 @@
       "fromSha256": "3c28ee0494ad871075b0217eb33775f39dc374d3a20bd614d58b6a14b725a28d",
       "toSha256": "86d8e84fecc6fce84a15864234dfec4b99eaef4ab38fda7b0b5b9d10a113107c",
       "reason": "Reviewed open-sided room rendering: preserve collision, furniture and portal records; explicit grounded/cutaway roles and unchanged-pixel art/route provenance reconciliation."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "9d0b0fe5e19ea377592dde259f889314a4bf3f904152218c55d93651f134ffa6",
+      "toSha256": "563dd7ef642c23e59d0ebb04d6f38e22a513adb6c8d8a980880124becebff434",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "9c201d5b29a3b1950004a33dfded632aaba43e2ef6aed0e9428913b99965e8dd",
+      "toSha256": "fd40760b2a7d7e16d3840cae6a0bc7ab7b6cc54210b0fb0d320174d5ee7955a7",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "280254ac2a60208da078f964fa0d4201cad24f325b321026d875b32d5dd36a9c",
+      "toSha256": "ef9414c16f2dda2ff01d30f5e10a9c3e8b0f20367bfe652054677c508b54d823",
+      "reason": "Reviewed 2026-10-17 nonroom visibility correction: exact placement roles/native visual layers, preserved navigation and historical receipts, whole-house pixel identity and route-signature reconciliation."
     }
   ]
 }

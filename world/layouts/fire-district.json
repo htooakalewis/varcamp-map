@@ -145,7 +145,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-lamp",
@@ -154,7 +155,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "central-gold-route",
@@ -262,7 +264,8 @@
       "y": 7,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "shrine-lamp-east",
@@ -271,7 +274,8 @@
       "y": 7,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "shrine-zodiac-west",
@@ -280,7 +284,8 @@
       "y": 6,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "shrine-zodiac-east",
@@ -289,7 +294,8 @@
       "y": 6,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "forge-bench",
@@ -307,7 +313,8 @@
       "y": 8,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "west-workstation",

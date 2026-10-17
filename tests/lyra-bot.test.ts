@@ -240,10 +240,10 @@ describe('audited WorkAdventure runtime object aliases',()=>{
   };
   it('accepts exactly the observed redundant object classes without mutating the native/runtime map',async()=>{
     const {guardMap}=await modules();const map=runtimeMap();const before=JSON.stringify(map);
-    // Independent canonical fixture after robot retirement and the additive Roadster display, with the same 21 observed WA class aliases.
+    // Independent current fixture after reviewed nonroom visual-layer changes; the same 21 observed WA class aliases and object IDs remain exact.
     const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
     const geometry={width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')};
-    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('878c4de3cc196b167f50948ea04a0b4dde01b8cf29ea1fbeda77888657e9a7d5');
+    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('ff676dd488dfd5cd04a52b80135aafe72e32ea6f9832dd2c05a5058cd0d80e43');
     await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
   });
   it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{

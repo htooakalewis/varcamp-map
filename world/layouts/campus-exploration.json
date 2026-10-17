@@ -100,7 +100,8 @@
       "x": 5,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "fire-door",
@@ -136,7 +137,8 @@
       "x": 15,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "air-door",
@@ -172,7 +174,8 @@
       "x": 25,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "earth-door",
@@ -208,7 +211,8 @@
       "x": 35,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "water-door",
@@ -244,7 +248,8 @@
       "x": 5,
       "y": 20,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "star-garden-door",
@@ -280,7 +285,8 @@
       "x": 35,
       "y": 20,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "moon-cafe-door",
@@ -316,7 +322,8 @@
       "x": 5,
       "y": 31,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "moon-grotto-door",
@@ -352,7 +359,8 @@
       "x": 35,
       "y": 31,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "stargazer-terrace-door",
@@ -397,7 +405,8 @@
       "x": 22,
       "y": 21,
       "width": 3,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "directory-console",
@@ -433,7 +442,8 @@
       "x": 15,
       "y": 24,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "court-light-east",
@@ -442,7 +452,8 @@
       "x": 31,
       "y": 24,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "arrival-way",
@@ -613,7 +624,8 @@
       "y": 21,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "wayfinding-wallboard-fire-label-face",

@@ -163,7 +163,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "east-lamp",
@@ -172,7 +173,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "telescope-court-border",
@@ -235,7 +237,8 @@
       "y": 8,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "court-light-east",
@@ -244,7 +247,8 @@
       "y": 8,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "shrine-display",
@@ -271,7 +275,8 @@
       "y": 22,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "shrine-light-east",
@@ -280,7 +285,8 @@
       "y": 22,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "quiet-crescent",

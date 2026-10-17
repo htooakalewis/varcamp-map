@@ -109,7 +109,8 @@
       "x": 8,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "arcade-door",
@@ -145,7 +146,8 @@
       "x": 32,
       "y": 7,
       "width": 8,
-      "height": 2
+      "height": 2,
+      "renderRole": "cutaway"
     },
     {
       "id": "playground-door",

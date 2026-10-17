@@ -1,4 +1,5 @@
 import{readFileSync}from'node:fs';
+import{historicalNative,historicalLayout,historicalBytes,visibilityHistoryMaps}from'./helpers/visibility-history';
 import{createHash}from'node:crypto';
 import{describe,it,expect}from'vitest';
 import sharp from'sharp';
@@ -18,20 +19,22 @@ describe('native coastal boarding and nautical proportions',()=>{
   if(path==='maps/overworld.tmj'||path==='world/layouts/overworld.json'){
    const frozen=readFileSync(`docs/qa/plaza-start-2026-10-16/before/${path}`);
    expect(createHash('sha256').update(frozen).digest('hex'),path+' retained pre-fix baseline').toBe(hash);
-   const current=JSON.parse(readFileSync(path,'utf8')),original=JSON.parse(frozen.toString());
+   const nativeCurrent=path.endsWith('.tmj')?historicalNative('overworld'):undefined;
+   const authoredCurrent=nativeCurrent?undefined:historicalLayout('overworld');
+   const current=nativeCurrent??authoredCurrent!,original=JSON.parse(frozen.toString());
    // Independently verified additive native display; preserve the older coastal receipt.
-   if(path.endsWith('.tmj')){current.layers=current.layers.filter((l:{name:string})=>l.name!=='roadster');current.tilesets=current.tilesets.filter((s:{name:string})=>s.name!=='roadster');current.nextlayerid--;}else delete current.animatedOverlays;
-   if(path.endsWith('.tmj')){
-    const aliases=current.layers.filter((l:{name:string})=>l.name==='start');expect(aliases).toHaveLength(1);
-    const welcome=current.layers.find((l:{name:string})=>l.name==='welcome');
+   if(nativeCurrent){nativeCurrent.layers=nativeCurrent.layers.filter(l=>l.name!=='roadster');nativeCurrent.tilesets=nativeCurrent.tilesets.filter(s=>s.name!=='roadster');nativeCurrent.nextlayerid!--;}else delete authoredCurrent!.animatedOverlays;
+   if(nativeCurrent){
+    const aliases=nativeCurrent.layers.filter((l:{name:string})=>l.name==='start');expect(aliases).toHaveLength(1);
+    const welcome=nativeCurrent.layers.find((l:{name:string})=>l.name==='welcome');
     expect(aliases[0]).toEqual({...welcome,id:aliases[0].id,name:'start',properties:[{name:'startLayer',type:'bool',value:true}]});
-    const aliasIndex=current.layers.indexOf(aliases[0]);expect(aliases[0].id).toBe(aliasIndex+1);
-    current.layers=current.layers.filter((l:{name:string})=>l.name!=='start');
-    current.layers.forEach((l:{id:number},i:number)=>{if(i>=aliasIndex)l.id--;});current.nextlayerid--;
+    const aliasIndex=nativeCurrent.layers.indexOf(aliases[0]);expect(aliases[0].id).toBe(aliasIndex+1);
+    nativeCurrent.layers=nativeCurrent.layers.filter((l:{name:string})=>l.name!=='start');
+    nativeCurrent.layers.forEach((l:{id:number},i:number)=>{if(i>=aliasIndex)l.id--;});nativeCurrent.nextlayerid!--;
    }else{
-    const aliases=current.entries.filter((e:{name:string})=>e.name==='start');
+    const aliases=authoredCurrent!.entries.filter((e:{name:string})=>e.name==='start');
     expect(aliases).toEqual([{name:'start',x:63,y:65,width:2,height:2}]);
-    current.entries=current.entries.filter((e:{name:string})=>e.name!=='start');
+    authoredCurrent!.entries=authoredCurrent!.entries.filter((e:{name:string})=>e.name!=='start');
    }
    if(path.endsWith('.tmj')){
     const l=original.layers.find((l:{name:string})=>l.name==='scenery-belowAvatar-1');l.data[70*128+77]=0;l.data[71*128+77]=0;
@@ -45,6 +48,12 @@ describe('native coastal boarding and nautical proportions',()=>{
    const revision=revisions.find((r:{path:string})=>r.path===path);expect(revision,path+' reviewed retirement').toBeDefined();
    expect(revision.fromSha256,path+' original coastal receipt').toBe(hash);
    expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(revision.toSha256);
+  }else if(visibilityHistoryMaps.some(id=>path===`maps/${id}.tmj`||path===`world/layouts/${id}.json`)){
+   // Exact17d4 normalization precedes the older coastal byte receipt. No
+   // publication 'from' hash is substituted for this independent baseline.
+   const id=path.split('/').at(-1)!.replace(/\.(tmj|json)$/,'');
+   const restored=historicalBytes(id,path.endsWith('.tmj')?'tmj':'json');
+   expect(createHash('sha256').update(restored).digest('hex'),path+' original coastal composition').toBe(hash);
   }else expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(hash);
  }const old=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-inputs/art/tile-catalog.json.before','utf8')),catalog=loadTileCatalog();for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);});
 

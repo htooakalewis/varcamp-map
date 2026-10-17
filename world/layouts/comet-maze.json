@@ -496,7 +496,8 @@
       "y": 10,
       "width": 3,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "finish-light-west",
@@ -505,7 +506,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "finish-light-east",
@@ -514,7 +516,8 @@
       "y": 3,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "wall-stars-0",
@@ -685,7 +688,8 @@
       "y": 41,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "lobby-light-east",
@@ -694,7 +698,8 @@
       "y": 44,
       "width": 1,
       "height": 2,
-      "layer": "props"
+      "layer": "props",
+      "renderRole": "grounded"
     },
     {
       "id": "return-rune",

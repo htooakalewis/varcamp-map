@@ -172,7 +172,8 @@
       "x": 5,
       "y": 8,
       "width": 4,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "cafe-window-east",
@@ -181,7 +182,8 @@
       "x": 31,
       "y": 8,
       "width": 4,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "cafe-table-west",
