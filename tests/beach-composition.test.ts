@@ -48,6 +48,18 @@ describe('current beach composition preserves native history',()=>{
   beach.signs=beach.signs.filter((s:any)=>s.name!=='harbor-title');beach.signs.find((s:any)=>s.name==='arrival-routes').text='FA SHIP ↓   SHORE →';
   expect(current('shipyard-beach','json')).toEqual(beach);
  });
+ it('keeps current protected native layers and collision/navigation objects exact',()=>{
+  for(const id of ['fa-ship','shipyard-beach']){
+   const old=before(id,'tmj'),now=current(id,'tmj');
+   const floor=old.layers.findIndex((l:any)=>l.name==='floorLayer');expect(floor).toBeGreaterThan(0);
+   for(const layer of old.layers.slice(floor).filter((l:any)=>l.name!=='wayfinding-text'))
+    expect(now.layers.find((l:any)=>l.id===layer.id),`${id}/${layer.name}`).toEqual(layer);
+   for(const name of ['physical-collisions','entries','exits']){
+    const layer=old.layers.find((l:any)=>l.name===name);
+    if(layer)expect(now.layers.find((l:any)=>l.id===layer.id),`${id}/${name}`).toEqual(layer);
+   }
+  }
+ });
  it('keeps both native editor WAM documents byte-exact',()=>{
   expect(sha('maps/fa-ship.wam')).toBe('19f765e8fd4b314f84a7d00c37469c80d8061e28c435acbec5fa6917809a2786');
   expect(sha('maps/shipyard-beach.wam')).toBe('d631432218098ec0d1ac7991959418245d9614d30ef5c6a6ea7d23ff868b9018');
@@ -59,6 +71,7 @@ describe('current beach composition preserves native history',()=>{
    for(const t of map.tilesets)if(t.image)t.image='../'+t.image;
    const visit=(v:any)=>{if(!v||typeof v!=='object')return;if(v.name==='exitUrl'&&typeof v.value==='string')v.value=v.value.replace('.wam#','.tmj#');for(const child of Object.values(v))visit(child);};visit(map);
    expect(json(`maps/preview/${id}.tmj`)).toEqual(map);
+   expect(readFileSync(`maps/preview/${id}.tmj`,'utf8')).toBe(JSON.stringify(map)+'\n');
   }
  });
 });

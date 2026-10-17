@@ -9,6 +9,7 @@ const checker = resolve('publication/verify-source.mjs');
 const revisionPath = 'publication/revisions/2026-10-16-shared-guides.json';
 const navigationRevisionPath = 'publication/revisions/2026-10-17-return-approaches.json';
 const beachRevisionPath='publication/revisions/2026-10-17-beach-composition.json';
+const closureRevisionPath='publication/revisions/2026-10-17-beach-ci-closure.json';
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
 const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
@@ -43,6 +44,10 @@ describe('publication exact reviewed replacements', () => {
     const bytes=JSON.stringify(value);write(beachRevisionPath,bytes);
     manifest.extensionInventory[beachRevisionPath]=createHash('sha256').update(bytes).digest('hex');
   }
+  function pinClosure(value:unknown={schemaVersion:1,revisions:[]}) {
+    const bytes=JSON.stringify(value);write(closureRevisionPath,bytes);
+    manifest.extensionInventory[closureRevisionPath]=createHash('sha256').update(bytes).digest('hex');
+  }
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -66,6 +71,7 @@ describe('publication exact reviewed replacements', () => {
     pinRevisions();
     pinNavigation();
     pinBeach();
+    pinClosure();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});
@@ -264,6 +270,14 @@ describe('publication exact reviewed replacements', () => {
     write(path,raw);const positive=verify();expect(positive.status,positive.output).toBe(0);
     const artifact=JSON.parse(raw);if(path.endsWith('.tmj'))artifact.nextobjectid++;else artifact.placements[0].x++;
     write(path,JSON.stringify(artifact));rejects('Reviewed source changed: '+path);
+  });
+  it('requires the fourth fixed document to link the exact prior beach receipt',()=>{
+    pinBeach({schemaVersion:1,revisions:[reviewed()]});
+    const final='canonical producer bytes\n',digest=createHash('sha256').update(final).digest('hex');
+    pinClosure({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:digest}]});
+    write('src/main.ts',final);const accepted=verify();expect(accepted.status,accepted.output).toBe(0);
+    pinClosure({schemaVersion:1,revisions:[{...reviewed(),fromSha256:baselineHash,toSha256:digest}]});
+    rejects('Reviewed revision prior mismatch: src/main.ts');
   });
 
 });

@@ -7,9 +7,20 @@ import { loadTileCatalog } from '../tools/art/catalog';
 import { buildMap } from '../tools/maps/builder';
 import { checkArt } from '../tools/art/check';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import type { MapLayout, TileRect, LayoutAnimatedOverlay } from '../tools/maps/types';
+import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement } from '../tools/maps/types';
 
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
+// One predicate is used by both fixture cases and the complete production-layout audit.
+const labelCatalog=loadTileCatalog();
+const obstructsLabel=(p:Placement,catalog:ReturnType<typeof loadTileCatalog>)=>{
+ // Terrain and atmospheric backdrops were already outside the scenery audit.
+ if(['terrain','atmosphere'].includes(p.layer))return false;
+ const sprite=catalog[p.sprite];if(!sprite)throw Error(`Unknown scenery: ${p.sprite}`);
+ // Match the builder's existing render-role precedence. Background art may sit
+ // beneath labels; solid physical objects and foreground decoration may not.
+ const level=p.renderRole==='canopy'?'aboveAvatar':p.renderRole?'belowAvatar':sprite.level;
+ return level==='aboveAvatar'||sprite.blockingCells.length>0;
+};
 const gap=(a:TileRect,b:TileRect)=>Math.max(0,a.x-b.x-b.width,b.x-a.x-a.width)+Math.max(0,a.y-b.y-b.height,b.y-a.y-a.height);
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
 const names:Record<string,RegExp>={overworld:/PLAZA/, 'campus-exploration':/EXPLORATION/, 'shipyard-beach':/HARBOR/, 'zodiac-festival-park':/FESTIVAL|PARK/, 'orbit-maze':/ORBIT|MAZE/, 'comet-maze':/COMET/, 'solar-hall':/SOLAR/, 'lunar-hall':/LUNAR/, 'nebula-arcade':/ARCADE/, 'orbit-playground':/PLAYGROUND/, 'constellation-shore':/SHORE/, 'fa-ship':/FA SHIP/, 'star-garden':/GARDEN/, 'moon-cafe':/CAF[ÉE]/, 'moon-grotto':/GROTTO/, 'stargazer-terrace':/STARGAZER/, 'fire-district':/FIRE/, 'earth-district':/EARTH/, 'air-district':/AIR/, 'water-district':/WATER/};
@@ -104,11 +115,23 @@ describe('audience wayfinding in exported Tiled maps',()=>{
    for(const p of l.placements.filter(p=>p.sprite.startsWith('arrow-'))){const i=p.y*l.width+p.x;expect(mask.data[i],`${l.id}/${p.id}: arrow is drawn on a solid cell`).toBe(0);expect(seen.has(i),`${l.id}/${p.id}: arrow lies outside the accessible road network`).toBe(true);}
   }
  });
+ it('classifies overlapping floor backgrounds separately from physical or foreground decoration',()=>{
+  const catalog=loadTileCatalog(),base:Placement={id:'ordinary-fixture',sprite:'beach-sea-veil',layer:'architecture',x:7,y:20,width:1,height:1};
+  const sign={x:7,y:20,width:1,height:1};
+  const obscures=(p:Placement)=>overlap(sign,p)&&obstructsLabel(p,catalog);
+  expect(obscures(base)).toBe(false);
+  expect(obscures({...base,renderRole:'canopy'})).toBe(true);
+  const blocking=Object.keys(catalog).find(k=>catalog[k].blockingCells.length>0)!;
+  expect(blocking).toBeDefined();expect(obscures({...base,sprite:blocking,renderRole:'grounded'})).toBe(true);
+  expect(obscures({...base,sprite:blocking,layer:'terrain'})).toBe(false);
+  const foreground=Object.keys(catalog).find(k=>catalog[k].level==='aboveAvatar')!;
+  expect(foreground).toBeDefined();expect(obscures({...base,sprite:foreground})).toBe(true);
+ });
  it('keeps all production labels apart from controls, other labels and scenery except deliberate wall plaques and return-rune backplates',()=>{
   for(const l of layouts)for(const[i,s]of(l.signs??[]).entries()){
    for(const other of(l.signs??[]).slice(i+1))expect(overlap(s,other),`${l.id}/${s.name} obscures ${other.name}`).toBe(false);
    for(const r of [...l.entries,...l.exits,...(l.images??[])])expect(overlap(s,r),`${l.id}/${s.name} covers ${r.name}`).toBe(false);
-   for(const p of l.placements.filter(p=>!['terrain','atmosphere'].includes(p.layer)&&!p.id.startsWith(`wayfinding-wallboard-${s.name}-`))){
+   for(const p of l.placements.filter(p=>obstructsLabel(p,labelCatalog)&&!p.id.startsWith(`wayfinding-wallboard-${s.name}-`))){
     const facade=l.id==='overworld'&&s.name.startsWith('room-')&&p.id.startsWith(s.name.replace('room-','')+'-')&&['wall-charcoal','wall-navy'].includes(p.sprite);
     const returnRune=s.name==='plaza-wayfinding'&&p.id==='door-sigil'&&p.sprite==='rune-threshold';
     const staffWall=['solar-hall','lunar-hall'].includes(l.id)&&s.name==='staff-label'&&p.id==='staff-north-wall'&&p.sprite==='wall-navy';
