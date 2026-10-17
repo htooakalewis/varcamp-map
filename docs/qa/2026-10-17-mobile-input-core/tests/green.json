@@ -1,0 +1,80 @@
+{
+  "sourceRoot": "patched-source",
+  "cases": [
+    {
+      "name": "hidden lost-release return requires fresh joystick input",
+      "pass": true
+    },
+    {
+      "name": "visible blur stops immediately and focus does not resume",
+      "pass": true
+    },
+    {
+      "name": "outside release clears exact owned gesture",
+      "pass": true
+    },
+    {
+      "name": "unrelated release never clears active gesture",
+      "pass": true
+    },
+    {
+      "name": "held pointerover after hidden stays unarmed; fresh down works",
+      "pass": true
+    },
+    {
+      "name": "two disable reasons preserved; restore cannot resurrect joystick or tap walking",
+      "pass": true
+    },
+    {
+      "name": "multi-touch interruption clears movement",
+      "pass": true
+    },
+    {
+      "name": "normal matching release clears flags and zero-force moving flag",
+      "pass": true
+    },
+    {
+      "name": "keyboard still works and follow intent survives reset",
+      "pass": true
+    },
+    {
+      "name": "lifecycle listeners and callback detach on repeated destroy",
+      "pass": true
+    },
+    {
+      "name": "synchronous blur during fresh-down capture revokes and clears Rex after begin",
+      "pass": true
+    },
+    {
+      "name": "hidden late-player binding stops and cancels path immediately",
+      "pass": true
+    },
+    {
+      "name": "destroyed owner ignores later lifecycle events and cannot stop a replacement",
+      "pass": true
+    },
+    {
+      "name": "synchronous scene teardown during fresh-down capture is safe",
+      "pass": true
+    },
+    {
+      "name": "pointer state cancellation still clears when scene release propagation is lost",
+      "pass": true
+    },
+    {
+      "name": "deliberate follow movement remains functional after joystick reset",
+      "pass": true
+    },
+    {
+      "name": "unrelated UI release and no-gesture controls disable preserve API path intent",
+      "pass": true
+    },
+    {
+      "name": "hidden real down and held pointerover cannot arm joystick",
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "failed": 0,
+  "scope": "Actual unmodified/patched WA modules and exact Rex modules; stores/scene/body/display/hit-test are explicit boundaries. No full engine/browser/hardware."
+}

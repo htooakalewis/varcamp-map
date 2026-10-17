@@ -1,0 +1,42 @@
+{
+  "baseImage": "sha256:25973e38ab6df80eff2508e274a7e38451bedc4500d6e281353d9687baf8eaa0",
+  "baseCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "files": [
+    {
+      "path": "src/front/Phaser/Components/MobileJoystick.ts",
+      "originalSha256": "cd61125152ac5ebdd350b2e0378a6fdeb07ddcdf1ced5f854b61579ed6fed6ab",
+      "patchedSha256": "70935b17d23827764ebd123fce8489bdb94731c3bd766aee538295dce6e5f8c5",
+      "changed": true,
+      "originalMatchesLiveImageReadback": true
+    },
+    {
+      "path": "src/front/Phaser/Game/GameScene.ts",
+      "originalSha256": "085643ecd6401a5a97fd0c137ad1ea9586c55fc43a25d6bf2bbae8e04a15ed08",
+      "patchedSha256": "500b58c8f116b1e2b9483d2db8e3bd6a8d6a9e52db5110a242383623208aa45e",
+      "changed": true,
+      "originalMatchesLiveImageReadback": true
+    },
+    {
+      "path": "src/front/Phaser/Player/Player.ts",
+      "originalSha256": "8f81285a96b1373c3e3f23c0fb089d403ceb226684d1b4f9b1db4d2de6aaf8b3",
+      "patchedSha256": "8d3aa4db3159542f9995341158bf571e9fcf61ec4c9ecd27492d927726faff1a",
+      "changed": true,
+      "originalMatchesLiveImageReadback": true
+    },
+    {
+      "path": "src/front/Phaser/UserInput/UserInputManager.ts",
+      "originalSha256": "b2eca8f203c247304b9c0b726b368acec6541859141aa8b350f945dd39307327",
+      "patchedSha256": "86d612c97fe0aec18748fd06b3b2e57d891a21d47b0e53afa60fe8b5fe9c643c",
+      "changed": true,
+      "originalMatchesLiveImageReadback": true
+    },
+    {
+      "path": "src/front/Stores/VisibilityStore.ts",
+      "originalSha256": "39cb87594ecb6aefb1fdd58d9cb4f887eb6da74b0ba8b710e4efdaa851865333",
+      "patchedSha256": "39cb87594ecb6aefb1fdd58d9cb4f887eb6da74b0ba8b710e4efdaa851865333",
+      "changed": false,
+      "originalMatchesLiveImageReadback": true
+    }
+  ],
+  "patchSha256": "589c654c0ed1131771c422f430ca343954f2783a5ce8b59ac34741e6814d382f"
+}

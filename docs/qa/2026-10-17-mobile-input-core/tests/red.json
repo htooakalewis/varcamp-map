@@ -1,0 +1,91 @@
+{
+  "sourceRoot": "pinned-source",
+  "cases": [
+    {
+      "name": "hidden lost-release return requires fresh joystick input",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "visible blur stops immediately and focus does not resume",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "outside release clears exact owned gesture",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "unrelated release never clears active gesture",
+      "pass": true
+    },
+    {
+      "name": "held pointerover after hidden stays unarmed; fresh down works",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "two disable reasons preserved; restore cannot resurrect joystick or tap walking",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "multi-touch interruption clears movement",
+      "pass": true
+    },
+    {
+      "name": "normal matching release clears flags and zero-force moving flag",
+      "pass": true
+    },
+    {
+      "name": "keyboard still works and follow intent survives reset",
+      "pass": true
+    },
+    {
+      "name": "lifecycle listeners and callback detach on repeated destroy",
+      "pass": false,
+      "error": "1 == 0"
+    },
+    {
+      "name": "synchronous blur during fresh-down capture revokes and clears Rex after begin",
+      "pass": false,
+      "error": "true == false"
+    },
+    {
+      "name": "hidden late-player binding stops and cancels path immediately",
+      "pass": true
+    },
+    {
+      "name": "destroyed owner ignores later lifecycle events and cannot stop a replacement",
+      "pass": false,
+      "error": "0 == 42"
+    },
+    {
+      "name": "synchronous scene teardown during fresh-down capture is safe",
+      "pass": false,
+      "error": "1 == 0"
+    },
+    {
+      "name": "pointer state cancellation still clears when scene release propagation is lost",
+      "pass": false,
+      "error": "20 == 0"
+    },
+    {
+      "name": "deliberate follow movement remains functional after joystick reset",
+      "pass": true
+    },
+    {
+      "name": "unrelated UI release and no-gesture controls disable preserve API path intent",
+      "pass": true
+    },
+    {
+      "name": "hidden real down and held pointerover cannot arm joystick",
+      "pass": false,
+      "error": "true == false"
+    }
+  ],
+  "passed": 7,
+  "failed": 11,
+  "scope": "Actual unmodified/patched WA modules and exact Rex modules; stores/scene/body/display/hit-test are explicit boundaries. No full engine/browser/hardware."
+}

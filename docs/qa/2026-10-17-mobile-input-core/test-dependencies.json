@@ -1,0 +1,16 @@
+{
+  "typescriptVersion": "5.9.3",
+  "typescriptRuntimeSHA256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675",
+  "typescriptPackageSHA256": "822ef7ca6452205657b6288b066481ecf508bfbf43455d715cf7d3ec457561e6",
+  "sourceOnly": "No install, package update, engine image or production dependency mutation",
+  "finalOriginalTestActualExit": 1,
+  "finalOriginalPassFail": [
+    7,
+    11
+  ],
+  "finalPatchedTestActualExit": 0,
+  "finalPatchedPassFail": [
+    18,
+    0
+  ]
+}

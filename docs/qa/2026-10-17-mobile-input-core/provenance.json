@@ -1,0 +1,70 @@
+{
+  "source.patch": {
+    "sourceSha256": "589c654c0ed1131771c422f430ca343954f2783a5ce8b59ac34741e6814d382f",
+    "kind": "exact_copy"
+  },
+  "source-delta.json": {
+    "sourceSha256": "bdcd7b4c85c665768079698a279d515363f7729dfce233935412422acc4b5254",
+    "kind": "exact_copy"
+  },
+  "source-pins.json": {
+    "sourceSha256": "59bb327be5676ec7a2f42eff778d88f9628f98630904e0653ce87fbfc2f6c43a",
+    "kind": "exact_copy"
+  },
+  "test-dependencies.json": {
+    "sourceSha256": "a658af5c58adb83d579fb5449fa819647574c8cff06fa99e957b3a9bf02b84c4",
+    "kind": "exact_copy"
+  },
+  "WORKADVENTURE-LICENSE.txt": {
+    "sourceSha256": "12aae5db7f9d80223d418b1dc97deb235ab207fa3cd4821e16c6ac00072cea41",
+    "kind": "exact_copy"
+  },
+  "PHASER-LICENSE.md": {
+    "sourceSha256": "d59c20a9deb5dc240614b428dce5246ae561d15efeeebea0e069d73f0a78fbff",
+    "kind": "exact_copy"
+  },
+  "REX-LICENSE.txt": {
+    "sourceSha256": "e69191915c64a8c2947c4eec6e5ebfa3c75b58dc9d8b6f685e91c44e226c1391",
+    "kind": "exact_copy"
+  },
+  "tests/red.json": {
+    "sourceSha256": "52327e3b8fe2471ba8f898c54163d69e4cb17492ecd1b7839b04fc2ab02030c5",
+    "kind": "local_path_redacted_reencoded",
+    "change": "sourceRoot made relative; test results unchanged"
+  },
+  "tests/green.json": {
+    "sourceSha256": "48368ad1cfde3d835eee2a0509048e7ba35d2e7114e42330bd3263ef88196fcc",
+    "kind": "local_path_redacted_reencoded",
+    "change": "sourceRoot made relative; test results unchanged"
+  },
+  "evidence/patched-build-report.json": {
+    "sourceSha256": "0556063c6207952e88bfbcbeee648b18b78e802a1ef0cfbd15602c3f7e2bfb76",
+    "kind": "exact_copy"
+  },
+  "evidence/deployment-verification.json": {
+    "sourceSha256": "ef2658cc299dad044693dbcf69979752ba869c69d732468b563b1ce2fca6a2e6",
+    "kind": "exact_copy"
+  },
+  "evidence/verify_deployment.py": {
+    "sourceSha256": "405369506ccbd6dfea637efcb7576410f2426b11610d028e4add92d1033c316d",
+    "kind": "exact_copy"
+  },
+  "evidence/runtime-build.jsonl": {
+    "sourceSha256": "4bebf47ff4ba94ef18ac04aa6640cf1020334f27248138b0c4e2f43f28513287",
+    "kind": "selected_rows_reencoded",
+    "omittedEvents": [
+      "global-id-diagnostic",
+      "external-id-delta-diagnostic"
+    ],
+    "reason": "omit unrelated shared-host IDs, retain all scoped artifact/effect/ownership records"
+  },
+  "evidence/runtime-stopped-readback.jsonl": {
+    "sourceSha256": "dfec065c3eeac922ad552166630260f42fc3a489d3f43f859c85ffaf8ac95b7d",
+    "kind": "selected_rows_reencoded",
+    "omittedEvents": [
+      "global-id-diagnostic",
+      "external-id-delta-diagnostic"
+    ],
+    "reason": "omit unrelated shared-host IDs, retain all scoped artifact/effect/ownership records"
+  }
+}

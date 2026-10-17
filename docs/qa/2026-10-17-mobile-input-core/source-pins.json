@@ -1,0 +1,73 @@
+{
+  "state": "UNMODIFIED_REFERENCE_ONLY_NO_IMPLEMENTATION",
+  "workadventureCommit": "96d43a841766b22418c061744e7ed2aafd9870d3",
+  "files": [
+    {
+      "originalMapSource": "../../../src/front/Phaser/Components/MobileJoystick.ts",
+      "path": "pinned-source/src/front/Phaser/Components/MobileJoystick.ts",
+      "sha256": "cd61125152ac5ebdd350b2e0378a6fdeb07ddcdf1ced5f854b61579ed6fed6ab"
+    },
+    {
+      "originalMapSource": "../../../src/front/Phaser/UserInput/UserInputManager.ts",
+      "path": "pinned-source/src/front/Phaser/UserInput/UserInputManager.ts",
+      "sha256": "b2eca8f203c247304b9c0b726b368acec6541859141aa8b350f945dd39307327"
+    },
+    {
+      "originalMapSource": "../../../src/front/Stores/VisibilityStore.ts",
+      "path": "pinned-source/src/front/Stores/VisibilityStore.ts",
+      "sha256": "39cb87594ecb6aefb1fdd58d9cb4f887eb6da74b0ba8b710e4efdaa851865333"
+    },
+    {
+      "originalMapSource": "../../../src/front/Phaser/Player/Player.ts",
+      "path": "pinned-source/src/front/Phaser/Player/Player.ts",
+      "sha256": "8f81285a96b1373c3e3f23c0fb089d403ceb226684d1b4f9b1db4d2de6aaf8b3"
+    },
+    {
+      "originalMapSource": "../../../src/front/Phaser/Game/GameScene.ts",
+      "path": "pinned-source/src/front/Phaser/Game/GameScene.ts",
+      "sha256": "085643ecd6401a5a97fd0c137ad1ea9586c55fc43a25d6bf2bbae8e04a15ed08"
+    }
+  ],
+  "workadventureLicenseSha256": "12aae5db7f9d80223d418b1dc97deb235ab207fa3cd4821e16c6ac00072cea41",
+  "rexLock": {
+    "version": "4.0.7",
+    "resolved": "https://registry.npmjs.org/phaser4-rex-plugins/-/phaser4-rex-plugins-4.0.7.tgz",
+    "integrity": "sha512-QKbh/2njbHZPgNMkjBT/PdF8uJEEY7VyTqzrsVbdYFi6cya9GRHnXSRlVChl0YmtvL2uRTDLo7RQbSzH5mxpvw==",
+    "license": "MIT",
+    "dependencies": {
+      "dagre": "^0.8.5",
+      "eventemitter3": "^3.1.2",
+      "graphology": "^0.25.4",
+      "i18next": "^22.5.1",
+      "i18next-http-backend": "^3.0.5",
+      "js-yaml": "^4.1.0",
+      "mustache": "^4.2.0",
+      "papaparse": "^5.4.1",
+      "tinyqueue": "^3.0.0",
+      "webfontloader": "^1.6.28"
+    }
+  },
+  "phaserVersion": "4.2.0",
+  "note": "Existing served Phaser has renderer patches; preserve full image/source patchset. Exact input/core method correspondence separately retained.",
+  "rexArchiveSHA256": "3d615d0031a4f6436e65c6e84fe873a8d06e4df8bb47f1734e6e4d87ce9ddd14",
+  "rexArchiveIntegrityMatch": true,
+  "rexServedComparisons": [
+    {
+      "path": "plugins/input/touchcursor/TouchCursor.js",
+      "archiveSHA256": "6a990c8c0e2e9f2a48d7fdcc2cd39138646a9fb50a13a0e1ca9db78011aeab07",
+      "servedMapLFNormalizedExact": true
+    },
+    {
+      "path": "plugins/input/virtualjoystick/VirtualJoyStick.js",
+      "archiveSHA256": "2fedae891a26644954eb576bcc3dff434dc87054af7fe53f81ba6b74a6a32efc",
+      "servedMapLFNormalizedExact": true
+    },
+    {
+      "path": "plugins/utils/input/VectorToCursorKeys.js",
+      "archiveSHA256": "1d11ec70acc73b95aa6d3ecc55645a83052647e73538084aeed55f7a453f6734",
+      "servedMapLFNormalizedExact": true
+    }
+  ],
+  "rexLicenseSHA256": "e69191915c64a8c2947c4eec6e5ebfa3c75b58dc9d8b6f685e91c44e226c1391",
+  "phaserLicenseSHA256": "d59c20a9deb5dc240614b428dce5246ae561d15efeeebea0e069d73f0a78fbff"
+}

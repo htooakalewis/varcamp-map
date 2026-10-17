@@ -1,0 +1,66 @@
+{
+  "PHASER-LICENSE.md": {
+    "bytes": 1120,
+    "sha256": "d59c20a9deb5dc240614b428dce5246ae561d15efeeebea0e069d73f0a78fbff"
+  },
+  "README.md": {
+    "bytes": 4233,
+    "sha256": "a6097b7453bd1e4c417d1d39038e742876ebcb7f2b098cd6250ddfb52021749f"
+  },
+  "REX-LICENSE.txt": {
+    "bytes": 1079,
+    "sha256": "e69191915c64a8c2947c4eec6e5ebfa3c75b58dc9d8b6f685e91c44e226c1391"
+  },
+  "WORKADVENTURE-LICENSE.txt": {
+    "bytes": 35751,
+    "sha256": "12aae5db7f9d80223d418b1dc97deb235ab207fa3cd4821e16c6ac00072cea41"
+  },
+  "evidence/deployment-verification.json": {
+    "bytes": 1033,
+    "sha256": "ef2658cc299dad044693dbcf69979752ba869c69d732468b563b1ce2fca6a2e6"
+  },
+  "evidence/patched-build-report.json": {
+    "bytes": 204533,
+    "sha256": "0556063c6207952e88bfbcbeee648b18b78e802a1ef0cfbd15602c3f7e2bfb76"
+  },
+  "evidence/runtime-build.jsonl": {
+    "bytes": 13805,
+    "sha256": "2417a4ef682f97b75039a68ce2046c0b9c77f19fb651b08c1f3ca530336adea9"
+  },
+  "evidence/runtime-stopped-readback.jsonl": {
+    "bytes": 8435,
+    "sha256": "a587a130c441067b71208a297c6d9b49b003186bb0cc976bf4edc2fa35e5163c"
+  },
+  "evidence/verify_deployment.py": {
+    "bytes": 2455,
+    "sha256": "405369506ccbd6dfea637efcb7576410f2426b11610d028e4add92d1033c316d"
+  },
+  "provenance.json": {
+    "bytes": 2680,
+    "sha256": "1875741e38a823d3cd260c95e03305aa025294ad021eb80d9829965242cdc290"
+  },
+  "source-delta.json": {
+    "bytes": 1869,
+    "sha256": "bdcd7b4c85c665768079698a279d515363f7729dfce233935412422acc4b5254"
+  },
+  "source-pins.json": {
+    "bytes": 3226,
+    "sha256": "59bb327be5676ec7a2f42eff778d88f9628f98630904e0653ce87fbfc2f6c43a"
+  },
+  "source.patch": {
+    "bytes": 12586,
+    "sha256": "589c654c0ed1131771c422f430ca343954f2783a5ce8b59ac34741e6814d382f"
+  },
+  "test-dependencies.json": {
+    "bytes": 489,
+    "sha256": "a658af5c58adb83d579fb5449fa819647574c8cff06fa99e957b3a9bf02b84c4"
+  },
+  "tests/green.json": {
+    "bytes": 2258,
+    "sha256": "c41c91b43a54e58b16f1bdf0ff17b80d0942cbc999cf0bd1f5daf0d0f0e3e700"
+  },
+  "tests/red.json": {
+    "bytes": 2564,
+    "sha256": "0bec93cee7ee35d80c87c76f047ea4bd24741a91e42851405d5ff309d592eb14"
+  }
+}
