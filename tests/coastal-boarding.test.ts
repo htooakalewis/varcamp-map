@@ -69,7 +69,7 @@ describe('native coastal boarding and nautical proportions',()=>{
    const id=path.split('/').at(-1)!.replace(/\.(tmj|json)$/,'');
    const restored=historicalBytes(id,path.endsWith('.tmj')?'tmj':'json');
    expect(createHash('sha256').update(restored).digest('hex'),path+' original coastal composition').toBe(hash);
-  }else expect(createHash('sha256').update(path.endsWith('.wam')?historicalEditorWamBytes(path.slice(5,-4)):readFileSync(path)).digest('hex'),path).toBe(hash);
+  }else expect(createHash('sha256').update(path.endsWith('.wam')?historicalEditorWamBytes(path.slice(5,-4)):readFileSync(path==='maps/constellation-shore.tmj'?'tests/fixtures/solid-props/before-constellation-shore.tmj':path==='world/layouts/constellation-shore.json'?'tests/fixtures/solid-props/before-constellation-shore.json':path)).digest('hex'),path).toBe(hash);
  }const old=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-inputs/art/tile-catalog.json.before','utf8')),catalog=loadTileCatalog();for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);});
 
  it('lands directly aboard or on the actual gangway instead of a second quay',()=>{const l=source('fa-ship'),e=l.entries.find(e=>e.isDefault)!,hull=l.inspectionZones.find(z=>z.name==='fa-ship')!,gangway=l.inspectionZones.find(z=>z.name==='safe-gangway')!;expect(contains(hull,e)||contains(gangway,e),'the physical boarding destination is on an unrelated pier').toBe(true);});

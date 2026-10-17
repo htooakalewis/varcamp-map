@@ -1,3 +1,4 @@
+import {assertVisual} from './helpers/physical-prop-contracts';
 import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import { readFileSync, mkdtempSync, cpSync, mkdirSync, writeFileSync, symlinkSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -35,8 +36,9 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  });
  it('keeps the proposed layout authoritative and all native layers valid',()=>{
   const source=layout(),{tmj}=buildMap(source,loadTileCatalog());expect(validateMap(native(),WORLD_CATALOG)).toEqual([]);expect(validateMap(tmj,WORLD_CATALOG)).toEqual([]);
-  expect(source.placements.filter(p=>p.sprite==='beach-recliner')).toHaveLength(6);
-  expect(source.placements.some(p=>p.sprite==='coast-deck-chair')).toBe(false);
+  const catalog=loadTileCatalog(),recliners=source.placements.filter(p=>['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].includes(p.id));expect(recliners.map(p=>p.id).sort()).toEqual(['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].sort());
+  for(const p of recliners)assertVisual(catalog[p.sprite],catalog['beach-recliner']);
+  expect(source.placements.some(p=>{const s=catalog[p.sprite],old=catalog['coast-deck-chair'];return s.sheet===old.sheet&&JSON.stringify(s.rect)===JSON.stringify(old.rect)&&s.sourceId===old.sourceId;})).toBe(false);
   expect(source.animatedOverlays!.filter(o=>o.name.startsWith('beach-surf'))).toHaveLength(7);
  });
  it('retains gentle four-frame native surf and an exact bounded loop',()=>{

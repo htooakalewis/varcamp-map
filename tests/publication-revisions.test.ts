@@ -11,6 +11,7 @@ const navigationRevisionPath = 'publication/revisions/2026-10-17-return-approach
 const beachRevisionPath='publication/revisions/2026-10-17-beach-composition.json';
 const closureRevisionPath='publication/revisions/2026-10-17-beach-ci-closure.json';
 const propsRevisionPath='publication/revisions/2026-10-17-solid-props.json';
+const propsClosurePath='publication/revisions/2026-10-17-solid-props-ci-closure.json';
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
 const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
@@ -53,6 +54,7 @@ describe('publication exact reviewed replacements', () => {
     const bytes=JSON.stringify(value);write(propsRevisionPath,bytes);
     manifest.extensionInventory[propsRevisionPath]=createHash('sha256').update(bytes).digest('hex');
   }
+  function pinPropsClosure(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(propsClosurePath,bytes);manifest.extensionInventory[propsClosurePath]=createHash('sha256').update(bytes).digest('hex');}
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -63,6 +65,7 @@ describe('publication exact reviewed replacements', () => {
     expect(result.status).not.toBe(0);
     expect(result.output).toContain(message);
   }
+  it('accepts exact sixth document chaining and refuses a wrong prior hash',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'sixth');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'sixth').digest('hex')};pinPropsClosure({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinPropsClosure({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -78,6 +81,7 @@ describe('publication exact reviewed replacements', () => {
     pinBeach();
     pinProps();
     pinClosure();
+    pinPropsClosure();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

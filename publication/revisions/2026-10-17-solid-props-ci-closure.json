@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "ca87833b023f8459e418b2d54b20f487e6557c9e4a343ae39f8fddf923e8555d",
+      "toSha256": "dff7ef1e93bbe74024cea34528496b8015f03a4dd948b5e23c9f6ee3be1018d8",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "e6c77e3ffb21bd87734e8768ca2291d865b4184629762394620a71d170ab28d9",
+      "toSha256": "a7bc3fbf66938bb478b591d1c438337d8d2a76f3effe6707068e9de37a1bd36c",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "370bfd0bc8bfab9acdad4c990e3275f16ce3c91ac009410415774c0de0ff1acd",
+      "toSha256": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/medium-hub.test.ts",
+      "fromSha256": "80b8ff02bc8ef4e53a29f18a540d88c1c1ac679f36c2b5713df9f69a5bf0f690",
+      "toSha256": "6447642f97a9d09a14affbffd6c6e787b096f98bf977b572bec5c51fe5670d0a",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/sign-padding.test.ts",
+      "fromSha256": "399ee90a88a342dff8e63b838ea5a6eb4afbc49dfb6b1d3eda38cee51bef1327",
+      "toSha256": "5899df12713bd33eb280de8e8bb9ff4087823084026e48f6554aed193aefd785",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "c1ab0b846209f81de9a5a35f0b145e67fa706ae4066f5532811a0a20a20032df",
+      "toSha256": "65d60948b078618ee420d2d4fda8fa9cface4e7d44e0198960facae223026819",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    },
+    {
+      "path": "tests/zodiac-wheel.test.ts",
+      "fromSha256": "649895b3211dd2689af5402415e978b1fa4878ae92ecde6623d379ecc3e30174",
+      "toSha256": "3ca022fa6dd7bf816ecfda6ebba409a3177dad9b724695dd23c38f8992938d2c",
+      "reason": "Reviewed CI consumer contract separation: exact standing assemblies/catalog visual lineage, six sponsor base cells with remaining footprint connected, minimal padding fixture and immutable historical navigation/coastal evidence. No map, art or runtime changes."
+    }
+  ]
+}

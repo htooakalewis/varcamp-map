@@ -1,3 +1,4 @@
+import {assertSponsorFootprints} from './helpers/physical-prop-contracts';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
@@ -18,7 +19,7 @@ const source=()=>JSON.parse(readFileSync('world/layouts/overworld.json','utf8'))
 const cells=(r:TileRect,w:number)=>Array.from({length:r.width*r.height},(_,i)=>(r.y+Math.floor(i/r.width))*w+r.x+i%r.width);
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
 const translated=<T extends TileRect>(r:T):T=>({...r,x:r.x+16,y:r.y+16});
-function built(){const l=addNpcGuides([source()])[0],{tmj}=buildMap(l,loadTileCatalog());return{l,mask:(tmj.layers.find(t=>t.name==='physical-collisions') as TileLayer).data};}
+function built(){const l=addNpcGuides([source()])[0],{tmj}=buildMap(l,loadTileCatalog());return{l,tmj,mask:(tmj.layers.find(t=>t.name==='physical-collisions') as TileLayer).data};}
 function walk(w:number,mask:number[],start:number,forbidden=new Set<number>()){const q=[start],d=new Map([[start,0]]);for(let h=0;h<q.length;h++){const n=q[h],x=n%w,y=Math.floor(n/w);for(const[nx,ny]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const c=ny*w+nx;if(nx>=0&&ny>=0&&nx<w&&ny<w&&!mask[c]&&!forbidden.has(c)&&!d.has(c)){d.set(c,d.get(n)!+1);q.push(c);}}}return d;}
 const radius=(n:number,w:number)=>Math.hypot(n%w-63.5,Math.floor(n/w)-63.5);
 describe('exterior circle road keeps public destinations out of the speaker plaza',()=>{
@@ -60,7 +61,8 @@ describe('exterior circle road keeps public destinations out of the speaker plaz
  });
  it('keeps every spawn and portal cell clear, reachable, separated and within the exterior walking budget',()=>{
   const{l,mask}=built(),gates=l.exits.filter(e=>!e.destination.startsWith('speaker-'));
-  for(const start of cells(l.entries.find(e=>e.isDefault)!,l.width)){const d=walk(l.width,mask,start);for(const r of [...l.entries,...l.exits,...l.areas,...(l.images??[])])for(const n of cells(r,l.width)){expect(mask[n],`${r.name} blocked`).toBe(0);expect(d.has(n),`${r.name} detached`).toBe(true);}for(const e of gates)expect(Math.min(...cells(e,l.width).map(n=>d.get(n)??Infinity)),e.name).toBeLessThanOrEqual(120);}
+  for(const start of cells(l.entries.find(e=>e.isDefault)!,l.width)){const d=walk(l.width,mask,start);for(const r of [...l.entries,...l.exits,...l.areas])for(const n of cells(r,l.width)){expect(mask[n],`${r.name} blocked`).toBe(0);expect(d.has(n),`${r.name} detached`).toBe(true);}for(const e of gates)expect(Math.min(...cells(e,l.width).map(n=>d.get(n)??Infinity)),e.name).toBeLessThanOrEqual(120);}
+  assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const a of l.entries)for(const e of l.exits)expect(overlap(a,e),a.name+' bounces into '+e.name).toBe(false);
   for(const e of gates){const r=l.entries.find(r=>r.name==='from-'+e.name)!;const gap=Math.max(0,r.x-e.x-e.width,e.x-r.x-r.width,r.y-e.y-e.height,e.y-r.y-r.height);expect(gap,e.name+' return gap').toBeGreaterThanOrEqual(2);}
  });

@@ -1,3 +1,5 @@
+import {arrivalPlaques} from './helpers/physical-prop-contracts';
+import {loadTileCatalog} from '../tools/art/catalog';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -62,7 +64,8 @@ describe('audited native navigation', () => {
     expect(priorBlocked.size).toBe(6336);
     expect(blocked.size).toBe(6336 + 20);
     const layout = JSON.parse(readFileSync('world/layouts/overworld.json', 'utf8'));
-    const rects = [...layout.placements.filter((p: { layer: string; sprite: string }) => p.layer === 'props' && !p.sprite.startsWith('exterior-road-')), ...layout.images];
+    expect(arrivalPlaques(layout,loadTileCatalog())).toHaveLength(9);
+    const rects = [...layout.placements.filter((p: { layer: string }) => p.layer === 'props'), ...layout.images];
     const terrain = new Map<string, string>();
     for (const p of layout.placements.filter((p: { layer: string }) => p.layer === 'terrain')) {
       for (let y = p.y; y < p.y + p.height; y++) for (let x = p.x; x < p.x + p.width; x++) terrain.set(`${x},${y}`, p.sprite);

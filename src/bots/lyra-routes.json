@@ -5,11 +5,12 @@
       "world/layouts/overworld.json": "74b45d5f9a0433d944b1995e956b32b734695f0d34f69cc3f2421f60acc83620",
       "maps/overworld.tmj": "ddcfce5159bb28e499914a8adb8c21779c6c5068ad0b3d4e819ca1d5f911e95c",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
-      "tests/exterior-gates.test.ts": "370bfd0bc8bfab9acdad4c990e3275f16ce3c91ac009410415774c0de0ff1acd",
+      "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "95cff94cd326009ebfeb07a523c717d6ef493a02e864128485a5ea019f9fac8a",
       "tests/helpers/visibility-history.ts": "12aa4f359784a935834d2ad15d209d172c6220c9146619af9d7e09b2cec356f4",
       "tests/helpers/editor-catalog-history.ts": "7fa9ca198b99dbbd188775c70574704ccadbe8a0da2a378c55e82502418608f0",
-      "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0"
+      "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
+      "tests/helpers/physical-prop-contracts.ts": "e9eeb98998ab7e793407d4472e4998c6e0d7c6c9911756a72080384241db3afd"
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
     "geometrySha256": "62a33d15bed288ff0fea99ca70cba6eaa3cfe42196855a5cb04b53ee1445acce",

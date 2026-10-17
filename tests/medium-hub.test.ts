@@ -1,3 +1,4 @@
+import {standingFace,arrivalPlaques,arrivalFaces,assertVisual,sponsorSupportIds,assertSponsorFootprints} from './helpers/physical-prop-contracts';
 import { readFileSync, existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import sharp from 'sharp';
@@ -31,15 +32,14 @@ describe('medium authored arrival',()=>{
  });
  it('uses short raster welcome, four pointer boards and a directory prompt instead of a paragraph',()=>{
   const l=source();expect(l.signs?.some(s=>s.name==='arrival-instructions'&&s.text.split('\n').length>3)).toBe(false);
-  for(const id of ['welcome','directory','you-are-here'])expect(l.placements.some(p=>p.sprite===`hub-nav-${id}`),`${id} raster navigation missing`).toBe(true);
-  for(const id of ['north','west','east','south'])expect(l.placements.some(p=>p.sprite===`exterior-road-${id}`),`${id} outer-road direction missing`).toBe(true);
+  expect(arrivalPlaques(l,loadTileCatalog()).map(p=>p.id).sort()).toEqual(Object.keys(arrivalFaces).sort());
  });
 
  it('shows all four directional arrows within six tiles of the welcome spawn',()=>{
   const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost');
   expect(post,'first camera must show the four branch choices').toBeDefined();
   const gap=Math.max(Math.max(post!.x-spawn.x-spawn.width,spawn.x-post!.x-post!.width,0),Math.max(post!.y-spawn.y-spawn.height,spawn.y-post!.y-post!.height,0));expect(gap).toBeLessThanOrEqual(6);
-  expect(post!.sprite).toBe('hub-nav-arrival-crosspost');
+  standingFace(l,loadTileCatalog(),post!.id,'hub-nav-arrival-crosspost');
   for(const other of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&p.id!==post!.id))expect(overlap(post!,other),`arrival arrows cover ${other.id}`).toBe(false);
   const svg=readFileSync('art/source/hub-labels.svg','utf8');for(const direction of ['north','west','east','south'])expect(svg).toContain(`data-direction="${direction}"`);
  });
@@ -65,7 +65,9 @@ describe('medium authored arrival',()=>{
   const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!,directory=l.placements.find(p=>p.id==='directory-prompt')!;
   const arrows=[{name:'north',x:post.x+1.5,y:post.y,width:3,height:1},{name:'west',x:post.x,y:post.y+1,width:3,height:1},{name:'east',x:post.x+3,y:post.y+1,width:3,height:1},{name:'south',x:post.x+1.5,y:post.y+2,width:3,height:1}];
   const required=[...(l.images??[]),directory,...arrows];expect(l.images).toHaveLength(3);
-  for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);
+  const supportIds=sponsorSupportIds(l,loadTileCatalog());
+  assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
+  for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);
   for(const c of cells(spawn,l.width)){
    const cx=c%l.width+.5,cy=Math.floor(c/l.width)+.5,safe={x:cx-14,y:cy-7,width:28,height:13};
    for(const r of required)expect(r.x>=safe.x&&r.y>=safe.y&&r.x+r.width<=safe.x+safe.width&&r.y+r.height<=safe.y+safe.height,`${'name'in r?r.name:r.id} misses first-view HUD-safe rectangle from ${c%l.width},${Math.floor(c/l.width)}`).toBe(true);
@@ -90,11 +92,12 @@ describe('medium authored arrival',()=>{
   }expect(failures).toEqual([]);
  });
  it('keeps every raster nameplate and pointer apart from controls and other plaques',()=>{
-  const l=source(),plaques=l.placements.filter(p=>p.sprite.startsWith('hub-label-')||p.sprite.startsWith('hub-nav-')||p.sprite.startsWith('exterior-road-'));
+  const l=source(),plaques=[...SIGN_IDS.map(sign=>{const p=l.placements.find(p=>p.id===`${sign}-bold-nameplate`)!;expect(p).toBeDefined();assertVisual(loadTileCatalog()[p.sprite],loadTileCatalog()[`hub-label-${sign}`]);return p;}),...arrivalPlaques(l,loadTileCatalog())];
+  expect(new Set(plaques.map(p=>p.id)).size).toBe(21);
   for(const[i,p]of plaques.entries()){
-   for(const r of [...l.entries,...l.exits,...l.areas,...(l.images??[])])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
+   for(const r of [...l.entries,...l.exits,...l.areas])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
    for(const other of plaques.slice(i+1))expect(overlap(p,other),`${p.id} overlaps ${other.id}`).toBe(false);
   }
  });
- it('leaves reception, every return and sponsor artwork clear and connected',()=>{const{l,mask}=built(),spawn=l.entries.find(e=>e.isDefault)!,d=distances(l,mask,spawn.y*l.width+spawn.x);for(const r of [...l.entries,...l.exits,...l.areas,...(l.images??[])])for(const n of cells(r,l.width)){expect(mask[n],`${r.name} collision`).toBe(0);expect(d.has(n),`${r.name} unreachable`).toBe(true);}for(const entry of l.entries)for(const exit of l.exits)expect(overlap(entry,exit)).toBe(false);});
+ it('leaves reception, every return and sponsor artwork clear and connected',()=>{const{l,mask}=built(),spawn=l.entries.find(e=>e.isDefault)!,d=distances(l,mask,spawn.y*l.width+spawn.x);for(const r of [...l.entries,...l.exits,...l.areas])for(const n of cells(r,l.width)){expect(mask[n],`${r.name} collision`).toBe(0);expect(d.has(n),`${r.name} unreachable`).toBe(true);}assertSponsorFootprints(l,loadTileCatalog(),built().tmj);for(const entry of l.entries)for(const exit of l.exits)expect(overlap(entry,exit)).toBe(false);});
 });

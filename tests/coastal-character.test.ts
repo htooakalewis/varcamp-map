@@ -1,3 +1,4 @@
+import {assertVisual} from './helpers/physical-prop-contracts';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import sharp from 'sharp';
@@ -31,7 +32,7 @@ describe('coastal event character and preserved journeys',()=>{
       expect(l.placements.filter(p=>['beach-parasol-coral','beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
     }else{
       expect(l.placements.some(p=>p.sprite==='coast-foam-south')).toBe(true);
-      expect(l.placements.some(p=>p.sprite==='coast-parasol')).toBe(true);
+      const parasols=l.placements.filter(p=>p.id.includes('parasol'));expect(parasols.map(p=>p.id).sort()).toEqual(['shore-parasol-east','shore-parasol-lounge','shore-parasol-west']);for(const p of parasols)assertVisual(catalog[p.sprite],catalog['coast-parasol']);
     }
   });
   it('assembles the native licensed horizontal vessel with timber structure and canvas rigging',async()=>{

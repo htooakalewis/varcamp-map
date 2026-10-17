@@ -1,3 +1,4 @@
+import {standingFace as declaredFace} from './helpers/physical-prop-contracts';
 import { readFileSync, readdirSync, cpSync, mkdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve, dirname } from 'node:path';
@@ -12,7 +13,7 @@ import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement } from '../t
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
 // One predicate is used by both fixture cases and the complete production-layout audit.
 const labelCatalog=loadTileCatalog();
-const standingFace=(l:MapLayout,id:string)=>{const assembly=l.standingSigns?.find(s=>s.face===id&&s.faceKind===undefined);if(!assembly)throw Error(`Missing physical standing face ${id}`);const p=l.placements.find(p=>p.id===assembly.face);if(!p)throw Error(`Missing standing placement ${id}`);return p;};
+const standingFace=(l:MapLayout,id:string)=>declaredFace(l,labelCatalog,id,id==='welcome-control-sign'?'hub-nav-welcome':`exterior-road-${id.replace('exterior-road-sign-','')}`);
 const obstructsLabel=(p:Placement,catalog:ReturnType<typeof loadTileCatalog>)=>{
  // Terrain and atmospheric backdrops were already outside the scenery audit.
  if(['terrain','atmosphere'].includes(p.layer))return false;
