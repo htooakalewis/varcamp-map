@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/fa-ship.tmj",
+      "fromSha256": "4bc2c0935c02c3c961e2c3b37f650f7743bb64ea90484a827190db2e8ceb9a4b",
+      "toSha256": "34d96436d05b9ac44dc19c11601ea61b370ba1248fdd3b2a3981f31c3cb97ea7",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    },
+    {
+      "path": "maps/preview/fa-ship.tmj",
+      "fromSha256": "b73fec0f5b0c63d0a85943359ac52534993a683fe16ec49ebbe935b62378f2d6",
+      "toSha256": "e1f74a052519e1645d2091fd66c582f1dc48a90c1e6b9388ea7c2286a5255c94",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "1cd3bfe55b565f7764f8d2a6816ed7211fa9384c838d30026a17f8790409c9f6",
+      "toSha256": "8b45c1f19a8ce66ce29601b003b15a8efc1836909579cc1a3bfc972e14e0f15f",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac",
+      "toSha256": "6231c0b2abef56cae4ee1e79cc777d94c2c983fc5cf8ede77079c0fff58a433a",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "5b72da42a573909ef4d7a016b11a74f69b8798a7d35c07bd8f968a4d753dc7a4",
+      "toSha256": "c03578ac9cf8f0cc1ae6794e492ad15745d5c792803ac2a645a1dbfd30accbdc",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "dc9b379a2955e015c684baf6720fd59d30d8e25533c0ee9bfcacae46be043ac4",
+      "toSha256": "d3f58ff77783bd6bd65e84f68512c7ed4ec801b9562d16edf23ce0f47e6174a2",
+      "reason": "Approved beach composition: existing sea veil, one route board, exact historical/current separation and native preservation tests. No collision, entry, WAM or runtime code change."
+    }
+  ]
+}

@@ -53,8 +53,10 @@ describe('builder catalog defaults',()=>{
  for(const [id,proof]of Object.entries(before.maps) as [string,any][]){
   it(`${id} adds native catalogs while preserving every other builder output${id==='overworld'?' of its frozen historical input':''}`,()=>{
    // This catalog-only receipt predates the separate return-navigation release.
-   const raw=readFileSync(id==='overworld'?'tests/fixtures/overworld-history/pre-return-layout.json':`world/layouts/${id}.json`,'utf8');
+   const raw=readFileSync(id==='overworld'?'tests/fixtures/overworld-history/pre-return-layout.json':['fa-ship','shipyard-beach'].includes(id)?`tests/fixtures/beach-composition/before-${id}.json`:`world/layouts/${id}.json`,'utf8');
    if(id==='overworld')expect(sha(raw)).toBe('49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093');
+   if(id==='fa-ship')expect(sha(raw)).toBe('5b72da42a573909ef4d7a016b11a74f69b8798a7d35c07bd8f968a4d753dc7a4');
+   if(id==='shipyard-beach')expect(sha(raw)).toBe('dc9b379a2955e015c684baf6720fd59d30d8e25533c0ee9bfcacae46be043ac4');
    const layout=JSON.parse(raw) as MapLayout;
    const{tmj,wam}=buildMap(layout,catalog),{entityCollections,...rest}=wam;
    expect(entityCollections).toEqual(descriptors);

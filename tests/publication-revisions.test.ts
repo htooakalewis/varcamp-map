@@ -8,6 +8,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from
 const checker = resolve('publication/verify-source.mjs');
 const revisionPath = 'publication/revisions/2026-10-16-shared-guides.json';
 const navigationRevisionPath = 'publication/revisions/2026-10-17-return-approaches.json';
+const beachRevisionPath='publication/revisions/2026-10-17-beach-composition.json';
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
 const currentLayout=readFileSync('world/layouts/overworld.json','utf8');
 const baselineHash = '4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e';
@@ -38,6 +39,10 @@ describe('publication exact reviewed replacements', () => {
     const bytes=JSON.stringify(value);write(navigationRevisionPath,bytes);
     manifest.extensionInventory[navigationRevisionPath]=createHash('sha256').update(bytes).digest('hex');
   }
+  function pinBeach(value:unknown={schemaVersion:1,revisions:[]}) {
+    const bytes=JSON.stringify(value);write(beachRevisionPath,bytes);
+    manifest.extensionInventory[beachRevisionPath]=createHash('sha256').update(bytes).digest('hex');
+  }
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -60,6 +65,7 @@ describe('publication exact reviewed replacements', () => {
     write('src/bots/reviewed.ts', 'baseline\n');
     pinRevisions();
     pinNavigation();
+    pinBeach();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});
@@ -242,6 +248,22 @@ describe('publication exact reviewed replacements', () => {
     if(kind==='placement')layout.placements[0].x++;
     const path=kind==='role'||kind==='placement'?'world/layouts/overworld.json':'maps/overworld.tmj';
     write(path,JSON.stringify(path.endsWith('.tmj')?map:layout)+'\n');rejects('Reviewed source changed: '+path);
+  });
+  it('composes the fixed third beach document from the exact second receipt',()=>{
+    pinRevisions({schemaVersion:1,revisions:[reviewed()]});
+    const second='navigation bytes\n',secondHash=createHash('sha256').update(second).digest('hex');
+    pinNavigation({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:secondHash}]});
+    const final='beach bytes\n';
+    pinBeach({schemaVersion:1,revisions:[{...reviewed(),fromSha256:secondHash,toSha256:createHash('sha256').update(final).digest('hex')}]});
+    write('src/main.ts',final);const result=verify();expect(result.status,result.output).toBe(0);
+    pinBeach({schemaVersion:1,revisions:[{...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(final).digest('hex')}]});
+    rejects('Reviewed revision prior mismatch: src/main.ts');
+  });
+  it.each(['maps/fa-ship.tmj','maps/shipyard-beach.tmj','world/layouts/fa-ship.json','world/layouts/shipyard-beach.json'])('actual CLI rejects changed current beach artifact %s after a positive baseline',path=>{
+    const raw=readFileSync(path,'utf8');pinBeach({schemaVersion:1,revisions:[{path,fromSha256:baselineHash,toSha256:createHash('sha256').update(raw).digest('hex'),reason:'Exact current beach artifact'}]});
+    write(path,raw);const positive=verify();expect(positive.status,positive.output).toBe(0);
+    const artifact=JSON.parse(raw);if(path.endsWith('.tmj'))artifact.nextobjectid++;else artifact.placements[0].x++;
+    write(path,JSON.stringify(artifact));rejects('Reviewed source changed: '+path);
   });
 
 });

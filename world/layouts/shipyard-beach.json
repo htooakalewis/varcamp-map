@@ -50737,15 +50737,6 @@
       "layer": "props"
     },
     {
-      "id": "wood-sign-harbor-title",
-      "sprite": "coast-sign-board",
-      "x": 18,
-      "y": 14,
-      "width": 8,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
       "id": "wood-sign-plaza-return-label",
       "sprite": "coast-sign-board",
       "x": 22,
@@ -51404,18 +51395,6 @@
   ],
   "signs": [
     {
-      "name": "harbor-title",
-      "text": "STAR HARBOR",
-      "x": 18,
-      "y": 14,
-      "width": 8,
-      "height": 1,
-      "fontSize": 16,
-      "color": "#fff2c7",
-      "align": "left",
-      "padding": 4
-    },
-    {
       "name": "plaza-return-label",
       "text": "↑ PLAZA",
       "x": 22,
@@ -51477,7 +51456,7 @@
     },
     {
       "name": "arrival-routes",
-      "text": "SHIP ↓   SHORE →",
+      "text": "FA SHIP ↓   SHORE →",
       "x": 19,
       "y": 15,
       "width": 10,

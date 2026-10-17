@@ -95,7 +95,10 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  });
 
  it('keeps the reviewed live art delta scoped to beach scenery while preserving historic retirement and native journeys',()=>{
-  const map=native(),source=layout(),baseline=json('tests/fixtures/beach-retirement/retired-native.tmj') as TiledMap,receipt=json('tests/fixtures/beach-refinement-receipt.json');
+  // The immutable art receipt predates the separately checked current beach composition.
+  const raw=readFileSync('tests/fixtures/beach-composition/before-shipyard-beach.tmj');
+  expect(hash(raw)).toBe('3566cffbcf2321bd3ac0d375f3802171dd04c38d384a633f8ef6f7aaceea13ac');
+  const map=JSON.parse(raw.toString()) as TiledMap,source=layout(),baseline=json('tests/fixtures/beach-retirement/retired-native.tmj') as TiledMap,receipt=json('tests/fixtures/beach-refinement-receipt.json');
   expect(hash(JSON.stringify(baseline))).toBe(receipt.baselineNativeSha256);expect(hash(JSON.stringify(map))).toBe(receipt.nativeSha256);
   expect(hash(historicalEditorWamBytes('shipyard-beach'))).toBe(receipt.wamFileSha256);
   const visual=(name:string)=>name==='terrain'||name.startsWith('scenery-')||name==='physical-collisions'||name.startsWith('beach-surf-');

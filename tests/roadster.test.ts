@@ -51,7 +51,7 @@ it('preserves the original sole-addition Roadster receipt against its immutable 
 
 it('leaves all WAMs, the other32 native maps/previews and independently replaceable sponsors byte-exact', () => {
  const inventory = json('publication/source-manifest.json').sourceInventory;
- const revisions = new Map(json('publication/revisions/2026-10-16-shared-guides.json').revisions.map((r: {path:string;toSha256:string}) => [r.path,r.toSha256]));
+ const revisions = new Map(['2026-10-16-shared-guides','2026-10-17-return-approaches','2026-10-17-beach-composition'].flatMap(id=>json(`publication/revisions/${id}.json`).revisions).map((r: {path:string;toSha256:string}) => [r.path,r.toSha256]));
  for (const [path, baseline] of Object.entries(inventory)) if ((/^maps\//.test(path) && !['maps/overworld.tmj','maps/preview/overworld.tmj'].includes(path)) || path.startsWith('assets/sponsors/')) expect(sha(readFileSync(path)),path).toBe(revisions.get(path) ?? baseline);
 });
 it('fits the arrival view without touching any743 guide cell, spawn, entrance, scenery or sponsor panel', () => {
@@ -139,8 +139,9 @@ it('refuses entity, area, vendor, mapUrl and collection drift outside catalog re
 it('proves all four editor builder metadata changes before historical composition and refuses unrelated drift', () => {
  expect(editorMetadataHistoryPaths).toHaveLength(4);
  for(const path of editorMetadataHistoryPaths){
-  const raw=readFileSync(path==='world/layouts/overworld.json'?'tests/fixtures/overworld-history/pre-return-layout.json':path,'utf8');
+  const raw=readFileSync(path==='world/layouts/overworld.json'?'tests/fixtures/overworld-history/pre-return-layout.json':path==='world/layouts/shipyard-beach.json'?'tests/fixtures/beach-composition/before-shipyard-beach.json':path,'utf8');
   if(path==='world/layouts/overworld.json')expect(sha(raw)).toBe('49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093');
+  if(path==='world/layouts/shipyard-beach.json')expect(sha(raw)).toBe('dc9b379a2955e015c684baf6720fd59d30d8e25533c0ee9bfcacae46be043ac4');
   expect(()=>historicalEditorMetadataBytes(path,raw)).not.toThrow();
   const changed=raw.replace('"sha256":','"unexpected":true,"sha256":');
   expect(changed).not.toBe(raw);
