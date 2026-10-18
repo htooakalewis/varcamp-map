@@ -28,7 +28,7 @@ describe('coastal event character and preserved journeys',()=>{
         for(let i=0;i<pixels.length;i+=4){const[r,g,b,a]=pixels.subarray(i,i+4);if(a===255&&r>180&&g>150&&b<190&&r>g&&g>b)golden++;}
         expect(golden,`${sprite} must retain warm golden pixels`).toBeGreaterThanOrEqual(32*32*.95);
       }
-      const surf=l.animatedOverlays!.find(o=>o.name==='beach-surf-south')!;expect(surf).toBeDefined();expect(surf.animations.every(a=>a.frames.length===4&&new Set(a.frames.map(f=>f.tileid)).size===4)).toBe(true);
+      const surf=JSON.parse(readFileSync('art/source/organic-coast.json','utf8'));expect(surf.cells.length).toBeGreaterThan(80);expect(surf.frameMs).toBeGreaterThanOrEqual(200);expect(l.placements.some(p=>p.sprite.startsWith('organic-coast-land-'))).toBe(true);
       expect(l.placements.filter(p=>['beach-parasol-coral','beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
     }else{
       expect(l.placements.some(p=>p.sprite==='coast-foam-south')).toBe(true);

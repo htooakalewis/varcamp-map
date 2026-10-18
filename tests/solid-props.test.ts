@@ -1,3 +1,4 @@
+import {historicalBeach} from './helpers/organic-coast-history';
 import {historicalPlaza,groveBaseCells} from './helpers/plaza-groves';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
@@ -62,9 +63,9 @@ const receipt=read('tests/fixtures/solid-props/delta.json');
 function blocked(map:any){const gids=new Set(map.tilesets.flatMap((s:any)=>(s.tiles??[]).filter((t:any)=>t.properties?.some((p:any)=>p.name==='collides'&&p.value===true)).map((t:any)=>s.firstgid+t.id)));return new Set<string>(map.layers.flatMap((l:any)=>l.type==='tilelayer'?l.data.flatMap((g:number,i:number)=>gids.has(g)?[`${i%map.width},${Math.floor(i/map.width)}`]:[]):[]));}
 function connected(map:any,mask:Set<string>,points:string[]){const first=points[0],seen=new Set([first]),queue=[first];for(const key of queue){const[x,y]=key.split(',').map(Number);for(const[nx,ny]of[[x+1,y],[x-1,y],[x,y+1],[x,y-1]]){const n=`${nx},${ny}`;if(nx>=0&&ny>=0&&nx<map.width&&ny<map.height&&!mask.has(n)&&!seen.has(n)){seen.add(n);queue.push(n);}}}return points.every(p=>seen.has(p));}
 describe('published solid-prop receipts and direct current physical contracts',()=>{
- for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} retains the historical support receipt and explicit current masks/routes`,()=>{
+ for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} retains the historical support receipt and its protected masks/routes`,()=>{
   const historical=(id==='overworld'?historicalPlaza('native'):read(`tests/fixtures/standing-captions/before-${id}.tmj`));
-  const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=read(`maps/${id}.tmj`),source=read(`world/layouts/${id}.json`);
+  const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=id==='shipyard-beach'?historicalBeach('native'):read(`maps/${id}.tmj`),source=read(`world/layouts/${id}.json`);
   for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(id==='overworld'&&ext==='tmj'?'tests/fixtures/plaza-groves/before-native.tmj':`tests/fixtures/standing-captions/before-${id}.${ext}`)).toBe(proof.after[ext]);}
   expect(historical.tilesets).toEqual(old.tilesets); // retained published props receipt; new caption atlas is checked separately
   const expectedMask=structuredClone(historical.layers.find((l:any)=>l.name==='physical-collisions'));if(id==='overworld'){const marker=expectedMask.data.find(Boolean);for(const key of groveBaseCells(base)){const[x,y]=key.split(',').map(Number);expectedMask.data[y*now.width+x]=marker;}}expect(now.layers.find((l:any)=>l.name==='physical-collisions')).toEqual(expectedMask); // exact historical supports plus the separately reviewed grove bases

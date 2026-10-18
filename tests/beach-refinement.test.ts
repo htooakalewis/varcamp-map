@@ -1,3 +1,4 @@
+import {historicalBeach} from './helpers/organic-coast-history';
 import {assertVisual} from './helpers/physical-prop-contracts';
 import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import { readFileSync, mkdtempSync, cpSync, mkdirSync, writeFileSync, symlinkSync, realpathSync, rmSync } from 'node:fs';
@@ -39,7 +40,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
   const catalog=loadTileCatalog(),recliners=source.placements.filter(p=>['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].includes(p.id));expect(recliners.map(p=>p.id).sort()).toEqual(['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].sort());
   for(const p of recliners)assertVisual(catalog[p.sprite],catalog['beach-recliner']);
   expect(source.placements.some(p=>{const s=catalog[p.sprite],old=catalog['coast-deck-chair'];return s.sheet===old.sheet&&JSON.stringify(s.rect)===JSON.stringify(old.rect)&&s.sourceId===old.sourceId;})).toBe(false);
-  expect(source.animatedOverlays!.filter(o=>o.name.startsWith('beach-surf'))).toHaveLength(7);
+  expect(source.animatedOverlays!.some(o=>o.name.startsWith('beach-surf'))).toBe(false);expect(native().tilesets.some(t=>t.name==='organic-coast'&&t.tiles?.some(t=>t.animation))).toBe(true);
  });
  it('retains gentle four-frame native surf and an exact bounded loop',()=>{
   for(const set of native().tilesets.filter(s=>s.name?.startsWith('beach-surf')===true))for(const tile of set.tiles??[]){
@@ -55,7 +56,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  });
  it('moves actual surf pixels under the pinned Phaser parser and rejects a stopped animation',async()=>{
   const parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js'));
-  const map=native(),atlas=await sharp('assets/tilesets/original/beach-surf.png').ensureAlpha().raw().toBuffer();
+  const map=historicalBeach('native') as TiledMap,atlas=await sharp('assets/tilesets/original/beach-surf.png').ensureAlpha().raw().toBuffer();
   const sample=(input:TiledMap,time:number)=>{
    const engine=parse(structuredClone(input)),chunks:Buffer[]=[];
    for(const layer of input.layers.filter(l=>l.name.startsWith('beach-surf'))){
@@ -81,8 +82,8 @@ describe('relaxed native beach with retained harbor contracts',()=>{
    // The isolated tool copy must include its actual shared configuration dependency.
    cpSync('world/editor-collections.json',resolve(temp,'world/editor-collections.json'));
    expect(readFileSync(resolve(temp,'world/editor-collections.json'))).toEqual(readFileSync('world/editor-collections.json'));
-   const before=native();writeFileSync(resolve(temp,'maps/shipyard-beach.tmj'),JSON.stringify(before));writeFileSync(resolve(temp,'package.json'),'{"type":"module"}');symlinkSync(realpathSync('node_modules'),resolve(temp,'node_modules'));
-   const source=layout(),overlay=source.animatedOverlays!.find(o=>o.name==='beach-surf-west')!;
+   const before=historicalBeach('native') as TiledMap;writeFileSync(resolve(temp,'maps/shipyard-beach.tmj'),JSON.stringify(before));writeFileSync(resolve(temp,'package.json'),'{"type":"module"}');symlinkSync(realpathSync('node_modules'),resolve(temp,'node_modules'));
+   const source=historicalBeach('layout') as MapLayout,overlay=source.animatedOverlays!.find(o=>o.name==='beach-surf-west')!;
    for(const animation of overlay.animations)animation.frames[0].duration+=80;
    for(const sign of source.signs??[])source.placements.push({id:`probe-veil-${sign.name}`,sprite:'beach-sea-veil',x:sign.x,y:sign.y,width:1,height:1,layer:'architecture'});
    writeFileSync(resolve(temp,'world/layouts/shipyard-beach.json'),JSON.stringify(source));

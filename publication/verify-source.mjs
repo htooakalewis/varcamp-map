@@ -9,7 +9,7 @@ const manifest = JSON.parse(readFileSync(resolve(root, 'publication/source-manif
 const inventory = manifest.sourceInventory;
 const extensions = manifest.extensionInventory ?? {};
 // Explicit reviewed release chain; all earlier receipts and documents stay immutable.
-const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json', 'publication/revisions/2026-10-18-beach-groves-guide-identity.json'];
+const revisionPaths = ['publication/revisions/2026-10-16-shared-guides.json', 'publication/revisions/2026-10-17-return-approaches.json', 'publication/revisions/2026-10-17-beach-composition.json', 'publication/revisions/2026-10-17-beach-ci-closure.json', 'publication/revisions/2026-10-17-solid-props.json', 'publication/revisions/2026-10-17-solid-props-ci-closure.json', 'publication/revisions/2026-10-18-standing-captions.json', 'publication/revisions/2026-10-18-standing-captions-ci-closure.json', 'publication/revisions/2026-10-18-beach-groves-guide-identity.json', 'publication/revisions/2026-10-18-organic-coast.json'];
 assert.equal(Object.keys(inventory).length, 303);
 for (const path of Object.keys(extensions)) {
   assert.ok(!Object.hasOwn(inventory, path), `Extension overlaps frozen source: ${path}`);

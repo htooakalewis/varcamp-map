@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "46752db62a26631fd4f85247ab730e4b8ac0feb6390081142ed56516377abee8",
+      "toSha256": "ed0b9ca21d380c867c6f17d50e8d2b87a5e60d723deb1233e69c1ec5ce2c3a51",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "07cc419186c4e4d20751a01bfac7b264d81b5d29edafacf29878f7e0e7e87d51",
+      "toSha256": "f1b231c929a7c52c8c4b61ead539c21739d82be48b5c5d17155e63c964f63333",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "28d3ac3eb2dcf6e3661300edec5fd90c9e92521a91b04b19c5136b898ee0ad5b",
+      "toSha256": "659e0f357e8c368f43f0b2b50c7d9a4d109a72175bc5c27abb2469454d8cab2b",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "96e29d9fa3bec117d87b2b7037efbc6066007a6e97283b07e37150aaf204c679",
+      "toSha256": "8c576a6a1390f3263bc597f15c1fa8d2955a8faf08db169e754530965a2c2eda",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "a7bc3fbf66938bb478b591d1c438337d8d2a76f3effe6707068e9de37a1bd36c",
+      "toSha256": "176784ec6605ed41e4e2e1733901884f66419213a07ae0cc2cce112198d419a3",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "tools/maps/build.ts",
+      "fromSha256": "a726aa1399c526e71dc24eb6375ce15ce77e270f59f9f061ef13f9bb85041d1e",
+      "toSha256": "98f111554832ec211920e6dacd6268c8bafb911eabd8e5f3f59107f570a3f0ad",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "fd2ae22c43494fb3c58702c256467b9e1dacc6acc8fa6f07389c12151aac6fa2",
+      "toSha256": "d3dfd38b7639e6940a40c7a3bd35d080e67c4731d61b279db3f6701b42da8459",
+      "reason": "ORGANIC-COAST: replace the rectangular beach terrain and surf with a hand-authored curved shoreline, shallow/wet transitions and native moving tides; keep portals, standing signs, all solid props, ship and plaza intact. Current consumer tests retain authentic historical inputs and verify the new coast and production source gate."
+    }
+  ]
+}
