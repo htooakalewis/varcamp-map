@@ -6,7 +6,34 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const requireAuthority = assertLive => { if (typeof assertLive !== 'function') throw Error('Lifecycle assertLive authority is required'); assertLive(); };
 const guarded = async (assertLive, action) => { requireAuthority(assertLive); const value = await action(); assertLive(); return value; };
-const createdContexts = new WeakMap(), freshGrants = new WeakMap();
+const createdContexts = new WeakMap(), freshGrants = new WeakMap(), roomUiOwners = new WeakMap();
+const sameIdentity = (actual, expected) => actual && expected &&
+  ['playerId', 'name', 'roomId'].every(key => actual[key] === expected[key]);
+function roomUiAuthority(page, assertLive) {
+  const owner = roomUiOwners.get(page);
+  if (!owner) { requireAuthority(assertLive); return; }
+  try {
+    // Retain the original lifecycle even after a failed bootstrap. A new caller
+    // guard cannot turn the same page back into an unowned pre-start check.
+    requireAuthority(owner.assertLive);
+    if (owner.failed) throw owner.failed;
+    if (assertLive !== owner.assertLive) throw Error('Room UI lifecycle authority changed');
+    if (page.context() !== owner.context || owner.context.pages().length !== 1 || owner.context.pages()[0] !== page ||
+        owner.frame?.isDetached()) throw Error('Owned room UI page/context/frame changed');
+    return owner;
+  } catch (error) { owner.failed ??= error; throw owner.failed; }
+}
+async function ownedRoomUiCheck(page, assertLive, action) {
+  const owner = roomUiOwners.get(page), live = () => roomUiAuthority(page, assertLive);
+  try {
+    live();
+    if (owner?.phase === 'post-controller') {
+      const observed = await guarded(live, () => controllerObserver(owner.frame, owner.profile, { assertLive: owner.assertLive }).read());
+      if (!sameIdentity(observed.identity, owner.identity)) throw Error('Post-controller room UI identity changed');
+    }
+    return await action(live, owner?.phase === 'post-controller');
+  } catch (error) { if (owner) { owner.failed ??= error; throw owner.failed; } throw error; }
+}
 
 /** Only this runner lifecycle path creates the context that can issue a fresh bootstrap grant. */
 export async function createFreshRunnerContext(browser) {
@@ -104,12 +131,20 @@ export async function readIdentity(frame, profile = config, options) {
   return (await controllerObserver(frame, profile, options).read()).identity;
 }
 
-export async function checkDevices(page, { assertLive } = {}) {
-  for (const id of ['microphone-button', 'camera-button']) {
+async function checkDeviceControls(page, assertLive, postController) {
+  if (postController) {
+    const microphone = page.getByTestId('microphone-button');
+    await guarded(assertLive, () => microphone.waitFor({ state: 'detached', timeout: 15000 }));
+    if (await guarded(assertLive, () => microphone.count()) !== 0) throw Error('Proximity-disabled microphone control is not detached');
+  }
+  for (const id of postController ? ['camera-button'] : ['microphone-button', 'camera-button']) {
     const control = page.getByTestId(id);
     await guarded(assertLive, () => control.waitFor({ state: 'visible', timeout: 15000 }));
     if (!/(^|\s)bg-danger(\s|$)/.test(await guarded(assertLive, () => control.getAttribute('class')) ?? '')) throw Error(`${id} is not off`);
   }
+}
+export async function checkDevices(page, { assertLive } = {}) {
+  return ownedRoomUiCheck(page, assertLive, (live, postController) => checkDeviceControls(page, live, postController));
 }
 export async function dismissMediaPrompt(page, { assertLive, beforeMedia = async () => {} } = {}) {
   await guarded(assertLive, beforeMedia);
@@ -132,8 +167,9 @@ async function assertWelcomeAbsent(page, assertLive) {
   await assertNoModal(page, assertLive);
 }
 export async function verifyRoomUI(page, { assertLive, initial = false } = {}) {
+  return ownedRoomUiCheck(page, assertLive, async (assertLive, postController) => {
   await dismissMediaPrompt(page, { assertLive, beforeMedia: initial ? () => assertWelcomeAbsent(page, assertLive) : async () => {} });
-  await checkDevices(page, { assertLive });
+  await checkDeviceControls(page, assertLive, postController);
   const permissions = await guarded(assertLive, () => page.evaluate(async () => Promise.all(['microphone', 'camera'].map(async name =>
     (await navigator.permissions.query({ name })).state))));
   if (permissions.length !== 2 || permissions.some(state => state !== 'denied')) throw Error('Media permissions are not denied');
@@ -167,6 +203,7 @@ export async function verifyRoomUI(page, { assertLive, initial = false } = {}) {
   }
   const welcomeVisible = await guarded(assertLive, () => page.getByText('Open the welcome directory', { exact: true }).isVisible());
   if (welcomeVisible !== (knownPanels === 1)) throw Error('Unclassified welcome action panel');
+  });
 }
 /** A host owns the deadline and single flight; the frame never owns admission polling. */
 export function createControllerObserver(frame, profile = config, { assertLive, timeout = 5000, now = Date.now } = {}) {
@@ -270,21 +307,35 @@ async function settleFreshWelcome(page, assertLive) {
 /** Only a single lifecycle-issued grant can enter this fixed fresh-world handshake. */
 export async function bootstrapSession(page, { profile = config, fresh, fail = error => { throw error; }, assertLive,
   join = joinRoom, find = findMapFrame, start = startModule, progress = waitForControllerProgress } = {}) {
-  requireAuthority(assertLive); const owned = freshGrants.get(fresh);
+  const owned = freshGrants.get(fresh);
   if (!owned || owned.page !== page || owned.profile !== profile || page.context() !== owned.context || owned.context.pages().length !== 1 || owned.context.pages()[0] !== page || page.url() !== 'about:blank') throw Error('Require an unused fresh owned guide bootstrap grant');
   freshGrants.delete(fresh);
+  if (roomUiOwners.has(page)) throw Error('Room UI page already has a lifecycle owner');
+  const owner = { context: owned.context, page, profile, assertLive, frame: undefined, identity: undefined, phase: 'pre-controller', failed: undefined };
+  roomUiOwners.set(page, owner);
+  try {
+  requireAuthority(assertLive);
+  // Injection seams cannot issue the private exception for a missing native
+  // microphone. Only the real verified import and real host progress can.
+  if (start !== startModule || progress !== waitForControllerProgress) throw Error('Fixed native start/progress authority is required');
   await guarded(assertLive, () => join(page, profile, { assertLive }));
   const frame = await guarded(assertLive, () => find(page, { assertLive }));
+  owner.frame = frame;
   const original = await readFreshJoin(frame, profile, assertLive);
+  owner.identity = { playerId: original.playerId, name: original.name, roomId: original.roomId };
   const welcome = await settleFreshWelcome(page, assertLive);
   await readFreshJoin(frame, profile, assertLive, original);
   await verifyRoomUI(page, { assertLive, initial: true });
   await readFreshJoin(frame, profile, assertLive, original);
   await assertWelcomeAbsent(page, assertLive);
   const identity = await guarded(assertLive, () => start(page, frame, fail, profile, { assertLive }));
-  await guarded(assertLive, () => progress(frame, profile, { assertLive }));
+  if (!sameIdentity(identity, owner.identity)) throw Error('Started controller changed fresh native identity');
+  const progressed = await guarded(assertLive, () => progress(frame, profile, { assertLive }));
+  if (!sameIdentity(progressed, owner.identity)) throw Error('Controller progress changed fresh native identity');
+  owner.phase = 'post-controller';
   await verifyRoomUI(page, { assertLive, initial: true });
   return { identity, frame, welcome };
+  } catch (error) { owner.failed ??= error; throw owner.failed; }
 }
 
 /** Hash only selected response bodies delivered during this page session, never refetch. */
