@@ -1,0 +1,19 @@
+{
+  "source": "Built-in imagegen targeted original repair",
+  "originalMaster": "leo-pair-master.png",
+  "originalMasterSha256": "7fe983f7f083d198032730bd3102bd2143da31cdb83786d00a8da69950701742",
+  "replacementSource": "leo-female-down-left-repair.png",
+  "replacementBytes": 1791093,
+  "replacementSha256": "acab5f82e5c5129239b9c5a4a69c608cb7bea00bde7878b9978b4ad6a290d009",
+  "replacedOriginalFrames": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "invariant": "All18 other source frames and all original master bytes retained. No replacement is mirrored or idle-duplicated.",
+  "normalization": "Repair source422px maximum selected height is224 original master units, then the same character-wide uniform nearest scale. This compensates only differing generated source resolution.",
+  "promptFile": "leo-repair-prompt.txt"
+}

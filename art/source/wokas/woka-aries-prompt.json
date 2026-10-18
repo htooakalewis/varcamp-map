@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "asset": "aries-male-female-walk-sheet",
+  "prompt": "Use case: stylized-concept. Asset: production WorkAdventure 24-frame character sprite atlas, first two of a twelve-zodiac VarCamp Myanmar 2026 family. Draw ONE adult male ARIES avatar and ONE adult female ARIES avatar in clean native game pixel art, friendly 32x32 Woka proportions with small body and readable head. Futuristic navy/white event techwear with muted red accents and a small simple white ram-horn crest on headgear; distinctive ram horn shapes integrated into compact helmet. Both wear practical trousers, boots and light tech jackets. No gold, no Greek/classical robes, no ornate armor, no props extending out of cells, no banners or text. Flat crisp hand-placed-looking pixels, restrained four-tone shading, transparent background, NO shadows or background. Fixed THREE COLUMNS x EIGHT ROWS of equal SQUARE cells with clear transparent margins. Top4rows MALE: row1 walking DOWN toward viewer; row2 walking LEFT; row3 walking RIGHT; row4 walking UP away. Bottom4rows FEMALE same direction order DOWN, LEFT, RIGHT, UP. Each row has exactly3 different walking poses: left-step, neutral middle, right-step. Same character outfit, dimensions, head position and standing baseline across all12frames of each gender; each avatar no more than28pixels tall in a conceptual32px cell. Back view must actually show the back of head/body. Legs and arms alternate for walking, no duplicate static rows. Both characters equal professional presence. Grid is3x8, all24fullbody sprites visible. Intended PNG canvas768x2048. No grid lines, labels or divider panels.",
+  "contract": {
+    "framePixels": 32,
+    "columns": 3,
+    "rows": 8,
+    "genders": [
+      "male",
+      "female"
+    ],
+    "directions": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "phaseOrder": [
+      "left-step",
+      "neutral",
+      "right-step"
+    ]
+  }
+}
