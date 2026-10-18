@@ -1,6 +1,8 @@
 import { readyPeer, rendererPeer, rendererReceipt } from './helpers/renderer-peer.mjs';
 import { readFileSync } from 'node:fs';
-import { afterEach, beforeEach, expect, it, vi } from 'vitest';
+import { createHash } from 'node:crypto';
+import { afterEach, beforeAll, beforeEach, expect, it, vi } from 'vitest';
+import { buildDedicatedController } from '../../tools/release';
 import * as session from '../bots/browser-session.mjs';
 import * as runner from '../bots/runner.mjs';
 import { selectProfile } from '../bots/config.mjs';
@@ -10,6 +12,14 @@ const modalHTML = readFileSync(new URL('./fixtures/native-directory-20261016.htm
 const iframeHTML = modalHTML.match(/<iframe[^>]*>/)![0];
 const modalAttribute = (name: string) => iframeHTML.match(new RegExp(` ${name}="([^"]*)"`))?.[1] ?? null;
 const journalSrc = modalAttribute('src')!;
+let controllerBytes: Buffer;
+beforeAll(async () => {
+  const artifact = (await buildDedicatedController()).find(row => row.fileName === 'bots/lyra.js');
+  if (!artifact) throw Error('Missing actual dedicated controller compilation');
+  controllerBytes = Buffer.from(artifact.source);
+  expect(controllerBytes.length).toBe(selectProfile().moduleBytes);
+  expect(createHash('sha256').update(controllerBytes).digest('hex')).toBe(selectProfile().moduleSha256);
+});
 beforeEach(() => vi.useFakeTimers());
 afterEach(() => { vi.clearAllTimers(); vi.useRealTimers(); vi.unstubAllGlobals(); });
 function knownWelcomeRoot() {
@@ -23,8 +33,8 @@ function fixture(options: any = {}) {
   const profile = selectProfile(options.persona ?? 'lyra');
   const events: { name: string; at: number; details?: any }[] = [];
   const state = { welcome: options.delayed ? 0 : 1, modal: options.preexistingModal ?? false, frameModal: options.preexistingModal ?? false, media: options.media !== false,
-    location: 'about:srcdoc', position: { x: 2032, y: 2128 }, room: profile.roomUrl, name: profile.botName, closed: false, frameLost: false, source: journalSrc, title: modalAttribute('title'), unknown: false, controls: true, off: true, denied: true, iframeId: modalAttribute('id'), iframeName: modalAttribute('name'), parentTitle: false, modalCount: 1, closeCount: 1, associatedClose: true, connected: true, ...options.state };
-  const waiters = new Set<any>(); let url = options.resumed ? profile.roomUrl : 'about:blank', starts = 0, moves = 0, positionReads = 0, issuedGrant;
+    location: 'about:srcdoc', position: { x: 2032, y: 2128 }, room: profile.roomUrl, name: profile.botName, closed: false, frameLost: false, source: journalSrc, title: modalAttribute('title'), unknown: false, controls: true, microphone: 'visible', camera: 'visible', off: true, denied: true, permissionStates: null, iframeId: modalAttribute('id'), iframeName: modalAttribute('name'), parentTitle: false, modalCount: 1, closeCount: 1, associatedClose: true, connected: true, ...options.state };
+  const waiters = new Set<any>(); let url = options.resumed ? profile.roomUrl : 'about:blank', starts = 0, moves = 0, positionReads = 0, issuedGrant, moduleRoute;
   const record = (name, details?) => events.push({ name, at: Date.now(), details });
   const update = values => { Object.assign(state, values); for (const wake of [...waiters]) wake(); };
   const wait = (predicate, timeout = 15000, label = 'native state') => {
@@ -83,11 +93,21 @@ function fixture(options: any = {}) {
   };
   const page: any = {
     context: () => context, url: () => url,
+    async route(url, handler) { expect(url).toBe(profile.moduleUrl); record('module-route-installed'); moduleRoute = handler; },
     getByText(text) { if (text === welcomeText) return welcome;
       if (text === 'VarCamp Quest Journal') return { async waitFor({ state: wanted, timeout = 15000 }) { await wait(() => wanted === 'visible' && state.modal && state.parentTitle, timeout, 'directory-title'); }, async isVisible() { return state.modal && state.parentTitle; } };
       throw Error(`Unexpected fixture text ${text}`);
     },
-    getByTestId(id) { if (id === 'close-modal-button') return close; return { async waitFor({ timeout = 15000 }) { await wait(() => state.controls, timeout, 'visible-device'); }, async getAttribute() { return state.off ? 'bg-danger' : 'bg-success'; } }; },
+    getByTestId(id) { if (id === 'close-modal-button') return close;
+      if (!['microphone-button', 'camera-button'].includes(id)) throw Error(`Unexpected fixture device ${id}`);
+      const mode = () => state.controls ? state[id === 'microphone-button' ? 'microphone' : 'camera'] : 'detached';
+      return {
+        async count() { record('device-count', { id, mode: mode() }); return mode() === 'detached' ? 0 : 1; },
+        async isVisible() { record('device-visible', { id, mode: mode() }); return mode() === 'visible'; },
+        async waitFor({ state: wanted, timeout = 15000 }) { record('device-wait', { id, wanted, mode: mode(), timeout }); await wait(() => wanted === 'visible' ? mode() === 'visible' : wanted === 'detached' ? mode() === 'detached' : wanted === 'attached' ? mode() !== 'detached' : wanted === 'hidden' ? mode() !== 'visible' : false, timeout, `${id}-${wanted}`); },
+        async getAttribute() { record('device-class', { id, mode: mode() }); return mode() === 'detached' ? null : state.off ? 'bg-danger' : 'bg-success'; },
+      };
+    },
     getByRole(role, { name }) { if (role !== 'button' || name !== 'Continue without webcam and microphone') throw Error('Unexpected native media control'); return media; },
     locator(selector) {
       if (selector === 'iframe#modalIframe') return modalFrame;
@@ -98,13 +118,36 @@ function fixture(options: any = {}) {
         throw Error(`Unexpected fixture selector ${selector}`);
       } };
     },
-    async evaluate() { record('permissions'); return state.denied ? ['denied', 'denied'] : ['prompt', 'denied']; },
+    async evaluate() { record('permissions'); return state.permissionStates ?? (state.denied ? ['denied', 'denied'] : ['prompt', 'denied']); },
   };
   const context: any = { pages: () => options.extraPage ? [page, {}] : [page], async newPage() { return page; } };
   const browser = { async newContext(settings) { record('fresh-context', settings); return context; } };
   vi.stubGlobal('document', { location: { get href() { return state.location; } }, scripts: [{ src: 'https://maps.3-1-133-135.sslip.io/varcamp-demo/assets/src-main-reviewed.js' }] });
   vi.stubGlobal('WA', { room: { get id() { return state.room; } }, player: { playerId: 7, get name() { return state.name; }, async getPosition() { positionReads++; if (options.positionError) throw options.positionError; return { ...state.position }; }, async moveTo() { moves++; throw Error('movement forbidden before controller start'); } } });
-  const frame = { isDetached: () => state.frameLost, async evaluate(fn, value) { if (state.frameLost) throw Error('frame lost'); record('frame-read'); if (starts) record('step-progress'); return fn(value); } };
+  const frame = { isDetached: () => state.frameLost, async evaluate(fn, value) {
+    if (state.frameLost) throw Error('frame lost'); record('frame-read');
+    if (value?.moduleUrl) {
+      // Mock only Playwright's browser execution boundary. The real startModule
+      // installs its route, fetches/verifies the actual compiled/pinned bytes and
+      // fulfills the same body before this native import execution completes.
+      expect(value).toBe(profile); expect(moduleRoute).toBeTypeOf('function');
+      expect(String(fn)).toContain('module.default.run({ persona })');
+      let fulfilled = false;
+      const response = { url: () => profile.moduleUrl, status: () => 200, async body() { return controllerBytes; } };
+      await moduleRoute({ request: () => ({ frame: () => frame }), async fetch(settings) { expect(settings).toEqual({ maxRedirects: 0, timeout: 15000 }); record('module-fetch'); return response; },
+        async fulfill({ response: original, body }) { expect(original).toBe(response); expect(Buffer.from(body).equals(controllerBytes)).toBe(true); record('verified-bytes-fulfilled'); fulfilled = true; },
+        async abort() { throw Error('Verified native module transport unexpectedly aborted'); } });
+      expect(fulfilled).toBe(true); record('module-start'); starts++;
+      update({ microphone: 'detached', ...(options.afterStart ?? {}), ...(options.returnAfterStart ? { welcome: 1 } : {}) });
+      vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 7 });
+      const at=Date.now(); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: options.progressSteps ?? 1,at,leaseDeadline:at+10000,operationBudgetMs:10000,persona:profile.persona,controllerGeneration:7,playerId:7,name:state.name,roomId:state.room });
+      return { playerId: 7, name: state.name, roomId: state.room };
+    }
+    const result = await fn(value);
+    if (starts) record('step-progress');
+    if (starts && result?.evidence?.steps > 0) { record('observed-controller-progress'); if (options.revokeAfterProgress) health.fail(Error('lifecycle revoked during real progress observation')); }
+    return result;
+  } };
   const health = runner.createRunnerLifecycle({ profile });
   const launch = async (overrides: any = {}) => {
     const freshContext = await session.createFreshRunnerContext(browser);
@@ -112,7 +155,7 @@ function fixture(options: any = {}) {
     const action = async () => {
       const result = await session.bootstrapSession(page, { profile, fresh, assertLive: health.assertLive,
         join: async () => { url = profile.roomUrl; record('joined'); }, find: async () => { record('frame-ready'); return frame; },
-        start: async () => { record('module-start'); starts++; if (options.returnAfterStart) update({ welcome: 1 }); vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 7 }); const evidenceAt=Date.now(); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1,at:evidenceAt,leaseDeadline:evidenceAt+10000,operationBudgetMs:10000,persona:profile.persona,controllerGeneration:7,playerId:7,name:state.name,roomId:state.room }); return { playerId: 7, name: state.name, roomId: state.room }; }, ...overrides });
+        ...overrides });
       health.observe(await session.controllerObserver(result.frame, profile, { assertLive: health.assertLive }).read()); health.setRendererEvidence(rendererReceipt()); await health.ready(result.identity); return result;
     };
     return runner.startupBoundary(health, action);
@@ -278,5 +321,152 @@ it('the initial ready handoff rejects a known welcome reappearance after import 
     await vi.advanceTimersByTimeAsync(0); await expect(task).rejects.toThrow(/welcome|popup/i);
     expect(f.starts).toBe(1); expect(f.health.snapshot().healthy).toBe(false);
     expect(f.events.filter(row => row.name === 'welcome-click')).toHaveLength(1); expect(f.events.filter(row => row.name === 'media-click')).toHaveLength(1);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+// The actual official disablePlayerProximityMeeting transition unmounts ONLY
+// the microphone control. The native camera control stays visible and muted.
+// This fixture changes that DOM state only inside the awaited controller start,
+// and admission still uses the production progress observer and lifecycle.
+it('official proximity shutdown after verified controller start/progress admits detached mic and visible muted camera at bootstrap and runtime', async () => {
+  const f = fixture({ afterStart: { microphone: 'detached' } }); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0);
+    const result = await task.catch(error => {
+      console.error(JSON.stringify({ regression: 'official-proximity-mic-detached-after-verified-progress', error: error.message,
+        controls: { microphone: f.state.microphone, camera: f.state.camera, off: f.state.off, permissions: f.state.denied ? ['denied', 'denied'] : ['prompt', 'denied'] },
+        productionEvents: f.events.filter(row => ['module-start', 'observed-controller-progress', 'permissions', 'device-wait', 'device-class'].includes(row.name)),
+      }));
+      throw error;
+    });
+    expect(f.starts).toBe(1); expect(result.identity.name).toBe(f.profile.botName);
+    expect(f.events.filter(row => row.name === 'observed-controller-progress').length).toBeGreaterThanOrEqual(1);
+    expect(f.events.findIndex(row => row.name === 'permissions')).toBeLessThan(f.events.findIndex(row => row.name === 'module-start'));
+    expect(f.state.microphone).toBe('detached'); expect(f.state.camera).toBe('visible');
+    expect(f.health.snapshot().healthy).toBe(true);
+    await expect(session.verifyRoomUI(f.page, { assertLive: f.health.assertLive })).resolves.toBeUndefined();
+    expect(f.events.filter(row => row.name === 'permissions').length).toBeGreaterThanOrEqual(3);
+    expect(f.events.filter(row => row.name === 'welcome-click')).toHaveLength(1);
+    expect(f.events.filter(row => row.name === 'module-start')).toHaveLength(1);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('mic detached before controller start cannot authorize the later proximity phase', async () => {
+  const f = fixture({ state: { microphone: 'detached' } }); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await expect(task).rejects.toThrow();
+    expect(f.starts).toBe(0); expect(f.health.snapshot().healthy).toBe(false);
+    expect(f.events.filter(row => row.name === 'observed-controller-progress')).toHaveLength(0);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it.each([
+  { name: 'hidden-but-attached microphone', afterStart: { microphone: 'hidden' } },
+  { name: 'returned visible microphone', afterStart: { microphone: 'visible' } },
+  { name: 'detached camera', afterStart: { microphone: 'detached', camera: 'detached' } },
+  { name: 'hidden camera', afterStart: { microphone: 'detached', camera: 'hidden' } },
+  { name: 'active camera', afterStart: { microphone: 'detached', off: false } },
+  { name: 'granted microphone permission', afterStart: { microphone: 'detached', permissionStates: ['granted', 'denied'] } },
+  { name: 'granted camera permission', afterStart: { microphone: 'detached', permissionStates: ['denied', 'granted'] } },
+  { name: 'wrong live identity', afterStart: { microphone: 'detached', name: 'Wrong [BOT]' } },
+  { name: 'no actual controller progress', afterStart: { microphone: 'detached' }, progressSteps: 0 },
+  { name: 'revoked lifecycle after real progress', afterStart: { microphone: 'detached' }, revokeAfterProgress: true },
+])('post-start proximity admission rejects $name without ready, retries or grant replay', async options => {
+  const f = fixture(options); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await expect(task).rejects.toThrow();
+    expect(f.starts).toBe(1); expect(f.health.snapshot().healthy).toBe(false);
+    expect(f.events.filter(row => row.name === 'welcome-click')).toHaveLength(1);
+    expect(f.events.filter(row => row.name === 'module-start')).toHaveLength(1);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('caller phase flags and claimed progress never authorize detached mic on an unadmitted page', async () => {
+  const f = fixture({ state: { microphone: 'detached' }, media: false });
+  const work = session.verifyRoomUI(f.page, { assertLive: f.health.assertLive, initial: false, phase: 'post-controller', started: true, progress: true, proximityDisabled: true } as any); void work.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await expect(work).rejects.toThrow();
+    expect(f.starts).toBe(0); expect(f.events.filter(row => row.name === 'observed-controller-progress')).toHaveLength(0);
+  } finally { f.close(); await work.catch(() => {}); }
+});
+
+it.each(['start', 'progress'])('an injected %s callback cannot mint a post-controller UI capability', async seam => {
+  const f = fixture(); let calls = 0;
+  const task = f.launch({ [seam]: async () => { calls++; return { playerId: 7, name: f.profile.botName, roomId: f.profile.roomUrl }; } }); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await expect(task).rejects.toThrow();
+    expect(calls).toBe(0); expect(f.starts).toBe(0); expect(f.health.snapshot().healthy).toBe(false);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('a failed bootstrap keeps its original owner authority even when controls later look like pre-start again', async () => {
+  const f = fixture({ afterStart: { microphone: 'hidden' } }); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(15000); await expect(task).rejects.toThrow();
+    f.update({ microphone: 'visible', camera: 'visible' }); const before = f.events.length;
+    await expect(session.verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow();
+    expect(f.events).toHaveLength(before); expect(f.starts).toBe(1);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('an already-revoked lifecycle is recorded before the first bootstrap check and cannot be replaced', async () => {
+  const f = fixture({ media: false });
+  const context = await session.createFreshRunnerContext(f.browser);
+  const fresh = session.claimFreshBootstrap(context, f.page, f.profile);
+  f.health.fail(Error('revoked before first bootstrap check'));
+  await expect(session.bootstrapSession(f.page, { profile: f.profile, fresh, assertLive: f.health.assertLive })).rejects.toThrow(/terminal|revoked/);
+  const before = f.events.length;
+  await expect(session.verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow();
+  expect(f.events).toHaveLength(before); expect(f.starts).toBe(0);
+});
+
+it('post-controller observation refuses a replacement lifecycle guard and retains the owner tombstone', async () => {
+  const f = fixture(); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0); await task;
+    const before = f.events.length;
+    await expect(session.verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow();
+    await expect(session.verifyRoomUI(f.page, { assertLive: f.health.assertLive })).rejects.toThrow();
+    expect(f.events).toHaveLength(before);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('post-controller observation checks the original live authority before a replacement guard can hide revocation', async () => {
+  const f = fixture(); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0); await task;
+    f.health.fail(Error('original lifecycle revoked')); const before = f.events.length;
+    await expect(session.verifyRoomUI(f.page, { assertLive() {} })).rejects.toThrow(/revoked|terminal/);
+    expect(f.events).toHaveLength(before);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it('a different page cannot borrow the admitted page phase even with the same context, controls and guard', async () => {
+  const f = fixture(); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0); await task;
+    const otherPage = { ...f.page };
+    const work = session.verifyRoomUI(otherPage, { assertLive: f.health.assertLive }); void work.catch(() => {});
+    await vi.advanceTimersByTimeAsync(15000); await expect(work).rejects.toThrow();
+    expect(f.starts).toBe(1);
+  } finally { f.close(); await task.catch(() => {}); }
+});
+
+it.each(['native room', 'native name', 'frame', 'context'])('runtime phase refuses changed $0 and cannot recover by restoring DOM state', async changed => {
+  const f = fixture(); const task = f.launch(); void task.catch(() => {});
+  try {
+    await vi.advanceTimersByTimeAsync(0); await task;
+    const originalContext = f.page.context;
+    if (changed === 'native room') f.update({ room: 'other-room' });
+    if (changed === 'native name') f.update({ name: 'Other [BOT]' });
+    if (changed === 'frame') f.update({ frameLost: true });
+    if (changed === 'context') f.page.context = () => ({ pages: () => [f.page] });
+    const uiActions = () => f.events.filter(row => ['device-wait', 'device-count', 'device-class', 'permissions', 'media-click'].includes(row.name)).length;
+    const before = uiActions();
+    await expect(session.verifyRoomUI(f.page, { assertLive: f.health.assertLive })).rejects.toThrow();
+    expect(uiActions()).toBe(before);
+    f.update({ room: f.profile.roomUrl, name: f.profile.botName, frameLost: false }); f.page.context = originalContext;
+    await expect(session.verifyRoomUI(f.page, { assertLive: f.health.assertLive })).rejects.toThrow();
+    expect(uiActions()).toBe(before);
   } finally { f.close(); await task.catch(() => {}); }
 });
