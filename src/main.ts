@@ -1,2 +1,3 @@
 import { initializeWorld } from './runtime';
-void initializeWorld(WA).catch(() => { console.warn('VarCamp scripting unavailable. Physical venue exits remain available.'); });
+import { registerGuideMenu } from './guides/menu';
+void initializeWorld(WA).then(() => registerGuideMenu(WA)).catch(() => { console.warn('VarCamp scripting unavailable. Physical venue exits remain available.'); });

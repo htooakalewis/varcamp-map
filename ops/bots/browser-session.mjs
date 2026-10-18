@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { navigationUrl } from './candidate-render-policy.mjs';
 import { failureRecord, hasLiveControllerLease, controllerObservation } from './evidence.mjs';
 import { config, selectProfile, isMapFrame, verifyModule } from './config.mjs';
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -29,9 +30,9 @@ export async function denyMediaPermissions(cdp, { assertLive } = {}) {
   }
 }
 
-export async function joinRoom(page, profile = config, { assertLive } = {}) {
+export async function joinRoom(page, profile = config, { assertLive, navigationMode = 'default' } = {}) {
   if (selectProfile(profile?.persona) !== profile) throw Error('Require a fixed profile for name entry');
-  await guarded(assertLive, () => page.goto(profile.roomUrl, { waitUntil: 'domcontentloaded', timeout: 45000 }));
+  await guarded(assertLive, () => page.goto(navigationUrl(profile.roomUrl, navigationMode), { waitUntil: 'domcontentloaded', timeout: 45000 }));
   const input = page.getByTestId('loginSceneNameInput');
   const rawMaximum = await guarded(assertLive, () => input.getAttribute('maxlength'));
   const maximum = typeof rawMaximum === 'string' && /^[1-9][0-9]*$/.test(rawMaximum) ? Number(rawMaximum) : NaN;

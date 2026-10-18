@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "d715861a71b5e01e34af719ffa527bef557078423456ee53650dde38f48d29d5",
+      "toSha256": "1052d5ff14143f3ccf2beb8b27415b9a5d5f84b7b7557606b3276adcf38904bf",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "09b3a6c7823c4633e22e13b14f129803d0050ebd419b3fc8ee1a2009788cd729",
+      "toSha256": "75fad7f999fede7cd497900ba83e3e5b0ef0c930f39324350868114207e7aa7a",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "fromSha256": "e5f3eba2197b30b6a6f1c564148257a37e3bf68dc3d37efd25310b2b5230538e",
+      "toSha256": "86dca6a53004c55ebc0fe0d945e56cf95858cdb25788a3b8c1d68459be5c04d2",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "fromSha256": "e66a8afa0b4e82a680d5e9695a195c26892ae0d664e87d70ebce9b75a4518291",
+      "toSha256": "ba56f0e5d0d63e930a465357008c4a2df4b44d27d24cb4c349a994b8c457b97b",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "65d9705f7c44078bf7f593b4d966315cac67f0b02029660f7d2666bbd18ebcd8",
+      "toSha256": "9c141a299bbd1f6dcb8bbf29466f1fa0b73441d259be9c65f53371ffdefe4be6",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/preview/constellation-shore.tmj",
+      "fromSha256": "27ad1d01aa7874838202491474090636ea1e7857a96603dc9af87cbf2cab556a",
+      "toSha256": "9bab3ec752b0192b701d79f2db5bc76d0dd50b8b5633fd9fb654e85b394b5e97",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/preview/fa-ship.tmj",
+      "fromSha256": "871fa2e7ebf15c7ba937970a4ad8b167b425fe0e7f2cbfededcd96fa7414498d",
+      "toSha256": "bc33c8f070d1c84182e23f54088f860730fb6444e25ab862c01b8f8eb767b458",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "b911c9d249d1a5ab47da0d9a377a50cc883bdf55f7dc7a3a03c420b48cc71a88",
+      "toSha256": "84540122405757614b9b9e5c55593cbc2c2915b138c9d1ecef4727247c07c5a5",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "c137288548bc99969f7ab7abe59cf42acd1e3740cd5aef52b8ce4dd66fd60096",
+      "toSha256": "fcd0c6154db11b77c8d2c081aaa2f9d3c89764de12f554ee2da908165101f5db",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "f2f02583703bf1a1d6f2797d833a1e7e152f2b4045244ec1ad459ba08497fde6",
+      "toSha256": "5af7fbd6fb0b3b065949ab566b519cf76225d7d1f59d0e439873d292374cca36",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "src/main.ts",
+      "fromSha256": "34075e84e2c1701a1ffb195bd0ccb8946957896d92e0b64fde5f744631f0abdd",
+      "toSha256": "16fdfe2026543dba8dcba221dbb6c99f95b6cfb652847bbdb5abd4a30ace8f4a",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "a093f87cc0cc2c0a9dc8594148f5b3071df14655856e7d438a6bd2d9d3acb689",
+      "toSha256": "acbb79fa753ea5168b55ed1d853948fb981b42d6a5e34c23ccecd0ff227e155f",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "fromSha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50",
+      "toSha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "tools/maps/types.ts",
+      "fromSha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767",
+      "toSha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "daf0c74700afd33f0deb4321f8efff905412d776f4d1538f4f464de9668aff69",
+      "toSha256": "f5e7189c6cf12d4ec4881c68b5a9b829cc6b97d30e4baa2ff11a0e5263b435cf",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "c25ce92c2396d4dee59c773687d22ab5c2c4784f468d81cb1ad769c0beb10817",
+      "toSha256": "7a7ca416ed5d4176a7953cb19c9c935b48038806dd23e1229ba1e6f74a761775",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "bfe6e5e3bc21cb7743272abc2667d46f82c1c6337578c92d8a69274af99c6151",
+      "toSha256": "73a1bf7b04ad9e6e7339df0a14ff009281e0bb1868ecbd114c93b1cf5bbf9f56",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "43d4eb3d1eb52debcf03fc34b600b5808c257f50598abfa9d0ac12707e00b7e3",
+      "toSha256": "21b594ea309547344783ba6f391fba5aeeb330f112802883a1f8e27f4e2e3a0e",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "4e37e79dee385c19e0ad48abd3f7dc8a3184b3656125d7ebf8c417e8f062e42e",
+      "toSha256": "987127171bf795e08ff91666da5f8b7eb54f8c10968642517546465bb5c8e721",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "4cd50e5cc3d13a0705a1f24b099c1597a20e38c9fda66a816e2676b32f9f6e2c",
+      "toSha256": "8dcdd25bbafcb9bd4c9cd5bca9c7ab762c4dbdcff473fd4c32f64ec304eb938c",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "68af282a120cf7bf68fc732dd3fa48227ac04d069579a15c0e0634e0c7395601",
+      "toSha256": "3fd8d801647d20e16b3110e6c33d90ab0cc250bbff7cf81c41f58850b7953963",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "721af2eb3c47bfc2eb4da75309bd898f3dd38ffe2a139e5699d9d90ff392a1a6",
+      "toSha256": "d5209c0a9e05892d3cde41e72914aa78c067a50f531589d7ed372e7f9a56b8d9",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "00e16ac2a82ac30efcb78e2a6ac72b0f0107427445ceb436df8f381cb35cf187",
+      "toSha256": "098340933b7b104e5fdbd3aac947ce878cb0b256019d6859af96afdd72334d16",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "3e4f712c93a00e6b75a3b7c700a773be0e4ace33fc6a402adc400745c440b86e",
+      "toSha256": "23fcf451cb7d87a98f8c867c948030ffb0534fbb1337e97df7cac91a9ab3f0b2",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "306309b556667a2bd22548b30e2b22200003087237d75a9e81b35a5a4da579f7",
+      "toSha256": "66c80aa6bb28c68ea3539142190ba7d86e87395a904a504d0a1a37be8a060c3c",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "bc75530c9147e4b5bd32bf757a98ab2a80a6a9f88d7af7ccdc9d9415320dd642",
+      "toSha256": "c0882561b4e6099375cd7f242a153ece947b462945489224f1989a279b81543f",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "636c2c8cf3202e0d6222cb78e65fe428e828b1039e44fafa3595ec6180967079",
+      "toSha256": "379415d9812c9c5392f32933a3076651e30a8886796a50cb473ca465df0b6985",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "9d0f5eb8e12ef3e496fc87c60c1dc3ff2e5b9f26e1af9aac21024051e9c6da18",
+      "toSha256": "77b8b8ba9b74b86d56aba055ea1b2e32a73f4b869f23aa98d99b44f9727f60f4",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "9ea51f080645603d9a41a78afb58a283d6547adb0c34d205ca680f17a6bd49d3",
+      "toSha256": "079bea0b325157de854ca0e037f71f45bb1373b1a58b2b361c767cbd87df273a",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "d21e2a8f7a3bb4341b14fdd65fd3059511392dfc38c04c021ca79416182746d3",
+      "toSha256": "768728e52acc2bfbd5a881e81087bab36affb1e57a9743f04eb3bef2fca83f73",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "eb17297b2153abca451a4a93e84ba8fb73b17027467d632ecd75a2888adc461b",
+      "toSha256": "d2e92a92fa6ee16e4e5403eef6a3a4f421c1ccc0a148381df372300bbb3f1932",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "35bc223e984d6877cb9afe0849677304804aa0ea11993d678ca50fd5642436d6",
+      "toSha256": "4e3ccda80bcedf3698d5bde01af277f6f9ef20025cddfbc77a90f6f15ae4a86b",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "d0e12daef771d6df7f92b33fee90c14ffdc7a5cc6a910db956431869f95dcf83",
+      "toSha256": "9b21645df7e66520a42831b12bd63ff45102cca47928cb32146e944b5d7db9af",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-aries.json",
+      "fromSha256": "c900c80ccb9cd9268dd4a864778ed58292059035db84f392a8906c9e34098e2a",
+      "toSha256": "85d5e638e3304c098c725f3a305aaad66913d4c76bf91850cba0ee8d96914092",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "edbc2ab0411071c0d41421ab8399bb220df3248f7d6b7ddfda28d58ceee40899",
+      "toSha256": "43a2ab26311ddf40f114abb7f1cc2dde7e7dce27794140d4af569cd9927ae875",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "4852c545dc066352da087478580aa8c818a357a52589c0ac5c9a4e8dacb151c2",
+      "toSha256": "7d190360df4c0d96bcc58a96a77bde9a95d3ae63bf83ff17e7aace20781b4168",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "30a2ed4819ff132ddd2a374d711e390cb11b0376af6c28a305bb0c18dd15bef5",
+      "toSha256": "fca5e7516825a2ffd81318867ae0ce42d5214afde2a93ae9014b3ea5b1520950",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "a4efe4b67358ee5c2334da9b94f1a291ab47b17b42638ed6be820213503be7b3",
+      "toSha256": "fe7154a70afe00c05805443b52b153ed1f4f90fc2442c2e162c04fe496afaf7b",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "05d34f54898794643a80d0fc65bf3eda90a5994344e17cf061dccc484fb2c50d",
+      "toSha256": "1dce7a8032cee257f194be4d9aa786fbf7787c7d567db8cbe9d762f8de94e69c",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "74812e718f1b5e0ecebc6381475a3f0120fe7f284bc3c05050617c855e60c476",
+      "toSha256": "df1b87ec72d8c7ae2a878b03afd04a7dd755a93d4fcde0dabbb94e876cbab132",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "01ff288c24da303447a7a1e061e0ec248b853b92fde3400b90bcbd9f6afd3974",
+      "toSha256": "0e13362c4fc9fa4dba4ccbf2b919e2420049afcaa4d254796ade2e2e3318e341",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "797552d8dccd095141761cfbd0aa25fa3cdd45edae5d7a797f3a5e006371b482",
+      "toSha256": "308dc6edc5be4160ae8a6f6d64a5bb68c2f13b74517a76de6be57572f7d86189",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "f802099745777c6057a7543ff20dcb147f9482ba49b2240d1f04712fd069e9eb",
+      "toSha256": "1a6e32e68ccee249072cf564ebfbc8f5e047bb5f9242e895a049902bc0763652",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "76e81e045a21fe3927d3b9a6811d5d19b268546b470c768942e6dd293f3adf52",
+      "toSha256": "2128b8fb77eba3d9c2e25059bdd26b3022591afeabfa318f48f8e54f93f6d80b",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "0b0c6feb8971f9addc5ee5576b4b542c8d71f8410b4dad1ba22440eb1295b4c3",
+      "toSha256": "972dbe545431209b1fc0090cc148a4982ccf4f2254fe00cfcd54216548267740",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "28191fdaf24e2ea191da66d05704225c742ca80d217a7cefea103168742cf858",
+      "toSha256": "6b1dc355944a7d106d9e031a1647ec886ad107fad7f292aafb65c8adfb286551",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "3c65ed358d7b7e8d1ef5d6097517e922180c10b7f6e88641339775c97812fbfd",
+      "toSha256": "2417a090be892d01d17f105351ba6ab928dc81c6a9eeb25d85b5862ccc285727",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "cef410172bdfdc60aa09ad2d33ebd715ee1816feca4cb550a22b5d6ea0b4c3f9",
+      "toSha256": "49f0ee262f80400f99a308de38bf92ed8159ae1cf4722c214102344011f6caeb",
+      "reason": "Register the approved 2026-10-19 shared-world union: preserved map/native controls, reviewed airborne birds and plaza fleet, targeted guide event interface, source verification and unbound public service delivery."
+    }
+  ]
+}

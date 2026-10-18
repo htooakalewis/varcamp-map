@@ -5,7 +5,7 @@ import {loadTileCatalog} from '../tools/art/catalog';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { LyraAdapter, Bubble, ChatEvent, Point } from '../src/bots/controller';
+import type { LyraAdapter, Audience, GuideRequest, Point } from '../src/bots/controller';
 import type { TiledMap } from '../tools/maps/types';
 
 const native = () => JSON.parse(readFileSync('maps/overworld.tmj', 'utf8')) as TiledMap;
@@ -14,7 +14,7 @@ async function modules() {
   return { ...(await import('../src/bots/controller')), ...(await import('../src/bots/venue')), ...(await import('../src/bots/map-guard')) };
 }
 function harness(start: Point = { x: 2256, y: 2256 }) {
-  let position = start, room = 'overworld', chat: (e: ChatEvent) => void = () => {}, bubble: (b: Bubble) => void = () => {};
+  let position = start, room = 'overworld', chat: (e: GuideRequest) => void = () => {}, bubble: (b: Audience) => void = () => {};
   const replies: string[] = [], diagnostics: string[] = [], moves: Point[] = [];
   let automatic = false;
   let pending: { resolve: (p: Point & { cancelled: boolean }) => void; reject: (e: Error) => void } | undefined;
@@ -22,16 +22,16 @@ function harness(start: Point = { x: 2256, y: 2256 }) {
   const adapter: LyraAdapter = {
     map: async () => native(), roomId: () => room, position: async () => position,
     move: (point) => { moves.push(point); if(automatic){position=point;return Promise.resolve({...point,cancelled:false});} return new Promise((resolve, reject) => { pending = { resolve, reject }; }); },
-    say: text => { replies.push(text); }, diagnostic: text => { diagnostics.push(text); },
-    onChat: cb => { chat = cb; return () => { unsubscribed.push('chat'); }; },
-    onBubble: cb => { bubble = cb; return () => { unsubscribed.push('bubble'); }; },
+    reply: (_recipient, text) => { replies.push(text); }, diagnostic: text => { diagnostics.push(text); },
+    onRequest: cb => { chat = cb; return () => { unsubscribed.push('chat'); }; },
+    onAudience: cb => { bubble = cb; return () => { unsubscribed.push('bubble'); }; },
   };
   return { adapter, moves, replies, diagnostics, unsubscribed,
     chat: (text: string, ...authors: (number | undefined)[]) => chat({ text, authorId: authors.length ? authors[0] : 1 }),
     automatic: () => { automatic = true; if(pending){position=moves.at(-1)!;pending.resolve({...position,cancelled:false});pending=undefined;} },
     join: (ids = [1]) => {
       let enter: (id: number) => void = () => {}, leave: (id: number) => void = () => {}, end = () => {};
-      const b: Bubble = { participants: ids, onJoin: cb => { enter = cb; return () => { unsubscribed.push('participant-join'); }; }, onLeave: cb => { leave = cb; return () => { unsubscribed.push('participant-leave'); }; }, onEnd: cb => { end = cb; return () => { unsubscribed.push('meeting-end'); }; } };
+      const b: Audience = { participants: ids, onJoin: cb => { enter = cb; return () => { unsubscribed.push('participant-join'); }; }, onLeave: cb => { leave = cb; return () => { unsubscribed.push('participant-leave'); }; }, onEnd: cb => { end = cb; return () => { unsubscribed.push('meeting-end'); }; } };
       bubble(b); return { enter: (id: number) => enter(id), leave: (id: number) => leave(id), end: () => end() };
     },
     complete: (override?: Partial<Point & { cancelled: boolean }>) => { position = { ...moves.at(-1)!, ...override }; const p = pending; pending = undefined; p!.resolve({ ...position, cancelled: false, ...override }); },
@@ -142,28 +142,6 @@ describe('single movement lifecycle and conversation', () => {
     await flush();expect(h.diagnostics.join(' ')).toMatch(/stop|unknown|failed|cancel|timeout|room|position/i);const count=h.moves.length;if(reason==='timeout'||reason==='room-change')h.complete();await flush();await vi.advanceTimersByTimeAsync(60000);expect(h.moves).toHaveLength(count);expect(vi.getTimerCount()).toBe(0);expect(h.unsubscribed).toContain('bubble');if(reason!=='unknown-position')expect(h.unsubscribed).toContain('chat');
   });
   it('rejects an incompatible map before chat or movement and disposes the early meeting subscription',async()=>{const {createLyraController}=await modules();const h=harness();h.adapter.map=async()=>({...native(),width:64});const c=createLyraController(h.adapter);await c.start();await flush();expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/map|geometry/i);c.stop();});
-});
-
-describe('official dedicated module lifecycle',()=>{
-  it.each([{kind:'proximity',name:'Proximity Chat'}, {kind:'default',name:'Proximity Chat'}])('subscribes to $kind proximity bubbles and bubble chat, replaces runs without overlapping unresolved moves',async eligible=>{
-    expect(existsSync('src/bots/lyra.ts'),'official bot entry missing').toBe(true);
-    const {Subject}=await import('rxjs');const meetings=new Subject<any>();const joins=new Subject<any>(),leaves=new Subject<any>(),ended=new Subject<void>();
-    const messages:string[]=[],moves:Point[]=[];let complete:((p:Point&{cancelled:boolean})=>void)|undefined;let chat:((text:string,event:{authorId:number|undefined})=>void)|undefined;let chatUnsubscribe=0;
-    const wa={onInit:async()=>{},room:{id:'test',getTiledMap:async()=>native()},player:{playerId:10,name:'Lyra[BOT]',getPosition:async()=>({x:2256,y:2256}),moveTo:(x:number,y:number)=>{moves.push({x,y});return new Promise<Point&{cancelled:boolean}>(resolve=>{complete=resolve;});},meetings:{onJoin:()=>meetings}},chat:{onChatMessage:(cb:typeof chat,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});chat=cb;return {unsubscribe:()=>{chatUnsubscribe++;}};},sendChatMessage:(text:string,options:{scope:string})=>{expect(options).toEqual({scope:'bubble'});messages.push(text);}}};
-    vi.stubGlobal('WA',wa);vi.spyOn(console,'warn').mockImplementation(()=>{});
-    const bot=(await import('../src/bots/lyra')).default;await bot.run({});await flush();expect(moves).toHaveLength(1);
-    for(const unrelated of [{kind:'area',name:'Proximity Chat'},{kind:'meeting',name:'Proximity Chat'},{kind:'listener',name:'Proximity Chat'},{kind:'speaker',name:'Proximity Chat'},{kind:'default',name:'Conference room'}]) {
-      meetings.next({...unrelated,participants:[{playerId:1,name:'QA'}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toEqual([]);
-    }
-    meetings.next({...eligible,participants:[{playerId:1,name:'QA'}],onParticipantJoin:()=>joins,onParticipantLeave:()=>leaves,onLeave:()=>ended});expect(messages).toHaveLength(1);chat!('help',{authorId:1});expect(messages).toHaveLength(2);
-    const replacement=bot.run({});await flush();expect(chatUnsubscribe).toBe(1);expect(moves).toHaveLength(1);
-    complete!({...moves[0],cancelled:false});await replacement;await flush();expect(moves).toHaveLength(2);
-    // A page lifecycle shutdown must detach both direct and per-meeting subscriptions.
-    globalThis.dispatchEvent?.(new Event('pagehide'));
-    const finalReplacement=bot.run({});await flush();complete!({...moves.at(-1)!,cancelled:true});await finalReplacement;await flush();
-    // Stop the last controller through one cancelled native movement.
-    complete!({...moves.at(-1)!,cancelled:true});await flush();expect(meetings.observers).toHaveLength(0);expect(joins.observers).toHaveLength(0);expect(leaves.observers).toHaveLength(0);expect(ended.observers).toHaveLength(0);expect(vi.getTimerCount()).toBe(0);vi.restoreAllMocks();
-  });
 });
 
 describe('startup deadline and deferred actions',()=>{

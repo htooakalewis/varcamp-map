@@ -9,10 +9,10 @@ import{stageCurrentWorldInputs}from'./helpers/current-interior-fixture';
 import{WORLD_CATALOG}from'../src/world/catalog';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
-it('every current decorative overlay explicitly keeps avatar foreground except its two actual owned-upper projections',()=>{
- const invalid:string[]=[],upper:string[]=[];let count=0;
- for(const id of Object.keys(WORLD_CATALOG))for(const o of read(`world/layouts/${id}.json`).animatedOverlays??[]){count++;if(o.level==='belowAvatar')continue;const meta=o.provenance?read(o.provenance.metadataPath):{};if(o.level==='aboveAvatar'&&meta.partition==='opaqueOwnerUpper'&&meta.depthReceipt?.owner)upper.push(o.name);else invalid.push(`${id}/${o.name}/${o.level}`);}
- expect(count).toBe(137);expect(upper).toHaveLength(2);expect(invalid).toEqual([]);
+it('every current decoration is lower, an actual owned-upper projection, or one of five safe airborne birds',()=>{
+ const invalid:string[]=[],upper:string[]=[],airborne:string[]=[];let count=0;
+ for(const id of Object.keys(WORLD_CATALOG))for(const o of read(`world/layouts/${id}.json`).animatedOverlays??[]){count++;if(o.level==='belowAvatar')continue;const meta=o.provenance?read(o.provenance.metadataPath):{};if(o.level==='aboveScenery'&&o.name.includes('gull'))airborne.push(o.name);else if(o.level==='aboveAvatar'&&meta.partition==='opaqueOwnerUpper'&&meta.depthReceipt?.owner)upper.push(o.name);else invalid.push(`${id}/${o.name}/${o.level}`);}
+ expect(count).toBe(137);expect(upper).toHaveLength(2);expect(airborne).toHaveLength(5);expect(invalid).toEqual([]);
 });
 it('current plaza entry rejects coherent omission of the required Roadster',()=>{
  const id='overworld',map=read(`maps/${id}.tmj`),layout=read(`world/layouts/${id}.json`);map.layers=map.layers.filter((l:any)=>l.name!=='roadster');layout.animatedOverlays=layout.animatedOverlays.filter((o:any)=>o.name!=='roadster');

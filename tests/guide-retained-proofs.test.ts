@@ -28,7 +28,7 @@ it('BOT-03 nested causes/cycles and uppercase URL credentials stay redacted thro
 it('BOT-01 retained 180s patrol-position proof is terminal and cannot admit identity or another move',async()=>{
  vi.useFakeTimers();let position={x:2256,y:2256},reads=0,moves=0,release!:(p:any)=>void;const rows:any[]=[],logs:any[]=[];
  vi.stubGlobal('WA',{player:{playerId:7,name:config.botName},room:{id:config.roomUrl}});
- const c=createLyraController({self:()=>({id:7,name:config.botName}),roomId:()=>config.roomUrl,map:async()=>JSON.parse(readFileSync('maps/overworld.tmj','utf8')),position:()=>++reads<=2?Promise.resolve(position):new Promise(r=>{release=r;}),move:async p=>{moves++;position=p;return {...p,cancelled:false};},say(){},diagnostic:(_,e)=>logs.push(e),receipt:e=>{rows.push(e);vi.stubGlobal('__varcampGuideEvidence',e);},onChat:()=>()=>{},onBubble:()=>()=>{}});
+ const c=createLyraController({self:()=>({id:7,name:config.botName}),roomId:()=>config.roomUrl,map:async()=>JSON.parse(readFileSync('maps/overworld.tmj','utf8')),position:()=>++reads<=2?Promise.resolve(position):new Promise(r=>{release=r;}),move:async p=>{moves++;position=p;return {...p,cancelled:false};},reply(){},diagnostic:(_,e)=>logs.push(e),receipt:e=>{rows.push(e);vi.stubGlobal('__varcampGuideEvidence',e);},onRequest:()=>()=>{},onAudience:()=>()=>{}});
  await c.start();for(let i=0;i<30;i++)await Promise.resolve();expect(moves).toBe(1);
  await vi.advanceTimersByTimeAsync(100);expect(reads).toBe(3);expect(rows.at(-1).state).toBe('pending');
  await vi.advanceTimersByTimeAsync(180000);expect(moves).toBe(1);expect(logs).toHaveLength(1);expect(rows.at(-1)).toMatchObject({state:'terminal',quarantine:true});
@@ -38,9 +38,10 @@ it('BOT-01 retained 180s patrol-position proof is terminal and cannot admit iden
 it('BOT-02 retained fatal heartbeat held visibility cannot click after release',async()=>{
  let release!:()=>void,reached=false,clicks=0,media=true;const held=new Promise<void>(r=>{release=r;});
  const page={getByRole(){return {async isVisible(){if(!reached){reached=true;await held;}return media;},async click(){clicks++;media=false;},async waitFor(){}};},getByTestId(){return {async isVisible(){return false;},async waitFor(){},async getAttribute(){return 'bg-danger';}};},getByText(){return {async isVisible(){return false;}};},locator(){return {async all(){return [];}};},async evaluate(){return ['denied','denied'];}};
- const state=createRunnerLifecycle();const probe=probeHeartbeat({state,page,provenance:undefined,frame:{async evaluate(){throw Error('identity must not run');}}});void probe.catch(()=>{});
+ const rendererObserver={read:vi.fn(async()=>{throw Error('renderer must not run after fatal UI visibility');})};
+ const state=createRunnerLifecycle();const probe=probeHeartbeat({state,page,provenance:undefined,rendererObserver,frame:{async evaluate(){throw Error('identity must not run');}}});void probe.catch(()=>{});
  for(let i=0;i<50&&!reached;i++)await Promise.resolve();expect(reached).toBe(true);state.fail(Error('AUDIT terminal'));await expect(probe).rejects.toThrow('AUDIT terminal');
- release();for(let i=0;i<100;i++)await Promise.resolve();expect(clicks).toBe(0);expect(state.snapshot().healthy).toBe(false);
+ release();for(let i=0;i<100;i++)await Promise.resolve();expect(clicks).toBe(0);expect(rendererObserver.read).not.toHaveBeenCalled();expect(state.snapshot().rendererEvidence).toBeNull();expect(state.snapshot().healthy).toBe(false);
 });
 it.each(['logs','inspect','stop','remove'])('BOT-04 retained primary startup failure survives %s compensation failure with exact ID',async failure=>{
  const id='1'.repeat(64),primary=Error('AUDIT_PRIMARY_STARTUP');const container={Id:id,Name:'/'+config.name,Config:{Labels:labelsFor()},State:{Running:failure!=='remove',Status:'running'}};

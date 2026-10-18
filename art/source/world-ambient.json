@@ -184,17 +184,17 @@
           "kind": "gull",
           "clip": {
             "x": 2,
-            "y": 7,
+            "y": 16,
             "width": 16,
             "height": 3
           },
           "carrierCells": 48,
-          "level": "belowAvatar",
+          "level": "aboveScenery",
           "clock": {
             "stepMs": 200,
             "periodMs": 16000
           },
-          "paintPolicy": "One32px approved-original bird flaps and travels fully across a sparse open sky lane; no ground controls."
+          "paintPolicy": "One32px approved-original bird flaps and travels above Tiled scenery in a blocked-water lane; actual native alpha clears all attendee and functional footprints."
         },
         {
           "name": "world-ambient-fa-ship-fish-2",

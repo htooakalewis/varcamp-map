@@ -1,15 +1,17 @@
+// PRIVATE clean Canvas native candidate; no CPU profiler or browser-process session.
 import { writeFile, rename } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import { RuntimeHealth, selectProfile } from './config.mjs';
-import { failureRecord, TERMINAL_PREFIX } from './evidence.mjs';
-import { denyMediaPermissions, createFreshRunnerContext, claimFreshBootstrap, bootstrapSession, verifyRoomUI, captureScriptResponses, controllerObserver } from './browser-session.mjs';
+import { failureRecord, TERMINAL_PREFIX, hasLiveControllerLease } from './evidence.mjs';
+import { denyMediaPermissions, createFreshRunnerContext, claimFreshBootstrap, bootstrapSession, verifyRoomUI, joinRoom, controllerObserver } from './browser-session.mjs';
+import { parseCandidateMode, createDiagnosticJoin, captureAppResponse, captureDiagnosticScriptResponses, createCandidateRendererObserver, validateCandidateRendererEvidence } from './candidate-render-policy.mjs';
 
 export function createRunnerLifecycle({ profile = selectProfile(), save = async (_snapshot) => {}, log = (_event) => {} } = {}) {
-  const health = new RuntimeHealth(profile); let terminal = false, first, queue = Promise.resolve(), scripts = [], artifacts = 'not-requested';
+  const health = new RuntimeHealth(profile); let terminal = false, first, queue = Promise.resolve(), scripts = [], artifacts = 'not-requested', rendererEvidence, lastReadySequence = 0;
   const secondaryFailures = [];
   const secondary = (error, phase) => { if (secondaryFailures.length < 16) secondaryFailures.push(failureRecord(error, { phase })); };
   let rejectFailure; const failure = new Promise((_, reject) => { rejectFailure = reject; }); void failure.catch(() => {});
-  const snapshot = () => ({ ...health.snapshot(), failure: first ?? null, scripts, artifacts, secondaryFailures: [...secondaryFailures] });
+  const snapshot = () => ({ ...health.snapshot(), failure: first ?? null, scripts, artifacts, rendererEvidence: rendererEvidence ?? null, secondaryFailures: [...secondaryFailures] });
   const flush = () => { queue = queue.catch(() => {}).then(() => save(snapshot())); return queue; };
   const fail = (error, context = {}) => {
     if (terminal) return; terminal = true;
@@ -22,6 +24,11 @@ export function createRunnerLifecycle({ profile = selectProfile(), save = async 
   const assertLive = () => { if (terminal) throw Error('Runner is terminal'); };
   return { failure, fail, assertLive, snapshot, flush, secondary,
     observe(value) { assertLive(); health.observe(value); },
+    setRendererEvidence(value) {
+      assertLive(); validateCandidateRendererEvidence(value);
+      if (rendererEvidence && value.sequence <= rendererEvidence.sequence) throw Error('Renderer observation did not advance');
+      rendererEvidence = Object.freeze({ ...value, appAttestation: Object.freeze({ ...value.appAttestation }), observation: Object.freeze({ ...value.observation }) });
+    },
     setScripts(value) { scripts = value; }, setArtifacts(value) { artifacts = value; },
     console(message) {
       if (!message.startsWith(TERMINAL_PREFIX)) return;
@@ -55,7 +62,11 @@ export function createRunnerLifecycle({ profile = selectProfile(), save = async 
       } catch (error) { fail(error, { source: 'controller-console-transport' }); }
     },
     async ready(identity) {
-      assertLive(); health.ready(identity); await flush(); assertLive();
+      assertLive();
+      if (!rendererEvidence || rendererEvidence.sequence <= lastReadySequence || !hasLiveControllerLease(health.snapshot().controller)) throw Error('Current native/renderer observation required before readiness');
+      const rendererAge = Date.now() - rendererEvidence.observation.endWallMs;
+      if (rendererAge < 0 || rendererAge >= 15000) throw Error('Renderer observation stale or future');
+      lastReadySequence = rendererEvidence.sequence; health.ready(identity); await flush(); assertLive();
       try { log({ event: 'ready', ...snapshot() }); } catch (error) { fail(error, { source: 'logger' }); }
     },
   };
@@ -78,10 +89,12 @@ export async function heartbeatOnce({ state, probe, expected, schedule }) {
   } catch (error) { state.fail(error, { source: 'heartbeat' }); }
 }
 // Export the same production probe for controlled host/page-boundary regressions.
-export async function probeHeartbeat({ state, page, frame, profile = selectProfile(), provenance }) {
-  await Promise.race([deadline(verifyRoomUI(page, { assertLive: state.assertLive }), 5000, 'Heartbeat UI probe'), state.failure]); state.assertLive();
-  const observation = await Promise.race([controllerObserver(frame, profile, { assertLive: state.assertLive }).read(), state.failure]); state.assertLive();
+export async function probeHeartbeat({ state, page, frame, profile = selectProfile(), provenance, rendererObserver, verifyUI = verifyRoomUI, observeController = controllerObserver }) {
+  await Promise.race([deadline(verifyUI(page, { assertLive: state.assertLive }), 5000, 'Heartbeat UI probe'), state.failure]); state.assertLive();
+  const observation = await Promise.race([observeController(frame, profile, { assertLive: state.assertLive }).read(), state.failure]); state.assertLive();
   state.observe(observation);
+  const rendererEvidence = await Promise.race([rendererObserver.read(), state.failure]); state.assertLive();
+  state.setRendererEvidence(rendererEvidence);
   const current = observation.identity;
   if (provenance) state.setScripts(provenance.snapshot());
   return current;
@@ -98,8 +111,19 @@ export async function shutdownOwned({ state, artifact, close, artifactTimeout = 
   try { await closing; } catch (error) { state.secondary(error, 'close'); await state.flush().catch(() => {}); throw error; }
 }
 
+export async function initializeCandidate({ page, profile, fresh, state, provenance, appCapture, own, bootstrap = bootstrapSession, observe = controllerObserver, makeRenderer = createCandidateRendererObserver }) {
+  const result = await bootstrap(page, { profile, fresh, fail: state.fail, assertLive: state.assertLive, join: createDiagnosticJoin('canvas', joinRoom) });
+  await Promise.race([deadline(provenance.settle(), 1000, 'Executing response settlement'), state.failure]); state.assertLive();
+  state.setScripts(provenance.snapshot()); state.observe(await observe(result.frame, profile, { assertLive: state.assertLive }).read()); state.assertLive();
+  const assertInitialized = () => { state.assertLive(); const c = state.snapshot().controller;
+    if (!c || c.identity.roomId !== profile.roomUrl || c.identity.name !== profile.botName || !Number.isInteger(c.identity.playerId) || !Number.isInteger(c.evidence?.steps) || c.evidence.steps < 1 || !hasLiveControllerLease(c)) throw Error('Current native initialization is unproved'); };
+  const rendererObserver = makeRenderer(page, { assertLive: state.assertLive, assertInitialized, appCapture }); own({ rendererObserver });
+  const rendererEvidence = await Promise.race([rendererObserver.read(), state.failure]); state.assertLive(); state.setRendererEvidence(rendererEvidence);
+  await state.ready(result.identity); state.assertLive(); return { ...result, rendererObserver };
+}
+
 export async function main() {
-  // This is the only production function that loads browser dependencies.
+  const rendererMode = parseCandidateMode(process.argv.slice(2));
   const { chromium } = await import('playwright-core');
   const profile = selectProfile(process.env.VARCAMP_BOT_PERSONA ?? 'lyra');
   const save = async snapshot => {
@@ -107,7 +131,7 @@ export async function main() {
     await rename('/tmp/lyra-health.next', '/tmp/lyra-health.json');
   };
   const state = createRunnerLifecycle({ profile, save, log: value => console.log(JSON.stringify(value)) });
-  let browser, context, timer, provenance, stopping = false;
+  let browser, context, timer, provenance, appCapture, rendererObserver, stopping = false;
   const signal = name => { stopping = true; state.fail(Error(name), { source: 'operator' }); };
   process.once('SIGTERM', () => signal('SIGTERM')); process.once('SIGINT', () => signal('SIGINT'));
   process.on('unhandledRejection', state.fail);
@@ -119,26 +143,24 @@ export async function main() {
       context = await createFreshRunnerContext(browser); state.assertLive();
       const page = await context.newPage(); state.assertLive(); page.setDefaultTimeout(15000);
       const fresh = claimFreshBootstrap(context, page, profile);
-      provenance = captureScriptResponses(page);
+      appCapture = captureAppResponse(page, { assertLive: state.assertLive, fail: state.fail });
+      provenance = captureDiagnosticScriptResponses(page, { mode: rendererMode, assertLive: state.assertLive });
       page.on('pageerror', error => { state.setScripts(provenance.snapshot()); state.fail(error, { source: 'pageerror' }); });
       page.on('crash', () => state.fail(Error('Browser page crashed'), { source: 'page' }));
       page.on('close', () => state.fail(Error('Browser page closed'), { source: 'page' }));
       page.on('console', message => { state.setScripts(provenance.snapshot()); state.console(message.text()); });
       const cdp = await context.newCDPSession(page); state.assertLive();
       await denyMediaPermissions(cdp, { assertLive: state.assertLive }); state.assertLive();
-      const result = await bootstrapSession(page, { profile, fresh, fail: state.fail, assertLive: state.assertLive });
-      state.setScripts(provenance.snapshot()); state.observe(await controllerObserver(result.frame, profile, { assertLive: state.assertLive }).read()); await state.ready(result.identity); state.assertLive();
+      const result = await initializeCandidate({ page, profile, fresh, state, provenance, appCapture, own: value => { rendererObserver = value.rendererObserver; } });
       return { ...result, page };
     });
-    const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); },
-      probe: () => probeHeartbeat({ state, page, frame, profile, provenance }) });
+    const heartbeat = () => heartbeatOnce({ state, expected: identity, schedule: () => { timer = setTimeout(heartbeat, 3000); }, probe: () => probeHeartbeat({ state, page, frame, profile, provenance, rendererObserver }) });
     state.assertLive(); timer = setTimeout(heartbeat, 3000); await state.failure;
   } catch (error) { state.fail(error, { source: 'runner' }); if (!stopping) process.exitCode = 1; }
   finally {
     clearTimeout(timer); if (provenance) state.setScripts(provenance.snapshot());
-    // Includes evidence/artifact work and browser closure; never extends the existing ten-second bound.
     const forcedExit = setTimeout(() => process.exit(process.exitCode ?? 1), 10000);
-    try { await shutdownOwned({ state, close: async () => { provenance?.detach(); await context?.close(); await browser?.close(); } }); }
+    try { await shutdownOwned({ state, close: async () => { appCapture?.detach(); rendererObserver?.close(); provenance?.detach(); await context?.close(); await browser?.close(); } }); }
     catch { process.exitCode = 1; }
     clearTimeout(forcedExit); process.exit(process.exitCode ?? 0);
   }

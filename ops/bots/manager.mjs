@@ -1,3 +1,5 @@
+// RETIRED historical launcher: retained for regression provenance only.
+// Use the unbound persistent-service source template; this is not a deployment entry.
 import { failureRecord } from './evidence.mjs';
 import { selectProfile, assertOwned, buildCreateArgs } from './config.mjs';
 const pause = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));

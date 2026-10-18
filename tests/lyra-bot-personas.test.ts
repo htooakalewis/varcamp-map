@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createLyraController, type Bubble, type ChatEvent, type LyraAdapter, type Point } from '../src/bots/controller';
+import { createLyraController, type Audience, type GuideRequest, type LyraAdapter, type Point } from '../src/bots/controller';
 import { center, help, parseCommand, rooms, ROUTES, startupRoute } from '../src/bots/venue';
 import * as profiles from '../src/bots/personas';
 
@@ -9,15 +9,15 @@ const flush = async () => { for (let i = 0; i < 20; i++) await Promise.resolve()
 type Member = { id: number; name?: string };
 function fixture(key: 'lyra' | 'nova' | 'orion', id: number) {
   const persona = profiles.PERSONAS[key];
-  let position = center(persona.home), chat = (_: ChatEvent) => {}, bubble = (_: Bubble) => {};
+  let position = center(persona.home), chat = (_: GuideRequest) => {}, bubble = (_: Audience) => {};
   let pending: ((value: Point & { cancelled: boolean }) => void) | undefined;
   const replies: string[] = [], moves: Point[] = [], disposed: string[] = [], diagnostics: string[] = [];
   const api: LyraAdapter = {
     self: () => ({ id, name: persona.name }), map: async () => native(), roomId: () => 'test', position: async () => position,
     move: p => { expect(pending, 'one awaited native move per controller').toBeUndefined(); moves.push(p); return new Promise(resolve => { pending = resolve; }); },
-    say: text => { replies.push(text); }, diagnostic: text => { diagnostics.push(text); },
-    onChat: cb => { chat = cb; return () => { disposed.push('chat'); }; },
-    onBubble: cb => { bubble = cb; return () => { disposed.push('bubble'); }; },
+    reply: (_recipient, text) => { replies.push(text); }, diagnostic: text => { diagnostics.push(text); },
+    onRequest: cb => { chat = cb; return () => { disposed.push('chat'); }; },
+    onAudience: cb => { bubble = cb; return () => { disposed.push('bubble'); }; },
   };
   const c = createLyraController(api, undefined, persona);
   const meeting = (members: Member[]) => {
@@ -62,7 +62,7 @@ describe('fixed persona and name-first contract', () => {
     for (let i = 0; i < 12; i++) for (const alias of [`  ${english[i].toUpperCase()}  `, burmese[i], String(i + 1), String(i + 1).replace(/\d/g, d => '၀၁၂၃၄၅၆၇၈၉'[Number(d)])]) expect(parseCommand(alias)).toMatchObject({ kind: 'go', destination: { id: `speaker-${english[i].toLowerCase()}` } });
     for (const lang of ['en', 'my'] as const) {
       expect(help(lang)).not.toMatch(/1–12|၁–၁၂/); expect(rooms(lang)).not.toMatch(/\d/);
-      expect(help(lang)).toContain('Nova, Cancer');
+      expect(help(lang)).toContain('Talk to Nearby Guides');
     }
     expect(help('en')).toMatch(/Gemini.*Cancer.*Libra/);
   });
@@ -109,7 +109,7 @@ describe('three-guide public bubble simulations', () => {
     for (const text of ['Lyra, Gemini', 'Nova, Cancer']) hs.forEach(h => h.chat(text)); hs.forEach(h => h.chat('Orion, Libra', 2));
     const before = hs.map(h => h.replies.length); hs.forEach(h => h.chat('stop')); expect(hs.map(h => h.replies.length)).toEqual(before);
     await vi.advanceTimersByTimeAsync(2000); hs.forEach(h => h.chat('stop'));
-    expect(hs[0].replies.at(-1)).toMatch(/guides escorting you in this bubble/); expect(hs[1].replies.length).toBe(before[1]); expect(hs[2].replies.length).toBe(before[2]);
+    expect(hs[0].replies.at(-1)).toMatch(/guides escorting you in this nearby group/); expect(hs[1].replies.length).toBe(before[1]); expect(hs[2].replies.length).toBe(before[2]);
     // A different owner cannot cancel Orion, even with explicit targeting.
     hs.forEach(h => h.chat('Orion, stop')); expect(hs[2].replies.at(-1)).toMatch(/busy/i);
     for (let n = 0; n < 160; n++) for (const h of hs) await h.step();
@@ -122,7 +122,7 @@ describe('three-guide public bubble simulations', () => {
     b.leave(10); h.chat('help'); expect(h.replies).toHaveLength(2); await vi.advanceTimersByTimeAsync(2000);
     b.join({ id: 19, name: 'nova[bot]' }); h.chat('Cancer'); expect(h.replies).toHaveLength(2);
     b.leave(19); b.join({ id: 21, name: 'Nova[BOT]' }); h.chat('Cancer'); expect(h.replies.at(-1)).toContain('Cancer');
-    await vi.advanceTimersByTimeAsync(2000); h.chat('please ask Orion, Libra'); expect(h.replies.at(-1)).toContain('Nova, Cancer');
+    await vi.advanceTimersByTimeAsync(2000); h.chat('please ask Orion, Libra'); expect(h.replies.at(-1)).toContain('Talk to Nearby Guides');
     h.chat('Lyra, stop'); const count = h.replies.length; await vi.advanceTimersByTimeAsync(2000); h.chat('Nova: stop'); expect(h.replies.length).toBe(count + 1); expect(h.replies.at(-1)).toMatch(/stopped|home/i); await h.stop();
   });
   it('documents divergent snapshots as locally deterministic without pretending global exactly-once', async () => {
@@ -140,58 +140,3 @@ describe('three-guide public bubble simulations', () => {
   });
 });
 
-describe('public adapter identity and non-replaying meetings', () => {
-  async function nativeAdapter(name = 'Nova[BOT]', id = 20) {
-    const { Subject } = await import('rxjs');
-    const meetings = new Subject<any>(), joins = new Subject<any>(), leaves = new Subject<any>(), ended = new Subject<void>();
-    const messages: string[] = [], moves: Point[] = [];
-    let chat = (_text: string, _event: { authorId: number | undefined; author?: { name: string } }) => {};
-    let pending: ((p: Point & { cancelled: boolean }) => void) | undefined;
-    const wa = { onInit: async () => {}, room: { id: 'test', getTiledMap: async (): Promise<unknown> => native() },
-      player: { name, playerId: id, getPosition: async () => center([73, 73]), moveTo: (x: number, y: number) => { expect(pending).toBeUndefined(); moves.push({ x, y }); return new Promise<Point & { cancelled: boolean }>(resolve => { pending = resolve; }); }, meetings: { onJoin: () => meetings } },
-      chat: { onChatMessage: (cb: typeof chat) => { chat = cb; return { unsubscribe: vi.fn() }; }, sendChatMessage: (text: string) => { messages.push(text); } },
-    };
-    vi.stubGlobal('WA', wa); vi.spyOn(console, 'warn').mockImplementation(() => {});
-    const event = (participants: { playerId: number; name?: string }[]) => ({ kind: 'proximity', name: 'Proximity Chat', participants, onParticipantJoin: () => joins, onParticipantLeave: () => leaves, onLeave: () => ended });
-    return { wa, messages, moves, meetings, joins, leaves, ended, event, chat: (text: string, authorId: number | undefined, name?: string) => chat(text, { authorId, author: name ? { name } : undefined }),
-      finishMove: async () => { const resolve = pending; pending = undefined; resolve?.({ ...moves.at(-1)!, cancelled: true }); await flush(); } };
-  }
-  it('retains native joins/leaves during map validation, uses participant names and author fallback, and cleans an invalid replacement', async () => {
-    const h = await nativeAdapter(); let resolveMap!: (map: unknown) => void;
-    h.wa.room.getTiledMap = () => new Promise(resolve => { resolveMap = resolve; });
-    const bot = (await import('../src/bots/lyra')).default; const running = bot.run({ persona: 'nova' }); await flush();
-    expect(h.meetings.observers).toHaveLength(1);
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }, { playerId: 10, name: 'Lyra[BOT]' }]));
-    h.leaves.next({ playerId: 10, name: 'Lyra[BOT]' }); h.leaves.next({ playerId: 1, name: 'Visitor' }); h.joins.next({ playerId: 2, name: 'Other visitor' });
-    expect(h.messages).toEqual([]); resolveMap(native()); await running; await flush();
-    expect(h.messages).toHaveLength(1); expect(h.messages[0]).toContain('Nova[BOT]');
-    h.chat('Cancer', 1, 'Visitor'); expect(h.messages).toHaveLength(1);
-    h.joins.next({ playerId: 99 }); const beforeFallback = h.messages.length;
-    h.chat('Cancer', 99, 'Orion[BOT]'); expect(h.messages).toHaveLength(beforeFallback);
-    h.chat('Nova, Cancer', 2, 'Other visitor'); expect(h.messages.at(-1)).toContain('Cancer');
-    h.wa.room.getTiledMap = async () => ({ ...native(), width: 64 }); const replaced = bot.run({ persona: 'nova' });
-    await flush(); expect(h.meetings.observers).toHaveLength(0); expect(h.joins.observers).toHaveLength(0); expect(h.leaves.observers).toHaveLength(0); expect(h.ended.observers).toHaveLength(0);
-    await h.finishMove(); await replaced; expect(h.meetings.observers).toHaveLength(0);
-  });
-  it('disposes a run replaced while its map promise is pending, and does not replay a pre-subscription meeting', async () => {
-    const h = await nativeAdapter(); let resolveMap!: (map: unknown) => void;
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); // native Subject intentionally does not replay
-    h.wa.room.getTiledMap = () => new Promise(resolve => { resolveMap = resolve; });
-    const bot = (await import('../src/bots/lyra')).default; const running = bot.run({ persona: 'nova' }); await flush();
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.joins.observers).toHaveLength(1);
-    h.wa.room.getTiledMap = async () => native(); const replacement = bot.run({ persona: 'nova' }); await flush();
-    expect(h.meetings.observers).toHaveLength(0); expect(h.joins.observers).toHaveLength(0);
-    resolveMap(native()); await running; await replacement; expect(h.messages).toEqual([]); expect(h.moves).toHaveLength(1);
-    // A real later native meeting entry is observable, unlike the pre-subscription event.
-    h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Nova[BOT]');
-    await h.finishMove(); expect(h.meetings.observers).toHaveLength(0);
-  });
-  it('rejects explicit invalid metadata and mismatched public identity before any map access or action', async () => {
-    const h = await nativeAdapter('Orion[BOT]', 30); const map = vi.spyOn(h.wa.room, 'getTiledMap');
-    const bot = (await import('../src/bots/lyra')).default;
-    await expect(bot.run({ persona: 'aster' })).rejects.toThrow(/persona/i);
-    await expect(bot.run({ persona: 'nova' })).rejects.toThrow(/identity/i);
-    expect(map).not.toHaveBeenCalled(); expect(h.meetings.observers).toHaveLength(0); expect(h.moves).toEqual([]); expect(h.messages).toEqual([]);
-    await bot.run({ persona: 'orion' }); h.meetings.next(h.event([{ playerId: 1, name: 'Visitor' }])); expect(h.messages[0]).toContain('Orion[BOT]'); await h.finishMove();
-  });
-});

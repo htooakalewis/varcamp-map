@@ -1,3 +1,4 @@
+import { readyPeer, rendererPeer, rendererReceipt } from './helpers/renderer-peer.mjs';
 import { readFileSync } from 'node:fs';
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import * as session from '../bots/browser-session.mjs';
@@ -112,7 +113,7 @@ function fixture(options: any = {}) {
       const result = await session.bootstrapSession(page, { profile, fresh, assertLive: health.assertLive,
         join: async () => { url = profile.roomUrl; record('joined'); }, find: async () => { record('frame-ready'); return frame; },
         start: async () => { record('module-start'); starts++; if (options.returnAfterStart) update({ welcome: 1 }); vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null, playerId: 7 }); const evidenceAt=Date.now(); vi.stubGlobal('__varcampGuideEvidence', { state: 'progress', steps: 1,at:evidenceAt,leaseDeadline:evidenceAt+10000,operationBudgetMs:10000,persona:profile.persona,controllerGeneration:7,playerId:7,name:state.name,roomId:state.room }); return { playerId: 7, name: state.name, roomId: state.room }; }, ...overrides });
-      await health.ready(result.identity); return result;
+      health.observe(await session.controllerObserver(result.frame, profile, { assertLive: health.assertLive }).read()); health.setRendererEvidence(rendererReceipt()); await health.ready(result.identity); return result;
     };
     return runner.startupBoundary(health, action);
   };

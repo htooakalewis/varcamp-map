@@ -122,9 +122,10 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   tilesets.push({...maskSheet,firstgid:nextgid,name:'navigation-mask',tiles:[{id:0,properties:[{name:'collides',type:'bool',value:false}]},{id:1,properties:[{name:'collides',type:'bool',value:true}]}]});
   nextgid += maskSheet.tilecount!;
   layers.push(terrain,...stacks[0].layers,{id:0,name:'floorLayer',type:'objectgroup',objects:[],visible:true,opacity:1},...stacks[1].layers);
+  const airborneLayers:TileLayer[]=[];
   for (const overlay of layout.animatedOverlays ?? []) {
     bounds(overlay, `Animation ${overlay.name}`);
-    if (overlay.level !== undefined && overlay.level !== 'belowAvatar' && overlay.level !== 'aboveAvatar') throw new Error(`Animation ${overlay.name}: invalid avatar depth level`);
+    if (overlay.level !== undefined && overlay.level !== 'belowAvatar' && overlay.level !== 'aboveAvatar' && overlay.level !== 'aboveScenery') throw new Error(`Animation ${overlay.name}: invalid avatar depth level`);
     const count = overlay.width * overlay.height;
     if (count >= 256 || overlay.carrierTileIds.length !== count || new Set(overlay.carrierTileIds).size !== count) throw new Error(`Animation ${overlay.name}: use fewer than 256 distinct carrier cells`);
     if (!/^assets\/tilesets\/original\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.png$/.test(overlay.image) || !sources[overlay.sourceId]) throw new Error(`Animation ${overlay.name}: registered original atlas required`);
@@ -156,6 +157,7 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     const animated = layer(overlay.name);
     for (let y = 0; y < overlay.height; y++) for (let x = 0; x < overlay.width; x++) animated.data[(overlay.y + y) * layout.width + overlay.x + x] = firstgid + overlay.carrierTileIds[y * overlay.width + x];
     if (overlay.level === 'belowAvatar') layers.splice(layers.findIndex(l => l.name === 'floorLayer'), 0, animated);
+    else if(overlay.level==='aboveScenery')airborneLayers.push(animated);
     else layers.push(animated);
   }
   const collision=layer('physical-collisions',0);collision.data=Array.from(groundMask,(v,i)=>v||propMask[i]?wall:0);layers.push(collision);
@@ -197,6 +199,7 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     bounds(s,s.name);const padding=s.padding??0;if(!Number.isInteger(padding)||padding<0||padding*2>=s.width*32||padding*2>=s.height*32)throw new Error(`${s.name}: padding must be a nonnegative integer leaving a nonempty native text rectangle`);return {id:objectId++,name:s.name,x:s.x*32+padding,y:s.y*32+padding,width:s.width*32-padding*2,height:s.height*32-padding*2,rotation:0,visible:true,text:{text:s.text,color:s.color??'#f1d9a0',fontfamily:'Arial',pixelsize:s.fontSize??18,bold:false,wrap:true,halign:s.align??'left',valign:'top',backgroundcolor:s.name==='wheel-welcome-board'?'#101c2c':undefined,backgroundopacity:s.name==='wheel-welcome-board'?0.92:undefined}};
   }).filter(o=>!captionNames.has(o.name))});
   layers.push({id:0,name:'inspection-zones',type:'objectgroup',visible:false,opacity:1,objects:layout.inspectionZones.map(z=>({id:objectId++,name:z.name,type:z.kind,x:z.x*32,y:z.y*32,width:z.width*32,height:z.height*32,visible:false}))});
+  layers.push(...airborneLayers);
   const names=new Set<string>();for(const [i,l] of layers.entries()){if(names.has(l.name))throw new Error(`Duplicate flattened layer name: ${l.name}`);names.add(l.name);l.id=i+1;}
   const tmj:TiledMap={type:'map',version:'1.10',tiledversion:'1.12.2',orientation:'orthogonal',renderorder:'right-down',infinite:false,width:layout.width,height:layout.height,tilewidth:32,tileheight:32,backgroundcolor:'#101c2c',layers,tilesets,nextlayerid:layers.length+1,nextobjectid:objectId,properties:[{name:'script',type:'string',value:'../src/main.ts'},{name:'worldMapId',type:'string',value:layout.id},{name:'mapName',type:'string',value:mapName},{name:'defaultCameraState',type:'bool',value:false},{name:'defaultMicrophoneState',type:'bool',value:false}]};
   // Keep the native inline-editor catalog policy shared with the intentional WAM migration.

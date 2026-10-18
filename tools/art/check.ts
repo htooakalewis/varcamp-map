@@ -4,6 +4,7 @@ import {renderPlazaIdentity} from './plaza-generated';
 import {renderPlazaGarden} from './plaza-garden';
 import {renderPlazaBuildings,renderPlazaGrass} from './plaza-buildings';
 import {renderPlazaDrones} from './plaza-drones';
+import {checkPlazaFleetArt} from './plaza-fleet-check';
 import {renderPlazaPots} from './plaza-pots';
 import {renderCoastLifeAssets} from './coast-life-assets';
 import {renderCoastLife} from './coast-life';
@@ -26,9 +27,13 @@ import { SIGN_IDS, ELEMENT_IDS } from '../../src/world/catalog';
 interface SourceRecord { attribution: string; url: string; license: string; licenseFile: string; changes: string; files: { path: string; sha256: string }[]; }
 export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promise<string[]> {
   const errors: string[]=[];
+  const sources=JSON.parse(readFileSync('art/sources.json','utf8')) as Record<string,SourceRecord>;
+  // Reject an incomplete mandatory family before evaluating dependent artwork.
+  // This remains unconditional even when all fleet registry rows are removed.
+  const fleetErrors=await checkPlazaFleetArt(sources);
+  if(fleetErrors.length)return fleetErrors;
   errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
-  const sources=JSON.parse(readFileSync('art/sources.json','utf8')) as Record<string,SourceRecord>;
   for (const id of [...SIGN_IDS.flatMap(sign=>[`glyph-${sign}`,`constellation-${sign}`]), ...ELEMENT_IDS.map(el=>`sigil-${el}`), 'telescope','quest-shrine','door-open','npc-guide','npc-maze-keeper','npc-dockmaster']) {
     if(!catalog[id]) errors.push(`${id}: missing required sprite`);
   }

@@ -1,11 +1,13 @@
 import { diagnosticLine } from '../../ops/bots/evidence.mjs';
 import { personaByName, personaFromMetadata } from './personas';
+import { createBotCommunication } from './event-bridge';
 import { createLyraController, type LyraAdapter, type LyraController } from './controller';
 
 export function writeDiagnostic(text: string, evidence?: Record<string, unknown>, output: (message: string) => void = message => console.warn(message)): void {
   output(diagnosticLine(text, evidence));
 }
 let current: LyraController | undefined;
+let currentCommunication: { close(): void } | undefined;
 let serial: Promise<void> = Promise.resolve();
 let generation = 0;
 
@@ -13,7 +15,7 @@ let generation = 0;
 async function run(metadata?: unknown): Promise<void> {
   const persona = personaFromMetadata(metadata);
   const ticket = ++generation;
-  current?.stop('replaced by a new dedicated run');
+  currentCommunication?.close(); current?.stop('replaced by a new dedicated run');
   serial = serial.catch(() => {}).then(async () => {
     await current?.done;
     if (ticket !== generation) return;
@@ -22,36 +24,25 @@ async function run(metadata?: unknown): Promise<void> {
     if (ticket !== generation) return;
     const self = { id: WA.player.playerId, name: WA.player.name };
     if (!Number.isFinite(self.id) || personaByName(self.name)?.key !== persona.key) throw Error('Guide identity does not match fixed persona');
+    let bridgeFailure: unknown;
+    const communication = await createBotCommunication(WA, persona, error => {
+      bridgeFailure = error; current?.stop('Guide communication failed: ' + String(error));
+    });
+    currentCommunication = communication;
+    if (bridgeFailure) { communication.close(); throw bridgeFailure; }
     const api: LyraAdapter = {
       self: () => self,
       map: () => WA.room.getTiledMap(), roomId: () => WA.room.id,
       position: () => WA.player.getPosition(), move: point => WA.player.moveTo(point.x, point.y),
-      say: text => WA.chat.sendChatMessage(text, { scope: 'bubble' }),
+      reply: communication.reply, onRequest: communication.onRequest, onAudience: communication.onAudience,
       diagnostic: writeDiagnostic,
       receipt: evidence => { (globalThis as typeof globalThis & { __varcampGuideEvidence?: Record<string, unknown> }).__varcampGuideEvidence = evidence; },
-      onChat: callback => {
-        const subscription = WA.chat.onChatMessage((text, event) => callback({ text, authorId: event.authorId, authorName: event.author?.name }), { scope: 'bubble' });
-        return () => subscription.unsubscribe();
-      },
-      onBubble: callback => {
-        const subscription = WA.player.meetings.onJoin().subscribe(meeting => {
-          // This demo exposes its ordinary proximity bubble as default / Proximity Chat.
-          if (meeting.kind !== 'proximity' && !(meeting.kind === 'default' && meeting.name === 'Proximity Chat')) return;
-          callback({
-            participants: meeting.participants.map(player => ({ id: player.playerId, name: player.name })),
-            onJoin: cb => { const s = meeting.onParticipantJoin().subscribe(player => cb({ id: player.playerId, name: player.name })); return () => s.unsubscribe(); },
-            onLeave: cb => { const s = meeting.onParticipantLeave().subscribe(player => cb(player.playerId)); return () => s.unsubscribe(); },
-            onEnd: cb => { const s = meeting.onLeave().subscribe(cb); return () => s.unsubscribe(); },
-          });
-        });
-        return () => subscription.unsubscribe();
-      },
     };
     const controller = createLyraController(api, undefined, persona, ticket); current = controller;
-    const shutdown = () => controller.stop('dedicated page closed');
+    const shutdown = () => { communication.close(); controller.stop('dedicated page closed'); };
     globalThis.addEventListener?.('pagehide', shutdown, { once: true });
-    void controller.done.then(() => globalThis.removeEventListener?.('pagehide', shutdown));
-    await controller.start();
+    void controller.done.then(() => { communication.close(); globalThis.removeEventListener?.('pagehide', shutdown); });
+    await controller.start(); communication.activate();
   });
   return serial;
 }

@@ -3,9 +3,13 @@ export interface ArtRgba{width:number;height:number;rgba:Buffer;}
 const crcTable=Array.from({length:256},(_,n)=>{let c=n;for(let i=0;i<8;i++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
 /** Synchronous current-art alpha proof only. Caps come from the three actual
  * owning/upper sheets (largest512×224); Woka and compiler caps are unchanged. */
-export function decodeArtRgbaPng(bytes:Buffer,width:number,height:number):ArtRgba{
+export function decodeArtRgbaPng(bytes:Buffer,width:number,height:number):ArtRgba{return decode(bytes,width,height,{height:224,encoded:65536,decoded:458752});}
+/** Separate closed aerial profile for the five actual512px bird motion sheets.
+ * Original owner/Woka caps are not widened. Expected header geometry is exact. */
+export function decodeAirborneRgbaPng(bytes:Buffer,width:number,height:number):ArtRgba{return decode(bytes,width,height,{height:1152,encoded:196608,decoded:2359296});}
+function decode(bytes:Buffer,width:number,height:number,caps:{height:number;encoded:number;decoded:number}):ArtRgba{
  const fail=():never=>{throw Error('Art PNG invalid bounded RGBA8 stream');};
- if(!Number.isSafeInteger(width)||!Number.isSafeInteger(height)||width<1||width>512||height<1||height>224||width*height*4>458752||bytes.length>65536||bytes.length<57||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))fail();
+ if(!Number.isSafeInteger(width)||!Number.isSafeInteger(height)||width<1||width>512||height<1||height>caps.height||width*height*4>caps.decoded||bytes.length>caps.encoded||bytes.length<57||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))fail();
  let offset=8,ended=false,afterIdat=false;const compressed:Buffer[]=[];
  while(offset<bytes.length){
   if(offset+12>bytes.length)fail();const length=bytes.readUInt32BE(offset),type=bytes.toString('ascii',offset+4,offset+8),end=offset+length+12;

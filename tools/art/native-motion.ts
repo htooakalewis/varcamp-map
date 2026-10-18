@@ -6,7 +6,7 @@ export interface NativeMotionPose { width:number; height:number; rgba:Buffer; }
 export interface NativeMotionSample { x:number; y:number; pose:number|null; }
 export interface NativeMotionTrack { id:string; samples:NativeMotionSample[]; }
 export interface NativeMotionSpec {
- name:string; image:string; sourceId:string; level:'belowAvatar'|'aboveAvatar'; rect:TileRect;
+ name:string; image:string; sourceId:string; level:'belowAvatar'|'aboveAvatar'|'aboveScenery'; rect:TileRect;
  stepMs:number; periodMs:number; poses:NativeMotionPose[]; tracks:NativeMotionTrack[];
 }
 export interface NativeMotionDiagnostics {
@@ -23,7 +23,7 @@ export async function renderNativeMotion(spec:NativeMotionSpec):Promise<{png:Buf
  const fail=(message:string):never=>{throw new Error(`Native motion ${spec.name}: ${message}`);};
  const integer=(n:number,min:number,max:number)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
  if(!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(spec.name)||!/^assets\/tilesets\/original\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.png$/.test(spec.image)||!spec.sourceId)fail('registered native original identity required');
- if(spec.level!=='belowAvatar'&&spec.level!=='aboveAvatar')fail('explicit avatar depth required');
+ if(spec.level!=='belowAvatar'&&spec.level!=='aboveAvatar'&&spec.level!=='aboveScenery')fail('explicit avatar depth required');
  const {x,y,width,height}=spec.rect,count=width*height;
  if(!integer(x,0,8192)||!integer(y,0,8192)||!integer(width,1,255)||!integer(height,1,255)||count>=256)fail('use fewer than256 carrier cells at integer map coordinates');
  if(!integer(spec.stepMs,100,2147483647)||!integer(spec.periodMs,100,2147483647)||spec.periodMs%spec.stepMs!==0)fail('native clock must use integer >=100ms steps and one complete period');

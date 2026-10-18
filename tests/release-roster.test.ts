@@ -20,34 +20,35 @@ beforeEach(()=>{
  }
  stageCurrentWorldInputs(project,fixture);
  mkdirSync(resolve(fixture,'art/source/wokas-readable-v2'),{recursive:true});cpSync(resolve(project,'art/source/wokas-readable-v2/native-design.json'),resolve(fixture,'art/source/wokas-readable-v2/native-design.json'));
+ mkdirSync(resolve(fixture,'src'),{recursive:true});cpSync(resolve(project,'src/bots'),resolve(fixture,'src/bots'),{recursive:true});mkdirSync(resolve(fixture,'ops/bots'),{recursive:true});cpSync(resolve(project,'ops/bots/evidence.mjs'),resolve(fixture,'ops/bots/evidence.mjs'));
  process.chdir(fixture);
 });
 afterEach(()=>{process.chdir(project);rmSync(fixture,{recursive:true,force:true});});
-function directRelease(){
+async function directRelease(){
  const rows:{fileName:string;source:string|Buffer}[]=[];const plugin=worldRelease();const hook=plugin.generateBundle;if(typeof hook!=='function')throw Error('Expected actual direct release hook');
- let error:unknown;try{hook.call({emitFile:(row:{fileName:string;source:string|Buffer})=>{rows.push(row);return String(rows.length);}}as never,{}as never, {'runtime':{type:'chunk',isEntry:true,name:'src-main',fileName:'assets/src-main-fixture.js'}}as never,false);}catch(cause){error=cause;}
+ let error:unknown;try{await hook.call({emitFile:(row:{fileName:string;source:string|Buffer})=>{rows.push(row);return String(rows.length);}}as never,{}as never, {'runtime':{type:'chunk',isEntry:true,name:'src-main',fileName:'assets/src-main-fixture.js'}}as never,false);}catch(cause){error=cause;}
  return{rows,error};
 }
-it('direct release emits exactly the declared34 native pairs and preserves every source WAM body',()=>{
- expect(Object.keys(WORLD_CATALOG)).toHaveLength(34);const before=readFileSync('maps/overworld.wam');const {rows,error}=directRelease();expect(error).toBeUndefined();expect(rows.filter(r=>/\.(tmj|wam)$/.test(r.fileName)).map(r=>r.fileName).sort()).toEqual(Object.keys(WORLD_CATALOG).flatMap(id=>[`maps/${id}.tmj`,`maps/${id}.wam`]).sort());expect(readFileSync('maps/overworld.wam')).toEqual(before);
+it('direct release emits exactly the declared34 native pairs and preserves every source WAM body',async()=>{
+ expect(Object.keys(WORLD_CATALOG)).toHaveLength(34);const before=readFileSync('maps/overworld.wam');const {rows,error}=await directRelease();expect(error).toBeUndefined();expect(rows.filter(r=>/\.(tmj|wam)$/.test(r.fileName)).map(r=>r.fileName).sort()).toEqual(Object.keys(WORLD_CATALOG).flatMap(id=>[`maps/${id}.tmj`,`maps/${id}.wam`]).sort());expect(readFileSync('maps/overworld.wam')).toEqual(before);
 });
-it('direct release rejects an unknown extra source pair before emitting any artifact',()=>{
- writeFileSync('maps/unreviewed.tmj','{}');writeFileSync('maps/unreviewed.wam','{}');const {rows,error}=directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/roster/);
+it('direct release rejects an unknown extra source pair before emitting any artifact',async()=>{
+ writeFileSync('maps/unreviewed.tmj','{}');writeFileSync('maps/unreviewed.wam','{}');const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/roster/);
 });
-it('direct release rejects a missing later WAM before emitting any earlier map',()=>{
- unlinkSync('maps/overworld.wam');const {rows,error}=directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/roster/);
+it('direct release rejects a missing later WAM before emitting any earlier map',async()=>{
+ unlinkSync('maps/overworld.wam');const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/roster/);
 });
-it('direct release rejects an invalid later source WAM identity before emitting any earlier map',()=>{
- const wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));wam.mapUrl='overworld.tmj?v=stale';writeFileSync('maps/overworld.wam',JSON.stringify(wam));const {rows,error}=directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/WAM/);
+it('direct release rejects an invalid later source WAM identity before emitting any earlier map',async()=>{
+ const wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));wam.mapUrl='overworld.tmj?v=stale';writeFileSync('maps/overworld.wam',JSON.stringify(wam));const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/WAM/);
 });
-it('direct release includes all54 exact v1 and v2 portable bodies despite publicDir:false',()=>{
- const {rows,error}=directRelease();expect(error).toBeUndefined();const assets=rows.filter(row=>row.fileName.startsWith('wokas/varcamp-zodiac-'));expect(assets).toHaveLength(54);
+it('direct release includes all54 exact v1 and v2 portable bodies despite publicDir:false',async()=>{
+ const {rows,error}=await directRelease();expect(error).toBeUndefined();const assets=rows.filter(row=>row.fileName.startsWith('wokas/varcamp-zodiac-'));expect(assets).toHaveLength(54);
  expect(assets.map(row=>row.fileName).sort()).toEqual(['v1','v2'].flatMap(version=>readdirSync(`public/wokas/varcamp-zodiac-${version}`).map(name=>`wokas/varcamp-zodiac-${version}/${name}`)).sort());
  for(const row of assets){expect(Buffer.isBuffer(row.source),row.fileName).toBe(true);expect((row.source as Buffer).equals(readFileSync(`public/${row.fileName}`)),row.fileName).toBe(true);}
 });
-it.each(['v1','v2'].flatMap(version=>['missing','stale'].map(mode=>({version,mode}))))('direct release refuses $version $mode Woka assets before emitting any artifact',({version,mode})=>{
- const path=`public/wokas/varcamp-zodiac-${version}/aries-male.png`;if(mode==='missing')unlinkSync(path);else writeFileSync(path,'stale');const {rows,error}=directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);
+it.each(['v1','v2'].flatMap(version=>['missing','stale'].map(mode=>({version,mode}))))('direct release refuses $version $mode Woka assets before emitting any artifact',async({version,mode})=>{
+ const path=`public/wokas/varcamp-zodiac-${version}/aries-male.png`;if(mode==='missing')unlinkSync(path);else writeFileSync(path,'stale');const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);
 });
-it('real current release refuses matching regenerated native input with omitted required furnishings before any emission',()=>{
- const layout=JSON.parse(readFileSync('world/layouts/speaker-aries.json','utf8'));layout.placements=layout.placements.filter((p:{sprite:string})=>p.sprite!=='interior-ref-sofa');const map=renderReferenceInterior(layout,loadTileCatalog()).tmj;writeFileSync('world/layouts/speaker-aries.json',JSON.stringify(layout));writeFileSync('maps/speaker-aries.tmj',JSON.stringify(map));const {rows,error}=directRelease();expect(error).toBeInstanceOf(Error);expect(String(error)).toMatch(/Interior.*furnishing/);expect(rows).toEqual([]);
+it('real current release refuses matching regenerated native input with omitted required furnishings before any emission',async()=>{
+ const layout=JSON.parse(readFileSync('world/layouts/speaker-aries.json','utf8'));layout.placements=layout.placements.filter((p:{sprite:string})=>p.sprite!=='interior-ref-sofa');const map=renderReferenceInterior(layout,loadTileCatalog()).tmj;writeFileSync('world/layouts/speaker-aries.json',JSON.stringify(layout));writeFileSync('maps/speaker-aries.tmj',JSON.stringify(map));const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(String(error)).toMatch(/Interior.*furnishing/);expect(rows).toEqual([]);
 });
