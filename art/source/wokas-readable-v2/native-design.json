@@ -1,0 +1,271 @@
+{
+  "schema": "varcamp-native-readable-woka-design-v2",
+  "source": "Original hand-authored native pixel sprites based on the approved direction of the original generated front-identity concept; no cropped imagegen walk-sheet pixels.",
+  "frame": {
+    "width": 32,
+    "height": 32,
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "poseOrder": [
+      "stride-a",
+      "idle",
+      "stride-b"
+    ],
+    "sheet": {
+      "width": 96,
+      "height": 128
+    },
+    "frontTarget": {
+      "minimumWidth": 23,
+      "maximumWidth": 30,
+      "minimumHeight": 29,
+      "maximumHeight": 31
+    },
+    "feetBaseline": 30
+  },
+  "style": "Chunky chibi humans with large heads, broad colored costumes, crisp single pixel outlines and intentional color clusters; no blur/antialiasing/fine imagegen noise. 12 sign silhouettes and dominant colors, matching male/female identities. Male/female skin-tone/hair styling may vary; no robots or Greek/gold ornaments.",
+  "requirements": [
+    "All24humancharacters,12male12female",
+    "Glyph on dark chest or back panel; head silhouette carries sign identity in all directions",
+    "Distinct actual side faces; LEFT must not facefront/RIGHT; UP has no front face",
+    "Three actual stride/idle poses eachdirection, never repeated/mirrored idle substituted as walk",
+    "No sprite clipping or neighbor-frame bleed, preserve full32pxnativeformat",
+    "Normal1xand4x contact sheet on navy and beach backgrounds before any livecatalogchange",
+    "Old24v1package+allcurrent320catalogentriesremainuntoucheduntilreviewedreplacement",
+    "No change to corecharacterframe/collisions/camera"
+  ],
+  "signs": [
+    {
+      "id": "aries",
+      "title": "Scarlet ram",
+      "palette": {
+        "primary": "#ed2846",
+        "shade": "#8d1738",
+        "light": "#ff6772"
+      },
+      "headgear": "Cream curled ram horns; curled loops left/right, broad and low.",
+      "glyph": [
+        ".#...#.",
+        "#.#.#.#",
+        "#..#..#",
+        "...#...",
+        "...#...",
+        "...#...",
+        "...#..."
+      ]
+    },
+    {
+      "id": "taurus",
+      "title": "Emerald bull",
+      "palette": {
+        "primary": "#17a658",
+        "shade": "#066044",
+        "light": "#65e69b"
+      },
+      "headgear": "Ivory bull horns; very wide pointed upward sweep, clearly different from curled Aries.",
+      "glyph": [
+        "#.....#",
+        ".#...#.",
+        "..###..",
+        ".#...#.",
+        ".#...#.",
+        "..###..",
+        "......."
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Lemon twins",
+      "palette": {
+        "primary": "#f7c934",
+        "shade": "#bd8813",
+        "light": "#fff3a4"
+      },
+      "headgear": "Two equal upright rectangular head crests, linked across the headband.",
+      "glyph": [
+        "#######",
+        ".#...#.",
+        ".#...#.",
+        ".#...#.",
+        ".#...#.",
+        ".#...#.",
+        "#######"
+      ]
+    },
+    {
+      "id": "cancer",
+      "title": "Coral crab",
+      "palette": {
+        "primary": "#fb729c",
+        "shade": "#b83163",
+        "light": "#ffd0d9"
+      },
+      "headgear": "Two broad coral crab-claw head ornaments with visible pincer gaps.",
+      "glyph": [
+        ".##....",
+        "#..#...",
+        "#..####",
+        ".####..",
+        "####..#",
+        "...#..#",
+        "....##."
+      ]
+    },
+    {
+      "id": "leo",
+      "title": "Amber lion",
+      "palette": {
+        "primary": "#f68b24",
+        "shade": "#bc4b15",
+        "light": "#ffd06b"
+      },
+      "headgear": "Large amber lion mane around human face, rounded ears. Broad circular silhouette.",
+      "glyph": [
+        ".##....",
+        "#..#...",
+        "#..#...",
+        ".##.#..",
+        "....#.#",
+        "....#.#",
+        ".....#."
+      ]
+    },
+    {
+      "id": "virgo",
+      "title": "Lime blossom",
+      "palette": {
+        "primary": "#b8d84a",
+        "shade": "#658422",
+        "light": "#eef6ac"
+      },
+      "headgear": "Large white flower and lime leaf crown. White petals surround amber center.",
+      "glyph": [
+        "#.#.#..",
+        "####.#.",
+        "#.#..#.",
+        "#.#..#.",
+        "#.#.##.",
+        "#.#...#",
+        "....##."
+      ]
+    },
+    {
+      "id": "libra",
+      "title": "Cyan scales",
+      "palette": {
+        "primary": "#22b3d5",
+        "shade": "#12677e",
+        "light": "#8cf3ff"
+      },
+      "headgear": "Wide level balanced beam with two matching scale pans at its ends.",
+      "glyph": [
+        ".......",
+        "..###..",
+        ".#...#.",
+        "#.....#",
+        "#######",
+        ".......",
+        "#######"
+      ]
+    },
+    {
+      "id": "scorpio",
+      "title": "Violet scorpion",
+      "palette": {
+        "primary": "#c555e4",
+        "shade": "#6d287b",
+        "light": "#f7b0ff"
+      },
+      "headgear": "Thick curved scorpion tail curling above and beside head, pointed stinger.",
+      "glyph": [
+        "#.#.#..",
+        "####.#.",
+        "#.#..#.",
+        "#.#..#.",
+        "#.#..#.",
+        ".....#.",
+        "....###"
+      ]
+    },
+    {
+      "id": "sagittarius",
+      "title": "Cobalt archer",
+      "palette": {
+        "primary": "#3e70e4",
+        "shade": "#25438f",
+        "light": "#b4d3ff"
+      },
+      "headgear": "Large diagonal arrow crest pointing up-right, clear arrowhead.",
+      "glyph": [
+        "....###",
+        ".....##",
+        "....#.#",
+        "...#...",
+        "#.#....",
+        ".#.....",
+        "#.#...."
+      ]
+    },
+    {
+      "id": "capricorn",
+      "title": "Rust mountain goat",
+      "palette": {
+        "primary": "#bd7448",
+        "shade": "#6b402b",
+        "light": "#e6c6a5"
+      },
+      "headgear": "Two tall swept-back ridged goat horns; different from bull/ram. Cream highlights.",
+      "glyph": [
+        "#....#.",
+        "#.#.#..",
+        "###.#..",
+        "#.#.#..",
+        "#..###.",
+        "....#.#",
+        ".....#."
+      ]
+    },
+    {
+      "id": "aquarius",
+      "title": "Sky water bearer",
+      "palette": {
+        "primary": "#75c8f5",
+        "shade": "#3169ab",
+        "light": "#e7f8ff"
+      },
+      "headgear": "Two broad pale/blue wavy ribbons across/above head.",
+      "glyph": [
+        ".#..#..",
+        "#.##.##",
+        ".......",
+        ".#..#..",
+        "#.##.##",
+        ".......",
+        "......."
+      ]
+    },
+    {
+      "id": "pisces",
+      "title": "Sea jade fish",
+      "palette": {
+        "primary": "#39bea6",
+        "shade": "#196856",
+        "light": "#b1f6d8"
+      },
+      "headgear": "Two opposing fish head ornaments with clear eyes and tail fins.",
+      "glyph": [
+        "#.....#",
+        ".#...#.",
+        "..#.#..",
+        "#######",
+        "..#.#..",
+        ".#...#.",
+        "#.....#"
+      ]
+    }
+  ]
+}
