@@ -311,7 +311,7 @@
     "url": "https://github.com/OpenGameArt/LPC-Style-Guide",
     "license": "CC-BY-SA 3.0",
     "licenseFile": "assets/tilesets/lpc-water/cc-by-sa-3.0.txt",
-    "changes": "Original complete sprites/water.png copied byte-for-byte and unchanged. Organic-coast.png is a separately named CC-BY-SA 3.0 derivative using recolored animated LPC water plus original hand-authored curved sand, wet-sand and foam; original recipe and producer retained.",
+    "changes": "Original complete sprites/water.png copied byte-for-byte and unchanged. Organic-coast.png is a separately named CC-BY-SA 3.0 derivative using recolored animated LPC water plus original hand-authored curved sand, wet-sand and foam; original recipe and producer retained. Constellation-coast.png is a second separately named CC-BY-SA 3.0 curved coast derivative sharing the same deterministic producer; upstream water is unchanged.",
     "files": [
       {
         "path": "assets/tilesets/lpc-water/ATTRIBUTION.md",
@@ -339,7 +339,7 @@
       },
       {
         "path": "tools/art/organic-coast.ts",
-        "sha256": "55a3e67c3b4bf4aca2c0798c97d5b1526ea1467d0203e0ef32e9da01b2d160d8"
+        "sha256": "074a5926099bb5754dc2cf32744b3f57ed8e2e9b8a260181be279fab36758f54"
       },
       {
         "path": "assets/tilesets/original/organic-coast.png",
@@ -348,6 +348,26 @@
       {
         "path": "assets/tilesets/lpc-water/ORGANIC-COAST.md",
         "sha256": "7d696fac799d148596f72fa1871a06224941f42eeb8cc4998175ee2bf330da55"
+      },
+      {
+        "path": "world/constellation-coast.json",
+        "sha256": "bfe0e5d1685332ecb8394b479bdebeef4d37017b20c00d70046721225fba384e"
+      },
+      {
+        "path": "tools/art/constellation-coast.ts",
+        "sha256": "f90d2f46100657434bf8a0198ee3476a013e94689c679749c2909e3a8af4ba12"
+      },
+      {
+        "path": "tools/art/coast-raster.ts",
+        "sha256": "5361fb058600181bf2fdda0ef1a0d2a8d6c8c29ca39eb16426d492e559e49e12"
+      },
+      {
+        "path": "assets/tilesets/original/constellation-coast.png",
+        "sha256": "361713a217882b0ad1811f5eaa485c233816141fd0a53fad0025cefe679e48b1"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/CONSTELLATION-COAST.md",
+        "sha256": "768ea79ee9ba604b6eba530134e374ed27eaaa14b3ce1d82c25940c948bf44cd"
       }
     ]
   },

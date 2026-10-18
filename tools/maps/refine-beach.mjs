@@ -18,7 +18,8 @@ const built=buildMap(layout,catalog).tmj;
 let next=Math.max(...base.tilesets.map(t=>t.firstgid+t.tilecount));const key=t=>t.name==='navigation-mask'||t.name==='coastal-flight'||t.name.startsWith('beach-surf-')?t.name:t.image;const bykey=new Map(base.tilesets.map(t=>[key(t),t]));const remap=[];
 // Native client binding is by tileset.name. A builder's positional art-N name
 // cannot be reused when its sheet is appended to a differently ordered native map.
-const beachAtlasName=t=>t.image==='../assets/tilesets/original/organic-coast.png'?'organic-coast':t.image==='../assets/tilesets/original/beach-lounge.png'?'beach-lounge':t.name;
+const stableNames=new Map([['../assets/tilesets/original/organic-coast.png','organic-coast'],['../assets/tilesets/original/constellation-coast.png','constellation-coast'],['../assets/tilesets/original/beach-lounge.png','beach-lounge'],['../assets/tilesets/lpc-water/water.png','lpc-water']]);
+const beachAtlasName=t=>stableNames.get(t.image)??t.name;
 for(const t of built.tilesets){
  let dest=bykey.get(key(t));
  if(!dest){
@@ -41,7 +42,7 @@ const replacements=built.layers.filter(l=>visual(l.name)).map(l=>{const old=base
 // Retain the original avatar split and flight; insert added transparent surf below avatars.
 const layers=[];
 for(const old of base.layers){if(visual(old.name)){const n=replacements.find(x=>x.name===old.name);if(n)layers.push(n);}else layers.push(old);}
-const extra=replacements.filter(n=>!base.layers.some(o=>o.name===n.name));const floor=layers.findIndex(l=>l.name==='floorLayer');layers.splice(floor,0,...extra.filter(n=>n.name.startsWith('scenery-below')||n.name.startsWith('beach-surf')));const flight=layers.findIndex(l=>l.name==='coastal-flight');layers.splice(flight,0,...extra.filter(n=>n.name.startsWith('scenery-above')));
+const extra=replacements.filter(n=>!base.layers.some(o=>o.name===n.name));const floor=layers.findIndex(l=>l.name==='floorLayer');layers.splice(floor,0,...extra.filter(n=>n.name.startsWith('scenery-below')||n.name.startsWith('beach-surf')));const flight=layers.findIndex(l=>l.name==='coastal-flight');layers.splice(flight<0?layers.length:flight,0,...extra.filter(n=>n.name.startsWith('scenery-above')));
 base.layers=layers;base.nextlayerid=nextid;
 attachOrganicCoast(base,layout);
 return {map:base,layout,sourceChanged};

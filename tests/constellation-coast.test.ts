@@ -1,0 +1,43 @@
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {expect,it} from 'vitest';
+import {assertNativeOrganicCoast} from '../tools/maps/organic-coast';
+const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const layout=()=>json('world/layouts/constellation-shore.json');
+const native=()=>json('maps/constellation-shore.tmj');
+const surface=(l:any)=>{const a=Array(l.width*l.height).fill('');for(const p of l.placements.filter((p:any)=>p.layer==='terrain'&&!['coast-dock-plank','naval-dock'].includes(p.sprite)))for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)a[y*l.width+x]=p.sprite;return a;};
+const land=(s:string)=>s==='coast-sand'||s==='coast-wet-sand'||s.startsWith('beach-sand-')||s.startsWith('constellation-coast-land-');
+const longest=(a:number[])=>{let last=-1,n=0,max=0;for(const v of a){n=last===v?n+1:1;last=v;max=Math.max(max,n);}return max;};
+function outline(l:any){const a=surface(l);return Array.from({length:30},(_,i)=>{const x=i+4;for(let y=39;y>=0;y--)if(land(a[y*40+x]))return y;return -1;});}
+it('replaces the actual rectangular sand boundary with unequal curved coves, not a foam overlay',()=>{const old=json('tests/fixtures/constellation-coast/before-layout.json');expect(longest(outline(old))).toBeGreaterThanOrEqual(8);const a=outline(layout());expect(longest(a)).toBeLessThanOrEqual(5);expect(new Set(a).size).toBeGreaterThanOrEqual(9);expect(layout().placements.filter((p:any)=>p.sprite.startsWith('coast-foam-'))).toHaveLength(0);});
+it('requires coast source for the current shore even if every coast placement is deleted',()=>{const l=layout();l.placements=l.placements.filter((p:any)=>!p.sprite.startsWith('constellation-coast-'));expect(()=>assertNativeOrganicCoast(native(),l)).toThrow(/Organic coast/);});
+it('provides four actual native tide frames and the same local quiet surf',()=>{const m=native(),atlas=m.tilesets.find((t:any)=>t.image==='../assets/tilesets/original/constellation-coast.png');expect(atlas).toBeDefined();expect(atlas.tiles.length).toBeGreaterThan(90);expect(atlas.tiles.every((t:any)=>t.animation.length===4&&t.animation.every((f:any)=>f.duration===520))).toBe(true);expect(Object.fromEntries(m.layers.find((l:any)=>l.name==='terrain').properties.map((p:any)=>[p.name,p.value]))).toMatchObject({playAudio:'../assets/audio/ocean-loop.mp3',audioVolume:0.2,audioLoop:true});});
+it('preserves the reviewed shipyard atlas pixels exactly',()=>{expect(createHash('sha256').update(readFileSync('assets/tilesets/original/organic-coast.png')).digest('hex')).toBe('2fb7d2c09d6e185fd5363869bd75e760a4102323a8981eab2f55080ede04c9a5');});
+import {loadTileCatalog} from '../tools/art/catalog';
+import {buildMap} from '../tools/maps/builder';
+import {assertNativeOceanMap} from '../tools/maps/beach-ship';
+import {createRequire} from 'node:module';
+import {resolve} from 'node:path';
+import sharp from 'sharp';
+it('preserves all original furniture and solid upper/base partitions while every portal and activity remains reachable',()=>{
+ const l=layout(),before=json('tests/fixtures/constellation-coast/before-layout.json'),m=native(),old=json('tests/fixtures/constellation-coast/before-native.tmj'),catalog=loadTileCatalog(),props=(a:any)=>a.placements.filter((p:any)=>p.layer!=='terrain'&&!p.sprite.startsWith('coast-foam-')&&p.sprite!=='beach-sea-veil');
+ expect(props(l)).toEqual(props(before));for(const field of ['entries','exits','areas','signs','standingSigns'])expect(l[field],field).toEqual(before[field]);expect(m.properties).toEqual(old.properties);
+ for(const layer of old.layers.filter((x:any)=>x.name!=='terrain'&&x.name!=='physical-collisions'&&!x.name.startsWith('scenery-')))expect(m.layers.find((x:any)=>x.id===layer.id),layer.name).toEqual(layer);
+ for(const layer of old.layers.filter((x:any)=>x.name.startsWith('scenery-above')))expect(m.layers.find((x:any)=>x.id===layer.id),layer.name).toEqual(layer);
+ const mask=m.layers.find((a:any)=>a.name==='physical-collisions').data,seen=new Set<number>(),q=[8*40+19];for(let h=0;h<q.length;h++){const i=q[h];if(mask[i]||seen.has(i))continue;seen.add(i);const x=i%40,y=i/40|0;for(const[xx,yy]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]])if(xx>=0&&yy>=0&&xx<40&&yy<40)q.push(yy*40+xx);}
+ for(const r of [...l.entries,...l.exits,...l.areas])for(let y=r.y;y<r.y+r.height;y++)for(let x=r.x;x<r.x+r.width;x++)expect(seen.has(y*40+x),`${r.name} ${x},${y}`).toBe(true);
+ for(const p of props(l))for(const[x,y]of catalog[p.sprite].blockingCells)expect(mask[(p.y+y)*40+p.x+x],p.id).not.toBe(0);
+ const a=surface(l),docks=l.placements.filter((p:any)=>p.layer==='terrain'&&p.sprite==='coast-dock-plank');for(let i=0;i<a.length;i++)if((a[i].startsWith('naval-water-')||a[i].startsWith('constellation-coast-water-'))&&!docks.some((p:any)=>i%40>=p.x&&i%40<p.x+p.width&&(i/40|0)>=p.y&&(i/40|0)<p.y+p.height))expect(mask[i],`sea ${i%40},${i/40|0}`).not.toBe(0);
+ const expected=buildMap(l,catalog).tmj;expect(mask.map(Boolean)).toEqual((expected.layers.find((x:any)=>x.name==='physical-collisions') as any).data.map(Boolean));
+});
+it('pinned client parser animates actual ground GIDs through four distinct raster states and repeats after one tide',async()=>{
+ const m=native(),atlas=m.tilesets.find((t:any)=>t.image==='../assets/tilesets/original/constellation-coast.png'),parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js')),parsed=parse(structuredClone(m)).tilesets.find((t:any)=>t.firstgid===atlas.firstgid),gids=m.layers.find((l:any)=>l.name==='terrain').data.filter((g:number)=>g>=atlas.firstgid&&g<atlas.firstgid+atlas.tilecount),pixels=await sharp('assets/tilesets/original/constellation-coast.png').ensureAlpha().raw().toBuffer({resolveWithObject:true});
+ const states=[0,520,1040,1560,2080].map(time=>{const chunks:Buffer[]=[];for(const gid of gids){const id=parsed.getAnimatedTileId(gid,time)-atlas.firstgid;for(let y=0;y<32;y++){const n=((Math.floor(id/atlas.columns)*32+y)*pixels.info.width+id%atlas.columns*32)*4;chunks.push(pixels.data.subarray(n,n+128));}}return createHash('sha256').update(Buffer.concat(chunks)).digest('hex');});expect(new Set(states.slice(0,4)).size).toBe(4);expect(states[4]).toBe(states[0]);
+});
+it('normal-build coast and ocean validation reject missing identities, moved land/water cells, stopped tides and audio drift',()=>{
+ for(const kind of ['identity','terrain','collision','stopped']){const m=native(),l=layout();if(kind==='identity')m.properties=m.properties.filter((p:any)=>p.name!=='worldMapId');if(kind==='terrain')m.layers.find((x:any)=>x.name==='terrain').data[0]=0;if(kind==='collision')m.layers.find((x:any)=>x.name==='physical-collisions').data[0]=0;if(kind==='stopped')delete m.tilesets.find((t:any)=>t.name==='constellation-coast').tiles;expect(()=>assertNativeOrganicCoast(m,l),kind).toThrow(/Organic coast/);}
+ const m=native();m.layers.find((x:any)=>x.name==='terrain').properties.find((p:any)=>p.name==='audioVolume').value=1;expect(()=>assertNativeOceanMap(m,layout())).toThrow(/Ocean audio/);
+});
+
+it('retains authentic shore fixtures and exact approved shipyard raster/layout/native bodies',()=>{for(const[path,hash]of Object.entries({"assets/tilesets/original/organic-coast.png": "2fb7d2c09d6e185fd5363869bd75e760a4102323a8981eab2f55080ede04c9a5", "world/layouts/shipyard-beach.json": "d3dfd38b7639e6940a40c7a3bd35d080e67c4731d61b279db3f6701b42da8459", "maps/shipyard-beach.tmj": "8c576a6a1390f3263bc597f15c1fa8d2955a8faf08db169e754530965a2c2eda", "tests/fixtures/constellation-coast/before-layout.json": "bb32c4a41536c81ac643da49a5923c46203abe9f01e9752bf82bf8f40fe2b8d3", "tests/fixtures/constellation-coast/before-native.tmj": "aa46986b3791c2c50840a32d3a3d7aaddc1df3f0f683acd1f218ee85513764c7"}))expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path).toBe(hash);});
+it('calms only true open water below avatars and never paints a rectangular veil across sand, coast, docks or labels',()=>{const l=layout(),ground=surface(l),docks=l.placements.filter((p:any)=>p.layer==='terrain'&&p.sprite==='coast-dock-plank'),veil=l.placements.filter((p:any)=>p.sprite==='beach-sea-veil'),protectedRects=[...l.signs,...l.entries,...l.exits,...l.areas,...l.placements.filter((p:any)=>loadTileCatalog()[p.sprite].standingRole)];expect(veil.length).toBeGreaterThan(500);for(const p of veil){expect([p.width,p.height]).toEqual([1,1]);expect(ground[p.y*40+p.x]).toMatch(/^naval-water-/);for(const r of [...docks,...protectedRects])expect(p.x<r.x+r.width&&p.x+1>r.x&&p.y<r.y+r.height&&p.y+1>r.y).toBe(false);}expect(loadTileCatalog()['beach-sea-veil'].level).toBe('belowAvatar');});

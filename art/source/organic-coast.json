@@ -14,7 +14,11 @@
     },
     {
       "path": "tools/art/organic-coast.ts",
-      "sha256": "55a3e67c3b4bf4aca2c0798c97d5b1526ea1467d0203e0ef32e9da01b2d160d8"
+      "sha256": "074a5926099bb5754dc2cf32744b3f57ed8e2e9b8a260181be279fab36758f54"
+    },
+    {
+      "path": "tools/art/coast-raster.ts",
+      "sha256": "5361fb058600181bf2fdda0ef1a0d2a8d6c8c29ca39eb16426d492e559e49e12"
     },
     {
       "path": "assets/tilesets/original/beach-lounge.png",

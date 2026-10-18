@@ -14,6 +14,7 @@ const propsRevisionPath='publication/revisions/2026-10-17-solid-props.json';
 const propsClosurePath='publication/revisions/2026-10-17-solid-props-ci-closure.json';
 const captionsPath='publication/revisions/2026-10-18-standing-captions.json';
 const captionsClosurePath='publication/revisions/2026-10-18-standing-captions-ci-closure.json';
+const constellationPath='publication/revisions/2026-10-18-constellation-coast.json';
 const organicPath='publication/revisions/2026-10-18-organic-coast.json';
 const combinedPath='publication/revisions/2026-10-18-beach-groves-guide-identity.json';
 const catalogSource=readFileSync('src/world/catalog.ts','utf8');
@@ -65,6 +66,7 @@ describe('publication exact reviewed replacements', () => {
   function pinCaptionsClosure(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(captionsClosurePath,bytes);manifest.extensionInventory[captionsClosurePath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCombined(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(combinedPath,bytes);manifest.extensionInventory[combinedPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinOrganic(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(organicPath,bytes);manifest.extensionInventory[organicPath]=createHash('sha256').update(bytes).digest('hex');}
+  function pinConstellation(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(constellationPath,bytes);manifest.extensionInventory[constellationPath]=createHash('sha256').update(bytes).digest('hex');}
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -80,6 +82,7 @@ describe('publication exact reviewed replacements', () => {
   it('accepts exact eighth caption observer document and refuses wrong prior',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'observer');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'observer').digest('hex')};pinCaptionsClosure({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinCaptionsClosure({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the ninth combined release and refuses its wrong prior',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'combined');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'combined').digest('hex')};pinCombined({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinCombined({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the tenth coast release only from its exact prior receipt and rejects drift',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'coast');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'coast').digest('hex')};pinOrganic({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinOrganic({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
+  it('accepts the eleventh constellation coast release only from its exact predecessor and rejects drift',()=>{pinRevisions({schemaVersion:1,revisions:[reviewed()]});write('src/main.ts',replacement+'constellation');const next={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(replacement+'constellation').digest('hex')};pinConstellation({schemaVersion:1,revisions:[next]});expect(verify().status).toBe(0);pinConstellation({schemaVersion:1,revisions:[{...next,fromSha256:baselineHash}]});rejects('prior');});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -102,6 +105,7 @@ describe('publication exact reviewed replacements', () => {
     pinCaptionsClosure();
     pinCombined();
     pinOrganic();
+    pinConstellation();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "ed0b9ca21d380c867c6f17d50e8d2b87a5e60d723deb1233e69c1ec5ce2c3a51",
+      "toSha256": "cf36a5d0bd2d81ba699c438d56758139105362276c7c622301e448fc885f0d41",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "f1b231c929a7c52c8c4b61ead539c21739d82be48b5c5d17155e63c964f63333",
+      "toSha256": "b15917a8865a54af16c4ab4a0a3207db8e28cd2d5c1ea136b3bf24f92418543d",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "fromSha256": "aa46986b3791c2c50840a32d3a3d7aaddc1df3f0f683acd1f218ee85513764c7",
+      "toSha256": "a61134b82baaae6d63dc3938886ef3939b3d7e867e3b43fbdc5c72fae5b73920",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "maps/preview/constellation-shore.tmj",
+      "fromSha256": "9cc36d2552bf87073ad080edd824476c074518ce0d6c6801f7c231caeee5a729",
+      "toSha256": "8e913db79a75dc141629dda08e866e8b4d9641d1f50e59cd456e08bc8957c68a",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "176784ec6605ed41e4e2e1733901884f66419213a07ae0cc2cce112198d419a3",
+      "toSha256": "795b5e2982550aa6b603a12498f7ee8b3418e67c724e1321987a60e12e817997",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "tests/shipyard-beach.test.ts",
+      "fromSha256": "61ba1f67ff7e7040dda3f3a405c8b177c79420ae1cb2f940b3836b97593ed35e",
+      "toSha256": "2eb75fb7b1fdbf766947094e6966a6d0cbf512d1d3e8a825183017b9b2a2b7e9",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "53e59395e86c190717674ee5ed12015b884b511ebf07373bf4e2afc3c2d17dd4",
+      "toSha256": "9ec6a61189f953d2bde02ca59036060d7ecbbf979d488cbf039a6a8b78a0dbb2",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "bb32c4a41536c81ac643da49a5923c46203abe9f01e9752bf82bf8f40fe2b8d3",
+      "toSha256": "040aeed26d47c2ae9e5b53caa5cfbed137e2ec4f7a9c2c20c8114736d0522128",
+      "reason": "CONSTELLATION-COAST: replace rectangular Constellation Shore terrain/static foam with an asymmetric two-pixel crescent, shared deterministic renderer, native moving shore/water and local quiet audio; preserve all furniture, upper/solid bases, portals and activity footprints. Reviewed shipyard PNG/layout/native and plaza/ships remain exact. Current tests bind original fixtures and structural coast gates."
+    }
+  ]
+}

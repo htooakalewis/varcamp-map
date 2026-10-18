@@ -49,6 +49,7 @@ describe('publication source integrity CLI', () => {
       write(revisionPath, revisions);
       manifest.extensionInventory[revisionPath] = createHash('sha256').update(revisions).digest('hex');
     }
+    const constellationRevision='publication/revisions/2026-10-18-constellation-coast.json';write(constellationRevision,revisions);manifest.extensionInventory[constellationRevision]=createHash('sha256').update(revisions).digest('hex');
     const coastRevision='publication/revisions/2026-10-18-organic-coast.json';write(coastRevision,revisions);manifest.extensionInventory[coastRevision]=createHash('sha256').update(revisions).digest('hex');
     write(combinedRevision, revisions);
     manifest.extensionInventory[combinedRevision] = createHash('sha256').update(revisions).digest('hex');

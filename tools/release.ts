@@ -37,7 +37,7 @@ export function uiReleaseIdentity(root = process.cwd()): string {
 export function emitNativeOceanAudio(layer:TiledLayer,mapPath:string,emit:(path:string,bytes:Buffer)=>unknown):void{
  const entries=layer.properties?.filter(p=>p.name==='playAudio')??[];if(!entries.length)return;
  const property=(name:string)=>{const found=layer.properties!.filter(p=>p.name===name);if(found.length!==1)throw Error('Ocean audio property missing/ambiguous: '+name);return found[0].value;};
- if(entries.length!==1||!['maps/shipyard-beach.tmj','maps/fa-ship.tmj'].includes(mapPath)||property('playAudio')!=='../assets/audio/ocean-loop.mp3'||property('audioLoop')!==true||property('audioVolume')!==0.2||typeof property('audioCopyright')!=='string'||!String(property('audioCopyright')).includes('CC0'))throw Error('Ocean audio requires the fixed local quiet looping resource');
+ if(entries.length!==1||!['maps/shipyard-beach.tmj','maps/fa-ship.tmj','maps/constellation-shore.tmj'].includes(mapPath)||property('playAudio')!=='../assets/audio/ocean-loop.mp3'||property('audioLoop')!==true||property('audioVolume')!==0.2||typeof property('audioCopyright')!=='string'||!String(property('audioCopyright')).includes('CC0'))throw Error('Ocean audio requires the fixed local quiet looping resource');
  const bytes=readFileSync('assets/audio/ocean-loop.mp3'),proof=JSON.parse(readFileSync('art/source/ocean-audio.json','utf8'));if(proof.encodedMp3?.sha256!==digest(bytes)||proof.encodedMp3?.bytes!==bytes.length)throw Error('Ocean audio source bytes changed');const file=`assets/audio/ocean-loop.${digest(bytes)}.mp3`;emit(file,bytes);entries[0].value='../'+file;
 }
 

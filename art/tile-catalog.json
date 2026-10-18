@@ -17098,5 +17098,4406 @@
       ]
     ],
     "level": "belowAvatar"
+  },
+  "constellation-coast-water-0": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-4": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-8": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-12": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-16": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-20": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-24": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-28": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-32": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-36": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-40": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-44": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-48": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-52": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-56": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-60": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-64": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-68": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-72": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-76": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-80": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-84": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-88": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-92": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-96": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-100": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-104": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-108": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-112": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-116": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-120": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-124": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-128": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-132": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-136": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-140": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-144": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-148": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-152": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-156": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-160": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-164": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-168": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-172": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-176": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-180": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-184": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-188": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-192": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-196": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-200": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-204": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-208": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-212": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-216": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-220": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-224": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-228": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-232": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-236": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-240": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-244": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-248": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-252": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-256": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-260": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-264": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-268": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-272": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-276": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-280": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-284": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-288": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-292": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-296": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-300": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-304": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-308": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-312": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-316": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-320": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-324": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-328": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-332": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-336": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-340": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-344": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-348": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-352": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-356": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-360": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-364": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-368": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-372": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-376": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-380": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-384": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-388": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-392": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-396": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-400": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-404": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-408": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-412": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-416": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-420": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-424": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-428": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-432": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-436": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-440": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-444": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-448": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-452": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-456": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-460": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-464": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-468": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-472": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-476": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-480": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-484": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-488": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-492": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-496": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-500": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-504": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-508": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-512": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-516": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-520": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-524": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-528": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-532": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-536": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-540": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-544": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-548": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-552": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-556": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-560": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-564": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-568": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-572": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-576": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-580": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-584": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-588": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-592": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-596": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-600": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-604": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-608": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-612": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-616": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-620": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-624": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-628": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-632": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-636": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-640": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-644": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-648": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-652": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-656": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-660": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-664": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-668": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-672": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-676": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-680": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-684": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-688": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-692": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-696": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-700": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-704": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-708": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-712": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-716": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-720": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-724": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-728": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-732": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-736": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-740": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-744": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-748": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-752": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-756": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-760": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-764": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-768": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-772": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-776": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-780": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-784": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-788": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-792": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-796": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-800": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-804": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-808": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-812": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-816": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-820": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-824": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-828": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-832": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-836": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-840": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-844": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-848": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-852": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-856": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-860": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-864": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-868": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-872": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-876": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-880": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-884": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-888": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-892": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-896": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-900": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-904": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-908": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-912": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-916": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-920": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-924": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-928": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-932": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-936": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-940": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-944": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-948": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-952": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-956": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-960": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-964": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-968": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-972": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-976": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-980": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-984": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-988": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-992": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-996": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1000": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1004": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1008": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1012": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1016": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1020": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1024": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1028": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1032": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1036": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1040": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1044": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1048": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1052": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1056": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1060": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1064": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1068": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1072": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1076": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1080": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1084": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1088": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1092": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1096": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1100": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1104": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1108": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1112": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1116": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1120": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1124": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1128": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1132": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1136": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1140": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1144": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1148": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-land-1152": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1156": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1160": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1164": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1168": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1172": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1176": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1180": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1184": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1188": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1192": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1196": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1200": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1204": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "constellation-coast-water-1208": {
+    "sheet": "assets/tilesets/original/constellation-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
   }
 }

@@ -1,0 +1,5997 @@
+{
+  "id": "constellation-shore",
+  "width": 40,
+  "height": 40,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "coast-sea",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40,
+      "layer": "terrain"
+    },
+    {
+      "id": "upper-beach",
+      "sprite": "coast-sand",
+      "x": 5,
+      "y": 11,
+      "width": 29,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "beach-shoulders",
+      "sprite": "coast-sand",
+      "x": 3,
+      "y": 15,
+      "width": 34,
+      "height": 8,
+      "layer": "terrain"
+    },
+    {
+      "id": "pocket-terrace",
+      "sprite": "coast-sand",
+      "x": 4,
+      "y": 23,
+      "width": 32,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "western-headland",
+      "sprite": "coast-sand",
+      "x": 6,
+      "y": 28,
+      "width": 10,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "eastern-headland",
+      "sprite": "coast-sand",
+      "x": 25,
+      "y": 28,
+      "width": 10,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "western-point",
+      "sprite": "coast-sand",
+      "x": 8,
+      "y": 33,
+      "width": 6,
+      "height": 2,
+      "layer": "terrain"
+    },
+    {
+      "id": "eastern-point",
+      "sprite": "coast-sand",
+      "x": 28,
+      "y": 33,
+      "width": 5,
+      "height": 2,
+      "layer": "terrain"
+    },
+    {
+      "id": "bay-mouth",
+      "sprite": "coast-sea",
+      "x": 13,
+      "y": 35,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "bay-inner",
+      "sprite": "coast-sea",
+      "x": 16,
+      "y": 28,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "bay-middle",
+      "sprite": "coast-sea",
+      "x": 15,
+      "y": 29,
+      "width": 11,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "bay-outer",
+      "sprite": "coast-sea",
+      "x": 14,
+      "y": 32,
+      "width": 13,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-arrival-peninsula",
+      "sprite": "coast-sand",
+      "x": 13,
+      "y": 2,
+      "width": 14,
+      "height": 11,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-0",
+      "sprite": "coast-sea",
+      "x": 13,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-1",
+      "sprite": "coast-sea",
+      "x": 25,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-2",
+      "sprite": "coast-sea",
+      "x": 13,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-3",
+      "sprite": "coast-sea",
+      "x": 26,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-4",
+      "sprite": "coast-sea",
+      "x": 5,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-5",
+      "sprite": "coast-sea",
+      "x": 33,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-6",
+      "sprite": "coast-sea",
+      "x": 3,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-7",
+      "sprite": "coast-sea",
+      "x": 36,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-8",
+      "sprite": "coast-sea",
+      "x": 4,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-9",
+      "sprite": "coast-sea",
+      "x": 35,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-10",
+      "sprite": "coast-sea",
+      "x": 6,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-11",
+      "sprite": "coast-sea",
+      "x": 34,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-12",
+      "sprite": "coast-sea",
+      "x": 8,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "coastal-contour-13",
+      "sprite": "coast-sea",
+      "x": 32,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "arrival-boardwalk",
+      "sprite": "coast-dock-plank",
+      "x": 18,
+      "y": 2,
+      "width": 4,
+      "height": 13,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-lookout",
+      "sprite": "coast-dock-plank",
+      "x": 16,
+      "y": 24,
+      "width": 9,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "western-jetty",
+      "sprite": "coast-dock-plank",
+      "x": 9,
+      "y": 29,
+      "width": 4,
+      "height": 8,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-bay-walk-west",
+      "sprite": "coast-sand",
+      "x": 15,
+      "y": 28,
+      "width": 1,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-bay-walk-east",
+      "sprite": "coast-sand",
+      "x": 25,
+      "y": 28,
+      "width": 1,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-palm-west",
+      "sprite": "coast-palm",
+      "x": 3,
+      "y": 12,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-palm-east",
+      "sprite": "coast-palm",
+      "x": 34,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-palm-point-west",
+      "sprite": "coast-palm",
+      "x": 5,
+      "y": 27,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-palm-point-east",
+      "sprite": "coast-palm",
+      "x": 30,
+      "y": 28,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-palm-arrival",
+      "sprite": "coast-palm",
+      "x": 13,
+      "y": 7,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-parasol-west",
+      "sprite": "solid-coast-parasol",
+      "x": 7,
+      "y": 18,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-parasol-east",
+      "sprite": "solid-coast-parasol",
+      "x": 28,
+      "y": 18,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-parasol-lounge",
+      "sprite": "solid-coast-parasol",
+      "x": 14,
+      "y": 20,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "shore-chair-west",
+      "sprite": "solid-coast-deck-chair",
+      "x": 4,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "shore-chair-west-two",
+      "sprite": "solid-coast-deck-chair",
+      "x": 11,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "shore-chair-east",
+      "sprite": "solid-coast-deck-chair",
+      "x": 32,
+      "y": 23,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "shore-chair-lounge",
+      "sprite": "solid-coast-deck-chair",
+      "x": 23,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "shore-towel-west",
+      "sprite": "coast-towel",
+      "x": 7,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shore-towel-east",
+      "sprite": "coast-towel",
+      "x": 28,
+      "y": 23,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shore-towel-east-two",
+      "sprite": "coast-towel",
+      "x": 31,
+      "y": 25,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shore-towel-lounge",
+      "sprite": "coast-towel",
+      "x": 18,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shore-beach-bar-platform",
+      "sprite": "coast-sand",
+      "x": 26,
+      "y": 10,
+      "width": 7,
+      "height": 6,
+      "layer": "terrain"
+    },
+    {
+      "id": "shore-beach-bar",
+      "sprite": "solid-coast-beach-bar",
+      "x": 26,
+      "y": 10,
+      "width": 6,
+      "height": 5,
+      "layer": "props"
+    },
+    {
+      "id": "shore-sandcastle",
+      "sprite": "solid-coast-sandcastle",
+      "x": 7,
+      "y": 28,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "shore-volley-net",
+      "sprite": "solid-coast-volley-net",
+      "x": 5,
+      "y": 20,
+      "width": 5,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "jetty-mooring-9-30",
+      "sprite": "coast-mooring-post",
+      "x": 9,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "jetty-mooring-12-30",
+      "sprite": "coast-mooring-post",
+      "x": 12,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "jetty-mooring-9-36",
+      "sprite": "coast-mooring-post",
+      "x": 9,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "jetty-mooring-12-36",
+      "sprite": "coast-mooring-post",
+      "x": 12,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "shore-gull-a",
+      "sprite": "coast-gull",
+      "x": 4,
+      "y": 5,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "shore-gull-b",
+      "sprite": "coast-gull",
+      "x": 30,
+      "y": 5,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "shore-gull-c",
+      "sprite": "coast-gull",
+      "x": 18,
+      "y": 31,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "shore-gull-d",
+      "sprite": "coast-gull",
+      "x": 34,
+      "y": 34,
+      "width": 2,
+      "height": 1,
+      "layer": "sky"
+    },
+    {
+      "id": "shore-fish-a",
+      "sprite": "coast-fish",
+      "x": 19,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-fish-b",
+      "sprite": "coast-fish",
+      "x": 22,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-fish-c",
+      "sprite": "coast-fish",
+      "x": 4,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-shell-a",
+      "sprite": "coast-shell",
+      "x": 12,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-shell-b",
+      "sprite": "coast-shell",
+      "x": 23,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-shell-c",
+      "sprite": "coast-shell",
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-shell-d",
+      "sprite": "coast-shell",
+      "x": 10,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-boat-west",
+      "sprite": "boat-wood",
+      "x": 3,
+      "y": 32,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "shore-boat-east",
+      "sprite": "boat-wood",
+      "x": 36,
+      "y": 31,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "shore-boat-bay",
+      "sprite": "boat-wood",
+      "x": 26,
+      "y": 35,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-plaza-return-label",
+      "sprite": "solid-coast-sign-board",
+      "x": 18,
+      "y": 5,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-harbor-return-label",
+      "sprite": "solid-coast-sign-board",
+      "x": 6,
+      "y": 12,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-shore-title",
+      "sprite": "solid-coast-sign-board",
+      "x": 12,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-games-pocket-label",
+      "sprite": "solid-coast-sign-board",
+      "x": 4,
+      "y": 16,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-picnic-pocket-label",
+      "sprite": "solid-coast-sign-board",
+      "x": 27,
+      "y": 16,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-lounge-pocket-label",
+      "sprite": "solid-coast-sign-board",
+      "x": 17,
+      "y": 21,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-plaza-arrow",
+      "sprite": "arrow-north",
+      "x": 19,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shore-harbor-arrow",
+      "sprite": "arrow-west",
+      "x": 16,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-0",
+      "sprite": "coast-underwater-rock",
+      "x": 1,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-1",
+      "sprite": "coast-underwater-rock",
+      "x": 35,
+      "y": 7,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-2",
+      "sprite": "coast-underwater-rock",
+      "x": 18,
+      "y": 31,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "underwater-rock-3",
+      "sprite": "coast-underwater-rock",
+      "x": 33,
+      "y": 37,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-0",
+      "sprite": "coast-footprints",
+      "x": 17,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-1",
+      "sprite": "coast-footprints",
+      "x": 16,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-2",
+      "sprite": "coast-footprints",
+      "x": 15,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-3",
+      "sprite": "coast-footprints",
+      "x": 19,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-4",
+      "sprite": "coast-footprints",
+      "x": 26,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-5",
+      "sprite": "coast-footprints",
+      "x": 30,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "footprints-6",
+      "sprite": "coast-footprints",
+      "x": 11,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "pebbles-0",
+      "sprite": "coast-pebble-cluster",
+      "x": 5,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "pebbles-1",
+      "sprite": "coast-pebble-cluster",
+      "x": 33,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "pebbles-2",
+      "sprite": "coast-pebble-cluster",
+      "x": 6,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "pebbles-3",
+      "sprite": "coast-pebble-cluster",
+      "x": 29,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-post-plaza-return-label",
+      "sprite": "solid-coast-sign-post",
+      "x": 21,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-pointer-plaza-return-label",
+      "sprite": "coast-sign-pointer-left",
+      "x": 17,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-post-harbor-return-label",
+      "sprite": "solid-coast-sign-post",
+      "x": 9,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wood-sign-pointer-harbor-return-label",
+      "sprite": "coast-sign-pointer-right",
+      "x": 14,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-14-1",
+      "sprite": "coast-shallows",
+      "x": 14,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-15-1",
+      "sprite": "coast-shallows",
+      "x": 15,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-16-1",
+      "sprite": "coast-shallows",
+      "x": 16,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-17-1",
+      "sprite": "coast-shallows",
+      "x": 17,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-22-1",
+      "sprite": "coast-shallows",
+      "x": 22,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-23-1",
+      "sprite": "coast-shallows",
+      "x": 23,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-24-1",
+      "sprite": "coast-shallows",
+      "x": 24,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-25-1",
+      "sprite": "coast-shallows",
+      "x": 25,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-13-2",
+      "sprite": "coast-shallows",
+      "x": 13,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-14-2",
+      "sprite": "coast-shallows",
+      "x": 14,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-15-2",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-15-2-north",
+      "sprite": "coast-foam-north",
+      "x": 15,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-15-2-west",
+      "sprite": "coast-foam-west",
+      "x": 15,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-16-2",
+      "sprite": "coast-wet-sand",
+      "x": 16,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-16-2-north",
+      "sprite": "coast-foam-north",
+      "x": 16,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-17-2",
+      "sprite": "coast-wet-sand",
+      "x": 17,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-17-2-north",
+      "sprite": "coast-foam-north",
+      "x": 17,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-22-2",
+      "sprite": "coast-wet-sand",
+      "x": 22,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-22-2-north",
+      "sprite": "coast-foam-north",
+      "x": 22,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-23-2",
+      "sprite": "coast-wet-sand",
+      "x": 23,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-23-2-north",
+      "sprite": "coast-foam-north",
+      "x": 23,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-24-2",
+      "sprite": "coast-wet-sand",
+      "x": 24,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-24-2-north",
+      "sprite": "coast-foam-north",
+      "x": 24,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-24-2-east",
+      "sprite": "coast-foam-east",
+      "x": 24,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-25-2",
+      "sprite": "coast-shallows",
+      "x": 25,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-26-2",
+      "sprite": "coast-shallows",
+      "x": 26,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-3",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-13-3",
+      "sprite": "coast-shallows",
+      "x": 13,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-14-3",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-14-3-north",
+      "sprite": "coast-foam-north",
+      "x": 14,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-14-3-west",
+      "sprite": "coast-foam-west",
+      "x": 14,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-15-3",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-16-3",
+      "sprite": "coast-wet-sand",
+      "x": 16,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-17-3",
+      "sprite": "coast-wet-sand",
+      "x": 17,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-22-3",
+      "sprite": "coast-wet-sand",
+      "x": 22,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-23-3",
+      "sprite": "coast-wet-sand",
+      "x": 23,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-24-3",
+      "sprite": "coast-wet-sand",
+      "x": 24,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-3",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-25-3-north",
+      "sprite": "coast-foam-north",
+      "x": 25,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-25-3-east",
+      "sprite": "coast-foam-east",
+      "x": 25,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-26-3",
+      "sprite": "coast-shallows",
+      "x": 26,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-27-3",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-4",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-4",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-4",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-4-north",
+      "sprite": "coast-foam-north",
+      "x": 13,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-13-4-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-4",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-4",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-4",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-4-north",
+      "sprite": "coast-foam-north",
+      "x": 26,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-26-4-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-4",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-4",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-5",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-5",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-5",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-5-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-5",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-5",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-5",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-5-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-5",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-5",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-6",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-6",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-6",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-6-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-6",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-6",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-6",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-6-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-6",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-6",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-7",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-7",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-7",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-7-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-7",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-7",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-7",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-7-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-7",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-7",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-8",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-8",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-8",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-8-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-8",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-8",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-8",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-8-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-8",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-8",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-29-8",
+      "sprite": "coast-shallows",
+      "x": 29,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-30-8",
+      "sprite": "coast-shallows",
+      "x": 30,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-31-8",
+      "sprite": "coast-shallows",
+      "x": 31,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-32-8",
+      "sprite": "coast-shallows",
+      "x": 32,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-6-9",
+      "sprite": "coast-shallows",
+      "x": 6,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-7-9",
+      "sprite": "coast-shallows",
+      "x": 7,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-8-9",
+      "sprite": "coast-shallows",
+      "x": 8,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-9-9",
+      "sprite": "coast-shallows",
+      "x": 9,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-10-9",
+      "sprite": "coast-shallows",
+      "x": 10,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-9",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-9",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-9",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-9-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-9",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-9",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-26-9",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-9-east",
+      "sprite": "coast-foam-east",
+      "x": 26,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-27-9",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-9",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-29-9",
+      "sprite": "coast-shallows",
+      "x": 29,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-30-9",
+      "sprite": "coast-shallows",
+      "x": 30,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-31-9",
+      "sprite": "coast-shallows",
+      "x": 31,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-32-9",
+      "sprite": "coast-shallows",
+      "x": 32,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-10",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-6-10",
+      "sprite": "coast-shallows",
+      "x": 6,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-7-10",
+      "sprite": "coast-shallows",
+      "x": 7,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-8-10",
+      "sprite": "coast-shallows",
+      "x": 8,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-9-10",
+      "sprite": "coast-shallows",
+      "x": 9,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-10-10",
+      "sprite": "coast-shallows",
+      "x": 10,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-11-10",
+      "sprite": "coast-shallows",
+      "x": 11,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-12-10",
+      "sprite": "coast-shallows",
+      "x": 12,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-10",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-10-west",
+      "sprite": "coast-foam-west",
+      "x": 13,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-14-10",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-27-10",
+      "sprite": "coast-wet-sand",
+      "x": 27,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-27-10-north",
+      "sprite": "coast-foam-north",
+      "x": 27,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-28-10",
+      "sprite": "coast-wet-sand",
+      "x": 28,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-28-10-north",
+      "sprite": "coast-foam-north",
+      "x": 28,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-29-10",
+      "sprite": "coast-wet-sand",
+      "x": 29,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-29-10-north",
+      "sprite": "coast-foam-north",
+      "x": 29,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-30-10",
+      "sprite": "coast-wet-sand",
+      "x": 30,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-30-10-north",
+      "sprite": "coast-foam-north",
+      "x": 30,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-31-10",
+      "sprite": "coast-wet-sand",
+      "x": 31,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-31-10-north",
+      "sprite": "coast-foam-north",
+      "x": 31,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-32-10",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-32-10-north",
+      "sprite": "coast-foam-north",
+      "x": 32,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-32-10-east",
+      "sprite": "coast-foam-east",
+      "x": 32,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-33-10",
+      "sprite": "coast-shallows",
+      "x": 33,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-34-10",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-11",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-11",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-11",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-11-north",
+      "sprite": "coast-foam-north",
+      "x": 6,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-6-11-west",
+      "sprite": "coast-foam-west",
+      "x": 6,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-7-11",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-7-11-north",
+      "sprite": "coast-foam-north",
+      "x": 7,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-8-11",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-8-11-north",
+      "sprite": "coast-foam-north",
+      "x": 8,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-9-11",
+      "sprite": "coast-wet-sand",
+      "x": 9,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-9-11-north",
+      "sprite": "coast-foam-north",
+      "x": 9,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-10-11",
+      "sprite": "coast-wet-sand",
+      "x": 10,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-10-11-north",
+      "sprite": "coast-foam-north",
+      "x": 10,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-11-11",
+      "sprite": "coast-wet-sand",
+      "x": 11,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-11-11-north",
+      "sprite": "coast-foam-north",
+      "x": 11,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-12-11",
+      "sprite": "coast-wet-sand",
+      "x": 12,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-12-11-north",
+      "sprite": "coast-foam-north",
+      "x": 12,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-27-11",
+      "sprite": "coast-wet-sand",
+      "x": 27,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-28-11",
+      "sprite": "coast-wet-sand",
+      "x": 28,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-29-11",
+      "sprite": "coast-wet-sand",
+      "x": 29,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-30-11",
+      "sprite": "coast-wet-sand",
+      "x": 30,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-31-11",
+      "sprite": "coast-wet-sand",
+      "x": 31,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-11",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-32-11-east",
+      "sprite": "coast-foam-east",
+      "x": 32,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-33-11",
+      "sprite": "coast-shallows",
+      "x": 33,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-34-11",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-12",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-12",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-5-12",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-5-12-north",
+      "sprite": "coast-foam-north",
+      "x": 5,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-5-12-west",
+      "sprite": "coast-foam-west",
+      "x": 5,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-6-12",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-7-12",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-8-12",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-9-12",
+      "sprite": "coast-wet-sand",
+      "x": 9,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-10-12",
+      "sprite": "coast-wet-sand",
+      "x": 10,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-11-12",
+      "sprite": "coast-wet-sand",
+      "x": 11,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-12-12",
+      "sprite": "coast-wet-sand",
+      "x": 12,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-12",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-12",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-33-12-north",
+      "sprite": "coast-foam-north",
+      "x": 33,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-33-12-east",
+      "sprite": "coast-foam-east",
+      "x": 33,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-34-12",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-35-12",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-13",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-13",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-5-13",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-5-13-west",
+      "sprite": "coast-foam-west",
+      "x": 5,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-6-13",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-13",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-13",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-33-13-east",
+      "sprite": "coast-foam-east",
+      "x": 33,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-34-13",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-35-13",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-14",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-14",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-5-14",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-5-14-west",
+      "sprite": "coast-foam-west",
+      "x": 5,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-6-14",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-14",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-14",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-33-14-east",
+      "sprite": "coast-foam-east",
+      "x": 33,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-34-14",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-35-14",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-14",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-15",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-15",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-4-15",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-15-north",
+      "sprite": "coast-foam-north",
+      "x": 4,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-4-15-west",
+      "sprite": "coast-foam-west",
+      "x": 4,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-5-15",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-15",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-15-north",
+      "sprite": "coast-foam-north",
+      "x": 34,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-35-15",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-15-north",
+      "sprite": "coast-foam-north",
+      "x": 35,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-35-15-east",
+      "sprite": "coast-foam-east",
+      "x": 35,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-36-15",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-37-15",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 15,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-16",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-16",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-16",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-16-north",
+      "sprite": "coast-foam-north",
+      "x": 3,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-3-16-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-16",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-16",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-16",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-16",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-16-north",
+      "sprite": "coast-foam-north",
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-36-16-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-16",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-16",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-17",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-17",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-17",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-17-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-17",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-17",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-17",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-17-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-17",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-17",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-18",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-18",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-18",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-18-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-18",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-18",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-18",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-18-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-18",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-18",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-19",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-19",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-19",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-19-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-19",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-19",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-19",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-19-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-19",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-19",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-20",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-20",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-20",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-20-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-20",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-20",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-20",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-20-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-20",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-20",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-21",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-21",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-21",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-21-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-21",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-21",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-36-21",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-21-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-21",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-21",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-1-22",
+      "sprite": "coast-shallows",
+      "x": 1,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-22",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-3-22",
+      "sprite": "coast-wet-sand",
+      "x": 3,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-3-22-south",
+      "sprite": "coast-foam-south",
+      "x": 3,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-3-22-west",
+      "sprite": "coast-foam-west",
+      "x": 3,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-4-22",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-22-south",
+      "sprite": "coast-foam-south",
+      "x": 4,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-35-22",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-22-south",
+      "sprite": "coast-foam-south",
+      "x": 35,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-36-22",
+      "sprite": "coast-wet-sand",
+      "x": 36,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-36-22-south",
+      "sprite": "coast-foam-south",
+      "x": 36,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-36-22-east",
+      "sprite": "coast-foam-east",
+      "x": 36,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-37-22",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-38-22",
+      "sprite": "coast-shallows",
+      "x": 38,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-23",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-23",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-5-23",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-5-23-west",
+      "sprite": "coast-foam-west",
+      "x": 5,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-6-23",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-23",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-23",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-23-east",
+      "sprite": "coast-foam-east",
+      "x": 34,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-35-23",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-23",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-24",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-24",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-4-24",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-24-north",
+      "sprite": "coast-foam-north",
+      "x": 4,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-4-24-west",
+      "sprite": "coast-foam-west",
+      "x": 4,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-5-24",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-24",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-24",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-24-north",
+      "sprite": "coast-foam-north",
+      "x": 35,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-35-24-east",
+      "sprite": "coast-foam-east",
+      "x": 35,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-36-24",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-37-24",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-25",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-25",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-4-25",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-25-west",
+      "sprite": "coast-foam-west",
+      "x": 4,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-5-25",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-25",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-25",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-25-east",
+      "sprite": "coast-foam-east",
+      "x": 35,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-36-25",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-37-25",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-26",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-26",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-4-26",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-26-west",
+      "sprite": "coast-foam-west",
+      "x": 4,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-5-26",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-26",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-26",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-35-26",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-26-east",
+      "sprite": "coast-foam-east",
+      "x": 35,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-36-26",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-37-26",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-2-27",
+      "sprite": "coast-shallows",
+      "x": 2,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-3-27",
+      "sprite": "coast-shallows",
+      "x": 3,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-4-27",
+      "sprite": "coast-wet-sand",
+      "x": 4,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-4-27-south",
+      "sprite": "coast-foam-south",
+      "x": 4,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-4-27-west",
+      "sprite": "coast-foam-west",
+      "x": 4,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-5-27",
+      "sprite": "coast-wet-sand",
+      "x": 5,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-5-27-south",
+      "sprite": "coast-foam-south",
+      "x": 5,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-6-27",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-27-south",
+      "sprite": "coast-foam-south",
+      "x": 6,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-34-27",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-27-south",
+      "sprite": "coast-foam-south",
+      "x": 34,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-35-27",
+      "sprite": "coast-wet-sand",
+      "x": 35,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-35-27-south",
+      "sprite": "coast-foam-south",
+      "x": 35,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-35-27-east",
+      "sprite": "coast-foam-east",
+      "x": 35,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-36-27",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-37-27",
+      "sprite": "coast-shallows",
+      "x": 37,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-28",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-28",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-6-28",
+      "sprite": "coast-shallows",
+      "x": 6,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-7-28",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-7-28-west",
+      "sprite": "coast-foam-west",
+      "x": 7,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-8-28",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-14-28",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-15-28",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-15-28-east",
+      "sprite": "coast-foam-east",
+      "x": 15,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-16-28",
+      "sprite": "coast-shallows",
+      "x": 16,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-17-28",
+      "sprite": "coast-shallows",
+      "x": 17,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-23-28",
+      "sprite": "coast-shallows",
+      "x": 23,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-24-28",
+      "sprite": "coast-shallows",
+      "x": 24,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-28",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-25-28-west",
+      "sprite": "coast-foam-west",
+      "x": 25,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-26-28",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-28",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-28",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-33-28-east",
+      "sprite": "coast-foam-east",
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-34-28",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-35-28",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-29",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-29",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-29",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-29-north",
+      "sprite": "coast-foam-north",
+      "x": 6,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-6-29-west",
+      "sprite": "coast-foam-west",
+      "x": 6,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-7-29",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-14-29",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-15-29",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-15-29-east",
+      "sprite": "coast-foam-east",
+      "x": 15,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-16-29",
+      "sprite": "coast-shallows",
+      "x": 16,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-17-29",
+      "sprite": "coast-shallows",
+      "x": 17,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-23-29",
+      "sprite": "coast-shallows",
+      "x": 23,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-24-29",
+      "sprite": "coast-shallows",
+      "x": 24,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-29",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-25-29-west",
+      "sprite": "coast-foam-west",
+      "x": 25,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-26-29",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-29",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-29",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-29-north",
+      "sprite": "coast-foam-north",
+      "x": 34,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-34-29-east",
+      "sprite": "coast-foam-east",
+      "x": 34,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-35-29",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-29",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-30",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-30",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-30",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-30-west",
+      "sprite": "coast-foam-west",
+      "x": 6,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-7-30",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-14-30",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-15-30",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-15-30-east",
+      "sprite": "coast-foam-east",
+      "x": 15,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-16-30",
+      "sprite": "coast-shallows",
+      "x": 16,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-17-30",
+      "sprite": "coast-shallows",
+      "x": 17,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-23-30",
+      "sprite": "coast-shallows",
+      "x": 23,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-24-30",
+      "sprite": "coast-shallows",
+      "x": 24,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-30",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-25-30-west",
+      "sprite": "coast-foam-west",
+      "x": 25,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-26-30",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-30",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-30",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-30-east",
+      "sprite": "coast-foam-east",
+      "x": 34,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-35-30",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-30",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-31",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-31",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-31",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-31-west",
+      "sprite": "coast-foam-west",
+      "x": 6,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-7-31",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-8-31",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-14-31",
+      "sprite": "coast-wet-sand",
+      "x": 14,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-14-31-south",
+      "sprite": "coast-foam-south",
+      "x": 14,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-15-31",
+      "sprite": "coast-wet-sand",
+      "x": 15,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-15-31-south",
+      "sprite": "coast-foam-south",
+      "x": 15,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-15-31-east",
+      "sprite": "coast-foam-east",
+      "x": 15,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-16-31",
+      "sprite": "coast-shallows",
+      "x": 16,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-17-31",
+      "sprite": "coast-shallows",
+      "x": 17,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-23-31",
+      "sprite": "coast-shallows",
+      "x": 23,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-24-31",
+      "sprite": "coast-shallows",
+      "x": 24,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-25-31",
+      "sprite": "coast-wet-sand",
+      "x": 25,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-25-31-south",
+      "sprite": "coast-foam-south",
+      "x": 25,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-25-31-west",
+      "sprite": "coast-foam-west",
+      "x": 25,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-26-31",
+      "sprite": "coast-wet-sand",
+      "x": 26,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-26-31-south",
+      "sprite": "coast-foam-south",
+      "x": 26,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-27-31",
+      "sprite": "coast-wet-sand",
+      "x": 27,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-31",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-33-31",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-34-31",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-31-east",
+      "sprite": "coast-foam-east",
+      "x": 34,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-35-31",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-31",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-4-32",
+      "sprite": "coast-shallows",
+      "x": 4,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-5-32",
+      "sprite": "coast-shallows",
+      "x": 5,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-6-32",
+      "sprite": "coast-wet-sand",
+      "x": 6,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-6-32-south",
+      "sprite": "coast-foam-south",
+      "x": 6,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-6-32-west",
+      "sprite": "coast-foam-west",
+      "x": 6,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-7-32",
+      "sprite": "coast-wet-sand",
+      "x": 7,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-7-32-south",
+      "sprite": "coast-foam-south",
+      "x": 7,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-8-32",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-8-32-south",
+      "sprite": "coast-foam-south",
+      "x": 8,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-13-32",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-32-east",
+      "sprite": "coast-foam-east",
+      "x": 13,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-14-32",
+      "sprite": "coast-shallows",
+      "x": 14,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-15-32",
+      "sprite": "coast-shallows",
+      "x": 15,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-25-32",
+      "sprite": "coast-shallows",
+      "x": 25,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-26-32",
+      "sprite": "coast-shallows",
+      "x": 26,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-27-32",
+      "sprite": "coast-wet-sand",
+      "x": 27,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-27-32-south",
+      "sprite": "coast-foam-south",
+      "x": 27,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-27-32-west",
+      "sprite": "coast-foam-west",
+      "x": 27,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-28-32",
+      "sprite": "coast-wet-sand",
+      "x": 28,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-32-32",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-32-32-south",
+      "sprite": "coast-foam-south",
+      "x": 32,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-33-32",
+      "sprite": "coast-wet-sand",
+      "x": 33,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-33-32-south",
+      "sprite": "coast-foam-south",
+      "x": 33,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-34-32",
+      "sprite": "coast-wet-sand",
+      "x": 34,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-34-32-south",
+      "sprite": "coast-foam-south",
+      "x": 34,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-34-32-east",
+      "sprite": "coast-foam-east",
+      "x": 34,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-35-32",
+      "sprite": "coast-shallows",
+      "x": 35,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-36-32",
+      "sprite": "coast-shallows",
+      "x": 36,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-6-33",
+      "sprite": "coast-shallows",
+      "x": 6,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-7-33",
+      "sprite": "coast-shallows",
+      "x": 7,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-8-33",
+      "sprite": "coast-shallows",
+      "x": 8,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-13-33",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-33-east",
+      "sprite": "coast-foam-east",
+      "x": 13,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-14-33",
+      "sprite": "coast-shallows",
+      "x": 14,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-15-33",
+      "sprite": "coast-shallows",
+      "x": 15,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-25-33",
+      "sprite": "coast-shallows",
+      "x": 25,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-26-33",
+      "sprite": "coast-shallows",
+      "x": 26,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-27-33",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-28-33",
+      "sprite": "coast-wet-sand",
+      "x": 28,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-28-33-west",
+      "sprite": "coast-foam-west",
+      "x": 28,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-29-33",
+      "sprite": "coast-wet-sand",
+      "x": 29,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-30-33",
+      "sprite": "coast-wet-sand",
+      "x": 30,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-31-33",
+      "sprite": "coast-wet-sand",
+      "x": 31,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-31-33-east",
+      "sprite": "coast-foam-east",
+      "x": 31,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-32-33",
+      "sprite": "coast-shallows",
+      "x": 32,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-33-33",
+      "sprite": "coast-shallows",
+      "x": 33,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-34-33",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-6-34",
+      "sprite": "coast-shallows",
+      "x": 6,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-7-34",
+      "sprite": "coast-shallows",
+      "x": 7,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-8-34",
+      "sprite": "coast-wet-sand",
+      "x": 8,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-8-34-south",
+      "sprite": "coast-foam-south",
+      "x": 8,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-8-34-north",
+      "sprite": "coast-foam-north",
+      "x": 8,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-8-34-west",
+      "sprite": "coast-foam-west",
+      "x": 8,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-13-34",
+      "sprite": "coast-wet-sand",
+      "x": 13,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-13-34-south",
+      "sprite": "coast-foam-south",
+      "x": 13,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-13-34-east",
+      "sprite": "coast-foam-east",
+      "x": 13,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-14-34",
+      "sprite": "coast-shallows",
+      "x": 14,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-15-34",
+      "sprite": "coast-shallows",
+      "x": 15,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-26-34",
+      "sprite": "coast-shallows",
+      "x": 26,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-27-34",
+      "sprite": "coast-shallows",
+      "x": 27,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wet-sand-28-34",
+      "sprite": "coast-wet-sand",
+      "x": 28,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-28-34-south",
+      "sprite": "coast-foam-south",
+      "x": 28,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-28-34-west",
+      "sprite": "coast-foam-west",
+      "x": 28,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-29-34",
+      "sprite": "coast-wet-sand",
+      "x": 29,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-29-34-south",
+      "sprite": "coast-foam-south",
+      "x": 29,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-30-34",
+      "sprite": "coast-wet-sand",
+      "x": 30,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-30-34-south",
+      "sprite": "coast-foam-south",
+      "x": 30,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-31-34",
+      "sprite": "coast-wet-sand",
+      "x": 31,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-31-34-south",
+      "sprite": "coast-foam-south",
+      "x": 31,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wet-sand-32-34",
+      "sprite": "coast-wet-sand",
+      "x": 32,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "foam-32-34-south",
+      "sprite": "coast-foam-south",
+      "x": 32,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-32-34-north",
+      "sprite": "coast-foam-north",
+      "x": 32,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "foam-32-34-east",
+      "sprite": "coast-foam-east",
+      "x": 32,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "shallows-33-34",
+      "sprite": "coast-shallows",
+      "x": 33,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-34-34",
+      "sprite": "coast-shallows",
+      "x": 34,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-8-35",
+      "sprite": "coast-shallows",
+      "x": 8,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-13-35",
+      "sprite": "coast-shallows",
+      "x": 13,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-35",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-29-35",
+      "sprite": "coast-shallows",
+      "x": 29,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-30-35",
+      "sprite": "coast-shallows",
+      "x": 30,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-31-35",
+      "sprite": "coast-shallows",
+      "x": 31,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-32-35",
+      "sprite": "coast-shallows",
+      "x": 32,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-8-36",
+      "sprite": "coast-shallows",
+      "x": 8,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-13-36",
+      "sprite": "coast-shallows",
+      "x": 13,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-28-36",
+      "sprite": "coast-shallows",
+      "x": 28,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-29-36",
+      "sprite": "coast-shallows",
+      "x": 29,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-30-36",
+      "sprite": "coast-shallows",
+      "x": 30,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-31-36",
+      "sprite": "coast-shallows",
+      "x": 31,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "shallows-32-36",
+      "sprite": "coast-shallows",
+      "x": 32,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "wood-sign-shore-title-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 12,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-shore-title-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 25,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-games-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 4,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-games-pocket-label-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 10,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-picnic-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 27,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-picnic-pocket-label-support-1",
+      "sprite": "solid-coast-sign-post",
+      "x": 33,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "wood-sign-lounge-pocket-label-support-0",
+      "sprite": "solid-coast-sign-post",
+      "x": 17,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    }
+  ],
+  "entries": [
+    {
+      "name": "arrival",
+      "x": 19,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-shipyard",
+      "x": 19,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "harbor-return",
+      "destination": "shipyard-beach",
+      "entry": "from-constellation-shore",
+      "x": 7,
+      "y": 13,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "beach-games",
+      "name": "beach-games",
+      "properties": [],
+      "x": 6,
+      "y": 24,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "picnic-bay",
+      "name": "picnic-bay",
+      "properties": [],
+      "x": 26,
+      "y": 25,
+      "width": 6,
+      "height": 3
+    },
+    {
+      "id": "shore-lounge",
+      "name": "shore-lounge",
+      "properties": [],
+      "x": 17,
+      "y": 25,
+      "width": 6,
+      "height": 3
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "walkable-beach",
+      "kind": "landmark",
+      "x": 3,
+      "y": 11,
+      "width": 34,
+      "height": 24
+    },
+    {
+      "name": "beach-games",
+      "kind": "landmark",
+      "x": 4,
+      "y": 17,
+      "width": 9,
+      "height": 10
+    },
+    {
+      "name": "picnic-bay",
+      "kind": "landmark",
+      "x": 26,
+      "y": 17,
+      "width": 9,
+      "height": 11
+    },
+    {
+      "name": "bay-lounge",
+      "kind": "landmark",
+      "x": 13,
+      "y": 21,
+      "width": 14,
+      "height": 7
+    },
+    {
+      "name": "inset-coastal-bay",
+      "kind": "landmark",
+      "x": 14,
+      "y": 28,
+      "width": 13,
+      "height": 8
+    },
+    {
+      "name": "western-jetty",
+      "kind": "landmark",
+      "x": 8,
+      "y": 29,
+      "width": 6,
+      "height": 8
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2191 PLAZA",
+      "x": 18,
+      "y": 5,
+      "width": 7,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "harbor-return-label",
+      "text": "\u2193 HARBOR",
+      "x": 6,
+      "y": 12,
+      "width": 8,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "shore-title",
+      "text": "CONSTELLATION SHORE",
+      "x": 12,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "fontSize": 20,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "games-pocket-label",
+      "text": "VOLLEYBALL",
+      "x": 4,
+      "y": 16,
+      "width": 7,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "picnic-pocket-label",
+      "text": "BEACH BAR",
+      "x": 27,
+      "y": 16,
+      "width": 7,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "lounge-pocket-label",
+      "text": "BAY LOUNGE",
+      "x": 17,
+      "y": 21,
+      "width": 7,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    }
+  ],
+  "standingSigns": [
+    {
+      "face": "wood-sign-plaza-return-label",
+      "supports": [
+        "wood-sign-post-plaza-return-label"
+      ],
+      "text": "plaza-return-label"
+    },
+    {
+      "face": "wood-sign-harbor-return-label",
+      "supports": [
+        "wood-sign-post-harbor-return-label"
+      ],
+      "text": "harbor-return-label"
+    },
+    {
+      "face": "wood-sign-shore-title",
+      "supports": [
+        "wood-sign-shore-title-support-0",
+        "wood-sign-shore-title-support-1"
+      ],
+      "text": "shore-title"
+    },
+    {
+      "face": "wood-sign-games-pocket-label",
+      "supports": [
+        "wood-sign-games-pocket-label-support-0",
+        "wood-sign-games-pocket-label-support-1"
+      ],
+      "text": "games-pocket-label"
+    },
+    {
+      "face": "wood-sign-picnic-pocket-label",
+      "supports": [
+        "wood-sign-picnic-pocket-label-support-0",
+        "wood-sign-picnic-pocket-label-support-1"
+      ],
+      "text": "picnic-pocket-label"
+    },
+    {
+      "face": "wood-sign-lounge-pocket-label",
+      "supports": [
+        "wood-sign-lounge-pocket-label-support-0"
+      ],
+      "text": "lounge-pocket-label"
+    }
+  ]
+}

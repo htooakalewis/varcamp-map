@@ -1,0 +1,23 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {writeConstellationCoast} from '../art/constellation-coast';
+import {writeOrganicCoast} from '../art/organic-coast';
+import {refineBeachVisuals} from './refine-beach.mjs';
+import {assertNativeOrganicCoast} from './organic-coast';
+import {assertNativeOceanMap} from './beach-ship';
+import {assertNativeStandingCaptions} from './standing-captions';
+import settings from '../../world/beach-ship-native.json';
+const raw=readFileSync('tests/fixtures/constellation-coast/before-native.tmj');
+if(createHash('sha256').update(raw).digest('hex')!=='aa46986b3791c2c50840a32d3a3d7aaddc1df3f0f683acd1f218ee85513764c7')throw Error('Reviewed shore baseline changed');
+// Refresh shared producer provenance. The existing shipyard raster and source geometry are identical.
+await writeOrganicCoast();
+const shipLayout=JSON.parse(readFileSync('world/layouts/shipyard-beach.json','utf8')),shipResult=refineBeachVisuals(JSON.parse(readFileSync('tests/fixtures/organic-coast/before-native.tmj','utf8')),shipLayout,JSON.parse(readFileSync('art/tile-catalog.json','utf8')));
+writeFileSync('world/layouts/shipyard-beach.json',JSON.stringify(shipResult.layout,null,2)+'\n');
+writeFileSync('maps/shipyard-beach.tmj',JSON.stringify(shipResult.map)+'\n');
+await writeConstellationCoast();
+const layout=JSON.parse(readFileSync('world/layouts/constellation-shore.json','utf8')),catalog=JSON.parse(readFileSync('art/tile-catalog.json','utf8')),result=refineBeachVisuals(JSON.parse(raw.toString()),layout,catalog);
+const water=result.map.tilesets.find((t:any)=>t.image==='../assets/tilesets/lpc-water/water.png')!;
+water.tiles=settings.waterTileIds.map((id,phase)=>({id,animation:settings.waterTileIds.map((_,i)=>({tileid:settings.waterTileIds[(i+phase)%3],duration:settings.waterFrameMs}))}));
+result.map.layers.find((l:any)=>l.name==='terrain').properties=Object.entries(settings.audio).map(([name,value])=>({name,type:typeof value==='boolean'?'bool':typeof value==='number'?'float':'string',value}));
+assertNativeOrganicCoast(result.map,result.layout);assertNativeOceanMap(result.map,result.layout);assertNativeStandingCaptions(result.map,result.layout);
+writeFileSync('maps/constellation-shore.tmj',JSON.stringify(result.map)+'\n');

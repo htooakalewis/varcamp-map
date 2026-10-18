@@ -16,7 +16,7 @@ describe('coastal event character and preserved journeys',()=>{
     const l=load(id),surface=Array(l.width*l.height).fill(''),catalog=loadTileCatalog();
     for(const p of l.placements.filter(p=>p.layer==='terrain'))for(const n of cells(p,l.width))surface[n]=p.sprite;
     const reviewedSand=Array.from({length:16},(_,i)=>`beach-sand-${i}`);
-    const sandIds=['ground-sand','coast-sand','coast-wet-sand',...(id==='shipyard-beach'?reviewedSand:[])];
+    const sandIds=['ground-sand','coast-sand','coast-wet-sand',...reviewedSand];
     expect(surface.filter(sprite=>sandIds.includes(sprite)).length).toBeGreaterThanOrEqual(id==='shipyard-beach'?500:450);
     expect(l.placements.some(p=>p.sprite==='night-wash')).toBe(false);
     if(id==='shipyard-beach'){
@@ -31,7 +31,7 @@ describe('coastal event character and preserved journeys',()=>{
       const surf=JSON.parse(readFileSync('art/source/organic-coast.json','utf8'));expect(surf.cells.length).toBeGreaterThan(80);expect(surf.frameMs).toBeGreaterThanOrEqual(200);expect(l.placements.some(p=>p.sprite.startsWith('organic-coast-land-'))).toBe(true);
       expect(l.placements.filter(p=>['beach-parasol-coral','beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
     }else{
-      expect(l.placements.some(p=>p.sprite==='coast-foam-south')).toBe(true);
+      expect(l.placements.some(p=>p.sprite.startsWith('coast-foam-'))).toBe(false);expect(l.placements.some(p=>p.sprite.startsWith('constellation-coast-land-'))).toBe(true);
       const parasols=l.placements.filter(p=>p.id.includes('parasol'));expect(parasols.map(p=>p.id).sort()).toEqual(['shore-parasol-east','shore-parasol-lounge','shore-parasol-west']);for(const p of parasols)assertVisual(catalog[p.sprite],catalog['coast-parasol']);
     }
   });

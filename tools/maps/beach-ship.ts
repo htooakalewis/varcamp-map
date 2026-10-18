@@ -37,7 +37,7 @@ export function readShipFloorLabels(map:TiledMap,layout:MapLayout,catalog:TileCa
 }
 /** Normal native builds enforce the source-bound ocean artifact, not merely the authoring transaction. */
 export function assertNativeOceanMap(map:TiledMap,layout:MapLayout):void{
- if(!['shipyard-beach','fa-ship'].includes(layout.id))return;
+ if(!['shipyard-beach','fa-ship','constellation-shore'].includes(layout.id))return;
  const water=map.tilesets.filter(t=>t.image==='../assets/tilesets/lpc-water/water.png');need(water.length===1,'Ocean water atlas missing');for(const[phase,id]of settings.waterTileIds.entries()){const expected=settings.waterTileIds.map((_,i)=>({tileid:settings.waterTileIds[(phase+i)%3],duration:settings.waterFrameMs}));need(isDeepStrictEqual(water[0].tiles?.find(t=>t.id===id)?.animation,expected),'Ocean water clock changed');}
  const terrain=map.layers.find(l=>l.name==='terrain');for(const[name,value]of Object.entries(settings.audio)){const props=terrain?.properties?.filter(p=>p.name===name);need(props?.length===1&&props[0].value===value,'Ocean audio property changed');}
  const overlays=layout.animatedOverlays?.filter(o=>o.name.startsWith('rolling-breaker-'))??[];need(overlays.length===(layout.id==='shipyard-beach'?2:0),'Ocean breaker roster changed');const floor=map.layers.findIndex(l=>l.name==='floorLayer');
