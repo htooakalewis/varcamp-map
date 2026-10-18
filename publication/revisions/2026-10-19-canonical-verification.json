@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "77a596f0364c39d9efc5f723a699e1f7e5b01d1787d32e73f53a44452806c998",
+      "toSha256": "db03556347f235f6d06e4c2f41822ccd0c39476b64d6cd8fc8ce235b64cae441",
+      "reason": "Close the actual canonical CI runner ownership and immutable historical/current verification contracts; preserve production maps, pixels, geometry, movement and all prior receipts."
+    }
+  ]
+}

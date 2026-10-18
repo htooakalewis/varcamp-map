@@ -9,6 +9,7 @@ import{buildMap}from'../tools/maps/builder';
 import{addNpcGuides}from'../tools/maps/npc-guides';
 import{loadTileCatalog}from'../tools/art/catalog';
 import type{MapLayout,TileRect,TileLayer,TiledMap}from'../tools/maps/types';
+import{approvedUnchangedLayoutIds,approvedHistoricalRaw,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
 function frozenOverworld(kind:'tmj'):TiledMap;
 function frozenOverworld(kind:'json'):MapLayout;
 function frozenOverworld(kind:'tmj'|'json'):TiledMap|MapLayout{
@@ -79,7 +80,11 @@ describe('native coastal boarding and nautical proportions',()=>{
    }
    expect(createHash('sha256').update(retired).digest('hex'),path+' original independent retirement bytes').toBe(revision.toSha256);
    let effective=revision.toSha256;
-   for(const name of ['2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure','2026-10-18-standing-captions','2026-10-18-standing-captions-ci-closure','2026-10-18-beach-groves-guide-identity','2026-10-18-organic-coast','2026-10-18-constellation-coast','2026-10-18-campus-refinement']){
+   for(const name of ['2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure','2026-10-18-standing-captions','2026-10-18-standing-captions-ci-closure','2026-10-18-beach-groves-guide-identity','2026-10-18-organic-coast','2026-10-18-constellation-coast','2026-10-18-campus-refinement','2026-10-19-shared-world-service']){
+    if(name==='2026-10-19-shared-world-service'&&path.startsWith('world/layouts/')&&approvedUnchangedLayoutIds.includes(id)){
+     expect(createHash('sha256').update(approvedHistoricalRaw(path)).digest('hex'),path+' genuine pre-fleet bytes').toBe(effective);
+     assertApprovedLayoutSuccessor(id,source(id));
+    }
     const rows=JSON.parse(readFileSync(`publication/revisions/${name}.json`,'utf8')).revisions.filter((r:{path:string})=>r.path===path);expect(rows.length).toBeLessThanOrEqual(1);for(const row of rows){expect(row.fromSha256,path+' closed current succession').toBe(effective);effective=row.toSha256;}
    }
    expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path+' final distinct current receipt').toBe(effective);
