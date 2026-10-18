@@ -6,15 +6,15 @@ import { busy, center, gateReply, help, parseCommand, planRoute, rooms, startupR
 export type Point = { x: number; y: number };
 export type Dispose = () => void;
 export interface Participant { id: number; name?: string }
-/** Numeric participants remain supported for existing controller adapters. Native adapters supply names. */
-export type BubbleMember = number | Participant;
-export interface Bubble {
-  participants: BubbleMember[];
-  onJoin(callback: (member: BubbleMember) => void): Dispose;
+/** Audience IDs and names are supplied by the owned server-tracked communication adapter. */
+export type AudienceMember = number | Participant;
+export interface Audience {
+  participants: AudienceMember[];
+  onJoin(callback: (member: AudienceMember) => void): Dispose;
   onLeave(callback: (id: number) => void): Dispose;
   onEnd(callback: () => void): Dispose;
 }
-export interface ChatEvent { text: string; authorId: number | undefined; authorName?: string }
+export interface GuideRequest { text: string; authorId: number | undefined; authorName?: string }
 export interface LyraAdapter {
   /** Public identity, read after WA.onInit; omitted only by legacy isolated adapters. */
   self?(): Participant;
@@ -22,11 +22,11 @@ export interface LyraAdapter {
   roomId(): string;
   position(): Promise<Point>;
   move(point: Point): Promise<Point & { cancelled: boolean }>;
-  say(text: string): void;
+  reply(recipientId: number, text: string): void;
   diagnostic(text: string, evidence?: Record<string, unknown>): void;
   receipt?(evidence: Record<string, unknown>): void;
-  onChat(callback: (event: ChatEvent) => void): Dispose;
-  onBubble(callback: (bubble: Bubble) => void): Dispose;
+  onRequest(callback: (event: GuideRequest) => void): Dispose;
+  onAudience(callback: (bubble: Audience) => void): Dispose;
 }
 export interface Scheduler {
   now(): number;
@@ -148,14 +148,14 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     const value = visitor(id);
     if (value && scheduler.now() - value.greeted >= 120000) {
       value.greeted = scheduler.now();
-      api.say(`Hi, I’m ${persona.name}. Type Gemini, Cancer or Libra for a walking guide; help shows how to address each guide.`);
+      api.reply(id, `Hi, I’m ${persona.name}. Type Gemini, Cancer or Libra for a walking guide; help shows how to address each guide.`);
     }
   };
   const botMember = (id: number, candidate: Persona) => {
     participants.delete(id); visitors.delete(id); botCandidates.set(id, candidate);
     if (escort?.owner === id) { escort = undefined; if (mode !== 'startup') mode = 'return'; }
   };
-  const addMember = (member: BubbleMember) => {
+  const addMember = (member: AudienceMember) => {
     const { id, name } = typeof member === 'number' ? { id: member, name: undefined } : member;
     if (!active || !Number.isFinite(id) || id === self.id) return;
     const candidate = personaByName(name);
@@ -167,7 +167,7 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     participants.add(id);
     if (ready) lastActivity = scheduler.now();
   };
-  const onBubble = (bubble: Bubble) => {
+  const onAudience = (bubble: Audience) => {
     if (!active) return;
     for (const off of meetingSubscriptions.splice(0)) off();
     participants.clear(); botCandidates.clear();
@@ -183,11 +183,11 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     })];
     if (ready) for (const id of participants) greet(id);
   };
-  const reply = (value: Visitor | undefined, text: string) => {
+  const reply = (id: number, value: Visitor | undefined, text: string) => {
     if (!active || !value || scheduler.now() - value.replied < 2000) return;
-    value.replied = scheduler.now(); api.say(text);
+    value.replied = scheduler.now(); api.reply(id, text);
   };
-  const onChat = ({ text, authorId, authorName }: ChatEvent) => {
+  const onRequest = ({ text, authorId, authorName }: GuideRequest) => {
     if (!ready || !active || authorId === undefined || authorId === self.id ||
       !participants.has(authorId) && !botCandidates.has(authorId)) return;
     const authorPersona = personaByName(authorName);
@@ -208,23 +208,23 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
     if (command.kind === 'stop' && !addressed.target) {
       const otherOwner = escort && escort.owner !== authorId;
       if (escort?.owner === authorId) { escort = undefined; if (mode !== 'startup') mode = 'return'; }
-      if (elected()) reply(value, otherOwner && botCandidates.size === 0 ? busy(language) : language === 'my'
+      if (elected()) reply(authorId, value, otherOwner && botCandidates.size === 0 ? busy(language) : language === 'my'
         ? 'ဤအဖွဲ့တွင် သင့်ကို လမ်းပြနေသော လမ်းပြများ ရပ်ရန် တောင်းဆိုပြီးပါပြီ။'
-        : 'Stop requested for guides escorting you in this bubble.');
+        : 'Stop requested for guides escorting you in this nearby group.');
       return;
     }
     if (!addressed.target && !elected()) return;
-    if (command.kind === 'help' || command.kind === 'unknown') { reply(value, help(language)); return; }
-    if (command.kind === 'rooms') { reply(value, rooms(language)); return; }
-    if (escort && escort.owner !== authorId) { reply(value, busy(language)); return; }
+    if (command.kind === 'help' || command.kind === 'unknown') { reply(authorId, value, help(language)); return; }
+    if (command.kind === 'rooms') { reply(authorId, value, rooms(language)); return; }
+    if (escort && escort.owner !== authorId) { reply(authorId, value, busy(language)); return; }
     if (command.kind === 'stop') {
       escort = undefined; if (mode !== 'startup') mode = 'return';
-      reply(value, language === 'my' ? 'လမ်းပြခြင်း ရပ်ပါမည်။ မူလနေရာသို့ ပြန်ပါမည်။' : 'Escort stopped. I’m returning home.'); return;
+      reply(authorId, value, language === 'my' ? 'လမ်းပြခြင်း ရပ်ပါမည်။ မူလနေရာသို့ ပြန်ပါမည်။' : 'Escort stopped. I’m returning home.'); return;
     }
     if (command.kind !== 'go') return;
     escort = { owner: authorId, destination: command.destination, language };
     if (mode !== 'startup') mode = 'escort';
-    reply(value, gateReply(command.destination, language));
+    reply(authorId, value, gateReply(command.destination, language));
   };
   const same = (a: Tile, b: Tile) => a[0] === b[0] && a[1] === b[1];
   const move = async (next: Tile) => {
@@ -252,7 +252,7 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
       if (mode === 'patrol' && participants.size > 0 && scheduler.now() - lastActivity < 20000) { await sleep(100, 'conversation', lastActivity); continue; }
       const target = mode === 'escort' && escort ? escort.destination.tile : mode === 'return' ? persona.home : persona.patrol[corner];
       if (same(current, target)) {
-        if (mode === 'escort' && escort) { reply(visitors.get(escort.owner), gateReply(escort.destination, escort.language, true)); mode = 'return'; continue; }
+        if (mode === 'escort' && escort) { reply(escort.owner, visitors.get(escort.owner), gateReply(escort.destination, escort.language, true)); mode = 'return'; continue; }
         if (mode === 'return') { escort = undefined; mode = 'patrol'; corner = 1; continue; }
         // The authored closing waypoint repeats home; count each cyclic corner only once.
         corner = (corner + 1) % (persona.patrol.length - 1);
@@ -268,14 +268,14 @@ export function createLyraController(api: LyraAdapter, scheduler: Scheduler = cl
       room = api.roomId();
       self = api.self?.() ?? self;
       if (!Number.isFinite(self.id) || personaByName(self.name)?.key !== persona.key) throw Error('Guide identity does not match fixed persona');
-      // Native meetings.onJoin is non-replaying. Subscribe before the first asynchronous
-      // map/position guard and cache live membership until validation completes.
-      subscriptions.push(api.onBubble(onBubble));
+      // Subscribe to the owned tracked audience before the first asynchronous
+      // map/position guard and cache current membership until validation completes.
+      subscriptions.push(api.onAudience(onAudience));
       await operation('map', 'startup', async () => guardMap(await api.map())); if (!active || !checkRoom()) { finish(); return; }
       current = tileOf(await operation('position', 'startup', () => api.position())); if (!active || !checkRoom()) { finish(); return; }
       startup = startupRoute(current, persona.home).slice(1); startupDeadline = scheduler.now() + 60000;
       ready = true;
-      subscriptions.push(api.onChat(onChat));
+      subscriptions.push(api.onRequest(onRequest));
       if (participants.size) lastActivity = scheduler.now();
       for (const id of participants) greet(id);
       monitor();

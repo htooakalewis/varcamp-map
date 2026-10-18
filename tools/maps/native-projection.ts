@@ -93,8 +93,8 @@ export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):Ti
  const bindings=bindAtlases(result,source),remap=(gid:number)=>{if(!gid)return 0;const set=sourceSet(source,gid);return((bindings.get(set)!.firstgid+plain(gid)-set.firstgid)|(gid&0xf0000000))>>>0;};
  let nextLayer=Math.max(result.nextlayerid??1,...result.layers.map(l=>l.id+1));
  const rebuilt=paint.map(l=>({...structuredClone(l),id:result.layers.find(a=>a.name===l.name)?.id??nextLayer++,...(l.type==='tilelayer'?{data:l.data.map(remap)}:{})}as TileLayer));
- const floor=source.layers.findIndex(l=>l.name==='floorLayer'),below=rebuilt.filter(l=>source.layers.findIndex(s=>s.name===l.name)<floor),above=rebuilt.filter(l=>!below.includes(l));
- result.layers=result.layers.filter(l=>!owned.has(l.name));const at=result.layers.findIndex(l=>l.name==='floorLayer');result.layers.splice(at,0,...below);result.layers.splice(result.layers.findIndex(l=>l.name==='floorLayer')+1,0,...above);result.nextlayerid=nextLayer;
+ const floor=source.layers.findIndex(l=>l.name==='floorLayer'),lastNonfloor=source.layers.findLastIndex(l=>l.type!=='tilelayer'),below=rebuilt.filter(l=>source.layers.findIndex(s=>s.name===l.name)<floor),deferred=rebuilt.filter(l=>source.layers.findIndex(s=>s.name===l.name)>lastNonfloor),above=rebuilt.filter(l=>!below.includes(l)&&!deferred.includes(l));
+ result.layers=result.layers.filter(l=>!owned.has(l.name));const at=result.layers.findIndex(l=>l.name==='floorLayer');result.layers.splice(at,0,...below);result.layers.splice(result.layers.findIndex(l=>l.name==='floorLayer')+1,0,...above);result.layers.push(...deferred);result.nextlayerid=nextLayer;
  assertNativeSourceProjection(result,rawSource);
  return result;
 }

@@ -64,8 +64,8 @@ export function label(destination: Destination, language: Language): string {
   return language === 'my' ? myNames[index] : names[index];
 }
 export const help = (language: Language) => language === 'my'
-  ? 'မေထုန် / ကရကဋ် / တူ • အကူအညီ • အခန်းများ • သွား <အမည်> • ရပ်။ အဖွဲ့တွင် Nova, Cancer သို့မဟုတ် Orion, Libra ဟု တိုက်ရိုက်တောင်းနိုင်ပါသည်။ ကိုယ်တိုင် လိုက်လာပါ။'
-  : 'Type Gemini / Cancer / Libra, help, rooms, go <destination>, or stop. In groups, address a guide: Nova, Cancer or Orion, Libra. Walk along with me if you want an escort.';
+  ? 'Talk to Nearby Guides ကိုဖွင့်ပြီး အနီးရှိ Lyra၊ Nova သို့မဟုတ် Orion ကိုရွေးပါ။ Gemini / Cancer / Libra ဟု ရိုက်ပါ သို့မဟုတ် ရာသီခွင်ခလုတ်ကိုနှိပ်ပါ။ လမ်းပြနှင့်အတူ လိုက်လျှောက်ပါ။ ရပ်ရန် Stop my guide ကိုနှိပ်ပါ။'
+  : 'Open Talk to Nearby Guides, choose nearby Lyra, Nova or Orion, then type Gemini / Cancer / Libra or choose a zodiac button. Walk along with your guide. Choose Stop my guide to stop.';
 export const rooms = (language: Language) => (language === 'my' ? 'အခန်းများ: ' : 'Rooms: ') + ROUTES.destinations.map(d => label(d, language)).join(', ');
 export const busy = (language: Language) => language === 'my' ? 'အခြားဧည့်သည်ကို လမ်းပြနေပါသည်။ ခဏစောင့်ပါ။' : 'I’m busy guiding another visitor. Please wait.';
 export const gateReply = (destination: Destination, language: Language, arrived = false) => language === 'my'

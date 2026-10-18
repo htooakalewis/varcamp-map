@@ -838,7 +838,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+            "sha256": "8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -862,7 +862,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+            "sha256": "aba9d15769f308f593fb41966dc4a3822a974d4dee53bc1aeaf43d48f1eafbeb"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -874,7 +874,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+            "sha256": "1537c89158cf3b10520e3072bf53087190cf8d0dd58a1994bac0292bfbcfaac1"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -890,11 +890,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+            "sha256": "85d75a795ab129a9eb00c1231b0507f35962a3495f317fa129321f9f2665133a"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+            "sha256": "82ec0ae0d0c6e08be99452397221e744eb63b973088cd5b7550a91714e3df66b"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -902,15 +902,15 @@
           },
           {
             "path": "tools/art/native-motion.ts",
-            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+            "sha256": "4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a"
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
           }
         ]
       }
@@ -1014,7 +1014,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+            "sha256": "8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -1038,7 +1038,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+            "sha256": "aba9d15769f308f593fb41966dc4a3822a974d4dee53bc1aeaf43d48f1eafbeb"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -1050,7 +1050,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+            "sha256": "1537c89158cf3b10520e3072bf53087190cf8d0dd58a1994bac0292bfbcfaac1"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -1066,11 +1066,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+            "sha256": "85d75a795ab129a9eb00c1231b0507f35962a3495f317fa129321f9f2665133a"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+            "sha256": "82ec0ae0d0c6e08be99452397221e744eb63b973088cd5b7550a91714e3df66b"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -1078,15 +1078,15 @@
           },
           {
             "path": "tools/art/native-motion.ts",
-            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+            "sha256": "4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a"
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
           }
         ]
       }

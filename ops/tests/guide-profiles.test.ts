@@ -60,17 +60,13 @@ it('joins each fixed observed name/avatar and passes only that persona in the Do
     expect(configs.buildCreateArgs(image, '/repo/seccomp.json', profile)).toContain(`VARCAMP_BOT_PERSONA=${persona}`);
   }
 });
-it('the real CLI defaults to Lyra, selects explicit siblings, and refuses all-profile or unknown commands before Docker', () => {
+it('the retired CLI refuses each fixed profile before Docker', () => {
   const directory = mkdtempSync(join(tmpdir(), 'guide-cli-')); const output = join(directory, 'target');
   try {
-    writeFileSync(join(directory, 'docker'), `#!${process.execPath}\nrequire('node:fs').writeFileSync(process.env.CLI_TEST_TARGET, process.argv.slice(2).join(' ')); console.log('[]');\n`, { mode: 0o700 });
-    for (const [args, name] of [[['status'], 'varcamp-lyra-dev'], [['lyra', 'status'], 'varcamp-lyra-dev'], [['nova', 'status'], 'varcamp-nova-dev'], [['orion', 'status'], 'varcamp-orion-dev']]) {
-      const result = spawnSync(process.execPath, ['ops/bots/cli.mjs', ...args], { encoding: 'utf8', env: { ...process.env, PATH: `${directory}:${process.env.PATH}`, CLI_TEST_TARGET: output } });
-      expect(JSON.parse(result.stdout)).toEqual({ state: 'absent', healthy: false }); expect(readFileSync(output, 'utf8')).toBe(`container inspect ${name}`);
-    }
-    rmSync(output);
-    for (const args of [['all', 'status'], ['nova', 'restart'], ['orion', 'status', 'extra']]) {
-      expect(spawnSync(process.execPath, ['ops/bots/cli.mjs', ...args], { env: { ...process.env, PATH: directory, CLI_TEST_TARGET: output } }).status).toBe(1);
+    writeFileSync(join(directory, 'docker'), `#!${process.execPath}\nrequire('node:fs').writeFileSync(process.env.CLI_TEST_TARGET, 'called'); console.log('[]');\n`, { mode: 0o700 });
+    for (const args of [['status'], ['lyra', 'status'], ['nova', 'status'], ['orion', 'status'], ['all', 'status'], ['nova', 'restart'], ['orion', 'status', 'extra']]) {
+      const result = spawnSync(process.execPath, ['ops/bots/cli.mjs', ...args], { encoding: 'utf8', env: { ...process.env, PATH: directory, CLI_TEST_TARGET: output } });
+      expect(result.status).toBe(2); expect(result.stdout).toBe(''); expect(result.stderr).toMatch(/retired.*persistent-service/i);
       expect(existsSync(output)).toBe(false);
     }
   } finally { rmSync(directory, { recursive: true, force: true }); }

@@ -12,7 +12,7 @@ it.each(['map', 'startup-position', 'pre-step-position', 'move'])('retains origi
   const original = new Error('sentinel', { cause: new Error('inner cause') }); original.name = 'AbortError'; original.stack = `AbortError: sentinel\n at original_${boundary} (https://world.invalid/iframe_api.js:12:3)`;
   const stored: any[] = []; const runtime = createRunnerLifecycle({ save: async (snapshot: unknown) => { stored.push(structuredClone(snapshot)); } });
   let positions = 0, moves = 0;
-  const api: LyraAdapter = { self: () => ({ id: 4, name: 'Lyra[BOT]' }), roomId: () => 'overworld', map: async () => { if (boundary === 'map') throw original; return native; }, position: async () => { positions++; if (boundary === 'startup-position' && positions === 1 || boundary === 'pre-step-position' && positions === 2) throw original; return { x: 2256, y: 2256 }; }, move: async p => { moves++; if (boundary === 'move') throw original; return { ...p, cancelled: false }; }, say() {}, diagnostic: (text, evidence) => writeDiagnostic(text, evidence, message => runtime.console(message)), onChat: () => () => {}, onBubble: () => () => {} };
+  const api: LyraAdapter = { self: () => ({ id: 4, name: 'Lyra[BOT]' }), roomId: () => 'overworld', map: async () => { if (boundary === 'map') throw original; return native; }, position: async () => { positions++; if (boundary === 'startup-position' && positions === 1 || boundary === 'pre-step-position' && positions === 2) throw original; return { x: 2256, y: 2256 }; }, move: async p => { moves++; if (boundary === 'move') throw original; return { ...p, cancelled: false }; }, reply() {}, diagnostic: (text, evidence) => writeDiagnostic(text, evidence, message => runtime.console(message)), onRequest: () => () => {}, onAudience: () => () => {} };
   const c = createLyraController(api); await c.start(); await c.done; await runtime.flush();
   const proof = stored.at(-1).failure;
   expect(proof, 'original structured failure was lost').toBeTruthy();
@@ -26,18 +26,18 @@ it.each(['map', 'startup-position', 'pre-step-position', 'move'])('retains origi
 });
 it('quarantines a pending position after operator stop until its actual continuation settles', async () => {
   let release!: (value: { x: number; y: number }) => void; let count = 0, moves = 0, settled = false;
-  const api: LyraAdapter = { map: async () => native, roomId: () => 'overworld', position: () => ++count === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise<{ x: number; y: number }>(r => { release = r; }), move: async p => { moves++; return { ...p, cancelled: false }; }, say() {}, diagnostic() {}, onChat: () => () => {}, onBubble: () => () => {} };
+  const api: LyraAdapter = { map: async () => native, roomId: () => 'overworld', position: () => ++count === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise<{ x: number; y: number }>(r => { release = r; }), move: async p => { moves++; return { ...p, cancelled: false }; }, reply() {}, diagnostic() {}, onRequest: () => () => {}, onAudience: () => () => {} };
   const c = createLyraController(api); await c.start(); void c.done.then(() => { settled = true; }); c.stop(); await Promise.resolve(); expect(settled).toBe(false);
   release({ x: 2256, y: 2256 }); await c.done; expect(moves).toBe(0);
 });
 it('a diagnostic exception cannot leave startup failure active or prevent done settling', async () => {
-  const c = createLyraController({ map: async () => { throw new Error('map failure'); }, roomId: () => 'overworld', position: async () => ({ x: 2256, y: 2256 }), move: async p => ({ ...p, cancelled: false }), say() {}, diagnostic() { throw new Error('logger failed'); }, onChat: () => () => {}, onBubble: () => () => {} });
+  const c = createLyraController({ map: async () => { throw new Error('map failure'); }, roomId: () => 'overworld', position: async () => ({ x: 2256, y: 2256 }), move: async p => ({ ...p, cancelled: false }), reply() {}, diagnostic() { throw new Error('logger failed'); }, onRequest: () => () => {}, onAudience: () => () => {} });
   await expect(c.start()).resolves.toBeUndefined(); await expect(c.done).resolves.toBeUndefined();
 });
 it('a hostile original Error getter still reaches terminal cleanup and settled done', async () => {
   const original = new Error('hidden'); Object.defineProperty(original, 'message', { get() { throw new Error('unreadable message'); } });
   let disposed = false;
-  const c = createLyraController({ map: async () => { throw original; }, roomId: () => 'overworld', position: async () => ({ x: 2256, y: 2256 }), move: async p => ({ ...p, cancelled: false }), say() {}, diagnostic() {}, onChat: () => () => {}, onBubble: () => () => { disposed = true; } });
+  const c = createLyraController({ map: async () => { throw original; }, roomId: () => 'overworld', position: async () => ({ x: 2256, y: 2256 }), move: async p => ({ ...p, cancelled: false }), reply() {}, diagnostic() {}, onRequest: () => () => {}, onAudience: () => () => { disposed = true; } });
   await expect(c.start()).resolves.toBeUndefined(); await c.done; expect(disposed).toBe(true);
 });
 it('read-only controller health remains terminal when logging fails and a stopped position later settles', async () => {
@@ -45,7 +45,7 @@ it('read-only controller health remains terminal when logging fails and a stoppe
   const { readIdentity } = await import('../ops/bots/browser-session.mjs');
   vi.stubGlobal('__lyraDevelopmentHealth', { started: true, stopped: null }); vi.stubGlobal('WA', { player: { playerId: 4, name: 'Lyra[BOT]' }, room: { id: config.roomUrl } });
   let release!: (p: { x: number; y: number }) => void; let positions = 0;
-  const c = createLyraController({ self: () => ({id:4,name:'Lyra[BOT]'}), map: async () => native, roomId: () => config.roomUrl, position: () => ++positions === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise(r => { release = r; }), move: async p => ({ ...p, cancelled: false }), say() {}, diagnostic() { throw Error('logger unavailable'); }, receipt: record => { vi.stubGlobal('__varcampGuideEvidence', record); }, onChat: () => () => {}, onBubble: () => () => {} });
+  const c = createLyraController({ self: () => ({id:4,name:'Lyra[BOT]'}), map: async () => native, roomId: () => config.roomUrl, position: () => ++positions === 1 ? Promise.resolve({ x: 2256, y: 2256 }) : new Promise(r => { release = r; }), move: async p => ({ ...p, cancelled: false }), reply() {}, diagnostic() { throw Error('logger unavailable'); }, receipt: record => { vi.stubGlobal('__varcampGuideEvidence', record); }, onRequest: () => () => {}, onAudience: () => () => {} });
   await c.start(); c.stop(); release({ x: 2256, y: 2256 }); await c.done;
   await expect(readIdentity({ evaluate: async (fn: (value: unknown) => unknown, value: unknown) => fn(value) }, config, {assertLive(){}})).rejects.toThrow(/terminal|stopped/);
 });

@@ -18,6 +18,7 @@ const constellationPath='publication/revisions/2026-10-18-constellation-coast.js
 const organicPath='publication/revisions/2026-10-18-organic-coast.json';
 const campusPath='publication/revisions/2026-10-18-campus-refinement.json';
 const combinedPath='publication/revisions/2026-10-18-beach-groves-guide-identity.json';
+const currentReleasePath='publication/revisions/2026-10-19-shared-world-service.json';
 const catalogSource=readFileSync('src/world/catalog.ts','utf8');
 const catalogIds=Object.keys(JSON.parse(catalogSource.match(/export const WORLD_CATALOG\s*=\s*(\{[\s\S]*?\})\s+as const/)![1]));
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
@@ -69,6 +70,7 @@ describe('publication exact reviewed replacements', () => {
   function pinOrganic(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(organicPath,bytes);manifest.extensionInventory[organicPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinConstellation(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(constellationPath,bytes);manifest.extensionInventory[constellationPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCampus(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(campusPath,bytes);manifest.extensionInventory[campusPath]=createHash('sha256').update(bytes).digest('hex');}
+  function pinCurrentRelease(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(currentReleasePath,bytes);manifest.extensionInventory[currentReleasePath]=createHash('sha256').update(bytes).digest('hex');}
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -91,6 +93,8 @@ describe('publication exact reviewed replacements', () => {
   it('requires the twelfth receipt to be pinned and present',()=>{delete manifest.extensionInventory[campusPath];rejects('Reviewed revision file must be pinned');pinCampus();remove(campusPath);rejects('Missing extension source: '+campusPath);});
   it.each([null,{schemaVersion:2,revisions:[]},{schemaVersion:1,revisions:[],extra:true},{schemaVersion:1,revisions:[null]}])('enforces the unchanged closed schema for the twelfth receipt %#',value=>{pinCampus(value);rejects('Invalid reviewed revision schema');});
   it('rejects duplicate sources within the twelfth document',()=>{pinCampus({schemaVersion:1,revisions:[reviewed(),reviewed()]});write('src/main.ts',replacement);rejects('Duplicate reviewed revision');});
+  it('accepts thirteenth shared-world receipt from exact effective prior and rejects a wrong predecessor',()=>{pinCampus({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'source19';const row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinCurrentRelease({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const result=verify();expect(result.status,result.output).toBe(0);pinCurrentRelease({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
+  it('requires thirteenth shared-world receipt pin and physical presence',()=>{delete manifest.extensionInventory[currentReleasePath];rejects('Reviewed revision file must be pinned');pinCurrentRelease();remove(currentReleasePath);rejects('Missing extension source: '+currentReleasePath);});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -115,6 +119,7 @@ describe('publication exact reviewed replacements', () => {
     pinOrganic();
     pinConstellation();
     pinCampus();
+    pinCurrentRelease();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

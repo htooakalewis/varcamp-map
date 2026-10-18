@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "sourceId": "plaza-original-drones",
+  "nativePoseBox": 24,
+  "stepMs": 200,
+  "maxTotalDecodedRgbaBytes": 6291456,
+  "aircraft": [
+    {
+      "id": "plaza-fleet-camera",
+      "type": "camera",
+      "source": "art/source/plaza-fleet-original/camera-generated-master.png",
+      "sourceSha256": "b5a8e018bac965c4cf142cf643696e95d39ac1b1938d211a2f0f9aa63edf1820",
+      "rect": {
+        "x": 60,
+        "y": 62,
+        "width": 6,
+        "height": 3
+      },
+      "periodMs": 12000,
+      "phaseOffset": 0,
+      "level": "belowAvatar"
+    },
+    {
+      "id": "plaza-fleet-delivery",
+      "type": "delivery",
+      "source": "art/source/plaza-fleet-original/delivery-generated-master.png",
+      "sourceSha256": "2927e60ebbe6afd41c7f903d2811b42614360050f721ef48fde5df79a7bc261b",
+      "rect": {
+        "x": 67,
+        "y": 70,
+        "width": 8,
+        "height": 3
+      },
+      "periodMs": 16000,
+      "phaseOffset": 0.3333333333333333,
+      "level": "belowAvatar"
+    },
+    {
+      "id": "plaza-fleet-survey",
+      "type": "survey",
+      "source": "art/source/plaza-fleet-original/survey-generated-master.png",
+      "sourceSha256": "ed9734eb1de8b895676a49e08131e9fb48b5db453f7305efc8bc3983c9e38908",
+      "rect": {
+        "x": 53,
+        "y": 69,
+        "width": 7,
+        "height": 3
+      },
+      "periodMs": 20000,
+      "phaseOffset": 0.625,
+      "level": "belowAvatar"
+    }
+  ]
+}

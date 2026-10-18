@@ -2045,15 +2045,15 @@
         },
         {
           "path": "tools/art/native-motion.ts",
-          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          "sha256": "4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a"
         },
         {
           "path": "tools/maps/builder.ts",
-          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
         },
         {
           "path": "tools/maps/types.ts",
-          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+          "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
         }
       ]
     }

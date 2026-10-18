@@ -1,3 +1,4 @@
+import { readyPeer, rendererPeer, rendererReceipt } from './helpers/renderer-peer.mjs';
 import { afterEach, expect, it, vi } from 'vitest';
 import * as session from '../bots/browser-session.mjs';
 import * as runtimeModule from '../bots/runner.mjs';
@@ -80,7 +81,7 @@ it.each(['deadline', 'fatal'])('the actual heartbeat UI boundary terminates a he
   const events: { event: string; at: number }[] = []; const saved: any[] = [];
   const state = runtimeModule.createRunnerLifecycle({ save: async snapshot => { saved.push(snapshot); }, log: value => events.push({ event: value.event, at: Date.now() }) });
   const identity = { playerId: 4, name: 'Lyra[BOT]', roomId: 'expected-room' };
-  await state.ready(identity); events.length = 0;
+  await readyPeer(state, identity); events.length = 0;
   const f = pageFixture(); f.setWelcome(false);
   let release, reached = false, settled = false, identityReads = 0;
   f.page.evaluate = async () => { reached = true; return new Promise(resolve => { release = () => resolve(['denied', 'denied']); }); };

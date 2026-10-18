@@ -6,11 +6,11 @@ import type{MapLayout,TiledMap,WamFile}from'../tools/maps/types';
 const read=<T>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
 const current=(id:string)=>({id,map:read<TiledMap>(`maps/${id}.tmj`),layout:read<MapLayout>(`world/layouts/${id}.json`),wam:read<WamFile>(`maps/${id}.wam`)});
 const catalog=read<any>('art/tile-catalog.json');
-it.each(['shipyard-beach','constellation-shore'])('%s explicitly keeps every aerial visual behind an attendee',id=>{
+it.each(['shipyard-beach','constellation-shore'])('%s keeps aircraft behind attendees and finite safe birds above scenery',id=>{
  const{map,layout}=current(id),floor=map.layers.findIndex(l=>l.name==='floorLayer');
  const aerial=layout.animatedOverlays!.filter(o=>o.name==='coastal-flight'||o.name.includes('gull-'));
  expect(aerial.length).toBe(id==='shipyard-beach'?3:2);
- for(const o of aerial){expect(o.level,o.name).toBe('belowAvatar');expect(map.layers.findIndex(l=>l.name===o.name),o.name).toBeLessThan(floor);}
+ for(const o of aerial){expect(o.level,o.name).toBe(o.name==='coastal-flight'?'belowAvatar':'aboveScenery');const index=map.layers.findIndex(l=>l.name===o.name);expect(o.name==='coastal-flight'?index<floor:index>floor,o.name).toBe(true);}
  if(id==='shipyard-beach')expect(aerial.find(o=>o.name==='coastal-flight')).toMatchObject({x:0,y:0,width:48,height:3});
 });
 it('the real current entry cannot opt out of the required aircraft by coherently removing source and native layer',()=>{

@@ -1,3 +1,4 @@
+import { readyPeer, rendererPeer, rendererReceipt } from './helpers/renderer-peer.mjs';
 import { afterEach, expect, it, vi } from 'vitest';
 import { verifyRoomUI } from '../bots/browser-session.mjs';
 import { createRunnerLifecycle, heartbeatOnce, probeHeartbeat } from '../bots/runner.mjs';
@@ -67,7 +68,7 @@ function nativeFixture(variant = 'known') {
 }
 it.each(['known', 'absent', 'whitespace'])('post-start room observation accepts %s native panel state without replaying fresh onboarding', async variant => {
   const f = nativeFixture(variant); let scheduled = 0; const state = createRunnerLifecycle();
-  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame }), schedule: () => { scheduled++; } });
+  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame, rendererObserver: rendererPeer() }), schedule: () => { scheduled++; } });
   expect(state.snapshot().healthy).toBe(true); expect(scheduled).toBe(1); expect(f.modal).toBe(false);
   expect(f.events).not.toContain('welcome-click'); expect(f.events).not.toContain('modal-close');
   expect(f.events).toContain('identity'); expect(f.events).toContain('media-click:5000');
@@ -81,21 +82,21 @@ it.each(rejected)('post-start strict room observation rejects %s without treatin
 });
 it('the production heartbeat accepts only the same known panel without reopening its directory', async () => {
   const f = nativeFixture(); const state = createRunnerLifecycle(); let scheduled = 0;
-  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame }), schedule: () => { scheduled++; } });
+  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame, rendererObserver: rendererPeer() }), schedule: () => { scheduled++; } });
   expect(state.snapshot().healthy).toBe(true); expect(scheduled).toBe(1); expect(f.events).not.toContain('welcome-click'); expect(f.events).not.toContain('modal-close');
 });
 it.each(['unknown-sibling', 'panel-dialog', 'alertdialog', 'aria-modal', 'extra-button', 'duplicate', 'unresolved-media', 'media-on', 'missing-control', 'permissions-prompt'])('the production heartbeat fails %s without ready or scheduling', async variant => {
   const f = nativeFixture(variant); const logs: string[] = []; const state = createRunnerLifecycle({ log: event => logs.push(event.event) });
-  await state.ready(f.identity); logs.length = 0;
-  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame }), schedule: () => logs.push('scheduled') });
+  await readyPeer(state, f.identity); logs.length = 0;
+  await heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame, rendererObserver: rendererPeer() }), schedule: () => logs.push('scheduled') });
   expect(state.snapshot().healthy).toBe(false); expect(logs).not.toContain('ready'); expect(logs).not.toContain('scheduled'); expect(f.events).not.toContain('welcome-click');
 });
 it.each(['deadline', 'fatal'])('the production panel classifier retains the five-second/fatal boundary on %s with no late resurrection', async reason => {
   vi.useFakeTimers(); const f = nativeFixture(); const logs: string[] = []; const state = createRunnerLifecycle({ log: event => logs.push(event.event) });
-  await state.ready(f.identity); logs.length = 0;
+  await readyPeer(state, f.identity); logs.length = 0;
   let release, reached = false, settled = false;
   f.wrappersHandles[0].evaluate = async fn => { reached = true; return new Promise(resolve => { release = () => resolve(fn(panel().wrapper)); }); };
-  const tick = heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame }), schedule: () => logs.push('scheduled') }).then(() => { settled = true; });
+  const tick = heartbeatOnce({ state, expected: f.identity, probe: () => probeHeartbeat({ state, page: f.page, frame: f.frame, rendererObserver: rendererPeer() }), schedule: () => logs.push('scheduled') }).then(() => { settled = true; });
   try {
     await vi.advanceTimersByTimeAsync(0); expect(reached).toBe(true);
     if (reason === 'deadline') await vi.advanceTimersByTimeAsync(5000); else { state.fail(Error('native fatal during panel inspection')); await vi.advanceTimersByTimeAsync(0); }

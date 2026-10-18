@@ -46,11 +46,11 @@
       },
       {
         "name": "coast-life-shore-gull-north",
-        "role": "avatarForeground"
+        "role": "airborne"
       },
       {
         "name": "coast-life-shore-gull-south",
-        "role": "avatarForeground"
+        "role": "airborne"
       },
       {
         "name": "coast-life-shore-seal",
@@ -156,7 +156,7 @@
       },
       {
         "name": "world-ambient-fa-ship-gull-1",
-        "role": "avatarForeground"
+        "role": "airborne"
       }
     ],
     "fire-district": [
@@ -413,6 +413,18 @@
         "role": "avatarForeground"
       },
       {
+        "name": "plaza-fleet-camera",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-fleet-delivery",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-fleet-survey",
+        "role": "avatarForeground"
+      },
+      {
         "name": "roadster",
         "role": "avatarForeground"
       }
@@ -432,11 +444,11 @@
       },
       {
         "name": "coast-life-harbor-gull-north",
-        "role": "avatarForeground"
+        "role": "airborne"
       },
       {
         "name": "coast-life-harbor-gull-south",
-        "role": "avatarForeground"
+        "role": "airborne"
       },
       {
         "name": "coastal-flight",

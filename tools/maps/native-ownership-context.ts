@@ -12,6 +12,9 @@ interface ContextRow{
 }
 const rows=registered.maps as unknown as Record<string,ContextRow>;
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Native context '+message);};
+// The sole new production reservation family. Names/images are independent
+// authority; candidate-native bodies and allocation maxima are never inputs.
+const fleetNames=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
 const identities=(map:TiledMap)=>map.properties?.filter(p=>p.name==='worldMapId').map(p=>String(p.value))??[];
 // Domain identity comes from the independently declared current34 roster, not
 // presence of a context DATA row or an art/animation marker on the input map.
@@ -45,6 +48,14 @@ function currentAtlases(row:ContextRow,source:TiledMap):TiledTileset[]{
   const set=sets[0];need(set.imagewidth===96&&set.imageheight===96&&set.columns===3&&set.tilecount===9&&set.tilewidth===32&&set.tileheight===32,'retired plant epoch cannot be a current replacement');
   expected.push({...structuredClone(set),name:old.name,firstgid:next});next+=set.tilecount!;
  }
+ const fleet=source.tilesets.filter(set=>fleetNames.includes(set.name??''));
+ if(identities(source)[0]==='overworld'){
+  need(isDeepStrictEqual(fleet.map(set=>set.name),fleetNames),'closed plaza fleet source atlas roster/order changed');
+  for(const set of fleet){
+   need(set.image===`../assets/tilesets/original/${set.name}.png`&&set.tilewidth===32&&set.tileheight===32&&set.imagewidth===512&&set.columns===16&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&Number.isSafeInteger(set.tilecount)&&set.tilecount===set.imageheight!/32*16&&set.tilecount!<=1024,'plaza fleet source atlas identity/geometry changed');
+   expected.push({...structuredClone(set),firstgid:next});next+=set.tilecount!;
+  }
+ }else need(fleet.length===0,'plaza fleet source atlas requires overworld identity');
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -60,6 +71,9 @@ export function assertNativeOwnershipContext(actual:TiledMap,source:TiledMap):vo
 export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):void{
  const row=context(actual,source);if(!row)return;
  protectedContext(actual,row);
+ // Required current source closure is validated even for a genuine historical
+ // native input; old reservations do not opt the new source family out.
+ const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
- need(isDeepStrictEqual(actual.tilesets,currentAtlases(row,source)),'author input atlas ownership is neither exact registered nor current');
+ need(isDeepStrictEqual(actual.tilesets,expected),'author input atlas ownership is neither exact registered nor current');
 }

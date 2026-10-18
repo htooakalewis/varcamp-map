@@ -19,7 +19,7 @@ it('pins one browser dependency separately and keeps the browser image build con
   expect(instructions.filter(i => ['EXPOSE', 'VOLUME', 'ADD', 'ENTRYPOINT'].includes(i.kind))).toEqual([]);
   expect(JSON.parse(instructions.find(i => i.kind === 'CMD').args)).toEqual(['node', 'runner.mjs']);
   const copies = instructions.filter(i => i.kind === 'COPY').flatMap(i => i.args.split(' ').slice(0, -1));
-  expect(copies.sort()).toEqual(['browser-session.mjs', 'config.mjs', 'evidence.mjs', 'healthcheck.mjs', 'package-lock.json', 'package.json', 'runner.mjs']);
+  expect(copies.sort()).toEqual(['browser-session.mjs', 'candidate-render-policy.mjs', 'config.mjs', 'evidence.mjs', 'healthcheck.mjs', 'package-lock.json', 'package.json', 'runner.mjs']);
   const allowedContext = read('.dockerignore').trim().split('\n');
   expect(allowedContext[0]).toBe('*');
   expect(allowedContext.slice(1).map(s => s.slice(1)).sort()).toEqual(['Dockerfile', ...copies].sort());
