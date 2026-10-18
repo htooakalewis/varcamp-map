@@ -8,6 +8,7 @@ import {validateMap,validateWam} from '../tools/maps/validate';
 import {WORLD_CATALOG} from '../src/world/catalog';
 import type {MapLayout,TiledMap,WamFile,TileLayer} from '../tools/maps/types';
 import baseline from './fixtures/interior-original-palms/before.json';
+import {approvedHistoricalLayout,assertApprovedLayoutSuccessor} from './helpers/approved-world-successor';
 
 const alias='world-ambient-plant-palm';
 const read=<T>(path:string):T=>JSON.parse(readFileSync(path,'utf8')) as T;
@@ -33,11 +34,12 @@ describe('original same-footprint interior palms',()=>{
 
  for(const [id,before] of Object.entries(baseline.maps)){
   it(`${id}: retains the actual baseline mask, motion clocks, WAM controls and every untargeted source field`,()=>{
-   const a=load(id),rest=structuredClone(a.layout),placements=rest.placements;delete (rest as Partial<MapLayout>).placements;
+   const a=load(id),historical=approvedHistoricalLayout(id),rest=structuredClone(historical),placements=a.layout.placements;delete (rest as Partial<MapLayout>).placements;
    expect(mask(a.map)).toEqual(before.blockedIndices);expect([a.map.width,a.map.height]).toEqual([before.width,before.height]);
    expect(digest(rest)).toBe(before.layoutExceptPlacementsSha256);
+   assertApprovedLayoutSuccessor(id,a.layout);
    expect(digest(placements.filter(p=>!targets(id).some(t=>t.id===p.id)))).toBe(before.nonTargetPlacementsSha256);
-   expect(digest(a.layout.animatedOverlays)).toBe(before.motionSha256);expect(a.layout.animatedOverlays).toHaveLength(before.motionCount);
+   expect(digest(historical.animatedOverlays)).toBe(before.motionSha256);expect(a.layout.animatedOverlays).toHaveLength(before.motionCount);
    expect(sha(readFileSync(`maps/${id}.wam`))).toBe(before.wamSha256);
    if(!targets(id).length)expect(sha(readFileSync(`maps/${id}.tmj`))).toBe(before.nativeSha256);
    expect(validateMap(a.map,WORLD_CATALOG)).toEqual([]);expect(validateWam(a.wam)).toEqual([]);expect(()=>check(a)).not.toThrow();

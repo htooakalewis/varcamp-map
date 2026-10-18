@@ -14,11 +14,13 @@ import{renderPlazaGarden}from'../tools/art/plaza-garden';
 import{renderPlazaBuildings,renderPlazaGrass}from'../tools/art/plaza-buildings';
 import{renderPlazaPots}from'../tools/art/plaza-pots';
 import{renderPlazaDrones}from'../tools/art/plaza-drones';
+import{renderPlazaFleet}from'../tools/art/plaza-fleet';
 import{renderCoastLifeAssets}from'../tools/art/coast-life-assets';
 import{renderCoastLife}from'../tools/art/coast-life';
 import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion';
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
+import{approvedFleetStaticPins,approvedBirdRecipePins,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
 const digest=(v:unknown)=>sha(JSON.stringify(stable(v))),read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -43,27 +45,36 @@ it('retains the exact independently reviewed126-path registration epoch and its 
 });
 /** Descriptor authority comes from actual pure producer outputs, never a JSON
  * prefix, current source-registry contents or a caller acceptance flag. */
-async function generatedDescriptors():Promise<Map<string,unknown>>{
- const outputs=new Map<string,unknown>();const add=(path:string,value:unknown)=>{if(outputs.has(path))throw Error('Duplicate native descriptor owner: '+path);outputs.set(path,value);};
+async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:Buffer}>>{
+ const outputs=new Map<string,{json:unknown}|{bytes:Buffer}>();const add=(path:string,value:unknown)=>{if(outputs.has(path))throw Error('Duplicate native descriptor owner: '+path);outputs.set(path,{json:value});};
  add('art/source/roadster.json',(await renderRoadster()).metadata);add('art/source/coastal-flight.json',(await renderCoastalFlight()).metadata);
  add('art/source/plaza-generated.json',(await renderPlazaIdentity()).metadata);add('art/source/plaza-garden.json',(await renderPlazaGarden()).metadata);
  add('art/source/plaza-buildings.json',(await renderPlazaBuildings()).metadata);add('art/source/plaza-grass.json',(await renderPlazaGrass()).metadata);add('art/source/plaza-pots.json',(await renderPlazaPots()).metadata);
  const drones=await renderPlazaDrones();add('art/source/plaza-drones.json',drones.metadata);for(const r of drones.resources)add(r.metadataPath,{version:1,source:drones.metadata.source,overlay:r.overlay,diagnostics:r.diagnostics});
+ const fleet=await renderPlazaFleet();add('art/source/plaza-fleet.json',fleet.metadata);for(const r of fleet.aircraft){add(r.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});outputs.set(r.posePath,{bytes:r.posePng});}
  add('art/source/coast-life-assets.json',(await renderCoastLifeAssets()).metadata);for(const r of await renderCoastLife())add(r.overlay.provenance!.metadataPath,r.metadata);
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
  add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient())add(r.overlay.provenance!.metadataPath,r.metadata);
  return outputs;
 }
 it('binds every current registry path and preserves static artwork while validating genuine generated descriptors',async()=>{
- const before=read('tests/fixtures/ambient-art-publication/source-registry-before-aerial.json'),current=read('art/sources.json');
- const{original:beforeOriginal,...beforeOther}=before,{original:currentOriginal,...currentOther}=current,{files:beforeFiles,...beforeMetadata}=beforeOriginal,{files:currentFiles,...currentMetadata}=currentOriginal;
- expect(currentOther).toEqual(beforeOther);expect(currentMetadata).toEqual(beforeMetadata);expect(currentFiles.map((r:any)=>r.path)).toEqual(beforeFiles.map((r:any)=>r.path));expect(currentFiles).toHaveLength(196);
- const generated=await generatedDescriptors(),reviewedRecipeDeltas:Record<string,string>={'art/source/coast-life-tracks.json':'f14d2a1703e20f072da35c9b80aec50df830007b6661d4d538045d65f08f150d','art/source/world-ambient.json':'c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad'};
- for(let i=0;i<currentFiles.length;i++){
-  const row=currentFiles[i],old=beforeFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(Object.keys(old).sort());expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
-  if(generated.has(row.path))expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(generated.get(row.path));
-  else if(Object.hasOwn(reviewedRecipeDeltas,row.path))expect(row.sha256,row.path+' exact separately reviewed recipe').toBe(reviewedRecipeDeltas[row.path]);
-  else expect(row,row.path+' unchanged static/master/source').toEqual(old);
+ const beforeRaw=readFileSync('tests/fixtures/ambient-art-publication/source-registry-before-aerial.json');expect(sha(beforeRaw)).toBe('bb557c5266bfd5b082119616918125e206f0514b3fa73a6e8e2d2f18de488d41');
+ const before=JSON.parse(beforeRaw.toString()),current=read('art/sources.json');
+ assertApprovedLayoutSuccessor('speaker-aries',read('world/layouts/speaker-aries.json'));
+ const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
+ expect(Object.keys(current)).toEqual(Object.keys(before));expect(current.original.files).toHaveLength(196);
+ const generated=await generatedDescriptors();
+ for(const id of Object.keys(before)){
+  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(oldMetadata);
+  expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
+  for(let i=0;i<currentFiles.length;i++){
+   const row=currentFiles[i],old=oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
+   const produced=generated.get(row.path);
+   if(produced){if('json'in produced)expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(produced.json);else expect(bytes.equals(produced.bytes),row.path+' genuine native/pose PNG').toBe(true);}
+   else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(approvedBirdRecipePins[row.path]);
+   else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);
+   else{expect(old,row.path+' no undeclared extension').toBeDefined();expect(row,row.path+' unchanged static/master/source').toEqual(old);}
+  }
  }
 },30000);
 it('normal art check accepts the actual closed ambient publication without repairing any output',async()=>{const before=readFileSync('assets/tilesets/original/world-ambient-plants.png');expect(await checkArt()).toEqual([]);expect(readFileSync('assets/tilesets/original/world-ambient-plants.png').equals(before)).toBe(true);},30000);

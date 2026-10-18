@@ -1,12 +1,10 @@
-import{reconcileNativeProjection}from'../tools/maps/native-projection';
-import{buildMap}from'../tools/maps/builder';
 import {readFileSync} from 'node:fs';
 import {expect,it} from 'vitest';
 import {SIGN_IDS} from '../src/world/catalog';
 import {loadTileCatalog} from '../tools/art/catalog';
 import type {MapLayout} from '../tools/maps/types';
 import {refinePlazaFloorGarden} from '../tools/maps/plaza-floor-garden';
-import {refineNativePlaza} from '../tools/maps/plaza-native';
+import {expectedPlazaSuccessor} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
 import type {TiledMap,TileLayer} from '../tools/maps/types';
 import {validateMap} from '../tools/maps/validate';
@@ -27,10 +25,10 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
  expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate')).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'));
 });
 
-it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',()=>{
+it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
  const l=source(),catalog=loadTileCatalog();expect(refinePlazaFloorGarden(l)).toEqual(l);
- const raw=readFileSync('tests/fixtures/plaza-floor-garden/before-native.tmj','utf8'),native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap;
- expect(reconcileNativeProjection(refineNativePlaza(raw,l,catalog),buildMap(l,catalog).tmj)).toEqual(native);
+ const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
+ expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;
  for(const [x,y] of routes.allowedCells)expect(mask.data[y*128+x],`guide ${x},${y}`).toBe(0);
  const spawn=l.entries.find(p=>p.isDefault)!,queue=[spawn.y*128+spawn.x],seen=new Set(queue);

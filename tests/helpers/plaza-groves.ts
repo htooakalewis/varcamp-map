@@ -36,7 +36,7 @@ export function assertReviewedGroves(layout:MapLayout,map:TiledMap,catalog:TileC
  expected.layers.splice(floor,0,below);expected.layers.push(above);expected.nextlayerid=id+2;
  need(isDeepStrictEqual(map,expected),'current native is not the exact forward delta');
 }
-export function assertCurrentGroves(layout:MapLayout,map:TiledMap,catalog:TileCatalog):void{
- try{assertReviewedGroves(historicalFloorPlaza('layout') as MapLayout,historicalFloorPlaza('native') as TiledMap,catalog);assertPlazaSuccessor(layout,map,catalog);}
+export async function assertCurrentGroves(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
+ try{assertReviewedGroves(historicalFloorPlaza('layout') as MapLayout,historicalFloorPlaza('native') as TiledMap,catalog);await assertPlazaSuccessor(layout,map,catalog);}
  catch(error){throw Error('Grove successor '+String(error));}
 }

@@ -11,6 +11,7 @@
     "upload": "npm run buildmap && python3 ops/release_upload.py",
     "upload-only": "python3 ops/release_upload.py",
     "test": "vitest run",
+    "test:node": "node --test ops/tests/*.test.mjs",
     "maps:validate": "tsx tools/maps/validate-cli.ts",
     "maps:build": "node tools/run-tool.mjs tools/maps/build.ts",
     "art:check": "node tools/run-tool.mjs tools/art/check.ts",

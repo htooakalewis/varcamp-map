@@ -73,6 +73,8 @@ jobs:
         run: npm run maps:build
       - name: Build the complete map release
         run: npm run buildmap
+      - name: Test native Node guide contracts
+        run: npm run test:node
       - name: Test release and source contracts
         run: npm test -- --maxWorkers=1 --testTimeout=30000
       - name: Add the venue landing page and preserve the legacy map URL
