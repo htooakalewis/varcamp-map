@@ -15,7 +15,7 @@ function distances(l:MapLayout,mask:number[],start:number){const q=[start],d=new
 describe('medium authored arrival',()=>{
  it('exports the approved128² hub and matching catalog',()=>{const{tmj}=built();expect([tmj.width,tmj.height]).toEqual([128,128]);expect([WORLD_CATALOG.overworld.width,WORLD_CATALOG.overworld.height]).toEqual([128,128]);});
  it('keeps every speaker and primary choice within the approved collision walks',()=>{const{l,mask}=built();for(const start of cells(l.entries.find(e=>e.isDefault)!,l.width)){const d=distances(l,mask,start);for(const e of l.exits){const max=e.destination.startsWith('speaker-')?65:120;expect(Math.min(...cells(e,l.width).map(n=>d.get(n)??Infinity)),`${e.name} from ${start}`).toBeLessThanOrEqual(max);}}});
- it.each(SIGN_IDS)('%s has a native roofed building and legible raster nameplate',sign=>{const l=source(),tiles=loadTileCatalog(),building=l.placements.find(p=>p.id===`${sign}-building`),label=l.placements.find(p=>p.id===`${sign}-bold-nameplate`);expect(building,'a floor texture is not a roofed building').toBeDefined();expect(building!.sprite).toMatch(/^hub-building-(north|south|east|west)$/);expect([building!.width,building!.height]).toEqual([12,12]);expect(label).toBeDefined();expect(label!.sprite).toBe(`hub-label-${sign}`);expect(tiles[label!.sprite].blockingCells).toEqual([]);expect([label!.width,label!.height]).toEqual([12,2]);for(const e of [...l.entries,...l.exits])expect(overlap(label!,e),`${sign} label covers ${e.name}`).toBe(false);});
+ it.each(SIGN_IDS)('%s has a native roofed building and legible raster nameplate',sign=>{const l=source(),tiles=loadTileCatalog(),building=l.placements.find(p=>p.id===`${sign}-building`),label=l.placements.find(p=>p.id===`${sign}-bold-nameplate`);expect(building,'a floor texture is not a roofed building').toBeDefined();expect(building!.sprite).toMatch(/^plaza-building-0[1-4]$/);expect([building!.width,building!.height]).toEqual([12,12]);expect(label).toBeDefined();expect(label!.sprite).toBe(`hub-label-${sign}`);expect(tiles[label!.sprite].blockingCells).toEqual([]);expect([label!.width,label!.height]).toEqual([12,2]);for(const e of [...l.entries,...l.exits])expect(overlap(label!,e),`${sign} label covers ${e.name}`).toBe(false);});
  it('renders bold exact English names from original pixels without an installed font',async()=>{const path='art/source/hub-nameplates.json';expect(existsSync(path),'deterministic pixel-letter source is missing').toBe(true);const master=JSON.parse(readFileSync(path,'utf8'));expect(master.glyphScale).toBe(3);expect(master.strokePixels).toBeGreaterThanOrEqual(3);expect(master.labels).toEqual(SIGN_IDS.map((s,i)=>({id:s,text:`${String(i+1).padStart(2,'0')} ${s.toUpperCase()} SPEAKER ROOM`})));const svg=readFileSync('art/source/hub-labels.svg','utf8');expect(svg).not.toMatch(/<text\b|font-family|font-weight/);expect(await sharp('assets/tilesets/original/hub-labels.png').metadata()).toMatchObject({width:384,height:1632,hasAlpha:true});});
 
 
@@ -64,7 +64,7 @@ describe('medium authored arrival',()=>{
   // Conservatively use30×16 tiles and reserve1tile above/sides plus2tiles below for normal HUD.
   const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!,directory=l.placements.find(p=>p.id==='directory-prompt')!;
   const arrows=[{name:'north',x:post.x+1.5,y:post.y,width:3,height:1},{name:'west',x:post.x,y:post.y+1,width:3,height:1},{name:'east',x:post.x+3,y:post.y+1,width:3,height:1},{name:'south',x:post.x+1.5,y:post.y+2,width:3,height:1}];
-  const required=[...(l.images??[]),directory,...arrows];expect(l.images).toHaveLength(3);
+  const required=[...(l.images??[]),directory,...arrows];expect(l.images).toHaveLength(4);
   const supportIds=sponsorSupportIds(l,loadTileCatalog());
   assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);
@@ -74,7 +74,7 @@ describe('medium authored arrival',()=>{
   }
  });
  it('uses compact native arrival boards while retaining full bold speaker nameplates',()=>{
-  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3],'varcamp-nameplate':[6,1],'welcome-control-sign':[5,1],'directory-prompt':[4,1],'arrival-position-label':[4,1]})){
+  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3],'welcome-control-sign':[5,1],'directory-prompt':[4,1],'arrival-position-label':[4,1]})){
    const p=l.placements.find(p=>p.id===id)!;expect([p.width,p.height],id).toEqual(size);
   }
  });
@@ -93,7 +93,7 @@ describe('medium authored arrival',()=>{
  });
  it('keeps every raster nameplate and pointer apart from controls and other plaques',()=>{
   const l=source(),plaques=[...SIGN_IDS.map(sign=>{const p=l.placements.find(p=>p.id===`${sign}-bold-nameplate`)!;expect(p).toBeDefined();assertVisual(loadTileCatalog()[p.sprite],loadTileCatalog()[`hub-label-${sign}`]);return p;}),...arrivalPlaques(l,loadTileCatalog())];
-  expect(new Set(plaques.map(p=>p.id)).size).toBe(21);
+  expect(new Set(plaques.map(p=>p.id)).size).toBe(20);
   for(const[i,p]of plaques.entries()){
    for(const r of [...l.entries,...l.exits,...l.areas])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
    for(const other of plaques.slice(i+1))expect(overlap(p,other),`${p.id} overlaps ${other.id}`).toBe(false);

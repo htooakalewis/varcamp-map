@@ -7,7 +7,7 @@ import { build } from 'vite';
 import sharp from 'sharp';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { WORLD_CATALOG } from '../src/world/catalog';
-import { worldRelease } from '../tools/release';
+import {syntheticReleasePlugin} from './helpers/synthetic-release-plugin';
 import * as releaseModule from '../tools/release';
 import { pinnedTilesetValidation } from './helpers/pinned-tileset-validator';
 
@@ -19,7 +19,7 @@ let fixture: string;
 
 beforeEach(() => {
   fixture = mkdtempSync(resolve(tmpdir(), 'varcamp-release-cache-'));
-  for (const path of ['maps', 'src', 'art', 'world', 'assets/tilesets/original', 'docs/dependencies']) mkdirSync(resolve(fixture, path), { recursive: true });
+  for (const path of ['maps', 'src', 'art', 'world/layouts', 'assets/tilesets/original', 'docs/dependencies']) mkdirSync(resolve(fixture, path), { recursive: true });
   cpSync(resolve(project, 'src'), resolve(fixture, 'src'), { recursive: true });
   cpSync(resolve(project, 'world/maze-route.json'), resolve(fixture, 'world/maze-route.json'));
   symlinkSync(resolve(project, 'node_modules'), resolve(fixture, 'node_modules'));
@@ -29,16 +29,20 @@ beforeEach(() => {
   writeFileSync(resolve(fixture, 'docs/dependencies/LICENSE.starter'), 'MIT fixture');
   writeFileSync(resolve(fixture, 'src/main.ts'), 'console.log("first runtime")');
   for (const id of ids) {
+    const definition=WORLD_CATALOG[id as keyof typeof WORLD_CATALOG];
+    writeFileSync(resolve(fixture,`world/layouts/${id}.json`),JSON.stringify({id,width:definition.width,height:definition.height,placements:[],entries:[],exits:[],areas:[],inspectionZones:[]}));
     writeFileSync(resolve(fixture, `maps/${id}.tmj`), JSON.stringify({
-      width: 1, height: 1, tilewidth: 32, tileheight: 32,
-      properties: [{ name: 'script', type: 'string', value: '../src/main.ts' }],
-      tilesets: [], layers: [{ id: 1, type: 'tilelayer', name: 'terrain', width: 1, height: 1, data: [1] }],
+      width: definition.width, height: definition.height, tilewidth: 32, tileheight: 32,
+      properties: [{ name: 'script', type: 'string', value: '../src/main.ts' },{name:'worldMapId',type:'string',value:id}],
+      tilesets: [], layers: [{ id: 1, type: 'tilelayer', name: 'terrain', width: definition.width, height: definition.height, data: Array.from({length:definition.width*definition.height},(_,i)=>i===0?1:0) }],
     }, null, 2));
     writeFileSync(resolve(fixture, `maps/${id}.wam`), JSON.stringify({
       version: '2.1.0', mapUrl: `${id}.tmj`, entities: {}, areas: [], entityCollections: [],
       settings: { copyright: 'Fixture author' }, metadata: { name: id, preserved: { value: true } },
     }, null, 2));
   }
+  mkdirSync(resolve(fixture,'public/wokas'),{recursive:true});
+  cpSync(resolve(project,'public/wokas/varcamp-zodiac-v1'),resolve(fixture,'public/wokas/varcamp-zodiac-v1'),{recursive:true});
   process.chdir(fixture);
 });
 
@@ -46,7 +50,7 @@ afterEach(() => { process.chdir(project); rmSync(fixture, { recursive: true, for
 
 async function release(directory: string, ui = false): Promise<string> {
   // Vitest sets NODE_ENV=test; exercise the same production URL branch as the Vite CLI.
-  await build({ configFile: false, publicDir: false, logLevel: 'silent', define: { 'import.meta.env.DEV': false }, plugins: [worldRelease()], build: {
+  await build({ configFile: false, publicDir: false, logLevel: 'silent', define: { 'import.meta.env.DEV': false }, plugins: [syntheticReleasePlugin()], build: {
     outDir: directory, rollupOptions: { preserveEntrySignatures: 'strict', input: { 'src-main': resolve('src/main.ts'), ...(ui ? { journal: resolve('src/journal/index.html'), npc: resolve('src/npc/index.html') } : {}) } },
   } });
   return resolve(directory);
@@ -86,7 +90,8 @@ describe('release TMJ cache identity', () => {
     const after = await release('after');
     const currentUrl = mapUrl(after);
     const loaded = browserCache.get(currentUrl.href) ?? emittedMap(after, currentUrl);
-    expect(JSON.parse(loaded.toString()).layers[0].data).toEqual([2]);
+    expect(JSON.parse(loaded.toString()).layers[0].data[0]).toBe(2);
+    expect(JSON.parse(loaded.toString()).layers[0].data).toEqual(native.layers[0].data);
     expect(currentUrl.href).not.toBe(oldUrl.href);
     expect(emittedMap(after, currentUrl)).not.toEqual(oldBytes);
   });

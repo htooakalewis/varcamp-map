@@ -45,8 +45,8 @@ describe('medium authored event world',()=>{
    }
   }
  });
- it('shows three independently replaceable sponsor images beside arrival',()=>{
-  const hub=scenes().find(l=>l.id==='overworld')!;const images=(hub as MapLayout & {images?:({image:string}&TileRect)[]}).images??[];
+ it('shows the three independently replaceable sponsor images beside the distinct VarCamp floor identity',()=>{
+  const hub=scenes().find(l=>l.id==='overworld')!;const allImages=(hub as MapLayout & {images?:({image:string}&TileRect)[]}).images??[];expect(allImages).toHaveLength(4);expect(allImages.filter(i=>i.image==='assets/sponsors/varcamp-2026.png')).toHaveLength(1);const images=allImages.filter(i=>/^assets\/sponsors\/demo-0[123]\.png$/.test(i.image));
   expect(images).toHaveLength(3);
   expect(new Set(images.map(i=>i.image)).size).toBe(3);
   const spawn=hub.entries.find(e=>e.isDefault)!;

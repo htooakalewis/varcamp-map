@@ -124,6 +124,7 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   layers.push(terrain,...stacks[0].layers,{id:0,name:'floorLayer',type:'objectgroup',objects:[],visible:true,opacity:1},...stacks[1].layers);
   for (const overlay of layout.animatedOverlays ?? []) {
     bounds(overlay, `Animation ${overlay.name}`);
+    if (overlay.level !== undefined && overlay.level !== 'belowAvatar' && overlay.level !== 'aboveAvatar') throw new Error(`Animation ${overlay.name}: invalid avatar depth level`);
     const count = overlay.width * overlay.height;
     if (count >= 256 || overlay.carrierTileIds.length !== count || new Set(overlay.carrierTileIds).size !== count) throw new Error(`Animation ${overlay.name}: use fewer than 256 distinct carrier cells`);
     if (!/^assets\/tilesets\/original\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.png$/.test(overlay.image) || !sources[overlay.sourceId]) throw new Error(`Animation ${overlay.name}: registered original atlas required`);
@@ -154,7 +155,8 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     nextgid += tilecount;
     const animated = layer(overlay.name);
     for (let y = 0; y < overlay.height; y++) for (let x = 0; x < overlay.width; x++) animated.data[(overlay.y + y) * layout.width + overlay.x + x] = firstgid + overlay.carrierTileIds[y * overlay.width + x];
-    layers.push(animated);
+    if (overlay.level === 'belowAvatar') layers.splice(layers.findIndex(l => l.name === 'floorLayer'), 0, animated);
+    else layers.push(animated);
   }
   const collision=layer('physical-collisions',0);collision.data=Array.from(groundMask,(v,i)=>v||propMask[i]?wall:0);layers.push(collision);
   for (const image of layout.images ?? []) {
@@ -166,7 +168,8 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     nextgid += 12;
     const panel = layer(image.name);
     for (let y = 0; y < 2; y++) for (let x = 0; x < 6; x++) panel.data[(image.y + y) * layout.width + image.x + x] = firstgid + y * 6 + x;
-    layers.push(panel);
+    if(image.standing===true)layers.push(panel);
+    else layers.splice(layers.findIndex(l=>l.name==='floorLayer'),0,panel);
   }
   for(const entry of layout.entries) {
     bounds(entry,entry.name);const l=layer(entry.name,0);

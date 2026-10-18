@@ -1,0 +1,34 @@
+import {readFileSync} from 'node:fs';
+import {createHash,} from 'node:crypto';
+import {expect,it} from 'vitest';
+import {refineCoastLife} from '../tools/maps/refine-coast-life';
+const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
+const hash=(v:any)=>createHash('sha256').update(JSON.stringify(stable(v))).digest('hex');
+const baseline=json('tests/fixtures/coast-life/baseline.json');
+const ids=['shipyard-beach','constellation-shore'];
+it('replaces every selected flat beach prop with an original coast-life sprite while preserving its solid/upper geometry',()=>{
+ const c=json('art/tile-catalog.json');for(const old of baseline.placements){const l=json(`world/layouts/${old.map}.json`),p=l.placements.find((p:any)=>p.id===old.placementId);expect(p?.sprite,old.placementId).toBe(old.newSprite);expect([p.x,p.y,p.width,p.height,p.layer]).toEqual([old.x,old.y,old.width,old.height,old.layer]);expect(c[p.sprite].blockingCells).toEqual(old.blockingCells);expect(c[p.sprite].upperCells??null).toEqual(old.upperCells);expect(c[p.sprite].level).toBe(old.level);}
+});
+it.each(ids)('%s gives fish swimming paths and gulls travelling flapping poses as actual native tile animations',id=>{
+ const l=json(`world/layouts/${id}.json`),m=json(`maps/${id}.tmj`);expect(l.placements.some((p:any)=>['coast-fish','coast-gull'].includes(p.sprite))).toBe(false);
+ for(const kind of ['fish','gull']){const overlays=l.animatedOverlays?.filter((o:any)=>o.name.startsWith('coast-life-')&&o.name.includes(kind))??[];expect(overlays.length,kind).toBeGreaterThanOrEqual(2);for(const o of overlays){const atlas=m.tilesets.find((t:any)=>t.name===o.name),layer=m.layers.find((x:any)=>x.name===o.name);expect(atlas?.tiles?.some((t:any)=>new Set(t.animation?.map((a:any)=>a.tileid)).size>2),o.name).toBe(true);expect(layer).toBeDefined();}}
+});
+it('keeps both actual curved terrain/masks and all map gates, activity footprints and standing labels exact',()=>{
+ for(const id of ids){const l=json(`world/layouts/${id}.json`),m=json(`maps/${id}.tmj`),old=baseline.maps[id];expect(hash(m.layers.find((x:any)=>x.name==='terrain').data),id).toBe(old.terrainSha256);expect(hash(m.layers.find((x:any)=>x.name==='physical-collisions').data),id).toBe(old.collisionSha256);expect(hash(l.placements.filter((p:any)=>p.layer==='terrain')),id).toBe(old.terrainPlacementsSha256);for(const[k,v]of Object.entries(old.controls))expect(l[k]??null,`${id}/${k}`).toEqual(v);for(const[name,pin]of Object.entries(old.semanticLayerHashes))expect(hash(m.layers.find((x:any)=>x.name===name)),`${id}/${name}`).toBe(pin);}
+});
+it('preserves the historical coast-only catalog append against its genuine frozen catalog epoch',()=>{const bytes=readFileSync('tests/fixtures/coast-life/catalog-after-coast.json');expect(createHash('sha256').update(bytes).digest('hex')).toBe('38c8c5f24161478cf9370a711d9df5953d8d15d65519eb2a82e3c371ee70b0b7');const c=JSON.parse(bytes.toString());expect(hash(Object.fromEntries(baseline.catalogKeys.map((k:string)=>[k,c[k]])))).toBe(baseline.catalogSha256);const added=Object.keys(c).filter(k=>!baseline.catalogKeys.includes(k));expect(added).toHaveLength(24);expect(added.every(k=>k.startsWith('coast-life-'))).toBe(true);});
+it('retains every original and all24 coast sprite definitions in the current multi-domain catalog',()=>{const c=json('art/tile-catalog.json'),historical=json('tests/fixtures/coast-life/catalog-after-coast.json');expect(hash(Object.fromEntries(baseline.catalogKeys.map((k:string)=>[k,c[k]])))).toBe(baseline.catalogSha256);for(const key of Object.keys(historical).filter(k=>!baseline.catalogKeys.includes(k)))expect(c[key],key).toEqual(historical[key]);});
+it('keeps every sampled fish/dolphin/seal footprint strictly over full sea and fits all finite native carrier/clock limits',()=>{
+ const recipe=json('art/source/coast-life-tracks.json');for(const id of ids){const l=json(`world/layouts/${id}.json`),surface=Array(l.width*l.height).fill('');for(const p of l.placements.filter((p:any)=>p.layer==='terrain'))for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)surface[y*l.width+x]=p.sprite;
+ for(const o of recipe.maps[id]){expect(o.rect.width*o.rect.height).toBeLessThan(256);expect(o.stepMs).toBeGreaterThanOrEqual(100);expect(o.periodMs%o.stepMs).toBe(0);for(const t of o.tracks){expect(t.samples).toHaveLength(o.periodMs/o.stepMs);for(const s of t.samples){expect([s.x,s.y,s.pose].every(Number.isInteger)).toBe(true);if(!o.waterOnly||(o.kind==='dolphin'&&s.pose===0))continue;for(let y=Math.floor(s.y/32)+o.rect.y;y<Math.ceil((s.y+o.poseSize[1])/32)+o.rect.y;y++)for(let x=Math.floor(s.x/32)+o.rect.x;x<Math.ceil((s.x+o.poseSize[0])/32)+o.rect.x;x++)expect(surface[y*l.width+x],`${id}/${o.name}/${x},${y}`).toMatch(/^naval-water-/);}}
+ }}
+});
+it('moves each fish and gull track through space, changes swim/flap poses, and makes dolphin breaches rare',()=>{const recipe=json('art/source/coast-life-tracks.json');for(const rows of Object.values(recipe.maps)as any[])for(const o of rows)for(const t of o.tracks){const visible=t.samples.filter((s:any)=>o.kind!=='dolphin'||s.pose!==0);expect(new Set(visible.map((s:any)=>s.pose)).size,o.name).toBeGreaterThanOrEqual(3);if(['fish','gull'].includes(o.kind)){expect(Math.max(...visible.map((s:any)=>s.x))-Math.min(...visible.map((s:any)=>s.x)),o.name).toBeGreaterThan(32);}if(o.kind==='dolphin')expect(visible.length/t.samples.length).toBeLessThanOrEqual(.05);}});
+it.each(ids)('%s author migration is idempotent and rejects removed current prop source',id=>{
+ const m=json(`maps/${id}.tmj`),l=json(`world/layouts/${id}.json`),c=json('art/tile-catalog.json');const once=refineCoastLife(m,l,c),twice=refineCoastLife(once.map,once.layout,c);expect(twice).toEqual(once);
+ const missing=structuredClone(l);missing.placements=missing.placements.filter((p:any)=>!p.sprite.startsWith('coast-life-'));expect(()=>refineCoastLife(m,missing,c)).toThrow(/Missing declared original coast prop/);
+});
+it('keeps all marine motion in visibly open water, never over the hull, docks, boats or rocks; only the resting seal owns its declared rock',()=>{
+ const recipe=json('art/source/coast-life-tracks.json');for(const id of ids){const l=json(`world/layouts/${id}.json`);for(const o of recipe.maps[id].filter((o:any)=>o.waterOnly))for(const t of o.tracks)for(const s of t.samples){if(o.kind==='dolphin'&&s.pose===0)continue;const box={x:o.rect.x*32+s.x,y:o.rect.y*32+s.y,width:o.poseSize[0],height:o.poseSize[1]};for(const p of l.placements.filter((p:any)=>p.layer!=='terrain'&&p.sprite!=='beach-sea-veil'&&p.id!==o.existingRockPlacement))expect(box.x<(p.x+p.width)*32&&box.x+box.width>p.x*32&&box.y<(p.y+p.height)*32&&box.y+box.height>p.y*32,`${o.name} overlaps ${p.id}`).toBe(false);}}
+});

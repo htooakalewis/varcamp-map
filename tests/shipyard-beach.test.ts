@@ -46,7 +46,7 @@ describe('separate harbor, shore and ship journeys',()=>{
     const l=load(),{tmj}=buildMap(l,loadTileCatalog()),{seen,blocked}=physical(tmj,l.entries[0]);
     for(const[x,y]of[[0,0],[0,47],[47,47],[20,46]])expect(blocked[y*l.width+x],`open harbor sea ${x},${y}`).not.toBe(0);
     const pier=l.inspectionZones.find(z=>z.name==='boarding-pier')!;expect(pier).toBeDefined();expect(cells(pier,l.width).some(c=>!blocked[c]&&seen.has(c))).toBe(true);
-    expect(l.placements.some(p=>p.sprite==='boat-wood')).toBe(true);expect(load('constellation-shore').placements.some(p=>['ground-sand','coast-sand'].includes(p.sprite)||p.sprite.startsWith('beach-sand-'))).toBe(true);
+    expect(l.placements.some(p=>p.sprite==='coast-life-boat-wood')).toBe(true);expect(load('constellation-shore').placements.some(p=>['ground-sand','coast-sand'].includes(p.sprite)||p.sprite.startsWith('beach-sand-'))).toBe(true);
   });
   it('keeps signed physical returns readable and clear of foreground props',()=>{
     for(const id of ['shipyard-beach','fa-ship','constellation-shore']){const l=load(id);expect(l.signs!.some(s=>s.name==='plaza-return-label')).toBe(true);for(const s of l.signs!)for(const p of l.placements.filter(p=>p.layer==='props'))expect(s.x<p.x+p.width&&s.x+s.width>p.x&&s.y<p.y+p.height&&s.y+s.height>p.y,`${id} ${s.name} covered by ${p.id}`).toBe(false);}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "tool": "builtin image_gen imagegen",
+  "prompt": "Original transparent PNG animation sprite atlas for a restrained detailed2D top-down pixel-game environment. EXACT4columns and7rows,28separate cells on a portrait canvas; every cell has generous fully transparent padding and no overlap, all four frames per row same scale/view and anchored consistently. No grid lines or text. Row1: four consecutive pale-white wisps of warm coffee steam, a slender curled vapor gradually rising and thinning. Row2: four consecutive natural small clear-water ripple rings expanding slowly, delicate bluewhite broken elliptical water strokes, no water-surface rectangle or backdrop. Row3: four consecutive restrained tiny cyan/amber device activity patterns, a few irregular indicator squares and a short moving line, sparse pixels, no actual monitor frame, no text. Row4: four consecutive tiny steady amber lantern flame/glow shapes with gentle natural variation, no large halo. Row5: four consecutive realistic small green/copper leaves rotating as they drift in a breeze, one leaf each cell with detailed veins and natural anatomy. Row6: four consecutive small ribbons of clear-blue cascading fountain water with fine droplets, vertical short falling stream, no fountain structure/background. Row7: four consecutive restrained small blue-white glass/crystal glints, delicate tiny star-like reflected highlights, no giant sparkles. Cohesive detailed natural painterly pixel-art materials matching an elegant weathered tropical/technology venue, readable when downscaled to8–32pixel sprite sizes; orthographic game overlay sprites, actual alpha transparency. Every scene fragment isolated, no ground, no landscape, no people, no faces, no logos, no watermark. Frame change subtle, no flashing contrast. Transparent background; no black/white/checkerboard backdrop.",
+  "scope": "Root-approved35smallnativeeffects across17maps; original PNG-only new painted pixels.",
+  "master": {
+    "path": "art/source/world-ambient-fx-master.png",
+    "originalPath": "/Users/htooayelwin/.codex/generated_images/01a14dc6-aa8f-7cf3-8905-db4ef89942a1/exec-80d4984e-d342-4fdd-8554-11eb061de2e5.png",
+    "sha256": "5b3ccc87bc78b6e5923b422ecd1d1322ad620d82198a7547d8896ca441e50ce9"
+  },
+  "marineInputs": [
+    {
+      "path": "art/source/world-ambient-approved-fish-strip.png",
+      "originalPath": "art/source/coast-life-fish-poses.png",
+      "provenance": "Exact approved original native pose strip reused from frozen coast candidate; generated master/crop receipts remain with coast release.",
+      "sha256": "2c1864d0e40d0870539312cb11bc242965c6fc47a40fccc1ee8430e99018801e",
+      "derivation": "Immutable approved coast pose PNG input. Exported public pose strip is a separate lossless straight-alpha RAW stitch; output never serves as its own source."
+    },
+    {
+      "path": "art/source/world-ambient-approved-gull-strip.png",
+      "originalPath": "art/source/coast-life-gull-poses.png",
+      "provenance": "Exact approved original native pose strip reused from frozen coast candidate; generated master/crop receipts remain with coast release.",
+      "sha256": "36167c9fe1a2282cd225de0a6b39dcd3088f3f49e837ca1e8052961e84137216",
+      "derivation": "Immutable approved coast pose PNG input. Exported public pose strip is a separate lossless straight-alpha RAW stitch; output never serves as its own source."
+    }
+  ]
+}

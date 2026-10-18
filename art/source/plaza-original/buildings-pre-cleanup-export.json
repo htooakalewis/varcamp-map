@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/buildings-generated-master.png",
+    "sha256": "a91894146c4958e128a299774ace60f1af0e486ffa5d70533759ad7fcf3c1af9"
+  },
+  "operation": "alpha-tight whole-subject crops; uniform nearest-neighbor fit; centered south edge; source RGBA retained",
+  "crops": [
+    {
+      "cell": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 28,
+        "top": 87,
+        "width": 571,
+        "height": 498
+      },
+      "target": {
+        "x": 0,
+        "y": 49,
+        "width": 384,
+        "height": 335
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 655,
+        "top": 87,
+        "width": 571,
+        "height": 501
+      },
+      "target": {
+        "x": 384,
+        "y": 47,
+        "width": 384,
+        "height": 337
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 0,
+        "top": 627,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 25,
+        "top": 659,
+        "width": 578,
+        "height": 513
+      },
+      "target": {
+        "x": 0,
+        "y": 427,
+        "width": 384,
+        "height": 341
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 627,
+        "top": 627,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 638,
+        "top": 659,
+        "width": 602,
+        "height": 512
+      },
+      "target": {
+        "x": 384,
+        "y": 441,
+        "width": 384,
+        "height": 327
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/plaza-buildings.png",
+    "width": 768,
+    "height": 768,
+    "sha256": "9e7684a3aa72588b015bc2be0bb1bbd49ee44cd3f60836036e390ceb8cc9ff36"
+  }
+}

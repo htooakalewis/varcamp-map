@@ -1,5 +1,5 @@
+import{stageHistoricalCoastInputs}from'./helpers/published-map-epoch';
 import {historicalBeach} from './helpers/organic-coast-history';
-import {assertVisual} from './helpers/physical-prop-contracts';
 import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
 import { readFileSync, mkdtempSync, cpSync, mkdirSync, writeFileSync, symlinkSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -38,7 +38,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
  it('keeps the proposed layout authoritative and all native layers valid',()=>{
   const source=layout(),{tmj}=buildMap(source,loadTileCatalog());expect(validateMap(native(),WORLD_CATALOG)).toEqual([]);expect(validateMap(tmj,WORLD_CATALOG)).toEqual([]);
   const catalog=loadTileCatalog(),recliners=source.placements.filter(p=>['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].includes(p.id));expect(recliners.map(p=>p.id).sort()).toEqual(['beach-seat-west-a','beach-seat-west-b','beach-seat-arrival-a','beach-seat-arrival-b','beach-seat-bar-a','beach-seat-bar-b'].sort());
-  for(const p of recliners)assertVisual(catalog[p.sprite],catalog['beach-recliner']);
+  for(const p of recliners){expect(p.sprite).toBe('coast-life-solid-beach-recliner');const art=json('art/source/coast-life-assets.json');expect(catalog[p.sprite]).toMatchObject({sheet:art.atlas.path,rect:art.atlas.rects[p.sprite],sourceId:'original'});expect([p.width,p.height]).toEqual([2,3]);}
   expect(source.placements.some(p=>{const s=catalog[p.sprite],old=catalog['coast-deck-chair'];return s.sheet===old.sheet&&JSON.stringify(s.rect)===JSON.stringify(old.rect)&&s.sourceId===old.sourceId;})).toBe(false);
   expect(source.animatedOverlays!.some(o=>o.name.startsWith('beach-surf'))).toBe(false);expect(native().tilesets.some(t=>t.name==='organic-coast'&&t.tiles?.some(t=>t.animation))).toBe(true);
  });
@@ -78,6 +78,7 @@ describe('relaxed native beach with retained harbor contracts',()=>{
   const temp=mkdtempSync(resolve(tmpdir(),'beach-reconcile-'));
   try{
    for(const dir of ['assets','art','tools'])cpSync(dir,resolve(temp,dir),{recursive:true});
+   stageHistoricalCoastInputs(temp);
    mkdirSync(resolve(temp,'world/layouts'),{recursive:true});mkdirSync(resolve(temp,'maps'));
    // The isolated tool copy must include its actual shared configuration dependency.
    cpSync('world/editor-collections.json',resolve(temp,'world/editor-collections.json'));

@@ -1,20 +1,21 @@
-import {assertNativeOrganicCoast} from './organic-coast';
-import{assertNativeOceanMap,readShipFloorLabels}from'./beach-ship';
 import{loadTileCatalog}from'../art/catalog';
-import{assertNativeStandingCaptions}from'./standing-captions';
 import type{MapLayout}from'./types';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { validateMap, validateWam } from './validate';
 import { WORLD_CATALOG } from '../../src/world/catalog';
 import { isSponsorTileset, readSponsorTileset } from './builder';
+import {assertCurrentMapRoster} from './current-package';
+import {assertCurrentNativeMap} from './current-native';
 import type { TiledMap, TiledLayer } from './types';
 
 /** Normal builds preserve native Tiled sources and only refresh validated previews. */
 await mkdir('maps/preview',{recursive:true});
-for(const file of (await readdir('maps')).filter(f=>f.endsWith('.tmj')).sort()) {
+const currentFiles=await readdir('maps');assertCurrentMapRoster(currentFiles);
+const previews:[string,string][]=[];
+for(const file of currentFiles.filter(f=>f.endsWith('.tmj')).sort()) {
   const tmj=JSON.parse(await readFile(`maps/${file}`,'utf8')) as TiledMap;
   const wam=JSON.parse(await readFile(`maps/${file.replace('.tmj','.wam')}`,'utf8'));
-  const layout=JSON.parse(await readFile(`world/layouts/${file.replace('.tmj','.json')}`,'utf8'))as MapLayout;assertNativeStandingCaptions(tmj,layout);assertNativeOceanMap(tmj,layout);assertNativeOrganicCoast(tmj,layout);readShipFloorLabels(tmj,layout,loadTileCatalog());
+  const layout=JSON.parse(await readFile(`world/layouts/${file.replace('.tmj','.json')}`,'utf8'))as MapLayout;assertCurrentNativeMap(file.slice(0,-4),tmj,layout,wam,loadTileCatalog());
   const issues=[...validateMap(tmj,WORLD_CATALOG),...validateWam(wam)];
   if(issues.length)throw new Error(`${file}: ${JSON.stringify(issues)}`);
   const preview=structuredClone(tmj);
@@ -31,6 +32,8 @@ for(const file of (await readdir('maps')).filter(f=>f.endsWith('.tmj')).sort()) 
     }
   }
   prepare(preview.layers);
-  await writeFile(`maps/preview/${file}`,JSON.stringify(preview)+'\n');
-  console.log(`${file}: native Tiled source retained; validated WAM + refreshed preview.`);
+  previews.push([file,JSON.stringify(preview)+'\n']);
 }
+
+// No preview body is written until every current source/domain check has passed.
+for(const[file,body]of previews){await writeFile(`maps/preview/${file}`,body);console.log(`${file}: native Tiled source retained; validated WAM + refreshed preview.`);}

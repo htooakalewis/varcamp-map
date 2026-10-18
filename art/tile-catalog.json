@@ -21499,5 +21499,3468 @@
       ]
     ],
     "level": "belowAvatar"
+  },
+  "coast-life-beach-cabana": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 5,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-tiki-bar": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 5,
+      "y": 0,
+      "width": 6,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-solid-coast-beach-bar": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 11,
+      "y": 0,
+      "width": 6,
+      "height": 5
+    },
+    "blockingCells": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ]
+    ]
+  },
+  "coast-life-beach-palm": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 17,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-palm": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 20,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-parasol-coral": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 23,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-parasol-teal": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 26,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-solid-coast-parasol": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 29,
+      "y": 0,
+      "width": 3,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        1,
+        3
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "coast-life-solid-beach-recliner": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 0,
+      "y": 5,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "coast-life-solid-coast-deck-chair": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 2,
+      "y": 5,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "coast-life-beach-woven-towel": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 4,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-towel": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 6,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-shrub": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 8,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-solid-beach-low-table": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 10,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "coast-life-coast-underwater-rock": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 12,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-solid-coast-sandcastle": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 14,
+      "y": 5,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "coast-life-solid-coast-volley-net": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 16,
+      "y": 5,
+      "width": 5,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ]
+  },
+  "coast-life-boat-wood": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 21,
+      "y": 5,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-grass": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 23,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-beach-pebbles": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 24,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-footprints": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 25,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-mooring-post": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 26,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-pebble-cluster": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 27,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "coast-life-coast-shell": {
+    "sheet": "assets/tilesets/original/coast-life-props.png",
+    "rect": {
+      "x": 28,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "zodiac-emblem-aries": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-taurus": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-gemini": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 8,
+      "y": 0,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-cancer": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-leo": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-virgo": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 4,
+      "y": 4,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-libra": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 8,
+      "y": 4,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-scorpio": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 12,
+      "y": 4,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-sagittarius": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 0,
+      "y": 8,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-capricorn": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 4,
+      "y": 8,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-aquarius": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 8,
+      "y": 8,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "zodiac-emblem-pisces": {
+    "sheet": "assets/tilesets/original/zodiac-emblems.png",
+    "rect": {
+      "x": 12,
+      "y": 8,
+      "width": 4,
+      "height": 4
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "zodiac-emblems"
+  },
+  "plaza-tree-round": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-tree-birch": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 2,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-tree-flowering": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-tree-evergreen": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 6,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-shrub": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 0,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-blueberry": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 2,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-lavender": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 4,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-fern": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 6,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-hosta": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 7,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-flower-bed": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-tulips": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 2,
+      "y": 4,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-wildflowers": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 4,
+      "y": 4,
+      "width": 2,
+      "height": 2
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-grass-tuft": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 6,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-clover": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 7,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-moss-stones": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 6,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-mushrooms": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 7,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-plant-tree": {
+    "sheet": "assets/tilesets/original/plaza-garden.png",
+    "rect": {
+      "x": 0,
+      "y": 6,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-building-01": {
+    "sheet": "assets/tilesets/original/plaza-buildings.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 12
+    },
+    "blockingCells": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "plaza-original-buildings"
+  },
+  "plaza-building-02": {
+    "sheet": "assets/tilesets/original/plaza-buildings.png",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 12
+    },
+    "blockingCells": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "plaza-original-buildings"
+  },
+  "plaza-building-03": {
+    "sheet": "assets/tilesets/original/plaza-buildings.png",
+    "rect": {
+      "x": 0,
+      "y": 12,
+      "width": 12,
+      "height": 12
+    },
+    "blockingCells": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "plaza-original-buildings"
+  },
+  "plaza-building-04": {
+    "sheet": "assets/tilesets/original/plaza-buildings.png",
+    "rect": {
+      "x": 12,
+      "y": 12,
+      "width": 12,
+      "height": 12
+    },
+    "blockingCells": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "plaza-original-buildings"
+  },
+  "plaza-grass-01": {
+    "sheet": "assets/tilesets/original/plaza-grass.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-grass-02": {
+    "sheet": "assets/tilesets/original/plaza-grass.png",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-grass-03": {
+    "sheet": "assets/tilesets/original/plaza-grass.png",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-grass-04": {
+    "sheet": "assets/tilesets/original/plaza-grass.png",
+    "rect": {
+      "x": 1,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-plant-grass": {
+    "sheet": "assets/tilesets/original/plaza-pots.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-plant-flower": {
+    "sheet": "assets/tilesets/original/plaza-pots.png",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-potted-fern": {
+    "sheet": "assets/tilesets/original/plaza-pots.png",
+    "rect": {
+      "x": 2,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "plaza-potted-lavender": {
+    "sheet": "assets/tilesets/original/plaza-pots.png",
+    "rect": {
+      "x": 3,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "upperCells": [],
+    "level": "belowAvatar",
+    "sourceId": "plaza-original-garden"
+  },
+  "interior-ref-aquarium": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 3,
+      "y": 4,
+      "width": 4,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-cabinet": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 10,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-desk-cluster": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 6,
+      "height": 4
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-forge": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 7,
+      "y": 4,
+      "width": 4,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-plant": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 3,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-plant-motion-base": {
+    "sheet": "assets/tilesets/original/interior-reference-plant-base.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 3,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-refreshment": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 3,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-server": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 11,
+      "y": 4,
+      "width": 2,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "interior-ref-sofa": {
+    "sheet": "assets/tilesets/original/interior-reference.png",
+    "rect": {
+      "x": 6,
+      "y": 0,
+      "width": 4,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "interior-reference"
+  },
+  "world-ambient-plant-palm": {
+    "sheet": "assets/tilesets/original/world-ambient-plants.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 3,
+      "height": 3
+    },
+    "blockingCells": [
+      [
+        1,
+        2
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
   }
 }

@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/drone-approved-master.png",
+    "sha256": "2196cbaf1a6dcc63d08affc6beae9c18fa4c9bb3556273e0f674d8023e3b131c"
+  },
+  "overlay": {
+    "name": "plaza-drone-24",
+    "image": "assets/tilesets/original/plaza-drone-24.png",
+    "sourceId": "plaza-original-drones",
+    "level": "belowAvatar",
+    "x": 13,
+    "y": 75,
+    "width": 2,
+    "height": 5,
+    "carrierTileIds": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "animations": [
+      {
+        "id": 11,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 37200
+          },
+          {
+            "tileid": 9,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 42600
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 37000
+          },
+          {
+            "tileid": 7,
+            "duration": 200
+          },
+          {
+            "tileid": 10,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 42600
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36800
+          },
+          {
+            "tileid": 6,
+            "duration": 200
+          },
+          {
+            "tileid": 8,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 42800
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36400
+          },
+          {
+            "tileid": 3,
+            "duration": 200
+          },
+          {
+            "tileid": 5,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 43200
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36200
+          },
+          {
+            "tileid": 1,
+            "duration": 200
+          },
+          {
+            "tileid": 4,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 43400
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36200
+          },
+          {
+            "tileid": 2,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 43600
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/plaza-drone-24.json",
+      "atlasSha256": "a721ff13a3c1932243c8858200044fe080fb9ccb3bf3f6f32b30f5e475ef28ed",
+      "inputs": [
+        {
+          "path": "tools/art/plaza-drones.ts",
+          "sha256": "326cca89c7dba0b8a4321ce882dca2bfcaa54c47b02ab057df6e103270ed1df6"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 400,
+    "periodMs": 80000,
+    "stepMs": 200,
+    "sharedFrameTiles": 11,
+    "decodedRgbaBytes": 131072,
+    "atlas": {
+      "width": 512,
+      "height": 64,
+      "columns": 16,
+      "tilecount": 32
+    },
+    "tracks": [
+      {
+        "id": "drone-1",
+        "visiblePhases": 6,
+        "positionCount": 6,
+        "poseCount": 3
+      },
+      {
+        "id": "drone-2",
+        "visiblePhases": 0,
+        "positionCount": 0,
+        "poseCount": 0
+      }
+    ]
+  }
+}

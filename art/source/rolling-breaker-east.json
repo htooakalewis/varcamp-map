@@ -4,6 +4,7 @@
     "name": "rolling-breaker-east",
     "image": "assets/tilesets/original/rolling-breaker.png",
     "sourceId": "original",
+    "level": "belowAvatar",
     "x": 29,
     "y": 1,
     "width": 12,
@@ -938,7 +939,7 @@
         },
         {
           "path": "tools/art/beach-ship.ts",
-          "sha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364"
+          "sha256": "8a6eae3b213e5ab7fb102951710baf062851dc479ea47d11521f4dd1e8a2f9b7"
         }
       ]
     }

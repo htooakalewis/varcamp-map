@@ -1,4 +1,3 @@
-import {assertVisual} from './helpers/physical-prop-contracts';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import sharp from 'sharp';
@@ -29,10 +28,10 @@ describe('coastal event character and preserved journeys',()=>{
         expect(golden,`${sprite} must retain warm golden pixels`).toBeGreaterThanOrEqual(32*32*.95);
       }
       const surf=JSON.parse(readFileSync('art/source/organic-coast.json','utf8'));expect(surf.cells.length).toBeGreaterThan(80);expect(surf.frameMs).toBeGreaterThanOrEqual(200);expect(l.placements.some(p=>p.sprite.startsWith('organic-coast-land-'))).toBe(true);
-      expect(l.placements.filter(p=>['beach-parasol-coral','beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
+      expect(l.placements.filter(p=>['coast-life-beach-parasol-coral','coast-life-beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
     }else{
       expect(l.placements.some(p=>p.sprite.startsWith('coast-foam-'))).toBe(false);expect(l.placements.some(p=>p.sprite.startsWith('constellation-coast-land-'))).toBe(true);
-      const parasols=l.placements.filter(p=>p.id.includes('parasol'));expect(parasols.map(p=>p.id).sort()).toEqual(['shore-parasol-east','shore-parasol-lounge','shore-parasol-west']);for(const p of parasols)assertVisual(catalog[p.sprite],catalog['coast-parasol']);
+      const parasols=l.placements.filter(p=>p.id.includes('parasol'));expect(parasols.map(p=>p.id).sort()).toEqual(['shore-parasol-east','shore-parasol-lounge','shore-parasol-west']);for(const p of parasols){expect(p.sprite).toBe('coast-life-solid-coast-parasol');const art=JSON.parse(readFileSync('art/source/coast-life-assets.json','utf8'));expect(catalog[p.sprite]).toMatchObject({sheet:art.atlas.path,rect:art.atlas.rects[p.sprite],sourceId:'original'});expect([p.width,p.height]).toEqual([3,4]);}
     }
   });
   it('assembles the native licensed horizontal vessel with timber structure and canvas rigging',async()=>{
@@ -47,7 +46,7 @@ describe('coastal event character and preserved journeys',()=>{
   it('uses a moving whole sponsor aircraft and banner rather than a stationary oversized sky prop',()=>{
     const l=load('shipyard-beach'),{tmj}=walk(l),overlay=l.animatedOverlays?.find(o=>o.name==='coastal-flight')!;
     expect(overlay).toBeDefined();expect(l.placements.some(p=>p.sprite==='coast-sponsor-plane'||p.sprite==='coast-sponsor-balloon')).toBe(false);
-    expect(l.placements.filter(p=>p.sprite==='coast-gull').length).toBeGreaterThanOrEqual(3);
+    expect(l.placements.filter(p=>p.sprite==='coast-gull')).toEqual([]);const birds=JSON.parse(readFileSync('art/source/coast-life-tracks.json','utf8')).maps['shipyard-beach'].filter((p:any)=>p.kind==='gull');expect(birds).toHaveLength(2);expect(birds.reduce((n:number,b:any)=>n+b.tracks.length,0)).toBe(2);const maps=JSON.parse(readFileSync('art/source/coast-life-tracks.json','utf8')).maps;expect(Object.values(maps).flatMap((rows:any)=>rows.filter((b:any)=>b.kind==='gull').flatMap((b:any)=>b.tracks))).toHaveLength(4);for(const bird of birds)expect(l.animatedOverlays!.some(o=>o.name===bird.name)).toBe(true);
     expect(overlay.carrierTileIds.length).toBe(144);expect(tmj.layers.find(a=>a.name==='coastal-flight')?.type).toBe('tilelayer');
     const atlas=tmj.tilesets.find(s=>s.name==='coastal-flight')!;expect(atlas.tiles?.every(t=>(t.animation?.length??0)>1)).toBe(true);
     expect(tmj.layers.some(l=>l.type==='imagelayer')).toBe(false);

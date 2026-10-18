@@ -1,0 +1,1099 @@
+{
+  "version": 1,
+  "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+  "purpose": "Exact bounded historical inputs for unchanged historical oracles; not current map authority.",
+  "inputs": [
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/air-district.json",
+      "bytes": 14262,
+      "sha256": "a81f87dcde9930c3d0b69e837fe4884cefc5cc4ad2ba7937e6e4aad4f313ee35",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/air-district.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/air-district.json",
+      "originalPath": "world/layouts/air-district.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/air-district.tmj",
+      "bytes": 41584,
+      "sha256": "01bd8a4e666db8740097b15a319a347456f99af549b396eb2a9b5891bfa21ac8",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/air-district.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/air-district.tmj",
+      "originalPath": "maps/air-district.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/campus-exploration.json",
+      "bytes": 30595,
+      "sha256": "bd9db51bfe1d1de85b826d56f5dda78ca43bf4d2b4a331acb67000071c518171",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/campus-exploration.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/campus-exploration.json",
+      "originalPath": "world/layouts/campus-exploration.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/campus-exploration.tmj",
+      "bytes": 183657,
+      "sha256": "94f55dcf15ed34d24dd92835fe3fb305487570ef78ae625e4b503ba20a76a4d0",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/campus-exploration.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/campus-exploration.tmj",
+      "originalPath": "maps/campus-exploration.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/comet-maze.json",
+      "bytes": 21082,
+      "sha256": "8397748f909fa7d479b8d5d193f56e53bc472419e78384d67e15f00375819f44",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/comet-maze.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/comet-maze.json",
+      "originalPath": "world/layouts/comet-maze.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/comet-maze.tmj",
+      "bytes": 69367,
+      "sha256": "dd46bd81d2b104c3b3c81aaab2346fbaf1847adfa320b9e79a33d14b61684c19",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/comet-maze.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/comet-maze.tmj",
+      "originalPath": "maps/comet-maze.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/constellation-shore.json",
+      "bytes": 445047,
+      "sha256": "040aeed26d47c2ae9e5b53caa5cfbed137e2ec4f7a9c2c20c8114736d0522128",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/constellation-shore.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/constellation-shore.json",
+      "originalPath": "world/layouts/constellation-shore.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/constellation-shore.tmj",
+      "bytes": 131105,
+      "sha256": "a61134b82baaae6d63dc3938886ef3939b3d7e867e3b43fbdc5c72fae5b73920",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/constellation-shore.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/constellation-shore.tmj",
+      "originalPath": "maps/constellation-shore.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/earth-district.json",
+      "bytes": 14334,
+      "sha256": "60c7de030d1dcbaaf60452e308f2fcf5a00baa3c61c529b4631ac952341726f0",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/earth-district.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/earth-district.json",
+      "originalPath": "world/layouts/earth-district.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/earth-district.tmj",
+      "bytes": 41833,
+      "sha256": "04503f093c80d97980ea489a6a7041d99184baa736e51f522395c63772d5db09",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/earth-district.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/earth-district.tmj",
+      "originalPath": "maps/earth-district.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/fa-ship.json",
+      "bytes": 1122626,
+      "sha256": "f463d33eddaf07b0feb1b219fb0e4143abf46efc88bc5565dfe7830636b83b8b",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/fa-ship.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/fa-ship.json",
+      "originalPath": "world/layouts/fa-ship.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/fa-ship.tmj",
+      "bytes": 145670,
+      "sha256": "eb36cff3ef90b7691a94eac7729cfb73b89bf8359857e3b0e03fd6eac7e7db57",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/fa-ship.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/fa-ship.tmj",
+      "originalPath": "maps/fa-ship.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/fire-district.json",
+      "bytes": 14317,
+      "sha256": "1311e29625504a97ac6aaace7eee15b7f8567a64f47ea03b1104cff197272fab",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/fire-district.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/fire-district.json",
+      "originalPath": "world/layouts/fire-district.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/fire-district.tmj",
+      "bytes": 41258,
+      "sha256": "5130dd33523528ded89153996b2779c7250da948e96630a2013875930c5f4ad9",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/fire-district.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/fire-district.tmj",
+      "originalPath": "maps/fire-district.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/hidden-observatory.json",
+      "bytes": 13760,
+      "sha256": "30862362c551fe4b449750702a91e2c1cefebf356a8f1849e4218636ef7a880b",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/hidden-observatory.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/hidden-observatory.json",
+      "originalPath": "world/layouts/hidden-observatory.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/hidden-observatory.tmj",
+      "bytes": 42279,
+      "sha256": "f26c14723499e0ff0e2b697d56558105622d82ee305d6a64605cdfa02376d343",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/hidden-observatory.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/hidden-observatory.tmj",
+      "originalPath": "maps/hidden-observatory.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/moon-cafe.json",
+      "bytes": 8790,
+      "sha256": "6534421217942c5a6d7d8947f71b12bb610ec66d2f93bc31da8674e306c2946b",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/moon-cafe.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/moon-cafe.json",
+      "originalPath": "world/layouts/moon-cafe.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/moon-cafe.tmj",
+      "bytes": 52058,
+      "sha256": "95d2a47e91bfa405eff906cf80ed85a4cd2fd25f09ef2783c54060951683ee7c",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/moon-cafe.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/moon-cafe.tmj",
+      "originalPath": "maps/moon-cafe.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/moon-grotto.json",
+      "bytes": 8782,
+      "sha256": "700d5673a37538af103509fbb4cfac4d8e83285584701d4e1c42c35d86783551",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/moon-grotto.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/moon-grotto.json",
+      "originalPath": "world/layouts/moon-grotto.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/moon-grotto.tmj",
+      "bytes": 51556,
+      "sha256": "4adda4c79d5f5a1d93748118ace536aa8a017840d5b74c1d2054fe9142abd539",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/moon-grotto.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/moon-grotto.tmj",
+      "originalPath": "maps/moon-grotto.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/nebula-arcade.json",
+      "bytes": 10968,
+      "sha256": "e3cc86da66821be85965d5c35456a26a64ef686b8bdfeeb20cb4bbfd3bc25a7e",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/nebula-arcade.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/nebula-arcade.json",
+      "originalPath": "world/layouts/nebula-arcade.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/nebula-arcade.tmj",
+      "bytes": 51901,
+      "sha256": "bb3f8682ff3c7e63fab1f7898abb1fdcc8ad1c8a85476b3ce1c8637ee191cd29",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/nebula-arcade.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/nebula-arcade.tmj",
+      "originalPath": "maps/nebula-arcade.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/orbit-maze.json",
+      "bytes": 83773,
+      "sha256": "85108739dfed2ac69bdb60990444c0d9c296a3a4a0135460d954625db32b062d",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/orbit-maze.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/orbit-maze.json",
+      "originalPath": "world/layouts/orbit-maze.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/orbit-maze.tmj",
+      "bytes": 217575,
+      "sha256": "dd9f7922fbc572f8aafa877a11c90bb46253e996768ea41b7c25a632f2b1fbea",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/orbit-maze.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/orbit-maze.tmj",
+      "originalPath": "maps/orbit-maze.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/orbit-playground.json",
+      "bytes": 9662,
+      "sha256": "7f9f0d0200a65ced8b82bf62cfba9ab1121938366e75222ccfc974b180ccbf60",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/orbit-playground.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/orbit-playground.json",
+      "originalPath": "world/layouts/orbit-playground.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/orbit-playground.tmj",
+      "bytes": 49666,
+      "sha256": "a1a4cbf46e10ef9a505b3b12b1aa5eb86f7fe0d8f482e529edf50b6bfe0d5629",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/orbit-playground.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/orbit-playground.tmj",
+      "originalPath": "maps/orbit-playground.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/shipyard-beach.json",
+      "bytes": 1543429,
+      "sha256": "d3dfd38b7639e6940a40c7a3bd35d080e67c4731d61b279db3f6701b42da8459",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/shipyard-beach.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/shipyard-beach.json",
+      "originalPath": "world/layouts/shipyard-beach.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/shipyard-beach.tmj",
+      "bytes": 597439,
+      "sha256": "8c576a6a1390f3263bc597f15c1fa8d2955a8faf08db169e754530965a2c2eda",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/shipyard-beach.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/shipyard-beach.tmj",
+      "originalPath": "maps/shipyard-beach.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/star-garden.json",
+      "bytes": 9843,
+      "sha256": "4bba7fe4bffa4c0438bcce2125f5827c847565bed551301438095323e4199d3d",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/star-garden.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/star-garden.json",
+      "originalPath": "world/layouts/star-garden.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/star-garden.tmj",
+      "bytes": 49840,
+      "sha256": "4f1b9f3990dc7ebf4140b62f763fa84545950147fcbe4c97d145bfa0eb067f45",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/star-garden.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/star-garden.tmj",
+      "originalPath": "maps/star-garden.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/stargazer-terrace.json",
+      "bytes": 9871,
+      "sha256": "563dd7ef642c23e59d0ebb04d6f38e22a513adb6c8d8a980880124becebff434",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/stargazer-terrace.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/stargazer-terrace.json",
+      "originalPath": "world/layouts/stargazer-terrace.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/stargazer-terrace.tmj",
+      "bytes": 49803,
+      "sha256": "8cf1215da3c8f5561d6548649e2f17b13670e03be23d54f59f537644b8cca93d",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/stargazer-terrace.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/stargazer-terrace.tmj",
+      "originalPath": "maps/stargazer-terrace.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/water-district.json",
+      "bytes": 14010,
+      "sha256": "fd40760b2a7d7e16d3840cae6a0bc7ab7b6cc54210b0fb0d320174d5ee7955a7",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/water-district.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/water-district.json",
+      "originalPath": "world/layouts/water-district.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/water-district.tmj",
+      "bytes": 41923,
+      "sha256": "d3e39d4a42ae5f1a3bc73a94c3d8e7b9c7669b9e4287f773c9640b5bc7005d52",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/water-district.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/water-district.tmj",
+      "originalPath": "maps/water-district.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/layouts/zodiac-festival-park.json",
+      "bytes": 20227,
+      "sha256": "ef9414c16f2dda2ff01d30f5e10a9c3e8b0f20367bfe652054677c508b54d823",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/world/layouts/zodiac-festival-park.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/world/layouts/zodiac-festival-park.json",
+      "originalPath": "world/layouts/zodiac-festival-park.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "maps/zodiac-festival-park.tmj",
+      "bytes": 85864,
+      "sha256": "5366af817c2416bd0b6baa130306232b0c2edbd1b0b4c24bcf8f66028dc5c582",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/maps/zodiac-festival-park.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/maps/zodiac-festival-park.tmj",
+      "originalPath": "maps/zodiac-festival-park.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/tile-catalog.json",
+      "bytes": 416494,
+      "sha256": "b15917a8865a54af16c4ab4a0a3207db8e28cd2d5c1ea136b3bf24f92418543d",
+      "existingExactBodyPaths": [
+        "tests/fixtures/interior-reference/before-catalog.json"
+      ],
+      "proposedPath": "tests/fixtures/interior-reference/before-catalog.json",
+      "storedPath": "tests/fixtures/interior-reference/before-catalog.json",
+      "originalPath": "art/tile-catalog.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/coastal-flight.json",
+      "bytes": 591929,
+      "sha256": "f1172239ffbe53ddc0d11760e7b96b9553de0c0b30a8422199ee0e52778b68b4",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight.json",
+      "originalPath": "art/source/coastal-flight.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/coastal-flight.png",
+      "bytes": 29390,
+      "sha256": "615e385edc6d741303b6631824929372ba082b6bfb5432fd632d39b996b4f525",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/assets/tilesets/original/coastal-flight.png",
+      "storedPath": "tests/fixtures/published-491-map-epoch/assets/tilesets/original/coastal-flight.png",
+      "originalPath": "assets/tilesets/original/coastal-flight.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/coastal-flight-plane.png",
+      "bytes": 1356,
+      "sha256": "00d1527591def1a906ad4b66c53c5e82c3f892b9ee6079501f51c55c30b071ae",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight-plane.png",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight-plane.png",
+      "originalPath": "art/source/coastal-flight-plane.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/sponsors/demo-01.png",
+      "bytes": 3687,
+      "sha256": "5fb9323d3735b17b3159631b98f1afdf712d07b0132a4618d3765be0d3bbbf2e",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/assets/sponsors/demo-01.png",
+      "storedPath": "tests/fixtures/published-491-map-epoch/assets/sponsors/demo-01.png",
+      "originalPath": "assets/sponsors/demo-01.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/coastal-flight.ts",
+      "bytes": 6499,
+      "sha256": "65ca71379d55d61ee6d1d6335fa9ac390d6b8224ddae5b1c106e858c90dbbde7",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/tools/art/coastal-flight.ts.txt",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/art/coastal-flight.ts.txt",
+      "originalPath": "tools/art/coastal-flight.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/builder.ts",
+      "bytes": 19252,
+      "sha256": "74289a920f153b48d8973960d42010b1788f5d794cd31aae6fda0b74ce2ef056",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/tools/maps/builder.ts.txt",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/maps/builder.ts.txt",
+      "originalPath": "tools/maps/builder.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/types.ts",
+      "bytes": 4983,
+      "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/tools/maps/types.ts.txt",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/maps/types.ts.txt",
+      "originalPath": "tools/maps/types.ts"
+    },
+    {
+      "sourceReviewedManifest": "outputs/coast-natural-life-review/final-owned-manifest.json",
+      "sourcePath": "outputs/varcamp-coast-natural-life/maps/shipyard-beach.tmj",
+      "bytes": 712122,
+      "sha256": "5f6c808236eb0492358e087d70ed4c1f2229585387a6eb17646178223305435c",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/pre-canonical-shipyard.tmj",
+      "storedPath": "tests/fixtures/published-491-map-epoch/pre-canonical-shipyard.tmj",
+      "originalPath": "outputs/varcamp-coast-natural-life/maps/shipyard-beach.tmj"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker-east.json",
+      "bytes": 18065,
+      "sha256": "9d0e357b78e684827d73633c8c96e3594a75bc9e3817dba15108cff924326bc1",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-east.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-east.json",
+      "originalPath": "art/source/rolling-breaker-east.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker-west.json",
+      "bytes": 18016,
+      "sha256": "7ed945c5006eee8c03bd6dc874afb30c0741e38d6381b7eea629a8465196e4ab",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-west.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-west.json",
+      "originalPath": "art/source/rolling-breaker-west.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/sources.json",
+      "bytes": 19202,
+      "sha256": "cf36a5d0bd2d81ba699c438d56758139105362276c7c622301e448fc885f0d41",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/art/sources.json",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/sources.json",
+      "originalPath": "art/sources.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/beach-ship.ts",
+      "bytes": 8712,
+      "sha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364",
+      "existingExactBodyPaths": [],
+      "proposedPath": "tests/fixtures/published-491-map-epoch/tools/art/beach-ship.ts.txt",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/art/beach-ship.ts.txt",
+      "originalPath": "tools/art/beach-ship.ts"
+    }
+  ],
+  "cliClosure": [
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/coastal-flight-plane.png",
+      "bytes": 1356,
+      "sha256": "00d1527591def1a906ad4b66c53c5e82c3f892b9ee6079501f51c55c30b071ae",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "a918a951e0de167a1ae7d189641817c5f391467b6ff3dc803e5c5c0bc00fa1c9",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight-plane.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/coastal-flight.json",
+      "bytes": 591929,
+      "sha256": "f1172239ffbe53ddc0d11760e7b96b9553de0c0b30a8422199ee0e52778b68b4",
+      "reasons": [
+        "exact historical overlay metadata"
+      ],
+      "currentSha256": "3bd50c3e2008a604a5ce5bdd0999837a07cca92e3c86c75732f409cbcf334fc7",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/coastal-flight.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/hub-nameplates.json",
+      "bytes": 7355,
+      "sha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+      "reasons": [
+        "actual readStandingCaptions dependency"
+      ],
+      "currentSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+      "mode": "current-body-exact-old",
+      "storedPath": "art/source/hub-nameplates.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker-east.json",
+      "bytes": 18065,
+      "sha256": "9d0e357b78e684827d73633c8c96e3594a75bc9e3817dba15108cff924326bc1",
+      "reasons": [
+        "exact historical overlay metadata"
+      ],
+      "currentSha256": "6b3bf182dc3e0e888d557d1a66a9cc3471dc6da16e5bd2235ff746687bae4026",
+      "mode": "additional-raw-body-required",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-east.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker-master.svg",
+      "bytes": 1973384,
+      "sha256": "236bf015dde56f0ff14638a680e47ff08fca9e505fb69e9e2211779384c45eb1",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "236bf015dde56f0ff14638a680e47ff08fca9e505fb69e9e2211779384c45eb1",
+      "mode": "current-body-exact-old",
+      "storedPath": "art/source/rolling-breaker-master.svg"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker-west.json",
+      "bytes": 18016,
+      "sha256": "7ed945c5006eee8c03bd6dc874afb30c0741e38d6381b7eea629a8465196e4ab",
+      "reasons": [
+        "exact historical overlay metadata"
+      ],
+      "currentSha256": "bc9b96960b8e8f8e0ca736cd9422f20c1bd81fcf32def607e98bb5432dbfd578",
+      "mode": "additional-raw-body-required",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/rolling-breaker-west.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/rolling-breaker.svg",
+      "bytes": 2435643,
+      "sha256": "239e20a73b36246b0685c94c221dcc968bae84657426e19946f9ac987b7ffa38",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "239e20a73b36246b0685c94c221dcc968bae84657426e19946f9ac987b7ffa38",
+      "mode": "current-body-exact-old",
+      "storedPath": "art/source/rolling-breaker.svg"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/standing-captions.json",
+      "bytes": 4644,
+      "sha256": "ea7bcec7f20e2e441bb8cfd8ec5bf551bf358e5d98eddcf49bd83d8cd68a2e8e",
+      "reasons": [
+        "actual readStandingCaptions dependency"
+      ],
+      "currentSha256": "ea7bcec7f20e2e441bb8cfd8ec5bf551bf358e5d98eddcf49bd83d8cd68a2e8e",
+      "mode": "current-body-exact-old",
+      "storedPath": "art/source/standing-captions.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/source/standing-captions.svg",
+      "bytes": 144757,
+      "sha256": "071588a46b0eca25307aa0f4014d3da3bb36b0360b3f39fbe3e118193c838d8d",
+      "reasons": [
+        "actual readStandingCaptions dependency"
+      ],
+      "currentSha256": "071588a46b0eca25307aa0f4014d3da3bb36b0360b3f39fbe3e118193c838d8d",
+      "mode": "current-body-exact-old",
+      "storedPath": "art/source/standing-captions.svg"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/sources.json",
+      "bytes": 19202,
+      "sha256": "cf36a5d0bd2d81ba699c438d56758139105362276c7c622301e448fc885f0d41",
+      "reasons": [
+        "historical builder registry"
+      ],
+      "currentSha256": "bb557c5266bfd5b082119616918125e206f0514b3fa73a6e8e2d2f18de488d41",
+      "mode": "additional-raw-body-required",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/sources.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "art/tile-catalog.json",
+      "bytes": 416494,
+      "sha256": "b15917a8865a54af16c4ab4a0a3207db8e28cd2d5c1ea136b3bf24f92418543d",
+      "reasons": [
+        "historical builder registry"
+      ],
+      "currentSha256": "2085fbbcd9c115d8a536c8f37759921ab697f78186564c2cfe85e17f7cb8262c",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/interior-reference/before-catalog.json"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/sponsors/demo-01.png",
+      "bytes": 3687,
+      "sha256": "5fb9323d3735b17b3159631b98f1afdf712d07b0132a4618d3765be0d3bbbf2e",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "5fb9323d3735b17b3159631b98f1afdf712d07b0132a4618d3765be0d3bbbf2e",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/assets/sponsors/demo-01.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-containers/container.png",
+      "bytes": 119437,
+      "sha256": "cb8a60d1eac758f87785e0168370ad772fe57e0c2e6f76a127833c63d33fed03",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "cb8a60d1eac758f87785e0168370ad772fe57e0c2e6f76a127833c63d33fed03",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-containers/container.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-dock/dock.png",
+      "bytes": 28549,
+      "sha256": "11f6435aa55b0b072d0dbea8c4d6a044a8cf54f446713833b4215016b79711ef",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "11f6435aa55b0b072d0dbea8c4d6a044a8cf54f446713833b4215016b79711ef",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-dock/dock.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-ship/lpc-ship-accessories.png",
+      "bytes": 22961,
+      "sha256": "8df51f3666d84ed451ea59d77ab45dbbf435a101771a9fccfe69d85d54e5e852",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "8df51f3666d84ed451ea59d77ab45dbbf435a101771a9fccfe69d85d54e5e852",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-ship/lpc-ship-accessories.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-ship/lpc-ship.png",
+      "bytes": 59099,
+      "sha256": "4e0ad1c82075c090c66191d5b04ef5c4cb067a92aabfbdfba93886b8b437fdfd",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "4e0ad1c82075c090c66191d5b04ef5c4cb067a92aabfbdfba93886b8b437fdfd",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-ship/lpc-ship.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-ship/rigging.png",
+      "bytes": 59420,
+      "sha256": "a042e31bbfad5170d77cafac559c7d7e054e4a12002e65923af4f04428d0f589",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "a042e31bbfad5170d77cafac559c7d7e054e4a12002e65923af4f04428d0f589",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-ship/rigging.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-ship/ship-cannon.png",
+      "bytes": 8043,
+      "sha256": "9728203c9eeb62ef256954784542ebcceaab8e11bc42417766bc08d1ed1553f2",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "9728203c9eeb62ef256954784542ebcceaab8e11bc42417766bc08d1ed1553f2",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-ship/ship-cannon.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/lpc-water/water.png",
+      "bytes": 7905,
+      "sha256": "6107522405d8c27b9bab7278f5dc14cd7cc0445592f5967d748cb81ede4b0d47",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "6107522405d8c27b9bab7278f5dc14cd7cc0445592f5967d748cb81ede4b0d47",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/lpc-water/water.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/beach-lounge.png",
+      "bytes": 11703,
+      "sha256": "af2cad6459f38ce25c18900bcde3db6cceb3dd7382f7036cfaea15a51a0fe0be",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "af2cad6459f38ce25c18900bcde3db6cceb3dd7382f7036cfaea15a51a0fe0be",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/beach-lounge.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/beach-surf.png",
+      "bytes": 12610,
+      "sha256": "879bb15a937246deb1e020f831185c7e078ae3f2ddb903db0873112bca66ab7e",
+      "reasons": [
+        "actual historical native animation PNG"
+      ],
+      "currentSha256": "879bb15a937246deb1e020f831185c7e078ae3f2ddb903db0873112bca66ab7e",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/beach-surf.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/coastal-flight.png",
+      "bytes": 29390,
+      "sha256": "615e385edc6d741303b6631824929372ba082b6bfb5432fd632d39b996b4f525",
+      "reasons": [
+        "actual historical native animation PNG"
+      ],
+      "currentSha256": "26546d2ca43fae38eec6d307b9c6ea117114618b84a3910edcc19b8ca6145764",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/assets/tilesets/original/coastal-flight.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/coastal.png",
+      "bytes": 56368,
+      "sha256": "8935fb1dd29807e2d7210135cc78c1787f3903620ff983fc44cf4045202228a6",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "8935fb1dd29807e2d7210135cc78c1787f3903620ff983fc44cf4045202228a6",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/coastal.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/naval-details.png",
+      "bytes": 812,
+      "sha256": "37192164559eae3437b55cdb8f1181df8f8b893684eb6556c96ff8ef64b25cd8",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "37192164559eae3437b55cdb8f1181df8f8b893684eb6556c96ff8ef64b25cd8",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/naval-details.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/rolling-breaker.png",
+      "bytes": 16268,
+      "sha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503",
+      "reasons": [
+        "actual historical native animation PNG"
+      ],
+      "currentSha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/rolling-breaker.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/original/standing-captions.png",
+      "bytes": 2531,
+      "sha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b",
+      "reasons": [
+        "actual readStandingCaptions dependency"
+      ],
+      "currentSha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/original/standing-captions.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/workadventure/WA_Exterior.png",
+      "bytes": 363684,
+      "sha256": "68ed8f71b29edc0f4b5b6c06c9e1a815d394df28dbd7511afbc97d561868796f",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "68ed8f71b29edc0f4b5b6c06c9e1a815d394df28dbd7511afbc97d561868796f",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/workadventure/WA_Exterior.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/workadventure/WA_Seats.png",
+      "bytes": 24730,
+      "sha256": "f45b53f2e5326060008ba10ec1a854d1375cad85e805687b6330172e42df0c12",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "f45b53f2e5326060008ba10ec1a854d1375cad85e805687b6330172e42df0c12",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/workadventure/WA_Seats.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "assets/tilesets/workadventure/WA_Tables.png",
+      "bytes": 38327,
+      "sha256": "9f952c50e2a385dc84083c60c4904e9d33d855e0db9d3431fc038476a66f86d8",
+      "reasons": [
+        "actual historical placed sprite PNG"
+      ],
+      "currentSha256": "9f952c50e2a385dc84083c60c4904e9d33d855e0db9d3431fc038476a66f86d8",
+      "mode": "current-body-exact-old",
+      "storedPath": "assets/tilesets/workadventure/WA_Tables.png"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "src/world/catalog.ts",
+      "bytes": 7001,
+      "sha256": "95fbb4c9f5a762a34576252d32c3c9c497b850c56efef6bce1a54180a85f5920",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "95fbb4c9f5a762a34576252d32c3c9c497b850c56efef6bce1a54180a85f5920",
+      "mode": "current-body-exact-old",
+      "storedPath": "src/world/catalog.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/beach-ship.ts",
+      "bytes": 8712,
+      "sha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "8a6eae3b213e5ab7fb102951710baf062851dc479ea47d11521f4dd1e8a2f9b7",
+      "mode": "additional-raw-body-required",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/art/beach-ship.ts.txt"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/catalog.ts",
+      "bytes": 519,
+      "sha256": "5ce702014378f6122763a076bbcd19c9739704ccb109d883ce61cb1944288916",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "5ce702014378f6122763a076bbcd19c9739704ccb109d883ce61cb1944288916",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/art/catalog.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/coast-registry.ts",
+      "bytes": 425,
+      "sha256": "4b7bc824cdfe4c61959889f65b32574c88aaf05bf2bf2872ceab07c00d331b98",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "4b7bc824cdfe4c61959889f65b32574c88aaf05bf2bf2872ceab07c00d331b98",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/art/coast-registry.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/coastal-flight.ts",
+      "bytes": 6499,
+      "sha256": "65ca71379d55d61ee6d1d6335fa9ac390d6b8224ddae5b1c106e858c90dbbde7",
+      "reasons": [
+        "exact historical overlay provenance input"
+      ],
+      "currentSha256": "65ca71379d55d61ee6d1d6335fa9ac390d6b8224ddae5b1c106e858c90dbbde7",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/art/coastal-flight.ts.txt"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/art/standing-captions.ts",
+      "bytes": 6188,
+      "sha256": "1f73bebab6c29ba4e3a2aa4a5621477ff9dd6b2b26add33ae96046aa70836266",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "1f73bebab6c29ba4e3a2aa4a5621477ff9dd6b2b26add33ae96046aa70836266",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/art/standing-captions.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/builder.ts",
+      "bytes": 19252,
+      "sha256": "74289a920f153b48d8973960d42010b1788f5d794cd31aae6fda0b74ce2ef056",
+      "reasons": [
+        "exact historical overlay provenance input",
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/maps/builder.ts.txt"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/organic-coast.ts",
+      "bytes": 4240,
+      "sha256": "be3435ff8a147fe8077f0453a1921756af345049d8bfa975560ec5051e48d13e",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "be3435ff8a147fe8077f0453a1921756af345049d8bfa975560ec5051e48d13e",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/maps/organic-coast.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/refine-beach.mjs",
+      "bytes": 4916,
+      "sha256": "4858ef363c206b7026d8e5dd5630b2758b10bed77c3eb2cc008a1e214ffc68ca",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "4858ef363c206b7026d8e5dd5630b2758b10bed77c3eb2cc008a1e214ffc68ca",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/maps/refine-beach.mjs"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/solid-props.ts",
+      "bytes": 6533,
+      "sha256": "828bfac1ba0c0e4fdfd1102473ec1e6eee96c3c4ab3708baa6a5452fe5600adb",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "828bfac1ba0c0e4fdfd1102473ec1e6eee96c3c4ab3708baa6a5452fe5600adb",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/maps/solid-props.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/standing-captions.ts",
+      "bytes": 5317,
+      "sha256": "d9cb31749d75fccfe7ea268530fe4eb35395e557fa00f8a6e75a4f0ba3f97148",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "d9cb31749d75fccfe7ea268530fe4eb35395e557fa00f8a6e75a4f0ba3f97148",
+      "mode": "current-body-exact-old",
+      "storedPath": "tools/maps/standing-captions.ts"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "tools/maps/types.ts",
+      "bytes": 4983,
+      "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f",
+      "reasons": [
+        "exact historical overlay provenance input",
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/maps/types.ts.txt"
+    },
+    {
+      "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
+      "sourcePath": "world/editor-collections.json",
+      "bytes": 232,
+      "sha256": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
+      "reasons": [
+        "transitive historical CLI module"
+      ],
+      "currentSha256": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
+      "mode": "current-body-exact-old",
+      "storedPath": "world/editor-collections.json"
+    }
+  ],
+  "cliModuleEdges": [
+    {
+      "from": "tools/maps/refine-beach.mjs",
+      "to": "tools/maps/organic-coast.ts"
+    },
+    {
+      "from": "tools/maps/refine-beach.mjs",
+      "to": "tools/maps/builder.ts"
+    },
+    {
+      "from": "tools/maps/builder.ts",
+      "to": "tools/art/standing-captions.ts"
+    },
+    {
+      "from": "tools/maps/builder.ts",
+      "to": "tools/art/catalog.ts"
+    },
+    {
+      "from": "tools/maps/builder.ts",
+      "to": "tools/maps/solid-props.ts"
+    },
+    {
+      "from": "tools/maps/builder.ts",
+      "to": "world/editor-collections.json"
+    },
+    {
+      "from": "tools/maps/builder.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/maps/types.ts",
+      "to": "src/world/catalog.ts"
+    },
+    {
+      "from": "tools/maps/solid-props.ts",
+      "to": "tools/art/catalog.ts"
+    },
+    {
+      "from": "tools/maps/solid-props.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/maps/solid-props.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/maps/solid-props.ts",
+      "to": "tools/maps/standing-captions.ts"
+    },
+    {
+      "from": "tools/maps/standing-captions.ts",
+      "to": "tools/art/standing-captions.ts"
+    },
+    {
+      "from": "tools/maps/standing-captions.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/art/standing-captions.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/art/catalog.ts",
+      "to": "tools/maps/types.ts"
+    },
+    {
+      "from": "tools/maps/organic-coast.ts",
+      "to": "tools/art/coast-registry.ts"
+    },
+    {
+      "from": "tools/maps/organic-coast.ts",
+      "to": "tools/maps/builder.ts"
+    },
+    {
+      "from": "tools/maps/organic-coast.ts",
+      "to": "tools/art/catalog.ts"
+    },
+    {
+      "from": "tools/maps/organic-coast.ts",
+      "to": "tools/maps/types.ts"
+    }
+  ],
+  "cliExternalImports": [
+    "node:child_process",
+    "node:crypto",
+    "node:fs",
+    "node:module",
+    "node:path",
+    "node:url",
+    "node:util",
+    "sharp"
+  ]
+}

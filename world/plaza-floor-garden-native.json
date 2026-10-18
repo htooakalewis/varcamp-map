@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "baselineCommit": "36c7df35b3dd019a5679a3f310fe242ec210d063",
+  "beforeNativeSha256": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
+  "beforeLayoutSha256": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed"
+}

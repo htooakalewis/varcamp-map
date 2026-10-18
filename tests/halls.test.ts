@@ -36,7 +36,7 @@ describe.each([['solar',64,56],['lunar',64,56]] as const)('%s hall', (hall,width
   const aisle=l.inspectionZones.find(z=>z.name==='central-aisle')!;expect(aisle.width).toBeGreaterThanOrEqual(4);
   const audience=l.areas.find(a=>a.id===`${hall}-audience`)!;for(const seat of l.placements.filter(p=>p.id.startsWith('seat-')))expect(seat.x>=audience.x&&seat.x+seat.width<=audience.x+audience.width&&seat.y>=audience.y&&seat.y+seat.height<=audience.y+audience.height,'every seat receives its hall broadcast').toBe(true);
   const seats=l.placements.filter(p=>p.id.startsWith('seat-'));expect(seats.some(p=>p.x<aisle.x)).toBe(true);expect(seats.some(p=>p.x>=aisle.x+aisle.width)).toBe(true);
-  for(const sprite of ['screen-presentation','lectern','plant-palm','water-cooler'])expect(l.placements.some(p=>p.sprite===sprite),sprite).toBe(true);
+  for(const sprite of ['screen-presentation','lectern','world-ambient-plant-palm','water-cooler'])expect(l.placements.some(p=>p.sprite===sprite),sprite).toBe(true);
  });
 });
 it('preserves explicit WAM IDs and previous generated IDs when omitted',()=>{

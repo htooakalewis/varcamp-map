@@ -1,0 +1,6246 @@
+{
+  "base": "36c7df35b3dd019a5679a3f310fe242ec210d063",
+  "maps": {
+    "air-district": {
+      "controls": {
+        "entries": [
+          {
+            "name": "air-entry",
+            "isDefault": true,
+            "x": 17,
+            "y": 28,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-air",
+            "x": 17,
+            "y": 33,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "court-return",
+            "destination": "campus-exploration",
+            "entry": "from-air",
+            "x": 1,
+            "y": 25,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "sigil-air",
+            "name": "sigil-air",
+            "x": 16,
+            "y": 10,
+            "width": 4,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "scene-title",
+            "text": "AIR  /  CO-CREATION STUDIO",
+            "x": 6,
+            "y": 2,
+            "width": 24,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-wayfinding",
+            "text": "↓ PLAZA · SOUTH DOOR",
+            "x": 13,
+            "y": 31,
+            "width": 10,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "sigil-label",
+            "text": "AIR SIGIL  /  APPROACH + ACTIVATE",
+            "x": 8,
+            "y": 4,
+            "width": 23,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "west-activity-label",
+            "text": "CO-CREATION STUDIO",
+            "x": 2,
+            "y": 11,
+            "width": 13,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "east-activity-label",
+            "text": "RECORDING DESKS",
+            "x": 22,
+            "y": 11,
+            "width": 12,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "court-wayfinding",
+            "text": "← EXPLORATION COURT",
+            "x": 2,
+            "y": 27,
+            "width": 13,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "central-aisle",
+            "kind": "landmark",
+            "x": 17,
+            "y": 10,
+            "width": 2,
+            "height": 22
+          },
+          {
+            "name": "cross-route",
+            "kind": "landmark",
+            "x": 1,
+            "y": 23,
+            "width": 33,
+            "height": 2
+          },
+          {
+            "name": "air-activity",
+            "kind": "room",
+            "x": 1,
+            "y": 4,
+            "width": 34,
+            "height": 23
+          },
+          {
+            "name": "arrival-vestibule",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 27,
+            "width": 32,
+            "height": 5
+          }
+        ]
+      },
+      "wamSha256": "d826e06b803e02ed1927d2f9d59ee224cd0d1e75643adabf3fb9cb5bf11a0f0c",
+      "collisionSha256": "b45fab7085aa39c5c321858e7108d8ce638c3291f500c9affeebbeab57cbaed4",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "air-entry": "7ba294b55a0558afe4d2668206190fb32990386b5924e1231d8decdbc1e48d8c",
+        "exit-plaza-return": "66ee045117b76ed971b017c99d8c1714eec2ed17a64d94634b9a61d8f545e381",
+        "exit-court-return": "8573e60d9979901c09acbf4c6c591a85c49d2d34697ead085228b0503923ae88",
+        "wayfinding-text": "6d69a719be04528db2516d1d6bfbb4321da41766c642de13337db2c9f82c473f",
+        "inspection-zones": "afec5e59a92a1e36024b3c7419d067cbe154d0134b1c586c823a2c339e1d2dc2"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "a655641fb7b162f64b710b4e1c5b84842ea780e18f23e2ab025fcf823bf91d4e"
+    },
+    "campus-exploration": {
+      "controls": {
+        "entries": [
+          {
+            "name": "from-fire",
+            "x": 7,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-air",
+            "x": 17,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-earth",
+            "x": 27,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-water",
+            "x": 37,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-star-garden",
+            "x": 7,
+            "y": 25,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-moon-cafe",
+            "x": 37,
+            "y": 25,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-moon-grotto",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-stargazer-terrace",
+            "x": 37,
+            "y": 36,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "plaza-arrival",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          },
+          {
+            "name": "from-solar",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-lunar",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-maze",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-observatory",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-arcade",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-festival",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-wheel",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "fire",
+            "destination": "fire-district",
+            "entry": "fire-entry",
+            "x": 7,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "air",
+            "destination": "air-district",
+            "entry": "air-entry",
+            "x": 17,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "earth",
+            "destination": "earth-district",
+            "entry": "earth-entry",
+            "x": 27,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "water",
+            "destination": "water-district",
+            "entry": "water-entry",
+            "x": 37,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "star-garden",
+            "destination": "star-garden",
+            "entry": "arrival",
+            "x": 7,
+            "y": 23,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "moon-cafe",
+            "destination": "moon-cafe",
+            "entry": "arrival",
+            "x": 37,
+            "y": 23,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "moon-grotto",
+            "destination": "moon-grotto",
+            "entry": "arrival",
+            "x": 7,
+            "y": 34,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "stargazer-terrace",
+            "destination": "stargazer-terrace",
+            "entry": "arrival",
+            "x": 37,
+            "y": 34,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-campus",
+            "x": 23,
+            "y": 44,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "welcome-directory",
+            "name": "welcome-directory",
+            "properties": [],
+            "x": 21,
+            "y": 30,
+            "width": 6,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "fire-label",
+            "text": "↑ FIRE DISTRICT",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 6,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "air-label",
+            "text": "↑ AIR DISTRICT",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 14,
+            "y": 6,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "earth-label",
+            "text": "↑ EARTH DISTRICT",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 24,
+            "y": 6,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "water-label",
+            "text": "↑ WATER DISTRICT",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 34,
+            "y": 6,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "star-garden-label",
+            "text": "↑ STAR GARDEN",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 19,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "moon-cafe-label",
+            "text": "↑ MOON CAFÉ",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 34,
+            "y": 19,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "moon-grotto-label",
+            "text": "↑ MOON GROTTO",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 30,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "stargazer-terrace-label",
+            "text": "↑ STARGAZER TERRACE",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 34,
+            "y": 30,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "directory-title",
+            "text": "EXPLORATION COURT",
+            "fontSize": 24,
+            "color": "#f4d77b",
+            "x": 16,
+            "y": 3,
+            "width": 19,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "directory-board",
+            "text": "↑ FOUR DISTRICTS\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →\n↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 18,
+            "y": 25,
+            "width": 12,
+            "height": 4,
+            "align": "left"
+          },
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "x": 19,
+            "y": 45,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "arrival-routes",
+            "text": "↑ FOUR DISTRICTS · NORTH\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →",
+            "x": 18,
+            "y": 35,
+            "width": 12,
+            "height": 3,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "compact-directory",
+            "kind": "landmark",
+            "x": 16,
+            "y": 18,
+            "width": 16,
+            "height": 19
+          }
+        ]
+      },
+      "wamSha256": "dce2b026acf5c0f7535eb641cd3ed41ea8ddf737568153b400b9d341203e79d1",
+      "collisionSha256": "4276371756c03060d04fb9fb808f460fb8f76a9af39de7e7be46e3c9f69cf8cd",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "from-fire": "89f48aca546abcdb44aa4cc04061c0d737d3b9adec634f1a97303dfe9a23b8f4",
+        "from-air": "a43ceb657f28e8ec3a83d0b7665c939e523a869e031c39aff19c1f038296de61",
+        "from-earth": "bbf2b18e67c35432f9bce4d26edfdbbadb7339d0c0b826a48aaef6ed5fd6523f",
+        "from-water": "53dd2c109b30b1bf9decbbe10450456a32ae2f21fe4e29f85a78f550912a623b",
+        "from-star-garden": "32667d647e3cc445a52e8facf997a98ba3ac8c899bad1508e31734053e69f680",
+        "from-moon-cafe": "ee987339d32b25c23aaa1c181af137a764c612227edb7bc8f1959a442711f7a6",
+        "from-moon-grotto": "7d91f06cd6a39ba7be843ea33951cbda1efe580119e11a58f07275fff92dae97",
+        "from-stargazer-terrace": "97e90b3aa4ed124c9bbcd3eb81c3a70802b61f719b911a7ad68e5ab137fc9ab7",
+        "plaza-arrival": "32fe13929f1c17f6e7612ed33033e439754791bad57fa335cf05363ad9125891",
+        "from-solar": "52068e0c266eb7af8937d2b23b30452739d6f30f41e39f009ca6307b66465513",
+        "from-lunar": "914102806a5d475826fe9cec1b4904a7f23c70f1ca16d8ba9099a32806cacdd2",
+        "from-maze": "b2d570cc6ad60f50a59dc016886e729814f89cc13fad428d20a2a9dd8af9519f",
+        "from-observatory": "f3af9df86fbd4e27063922f4c7b7d0796de32a5a06dbf27d6fcc1411459a7329",
+        "from-arcade": "7b1b0383545e0e6eb4765e2d1f7a92b418d78a7bcb870ac914ffcaee5c7a2465",
+        "from-festival": "bafc97fe13c6a43828265162d367870cb32503e5138435d0b9d968f5e1be5ece",
+        "from-wheel": "d0449d573bc18bc0235188f27cf6dffcc868b1e9418db6d108ebc717dea79e15",
+        "exit-fire": "ecd4e2def99f90ea4884a269395c2aa034b228a46c0223981cad354196ee2b2b",
+        "exit-air": "7d8bb05697c830354b176131bf74d5a014bdcad676d3fb2b0c12f0ee13513747",
+        "exit-earth": "03f9944db9635b1237e659017a5b1034d1a3edaee8531a8326129a43ad824f7d",
+        "exit-water": "25fcd58c86b3aed441cfc856485a406090c214f77f868ebb69aebb140d6fd644",
+        "exit-star-garden": "693bb7b3de6776963b4415cec464416a1e22c5c69adee41b5ac2bec70ca38226",
+        "exit-moon-cafe": "f91ec91b8d9db9596f42a0b9fae24cf7bd36e90c71284e9d05e6395c2bf62fb3",
+        "exit-moon-grotto": "591f87ae843dfa81796f2255f5df6762dc46420f0bcc31fbfd7e55e3b55e291e",
+        "exit-stargazer-terrace": "d39c23aa7d9aab4685f704e1f5384e77b468841f61f89aec4202fa3a52afba3a",
+        "exit-plaza-return": "6feae5ec1bd63044e5a57d3eed202ac42d9dae924a474977c3101e66303dee4a",
+        "wayfinding-text": "c68331bf5c63152fcad43c6b80942635d905736dd1a8a98204d8d412c8a29307",
+        "inspection-zones": "bb4442a699481a36ba964fda7c7928d0318638351e399a5fe0e5475fcdbe0278"
+      },
+      "vegetation": [
+        {
+          "id": "court-bed-northwest-soil",
+          "sprite": "ground-grass",
+          "x": 7,
+          "y": 17,
+          "width": 7,
+          "height": 2,
+          "layer": "terrain",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-northwest-flowers",
+          "sprite": "flower-bed",
+          "x": 7,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-northwest-tree",
+          "sprite": "tree-flowering",
+          "x": 12,
+          "y": 16,
+          "width": 2,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-northeast-soil",
+          "sprite": "ground-grass",
+          "x": 34,
+          "y": 17,
+          "width": 7,
+          "height": 2,
+          "layer": "terrain",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-northeast-flowers",
+          "sprite": "flower-bed",
+          "x": 34,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-northeast-tree",
+          "sprite": "tree-flowering",
+          "x": 39,
+          "y": 16,
+          "width": 2,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southwest-soil",
+          "sprite": "ground-grass",
+          "x": 14,
+          "y": 39,
+          "width": 5,
+          "height": 2,
+          "layer": "terrain",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southwest-flowers",
+          "sprite": "flower-bed",
+          "x": 14,
+          "y": 39,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southwest-tree",
+          "sprite": "tree-flowering",
+          "x": 17,
+          "y": 38,
+          "width": 2,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southeast-soil",
+          "sprite": "ground-grass",
+          "x": 30,
+          "y": 39,
+          "width": 5,
+          "height": 2,
+          "layer": "terrain",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southeast-flowers",
+          "sprite": "flower-bed",
+          "x": 30,
+          "y": 39,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "court-bed-southeast-tree",
+          "sprite": "tree-flowering",
+          "x": 33,
+          "y": 38,
+          "width": 2,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "directory-tree-west",
+          "sprite": "plant-palm",
+          "layer": "props",
+          "x": 16,
+          "y": 30,
+          "width": 3,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "directory-tree-east",
+          "sprite": "plant-palm",
+          "layer": "props",
+          "x": 29,
+          "y": 30,
+          "width": 3,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "9e45350c37d8c033f0d2f9faf79b519c8018b33c2ca886f3bd6f56fb1b18751a"
+    },
+    "comet-maze": {
+      "controls": {
+        "entries": [
+          {
+            "name": "comet-entry",
+            "isDefault": true,
+            "x": 5,
+            "y": 41,
+            "width": 3,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "orbit-return",
+            "destination": "orbit-maze",
+            "entry": "from-comet",
+            "x": 5,
+            "y": 45,
+            "width": 3,
+            "height": 1
+          },
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-maze",
+            "x": 26,
+            "y": 45,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "comet-checkpoint-1",
+            "name": "comet-checkpoint-1",
+            "x": 14,
+            "y": 32,
+            "width": 3,
+            "height": 3,
+            "properties": []
+          },
+          {
+            "id": "comet-checkpoint-2",
+            "name": "comet-checkpoint-2",
+            "x": 23,
+            "y": 14,
+            "width": 3,
+            "height": 3,
+            "properties": []
+          },
+          {
+            "id": "comet-checkpoint-3",
+            "name": "comet-checkpoint-3",
+            "x": 41,
+            "y": 23,
+            "width": 3,
+            "height": 3,
+            "properties": []
+          },
+          {
+            "id": "comet-finish",
+            "name": "comet-finish",
+            "x": 40,
+            "y": 7,
+            "width": 3,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "checkpoint-label-1",
+            "text": "01",
+            "x": 13,
+            "y": 29,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "checkpoint-label-2",
+            "text": "02",
+            "x": 22,
+            "y": 11,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "checkpoint-label-3",
+            "text": "03",
+            "x": 40,
+            "y": 20,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "finish-title",
+            "text": "COMET SHRINE",
+            "x": 38,
+            "y": 2,
+            "width": 8,
+            "height": 1,
+            "fontSize": 17,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "maze-title",
+            "text": "COMET MAZE",
+            "x": 12,
+            "y": 39,
+            "width": 19,
+            "height": 1,
+            "fontSize": 23,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "maze-instructions",
+            "text": "↑ MAZE · FIND 3 CRYSTALS + SHRINE\n↓ ORBIT RETURN · PLAZA TO THE EAST",
+            "x": 12,
+            "y": 41,
+            "width": 24,
+            "height": 2,
+            "fontSize": 17,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "return-label",
+            "text": "↓ ORBIT MAZE",
+            "x": 3,
+            "y": 44,
+            "width": 9,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-return-label",
+            "text": "↓ PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 24,
+            "y": 44,
+            "width": 7,
+            "height": 1,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "comet-lobby",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 39,
+            "width": 44,
+            "height": 8
+          },
+          {
+            "name": "comet-finish-court",
+            "kind": "auxiliary",
+            "x": 38,
+            "y": 2,
+            "width": 8,
+            "height": 10
+          }
+        ]
+      },
+      "wamSha256": "9bc9c08ee62056fe3c849e837433af0feb3d920e36dd55afd7e4d697a94220da",
+      "collisionSha256": "a3ca03b872ca67d4f31e0137c9d839836f1058a92998a0552a077d74d5e722d4",
+      "semanticLayerHashes": {
+        "floorLayer": "180ced0426ee82a0085fa428a55aad6d6619b23449569301ddb2a7edf445e696",
+        "comet-entry": "4c8a03632b6019ceb85ac5fbb890fac4b3ccf4bb292380f5bbdce513c9f82e8e",
+        "exit-orbit-return": "25cce0d5e350b3bf342ef392f7534d46db0c78759c9b098b44dc569b43736ab5",
+        "exit-plaza-return": "d38b20dac29176742f84be12c9be85008bf6788b3065cf9aa7423d72f1619cf9",
+        "wayfinding-text": "24774215f24c43aeb7ee83c26d8232dcf5d4afeb647c9b5ba8b3738a8db39278",
+        "inspection-zones": "900a7e4a0667c7389152aade63048df4419306f99ca759d8e9263e1c72d36863"
+      },
+      "vegetation": [
+        {
+          "id": "lobby-planter",
+          "sprite": "plant-palm",
+          "x": 42,
+          "y": 42,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "e04e127c3451a7c569a3feade43167ac8c1049462ac9512a73aa7e7241fe824a"
+    },
+    "earth-district": {
+      "controls": {
+        "entries": [
+          {
+            "name": "earth-entry",
+            "isDefault": true,
+            "x": 17,
+            "y": 28,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-earth",
+            "x": 17,
+            "y": 33,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "court-return",
+            "destination": "campus-exploration",
+            "entry": "from-earth",
+            "x": 1,
+            "y": 25,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "sigil-earth",
+            "name": "sigil-earth",
+            "x": 16,
+            "y": 10,
+            "width": 4,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "scene-title",
+            "text": "EARTH  /  CELESTIAL LIBRARY",
+            "x": 6,
+            "y": 2,
+            "width": 24,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-wayfinding",
+            "text": "↓ PLAZA · SOUTH DOOR",
+            "x": 13,
+            "y": 31,
+            "width": 10,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "sigil-label",
+            "text": "EARTH SIGIL  /  APPROACH + ACTIVATE",
+            "x": 8,
+            "y": 4,
+            "width": 23,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "west-activity-label",
+            "text": "CELESTIAL ARCHIVE",
+            "x": 2,
+            "y": 11,
+            "width": 13,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "east-activity-label",
+            "text": "READING SALON",
+            "x": 22,
+            "y": 11,
+            "width": 12,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "court-wayfinding",
+            "text": "← EXPLORATION COURT",
+            "x": 2,
+            "y": 27,
+            "width": 13,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "central-aisle",
+            "kind": "landmark",
+            "x": 17,
+            "y": 10,
+            "width": 2,
+            "height": 22
+          },
+          {
+            "name": "cross-route",
+            "kind": "landmark",
+            "x": 1,
+            "y": 23,
+            "width": 33,
+            "height": 2
+          },
+          {
+            "name": "earth-activity",
+            "kind": "room",
+            "x": 1,
+            "y": 4,
+            "width": 34,
+            "height": 23
+          },
+          {
+            "name": "arrival-vestibule",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 27,
+            "width": 32,
+            "height": 5
+          }
+        ]
+      },
+      "wamSha256": "6f9525ee614e09fd9123ced5a71e4a41d31be1015d1b2cc112aa64c9188cb87f",
+      "collisionSha256": "136d4e693e9b6ca0ce98eba6c18de14798283e3ffaa690c17fce56945fd866a1",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "earth-entry": "afc6446a1cd188d8f05c63b86cc85cd9a2f1224b82063723e9b8495691bc1e00",
+        "exit-plaza-return": "0346f52b3e3cd1372e0650e7bb7169551b5beea563c682bb4ec993a1bdeb7801",
+        "exit-court-return": "5619f249a62ba5ffb6fd7b8f2ad77f7084a691720020c0edcf9a56d27036412b",
+        "wayfinding-text": "6916fd7b662984e49b4ead763fe9ceff0d292d435835b4d71ce72915304e1762",
+        "inspection-zones": "33cc7599863c5b4bec6ee301bbe5ffb38ecdb8c8edce6111739f4e4e773a9e93"
+      },
+      "vegetation": [
+        {
+          "id": "reading-palm",
+          "sprite": "plant-palm",
+          "x": 30,
+          "y": 12,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "2ee7aeb01a0db249a301b552610f82381f521c639e9a0a1e5f2f2bc52f392def"
+    },
+    "fa-ship": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 18,
+            "y": 29,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          },
+          {
+            "name": "from-lower-deck",
+            "x": 32,
+            "y": 27,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "harbor-return",
+            "destination": "shipyard-beach",
+            "entry": "from-fa-ship",
+            "x": 8,
+            "y": 21,
+            "width": 3,
+            "height": 1
+          },
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-shipyard",
+            "x": 36,
+            "y": 21,
+            "width": 3,
+            "height": 1
+          },
+          {
+            "name": "stairs-down",
+            "destination": "fa-ship-interior",
+            "entry": "from-upper-deck",
+            "x": 31,
+            "y": 30,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "fa-ship-cockpit",
+            "name": "fa-ship-cockpit",
+            "properties": [],
+            "x": 35,
+            "y": 27,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "id": "fa-ship-cargo",
+            "name": "fa-ship-cargo",
+            "properties": [],
+            "x": 24,
+            "y": 30,
+            "width": 3,
+            "height": 3
+          },
+          {
+            "id": "cargo-deck",
+            "name": "cargo-deck",
+            "properties": [],
+            "x": 18,
+            "y": 31,
+            "width": 3,
+            "height": 2
+          },
+          {
+            "id": "fa-ship-lounge",
+            "name": "fa-ship-lounge",
+            "properties": [],
+            "x": 38,
+            "y": 26,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "signs": [
+          {
+            "name": "harbor-return-label",
+            "text": "↑ HARBOR",
+            "x": 7,
+            "y": 20,
+            "width": 6,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "plaza-return-label",
+            "text": "↑ PLAZA",
+            "x": 34,
+            "y": 20,
+            "width": 5,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "arrival-harbor-route",
+            "text": "↑ HARBOR",
+            "x": 18,
+            "y": 24,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "fa-ship",
+            "kind": "landmark",
+            "x": 4,
+            "y": 24,
+            "width": 40,
+            "height": 13
+          },
+          {
+            "name": "safe-gangway",
+            "kind": "auxiliary",
+            "x": 18,
+            "y": 20,
+            "width": 4,
+            "height": 9
+          }
+        ]
+      },
+      "wamSha256": "19f765e8fd4b314f84a7d00c37469c80d8061e28c435acbec5fa6917809a2786",
+      "collisionSha256": "c35bafa8c2f6ebbce647997d48bf25c47a6f165fb8208d8f0282d247b43d9884",
+      "semanticLayerHashes": {
+        "floorLayer": "180ced0426ee82a0085fa428a55aad6d6619b23449569301ddb2a7edf445e696",
+        "arrival": "008dc660ac8115a0c5b1ff515d8328ab8f2be54c9df8c8178f299e2f6bba48f7",
+        "exit-harbor-return": "f996ba457ca46320324a00c28860bfc509c16569c53c2e73e4765206ac1e0bc6",
+        "exit-plaza-return": "7f6794b3f46f8113e33d20488c94c4d296ff944cd48487e2f9f6b5431b6758fd",
+        "wayfinding-text": "ee6f217131801467385e5bbf1f276c64aa0e7501b66c49813907a12d81c10d80",
+        "inspection-zones": "e48d73b164151df77ebf3c40a9e46bcf92d7c65b24af2f42723b5c94eac6888f",
+        "from-lower-deck": "d50a5674b62cce670544df4751b5773b39b8fcc362370194c0fe57057b5deea0",
+        "exit-stairs-down": "6c1207ca6d9b40f759c946ced459d7f23a41210d72a626eb8cbf12bc6ad82b47"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "64c0246d6e3e4e1888086f4089df8aa767c3e03b5bc71ec15359c5f48594b799"
+    },
+    "fa-ship-interior": {
+      "controls": {
+        "entries": [
+          {
+            "name": "from-upper-deck",
+            "x": 18,
+            "y": 13,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "stairs-up",
+            "destination": "fa-ship",
+            "entry": "from-lower-deck",
+            "x": 18,
+            "y": 9,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-shipyard",
+            "x": 35,
+            "y": 13,
+            "width": 1,
+            "height": 2
+          }
+        ],
+        "areas": [
+          {
+            "id": "mess-and-galley",
+            "name": "mess-and-galley",
+            "properties": [],
+            "x": 4,
+            "y": 5,
+            "width": 13,
+            "height": 6
+          },
+          {
+            "id": "captains-chart-room",
+            "name": "captains-chart-room",
+            "properties": [],
+            "x": 23,
+            "y": 5,
+            "width": 12,
+            "height": 6
+          },
+          {
+            "id": "crew-bunks",
+            "name": "crew-bunks",
+            "properties": [],
+            "x": 4,
+            "y": 18,
+            "width": 13,
+            "height": 5
+          },
+          {
+            "id": "cargo-hold",
+            "name": "cargo-hold",
+            "properties": [],
+            "x": 23,
+            "y": 18,
+            "width": 12,
+            "height": 5
+          }
+        ],
+        "signs": [
+          {
+            "name": "upper-deck-direction",
+            "text": "↑ FA SHIP / UPPER DECK",
+            "x": 17,
+            "y": 8,
+            "width": 9,
+            "height": 1,
+            "fontSize": 16,
+            "align": "left"
+          },
+          {
+            "name": "plaza-direction",
+            "text": "PLAZA →",
+            "x": 31,
+            "y": 12,
+            "width": 6,
+            "height": 1,
+            "fontSize": 16,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "mess-and-galley",
+            "kind": "room",
+            "x": 4,
+            "y": 5,
+            "width": 13,
+            "height": 6
+          },
+          {
+            "name": "captains-chart-room",
+            "kind": "room",
+            "x": 23,
+            "y": 5,
+            "width": 12,
+            "height": 6
+          },
+          {
+            "name": "crew-bunks",
+            "kind": "room",
+            "x": 4,
+            "y": 18,
+            "width": 13,
+            "height": 5
+          },
+          {
+            "name": "cargo-hold",
+            "kind": "room",
+            "x": 23,
+            "y": 18,
+            "width": 12,
+            "height": 5
+          }
+        ]
+      },
+      "wamSha256": "4aab52f0dc46d3a148f19861a59d8078438b83aec02006596107775a0422bb7d",
+      "collisionSha256": "017e61bbe24ba3e8df1669df87cca2c119a7f42adcb0343f1b173d36ed00f80a",
+      "semanticLayerHashes": {
+        "floorLayer": "9f1980660ae8e0eb7f02805684c717ef6e4f480f7f9364f663d1bfd5a0844d65",
+        "from-upper-deck": "94656bfa2ae207218d02ac4f536d4774d765b464a6360e31e4edea84be97a449",
+        "exit-stairs-up": "5bc08ca9d033e8dc5e928dff10c944e318ebdcba153e43a72c60fcdfe694a360",
+        "exit-plaza-return": "6bb9d3a866087b7d75fb3a926461f156a7b88c2687f98f0523a633688e058ef4",
+        "wayfinding-text": "6aa22e57f4dbe00788bf66deb76f9d19b8ec2dd776399d6ecb3ce9c0012267f6",
+        "inspection-zones": "a9c2a07ad92e25fb5fc006cb0e89cb211c5bd989c94ea8bd8404d231e1c1a5e0"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "65ad4e248ab9b2fc1009580bfdf0190ff47332a17e666d4178e37c94b9185780"
+    },
+    "fire-district": {
+      "controls": {
+        "entries": [
+          {
+            "name": "fire-entry",
+            "isDefault": true,
+            "x": 17,
+            "y": 28,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-fire",
+            "x": 17,
+            "y": 33,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "court-return",
+            "destination": "campus-exploration",
+            "entry": "from-fire",
+            "x": 1,
+            "y": 25,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "sigil-fire",
+            "name": "sigil-fire",
+            "x": 16,
+            "y": 10,
+            "width": 4,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "scene-title",
+            "text": "FIRE  /  PROTOTYPE WORKSHOP",
+            "x": 6,
+            "y": 2,
+            "width": 24,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-wayfinding",
+            "text": "↓ PLAZA · SOUTH DOOR",
+            "x": 13,
+            "y": 31,
+            "width": 10,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "sigil-label",
+            "text": "FIRE SIGIL  /  APPROACH + ACTIVATE",
+            "x": 8,
+            "y": 4,
+            "width": 23,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "west-activity-label",
+            "text": "PROTOTYPE BENCHES",
+            "x": 2,
+            "y": 11,
+            "width": 13,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "east-activity-label",
+            "text": "FABRICATION LAB",
+            "x": 22,
+            "y": 11,
+            "width": 12,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "court-wayfinding",
+            "text": "← EXPLORATION COURT",
+            "x": 2,
+            "y": 27,
+            "width": 13,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "central-aisle",
+            "kind": "landmark",
+            "x": 17,
+            "y": 10,
+            "width": 2,
+            "height": 22
+          },
+          {
+            "name": "cross-route",
+            "kind": "landmark",
+            "x": 1,
+            "y": 23,
+            "width": 33,
+            "height": 2
+          },
+          {
+            "name": "fire-activity",
+            "kind": "room",
+            "x": 1,
+            "y": 4,
+            "width": 34,
+            "height": 23
+          },
+          {
+            "name": "arrival-vestibule",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 27,
+            "width": 32,
+            "height": 5
+          }
+        ]
+      },
+      "wamSha256": "741ea3fcb7508bd75341db1f862c0f89870c7be091ee5239605eef7650ff732a",
+      "collisionSha256": "68f16c7893ddac05f27108497d7f1007a5b0d6ae5f7192018a9b3403411835a1",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "fire-entry": "706f1bb1ca20a0ee3e5a998e3111341b0ff85fca9c1fbc98f2354c7b86a34811",
+        "exit-plaza-return": "b5269d364478eca2d7a88245dac68da6d7cfa26ad2b56f20ebf4ecfee640d578",
+        "exit-court-return": "ccbe75d1e834ec81c4ce65b5eafc38e738c259228e996f6fa505bcd3178b2ff6",
+        "wayfinding-text": "8dad92468d79837cd9c06fad964093a635242d178b064c230c924be0a0309e32",
+        "inspection-zones": "30261bcf17f1003f4c90d40f39df5845259c20ebe75b5bf5b24e1395d3dcfd97"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "657159b388e0677663c3108f634f7832cfe4b4bb8d3dc966d490e3d090070413"
+    },
+    "hidden-observatory": {
+      "controls": {
+        "entries": [
+          {
+            "name": "observatory-entry",
+            "isDefault": true,
+            "x": 19,
+            "y": 30,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-observatory",
+            "x": 19,
+            "y": 35,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "observatory-discovery",
+            "name": "observatory-discovery",
+            "x": 5,
+            "y": 25,
+            "width": 4,
+            "height": 2,
+            "properties": []
+          },
+          {
+            "id": "observatory-quiet",
+            "name": "observatory-quiet",
+            "x": 1,
+            "y": 3,
+            "width": 38,
+            "height": 31,
+            "properties": [
+              {
+                "id": "observatory-quiet-silent",
+                "type": "silent"
+              }
+            ]
+          }
+        ],
+        "signs": [
+          {
+            "name": "scene-title",
+            "text": "HIDDEN OBSERVATORY",
+            "x": 6,
+            "y": 2,
+            "width": 28,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-wayfinding",
+            "text": "↓ RETURN TO ZODIAC PLAZA",
+            "x": 23,
+            "y": 32,
+            "width": 15,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "west-gallery-label",
+            "text": "ZODIAC ARCHIVE  I–VI",
+            "x": 2,
+            "y": 4,
+            "width": 11,
+            "height": 1,
+            "fontSize": 12,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "east-gallery-label",
+            "text": "ZODIAC ARCHIVE  VII–XII",
+            "x": 28,
+            "y": 4,
+            "width": 10,
+            "height": 1,
+            "fontSize": 11,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "shrine-label",
+            "text": "DISCOVERY SHRINE",
+            "x": 2,
+            "y": 19,
+            "width": 13,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "shrine-instructions",
+            "text": "Four saved sigils +\na personal action\nunlock this discovery.",
+            "x": 2,
+            "y": 27,
+            "width": 13,
+            "height": 2,
+            "fontSize": 12,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "quiet-lounge-label",
+            "text": "QUIET SKY LOUNGE",
+            "x": 27,
+            "y": 19,
+            "width": 12,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "telescope-label",
+            "text": "THE LONG VIEW",
+            "x": 14,
+            "y": 13,
+            "width": 12,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#f1d9a0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "central-aisle",
+            "kind": "landmark",
+            "x": 19,
+            "y": 15,
+            "width": 2,
+            "height": 19
+          },
+          {
+            "name": "gallery-route",
+            "kind": "landmark",
+            "x": 2,
+            "y": 16,
+            "width": 36,
+            "height": 3
+          },
+          {
+            "name": "telescope-court",
+            "kind": "auxiliary",
+            "x": 13,
+            "y": 5,
+            "width": 14,
+            "height": 10
+          },
+          {
+            "name": "discovery-shrine",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 20,
+            "width": 13,
+            "height": 8
+          },
+          {
+            "name": "quiet-lounge",
+            "kind": "auxiliary",
+            "x": 27,
+            "y": 20,
+            "width": 11,
+            "height": 12
+          },
+          {
+            "name": "celestial-archive",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 28,
+            "width": 13,
+            "height": 6
+          }
+        ]
+      },
+      "wamSha256": "0007ab32b3d2e8a5e11d5587ebca3ed5d87dae81706569c8846cd7095552429c",
+      "collisionSha256": "b0aea4ea4c91d9bdb41f05f64cbc3059c345323eb12f66f3e90cba115af77aea",
+      "semanticLayerHashes": {
+        "floorLayer": "180ced0426ee82a0085fa428a55aad6d6619b23449569301ddb2a7edf445e696",
+        "observatory-entry": "bbf7a56dcf6dd9195eaa116f096b247c1d898c085c2da05a30756e8901428852",
+        "exit-plaza-return": "c1844acc9a372669d19a12d67dd030da92b8970787d0835161de648b0892b4f4",
+        "wayfinding-text": "e022722222c06929275d0b37863db09a3b4231bc481b9ffaf9b892e731e946e5",
+        "inspection-zones": "9509d79b6db1a08f93259ed5a8416d941c340eae124c6a48391d87a750dd30b9"
+      },
+      "vegetation": [
+        {
+          "id": "quiet-palm",
+          "sprite": "plant-palm",
+          "x": 35,
+          "y": 20,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "ee97ec5d41c042ca93ff94eacbcd6777f4bc165e5332d4e0209fd9633bf4be2c"
+    },
+    "moon-cafe": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-campus",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "campus-exploration",
+            "entry": "from-moon-cafe",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "cafe-west",
+            "name": "cafe-west",
+            "properties": [],
+            "x": 8,
+            "y": 23,
+            "width": 4,
+            "height": 3
+          },
+          {
+            "id": "cafe-east",
+            "name": "cafe-east",
+            "properties": [],
+            "x": 29,
+            "y": 23,
+            "width": 4,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ EXPLORATION",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "cafe-title",
+            "text": "MOON CAFÉ",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 12,
+            "y": 3,
+            "width": 18,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "cafe-menu",
+            "text": "COFFEE · TEA · CONVERSATION",
+            "fontSize": 16,
+            "color": "#f4d77b",
+            "x": 12,
+            "y": 7,
+            "width": 19,
+            "height": 1,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "moon-cafe-terrace",
+            "kind": "landmark",
+            "x": 4,
+            "y": 8,
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      "wamSha256": "595081627a27e1890fcef7b600ee933c901a8cefe65a1036e220953b25e540d3",
+      "collisionSha256": "4ac47a6ee160d8355b691b6cc52d4c12853b159d4ad8ee0aa634c894259079b1",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arrival": "8db3820fe8cc6ef31d908f23f7a79efaf2ce1a980fba3f8cc7c1014f1a691825",
+        "exit-plaza-return": "2244557bd1b643543a7c3b42f61a157e77d6187a81c87e42237d34264a900a13",
+        "exit-branch-return": "0d19929a29c3c0effdac694ac45c5ac759e81866dadf0a80a17423c031c3cfe2",
+        "wayfinding-text": "ef67337b6d760c66766cf115b45a9dd0e2ab2cd5ce7f70ad4518d4cb22e49c07",
+        "inspection-zones": "ac5afd80df30725bbbd125111eb71217807cce530821c16d3d1a86e4c063aaae"
+      },
+      "vegetation": [
+        {
+          "id": "cafe-palm-west",
+          "sprite": "plant-palm",
+          "layer": "props",
+          "x": 4,
+          "y": 28,
+          "width": 3,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "cafe-palm-east",
+          "sprite": "plant-palm",
+          "layer": "props",
+          "x": 33,
+          "y": 28,
+          "width": 3,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "bed049b6ca2d47bc6b83cf2fda7f500c6b61f32aeb3f1807d401b1aee24f8c11"
+    },
+    "moon-grotto": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-campus",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "campus-exploration",
+            "entry": "from-moon-grotto",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "grotto-conversation",
+            "name": "grotto-conversation",
+            "properties": [],
+            "x": 17,
+            "y": 24,
+            "width": 6,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ EXPLORATION",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "grotto-title",
+            "text": "MOON GROTTO",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 10,
+            "y": 3,
+            "width": 22,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "grotto-note",
+            "text": "THE MOON POOL\nA quiet place between journeys",
+            "fontSize": 16,
+            "color": "#f4d77b",
+            "x": 13,
+            "y": 6,
+            "width": 16,
+            "height": 2,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "moon-pool",
+            "kind": "landmark",
+            "x": 12,
+            "y": 9,
+            "width": 16,
+            "height": 14
+          }
+        ]
+      },
+      "wamSha256": "003bcd8e813606b232565c4a323074c7b568b6d0c52b03d0e8e5971be24268ec",
+      "collisionSha256": "8fcb7dd858d001d632795195d6f207dae6465859a0e0699e40a7f14a68cb30bc",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arrival": "ae6281532617ee48d42972aecada636a4876fe173a7a22cf3f0bfcc2de8b6657",
+        "exit-plaza-return": "6e339529994a61f0013358befc280c9ae01aec02c19ff5970511ddaf6e2b8c65",
+        "exit-branch-return": "d2bf1d472faff1e3bc29c17f40088a3b31d1a8f60a5c9374ce4aad05d095d431",
+        "wayfinding-text": "a4ba35d77e7be2345c3025467fbdb5f716f4ee6c1838916db59fcc0c4c2595fd",
+        "inspection-zones": "d7f952ac32f637841b8417072cec5ac15e71d5be2e35ab9f25662876c3d4f85b"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "3ace90a2395d294d178d5e5dc1306d8651928bd08a269ca31609b396851cee2c"
+    },
+    "nebula-arcade": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arcade-entry",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-festival",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "zodiac-festival-park",
+            "entry": "from-arcade",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "stage-approach",
+            "name": "stage-approach",
+            "properties": [],
+            "x": 17,
+            "y": 14,
+            "width": 6,
+            "height": 3
+          },
+          {
+            "id": "cabinet-social-west",
+            "name": "cabinet-social-west",
+            "properties": [],
+            "x": 5,
+            "y": 28,
+            "width": 5,
+            "height": 3
+          },
+          {
+            "id": "cabinet-social-east",
+            "name": "cabinet-social-east",
+            "properties": [],
+            "x": 31,
+            "y": 28,
+            "width": 5,
+            "height": 3
+          },
+          {
+            "id": "table-social-west",
+            "name": "table-social-west",
+            "properties": [],
+            "x": 10,
+            "y": 28,
+            "width": 3,
+            "height": 3
+          },
+          {
+            "id": "table-social-east",
+            "name": "table-social-east",
+            "properties": [],
+            "x": 27,
+            "y": 28,
+            "width": 3,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ FESTIVAL PARK",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "arcade-title",
+            "text": "NEBULA ARCADE",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 10,
+            "y": 3,
+            "width": 20,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "tournament-label",
+            "text": "PLAY · WATCH · MEET",
+            "fontSize": 16,
+            "color": "#f4d77b",
+            "x": 14,
+            "y": 19,
+            "width": 13,
+            "height": 1,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "tournament-stage",
+            "kind": "landmark",
+            "x": 12,
+            "y": 6,
+            "width": 16,
+            "height": 11
+          },
+          {
+            "name": "arcade-cabinets",
+            "kind": "landmark",
+            "x": 4,
+            "y": 9,
+            "width": 8,
+            "height": 19
+          },
+          {
+            "name": "social-tables",
+            "kind": "landmark",
+            "x": 10,
+            "y": 24,
+            "width": 20,
+            "height": 8
+          }
+        ]
+      },
+      "wamSha256": "256c0dbdd167ad3f29d2423401138df81a214edb9682b62c9d03382aa7a51543",
+      "collisionSha256": "25b45087a9c557e75bcfd5aaa1665981b707e6c4be5b53ce344471afc7549051",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arcade-entry": "7f3c17270e11f7e087024ceeaa28125b376365c97e74de800db0cc99c65b9833",
+        "exit-plaza-return": "0492d438405ee5c0698d45f2278442cf1683b71b79363394d681810f8379ec3f",
+        "exit-branch-return": "511a725cb37bd762ca0fa05055dd1c2ee36e8d9b2f081126e4451998cdb175a1",
+        "wayfinding-text": "16c665639e7cfb7df1e356f84edf00313366a1699ab25e6ebbd582f51bba9800",
+        "inspection-zones": "0e1de8df87aa89a1ff56ec2926b08e60e29f706c9bf4eebf3258f0d6b1dd0e23"
+      },
+      "vegetation": [],
+      "nonvegetationPlacementsSha256": "bb3d5628bfdecca09d62a8ac9533e4c479c44f54548aecb3f4a12e647feb6113"
+    },
+    "orbit-maze": {
+      "controls": {
+        "entries": [
+          {
+            "name": "maze-entry",
+            "isDefault": true,
+            "x": 9,
+            "y": 67,
+            "width": 3,
+            "height": 3
+          },
+          {
+            "name": "from-comet",
+            "x": 70,
+            "y": 70,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "maze-restart",
+            "destination": "orbit-maze",
+            "entry": "maze-entry",
+            "x": 73,
+            "y": 14,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "campus-return",
+            "destination": "overworld",
+            "entry": "from-maze",
+            "x": 38,
+            "y": 77,
+            "width": 4,
+            "height": 1
+          },
+          {
+            "name": "comet-gate",
+            "destination": "comet-maze",
+            "entry": "comet-entry",
+            "x": 73,
+            "y": 70,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "areas": [
+          {
+            "id": "maze-finish",
+            "name": "maze-finish",
+            "x": 69,
+            "y": 10,
+            "width": 3,
+            "height": 3,
+            "properties": []
+          },
+          {
+            "id": "maze-quiet",
+            "name": "maze-quiet",
+            "x": 2,
+            "y": 2,
+            "width": 76,
+            "height": 62,
+            "properties": [
+              {
+                "id": "maze-quiet-silent",
+                "type": "silent"
+              }
+            ]
+          },
+          {
+            "id": "quiet-garden",
+            "name": "quiet-garden",
+            "x": 2,
+            "y": 65,
+            "width": 34,
+            "height": 13,
+            "properties": [
+              {
+                "id": "quiet-garden-silent",
+                "type": "silent"
+              }
+            ]
+          },
+          {
+            "id": "maze-social-alcove",
+            "name": "maze-social-alcove",
+            "x": 63,
+            "y": 71,
+            "width": 4,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "crescent-fountain-label",
+            "text": "01  CRESCENT FOUNTAIN",
+            "x": 18,
+            "y": 49,
+            "width": 9,
+            "height": 1,
+            "fontSize": 12,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "comet-statue-label",
+            "text": "02  COMET COURT",
+            "x": 30,
+            "y": 25,
+            "width": 9,
+            "height": 1,
+            "fontSize": 12,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "star-ring-label",
+            "text": "03  STAR RING",
+            "x": 54,
+            "y": 37,
+            "width": 9,
+            "height": 1,
+            "fontSize": 12,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "finish-title",
+            "text": "ORBIT SHRINE",
+            "x": 67,
+            "y": 9,
+            "width": 8,
+            "height": 1,
+            "fontSize": 15,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "restart-label",
+            "text": "↑ RESTART ORBIT",
+            "x": 69,
+            "y": 13,
+            "width": 9,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "maze-title",
+            "text": "ORBIT MAZE",
+            "x": 4,
+            "y": 64,
+            "width": 14,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "maze-instructions",
+            "text": "↑ ORBIT MAZE · FOLLOW 01 / 02 / 03\n↓ PLAZA · SOUTH LANE\nCOMET MAZE → VIA SOUTH LANE",
+            "x": 15,
+            "y": 65,
+            "width": 22,
+            "height": 3,
+            "fontSize": 17,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "campus-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "x": 35,
+            "y": 76,
+            "width": 11,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "quiet-nook-label",
+            "text": "QUIET GARDEN",
+            "x": 14,
+            "y": 74,
+            "width": 13,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "social-alcove-label",
+            "text": "SOCIAL ALCOVE  /  TALK HERE",
+            "x": 51,
+            "y": 65,
+            "width": 24,
+            "height": 1,
+            "fontSize": 17,
+            "color": "#17283c",
+            "align": "left"
+          },
+          {
+            "name": "social-alcove-note",
+            "text": "Meet friends before or after the maze.",
+            "x": 52,
+            "y": 66,
+            "width": 22,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#17283c",
+            "align": "left"
+          },
+          {
+            "name": "comet-gate-label",
+            "text": "↑ COMET MAZE",
+            "x": 68,
+            "y": 72,
+            "width": 9,
+            "height": 1,
+            "fontSize": 15,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "crescent-fountain",
+            "x": 15,
+            "y": 42,
+            "width": 12,
+            "height": 9,
+            "kind": "landmark"
+          },
+          {
+            "name": "comet-statue",
+            "x": 28,
+            "y": 18,
+            "width": 11,
+            "height": 9,
+            "kind": "landmark"
+          },
+          {
+            "name": "star-ring",
+            "x": 54,
+            "y": 30,
+            "width": 9,
+            "height": 9,
+            "kind": "landmark"
+          },
+          {
+            "name": "finish-shrine",
+            "x": 65,
+            "y": 4,
+            "width": 12,
+            "height": 12,
+            "kind": "auxiliary"
+          },
+          {
+            "name": "quiet-garden",
+            "x": 2,
+            "y": 74,
+            "width": 32,
+            "height": 6,
+            "kind": "auxiliary"
+          },
+          {
+            "name": "maze-social-alcove",
+            "x": 49,
+            "y": 65,
+            "width": 28,
+            "height": 14,
+            "kind": "auxiliary"
+          },
+          {
+            "name": "wall-sector-0-0",
+            "x": 2,
+            "y": 2,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-0-1",
+            "x": 27,
+            "y": 2,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-0-2",
+            "x": 52,
+            "y": 2,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-1-0",
+            "x": 2,
+            "y": 23,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-1-1",
+            "x": 27,
+            "y": 23,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-1-2",
+            "x": 52,
+            "y": 23,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-2-0",
+            "x": 2,
+            "y": 44,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-2-1",
+            "x": 27,
+            "y": 44,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          },
+          {
+            "name": "wall-sector-2-2",
+            "x": 52,
+            "y": 44,
+            "width": 25,
+            "height": 21,
+            "kind": "landmark"
+          }
+        ]
+      },
+      "wamSha256": "632d4a3621e971722fd54b79f3518bdffc0e8abc00d393df47ec2acc2afd72c9",
+      "collisionSha256": "7d5488c561aa1edc382d50a3bf300097f07b6c751613ee7bad50a5acd549673d",
+      "semanticLayerHashes": {
+        "floorLayer": "180ced0426ee82a0085fa428a55aad6d6619b23449569301ddb2a7edf445e696",
+        "maze-entry": "ccfed4861a57ffd9414a88a8d465cd71b2b6e8ab15287339a97e5832bdae3c91",
+        "from-comet": "3cd05499c72ef60e425c00d0d17f3ef32661605b824353f979e3155e1cad97d7",
+        "exit-maze-restart": "44bb0788d15bcc230a4bd6762e3c9db3ca8bb81a41d25219184d7336c9f7cb9b",
+        "exit-campus-return": "596bfd56fb7638067b90af83de82ecf7d98b2e42f7a126a511a09d2d468c5188",
+        "exit-comet-gate": "a3c84fd2035fd78ea05bd19a6016f2b318f79208285b59aca8bd05591b7c5f44",
+        "wayfinding-text": "b0c437a34006ab3ffdd88d7db556dc74a0204c1b4831cf9dec753b6eacea9f77",
+        "inspection-zones": "861e01186b0937b6a3f64b30e848c78060aeffe89ffb1cfd47130692593f7fe7"
+      },
+      "vegetation": [
+        {
+          "id": "quiet-flowerbed",
+          "sprite": "flower-bed",
+          "x": 23,
+          "y": 76,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "social-garden-bed",
+          "sprite": "flower-bed",
+          "x": 50,
+          "y": 71,
+          "width": 2,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "quiet-plant",
+          "sprite": "plant-grass",
+          "x": 28,
+          "y": 76,
+          "width": 1,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 3,
+              "y": 6,
+              "width": 1,
+              "height": 2
+            },
+            "blockingCells": [
+              [
+                0,
+                1
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "social-palm",
+          "sprite": "plant-palm",
+          "x": 50,
+          "y": 75,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "quiet-palm-edge",
+          "sprite": "plant-palm",
+          "x": 30,
+          "y": 75,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "social-conversation-plant",
+          "sprite": "plant-grass",
+          "x": 51,
+          "y": 67,
+          "width": 1,
+          "height": 2,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 3,
+              "y": 6,
+              "width": 1,
+              "height": 2
+            },
+            "blockingCells": [
+              [
+                0,
+                1
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "7e90648ea23834addf16b879648209a16ec37ded582b8b618d8b7bf0cb960990"
+    },
+    "orbit-playground": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-festival",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "zodiac-festival-park",
+            "entry": "from-playground",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "playground-conversation",
+            "name": "playground-conversation",
+            "properties": [],
+            "x": 17,
+            "y": 21,
+            "width": 6,
+            "height": 3
+          },
+          {
+            "id": "orbit-games",
+            "name": "orbit-games",
+            "properties": [],
+            "x": 15,
+            "y": 14,
+            "width": 5,
+            "height": 2
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ FESTIVAL PARK",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "playground-title",
+            "text": "ORBIT PLAYGROUND",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 8,
+            "y": 3,
+            "width": 25,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "play-rules",
+            "text": "FOLLOW THE GOLD ORBIT\nGames and conversation court",
+            "fontSize": 16,
+            "color": "#f4d77b",
+            "x": 11,
+            "y": 8,
+            "width": 20,
+            "height": 2,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "orbital-loop",
+            "kind": "landmark",
+            "x": 10,
+            "y": 10,
+            "width": 20,
+            "height": 18
+          }
+        ]
+      },
+      "wamSha256": "5c0d69ccb000ca8b2d41c4e3e7099affa608372b46cec9011aebf79acc38d747",
+      "collisionSha256": "36b606dffd74a7342b31b1acb23ff62ff9e826bb6dff96ed8bb091a6a87bd8a6",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arrival": "e84ed3a72ff2817ab2418975d60713b777c08af5f1cee28a75f80388427b6dad",
+        "exit-plaza-return": "d96d0795986547f3acdb55da9cd45cb973536fee82c93c400e1a6d2788127fb5",
+        "exit-branch-return": "85e180d9d926ad9dc583251aaf0f3bbd324ce7e5069dba388e293cf437f5dfb7",
+        "wayfinding-text": "6f308bfdfaee45dc95e4ebc2aa87a7c72ab8c463b68ee06595aa191942e6c147",
+        "inspection-zones": "e16e17d983f853e16dea7cf7f99683bf66b73193228173208dd5f9fb94a64905"
+      },
+      "vegetation": [
+        {
+          "id": "play-garden-west-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 4,
+          "y": 19,
+          "width": 4,
+          "height": 4,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "play-garden-west-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 4,
+          "y": 19,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "play-garden-west-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 5,
+          "y": 19,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "play-garden-east-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 32,
+          "y": 19,
+          "width": 4,
+          "height": 4,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "play-garden-east-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 32,
+          "y": 19,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "play-garden-east-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 33,
+          "y": 19,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "6b67890b90cb89c6ad00c631f2fa4d02afc629d2cd169aee3276caaa71ec18b5"
+    },
+    "star-garden": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-campus",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "campus-exploration",
+            "entry": "from-star-garden",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "garden-conversation",
+            "name": "garden-conversation",
+            "properties": [],
+            "x": 17,
+            "y": 24,
+            "width": 6,
+            "height": 4
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ EXPLORATION",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "garden-title",
+            "text": "STAR GARDEN",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 11,
+            "y": 3,
+            "width": 20,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "garden-note",
+            "text": "PAUSE BENEATH THE STARS",
+            "fontSize": 15,
+            "color": "#f4d77b",
+            "x": 12,
+            "y": 30,
+            "width": 18,
+            "height": 1,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "four-star-beds",
+            "kind": "landmark",
+            "x": 4,
+            "y": 9,
+            "width": 32,
+            "height": 22
+          }
+        ]
+      },
+      "wamSha256": "9be64b84a6e75a3165fc9429c6afaac61717a5f167e604b87bf570e0431b5354",
+      "collisionSha256": "d9979c0ed66b7d732ec70fed545391c3091b15c39977ca1cd3f4fa6bf9396be4",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arrival": "b5d6ac0c5bf7f248c523408478c7d4a1a63a7a66228f1a9b809d2f135ef71791",
+        "exit-plaza-return": "64495d2ce9f601adcb64bd34b33e4a0e48136c3604b1c4940973994976b72f16",
+        "exit-branch-return": "4dad02b49fdd37841cd1194b92f1b318cc548b703445aad6513e77798299d7d0",
+        "wayfinding-text": "bdf050877096a8d53f625626907ab11da0fff18efc465d276022c43d03540a18",
+        "inspection-zones": "6b20691fdca2d830bd21329992258feab0b28d9ca3695118c097366cee7552f9"
+      },
+      "vegetation": [
+        {
+          "id": "dawn-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 6,
+          "y": 11,
+          "width": 8,
+          "height": 6,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "dawn-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 6,
+          "y": 11,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "dawn-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 11,
+          "y": 11,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "dusk-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 26,
+          "y": 11,
+          "width": 8,
+          "height": 6,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "dusk-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 26,
+          "y": 11,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "dusk-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 31,
+          "y": 11,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "solar-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 6,
+          "y": 23,
+          "width": 8,
+          "height": 6,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "solar-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 6,
+          "y": 23,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "solar-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 11,
+          "y": 23,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "lunar-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 26,
+          "y": 23,
+          "width": 8,
+          "height": 6,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "lunar-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 26,
+          "y": 23,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "lunar-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 31,
+          "y": 23,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "e1f305bcf5472e3d253ea223e380a9c140795384d0efc76962db77f66ef4cdc8"
+    },
+    "stargazer-terrace": {
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 32,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-campus",
+            "x": 19,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "branch-return",
+            "destination": "campus-exploration",
+            "entry": "from-stargazer-terrace",
+            "x": 7,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "observatory-telescope",
+            "name": "observatory-telescope",
+            "properties": [],
+            "x": 18,
+            "y": 14,
+            "width": 3,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 15,
+            "y": 37,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "branch-return-label",
+            "text": "↓ EXPLORATION",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 4,
+            "y": 37,
+            "width": 11,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "terrace-title",
+            "text": "STARGAZER TERRACE",
+            "fontSize": 26,
+            "color": "#f4d77b",
+            "x": 7,
+            "y": 3,
+            "width": 27,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "four-sigil-clue",
+            "text": "FOUR DISTRICTS · FOUR LIGHTS\nBring their sigils to this telescope.\nPress Space to reveal the observatory.",
+            "fontSize": 16,
+            "color": "#f4d77b",
+            "x": 10,
+            "y": 27,
+            "width": 22,
+            "height": 3,
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "telescope-gate",
+            "kind": "landmark",
+            "x": 11,
+            "y": 8,
+            "width": 18,
+            "height": 18
+          }
+        ]
+      },
+      "wamSha256": "01cb9cc9f613e725924e3790b7316b9ada982f7bab095630763d82b86facc962",
+      "collisionSha256": "69e1d47c545ad4ec7170c1055ec8a7165befe65e6d19242d328b27408faa3bd5",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "arrival": "592f04811876d7735c254f981aec91db976c1e3b8e74484fd1a0025f1e9b4b32",
+        "exit-plaza-return": "4fc55cd759b9ea27d1afceb7645fdf8230b9ac22bf5ff57e32e4caabab3a4d68",
+        "exit-branch-return": "3d2c451a3cce922b27ab08f4fa4f684df2921e4ff5e8b319fe8c7a3336a4d736",
+        "wayfinding-text": "bb1e6602981ea1fc5e49532a91f3dfaae4a1d1c36a61b85f3fd4a67859ad21d2",
+        "inspection-zones": "6e9b54a38be3635184dd0b609a752657e2e87d03d9ca8d8ba6ecf1aad957e960"
+      },
+      "vegetation": [
+        {
+          "id": "terrace-garden-west-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 5,
+          "y": 17,
+          "width": 4,
+          "height": 4,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "terrace-garden-west-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 5,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "terrace-garden-west-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 6,
+          "y": 17,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "terrace-garden-east-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 31,
+          "y": 17,
+          "width": 4,
+          "height": 4,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "terrace-garden-east-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 31,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "terrace-garden-east-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 32,
+          "y": 17,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "2cee4ca18dc0e79ebeb9a1ac51b914b7c83933ddf35e45b884065fa4a1849e2c"
+    },
+    "water-district": {
+      "controls": {
+        "entries": [
+          {
+            "name": "water-entry",
+            "isDefault": true,
+            "x": 17,
+            "y": 28,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-water",
+            "x": 17,
+            "y": 33,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "court-return",
+            "destination": "campus-exploration",
+            "entry": "from-water",
+            "x": 1,
+            "y": 25,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "sigil-water",
+            "name": "sigil-water",
+            "x": 16,
+            "y": 10,
+            "width": 4,
+            "height": 3,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "scene-title",
+            "text": "WATER  /  MOON CONSERVATORY",
+            "x": 6,
+            "y": 2,
+            "width": 24,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "plaza-wayfinding",
+            "text": "↓ PLAZA · SOUTH DOOR",
+            "x": 13,
+            "y": 31,
+            "width": 10,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          },
+          {
+            "name": "sigil-label",
+            "text": "WATER SIGIL  /  APPROACH + ACTIVATE",
+            "x": 8,
+            "y": 4,
+            "width": 23,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "west-activity-label",
+            "text": "MOON CONSERVATORY",
+            "x": 2,
+            "y": 11,
+            "width": 13,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "east-activity-label",
+            "text": "BOTANICAL NOTES",
+            "x": 22,
+            "y": 11,
+            "width": 12,
+            "height": 1,
+            "fontSize": 13,
+            "color": "#f1d9a0",
+            "align": "left"
+          },
+          {
+            "name": "court-wayfinding",
+            "text": "← EXPLORATION COURT",
+            "x": 2,
+            "y": 27,
+            "width": 13,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "central-aisle",
+            "kind": "landmark",
+            "x": 17,
+            "y": 10,
+            "width": 2,
+            "height": 22
+          },
+          {
+            "name": "cross-route",
+            "kind": "landmark",
+            "x": 1,
+            "y": 23,
+            "width": 33,
+            "height": 2
+          },
+          {
+            "name": "water-activity",
+            "kind": "room",
+            "x": 1,
+            "y": 4,
+            "width": 34,
+            "height": 23
+          },
+          {
+            "name": "arrival-vestibule",
+            "kind": "auxiliary",
+            "x": 2,
+            "y": 27,
+            "width": 32,
+            "height": 5
+          }
+        ]
+      },
+      "wamSha256": "cb53821e2892425675fc61647c03f9c754ecfb37944aad96aed9c72583bd6256",
+      "collisionSha256": "1f5352a8e0e12101b82ba5c0d51e78c63ee46d3acb963367cc7bef23bb070c96",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "water-entry": "6f88d8cce446369c6ed1598a5cde317f4358a79110d585f2b8162d2d9faf94bc",
+        "exit-plaza-return": "af8c501b911be765457d5a32ba27432724f9f1097e047c875795e42201d8d376",
+        "exit-court-return": "0477599822a96bf81cede97a735ee350a6654b9c2a72b0713029955ea76eed60",
+        "wayfinding-text": "ccce0adc8d941a3e62598fd4c22add9b7c3d85bd316f319a2a6986d19b6b42eb",
+        "inspection-zones": "01b20a0675edbdbdbbb3a6c9470945e52cd1200c8fe66984ba79083daef7872b"
+      },
+      "vegetation": [
+        {
+          "id": "conservatory-bed-west",
+          "sprite": "flower-bed",
+          "x": 3,
+          "y": 13,
+          "width": 4,
+          "height": 4,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "conservatory-tree-west",
+          "sprite": "tree-flowering",
+          "x": 4,
+          "y": 13,
+          "width": 2,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "conservatory-bed-middle",
+          "sprite": "flower-bed",
+          "x": 10,
+          "y": 18,
+          "width": 4,
+          "height": 4,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "conservatory-palm",
+          "sprite": "plant-palm",
+          "x": 10,
+          "y": 18,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "conservatory-palm-east",
+          "sprite": "plant-palm",
+          "x": 31,
+          "y": 28,
+          "width": 3,
+          "height": 3,
+          "layer": "props",
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+            "rect": {
+              "x": 0,
+              "y": 5,
+              "width": 3,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "8464862cb766a0311379abf68eb7027adddc770f87da726741d92e05ec65cf09"
+    },
+    "zodiac-festival-park": {
+      "controls": {
+        "entries": [
+          {
+            "name": "festival-entry",
+            "x": 23,
+            "y": 40,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          },
+          {
+            "name": "from-arcade",
+            "x": 10,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-playground",
+            "x": 34,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-festival",
+            "x": 23,
+            "y": 44,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "arcade",
+            "destination": "nebula-arcade",
+            "entry": "arcade-entry",
+            "x": 10,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "playground",
+            "destination": "orbit-playground",
+            "entry": "arrival",
+            "x": 34,
+            "y": 10,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "pond-view",
+            "name": "pond-view",
+            "properties": [],
+            "x": 22,
+            "y": 25,
+            "width": 4,
+            "height": 3
+          },
+          {
+            "id": "fire-conversation",
+            "name": "fire-conversation",
+            "properties": [],
+            "x": 8,
+            "y": 23,
+            "width": 4,
+            "height": 2
+          },
+          {
+            "id": "earth-conversation",
+            "name": "earth-conversation",
+            "properties": [],
+            "x": 36,
+            "y": 23,
+            "width": 4,
+            "height": 2
+          },
+          {
+            "id": "air-conversation",
+            "name": "air-conversation",
+            "properties": [],
+            "x": 8,
+            "y": 36,
+            "width": 4,
+            "height": 2
+          },
+          {
+            "id": "water-conversation",
+            "name": "water-conversation",
+            "properties": [],
+            "x": 36,
+            "y": 36,
+            "width": 4,
+            "height": 2
+          },
+          {
+            "id": "picnic-conversation",
+            "name": "picnic-conversation",
+            "properties": [],
+            "x": 10,
+            "y": 39,
+            "width": 4,
+            "height": 3
+          },
+          {
+            "id": "quiet-lawn",
+            "name": "quiet-lawn",
+            "properties": [
+              {
+                "id": "quiet-lawn-silent",
+                "type": "silent"
+              }
+            ],
+            "x": 34,
+            "y": 39,
+            "width": 4,
+            "height": 3
+          },
+          {
+            "id": "star-overlook-view",
+            "name": "star-overlook-view",
+            "x": 22,
+            "y": 12,
+            "width": 3,
+            "height": 2,
+            "properties": []
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "↓ ZODIAC PLAZA",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 19,
+            "y": 45,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "festival-title",
+            "text": "ZODIAC FESTIVAL PARK",
+            "fontSize": 25,
+            "color": "#f4d77b",
+            "x": 13,
+            "y": 3,
+            "width": 25,
+            "height": 2,
+            "align": "left"
+          },
+          {
+            "name": "arcade-label",
+            "text": "↑ NEBULA ARCADE",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 7,
+            "y": 6,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "playground-label",
+            "text": "↑ ORBIT PLAYGROUND",
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "x": 30,
+            "y": 6,
+            "width": 12,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "fire-garden-label",
+            "text": "FIRE",
+            "fontSize": 15,
+            "color": "#f4d77b",
+            "x": 5,
+            "y": 15,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "earth-garden-label",
+            "text": "EARTH",
+            "fontSize": 15,
+            "color": "#f4d77b",
+            "x": 33,
+            "y": 15,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "air-garden-label",
+            "text": "AIR",
+            "fontSize": 15,
+            "color": "#f4d77b",
+            "x": 5,
+            "y": 28,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "water-garden-label",
+            "text": "WATER",
+            "fontSize": 15,
+            "color": "#f4d77b",
+            "x": 33,
+            "y": 28,
+            "width": 10,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "overlook-label",
+            "text": "STAR WALK",
+            "fontSize": 14,
+            "color": "#f4d77b",
+            "x": 20,
+            "y": 13,
+            "width": 8,
+            "height": 1,
+            "align": "left"
+          },
+          {
+            "name": "arrival-routes",
+            "text": "↖ ARCADE · NORTHWEST\nPLAYGROUND · NORTHEAST ↗\n↓ PLAZA · SOUTH GATE",
+            "x": 17,
+            "y": 34,
+            "width": 14,
+            "height": 4,
+            "fontSize": 16,
+            "color": "#fff0b0",
+            "align": "left"
+          }
+        ],
+        "standingSigns": null,
+        "inspectionZones": [
+          {
+            "name": "moonlit-pond",
+            "kind": "landmark",
+            "x": 18,
+            "y": 16,
+            "width": 12,
+            "height": 12
+          },
+          {
+            "name": "fire-garden",
+            "kind": "landmark",
+            "x": 5,
+            "y": 16,
+            "width": 10,
+            "height": 7
+          },
+          {
+            "name": "earth-garden",
+            "kind": "landmark",
+            "x": 33,
+            "y": 16,
+            "width": 10,
+            "height": 7
+          },
+          {
+            "name": "air-garden",
+            "kind": "landmark",
+            "x": 5,
+            "y": 29,
+            "width": 10,
+            "height": 7
+          },
+          {
+            "name": "water-garden",
+            "kind": "landmark",
+            "x": 33,
+            "y": 29,
+            "width": 10,
+            "height": 7
+          },
+          {
+            "name": "picnic-lawn",
+            "kind": "landmark",
+            "x": 4,
+            "y": 38,
+            "width": 12,
+            "height": 5
+          },
+          {
+            "name": "quiet-lawn",
+            "kind": "landmark",
+            "x": 32,
+            "y": 38,
+            "width": 11,
+            "height": 5
+          },
+          {
+            "name": "hidden-star-overlook",
+            "kind": "landmark",
+            "x": 21,
+            "y": 12,
+            "width": 6,
+            "height": 4
+          }
+        ]
+      },
+      "wamSha256": "c6adf05374629f1493f602b623e1c6f9a41882603577f2fca6afea27fc063658",
+      "collisionSha256": "fedb15dcda89f4693fc1dbc856f76e79154bcc9bfe9cbf26a873278465a5d20a",
+      "semanticLayerHashes": {
+        "floorLayer": "2248d79c58a78184ae578851ea1bd76510ddb61c3f3fc99bfe255f1012ff084f",
+        "festival-entry": "2530e37fb4a27be795247322b3a917060b36841e5c8b2cdb409c86be668ed0ea",
+        "from-arcade": "c3a0c6bfc524318edbc08763d1afafb026510a8f7ab6aa8deeee50da42f2f518",
+        "from-playground": "471780af711f2e7c29d426dc3996eb377c07ce5ddd86b95cbbaa2a551c504d70",
+        "exit-plaza-return": "23190241ff9143948d427cfbcd9c8b257f777d72e3489821e09031210c7591e8",
+        "exit-arcade": "98876deb6d0e03d336ca0eefa26c93d2d25ef80dc5e08460924f6093ba9d5222",
+        "exit-playground": "4c2ed30dede8af8ab42843dea46d4fabe506a0fa1c160adfdf23e0fbb962af6a",
+        "wayfinding-text": "449f6436a28537710f2e0d03c33442b5f7d683e738e6cd66863052504ae7682a",
+        "inspection-zones": "141cee8d5c3fb50159116bf6b394f9c50d2d93560e1523dc1e6bed5d1617870e"
+      },
+      "vegetation": [
+        {
+          "id": "fire-garden-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 6,
+          "y": 17,
+          "width": 8,
+          "height": 5,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "fire-garden-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 6,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "fire-garden-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 11,
+          "y": 17,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "earth-garden-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 34,
+          "y": 17,
+          "width": 8,
+          "height": 5,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "earth-garden-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 34,
+          "y": 17,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "earth-garden-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 39,
+          "y": 17,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "air-garden-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 6,
+          "y": 30,
+          "width": 8,
+          "height": 5,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "air-garden-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 6,
+          "y": 30,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "air-garden-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 11,
+          "y": 30,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "water-garden-soil",
+          "sprite": "ground-grass",
+          "layer": "terrain",
+          "x": 34,
+          "y": 30,
+          "width": 8,
+          "height": 5,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 0,
+              "y": 25,
+              "width": 1,
+              "height": 1
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "water-garden-flowers",
+          "sprite": "flower-bed",
+          "layer": "props",
+          "x": 34,
+          "y": 30,
+          "width": 2,
+          "height": 2,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 3,
+              "y": 21,
+              "width": 2,
+              "height": 2
+            },
+            "blockingCells": [],
+            "level": "belowAvatar",
+            "sourceId": "workadventure"
+          }
+        },
+        {
+          "id": "water-garden-tree",
+          "sprite": "tree-flowering",
+          "layer": "props",
+          "x": 39,
+          "y": 30,
+          "width": 2,
+          "height": 3,
+          "oldCatalog": {
+            "sheet": "assets/tilesets/workadventure/WA_Exterior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 2,
+              "height": 3
+            },
+            "blockingCells": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "level": "aboveAvatar",
+            "sourceId": "workadventure"
+          }
+        }
+      ],
+      "nonvegetationPlacementsSha256": "fd63c0c51a18c44860ba3976c577fb928f63c0cdbd7009de062f96c4fb8d0aee"
+    }
+  },
+  "catalogKeys": [
+    "arcade-cabinet",
+    "arrow-east",
+    "arrow-north",
+    "arrow-south",
+    "arrow-west",
+    "balance-libra",
+    "balance-wall-relief",
+    "beach-cabana",
+    "beach-grass",
+    "beach-low-table",
+    "beach-palm",
+    "beach-parasol-coral",
+    "beach-parasol-teal",
+    "beach-pebbles",
+    "beach-recliner",
+    "beach-sand-0",
+    "beach-sand-1",
+    "beach-sand-10",
+    "beach-sand-11",
+    "beach-sand-12",
+    "beach-sand-13",
+    "beach-sand-14",
+    "beach-sand-15",
+    "beach-sand-2",
+    "beach-sand-3",
+    "beach-sand-4",
+    "beach-sand-5",
+    "beach-sand-6",
+    "beach-sand-7",
+    "beach-sand-8",
+    "beach-sand-9",
+    "beach-sea-veil",
+    "beach-shrub",
+    "beach-tiki-bar",
+    "beach-woven-towel",
+    "beacon",
+    "bench-curved",
+    "bench-park",
+    "boat-wood",
+    "bookcase",
+    "bridge-rail-bottom",
+    "bridge-rail-top",
+    "bridge-stone-rails",
+    "chair-lounge",
+    "chair-north-cream",
+    "chair-north-slate",
+    "chair-presentation",
+    "coast-barrel",
+    "coast-beach-bar",
+    "coast-bulwark",
+    "coast-cannon",
+    "coast-cloud",
+    "coast-crate",
+    "coast-deck-chair",
+    "coast-deck-plank",
+    "coast-dock-plank",
+    "coast-fish",
+    "coast-flag",
+    "coast-foam-east",
+    "coast-foam-north",
+    "coast-foam-south",
+    "coast-foam-west",
+    "coast-footprints",
+    "coast-gull",
+    "coast-harbor-hut",
+    "coast-hatch",
+    "coast-mast",
+    "coast-mooring-post",
+    "coast-palm",
+    "coast-parasol",
+    "coast-pebble-cluster",
+    "coast-rope-horizontal",
+    "coast-rope-vertical",
+    "coast-sailing-ship",
+    "coast-sand",
+    "coast-sandcastle",
+    "coast-sea",
+    "coast-shallows",
+    "coast-shell",
+    "coast-sign-board",
+    "coast-sign-pointer-left",
+    "coast-sign-pointer-right",
+    "coast-sign-post",
+    "coast-sponsor-balloon",
+    "coast-sponsor-plane",
+    "coast-square-sail",
+    "coast-towel",
+    "coast-underwater-rock",
+    "coast-volley-net",
+    "coast-wet-sand",
+    "coast-wheel",
+    "coast-yard-aft",
+    "coast-yard-fore",
+    "coast-yard-starboard",
+    "coffee-maker",
+    "comet-statue",
+    "console-green",
+    "console-keypad",
+    "constellation-aquarius",
+    "constellation-aries",
+    "constellation-cancer",
+    "constellation-capricorn",
+    "constellation-coast-land-100",
+    "constellation-coast-land-1012",
+    "constellation-coast-land-1016",
+    "constellation-coast-land-1028",
+    "constellation-coast-land-1032",
+    "constellation-coast-land-1036",
+    "constellation-coast-land-104",
+    "constellation-coast-land-1040",
+    "constellation-coast-land-1052",
+    "constellation-coast-land-1056",
+    "constellation-coast-land-1060",
+    "constellation-coast-land-108",
+    "constellation-coast-land-1080",
+    "constellation-coast-land-1084",
+    "constellation-coast-land-1088",
+    "constellation-coast-land-1092",
+    "constellation-coast-land-1112",
+    "constellation-coast-land-1116",
+    "constellation-coast-land-1120",
+    "constellation-coast-land-1140",
+    "constellation-coast-land-1144",
+    "constellation-coast-land-1148",
+    "constellation-coast-land-1152",
+    "constellation-coast-land-124",
+    "constellation-coast-land-128",
+    "constellation-coast-land-140",
+    "constellation-coast-land-144",
+    "constellation-coast-land-148",
+    "constellation-coast-land-164",
+    "constellation-coast-land-168",
+    "constellation-coast-land-192",
+    "constellation-coast-land-196",
+    "constellation-coast-land-200",
+    "constellation-coast-land-248",
+    "constellation-coast-land-252",
+    "constellation-coast-land-256",
+    "constellation-coast-land-260",
+    "constellation-coast-land-264",
+    "constellation-coast-land-28",
+    "constellation-coast-land-284",
+    "constellation-coast-land-288",
+    "constellation-coast-land-292",
+    "constellation-coast-land-32",
+    "constellation-coast-land-328",
+    "constellation-coast-land-332",
+    "constellation-coast-land-336",
+    "constellation-coast-land-340",
+    "constellation-coast-land-344",
+    "constellation-coast-land-348",
+    "constellation-coast-land-352",
+    "constellation-coast-land-356",
+    "constellation-coast-land-36",
+    "constellation-coast-land-360",
+    "constellation-coast-land-364",
+    "constellation-coast-land-368",
+    "constellation-coast-land-372",
+    "constellation-coast-land-392",
+    "constellation-coast-land-400",
+    "constellation-coast-land-404",
+    "constellation-coast-land-408",
+    "constellation-coast-land-412",
+    "constellation-coast-land-416",
+    "constellation-coast-land-420",
+    "constellation-coast-land-424",
+    "constellation-coast-land-428",
+    "constellation-coast-land-440",
+    "constellation-coast-land-444",
+    "constellation-coast-land-448",
+    "constellation-coast-land-452",
+    "constellation-coast-land-456",
+    "constellation-coast-land-460",
+    "constellation-coast-land-476",
+    "constellation-coast-land-480",
+    "constellation-coast-land-492",
+    "constellation-coast-land-496",
+    "constellation-coast-land-500",
+    "constellation-coast-land-516",
+    "constellation-coast-land-52",
+    "constellation-coast-land-520",
+    "constellation-coast-land-524",
+    "constellation-coast-land-536",
+    "constellation-coast-land-540",
+    "constellation-coast-land-552",
+    "constellation-coast-land-556",
+    "constellation-coast-land-56",
+    "constellation-coast-land-560",
+    "constellation-coast-land-572",
+    "constellation-coast-land-576",
+    "constellation-coast-land-592",
+    "constellation-coast-land-596",
+    "constellation-coast-land-60",
+    "constellation-coast-land-600",
+    "constellation-coast-land-604",
+    "constellation-coast-land-616",
+    "constellation-coast-land-620",
+    "constellation-coast-land-624",
+    "constellation-coast-land-636",
+    "constellation-coast-land-64",
+    "constellation-coast-land-640",
+    "constellation-coast-land-652",
+    "constellation-coast-land-656",
+    "constellation-coast-land-668",
+    "constellation-coast-land-672",
+    "constellation-coast-land-676",
+    "constellation-coast-land-680",
+    "constellation-coast-land-684",
+    "constellation-coast-land-688",
+    "constellation-coast-land-700",
+    "constellation-coast-land-704",
+    "constellation-coast-land-708",
+    "constellation-coast-land-720",
+    "constellation-coast-land-724",
+    "constellation-coast-land-728",
+    "constellation-coast-land-732",
+    "constellation-coast-land-748",
+    "constellation-coast-land-752",
+    "constellation-coast-land-756",
+    "constellation-coast-land-76",
+    "constellation-coast-land-760",
+    "constellation-coast-land-784",
+    "constellation-coast-land-788",
+    "constellation-coast-land-792",
+    "constellation-coast-land-796",
+    "constellation-coast-land-80",
+    "constellation-coast-land-812",
+    "constellation-coast-land-816",
+    "constellation-coast-land-820",
+    "constellation-coast-land-824",
+    "constellation-coast-land-84",
+    "constellation-coast-land-844",
+    "constellation-coast-land-848",
+    "constellation-coast-land-864",
+    "constellation-coast-land-868",
+    "constellation-coast-land-872",
+    "constellation-coast-land-876",
+    "constellation-coast-land-896",
+    "constellation-coast-land-900",
+    "constellation-coast-land-904",
+    "constellation-coast-land-908",
+    "constellation-coast-land-920",
+    "constellation-coast-land-924",
+    "constellation-coast-land-944",
+    "constellation-coast-land-948",
+    "constellation-coast-land-964",
+    "constellation-coast-land-968",
+    "constellation-coast-land-972",
+    "constellation-coast-land-976",
+    "constellation-coast-land-988",
+    "constellation-coast-land-992",
+    "constellation-coast-land-996",
+    "constellation-coast-water-0",
+    "constellation-coast-water-1000",
+    "constellation-coast-water-1004",
+    "constellation-coast-water-1008",
+    "constellation-coast-water-1020",
+    "constellation-coast-water-1024",
+    "constellation-coast-water-1044",
+    "constellation-coast-water-1048",
+    "constellation-coast-water-1064",
+    "constellation-coast-water-1068",
+    "constellation-coast-water-1072",
+    "constellation-coast-water-1076",
+    "constellation-coast-water-1096",
+    "constellation-coast-water-1100",
+    "constellation-coast-water-1104",
+    "constellation-coast-water-1108",
+    "constellation-coast-water-112",
+    "constellation-coast-water-1124",
+    "constellation-coast-water-1128",
+    "constellation-coast-water-1132",
+    "constellation-coast-water-1136",
+    "constellation-coast-water-1156",
+    "constellation-coast-water-116",
+    "constellation-coast-water-1160",
+    "constellation-coast-water-1164",
+    "constellation-coast-water-1168",
+    "constellation-coast-water-1172",
+    "constellation-coast-water-1176",
+    "constellation-coast-water-1180",
+    "constellation-coast-water-1184",
+    "constellation-coast-water-1188",
+    "constellation-coast-water-1192",
+    "constellation-coast-water-1196",
+    "constellation-coast-water-12",
+    "constellation-coast-water-120",
+    "constellation-coast-water-1200",
+    "constellation-coast-water-1204",
+    "constellation-coast-water-1208",
+    "constellation-coast-water-132",
+    "constellation-coast-water-136",
+    "constellation-coast-water-152",
+    "constellation-coast-water-156",
+    "constellation-coast-water-16",
+    "constellation-coast-water-160",
+    "constellation-coast-water-172",
+    "constellation-coast-water-176",
+    "constellation-coast-water-180",
+    "constellation-coast-water-184",
+    "constellation-coast-water-188",
+    "constellation-coast-water-20",
+    "constellation-coast-water-204",
+    "constellation-coast-water-208",
+    "constellation-coast-water-212",
+    "constellation-coast-water-216",
+    "constellation-coast-water-220",
+    "constellation-coast-water-224",
+    "constellation-coast-water-228",
+    "constellation-coast-water-232",
+    "constellation-coast-water-236",
+    "constellation-coast-water-24",
+    "constellation-coast-water-240",
+    "constellation-coast-water-244",
+    "constellation-coast-water-268",
+    "constellation-coast-water-272",
+    "constellation-coast-water-276",
+    "constellation-coast-water-280",
+    "constellation-coast-water-296",
+    "constellation-coast-water-300",
+    "constellation-coast-water-304",
+    "constellation-coast-water-308",
+    "constellation-coast-water-312",
+    "constellation-coast-water-316",
+    "constellation-coast-water-320",
+    "constellation-coast-water-324",
+    "constellation-coast-water-376",
+    "constellation-coast-water-380",
+    "constellation-coast-water-384",
+    "constellation-coast-water-388",
+    "constellation-coast-water-396",
+    "constellation-coast-water-4",
+    "constellation-coast-water-40",
+    "constellation-coast-water-432",
+    "constellation-coast-water-436",
+    "constellation-coast-water-44",
+    "constellation-coast-water-464",
+    "constellation-coast-water-468",
+    "constellation-coast-water-472",
+    "constellation-coast-water-48",
+    "constellation-coast-water-484",
+    "constellation-coast-water-488",
+    "constellation-coast-water-504",
+    "constellation-coast-water-508",
+    "constellation-coast-water-512",
+    "constellation-coast-water-528",
+    "constellation-coast-water-532",
+    "constellation-coast-water-544",
+    "constellation-coast-water-548",
+    "constellation-coast-water-564",
+    "constellation-coast-water-568",
+    "constellation-coast-water-580",
+    "constellation-coast-water-584",
+    "constellation-coast-water-588",
+    "constellation-coast-water-608",
+    "constellation-coast-water-612",
+    "constellation-coast-water-628",
+    "constellation-coast-water-632",
+    "constellation-coast-water-644",
+    "constellation-coast-water-648",
+    "constellation-coast-water-660",
+    "constellation-coast-water-664",
+    "constellation-coast-water-68",
+    "constellation-coast-water-692",
+    "constellation-coast-water-696",
+    "constellation-coast-water-712",
+    "constellation-coast-water-716",
+    "constellation-coast-water-72",
+    "constellation-coast-water-736",
+    "constellation-coast-water-740",
+    "constellation-coast-water-744",
+    "constellation-coast-water-764",
+    "constellation-coast-water-768",
+    "constellation-coast-water-772",
+    "constellation-coast-water-776",
+    "constellation-coast-water-780",
+    "constellation-coast-water-8",
+    "constellation-coast-water-800",
+    "constellation-coast-water-804",
+    "constellation-coast-water-808",
+    "constellation-coast-water-828",
+    "constellation-coast-water-832",
+    "constellation-coast-water-836",
+    "constellation-coast-water-840",
+    "constellation-coast-water-852",
+    "constellation-coast-water-856",
+    "constellation-coast-water-860",
+    "constellation-coast-water-88",
+    "constellation-coast-water-880",
+    "constellation-coast-water-884",
+    "constellation-coast-water-888",
+    "constellation-coast-water-892",
+    "constellation-coast-water-912",
+    "constellation-coast-water-916",
+    "constellation-coast-water-92",
+    "constellation-coast-water-928",
+    "constellation-coast-water-932",
+    "constellation-coast-water-936",
+    "constellation-coast-water-940",
+    "constellation-coast-water-952",
+    "constellation-coast-water-956",
+    "constellation-coast-water-96",
+    "constellation-coast-water-960",
+    "constellation-coast-water-980",
+    "constellation-coast-water-984",
+    "constellation-gemini",
+    "constellation-leo",
+    "constellation-libra",
+    "constellation-pisces",
+    "constellation-sagittarius",
+    "constellation-scorpio",
+    "constellation-taurus",
+    "constellation-virgo",
+    "copy-machine",
+    "counter-left",
+    "counter-right",
+    "crystal-cyan",
+    "desk-coding",
+    "desk-cream",
+    "desk-curved",
+    "desk-glass",
+    "door-open",
+    "door-wood-closed",
+    "exterior-gate-campus",
+    "exterior-gate-festival",
+    "exterior-gate-lunar",
+    "exterior-gate-maze",
+    "exterior-gate-shipyard",
+    "exterior-gate-solar",
+    "exterior-road-east",
+    "exterior-road-north",
+    "exterior-road-plaza",
+    "exterior-road-south",
+    "exterior-road-west",
+    "floor-blue",
+    "floor-charcoal",
+    "floor-cosmic",
+    "floor-inlay",
+    "floor-wood",
+    "floor-wood-long",
+    "flower-bed",
+    "forge-aries",
+    "forge-wall-relief",
+    "glass-pane",
+    "glass-partition",
+    "glass-pod",
+    "glyph-aquarius",
+    "glyph-aries",
+    "glyph-cancer",
+    "glyph-capricorn",
+    "glyph-gemini",
+    "glyph-leo",
+    "glyph-libra",
+    "glyph-pisces",
+    "glyph-sagittarius",
+    "glyph-scorpio",
+    "glyph-taurus",
+    "glyph-virgo",
+    "ground-grass",
+    "ground-sand",
+    "hub-building-south",
+    "hub-emblem-aquarius",
+    "hub-emblem-aries",
+    "hub-emblem-cancer",
+    "hub-emblem-capricorn",
+    "hub-emblem-gemini",
+    "hub-emblem-leo",
+    "hub-emblem-libra",
+    "hub-emblem-pisces",
+    "hub-emblem-sagittarius",
+    "hub-emblem-scorpio",
+    "hub-emblem-taurus",
+    "hub-emblem-virgo",
+    "hub-label-aquarius",
+    "hub-label-aries",
+    "hub-label-cancer",
+    "hub-label-capricorn",
+    "hub-label-gemini",
+    "hub-label-leo",
+    "hub-label-libra",
+    "hub-label-pisces",
+    "hub-label-sagittarius",
+    "hub-label-scorpio",
+    "hub-label-taurus",
+    "hub-label-virgo",
+    "hub-moon-fountain",
+    "hub-nav-arrival-crosspost",
+    "hub-nav-brand",
+    "hub-nav-directory",
+    "hub-nav-east",
+    "hub-nav-gate-campus",
+    "hub-nav-gate-festival",
+    "hub-nav-gate-lunar",
+    "hub-nav-gate-maze",
+    "hub-nav-gate-shipyard",
+    "hub-nav-gate-solar",
+    "hub-nav-north",
+    "hub-nav-south",
+    "hub-nav-welcome",
+    "hub-nav-west",
+    "hub-nav-you-are-here",
+    "label-aries",
+    "label-libra",
+    "laptop",
+    "lectern",
+    "light-amber",
+    "light-cyan",
+    "lily-pad",
+    "lounge-crescent",
+    "lounge-terraced",
+    "naval-barrel",
+    "naval-cannon",
+    "naval-crate",
+    "naval-dock",
+    "naval-grate",
+    "naval-lpc-ship-1-belowAvatar",
+    "naval-lpc-ship-103-belowAvatar",
+    "naval-lpc-ship-104-belowAvatar",
+    "naval-lpc-ship-105-belowAvatar",
+    "naval-lpc-ship-106-belowAvatar",
+    "naval-lpc-ship-109-belowAvatar",
+    "naval-lpc-ship-110-belowAvatar",
+    "naval-lpc-ship-111-belowAvatar",
+    "naval-lpc-ship-112-belowAvatar",
+    "naval-lpc-ship-113-belowAvatar",
+    "naval-lpc-ship-114-belowAvatar",
+    "naval-lpc-ship-129-belowAvatar",
+    "naval-lpc-ship-134-belowAvatar",
+    "naval-lpc-ship-135-belowAvatar",
+    "naval-lpc-ship-136-belowAvatar",
+    "naval-lpc-ship-137-belowAvatar",
+    "naval-lpc-ship-141-belowAvatar",
+    "naval-lpc-ship-142-belowAvatar",
+    "naval-lpc-ship-143-belowAvatar",
+    "naval-lpc-ship-144-belowAvatar",
+    "naval-lpc-ship-145-belowAvatar",
+    "naval-lpc-ship-146-belowAvatar",
+    "naval-lpc-ship-161-belowAvatar",
+    "naval-lpc-ship-162-belowAvatar",
+    "naval-lpc-ship-163-belowAvatar",
+    "naval-lpc-ship-167-belowAvatar",
+    "naval-lpc-ship-168-belowAvatar",
+    "naval-lpc-ship-169-belowAvatar",
+    "naval-lpc-ship-175-belowAvatar",
+    "naval-lpc-ship-176-belowAvatar",
+    "naval-lpc-ship-177-belowAvatar",
+    "naval-lpc-ship-178-belowAvatar",
+    "naval-lpc-ship-193-belowAvatar",
+    "naval-lpc-ship-194-belowAvatar",
+    "naval-lpc-ship-195-belowAvatar",
+    "naval-lpc-ship-196-belowAvatar",
+    "naval-lpc-ship-197-belowAvatar",
+    "naval-lpc-ship-198-belowAvatar",
+    "naval-lpc-ship-199-belowAvatar",
+    "naval-lpc-ship-2-belowAvatar",
+    "naval-lpc-ship-200-belowAvatar",
+    "naval-lpc-ship-201-belowAvatar",
+    "naval-lpc-ship-206-belowAvatar",
+    "naval-lpc-ship-207-belowAvatar",
+    "naval-lpc-ship-208-belowAvatar",
+    "naval-lpc-ship-209-belowAvatar",
+    "naval-lpc-ship-226-belowAvatar",
+    "naval-lpc-ship-227-belowAvatar",
+    "naval-lpc-ship-228-belowAvatar",
+    "naval-lpc-ship-229-belowAvatar",
+    "naval-lpc-ship-230-belowAvatar",
+    "naval-lpc-ship-231-belowAvatar",
+    "naval-lpc-ship-232-belowAvatar",
+    "naval-lpc-ship-269-belowAvatar",
+    "naval-lpc-ship-3-belowAvatar",
+    "naval-lpc-ship-33-belowAvatar",
+    "naval-lpc-ship-34-belowAvatar",
+    "naval-lpc-ship-340-belowAvatar",
+    "naval-lpc-ship-35-belowAvatar",
+    "naval-lpc-ship-36-belowAvatar",
+    "naval-lpc-ship-37-belowAvatar",
+    "naval-lpc-ship-38-belowAvatar",
+    "naval-lpc-ship-39-belowAvatar",
+    "naval-lpc-ship-4-belowAvatar",
+    "naval-lpc-ship-40-belowAvatar",
+    "naval-lpc-ship-41-belowAvatar",
+    "naval-lpc-ship-425-belowAvatar",
+    "naval-lpc-ship-427-belowAvatar",
+    "naval-lpc-ship-430-belowAvatar",
+    "naval-lpc-ship-431-belowAvatar",
+    "naval-lpc-ship-432-belowAvatar",
+    "naval-lpc-ship-433-belowAvatar",
+    "naval-lpc-ship-450-belowAvatar",
+    "naval-lpc-ship-451-belowAvatar",
+    "naval-lpc-ship-452-belowAvatar",
+    "naval-lpc-ship-453-belowAvatar",
+    "naval-lpc-ship-454-belowAvatar",
+    "naval-lpc-ship-455-belowAvatar",
+    "naval-lpc-ship-456-belowAvatar",
+    "naval-lpc-ship-457-belowAvatar",
+    "naval-lpc-ship-458-belowAvatar",
+    "naval-lpc-ship-460-belowAvatar",
+    "naval-lpc-ship-463-belowAvatar",
+    "naval-lpc-ship-464-belowAvatar",
+    "naval-lpc-ship-481-belowAvatar",
+    "naval-lpc-ship-482-belowAvatar",
+    "naval-lpc-ship-483-belowAvatar",
+    "naval-lpc-ship-484-belowAvatar",
+    "naval-lpc-ship-485-belowAvatar",
+    "naval-lpc-ship-486-belowAvatar",
+    "naval-lpc-ship-487-belowAvatar",
+    "naval-lpc-ship-488-belowAvatar",
+    "naval-lpc-ship-489-belowAvatar",
+    "naval-lpc-ship-496-belowAvatar",
+    "naval-lpc-ship-499-belowAvatar",
+    "naval-lpc-ship-5-belowAvatar",
+    "naval-lpc-ship-512-belowAvatar",
+    "naval-lpc-ship-513-belowAvatar",
+    "naval-lpc-ship-514-belowAvatar",
+    "naval-lpc-ship-516-belowAvatar",
+    "naval-lpc-ship-517-belowAvatar",
+    "naval-lpc-ship-518-belowAvatar",
+    "naval-lpc-ship-519-belowAvatar",
+    "naval-lpc-ship-520-belowAvatar",
+    "naval-lpc-ship-536-belowAvatar",
+    "naval-lpc-ship-543-belowAvatar",
+    "naval-lpc-ship-544-belowAvatar",
+    "naval-lpc-ship-545-belowAvatar",
+    "naval-lpc-ship-546-belowAvatar",
+    "naval-lpc-ship-548-belowAvatar",
+    "naval-lpc-ship-549-belowAvatar",
+    "naval-lpc-ship-550-belowAvatar",
+    "naval-lpc-ship-551-belowAvatar",
+    "naval-lpc-ship-552-belowAvatar",
+    "naval-lpc-ship-557-belowAvatar",
+    "naval-lpc-ship-575-belowAvatar",
+    "naval-lpc-ship-577-belowAvatar",
+    "naval-lpc-ship-578-belowAvatar",
+    "naval-lpc-ship-579-belowAvatar",
+    "naval-lpc-ship-580-belowAvatar",
+    "naval-lpc-ship-581-belowAvatar",
+    "naval-lpc-ship-583-belowAvatar",
+    "naval-lpc-ship-584-belowAvatar",
+    "naval-lpc-ship-591-belowAvatar",
+    "naval-lpc-ship-592-belowAvatar",
+    "naval-lpc-ship-593-belowAvatar",
+    "naval-lpc-ship-6-belowAvatar",
+    "naval-lpc-ship-600-belowAvatar",
+    "naval-lpc-ship-602-belowAvatar",
+    "naval-lpc-ship-603-belowAvatar",
+    "naval-lpc-ship-604-belowAvatar",
+    "naval-lpc-ship-605-belowAvatar",
+    "naval-lpc-ship-606-belowAvatar",
+    "naval-lpc-ship-607-belowAvatar",
+    "naval-lpc-ship-610-belowAvatar",
+    "naval-lpc-ship-611-belowAvatar",
+    "naval-lpc-ship-612-belowAvatar",
+    "naval-lpc-ship-613-belowAvatar",
+    "naval-lpc-ship-614-belowAvatar",
+    "naval-lpc-ship-615-belowAvatar",
+    "naval-lpc-ship-616-belowAvatar",
+    "naval-lpc-ship-617-belowAvatar",
+    "naval-lpc-ship-619-belowAvatar",
+    "naval-lpc-ship-621-belowAvatar",
+    "naval-lpc-ship-623-belowAvatar",
+    "naval-lpc-ship-624-belowAvatar",
+    "naval-lpc-ship-625-belowAvatar",
+    "naval-lpc-ship-631-belowAvatar",
+    "naval-lpc-ship-635-belowAvatar",
+    "naval-lpc-ship-636-belowAvatar",
+    "naval-lpc-ship-637-belowAvatar",
+    "naval-lpc-ship-638-belowAvatar",
+    "naval-lpc-ship-639-belowAvatar",
+    "naval-lpc-ship-645-belowAvatar",
+    "naval-lpc-ship-646-belowAvatar",
+    "naval-lpc-ship-647-belowAvatar",
+    "naval-lpc-ship-648-belowAvatar",
+    "naval-lpc-ship-649-belowAvatar",
+    "naval-lpc-ship-65-belowAvatar",
+    "naval-lpc-ship-652-belowAvatar",
+    "naval-lpc-ship-653-belowAvatar",
+    "naval-lpc-ship-655-belowAvatar",
+    "naval-lpc-ship-657-belowAvatar",
+    "naval-lpc-ship-66-belowAvatar",
+    "naval-lpc-ship-660-belowAvatar",
+    "naval-lpc-ship-666-belowAvatar",
+    "naval-lpc-ship-67-belowAvatar",
+    "naval-lpc-ship-68-belowAvatar",
+    "naval-lpc-ship-69-belowAvatar",
+    "naval-lpc-ship-692-belowAvatar",
+    "naval-lpc-ship-698-belowAvatar",
+    "naval-lpc-ship-7-belowAvatar",
+    "naval-lpc-ship-71-belowAvatar",
+    "naval-lpc-ship-72-belowAvatar",
+    "naval-lpc-ship-73-belowAvatar",
+    "naval-lpc-ship-768-belowAvatar",
+    "naval-lpc-ship-769-belowAvatar",
+    "naval-lpc-ship-77-belowAvatar",
+    "naval-lpc-ship-8-belowAvatar",
+    "naval-lpc-ship-801-belowAvatar",
+    "naval-lpc-ship-802-belowAvatar",
+    "naval-lpc-ship-803-belowAvatar",
+    "naval-lpc-ship-804-belowAvatar",
+    "naval-lpc-ship-816-belowAvatar",
+    "naval-lpc-ship-817-belowAvatar",
+    "naval-lpc-ship-818-belowAvatar",
+    "naval-lpc-ship-82-belowAvatar",
+    "naval-lpc-ship-835-belowAvatar",
+    "naval-lpc-ship-836-belowAvatar",
+    "naval-lpc-ship-837-belowAvatar",
+    "naval-lpc-ship-838-belowAvatar",
+    "naval-lpc-ship-839-belowAvatar",
+    "naval-lpc-ship-840-belowAvatar",
+    "naval-lpc-ship-9-belowAvatar",
+    "naval-lpc-ship-97-belowAvatar",
+    "naval-lpc-ship-98-belowAvatar",
+    "naval-lpc-ship-accessories-0-belowAvatar",
+    "naval-lpc-ship-accessories-120-belowAvatar",
+    "naval-lpc-ship-accessories-122-belowAvatar",
+    "naval-lpc-ship-accessories-123-belowAvatar",
+    "naval-lpc-ship-accessories-124-belowAvatar",
+    "naval-lpc-ship-accessories-125-belowAvatar",
+    "naval-lpc-ship-accessories-13-belowAvatar",
+    "naval-lpc-ship-accessories-136-belowAvatar",
+    "naval-lpc-ship-accessories-138-belowAvatar",
+    "naval-lpc-ship-accessories-152-belowAvatar",
+    "naval-lpc-ship-accessories-154-belowAvatar",
+    "naval-lpc-ship-accessories-155-belowAvatar",
+    "naval-lpc-ship-accessories-156-belowAvatar",
+    "naval-lpc-ship-accessories-157-belowAvatar",
+    "naval-lpc-ship-accessories-16-belowAvatar",
+    "naval-lpc-ship-accessories-168-belowAvatar",
+    "naval-lpc-ship-accessories-169-belowAvatar",
+    "naval-lpc-ship-accessories-29-belowAvatar",
+    "naval-lpc-ship-accessories-32-belowAvatar",
+    "naval-lpc-ship-accessories-45-belowAvatar",
+    "naval-lpc-ship-accessories-60-belowAvatar",
+    "naval-lpc-ship-accessories-76-belowAvatar",
+    "naval-lpc-ship-accessories-77-belowAvatar",
+    "naval-lpc-ship-accessories-80-belowAvatar",
+    "naval-lpc-ship-accessories-93-belowAvatar",
+    "naval-lpc-ship-accessories-97-belowAvatar",
+    "naval-mast-base",
+    "naval-name-boarding",
+    "naval-name-hull",
+    "naval-rigging-10-aboveAvatar",
+    "naval-rigging-100-aboveAvatar",
+    "naval-rigging-1001-aboveAvatar",
+    "naval-rigging-1002-aboveAvatar",
+    "naval-rigging-1003-aboveAvatar",
+    "naval-rigging-1004-aboveAvatar",
+    "naval-rigging-1005-aboveAvatar",
+    "naval-rigging-1006-aboveAvatar",
+    "naval-rigging-1007-aboveAvatar",
+    "naval-rigging-1008-aboveAvatar",
+    "naval-rigging-101-aboveAvatar",
+    "naval-rigging-102-aboveAvatar",
+    "naval-rigging-103-aboveAvatar",
+    "naval-rigging-104-aboveAvatar",
+    "naval-rigging-105-aboveAvatar",
+    "naval-rigging-106-aboveAvatar",
+    "naval-rigging-107-aboveAvatar",
+    "naval-rigging-11-aboveAvatar",
+    "naval-rigging-126-aboveAvatar",
+    "naval-rigging-127-aboveAvatar",
+    "naval-rigging-131-aboveAvatar",
+    "naval-rigging-132-aboveAvatar",
+    "naval-rigging-133-aboveAvatar",
+    "naval-rigging-134-aboveAvatar",
+    "naval-rigging-135-aboveAvatar",
+    "naval-rigging-136-aboveAvatar",
+    "naval-rigging-137-aboveAvatar",
+    "naval-rigging-138-aboveAvatar",
+    "naval-rigging-139-aboveAvatar",
+    "naval-rigging-158-aboveAvatar",
+    "naval-rigging-159-aboveAvatar",
+    "naval-rigging-163-aboveAvatar",
+    "naval-rigging-164-aboveAvatar",
+    "naval-rigging-165-aboveAvatar",
+    "naval-rigging-166-aboveAvatar",
+    "naval-rigging-167-aboveAvatar",
+    "naval-rigging-168-aboveAvatar",
+    "naval-rigging-169-aboveAvatar",
+    "naval-rigging-170-aboveAvatar",
+    "naval-rigging-171-aboveAvatar",
+    "naval-rigging-190-aboveAvatar",
+    "naval-rigging-191-aboveAvatar",
+    "naval-rigging-195-aboveAvatar",
+    "naval-rigging-196-aboveAvatar",
+    "naval-rigging-197-aboveAvatar",
+    "naval-rigging-198-aboveAvatar",
+    "naval-rigging-199-aboveAvatar",
+    "naval-rigging-200-aboveAvatar",
+    "naval-rigging-201-aboveAvatar",
+    "naval-rigging-202-aboveAvatar",
+    "naval-rigging-203-aboveAvatar",
+    "naval-rigging-222-aboveAvatar",
+    "naval-rigging-223-aboveAvatar",
+    "naval-rigging-227-aboveAvatar",
+    "naval-rigging-228-aboveAvatar",
+    "naval-rigging-229-aboveAvatar",
+    "naval-rigging-230-aboveAvatar",
+    "naval-rigging-231-aboveAvatar",
+    "naval-rigging-232-aboveAvatar",
+    "naval-rigging-233-aboveAvatar",
+    "naval-rigging-234-aboveAvatar",
+    "naval-rigging-235-aboveAvatar",
+    "naval-rigging-254-aboveAvatar",
+    "naval-rigging-255-aboveAvatar",
+    "naval-rigging-259-aboveAvatar",
+    "naval-rigging-260-aboveAvatar",
+    "naval-rigging-261-aboveAvatar",
+    "naval-rigging-262-aboveAvatar",
+    "naval-rigging-263-aboveAvatar",
+    "naval-rigging-264-aboveAvatar",
+    "naval-rigging-265-aboveAvatar",
+    "naval-rigging-266-aboveAvatar",
+    "naval-rigging-267-aboveAvatar",
+    "naval-rigging-286-aboveAvatar",
+    "naval-rigging-287-aboveAvatar",
+    "naval-rigging-291-aboveAvatar",
+    "naval-rigging-292-aboveAvatar",
+    "naval-rigging-293-aboveAvatar",
+    "naval-rigging-294-aboveAvatar",
+    "naval-rigging-295-aboveAvatar",
+    "naval-rigging-296-aboveAvatar",
+    "naval-rigging-297-aboveAvatar",
+    "naval-rigging-298-aboveAvatar",
+    "naval-rigging-299-aboveAvatar",
+    "naval-rigging-3-aboveAvatar",
+    "naval-rigging-318-aboveAvatar",
+    "naval-rigging-319-aboveAvatar",
+    "naval-rigging-324-aboveAvatar",
+    "naval-rigging-325-aboveAvatar",
+    "naval-rigging-326-aboveAvatar",
+    "naval-rigging-327-aboveAvatar",
+    "naval-rigging-328-aboveAvatar",
+    "naval-rigging-329-aboveAvatar",
+    "naval-rigging-330-aboveAvatar",
+    "naval-rigging-331-aboveAvatar",
+    "naval-rigging-348-aboveAvatar",
+    "naval-rigging-349-aboveAvatar",
+    "naval-rigging-35-aboveAvatar",
+    "naval-rigging-350-aboveAvatar",
+    "naval-rigging-351-aboveAvatar",
+    "naval-rigging-358-aboveAvatar",
+    "naval-rigging-359-aboveAvatar",
+    "naval-rigging-36-aboveAvatar",
+    "naval-rigging-360-aboveAvatar",
+    "naval-rigging-361-aboveAvatar",
+    "naval-rigging-362-aboveAvatar",
+    "naval-rigging-363-aboveAvatar",
+    "naval-rigging-37-aboveAvatar",
+    "naval-rigging-38-aboveAvatar",
+    "naval-rigging-382-aboveAvatar",
+    "naval-rigging-383-aboveAvatar",
+    "naval-rigging-39-aboveAvatar",
+    "naval-rigging-395-aboveAvatar",
+    "naval-rigging-4-aboveAvatar",
+    "naval-rigging-40-aboveAvatar",
+    "naval-rigging-41-aboveAvatar",
+    "naval-rigging-414-aboveAvatar",
+    "naval-rigging-415-aboveAvatar",
+    "naval-rigging-42-aboveAvatar",
+    "naval-rigging-43-aboveAvatar",
+    "naval-rigging-446-aboveAvatar",
+    "naval-rigging-447-aboveAvatar",
+    "naval-rigging-478-aboveAvatar",
+    "naval-rigging-479-aboveAvatar",
+    "naval-rigging-510-aboveAvatar",
+    "naval-rigging-511-aboveAvatar",
+    "naval-rigging-542-aboveAvatar",
+    "naval-rigging-543-aboveAvatar",
+    "naval-rigging-574-aboveAvatar",
+    "naval-rigging-575-aboveAvatar",
+    "naval-rigging-576-aboveAvatar",
+    "naval-rigging-577-aboveAvatar",
+    "naval-rigging-6-aboveAvatar",
+    "naval-rigging-60-aboveAvatar",
+    "naval-rigging-606-aboveAvatar",
+    "naval-rigging-607-aboveAvatar",
+    "naval-rigging-608-aboveAvatar",
+    "naval-rigging-609-aboveAvatar",
+    "naval-rigging-61-aboveAvatar",
+    "naval-rigging-62-aboveAvatar",
+    "naval-rigging-63-aboveAvatar",
+    "naval-rigging-638-aboveAvatar",
+    "naval-rigging-639-aboveAvatar",
+    "naval-rigging-640-aboveAvatar",
+    "naval-rigging-641-aboveAvatar",
+    "naval-rigging-668-aboveAvatar",
+    "naval-rigging-669-aboveAvatar",
+    "naval-rigging-67-aboveAvatar",
+    "naval-rigging-670-aboveAvatar",
+    "naval-rigging-671-aboveAvatar",
+    "naval-rigging-672-aboveAvatar",
+    "naval-rigging-673-aboveAvatar",
+    "naval-rigging-674-aboveAvatar",
+    "naval-rigging-675-aboveAvatar",
+    "naval-rigging-676-aboveAvatar",
+    "naval-rigging-677-aboveAvatar",
+    "naval-rigging-678-aboveAvatar",
+    "naval-rigging-679-aboveAvatar",
+    "naval-rigging-68-aboveAvatar",
+    "naval-rigging-680-aboveAvatar",
+    "naval-rigging-69-aboveAvatar",
+    "naval-rigging-7-aboveAvatar",
+    "naval-rigging-70-aboveAvatar",
+    "naval-rigging-702-aboveAvatar",
+    "naval-rigging-703-aboveAvatar",
+    "naval-rigging-704-aboveAvatar",
+    "naval-rigging-705-aboveAvatar",
+    "naval-rigging-706-aboveAvatar",
+    "naval-rigging-707-aboveAvatar",
+    "naval-rigging-708-aboveAvatar",
+    "naval-rigging-709-aboveAvatar",
+    "naval-rigging-71-aboveAvatar",
+    "naval-rigging-710-aboveAvatar",
+    "naval-rigging-711-aboveAvatar",
+    "naval-rigging-712-aboveAvatar",
+    "naval-rigging-72-aboveAvatar",
+    "naval-rigging-73-aboveAvatar",
+    "naval-rigging-734-aboveAvatar",
+    "naval-rigging-735-aboveAvatar",
+    "naval-rigging-736-aboveAvatar",
+    "naval-rigging-737-aboveAvatar",
+    "naval-rigging-74-aboveAvatar",
+    "naval-rigging-742-aboveAvatar",
+    "naval-rigging-743-aboveAvatar",
+    "naval-rigging-744-aboveAvatar",
+    "naval-rigging-75-aboveAvatar",
+    "naval-rigging-764-aboveAvatar",
+    "naval-rigging-765-aboveAvatar",
+    "naval-rigging-768-aboveAvatar",
+    "naval-rigging-769-aboveAvatar",
+    "naval-rigging-774-aboveAvatar",
+    "naval-rigging-775-aboveAvatar",
+    "naval-rigging-776-aboveAvatar",
+    "naval-rigging-781-aboveAvatar",
+    "naval-rigging-782-aboveAvatar",
+    "naval-rigging-783-aboveAvatar",
+    "naval-rigging-784-aboveAvatar",
+    "naval-rigging-8-aboveAvatar",
+    "naval-rigging-800-aboveAvatar",
+    "naval-rigging-801-aboveAvatar",
+    "naval-rigging-802-aboveAvatar",
+    "naval-rigging-806-aboveAvatar",
+    "naval-rigging-807-aboveAvatar",
+    "naval-rigging-808-aboveAvatar",
+    "naval-rigging-813-aboveAvatar",
+    "naval-rigging-814-aboveAvatar",
+    "naval-rigging-815-aboveAvatar",
+    "naval-rigging-816-aboveAvatar",
+    "naval-rigging-832-aboveAvatar",
+    "naval-rigging-833-aboveAvatar",
+    "naval-rigging-834-aboveAvatar",
+    "naval-rigging-838-aboveAvatar",
+    "naval-rigging-839-aboveAvatar",
+    "naval-rigging-840-aboveAvatar",
+    "naval-rigging-841-aboveAvatar",
+    "naval-rigging-842-aboveAvatar",
+    "naval-rigging-843-aboveAvatar",
+    "naval-rigging-844-aboveAvatar",
+    "naval-rigging-845-aboveAvatar",
+    "naval-rigging-846-aboveAvatar",
+    "naval-rigging-847-aboveAvatar",
+    "naval-rigging-848-aboveAvatar",
+    "naval-rigging-864-aboveAvatar",
+    "naval-rigging-865-aboveAvatar",
+    "naval-rigging-866-aboveAvatar",
+    "naval-rigging-870-aboveAvatar",
+    "naval-rigging-871-aboveAvatar",
+    "naval-rigging-872-aboveAvatar",
+    "naval-rigging-873-aboveAvatar",
+    "naval-rigging-874-aboveAvatar",
+    "naval-rigging-875-aboveAvatar",
+    "naval-rigging-876-aboveAvatar",
+    "naval-rigging-877-aboveAvatar",
+    "naval-rigging-878-aboveAvatar",
+    "naval-rigging-879-aboveAvatar",
+    "naval-rigging-880-aboveAvatar",
+    "naval-rigging-896-aboveAvatar",
+    "naval-rigging-897-aboveAvatar",
+    "naval-rigging-898-aboveAvatar",
+    "naval-rigging-899-aboveAvatar",
+    "naval-rigging-9-aboveAvatar",
+    "naval-rigging-900-aboveAvatar",
+    "naval-rigging-901-aboveAvatar",
+    "naval-rigging-902-aboveAvatar",
+    "naval-rigging-903-aboveAvatar",
+    "naval-rigging-904-aboveAvatar",
+    "naval-rigging-909-aboveAvatar",
+    "naval-rigging-910-aboveAvatar",
+    "naval-rigging-911-aboveAvatar",
+    "naval-rigging-912-aboveAvatar",
+    "naval-rigging-928-aboveAvatar",
+    "naval-rigging-929-aboveAvatar",
+    "naval-rigging-930-aboveAvatar",
+    "naval-rigging-934-aboveAvatar",
+    "naval-rigging-935-aboveAvatar",
+    "naval-rigging-936-aboveAvatar",
+    "naval-rigging-94-aboveAvatar",
+    "naval-rigging-941-aboveAvatar",
+    "naval-rigging-942-aboveAvatar",
+    "naval-rigging-943-aboveAvatar",
+    "naval-rigging-944-aboveAvatar",
+    "naval-rigging-95-aboveAvatar",
+    "naval-rigging-963-aboveAvatar",
+    "naval-rigging-964-aboveAvatar",
+    "naval-rigging-965-aboveAvatar",
+    "naval-rigging-966-aboveAvatar",
+    "naval-rigging-967-aboveAvatar",
+    "naval-rigging-968-aboveAvatar",
+    "naval-rigging-973-aboveAvatar",
+    "naval-rigging-974-aboveAvatar",
+    "naval-rigging-975-aboveAvatar",
+    "naval-rigging-976-aboveAvatar",
+    "naval-rigging-99-aboveAvatar",
+    "naval-ship-cannon-16-belowAvatar",
+    "naval-ship-cannon-24-belowAvatar",
+    "naval-ship-cannon-8-belowAvatar",
+    "naval-water-0",
+    "naval-water-1",
+    "naval-water-2",
+    "night-wash",
+    "npc-dockmaster",
+    "npc-guide",
+    "npc-maze-keeper",
+    "organic-coast-land-1000",
+    "organic-coast-land-1004",
+    "organic-coast-land-1008",
+    "organic-coast-land-1056",
+    "organic-coast-land-1060",
+    "organic-coast-land-1064",
+    "organic-coast-land-1068",
+    "organic-coast-land-1080",
+    "organic-coast-land-1084",
+    "organic-coast-land-1088",
+    "organic-coast-land-1092",
+    "organic-coast-land-1132",
+    "organic-coast-land-1136",
+    "organic-coast-land-1140",
+    "organic-coast-land-1160",
+    "organic-coast-land-1164",
+    "organic-coast-land-1168",
+    "organic-coast-land-1172",
+    "organic-coast-land-1176",
+    "organic-coast-land-1196",
+    "organic-coast-land-1200",
+    "organic-coast-land-1204",
+    "organic-coast-land-1208",
+    "organic-coast-land-124",
+    "organic-coast-land-1252",
+    "organic-coast-land-1256",
+    "organic-coast-land-1260",
+    "organic-coast-land-1276",
+    "organic-coast-land-128",
+    "organic-coast-land-1280",
+    "organic-coast-land-1284",
+    "organic-coast-land-156",
+    "organic-coast-land-160",
+    "organic-coast-land-164",
+    "organic-coast-land-168",
+    "organic-coast-land-172",
+    "organic-coast-land-176",
+    "organic-coast-land-192",
+    "organic-coast-land-196",
+    "organic-coast-land-200",
+    "organic-coast-land-204",
+    "organic-coast-land-208",
+    "organic-coast-land-212",
+    "organic-coast-land-232",
+    "organic-coast-land-236",
+    "organic-coast-land-240",
+    "organic-coast-land-244",
+    "organic-coast-land-28",
+    "organic-coast-land-288",
+    "organic-coast-land-292",
+    "organic-coast-land-296",
+    "organic-coast-land-300",
+    "organic-coast-land-304",
+    "organic-coast-land-308",
+    "organic-coast-land-312",
+    "organic-coast-land-316",
+    "organic-coast-land-32",
+    "organic-coast-land-320",
+    "organic-coast-land-324",
+    "organic-coast-land-328",
+    "organic-coast-land-344",
+    "organic-coast-land-348",
+    "organic-coast-land-352",
+    "organic-coast-land-380",
+    "organic-coast-land-384",
+    "organic-coast-land-388",
+    "organic-coast-land-392",
+    "organic-coast-land-396",
+    "organic-coast-land-400",
+    "organic-coast-land-404",
+    "organic-coast-land-408",
+    "organic-coast-land-412",
+    "organic-coast-land-416",
+    "organic-coast-land-420",
+    "organic-coast-land-440",
+    "organic-coast-land-444",
+    "organic-coast-land-448",
+    "organic-coast-land-452",
+    "organic-coast-land-456",
+    "organic-coast-land-472",
+    "organic-coast-land-476",
+    "organic-coast-land-480",
+    "organic-coast-land-500",
+    "organic-coast-land-504",
+    "organic-coast-land-520",
+    "organic-coast-land-524",
+    "organic-coast-land-536",
+    "organic-coast-land-540",
+    "organic-coast-land-552",
+    "organic-coast-land-556",
+    "organic-coast-land-560",
+    "organic-coast-land-580",
+    "organic-coast-land-584",
+    "organic-coast-land-588",
+    "organic-coast-land-600",
+    "organic-coast-land-604",
+    "organic-coast-land-620",
+    "organic-coast-land-624",
+    "organic-coast-land-628",
+    "organic-coast-land-644",
+    "organic-coast-land-648",
+    "organic-coast-land-664",
+    "organic-coast-land-668",
+    "organic-coast-land-672",
+    "organic-coast-land-684",
+    "organic-coast-land-688",
+    "organic-coast-land-692",
+    "organic-coast-land-696",
+    "organic-coast-land-708",
+    "organic-coast-land-712",
+    "organic-coast-land-728",
+    "organic-coast-land-732",
+    "organic-coast-land-748",
+    "organic-coast-land-752",
+    "organic-coast-land-756",
+    "organic-coast-land-76",
+    "organic-coast-land-768",
+    "organic-coast-land-772",
+    "organic-coast-land-788",
+    "organic-coast-land-792",
+    "organic-coast-land-796",
+    "organic-coast-land-80",
+    "organic-coast-land-800",
+    "organic-coast-land-804",
+    "organic-coast-land-808",
+    "organic-coast-land-812",
+    "organic-coast-land-816",
+    "organic-coast-land-820",
+    "organic-coast-land-824",
+    "organic-coast-land-828",
+    "organic-coast-land-84",
+    "organic-coast-land-844",
+    "organic-coast-land-848",
+    "organic-coast-land-852",
+    "organic-coast-land-856",
+    "organic-coast-land-860",
+    "organic-coast-land-864",
+    "organic-coast-land-868",
+    "organic-coast-land-872",
+    "organic-coast-land-876",
+    "organic-coast-land-88",
+    "organic-coast-land-896",
+    "organic-coast-land-900",
+    "organic-coast-land-904",
+    "organic-coast-land-908",
+    "organic-coast-land-912",
+    "organic-coast-land-92",
+    "organic-coast-land-932",
+    "organic-coast-land-936",
+    "organic-coast-land-940",
+    "organic-coast-land-944",
+    "organic-coast-land-948",
+    "organic-coast-land-96",
+    "organic-coast-land-972",
+    "organic-coast-land-976",
+    "organic-coast-land-996",
+    "organic-coast-water-0",
+    "organic-coast-water-100",
+    "organic-coast-water-1012",
+    "organic-coast-water-1016",
+    "organic-coast-water-1020",
+    "organic-coast-water-1024",
+    "organic-coast-water-1028",
+    "organic-coast-water-1032",
+    "organic-coast-water-1036",
+    "organic-coast-water-104",
+    "organic-coast-water-1040",
+    "organic-coast-water-1044",
+    "organic-coast-water-1048",
+    "organic-coast-water-1052",
+    "organic-coast-water-1072",
+    "organic-coast-water-1076",
+    "organic-coast-water-108",
+    "organic-coast-water-1096",
+    "organic-coast-water-1100",
+    "organic-coast-water-1104",
+    "organic-coast-water-1108",
+    "organic-coast-water-1112",
+    "organic-coast-water-1116",
+    "organic-coast-water-112",
+    "organic-coast-water-1120",
+    "organic-coast-water-1124",
+    "organic-coast-water-1128",
+    "organic-coast-water-1144",
+    "organic-coast-water-1148",
+    "organic-coast-water-1152",
+    "organic-coast-water-1156",
+    "organic-coast-water-116",
+    "organic-coast-water-1180",
+    "organic-coast-water-1184",
+    "organic-coast-water-1188",
+    "organic-coast-water-1192",
+    "organic-coast-water-12",
+    "organic-coast-water-120",
+    "organic-coast-water-1212",
+    "organic-coast-water-1216",
+    "organic-coast-water-1220",
+    "organic-coast-water-1224",
+    "organic-coast-water-1228",
+    "organic-coast-water-1232",
+    "organic-coast-water-1236",
+    "organic-coast-water-1240",
+    "organic-coast-water-1244",
+    "organic-coast-water-1248",
+    "organic-coast-water-1264",
+    "organic-coast-water-1268",
+    "organic-coast-water-1272",
+    "organic-coast-water-1288",
+    "organic-coast-water-1292",
+    "organic-coast-water-1296",
+    "organic-coast-water-1300",
+    "organic-coast-water-1304",
+    "organic-coast-water-1308",
+    "organic-coast-water-1312",
+    "organic-coast-water-1316",
+    "organic-coast-water-132",
+    "organic-coast-water-1320",
+    "organic-coast-water-136",
+    "organic-coast-water-140",
+    "organic-coast-water-144",
+    "organic-coast-water-148",
+    "organic-coast-water-152",
+    "organic-coast-water-16",
+    "organic-coast-water-180",
+    "organic-coast-water-184",
+    "organic-coast-water-188",
+    "organic-coast-water-20",
+    "organic-coast-water-216",
+    "organic-coast-water-220",
+    "organic-coast-water-224",
+    "organic-coast-water-228",
+    "organic-coast-water-24",
+    "organic-coast-water-248",
+    "organic-coast-water-252",
+    "organic-coast-water-256",
+    "organic-coast-water-260",
+    "organic-coast-water-264",
+    "organic-coast-water-268",
+    "organic-coast-water-272",
+    "organic-coast-water-276",
+    "organic-coast-water-280",
+    "organic-coast-water-284",
+    "organic-coast-water-332",
+    "organic-coast-water-336",
+    "organic-coast-water-340",
+    "organic-coast-water-356",
+    "organic-coast-water-36",
+    "organic-coast-water-360",
+    "organic-coast-water-364",
+    "organic-coast-water-368",
+    "organic-coast-water-372",
+    "organic-coast-water-376",
+    "organic-coast-water-4",
+    "organic-coast-water-40",
+    "organic-coast-water-424",
+    "organic-coast-water-428",
+    "organic-coast-water-432",
+    "organic-coast-water-436",
+    "organic-coast-water-44",
+    "organic-coast-water-460",
+    "organic-coast-water-464",
+    "organic-coast-water-468",
+    "organic-coast-water-48",
+    "organic-coast-water-484",
+    "organic-coast-water-488",
+    "organic-coast-water-492",
+    "organic-coast-water-496",
+    "organic-coast-water-508",
+    "organic-coast-water-512",
+    "organic-coast-water-516",
+    "organic-coast-water-52",
+    "organic-coast-water-528",
+    "organic-coast-water-532",
+    "organic-coast-water-544",
+    "organic-coast-water-548",
+    "organic-coast-water-56",
+    "organic-coast-water-564",
+    "organic-coast-water-568",
+    "organic-coast-water-572",
+    "organic-coast-water-576",
+    "organic-coast-water-592",
+    "organic-coast-water-596",
+    "organic-coast-water-60",
+    "organic-coast-water-608",
+    "organic-coast-water-612",
+    "organic-coast-water-616",
+    "organic-coast-water-632",
+    "organic-coast-water-636",
+    "organic-coast-water-64",
+    "organic-coast-water-640",
+    "organic-coast-water-652",
+    "organic-coast-water-656",
+    "organic-coast-water-660",
+    "organic-coast-water-676",
+    "organic-coast-water-68",
+    "organic-coast-water-680",
+    "organic-coast-water-700",
+    "organic-coast-water-704",
+    "organic-coast-water-716",
+    "organic-coast-water-72",
+    "organic-coast-water-720",
+    "organic-coast-water-724",
+    "organic-coast-water-736",
+    "organic-coast-water-740",
+    "organic-coast-water-744",
+    "organic-coast-water-760",
+    "organic-coast-water-764",
+    "organic-coast-water-776",
+    "organic-coast-water-780",
+    "organic-coast-water-784",
+    "organic-coast-water-8",
+    "organic-coast-water-832",
+    "organic-coast-water-836",
+    "organic-coast-water-840",
+    "organic-coast-water-880",
+    "organic-coast-water-884",
+    "organic-coast-water-888",
+    "organic-coast-water-892",
+    "organic-coast-water-916",
+    "organic-coast-water-920",
+    "organic-coast-water-924",
+    "organic-coast-water-928",
+    "organic-coast-water-952",
+    "organic-coast-water-956",
+    "organic-coast-water-960",
+    "organic-coast-water-964",
+    "organic-coast-water-968",
+    "organic-coast-water-980",
+    "organic-coast-water-984",
+    "organic-coast-water-988",
+    "organic-coast-water-992",
+    "path-stone",
+    "pedestal-stone",
+    "plant-flower",
+    "plant-grass",
+    "plant-palm",
+    "plant-tree",
+    "quest-shrine",
+    "rune-frame",
+    "rune-ring",
+    "rune-threshold",
+    "screen-content",
+    "screen-presentation",
+    "screen-wide",
+    "ship-bunk",
+    "ship-bunks-label",
+    "ship-captain-label",
+    "ship-cargo-barrel",
+    "ship-cargo-crate",
+    "ship-cargo-label",
+    "ship-chart-table",
+    "ship-compass",
+    "ship-compass-rug",
+    "ship-galley",
+    "ship-helm-label",
+    "ship-lantern",
+    "ship-lower-deck-label",
+    "ship-mess-bench",
+    "ship-mess-label",
+    "ship-mess-table",
+    "ship-pantry",
+    "ship-plank",
+    "ship-porthole",
+    "ship-rope-coil",
+    "ship-stairs",
+    "ship-wall",
+    "shrub-rock",
+    "sigil-air",
+    "sigil-earth",
+    "sigil-fire",
+    "sigil-water",
+    "sign-board-bolts",
+    "sign-board-east",
+    "sign-board-face",
+    "sign-board-north",
+    "sign-board-south",
+    "sign-board-west",
+    "sign-compass",
+    "sign-post",
+    "sofa-blue",
+    "sofa-cream",
+    "solid-beach-low-table",
+    "solid-beach-recliner",
+    "solid-coast-beach-bar",
+    "solid-coast-deck-chair",
+    "solid-coast-parasol",
+    "solid-coast-sandcastle",
+    "solid-coast-sign-board",
+    "solid-coast-sign-post",
+    "solid-coast-volley-net",
+    "solid-sign-post",
+    "stage-backdrop",
+    "standing-exterior-road-east",
+    "standing-exterior-road-north",
+    "standing-exterior-road-plaza",
+    "standing-exterior-road-south",
+    "standing-exterior-road-west",
+    "standing-hub-nav-arrival-crosspost",
+    "standing-hub-nav-brand",
+    "standing-hub-nav-directory",
+    "standing-hub-nav-welcome",
+    "standing-hub-nav-you-are-here",
+    "table-broad",
+    "table-circular",
+    "table-small-white",
+    "table-small-wood",
+    "table-workshop",
+    "telescope",
+    "tree-evergreen",
+    "tree-flowering",
+    "tree-round",
+    "wall-charcoal",
+    "wall-display",
+    "wall-navy",
+    "wall-plaque",
+    "water-blue",
+    "water-cooler",
+    "water-wall",
+    "wave-glass",
+    "window-white"
+  ],
+  "catalogSha256": "882e7cc6e60a9b88b90d2ac26e4171a9a2965e1060ddc3ce347355de51a84203"
+}

@@ -1,0 +1,455 @@
+{
+  "id": "moon-grotto",
+  "width": 40,
+  "height": 40,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "floor-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "authored-twilight",
+      "sprite": "night-wash",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40,
+      "layer": "atmosphere"
+    },
+    {
+      "id": "court",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 3,
+      "y": 7,
+      "width": 34,
+      "height": 30
+    },
+    {
+      "id": "boundary-north",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-south",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 38,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-west",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "boundary-east",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 38,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "north-navy",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 2,
+      "y": 1,
+      "width": 36,
+      "height": 2
+    },
+    {
+      "id": "arrival-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 16,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "plaza-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 18,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "branch-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 5,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "branch-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 6,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "cave-west",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 3,
+      "y": 8,
+      "width": 8,
+      "height": 22
+    },
+    {
+      "id": "cave-navy-west",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 3,
+      "y": 8,
+      "width": 8,
+      "height": 2
+    },
+    {
+      "id": "cave-runes-west",
+      "sprite": "rune-frame",
+      "layer": "props",
+      "x": 5,
+      "y": 13,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "id": "cave-stars-west",
+      "sprite": "constellation-cancer",
+      "layer": "props",
+      "x": 5,
+      "y": 22,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "cave-east",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 29,
+      "y": 8,
+      "width": 8,
+      "height": 22
+    },
+    {
+      "id": "cave-navy-east",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 29,
+      "y": 8,
+      "width": 8,
+      "height": 2
+    },
+    {
+      "id": "cave-runes-east",
+      "sprite": "rune-frame",
+      "layer": "props",
+      "x": 31,
+      "y": 13,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "id": "cave-stars-east",
+      "sprite": "constellation-cancer",
+      "layer": "props",
+      "x": 31,
+      "y": 22,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "moon-pool-edge",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 12,
+      "y": 10,
+      "width": 16,
+      "height": 11
+    },
+    {
+      "id": "moon-pool",
+      "sprite": "water-blue",
+      "layer": "terrain",
+      "x": 13,
+      "y": 11,
+      "width": 14,
+      "height": 9
+    },
+    {
+      "id": "grotto-bridge",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 18,
+      "y": 9,
+      "width": 4,
+      "height": 14
+    },
+    {
+      "id": "grotto-crystal-west",
+      "sprite": "crystal-cyan",
+      "layer": "props",
+      "x": 13,
+      "y": 22,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "grotto-crystal-east",
+      "sprite": "crystal-cyan",
+      "layer": "props",
+      "x": 26,
+      "y": 22,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "grotto-lounge-west",
+      "sprite": "bench-curved",
+      "layer": "props",
+      "x": 12,
+      "y": 28,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "grotto-lounge-east",
+      "sprite": "bench-curved",
+      "layer": "props",
+      "x": 24,
+      "y": 28,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 15,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 26,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 4,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 14,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 19,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-south",
+      "x": 7,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "arrival",
+      "x": 19,
+      "y": 32,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-campus",
+      "x": 19,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "branch-return",
+      "destination": "campus-exploration",
+      "entry": "from-moon-grotto",
+      "x": 7,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "grotto-conversation",
+      "name": "grotto-conversation",
+      "properties": [],
+      "x": 17,
+      "y": 24,
+      "width": 6,
+      "height": 3
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "moon-pool",
+      "kind": "landmark",
+      "x": 12,
+      "y": 9,
+      "width": 16,
+      "height": 14
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 ZODIAC PLAZA",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "branch-return-label",
+      "text": "\u2193 EXPLORATION",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "grotto-title",
+      "text": "MOON GROTTO",
+      "fontSize": 26,
+      "color": "#f4d77b",
+      "x": 10,
+      "y": 3,
+      "width": 22,
+      "height": 2,
+      "align": "left"
+    },
+    {
+      "name": "grotto-note",
+      "text": "THE MOON POOL\nA quiet place between journeys",
+      "fontSize": 16,
+      "color": "#f4d77b",
+      "x": 13,
+      "y": 6,
+      "width": 16,
+      "height": 2,
+      "align": "left"
+    }
+  ]
+}

@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight-plane.png",
+      "fromSha256": "00d1527591def1a906ad4b66c53c5e82c3f892b9ee6079501f51c55c30b071ae",
+      "toSha256": "a918a951e0de167a1ae7d189641817c5f391467b6ff3dc803e5c5c0bc00fa1c9",
+      "reason": "Retain reviewed original artwork and genuine deterministic native export/source receipts without reclassifying existing licenses."
+    },
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "f1172239ffbe53ddc0d11760e7b96b9553de0c0b30a8422199ee0e52778b68b4",
+      "toSha256": "d715861a71b5e01e34af719ffa527bef557078423456ee53650dde38f48d29d5",
+      "reason": "Retain reviewed original artwork and genuine deterministic native export/source receipts without reclassifying existing licenses."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "cf36a5d0bd2d81ba699c438d56758139105362276c7c622301e448fc885f0d41",
+      "toSha256": "09b3a6c7823c4633e22e13b14f129803d0050ebd419b3fc8ee1a2009788cd729",
+      "reason": "Register genuine approved original artwork and exact producer reexports; preserve prior attribution/licenses and exclude native ownership validation DATA from artwork."
+    },
+    {
+      "path": "art/sponsors.json",
+      "fromSha256": "87a2f2697fb3967a5a635866affd86597349bdaeee84375badc4a9a7db5d6c7a",
+      "toSha256": "8efe31070071d0d51c2a34ecf8733c46b1342a74711a236ff90c511a1bb67d3b",
+      "reason": "Retain reviewed original artwork and genuine deterministic native export/source receipts without reclassifying existing licenses."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "b15917a8865a54af16c4ab4a0a3207db8e28cd2d5c1ea136b3bf24f92418543d",
+      "toSha256": "2085fbbcd9c115d8a536c8f37759921ab697f78186564c2cfe85e17f7cb8262c",
+      "reason": "Retain reviewed original artwork and genuine deterministic native export/source receipts without reclassifying existing licenses."
+    },
+    {
+      "path": "assets/tilesets/original/coastal-flight.png",
+      "fromSha256": "615e385edc6d741303b6631824929372ba082b6bfb5432fd632d39b996b4f525",
+      "toSha256": "26546d2ca43fae38eec6d307b9c6ea117114618b84a3910edcc19b8ca6145764",
+      "reason": "Retain reviewed original artwork and genuine deterministic native export/source receipts without reclassifying existing licenses."
+    },
+    {
+      "path": "maps/air-district.tmj",
+      "fromSha256": "01bd8a4e666db8740097b15a319a347456f99af549b396eb2a9b5891bfa21ac8",
+      "toSha256": "ff6a9d48463d88e5f52965aeb34d273329fe27796cba93d3be8a21e348190b16",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "fromSha256": "94f55dcf15ed34d24dd92835fe3fb305487570ef78ae625e4b503ba20a76a4d0",
+      "toSha256": "8f2b58295d4e6299f2be21d8a74ca8430810aea30ed2a29a6be32c74831d3684",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "fromSha256": "dd46bd81d2b104c3b3c81aaab2346fbaf1847adfa320b9e79a33d14b61684c19",
+      "toSha256": "d5f8cf2c0520e537af07005d5f25b809afc0f868edc734fd6302402ad7109727",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "fromSha256": "a61134b82baaae6d63dc3938886ef3939b3d7e867e3b43fbdc5c72fae5b73920",
+      "toSha256": "e5f3eba2197b30b6a6f1c564148257a37e3bf68dc3d37efd25310b2b5230538e",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/earth-district.tmj",
+      "fromSha256": "04503f093c80d97980ea489a6a7041d99184baa736e51f522395c63772d5db09",
+      "toSha256": "30dd5052459951acf66baee4045e6ba4d5dc0c104620946db801fdf97ab92d00",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "fromSha256": "eb36cff3ef90b7691a94eac7729cfb73b89bf8359857e3b0e03fd6eac7e7db57",
+      "toSha256": "e66a8afa0b4e82a680d5e9695a195c26892ae0d664e87d70ebce9b75a4518291",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/fire-district.tmj",
+      "fromSha256": "5130dd33523528ded89153996b2779c7250da948e96630a2013875930c5f4ad9",
+      "toSha256": "a6c95c207137132eed5191a37ac38cf65e7786f58d07649b835a3d389f2654f0",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/hidden-observatory.tmj",
+      "fromSha256": "f26c14723499e0ff0e2b697d56558105622d82ee305d6a64605cdfa02376d343",
+      "toSha256": "80557f39481bc4cfbc69d8ce63a9643a40b00e8a98041f7c0ac07d3f3de1be58",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "016b66caf5e4709f4c7db8ff6f7cbc2fdc4be92906d53bfb071853d5eeaac263",
+      "toSha256": "4cd398d7364f06b89b6a878315e293e6d3645359ee08b0c08605ac547008e9a8",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "fromSha256": "95d2a47e91bfa405eff906cf80ed85a4cd2fd25f09ef2783c54060951683ee7c",
+      "toSha256": "552d1f79de24aecfab6d8e9a9412ad26ecbc2e4227f1125aceb85f1c4db412cb",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/moon-grotto.tmj",
+      "fromSha256": "4adda4c79d5f5a1d93748118ace536aa8a017840d5b74c1d2054fe9142abd539",
+      "toSha256": "37951759fd02ee9935751fe4bdaca323c4ea0b0c13f8b2d747a5a43d90da020a",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "fromSha256": "bb3f8682ff3c7e63fab1f7898abb1fdcc8ad1c8a85476b3ce1c8637ee191cd29",
+      "toSha256": "92d430ac263fb202948fb60bb8cb2c64eaef4f628e610a85689e97070619c743",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "fromSha256": "dd9f7922fbc572f8aafa877a11c90bb46253e996768ea41b7c25a632f2b1fbea",
+      "toSha256": "265f79b803d978868fd4d3d0b873e285184c6195f4b338cec4e64bc4e4031e1d",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/orbit-playground.tmj",
+      "fromSha256": "a1a4cbf46e10ef9a505b3b12b1aa5eb86f7fe0d8f482e529edf50b6bfe0d5629",
+      "toSha256": "3f9031ba9d4475deec50a5527e39d667c0d9e9186b8b6889c5bcdc9c02341bd7",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
+      "toSha256": "65d9705f7c44078bf7f593b4d966315cac67f0b02029660f7d2666bbd18ebcd8",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/preview/air-district.tmj",
+      "fromSha256": "b1a9ac9edba3312378bedabf69f4d6461744bad1e97dbe31a2c2ca46534afc42",
+      "toSha256": "79e8b7d1c950dda5860f99933d479c5cc4162bdbe710466a6310adff34bced72",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/campus-exploration.tmj",
+      "fromSha256": "13381095dc0b46efecc50bd78d27564b7ac6659af321c52576f7d20d65c56c58",
+      "toSha256": "981cc112dc2cb9364649d2b1cd1bdfdd6d5f39d6a4135078de5690dff4a5ea77",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/comet-maze.tmj",
+      "fromSha256": "bca07d922256ca29c914ce1e36dc06eb80e3ebe659a926c02bc6617b658aa40b",
+      "toSha256": "f1689abc3662b9edacd170ab1507825b011b5fc0e2a9dd0f529bf4a423988b8e",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/constellation-shore.tmj",
+      "fromSha256": "8e913db79a75dc141629dda08e866e8b4d9641d1f50e59cd456e08bc8957c68a",
+      "toSha256": "27ad1d01aa7874838202491474090636ea1e7857a96603dc9af87cbf2cab556a",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/earth-district.tmj",
+      "fromSha256": "37368295c26986942da8c4a630a843d591f35ceb3f873bab6cd6591cbec8d50b",
+      "toSha256": "173ffa7a408373b00d07c7d4e707f1b6ad3f5f69371b2c534d7838e6f2d672d2",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/fa-ship.tmj",
+      "fromSha256": "71ca46b0a5e732cb821495a5d8331c8f98659774b46cfed8569a5febd948c0ab",
+      "toSha256": "871fa2e7ebf15c7ba937970a4ad8b167b425fe0e7f2cbfededcd96fa7414498d",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/fire-district.tmj",
+      "fromSha256": "1ced8cbce82f6ffddce8b9207b2bab3f412868b73b00ff254d9c5cb9be28935a",
+      "toSha256": "9f68a30fc5ee890c664042f825a3869d37ad831201b04e41a3aea89f8ee6c6e9",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/hidden-observatory.tmj",
+      "fromSha256": "68941e14bf07da14a86bdd379f9927ad86ba5bc2f8c740bbec6d7a242ee5faa5",
+      "toSha256": "9da2f58cbf2bc3f853389078dd560907419001794df378b2910ed810e8db9f65",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/lunar-hall.tmj",
+      "fromSha256": "4b329796d1ec9d7f3618e887c8a479503e37f4a918da54cee9dc76a9b81fb059",
+      "toSha256": "ed38602b31de744791eaa0fa891fbc9760c093744436c8f660fcb9d7bcaa5b88",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/moon-cafe.tmj",
+      "fromSha256": "373fad7a0b77580e316ae4b70f5b620df8a07f704cea4e84286412956e2a3d3b",
+      "toSha256": "9d2cd0325f641494665667c73635e3cb067dc414592f94c55198eba8d5a8a66a",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/moon-grotto.tmj",
+      "fromSha256": "9351603a9bdbf3777a33d0f9f06f3162e1023a38d62f7302712001fed7eeacf8",
+      "toSha256": "436b902d2d4eec0222c302c71265a9ae47d39e4d6c14dc16b975264a63a86a0e",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/nebula-arcade.tmj",
+      "fromSha256": "99a7511794c555e1071a754c4887d9f50fd86acc7712e56142419fd356675e0d",
+      "toSha256": "ac8bed5d5cdc4e272bd99cf9cf3d84b7a012733bd0886699747d7221854c78d8",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/orbit-maze.tmj",
+      "fromSha256": "fa639b050f6d66651224abbe964f5c79983223094b1fa3dbe8280276021c7b88",
+      "toSha256": "55286a36da41099e86956446ef5a416f1ee9c52985d60cdab1cadb3187026c41",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/orbit-playground.tmj",
+      "fromSha256": "9097a701d583d59b130bce3d90454df539b039b2021c23e86a2bb994642a864b",
+      "toSha256": "2cd35ab41c13058f96e8175f5b1138eb920f213b91a9585f07bcd906489c0597",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "d744c411eeac7c30190c702fcc4e40400e6cf09e5c3660a938cb1a4a4c25b184",
+      "toSha256": "b911c9d249d1a5ab47da0d9a377a50cc883bdf55f7dc7a3a03c420b48cc71a88",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "659e0f357e8c368f43f0b2b50c7d9a4d109a72175bc5c27abb2469454d8cab2b",
+      "toSha256": "c137288548bc99969f7ab7abe59cf42acd1e3740cd5aef52b8ce4dd66fd60096",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/solar-hall.tmj",
+      "fromSha256": "ee97954ce14d23a703cf425dfd813487117b0913f3b3f245bc3bfad6d56ae193",
+      "toSha256": "723bd6ba1fed626d916469e6d9c381d35ba5f895ee33f2f35cfa6c9574b6292d",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-aquarius.tmj",
+      "fromSha256": "d250e6242d92b432e6c4ec331c3cee3b112fdd8c9139df3c18f6e115acd870a7",
+      "toSha256": "e20ac796353d073c3810b876378aef5671e412689787d1d3d6f7d4b3d91f94c4",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-aries.tmj",
+      "fromSha256": "334ed8bcba566deda11970c09ea7701a60946c6491467f11c9df05fe6c67eea4",
+      "toSha256": "6af780a5b3193d28380d58946cf29c7ab76ff868c4f314ef4e11ab28d05f38ed",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-cancer.tmj",
+      "fromSha256": "b2232eca3d91d4a264597d3ad5542c27c42600bb32bd5a780703c4e751e7ecfe",
+      "toSha256": "c68519bf992d13b2decf901865d712b03e51904e1f2c95c76f440e304dddce22",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-capricorn.tmj",
+      "fromSha256": "4e21451ab25305885a054f700b4af41eb726ff051464834d73c74d2257027886",
+      "toSha256": "bf5a0c403aba1f22b7eea13eb2e95f0b354b60b1c790328d59190133406415f4",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-gemini.tmj",
+      "fromSha256": "a8f53004eaa256ff21cf4a1c90818a4694a4c0d77d40f1a4431bff7b193eb523",
+      "toSha256": "fa30e87021de1f0c30f1aee862b81717f1b20c65e2f00bab9b97273e25ea34d6",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-leo.tmj",
+      "fromSha256": "2bd59070a3ef83838694818b6b50fbbccd835b5d9ff78673bf1f8e0b00be9cd3",
+      "toSha256": "077e1c981a77cbe7c6d70d12e437c6e0045c8fae5057181a78d6fde88a88e76a",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-libra.tmj",
+      "fromSha256": "a18f153c828ecd5f2f1b5817286b2fa8272b68dfeabe30c7c17ccd40555651b1",
+      "toSha256": "b92a10b1d66a48b38a782836a3b880127b0b49c985413b9e4b915af707d578e6",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-pisces.tmj",
+      "fromSha256": "ed77c5b27a4b30f6a652b85cfeae4699c9b2259edd242a92e860502133ac32c9",
+      "toSha256": "9937114400c3d773b2da7b4ec59677c6f5daa66c711571f015cf83ea7e3309c5",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-sagittarius.tmj",
+      "fromSha256": "27b04120930d240fb3345a7c6d2eaaaaea547a240665a6b0aaa3404297fb9592",
+      "toSha256": "80798b9d7cd861d34bcc3ac5e25d2da7e3eb11a9bcbf4c2b11fd2aceb2f9d8b7",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-scorpio.tmj",
+      "fromSha256": "cd538e11785eb433fc900341454fe91bddc1ed1dd40e795203527ef1e0248f86",
+      "toSha256": "553fbd0397383998cd2631744d6532be88c3e2f1075a3cb0f1956600ddebd51e",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-taurus.tmj",
+      "fromSha256": "055ab952ad8fc90262e32756f32b4ff9e7986cd11af11342f0f148bb54ecbd89",
+      "toSha256": "8cd710ec599fecc74ffaec8eb5c7b1523691c9a3546d8f75ef92760f0d8f61b7",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/speaker-virgo.tmj",
+      "fromSha256": "67036e1b0ba096194360ea7d7ce23ce23210c4570768ea14c2cc023b1289145c",
+      "toSha256": "4387ddf9279f06420b0fb8747976db86eb9b8d9b6568896a96d711199d54d49b",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/star-garden.tmj",
+      "fromSha256": "4cfa91d6f17ae715c9d0e68044fd10b5a93beb0613fa761519911223e1d46c5f",
+      "toSha256": "a2070a5725b4c6967d93d9ad31dc12f6e565ba34442068425ad362fc7fc069a1",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/stargazer-terrace.tmj",
+      "fromSha256": "eff73f3f50068d25e84d8018b344cced8e8ec31adb9ce844921b97f9c4f8e1b2",
+      "toSha256": "4569bb93cb21e8d0fed633d2121f100b69a0a304f1971969200c79cc4ea38d62",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/water-district.tmj",
+      "fromSha256": "d0cae13f51a9c9e28206582421fcb4cb9aaf2ece54793080466a757835be4fb3",
+      "toSha256": "a608cec8fa576921e84cff3c63e4490b60b604420fbc4bb000a867fb2bedd832",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/preview/zodiac-festival-park.tmj",
+      "fromSha256": "aa5d887116e3434dc1af8a6f9c21f38571a05f250d45408d6b8788e6c63255e3",
+      "toSha256": "ab08838c355bc41dff6736c43fc95ffefea0b6c947b5c3eb95b63c7b36e6c0d2",
+      "reason": "Reproduce the normal preview of reviewed current native sources, preserving native functional controls and source ownership."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "8c576a6a1390f3263bc597f15c1fa8d2955a8faf08db169e754530965a2c2eda",
+      "toSha256": "f2f02583703bf1a1d6f2797d833a1e7e152f2b4045244ec1ad459ba08497fde6",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "fromSha256": "dda08c2c3e176e07a067042dc9aa0c60e9db5c95863e4879fb602e5f1b16b4e6",
+      "toSha256": "73c745c1c9082fb14ec870eff01745c157c2f81e1440bfef2da5178d64f972f5",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "fromSha256": "f29be76ee6d664c580c59704385d4f3a9334fed879cd5e03ab454fe6e0b4d513",
+      "toSha256": "4a5ad0c258830993018b6785bbdcf10438a0c55b063818f3c778db7891df8182",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "fromSha256": "47f25515cce9cdc38c65545c7110a4315ab2f7b7c4394d045a3c7172a3700390",
+      "toSha256": "eb9202e49233e0140af02cbb15c5a7bde77de4966574533f5cdda183bad1caee",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "fromSha256": "e30835cd5b026a1d6ad862008f02d4642a7d2292b36bfb0f59e7708deb4644e3",
+      "toSha256": "433198d772700951e8bb1a17b54f18cdf12b43493d139d1373496a3ac6565cec",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "fromSha256": "ca8d6549bb3965b84ee2340b19999355d3018b514f511f0a34cc5dcf4b15bcd3",
+      "toSha256": "1227284b3658561237dc9728a35928ccdab866e025c84c80d51a6fe9bbe4c242",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "fromSha256": "6a74f23740efbe346cbdad99f3d5db5276fc6e828434d51f7f42681f97e751b1",
+      "toSha256": "fc50e25a916e8b4ce427f9fde7dbe1df1934406d8e439d65c37794961e83eb70",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "fromSha256": "331320408e01829eb5d64c3eb2868cd26974e5c66bad729b981183d115883a6e",
+      "toSha256": "db688f5eaf186eda563598e994dcc0e21608e21f5b1355d8b9d4c15a1b08b754",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "fromSha256": "6fb7ded448f09e7b6f9e37ec58b2bdcdd520a33c417e4828f418a55a168378c9",
+      "toSha256": "aaa5f56ae2d4176d536d6862dbed514dcbe09f89998e85256c76b7e8dd247573",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "fromSha256": "70b0578fdfb0e62da2dee61374b80016d00cdd2c9e2256470da309e30dda0d8a",
+      "toSha256": "8e1955717d104f2e92bb97db458a656496df4e2668e21992dc9c25aa3b5e64b3",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "fromSha256": "6b0ef43a570089809b302340487d0b0bf76ac30fff71589a6794957b4fdb5b5c",
+      "toSha256": "7daa3aebad99751aa1b3f5b8ce3764eb5019749326e91de9179ae0fe3a7d85b6",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "fromSha256": "50d02077b59e090b1ae8b44344041fa10454abddd91457421b0d5617fd68eb20",
+      "toSha256": "cf4d5fa64c98fac98fd478a8a9ca23bf4860762acc1f38f67ee1c6b2eb1daf97",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "fromSha256": "0d906ae96b7f73054fc96904bd43a3c6ab3458b215e5039825d662a67cf4f45f",
+      "toSha256": "2b1f79f4e7e2645bcee79d0dc5dfba1e7dea10e8ab0a71add8bc134e142bdf72",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "fromSha256": "bd4185e83bf82091b0fbab4eb184981f1a7a296d86cfa80e291fee627b73e823",
+      "toSha256": "f4d998717a35e70642b55d0a2f1aaa7770ee7690979b7f7dfd84aa8107fdd2ae",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/star-garden.tmj",
+      "fromSha256": "4f1b9f3990dc7ebf4140b62f763fa84545950147fcbe4c97d145bfa0eb067f45",
+      "toSha256": "1e56a6af6d4122d16e9ea9a32c4cd8e0f2ce6b8977454f155070b2f5138c464f",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/stargazer-terrace.tmj",
+      "fromSha256": "8cf1215da3c8f5561d6548649e2f17b13670e03be23d54f59f537644b8cca93d",
+      "toSha256": "155e3e3e3128424075034a3473329baf4546c126ce849c759237b5d1be2e2375",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "fromSha256": "d3e39d4a42ae5f1a3bc73a94c3d8e7b9c7669b9e4287f773c9640b5bc7005d52",
+      "toSha256": "65d1956802181b705b7cc1437aefaf71804a072cfcc8cff69ac435c030c00b1b",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "fromSha256": "5366af817c2416bd0b6baa130306232b0c2edbd1b0b4c24bcf8f66028dc5c582",
+      "toSha256": "7434949af8490fbfec3de3d0c867b175dfbfff8aa2837186e6843033d9ec83b6",
+      "reason": "Apply reviewed campus furnishing and complete native source projection, with explicit avatar foreground for animated decorations and unchanged collision, portals and WAM controls."
+    },
+    {
+      "path": "tests/authored-world.test.ts",
+      "fromSha256": "d8eedac4c6daf3f17fe734c6de73b29fa0ae4ebc05a005649112c5749bcb212e",
+      "toSha256": "a9364a37508a64ee669461e3eb2af4db5785e0f97c7ce3f96e921da669322544",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/campus-decoration.test.ts",
+      "fromSha256": "0e851c37dea1b06921d3a74a573bd9f4899f70cc70cfc075def457227dfd525c",
+      "toSha256": "2df4b3a9a36702ca4f372f22fe77002c75d73b993c928ad7d2a6cac05d0cd9b2",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "dff7ef1e93bbe74024cea34528496b8015f03a4dd948b5e23c9f6ee3be1018d8",
+      "toSha256": "77a596f0364c39d9efc5f723a699e1f7e5b01d1787d32e73f53a44452806c998",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "795b5e2982550aa6b603a12498f7ee8b3418e67c724e1321987a60e12e817997",
+      "toSha256": "0cb31256155a1e9c20f358b6214b31286f73e5dd1e34b3327b112fdbb3d2f7ff",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/coastal-flight.test.ts",
+      "fromSha256": "f0070c39afdd54ad0d3c89ed1c88ef322c843aaa6c482748455feba2e838e7b2",
+      "toSha256": "85ff3f91c16e75599ffa1f2d6a1e7126f0ebd4a66859fc92e2de1734ab3ebf15",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/districts.test.ts",
+      "fromSha256": "56819b2c8510ea576699c37c7d414e97362a65934987e31caa6774f93c223262",
+      "toSha256": "277eb6205838b59d6134f603cd6807ffef54a573de5e377dea02b823358f5383",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/halls.test.ts",
+      "fromSha256": "f11f83c16642569f60c9fb1c72e7b442234a3c27cdb046ff6c1668edfae50b42",
+      "toSha256": "4b0a7c5e61a10c23df921f2c221491d727a3d6cf226868f018a22be3a313eacc",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/medium-hub.test.ts",
+      "fromSha256": "6447642f97a9d09a14affbffd6c6e787b096f98bf977b572bec5c51fe5670d0a",
+      "toSha256": "930d77a152ba7bbdb9a1553f23be12030f5f1d70c5bf79c3624f4c1ac7d3a935",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/native-authoring.test.ts",
+      "fromSha256": "2be09d792cb4fe63288bb8248345ac42653084e9a877f60a8869258fefd9d8c8",
+      "toSha256": "9461e700cd2c3a5e0f52062efce27b5a727da160dfbe8a1ed4b1643d842f690a",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/release-cache.test.ts",
+      "fromSha256": "03cc47cadaed3d5095a344a0f73419f29842f77cb616df0bd80751186dddde77",
+      "toSha256": "87b2fe62f91e917d912438f5540be0896b1a0bd2d2dbe723ac763efc1ad05af5",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/shipyard-beach.test.ts",
+      "fromSha256": "2eb75fb7b1fdbf766947094e6966a6d0cbf512d1d3e8a825183017b9b2a2b7e9",
+      "toSha256": "d0a0eaafeac9249e44fbf87ad8f5ddb450fce2e66f8db5dfbfa67e0d651f03d6",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/sponsor-panels.test.ts",
+      "fromSha256": "cb0be6619e8304d54571a6e3497da2a2b084826612837be814b8a38b0b055ece",
+      "toSha256": "acd740d6bed3091bfe328025793df8630170c1395dff2c3279b522595e628c85",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "d659414bc92070048e6602e1676ecce9f0b2abfc59d35c7c03dbffbf57933a46",
+      "toSha256": "58f5c060a6266c1de26563cb25ecec2d2c6de701cd61ebb399bfffacc147e0db",
+      "reason": "Preserve genuine immutable historical oracles and verify the independently reviewed current campus, native ownership, artwork and release contracts."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "c4188e170d1ac17e4b46e76aba8ffb586594e4cbc5da9e986c3a83e712cec12e",
+      "toSha256": "a093f87cc0cc2c0a9dc8594148f5b3071df14655856e7d438a6bd2d9d3acb689",
+      "reason": "Enforce reviewed complete current native source/ownership/animated-depth contracts and pure deterministic original-art validation."
+    },
+    {
+      "path": "tools/art/coastal-flight.ts",
+      "fromSha256": "65ca71379d55d61ee6d1d6335fa9ac390d6b8224ddae5b1c106e858c90dbbde7",
+      "toSha256": "9677dbb96a706d3cedb495250dfa6fca96a3ef53d63c3344f049aae9b078e47e",
+      "reason": "Enforce reviewed complete current native source/ownership/animated-depth contracts and pure deterministic original-art validation."
+    },
+    {
+      "path": "tools/maps/build.ts",
+      "fromSha256": "98f111554832ec211920e6dacd6268c8bafb911eabd8e5f3f59107f570a3f0ad",
+      "toSha256": "a8eb1e1526355044c976f021100cb478b1b14d48957bfb3274c08a2de7e2ef6d",
+      "reason": "Enforce reviewed complete current native source/ownership/animated-depth contracts and pure deterministic original-art validation."
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "fromSha256": "74289a920f153b48d8973960d42010b1788f5d794cd31aae6fda0b74ce2ef056",
+      "toSha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50",
+      "reason": "Enforce reviewed complete current native source/ownership/animated-depth contracts and pure deterministic original-art validation."
+    },
+    {
+      "path": "tools/maps/types.ts",
+      "fromSha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f",
+      "toSha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767",
+      "reason": "Enforce reviewed complete current native source/ownership/animated-depth contracts and pure deterministic original-art validation."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "9ec6a61189f953d2bde02ca59036060d7ecbbf979d488cbf039a6a8b78a0dbb2",
+      "toSha256": "daf0c74700afd33f0deb4321f8efff905412d776f4d1538f4f464de9668aff69",
+      "reason": "Require the complete current34-map package and strict explicit54-resource v1/v2 portable Woka publication before any release emission."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "a81f87dcde9930c3d0b69e837fe4884cefc5cc4ad2ba7937e6e4aad4f313ee35",
+      "toSha256": "c25ce92c2396d4dee59c773687d22ab5c2c4784f468d81cb1ad769c0beb10817",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "bd9db51bfe1d1de85b826d56f5dda78ca43bf4d2b4a331acb67000071c518171",
+      "toSha256": "bfe6e5e3bc21cb7743272abc2667d46f82c1c6337578c92d8a69274af99c6151",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "8397748f909fa7d479b8d5d193f56e53bc472419e78384d67e15f00375819f44",
+      "toSha256": "43d4eb3d1eb52debcf03fc34b600b5808c257f50598abfa9d0ac12707e00b7e3",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "040aeed26d47c2ae9e5b53caa5cfbed137e2ec4f7a9c2c20c8114736d0522128",
+      "toSha256": "4e37e79dee385c19e0ad48abd3f7dc8a3184b3656125d7ebf8c417e8f062e42e",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "60c7de030d1dcbaaf60452e308f2fcf5a00baa3c61c529b4631ac952341726f0",
+      "toSha256": "4cd50e5cc3d13a0705a1f24b099c1597a20e38c9fda66a816e2676b32f9f6e2c",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "f463d33eddaf07b0feb1b219fb0e4143abf46efc88bc5565dfe7830636b83b8b",
+      "toSha256": "68af282a120cf7bf68fc732dd3fa48227ac04d069579a15c0e0634e0c7395601",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "1311e29625504a97ac6aaace7eee15b7f8567a64f47ea03b1104cff197272fab",
+      "toSha256": "721af2eb3c47bfc2eb4da75309bd898f3dd38ffe2a139e5699d9d90ff392a1a6",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "30862362c551fe4b449750702a91e2c1cefebf356a8f1849e4218636ef7a880b",
+      "toSha256": "00e16ac2a82ac30efcb78e2a6ac72b0f0107427445ceb436df8f381cb35cf187",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "210c28865e2439b2871e9208884d8ef5a4cfd58977df29b2e24fd29337e6dab2",
+      "toSha256": "3e4f712c93a00e6b75a3b7c700a773be0e4ace33fc6a402adc400745c440b86e",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "6534421217942c5a6d7d8947f71b12bb610ec66d2f93bc31da8674e306c2946b",
+      "toSha256": "306309b556667a2bd22548b30e2b22200003087237d75a9e81b35a5a4da579f7",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "700d5673a37538af103509fbb4cfac4d8e83285584701d4e1c42c35d86783551",
+      "toSha256": "bc75530c9147e4b5bd32bf757a98ab2a80a6a9f88d7af7ccdc9d9415320dd642",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "e3cc86da66821be85965d5c35456a26a64ef686b8bdfeeb20cb4bbfd3bc25a7e",
+      "toSha256": "636c2c8cf3202e0d6222cb78e65fe428e828b1039e44fafa3595ec6180967079",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "85108739dfed2ac69bdb60990444c0d9c296a3a4a0135460d954625db32b062d",
+      "toSha256": "9d0f5eb8e12ef3e496fc87c60c1dc3ff2e5b9f26e1af9aac21024051e9c6da18",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "7f9f0d0200a65ced8b82bf62cfba9ab1121938366e75222ccfc974b180ccbf60",
+      "toSha256": "9ea51f080645603d9a41a78afb58a283d6547adb0c34d205ca680f17a6bd49d3",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed",
+      "toSha256": "d21e2a8f7a3bb4341b14fdd65fd3059511392dfc38c04c021ca79416182746d3",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "d3dfd38b7639e6940a40c7a3bd35d080e67c4731d61b279db3f6701b42da8459",
+      "toSha256": "eb17297b2153abca451a4a93e84ba8fb73b17027467d632ecd75a2888adc461b",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "c15cd1988fe4305acdbb7aeaec3e65372218a9f68ff61b65b2c76e6bbd718acf",
+      "toSha256": "35bc223e984d6877cb9afe0849677304804aa0ea11993d678ca50fd5642436d6",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "715ef222a226f2741b4a068ccc624368084d8181417560a3814e08f7c2aff39d",
+      "toSha256": "d0e12daef771d6df7f92b33fee90c14ffdc7a5cc6a910db956431869f95dcf83",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-aries.json",
+      "fromSha256": "11567c854965661f39d36a0bdbcd97b63a06e97b39cd449045c8b9a58fcc468a",
+      "toSha256": "c900c80ccb9cd9268dd4a864778ed58292059035db84f392a8906c9e34098e2a",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "49fb2d5ad86663966f5068653d3cb918e2435a0e4b60790b31096539578a347a",
+      "toSha256": "edbc2ab0411071c0d41421ab8399bb220df3248f7d6b7ddfda28d58ceee40899",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "5fb3709e9bfc20069354dc869ce768175159ef7a5ed3315e8e5ff3c94053f02c",
+      "toSha256": "4852c545dc066352da087478580aa8c818a357a52589c0ac5c9a4e8dacb151c2",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "bb4a1a91ca97b04fe898fa93a7a2fbe5df81a6ec3bb4f2a99b64144e36849fe8",
+      "toSha256": "30a2ed4819ff132ddd2a374d711e390cb11b0376af6c28a305bb0c18dd15bef5",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "6c1ca843b995cf23a100aa1cb4e95dbffba5b5b244c0311cceeca2bb51b63aa2",
+      "toSha256": "a4efe4b67358ee5c2334da9b94f1a291ab47b17b42638ed6be820213503be7b3",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "e5e8e97c88b94ec3a864149ab5da4afe071b625ade75f53341d1b843379aa908",
+      "toSha256": "05d34f54898794643a80d0fc65bf3eda90a5994344e17cf061dccc484fb2c50d",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "91ef4581d58aad05a641b54b6abbd9daec8897d32ba4ee91b0338ccea24210a7",
+      "toSha256": "74812e718f1b5e0ecebc6381475a3f0120fe7f284bc3c05050617c855e60c476",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "6960d471f50927f562ed7c342d6ed1ea48a9cb61f796f064dd5cd9a99bab24e1",
+      "toSha256": "01ff288c24da303447a7a1e061e0ec248b853b92fde3400b90bcbd9f6afd3974",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "cc444d48a19a382e22cf564e15d5b57c3a3ed1c4854298d8680f7a113523d4d6",
+      "toSha256": "797552d8dccd095141761cfbd0aa25fa3cdd45edae5d7a797f3a5e006371b482",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "0c6cfc874bcd27f82d53dcfaea5087f882c6ad8240e0ba638affc6836189cf84",
+      "toSha256": "f802099745777c6057a7543ff20dcb147f9482ba49b2240d1f04712fd069e9eb",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "86d8e84fecc6fce84a15864234dfec4b99eaef4ab38fda7b0b5b9d10a113107c",
+      "toSha256": "76e81e045a21fe3927d3b9a6811d5d19b268546b470c768942e6dd293f3adf52",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "4bba7fe4bffa4c0438bcce2125f5827c847565bed551301438095323e4199d3d",
+      "toSha256": "0b0c6feb8971f9addc5ee5576b4b542c8d71f8410b4dad1ba22440eb1295b4c3",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "563dd7ef642c23e59d0ebb04d6f38e22a513adb6c8d8a980880124becebff434",
+      "toSha256": "28191fdaf24e2ea191da66d05704225c742ca80d217a7cefea103168742cf858",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "fd40760b2a7d7e16d3840cae6a0bc7ab7b6cc54210b0fb0d320174d5ee7955a7",
+      "toSha256": "3c65ed358d7b7e8d1ef5d6097517e922180c10b7f6e88641339775c97812fbfd",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "ef9414c16f2dda2ff01d30f5e10a9c3e8b0f20367bfe652054677c508b54d823",
+      "toSha256": "cef410172bdfdc60aa09ad2d33ebd715ee1816feca4cb550a22b5d6ea0b4c3f9",
+      "reason": "Apply reviewed original campus furnishings, floor crests and explicit native animation depth, preserving all functional geometry and clocks."
+    }
+  ]
+}

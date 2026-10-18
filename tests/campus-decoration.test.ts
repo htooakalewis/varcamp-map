@@ -15,21 +15,21 @@ const cellIds = (r: TileRect, width: number) => Array.from({length:r.width*r.hei
 describe('landscaped zodiac campus', () => {
   it('contains bounded planted beds and two edged water gardens close to the court',()=>{
     // The new bounded exterior verge is shoreline terrain; cultivated beds still require full frames.
-    const l=campus(),beds=l.placements.filter(p=>p.sprite==='ground-grass'&&!p.id.startsWith('exterior-verge-'));expect(beds.length).toBeGreaterThan(0);
+    const l=campus(),beds=l.placements.filter(p=>p.sprite==='plaza-grass-01'&&!p.id.startsWith('exterior-verge-'));expect(beds.length).toBeGreaterThan(0);
     // Authored notched beds may use several grass fills inside one physical frame.
     // Bound each fill and require its enclosing garden to contain both flowers and mature trees.
     for(const bed of beds){
       expect(bed.width<=10&&bed.height<=10,`${bed.id} is unbounded lawn`).toBe(true);
       const frame=l.placements.find(p=>p.sprite==='floor-inlay'&&/(?:-rim|-frame)$/.test(p.id)&&p.x<bed.x&&p.y<bed.y&&p.x+p.width>bed.x+bed.width&&p.y+p.height>bed.y+bed.height);
       expect(frame,`${bed.id} has no complete physical garden frame`).toBeDefined();
-      expect(l.placements.some(p=>p.sprite==='flower-bed'&&intersects(p,frame!))).toBe(true);
-      expect(l.placements.some(p=>p.sprite.startsWith('tree-')&&intersects(p,frame!))).toBe(true);
+      expect(l.placements.some(p=>p.sprite==='plaza-flower-bed'&&intersects(p,frame!))).toBe(true);
+      expect(l.placements.some(p=>['plaza-tree-round','plaza-tree-evergreen','plaza-tree-flowering'].includes(p.sprite)&&intersects(p,frame!))).toBe(true);
     }
     const ponds=l.placements.filter(p=>p.sprite==='water-blue'&&p.width<l.width);expect(ponds).toHaveLength(2);
     for(const pond of ponds){expect(l.placements.some(p=>p.sprite==='floor-inlay'&&p.x<pond.x&&p.y<pond.y&&p.x+p.width>pond.x+pond.width&&p.y+p.height>pond.y+pond.height)).toBe(true);expect(l.placements.some(p=>p.sprite==='lily-pad'&&intersects(p,pond))).toBe(true);}
   });
   it('keeps planted beds and ponds separate from spawns, exit triggers and interactive areas',()=>{
-    const l=campus(),landscape=l.placements.filter(p=>p.sprite==='ground-grass'&&!p.id.startsWith('exterior-verge-')||p.sprite==='water-blue'&&p.width<l.width);
+    const l=campus(),landscape=l.placements.filter(p=>p.sprite==='plaza-grass-01'&&!p.id.startsWith('exterior-verge-')||p.sprite==='water-blue'&&p.width<l.width);
     for(const p of landscape){expect([...l.entries,...l.exits,...l.areas].some(r=>intersects(p,r)),`${p.id} covers a public approach`).toBe(false);expect(p.x>0&&p.y>0&&p.x+p.width<l.width&&p.y+p.height<l.height).toBe(true);}
   });
   it('keeps the reception desk and screen beside the former guide station',()=>{

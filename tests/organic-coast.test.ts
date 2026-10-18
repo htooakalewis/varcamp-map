@@ -1,3 +1,5 @@
+import {publishedEpochJson} from './helpers/published-map-epoch';
+import{reconcileNativeProjection}from'../tools/maps/native-projection';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {WORLD_CATALOG} from '../src/world/catalog';
@@ -43,7 +45,6 @@ it('moves shoreline pixels along the actual irregular native coast below avatars
 import {createRequire} from 'node:module';
 import {resolve} from 'node:path';
 import {assertNativeOrganicCoast} from '../tools/maps/organic-coast';
-import {refineBeachVisuals} from '../tools/maps/refine-beach.mjs';
 it('animates actual shoreline GIDs through the pinned Phaser parser and returns to the first frame after one tide',()=>{
  const parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js'));
  const m=native(),atlas=m.tilesets.find((t:any)=>t.name==='organic-coast'),e=parse(structuredClone(m)).tilesets.find((t:any)=>t.firstgid===atlas.firstgid),gids=m.layers.find((l:any)=>l.name==='terrain').data.filter((g:number)=>g>=atlas.firstgid&&g<atlas.firstgid+atlas.tilecount);
@@ -54,14 +55,15 @@ it('normal build validation refuses a stopped tide or a moved coast cell',()=>{
  const l=source();for(const kind of ['stopped','clock','cell']){const m=native(),atlas=m.tilesets.find((t:any)=>t.name==='organic-coast');if(kind==='stopped')delete atlas.tiles;if(kind==='clock')atlas.tiles[0].animation[0].duration=999;if(kind==='cell'){const terrain=m.layers.find((l:any)=>l.name==='terrain'),i=terrain.data.findIndex((g:number)=>g===atlas.firstgid);terrain.data[i]=0;}expect(()=>assertNativeOrganicCoast(m,l),kind).toThrow(/Organic coast/);}
 });
 it('forward authoring preserves the actual ocean audio properties and is idempotent without mutating its inputs',()=>{
- const l=source(),before=old(),raw=JSON.stringify(before),result=refineBeachVisuals(before,l,loadTileCatalog());expect(JSON.stringify(before)).toBe(raw);expect(result.map).toEqual(native());expect(refineBeachVisuals(result.map,result.layout,loadTileCatalog()).map).toEqual(result.map);
- expect(result.map.layers.find((l:any)=>l.name==='terrain').properties).toEqual(before.layers.find((l:any)=>l.name==='terrain').properties);
+ const l=source(),before=publishedEpochJson('outputs/varcamp-coast-natural-life/maps/shipyard-beach.tmj'),raw=JSON.stringify(before),built=buildMap(l,loadTileCatalog()).tmj;attachOrganicCoast(built,l);const result=reconcileNativeProjection(before,built);expect(JSON.stringify(before)).toBe(raw);expect(result).toEqual(native());expect(reconcileNativeProjection(result,built)).toEqual(result);
+ expect(result.layers.find((l:any)=>l.name==='terrain')!.properties).toEqual(before.layers.find((l:any)=>l.name==='terrain').properties);
 });
 it('keeps every existing non-terrain prop in place and changes only authorized terrain, scenery and collisions',()=>{
- const l=source(),before=json('tests/fixtures/organic-coast/before-layout.json'),m=native(),nativeBefore=old();const props=(l:any)=>l.placements.filter((p:any)=>p.layer!=='terrain'&&p.sprite!=='beach-sea-veil');expect(props(l)).toEqual(props(before));
+ const l=publishedEpochJson('world/layouts/shipyard-beach.json'),before=json('tests/fixtures/organic-coast/before-layout.json'),m=publishedEpochJson('maps/shipyard-beach.tmj'),nativeBefore=old();const props=(l:any)=>l.placements.filter((p:any)=>p.layer!=='terrain'&&p.sprite!=='beach-sea-veil');expect(props(l)).toEqual(props(before));
  expect(l.entries).toEqual(before.entries);expect(l.exits).toEqual(before.exits);expect(l.areas).toEqual(before.areas);expect(l.signs).toEqual(before.signs);expect(l.standingSigns).toEqual(before.standingSigns);expect(m.properties).toEqual(nativeBefore.properties);
  for(const layer of nativeBefore.layers.filter((l:any)=>!['terrain','physical-collisions'].includes(l.name)&&!l.name.startsWith('scenery-')&&!l.name.startsWith('beach-surf-')))expect(m.layers.find((l:any)=>l.id===layer.id),layer.name).toEqual(layer);
- const intended=buildMap(l,loadTileCatalog()).tmj;expect(m.layers.find((l:any)=>l.name==='physical-collisions').data.map(Boolean)).toEqual((intended.layers.find((l:any)=>l.name==='physical-collisions') as any).data.map(Boolean));
+ // Collision-only historical oracle: these visual overlays never supply collision.
+ const intended=buildMap({...l,animatedOverlays:[]},publishedEpochJson('art/tile-catalog.json')).tmj;expect(m.layers.find((l:any)=>l.name==='physical-collisions').data.map(Boolean)).toEqual((intended.layers.find((l:any)=>l.name==='physical-collisions') as any).data.map(Boolean));
 });
 it('normal build validation rejects dry-terrain drift and a noncolliding replacement for a sea wall',()=>{
  for(const kind of ['dry-terrain','mask']){const m=native(),l=source();if(kind==='dry-terrain')m.layers.find((a:any)=>a.name==='terrain').data[20*48+24]=0;else m.layers.find((a:any)=>a.name==='physical-collisions').data[0]=m.tilesets.find((t:any)=>t.name==='navigation-mask').firstgid;expect(()=>assertNativeOrganicCoast(m,l),kind).toThrow(/Organic coast/);}

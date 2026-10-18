@@ -1,0 +1,689 @@
+{
+  "version": 1,
+  "maps": {
+    "air-district": [
+      {
+        "name": "world-ambient-air-district-device-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-air-district-lamp-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "campus-exploration": [
+      {
+        "name": "world-ambient-campus-exploration-device-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-campus-exploration-leaves-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "comet-maze": [
+      {
+        "name": "world-ambient-comet-maze-lamp-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-comet-maze-lamp-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "constellation-shore": [
+      {
+        "name": "coast-life-shore-dolphin",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-shore-fish-bay",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-shore-fish-west",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-shore-gull-north",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-shore-gull-south",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-shore-seal",
+        "role": "avatarForeground"
+      }
+    ],
+    "earth-district": [
+      {
+        "name": "world-ambient-earth-district-device-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-earth-district-lamp-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "fa-ship-interior": [
+      {
+        "name": "world-ambient-fa-ship-interior-lamp-2",
+        "role": "opaqueOwnerUpper",
+        "owner": {
+          "placement": {
+            "id": "warm-lantern-3-3",
+            "sprite": "ship-lantern",
+            "x": 3,
+            "y": 3,
+            "width": 1,
+            "height": 2,
+            "layer": "decor",
+            "renderRole": null
+          },
+          "visual": {
+            "sheet": "assets/tilesets/original/ship-interior.png",
+            "rect": {
+              "x": 12,
+              "y": 0,
+              "width": 1,
+              "height": 2
+            }
+          },
+          "upperCells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "sheetSha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415"
+        }
+      },
+      {
+        "name": "world-ambient-fa-ship-interior-steam-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-fa-ship-interior-steam-1-upper",
+        "role": "opaqueOwnerUpper",
+        "owner": {
+          "placement": {
+            "id": "galley-copper",
+            "sprite": "ship-galley",
+            "x": 4,
+            "y": 6,
+            "width": 3,
+            "height": 2,
+            "layer": "decor",
+            "renderRole": null
+          },
+          "visual": {
+            "sheet": "assets/tilesets/original/ship-interior.png",
+            "rect": {
+              "x": 7,
+              "y": 0,
+              "width": 3,
+              "height": 2
+            }
+          },
+          "upperCells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "sheetSha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415"
+        }
+      }
+    ],
+    "fa-ship": [
+      {
+        "name": "world-ambient-fa-ship-fish-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-fa-ship-gull-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "fire-district": [
+      {
+        "name": "world-ambient-fire-district-heat-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-fire-district-steam-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "hidden-observatory": [
+      {
+        "name": "world-ambient-hidden-observatory-device-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-hidden-observatory-instrument-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "lunar-hall": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-water",
+        "role": "avatarForeground"
+      }
+    ],
+    "moon-cafe": [
+      {
+        "name": "world-ambient-moon-cafe-bubbles-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-moon-cafe-steam-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "moon-grotto": [
+      {
+        "name": "world-ambient-moon-grotto-crystal-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-moon-grotto-ripples-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "nebula-arcade": [
+      {
+        "name": "world-ambient-nebula-arcade-device-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-nebula-arcade-device-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-nebula-arcade-device-3",
+        "role": "avatarForeground"
+      }
+    ],
+    "orbit-maze": [
+      {
+        "name": "world-ambient-orbit-maze-lamp-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-orbit-maze-lamp-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "orbit-playground": [
+      {
+        "name": "world-ambient-orbit-playground-device-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-orbit-playground-leaves-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "overworld": [
+      {
+        "name": "plaza-drone-00",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-01",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-02",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-03",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-04",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-05",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-06",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-07",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-08",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-09",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-10",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-11",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-12",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-13",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-14",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-15",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-16",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-17",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-18",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-19",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-20",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-21",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-22",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-23",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-24",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-25",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-26",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-27",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-28",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-29",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-30",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-31",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-32",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-33",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-34",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-35",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-36",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-37",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-38",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-drone-39",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "roadster",
+        "role": "avatarForeground"
+      }
+    ],
+    "shipyard-beach": [
+      {
+        "name": "coast-life-harbor-dolphin",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-harbor-fish-east",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-harbor-fish-west",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-harbor-gull-north",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coast-life-harbor-gull-south",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "coastal-flight",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "rolling-breaker-east",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "rolling-breaker-west",
+        "role": "avatarForeground"
+      }
+    ],
+    "solar-hall": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-water",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-aquarius": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-aries": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-cancer": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-water",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-capricorn": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-gemini": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-leo": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-libra": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-pisces": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-water",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-sagittarius": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-scorpio": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-taurus": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "speaker-virgo": [
+      {
+        "name": "interior-ambient-plant",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-server",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "interior-ambient-steam",
+        "role": "avatarForeground"
+      }
+    ],
+    "star-garden": [
+      {
+        "name": "world-ambient-star-garden-leaves-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-star-garden-ripples-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "stargazer-terrace": [
+      {
+        "name": "world-ambient-stargazer-terrace-instrument-1",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-stargazer-terrace-leaves-2",
+        "role": "avatarForeground"
+      }
+    ],
+    "water-district": [
+      {
+        "name": "world-ambient-water-district-cascade-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-water-district-ripples-1",
+        "role": "avatarForeground"
+      }
+    ],
+    "zodiac-festival-park": [
+      {
+        "name": "world-ambient-zodiac-festival-park-leaves-2",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "world-ambient-zodiac-festival-park-ripples-1",
+        "role": "avatarForeground"
+      }
+    ]
+  }
+}

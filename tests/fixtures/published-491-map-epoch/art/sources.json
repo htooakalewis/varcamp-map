@@ -1,0 +1,399 @@
+{
+  "workadventure": {
+    "attribution": "WorkAdventure / The Coding Machine; preserve all authors and terms in LICENSE.assets",
+    "url": "https://github.com/workadventure/map-starter-kit/tree/1143646a9c02c3928eac4acbb123642c62a48a85/tilesets",
+    "license": "WorkAdventure assets license — redistribution only with a WorkAdventure map; not a standalone asset pack",
+    "licenseFile": "assets/tilesets/workadventure/LICENSE.assets",
+    "changes": "None. Six complete source sheets copied byte-for-byte. Catalog only selects tile rectangles.",
+    "files": [
+      {
+        "path": "assets/tilesets/workadventure/WA_Decoration.png",
+        "sha256": "4db175d47f79fb6a0f3ecf71decc3f39fc996478c25bd1006b72d720b04d5363"
+      },
+      {
+        "path": "assets/tilesets/workadventure/WA_Seats.png",
+        "sha256": "f45b53f2e5326060008ba10ec1a854d1375cad85e805687b6330172e42df0c12"
+      },
+      {
+        "path": "assets/tilesets/workadventure/WA_Exterior.png",
+        "sha256": "68ed8f71b29edc0f4b5b6c06c9e1a815d394df28dbd7511afbc97d561868796f"
+      },
+      {
+        "path": "assets/tilesets/workadventure/WA_Room_Builder.png",
+        "sha256": "b2f0881def83c4a27a0a5f51738eb5e448c3ad139afc3196748581b5b5b66a02"
+      },
+      {
+        "path": "assets/tilesets/workadventure/WA_Tables.png",
+        "sha256": "9f952c50e2a385dc84083c60c4904e9d33d855e0db9d3431fc038476a66f86d8"
+      },
+      {
+        "path": "assets/tilesets/workadventure/WA_Other_Furniture.png",
+        "sha256": "c5e5addd7bcf6937aa5d285c2149b05ed92ef981174d1c53c842ee221a8bb528"
+      }
+    ]
+  },
+  "lpc-office": {
+    "attribution": "Eliza Wyatt and Lanea Zimmerman (Sharm)",
+    "url": "https://opengameart.org/content/lpc-revised-the-office",
+    "license": "OGA-BY 3.0",
+    "licenseFile": "assets/tilesets/lpc-office/LICENSE-OGA-BY-3.0.txt",
+    "changes": "None. Six selected complete sheets copied byte-for-byte.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-office/Copy Machine.png",
+        "sha256": "2ea06c75a4d31deb2ec2841a17bbeffa782f27c555f662847059f11457e8a426"
+      },
+      {
+        "path": "assets/tilesets/lpc-office/Coffee Maker.png",
+        "sha256": "886a299c0fb5033751aa65b27f1a1a96df34f8ba96c6ccd05640c2546f2599d8"
+      },
+      {
+        "path": "assets/tilesets/lpc-office/Card Table.png",
+        "sha256": "8802b24e1ac57694c8b641600833d68f5d7e8c02591c860c202d6f627c87a300"
+      },
+      {
+        "path": "assets/tilesets/lpc-office/Water Cooler.png",
+        "sha256": "c5f6422b7c00ac02d020af1544fad53b598833fe314d2fb90f5d434663fd00b9"
+      },
+      {
+        "path": "assets/tilesets/lpc-office/Laptop.png",
+        "sha256": "9eda5d655b037792facc7011c975e0ee554389551fe0ee9ceb69a42cc6ec0f30"
+      },
+      {
+        "path": "assets/tilesets/lpc-office/TV, Widescreen.png",
+        "sha256": "ea8d20dbfac08bda1b13ae38753dd8d4ad08c077dd87500cf497b13038c29fab"
+      }
+    ]
+  },
+  "lpc-space": {
+    "attribution": "Baŝto/Basxto, Hyptosis, FunwithPixels and Skorpio",
+    "url": "https://opengameart.org/content/lpc-goes-to-space",
+    "license": "CC-BY-SA 4.0",
+    "licenseFile": "assets/tilesets/lpc-space/LICENSE-CC-BY-SA-4.0.txt",
+    "changes": "None. Complete source sheet copied byte-for-byte; kept separate from other licenses.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-space/scifi_space_rpg_tiles_lpcized_0.png",
+        "sha256": "fc6acc103df0bc1a4b59d541b12bfdaf7e5ad3eebf76f6178191c355c7325307"
+      }
+    ]
+  },
+  "original": {
+    "attribution": "Original VarCamp cosmic pixel artwork created by Codex for this project, 2026",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "CC0 1.0",
+    "licenseFile": "assets/tilesets/original/LICENSE.txt",
+    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained. Beach refinement: beach-lounge.svg/png and beach-surf.svg/png add integer-grid native pixel palms, striped parasols/recliners, slatted tables, woven towels, timber cabana/bar and gentle 2080ms four-frame surf. A separate translucent original tile calms the existing licensed LPC water; imported source sheets are unchanged. Original standing caption glyph atlas added: semantic source linked to existing original pixel alphabet plus original arrows; no imported pixels.",
+    "files": [
+      {
+        "path": "assets/tilesets/original/zodiac.png",
+        "sha256": "57f9ef9d8144db965139a9e135fefd887f22792fed511534ddabee5f583fa63a"
+      },
+      {
+        "path": "assets/tilesets/original/magic.png",
+        "sha256": "ac9008b87dab629541131d315982cc2fae296c22e6db5437aab651a6de2dc452"
+      },
+      {
+        "path": "assets/tilesets/original/campus.png",
+        "sha256": "3b5a7b2e38ad769c064fdaca0a1d4d113174e57de16c6884034fcd70e1999a9d"
+      },
+      {
+        "path": "assets/tilesets/original/amenities.png",
+        "sha256": "bde5e063d7f5ca86d1269f37bcbeb521dd5fd5ea5029d3441c713717032d7098"
+      },
+      {
+        "path": "assets/tilesets/original/guides.png",
+        "sha256": "69a9abbdec5f6d4af77fd9624ef75c2a833e6ff64a9e1ab014c13486cb9cad0a"
+      },
+      {
+        "path": "assets/tilesets/original/wayfinding.png",
+        "sha256": "49d6e41eda5742ba27e16f027551aa324a1f2fbbd5b2540eb58a417bf0502cae"
+      },
+      {
+        "path": "assets/tilesets/original/hub-buildings.png",
+        "sha256": "f7f086352add1ad428b7338dda5dfcde41d8d2f1b078eb18837b9fafe80e8b3e"
+      },
+      {
+        "path": "assets/tilesets/original/hub-labels.png",
+        "sha256": "5315d98993f6ba65253e651666b5ccdc9318a79de34e6fdacd66d79df083f447"
+      },
+      {
+        "path": "assets/tilesets/original/coastal.png",
+        "sha256": "8935fb1dd29807e2d7210135cc78c1787f3903620ff983fc44cf4045202228a6"
+      },
+      {
+        "path": "assets/tilesets/original/exterior-gates.png",
+        "sha256": "cd0313dd8ff6a23d58a031c6d90d4d96f2a71603458cb0c8803f5ed07b5c6458"
+      },
+      {
+        "path": "art/source/naval-details.svg",
+        "sha256": "9b9f15eccad961f23ed5e937f4a80a6cd726eeac2712d7572c245cc42b26fa6a"
+      },
+      {
+        "path": "assets/tilesets/original/naval-details.png",
+        "sha256": "37192164559eae3437b55cdb8f1181df8f8b893684eb6556c96ff8ef64b25cd8"
+      },
+      {
+        "path": "art/source/coastal-flight-plane.svg",
+        "sha256": "2d034b0f5cb095c4e1732241d972a5dedfd9c512fb763862d5b5f890397a7e96"
+      },
+      {
+        "path": "art/source/coastal-flight-plane.png",
+        "sha256": "00d1527591def1a906ad4b66c53c5e82c3f892b9ee6079501f51c55c30b071ae"
+      },
+      {
+        "path": "art/source/coastal-flight.json",
+        "sha256": "f1172239ffbe53ddc0d11760e7b96b9553de0c0b30a8422199ee0e52778b68b4"
+      },
+      {
+        "path": "assets/tilesets/original/coastal-flight.png",
+        "sha256": "615e385edc6d741303b6631824929372ba082b6bfb5432fd632d39b996b4f525"
+      },
+      {
+        "path": "art/source/roadster-poses.png",
+        "sha256": "08b8e46661d57bb4f44ea0e09bdee91debc3311440d1d2406a949e164bd86cd0"
+      },
+      {
+        "path": "art/source/roadster-authoring.json",
+        "sha256": "d5a2428ac961f006497415f0faa442a39c571c03b7adcece9c31e184cc8418da"
+      },
+      {
+        "path": "art/source/roadster.json",
+        "sha256": "d6e8da71a60984d6268c9e55075a79c32f170f904b6402fe1695e43bfc2b069a"
+      },
+      {
+        "path": "assets/tilesets/original/roadster.png",
+        "sha256": "f0d01aa3c4f9835b1d35fa6ae3c8534ebdb8e4a647d3cdb30f43309b13a63fe1"
+      },
+      {
+        "path": "assets/tilesets/original/beach-lounge.png",
+        "sha256": "af2cad6459f38ce25c18900bcde3db6cceb3dd7382f7036cfaea15a51a0fe0be"
+      },
+      {
+        "path": "assets/tilesets/original/beach-surf.png",
+        "sha256": "879bb15a937246deb1e020f831185c7e078ae3f2ddb903db0873112bca66ab7e"
+      },
+      {
+        "path": "art/source/standing-captions.svg",
+        "sha256": "071588a46b0eca25307aa0f4014d3da3bb36b0360b3f39fbe3e118193c838d8d"
+      },
+      {
+        "path": "art/source/standing-captions.json",
+        "sha256": "ea7bcec7f20e2e441bb8cfd8ec5bf551bf358e5d98eddcf49bd83d8cd68a2e8e"
+      },
+      {
+        "path": "assets/tilesets/original/standing-captions.png",
+        "sha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b"
+      },
+      {
+        "path": "art/source/rolling-breaker-master.svg",
+        "sha256": "236bf015dde56f0ff14638a680e47ff08fca9e505fb69e9e2211779384c45eb1"
+      },
+      {
+        "path": "art/source/rolling-breaker.svg",
+        "sha256": "239e20a73b36246b0685c94c221dcc968bae84657426e19946f9ac987b7ffa38"
+      },
+      {
+        "path": "art/source/rolling-breaker.json",
+        "sha256": "669b168b595c8f89dd686e6f8b851a4df7e26edd77862ec7270066fb1e5c71e6"
+      },
+      {
+        "path": "assets/tilesets/original/rolling-breaker.png",
+        "sha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503"
+      },
+      {
+        "path": "art/source/ship-interior.svg",
+        "sha256": "5cbfdb75953417995a3b989010b4064e147fd70c8311851e7200e49f7e4eb637"
+      },
+      {
+        "path": "assets/tilesets/original/ship-interior.png",
+        "sha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415"
+      },
+      {
+        "path": "art/source/rolling-breaker-west.json",
+        "sha256": "7ed945c5006eee8c03bd6dc874afb30c0741e38d6381b7eea629a8465196e4ab"
+      },
+      {
+        "path": "art/source/rolling-breaker-east.json",
+        "sha256": "9d0e357b78e684827d73633c8c96e3594a75bc9e3817dba15108cff924326bc1"
+      },
+      {
+        "path": "art/source/ship-interior.json",
+        "sha256": "835b51dc4aeea4eea269107639064370ef7f24aef27b90ffa8030a1432fd69b5"
+      }
+    ]
+  },
+  "lpc-ship": {
+    "attribution": "bluecarrot16; commissioned by Sander Frenken; full CREDITS-ship.txt retained",
+    "url": "https://opengameart.org/content/lpc-ship",
+    "license": "CC-BY 4.0 (CC-BY 3.0 or later in original archive)",
+    "licenseFile": "assets/tilesets/lpc-ship/LICENSE.txt",
+    "changes": "Original complete PNG sheets byte-for-byte. Native tile selection and custom vessel assembly; no preview-only water/container imported.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-ship/ATTRIBUTION.md",
+        "sha256": "16334956a025df96f1d56f9b9c5368e86d1690cd16ba5c15555b509eb457d867"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/CREDITS-ship.txt",
+        "sha256": "b3e5665f9ac9c4425131ab2bb1c22af8795b6c388166d689ae2640408e3ac1a2"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/LICENSE.txt",
+        "sha256": "8ae9438818c26e4873b91d8c6ad620526c011e27e125677f13031eda903f007c"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/lpc-ship-accessories.png",
+        "sha256": "8df51f3666d84ed451ea59d77ab45dbbf435a101771a9fccfe69d85d54e5e852"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/lpc-ship.png",
+        "sha256": "4e0ad1c82075c090c66191d5b04ef5c4cb067a92aabfbdfba93886b8b437fdfd"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/rigging.png",
+        "sha256": "a042e31bbfad5170d77cafac559c7d7e054e4a12002e65923af4f04428d0f589"
+      },
+      {
+        "path": "assets/tilesets/lpc-ship/ship-cannon.png",
+        "sha256": "9728203c9eeb62ef256954784542ebcceaab8e11bc42417766bc08d1ed1553f2"
+      }
+    ]
+  },
+  "lpc-dock": {
+    "attribution": "Reid; Dock tileset",
+    "url": "https://opengameart.org/content/dock-tileset",
+    "license": "CC-BY-SA 3.0",
+    "licenseFile": "assets/tilesets/lpc-dock/LICENSE.txt",
+    "changes": "Original complete Artis_dock_1.png copied byte-for-byte as dock.png. Tile selection only.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-dock/ATTRIBUTION.md",
+        "sha256": "16db1abfdcf6be35b4a82a2249e7f2f808a646526677d789913ae31b6b32d71c"
+      },
+      {
+        "path": "assets/tilesets/lpc-dock/LICENSE.txt",
+        "sha256": "f199af7e90e29e197a4be87b9a6d585a29ff5eae2b977503e590c4bd8fe6e8b3"
+      },
+      {
+        "path": "assets/tilesets/lpc-dock/dock.png",
+        "sha256": "11f6435aa55b0b072d0dbea8c4d6a044a8cf54f446713833b4215016b79711ef"
+      }
+    ]
+  },
+  "lpc-containers": {
+    "attribution": "Full multi-author attribution retained in CREDITS-container.txt",
+    "url": "https://opengameart.org/content/lpc-containers",
+    "license": "CC-BY-SA 4.0",
+    "licenseFile": "assets/tilesets/lpc-containers/LICENSE.txt",
+    "changes": "Original complete container.png copied byte-for-byte from v4.2. Tile selection only.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-containers/ATTRIBUTION.md",
+        "sha256": "791314a7e56def7fd73928177b891967d20d3a364978c61937964d0533f7c6d9"
+      },
+      {
+        "path": "assets/tilesets/lpc-containers/CREDITS-container.txt",
+        "sha256": "3eef40fe2fa5dcffd4ecea84c597461c90265477d70d0331623a376dffa84d9b"
+      },
+      {
+        "path": "assets/tilesets/lpc-containers/LICENSE.txt",
+        "sha256": "a0bd498de6b7991f563789715e3cf9f9a77860b6bb5b2c2b072fb3bb36361008"
+      },
+      {
+        "path": "assets/tilesets/lpc-containers/container.png",
+        "sha256": "cb8a60d1eac758f87785e0168370ad772fe57e0c2e6f76a127833c63d33fed03"
+      }
+    ]
+  },
+  "lpc-water": {
+    "attribution": "Lanea Zimmerman (Sharm) and Liberated Pixel Cup contributors; complete AUTHORS retained",
+    "url": "https://github.com/OpenGameArt/LPC-Style-Guide",
+    "license": "CC-BY-SA 3.0",
+    "licenseFile": "assets/tilesets/lpc-water/cc-by-sa-3.0.txt",
+    "changes": "Original complete sprites/water.png copied byte-for-byte and unchanged. Organic-coast.png is a separately named CC-BY-SA 3.0 derivative using recolored animated LPC water plus original hand-authored curved sand, wet-sand and foam; original recipe and producer retained. Constellation-coast.png is a second separately named CC-BY-SA 3.0 curved coast derivative sharing the same deterministic producer; upstream water is unchanged.",
+    "files": [
+      {
+        "path": "assets/tilesets/lpc-water/ATTRIBUTION.md",
+        "sha256": "bbd9df3b76aab226e7c3c7b850310ee147c6c8d0b78d32f1e9ea275094dc91e6"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/AUTHORS",
+        "sha256": "8f8bc527ed8bf7c16121532dc8d07d32e0a802eacb0a1ee60bd7007507597a62"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/COPYING",
+        "sha256": "1110c077b54d959e5bf7fd982a4759456909a4023a8b521947ef8b49448d1b49"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/cc-by-sa-3.0.txt",
+        "sha256": "f199af7e90e29e197a4be87b9a6d585a29ff5eae2b977503e590c4bd8fe6e8b3"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/water.png",
+        "sha256": "6107522405d8c27b9bab7278f5dc14cd7cc0445592f5967d748cb81ede4b0d47"
+      },
+      {
+        "path": "world/organic-coast.json",
+        "sha256": "0ff0804e85e86d2cf2ed1471889917fcdc02ec1db6fbfbaff7d22648b77196cd"
+      },
+      {
+        "path": "tools/art/organic-coast.ts",
+        "sha256": "074a5926099bb5754dc2cf32744b3f57ed8e2e9b8a260181be279fab36758f54"
+      },
+      {
+        "path": "assets/tilesets/original/organic-coast.png",
+        "sha256": "2fb7d2c09d6e185fd5363869bd75e760a4102323a8981eab2f55080ede04c9a5"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/ORGANIC-COAST.md",
+        "sha256": "7d696fac799d148596f72fa1871a06224941f42eeb8cc4998175ee2bf330da55"
+      },
+      {
+        "path": "world/constellation-coast.json",
+        "sha256": "bfe0e5d1685332ecb8394b479bdebeef4d37017b20c00d70046721225fba384e"
+      },
+      {
+        "path": "tools/art/constellation-coast.ts",
+        "sha256": "f90d2f46100657434bf8a0198ee3476a013e94689c679749c2909e3a8af4ba12"
+      },
+      {
+        "path": "tools/art/coast-raster.ts",
+        "sha256": "5361fb058600181bf2fdda0ef1a0d2a8d6c8c29ca39eb16426d492e559e49e12"
+      },
+      {
+        "path": "assets/tilesets/original/constellation-coast.png",
+        "sha256": "361713a217882b0ad1811f5eaa485c233816141fd0a53fad0025cefe679e48b1"
+      },
+      {
+        "path": "assets/tilesets/lpc-water/CONSTELLATION-COAST.md",
+        "sha256": "768ea79ee9ba604b6eba530134e374ed27eaaa14b3ce1d82c25940c948bf44cd"
+      }
+    ]
+  },
+  "ocean-audio": {
+    "attribution": "jasinski / OpenGameArt beach-ocean-waves; original recordings and CC0 attribution retained",
+    "url": "https://opengameart.org/content/beach-ocean-waves",
+    "license": "CC0-1.0",
+    "licenseFile": "assets/audio/LICENSE.txt",
+    "changes": "Two CC0 recordings mixed, filtered and crossfaded to a quiet local MP3. No perceptual listening claim.",
+    "files": [
+      {
+        "path": "assets/audio/ocean-loop.mp3",
+        "sha256": "df5758cfdafeecbbebc94943902e9deb4a65684582200e435e0b2c9f348897bc"
+      },
+      {
+        "path": "assets/audio/LICENSE.txt",
+        "sha256": "8f6e9dafb5097b57b6a81b45ab442d890e3d3cdda07cb3702e4f47da8abcb62f"
+      },
+      {
+        "path": "art/source/ocean-audio.json",
+        "sha256": "1a5e349e8d9d9c2988b4d0f715443ba5e43745237afb55e32471836271840c1f"
+      },
+      {
+        "path": "assets/audio/ATTRIBUTION.md",
+        "sha256": "ea2073ab40d06fd0a1da626f04e8c320bb09cc17060f52f90e3e30624ebfaad9"
+      }
+    ]
+  }
+}

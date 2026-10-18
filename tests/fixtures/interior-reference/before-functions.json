@@ -1,0 +1,1394 @@
+{
+  "speaker-aries": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-aries",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-aries",
+        "name": "meeting-aries",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "aries-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-aries",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-aries",
+        "name": "beacon-aries",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-taurus": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-taurus",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-taurus",
+        "name": "meeting-taurus",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "taurus-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-taurus",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-taurus",
+        "name": "beacon-taurus",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-gemini": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-gemini",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-gemini",
+        "name": "meeting-gemini",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "gemini-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-gemini",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-gemini",
+        "name": "beacon-gemini",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-cancer": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-cancer",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-cancer",
+        "name": "meeting-cancer",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "cancer-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-cancer",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-cancer",
+        "name": "beacon-cancer",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-leo": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-leo",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-leo",
+        "name": "meeting-leo",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "leo-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-leo",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-leo",
+        "name": "beacon-leo",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-virgo": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-virgo",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-virgo",
+        "name": "meeting-virgo",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "virgo-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-virgo",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-virgo",
+        "name": "beacon-virgo",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-libra": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-libra",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-libra",
+        "name": "meeting-libra",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "libra-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-libra",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-libra",
+        "name": "beacon-libra",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-scorpio": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-scorpio",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-scorpio",
+        "name": "meeting-scorpio",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "scorpio-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-scorpio",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-scorpio",
+        "name": "beacon-scorpio",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-sagittarius": {
+    "width": 40,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 19,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-sagittarius",
+        "x": 19,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-sagittarius",
+        "name": "meeting-sagittarius",
+        "x": 2,
+        "y": 5,
+        "width": 36,
+        "height": 20,
+        "properties": [
+          {
+            "id": "sagittarius-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-sagittarius",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-sagittarius",
+        "name": "beacon-sagittarius",
+        "x": 31,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 38,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 19,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 36,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 15,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-capricorn": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-capricorn",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-capricorn",
+        "name": "meeting-capricorn",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "capricorn-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-capricorn",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-capricorn",
+        "name": "beacon-capricorn",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-aquarius": {
+    "width": 36,
+    "height": 36,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 30,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-aquarius",
+        "x": 17,
+        "y": 35,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-aquarius",
+        "name": "meeting-aquarius",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "aquarius-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-aquarius",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-aquarius",
+        "name": "beacon-aquarius",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 20
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 7
+      }
+    ]
+  },
+  "speaker-pisces": {
+    "width": 36,
+    "height": 38,
+    "entries": [
+      {
+        "name": "speaker-entry",
+        "isDefault": true,
+        "x": 17,
+        "y": 32,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-speaker-pisces",
+        "x": 17,
+        "y": 37,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "meeting-pisces",
+        "name": "meeting-pisces",
+        "x": 2,
+        "y": 5,
+        "width": 32,
+        "height": 21,
+        "properties": [
+          {
+            "id": "pisces-livekit",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-pisces",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true,
+              "raiseHandEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "beacon-pisces",
+        "name": "beacon-pisces",
+        "x": 27,
+        "y": 29,
+        "width": 3,
+        "height": 2,
+        "properties": []
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "meeting-room",
+        "kind": "room",
+        "x": 1,
+        "y": 4,
+        "width": 34,
+        "height": 22
+      },
+      {
+        "name": "central-aisle",
+        "kind": "landmark",
+        "x": 17,
+        "y": 14,
+        "width": 2,
+        "height": 22
+      },
+      {
+        "name": "front-route",
+        "kind": "landmark",
+        "x": 2,
+        "y": 14,
+        "width": 32,
+        "height": 3
+      },
+      {
+        "name": "social-pocket",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 27,
+        "width": 13,
+        "height": 9
+      }
+    ]
+  },
+  "solar-hall": {
+    "width": 64,
+    "height": 56,
+    "entries": [
+      {
+        "name": "solar-entry",
+        "isDefault": true,
+        "x": 31,
+        "y": 50,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-solar",
+        "x": 31,
+        "y": 55,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "solar-stage",
+        "name": "Solar stage",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13,
+        "properties": [
+          {
+            "id": "solar-broadcast",
+            "type": "speakerMegaphone",
+            "name": "varcamp-solar-main",
+            "chatEnabled": false,
+            "seeAttendees": false
+          },
+          {
+            "id": "solar-stage-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      },
+      {
+        "id": "solar-audience",
+        "name": "Solar audience",
+        "x": 16,
+        "y": 22,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "solar-listen",
+            "type": "listenerMegaphone",
+            "speakerZoneName": "solar-stage",
+            "chatEnabled": false,
+            "allowTalking": false,
+            "raiseHandEnabled": true
+          }
+        ]
+      },
+      {
+        "id": "solar-prep",
+        "name": "Solar preparation",
+        "x": 3,
+        "y": 6,
+        "width": 10,
+        "height": 10,
+        "properties": [
+          {
+            "id": "solar-meeting",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-solar-prep",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true
+            }
+          },
+          {
+            "id": "solar-prep-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "central-aisle",
+        "kind": "auxiliary",
+        "x": 29,
+        "y": 21,
+        "width": 6,
+        "height": 33
+      },
+      {
+        "name": "front-route",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 18,
+        "width": 60,
+        "height": 4
+      },
+      {
+        "name": "prep-route",
+        "kind": "auxiliary",
+        "x": 7,
+        "y": 16,
+        "width": 2,
+        "height": 6
+      },
+      {
+        "name": "staff-prep",
+        "kind": "room",
+        "x": 2,
+        "y": 4,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "stage",
+        "kind": "landmark",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13
+      },
+      {
+        "name": "foyer",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 44,
+        "width": 60,
+        "height": 10
+      }
+    ]
+  },
+  "lunar-hall": {
+    "width": 64,
+    "height": 56,
+    "entries": [
+      {
+        "name": "lunar-entry",
+        "isDefault": true,
+        "x": 31,
+        "y": 50,
+        "width": 2,
+        "height": 2
+      }
+    ],
+    "exits": [
+      {
+        "name": "plaza-return",
+        "destination": "overworld",
+        "entry": "from-lunar",
+        "x": 31,
+        "y": 55,
+        "width": 2,
+        "height": 1
+      }
+    ],
+    "areas": [
+      {
+        "id": "lunar-stage",
+        "name": "Lunar stage",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13,
+        "properties": [
+          {
+            "id": "lunar-broadcast",
+            "type": "speakerMegaphone",
+            "name": "varcamp-lunar-main",
+            "chatEnabled": false,
+            "seeAttendees": false
+          },
+          {
+            "id": "lunar-stage-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      },
+      {
+        "id": "lunar-audience",
+        "name": "Lunar audience",
+        "x": 16,
+        "y": 22,
+        "width": 32,
+        "height": 20,
+        "properties": [
+          {
+            "id": "lunar-listen",
+            "type": "listenerMegaphone",
+            "speakerZoneName": "lunar-stage",
+            "chatEnabled": false,
+            "allowTalking": false,
+            "raiseHandEnabled": true
+          }
+        ]
+      },
+      {
+        "id": "lunar-prep",
+        "name": "Lunar preparation",
+        "x": 51,
+        "y": 6,
+        "width": 10,
+        "height": 10,
+        "properties": [
+          {
+            "id": "lunar-meeting",
+            "type": "livekitRoomProperty",
+            "roomName": "varcamp-lunar-prep",
+            "livekitRoomConfig": {
+              "startWithAudioMuted": true,
+              "startWithVideoMuted": true,
+              "disableChat": true
+            }
+          },
+          {
+            "id": "lunar-prep-rights",
+            "type": "restrictedRightsPropertyData",
+            "readTags": [
+              "organizer",
+              "speaker"
+            ],
+            "writeTags": []
+          }
+        ]
+      }
+    ],
+    "inspectionZones": [
+      {
+        "name": "central-aisle",
+        "kind": "auxiliary",
+        "x": 29,
+        "y": 21,
+        "width": 6,
+        "height": 33
+      },
+      {
+        "name": "front-route",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 18,
+        "width": 60,
+        "height": 4
+      },
+      {
+        "name": "prep-route",
+        "kind": "auxiliary",
+        "x": 55,
+        "y": 16,
+        "width": 2,
+        "height": 6
+      },
+      {
+        "name": "staff-prep",
+        "kind": "room",
+        "x": 50,
+        "y": 4,
+        "width": 12,
+        "height": 14
+      },
+      {
+        "name": "stage",
+        "kind": "landmark",
+        "x": 16,
+        "y": 5,
+        "width": 32,
+        "height": 13
+      },
+      {
+        "name": "foyer",
+        "kind": "auxiliary",
+        "x": 2,
+        "y": 44,
+        "width": 60,
+        "height": 10
+      }
+    ]
+  }
+}

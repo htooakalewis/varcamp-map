@@ -1,0 +1,1231 @@
+{
+  "scope": "ORIGINAL_PNG_INTERIOR_NATIVE_MOTION",
+  "inputs": [
+    {
+      "path": "art/source/interior-reference-original.png",
+      "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+    },
+    {
+      "path": "art/source/interior-steam-original.png",
+      "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+    },
+    {
+      "path": "art/source/interior-steam-pose.png",
+      "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+    },
+    {
+      "path": "art/source/interior-reference-native.png",
+      "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+    },
+    {
+      "path": "tools/art/native-motion.ts",
+      "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+    },
+    {
+      "path": "tools/art/interior-reference-motion.ts",
+      "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+    },
+    {
+      "path": "tools/maps/builder.ts",
+      "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+    }
+  ],
+  "records": [
+    {
+      "map": "speaker-aries",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-aries",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-aries",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-taurus",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-taurus",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-taurus",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-gemini",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-gemini",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-gemini",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-cancer",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-cancer",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-cancer",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-cancer",
+      "effect": "water",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 2400,
+        "stepMs": 600,
+        "sharedFrameTiles": 29,
+        "decodedRgbaBytes": 196608,
+        "atlas": {
+          "width": 512,
+          "height": 96,
+          "columns": 16,
+          "tilecount": 48
+        },
+        "tracks": [
+          {
+            "id": "water",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613"
+    },
+    {
+      "map": "speaker-leo",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-leo",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-leo",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-virgo",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-virgo",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-virgo",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-libra",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-libra",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-libra",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-scorpio",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-scorpio",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-scorpio",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-capricorn",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-capricorn",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-capricorn",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-aquarius",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-aquarius",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-aquarius",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-pisces",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "speaker-pisces",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "speaker-pisces",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "speaker-pisces",
+      "effect": "water",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 2400,
+        "stepMs": 600,
+        "sharedFrameTiles": 29,
+        "decodedRgbaBytes": 196608,
+        "atlas": {
+          "width": 512,
+          "height": 96,
+          "columns": 16,
+          "tilecount": 48
+        },
+        "tracks": [
+          {
+            "id": "water",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613"
+    },
+    {
+      "map": "solar-hall",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "solar-hall",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "solar-hall",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "solar-hall",
+      "effect": "water",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 2400,
+        "stepMs": 600,
+        "sharedFrameTiles": 29,
+        "decodedRgbaBytes": 196608,
+        "atlas": {
+          "width": 512,
+          "height": 96,
+          "columns": 16,
+          "tilecount": 48
+        },
+        "tracks": [
+          {
+            "id": "water",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613"
+    },
+    {
+      "map": "lunar-hall",
+      "effect": "plant",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 19,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "plant",
+            "visiblePhases": 4,
+            "positionCount": 3,
+            "poseCount": 1
+          }
+        ]
+      },
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a"
+    },
+    {
+      "map": "lunar-hall",
+      "effect": "steam",
+      "diagnostics": {
+        "phaseCount": 6,
+        "periodMs": 2400,
+        "stepMs": 400,
+        "sharedFrameTiles": 5,
+        "decodedRgbaBytes": 65536,
+        "atlas": {
+          "width": 512,
+          "height": 32,
+          "columns": 16,
+          "tilecount": 16
+        },
+        "tracks": [
+          {
+            "id": "steam",
+            "visiblePhases": 4,
+            "positionCount": 4,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418"
+    },
+    {
+      "map": "lunar-hall",
+      "effect": "server",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 3000,
+        "stepMs": 750,
+        "sharedFrameTiles": 15,
+        "decodedRgbaBytes": 131072,
+        "atlas": {
+          "width": 512,
+          "height": 64,
+          "columns": 16,
+          "tilecount": 32
+        },
+        "tracks": [
+          {
+            "id": "server",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8"
+    },
+    {
+      "map": "lunar-hall",
+      "effect": "water",
+      "diagnostics": {
+        "phaseCount": 4,
+        "periodMs": 2400,
+        "stepMs": 600,
+        "sharedFrameTiles": 29,
+        "decodedRgbaBytes": 196608,
+        "atlas": {
+          "width": 512,
+          "height": 96,
+          "columns": 16,
+          "tilecount": 48
+        },
+        "tracks": [
+          {
+            "id": "water",
+            "visiblePhases": 4,
+            "positionCount": 1,
+            "poseCount": 4
+          }
+        ]
+      },
+      "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613"
+    }
+  ]
+}

@@ -3,8 +3,12 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, dirname, relative, basename } from 'node:path';
 import type { Plugin } from 'vite';
 import { WORLD_CATALOG } from '../src/world/catalog';
-import type { TiledLayer, TiledMap } from './maps/types';
+import type { TiledLayer, TiledMap, WamFile } from './maps/types';
 import { isSponsorTileset, readSponsorTileset } from './maps/builder';
+import {assertCurrentMapRoster} from './maps/current-package';
+import {assertCurrentNativeMap} from './maps/current-native';
+import {readZodiacWokaPublication,readReadableZodiacWokaPublication} from './wokas/publication';
+import {loadTileCatalog} from './art/catalog';
 
 const digest = (bytes: string | Buffer) => createHash('sha256').update(bytes).digest('hex');
 
@@ -41,6 +45,79 @@ export function emitNativeOceanAudio(layer:TiledLayer,mapPath:string,emit:(path:
  const bytes=readFileSync('assets/audio/ocean-loop.mp3'),proof=JSON.parse(readFileSync('art/source/ocean-audio.json','utf8'));if(proof.encodedMp3?.sha256!==digest(bytes)||proof.encodedMp3?.bytes!==bytes.length)throw Error('Ocean audio source bytes changed');const file=`assets/audio/ocean-loop.${digest(bytes)}.mp3`;emit(file,bytes);entries[0].value='../'+file;
 }
 
+export interface NativeMapPackageSource {id:string;map:TiledMap;sourceWam:WamFile;}
+/** Generic native map/assets/credits emission. This is not the current-world
+ * release entry: worldRelease performs its unconditional complete preflight.
+ * Source objects and source files remain unchanged. */
+export function emitNativeMapAssets(sourceMaps:readonly NativeMapPackageSource[],runtimeFileName:string,wokaFiles:readonly{fileName:string;source:Buffer}[],publish:(asset:{type:'asset';fileName:string;source:string|Buffer})=>unknown):void {
+  const emitted = new Map<string, string | Buffer>();
+  const emit = (fileName: string, source: string | Buffer) => {
+    const existing = emitted.get(fileName);
+    if (existing !== undefined) return existing;
+    publish({ type: 'asset', fileName, source });
+    emitted.set(fileName, source);
+    return source;
+  };
+  const emitPng = (path: string, bytes: Buffer): string => {
+    if (!path.endsWith('.png')) throw new Error(`Unsupported release image: ${path}`);
+    const fileName = path.slice(0, -4) + `.${digest(bytes)}.png`;
+    emit(fileName, bytes);
+    return fileName;
+  };
+  for(const file of wokaFiles)emit(file.fileName,file.source);
+  for (const {id,map:inputMap,sourceWam:inputWam} of sourceMaps) {
+    const map=structuredClone(inputMap),sourceWam=structuredClone(inputWam);
+    const mapPath = `maps/${id}.tmj`;
+    const script = map.properties?.find(p => p.name === 'script');
+    if (!script) throw new Error(`Missing runtime property: ${id}`);
+    script.value = `../${runtimeFileName}`;
+    for (const tileset of map.tilesets) {
+      if (isSponsorTileset(tileset)) {
+        const sponsor = readSponsorTileset(tileset);
+        tileset.image = relative(dirname(mapPath), emitPng(sponsor.path, sponsor.bytes));
+        continue;
+      }
+      if (!tileset.image) throw new Error(`Missing embedded image: ${id}`);
+      const source = resolve(dirname(mapPath), tileset.image);
+      const path = relative(process.cwd(), source);
+      if (!path.startsWith('assets/tilesets/')) throw new Error(`Unexpected image outside source atlases: ${path}`);
+      tileset.image = relative(dirname(mapPath), emitPng(path, readFileSync(source)));
+    }
+    const checkLayers = (layers: TiledLayer[]): void => {
+      for (const layer of layers) {
+        if (layer.type === 'group') checkLayers(layer.layers);
+        emitNativeOceanAudio(layer,mapPath,emit);
+        if (layer.type === 'imagelayer') throw new Error(`Image layer unsupported by pinned WorkAdventure; use sponsor tile layers: ${layer.name}`);
+      }
+    };
+    checkLayers(map.layers);
+    const mapBytes = JSON.stringify(map);
+    emit(mapPath, mapBytes);
+    const wam = sourceWam;
+    // Version the final runtime-rewritten bytes so browser caches cannot reuse an older tilemap.
+    wam.mapUrl = `${id}.tmj?v=${digest(mapBytes)}`;
+    emit(`maps/${id}.wam`, JSON.stringify(wam));
+  }
+  const sources = JSON.parse(readFileSync('art/sources.json', 'utf8')) as Record<string, { attribution: string; url: string; license: string; licenseFile: string; changes: string }>;
+  const escape = (s: string) => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+  const creditLink = (path: string) => {
+    const bytes = emitted.get(`credits/${path}`);
+    if (bytes === undefined) throw new Error(`Missing credit dependency: ${path}`);
+    return escape(`${path}?v=${digest(bytes)}`);
+  };
+  const titles: Record<string,string> = {workadventure:'WorkAdventure starter tilesets','lpc-office':'LPC Revised: The Office','lpc-space':'LPC goes to space',original:'Original VarCamp art', 'lpc-ship':'LPC Ship', 'lpc-dock':'Reid Dock tileset', 'lpc-containers':'LPC Containers', 'lpc-water':'LPC Base Water','ocean-audio':'Ocean wave loop','zodiac-emblems':'VarCamp identity and zodiac emblems','plaza-original-garden':'Original VarCamp garden and grass','plaza-original-buildings':'Original VarCamp speaker pavilions','plaza-original-drones':'Original VarCamp drone sprites and motion','interior-reference':'Original VarCamp interior artwork'};
+  const fullCredits: Record<string,string> = {'lpc-office':'Credits.txt', 'lpc-ship':'CREDITS-ship.txt', 'lpc-containers':'CREDITS-container.txt', 'lpc-water':'AUTHORS'};
+  const sections = Object.entries(sources).map(([id, s]) => {
+    const directory=id==='ocean-audio'?'assets/audio':`assets/tilesets/${id}`;
+    for (const file of readdirSync(directory)) if (!/\.(png|mp3)$/.test(file)) emit(`credits/${id}/${file}`, readFileSync(`${directory}/${file}`));
+    return `<section><h2>${escape(titles[id])}</h2><p>${escape(s.attribution)}</p><p><a href="${escape(s.url)}">Source</a> · <a href="${creditLink(`${id}/${basename(s.licenseFile)}`)}">${escape(s.license)}</a> · <a href="${creditLink(`${id}/ATTRIBUTION.md`)}">Attribution record</a></p><p>${escape(s.changes)}</p>${fullCredits[id] ? `<p><a href="${creditLink(`${id}/${fullCredits[id]}`)}">Full upstream artist credits</a></p>` : ''}</section>`;
+  }).join('\n');
+  emit('credits/LICENSE.starter', readFileSync('docs/dependencies/LICENSE.starter'));
+  emit('credits/sources.json', readFileSync('art/sources.json'));
+  emit('credits/sponsors.json', readFileSync('art/sponsors.json'));
+  emit('credits/index.html', `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VarCamp world credits</title><style>body{max-width:55rem;margin:2rem auto;padding:0 1rem;font:18px/1.6 system-ui;color:#17243a}a{color:#164dc4}</style><h1>VarCamp world credits</h1><p>This release is a WorkAdventure map package. Its source sheets remain separate and byte-identical; the release does not repack, combine or rescale them. Map composition selects source tiles. Each work retains its own terms.</p>${sections}<h2>Demo sponsor marks</h2><p>The original fictional DEMO marks are CC0. Replacement artwork retains its recorded owner and terms. <a href="${creditLink('sponsors.json')}">Sponsor provenance and replacement instructions</a>.</p><h2>Code and editable sources</h2><p>Starter code: TheCodingMachine, MIT. <a href="${creditLink('LICENSE.starter')}">Retained notice</a>. Editable maps, semantic layouts and original artwork masters remain in the Git handover. The art is not collectively MIT.</p></html>`);
+}
+
 /** Faithful release: preserve separate licensed sheets, pixels and embedded credits. */
 export function worldRelease(): Plugin {
   return {
@@ -49,73 +126,18 @@ export function worldRelease(): Plugin {
       return { define: { 'import.meta.env.VARCAMP_UI_RELEASE': JSON.stringify(uiReleaseIdentity(resolve(config.root ?? '.'))) } };
     },
     generateBundle(_options, bundle) {
+      assertCurrentMapRoster(readdirSync('maps'));
+      const sourceMaps=Object.keys(WORLD_CATALOG).map(id=>{
+        const map:TiledMap=JSON.parse(readFileSync(`maps/${id}.tmj`,'utf8'));
+        const sourceWam=JSON.parse(readFileSync(`maps/${id}.wam`,'utf8'));
+        const layout=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));
+        assertCurrentNativeMap(id,map,layout,sourceWam,loadTileCatalog());
+        return{id,map,sourceWam};
+      });
       const runtime = Object.values(bundle).find(entry => entry.type === 'chunk' && entry.isEntry && entry.name === 'src-main');
       if (!runtime) throw new Error('Missing bundled world runtime');
-      const emitted = new Map<string, string | Buffer>();
-      const emit = (fileName: string, source: string | Buffer) => {
-        const existing = emitted.get(fileName);
-        if (existing !== undefined) return existing;
-        this.emitFile({ type: 'asset', fileName, source });
-        emitted.set(fileName, source);
-        return source;
-      };
-      const emitPng = (path: string, bytes: Buffer): string => {
-        if (!path.endsWith('.png')) throw new Error(`Unsupported release image: ${path}`);
-        const fileName = path.slice(0, -4) + `.${digest(bytes)}.png`;
-        emit(fileName, bytes);
-        return fileName;
-      };
-      for (const id of Object.keys(WORLD_CATALOG)) {
-        const mapPath = `maps/${id}.tmj`;
-        const map: TiledMap = JSON.parse(readFileSync(mapPath, 'utf8'));
-        const script = map.properties?.find(p => p.name === 'script');
-        if (!script) throw new Error(`Missing runtime property: ${id}`);
-        script.value = `../${runtime.fileName}`;
-        for (const tileset of map.tilesets) {
-          if (isSponsorTileset(tileset)) {
-            const sponsor = readSponsorTileset(tileset);
-            tileset.image = relative(dirname(mapPath), emitPng(sponsor.path, sponsor.bytes));
-            continue;
-          }
-          if (!tileset.image) throw new Error(`Missing embedded image: ${id}`);
-          const source = resolve(dirname(mapPath), tileset.image);
-          const path = relative(process.cwd(), source);
-          if (!path.startsWith('assets/tilesets/')) throw new Error(`Unexpected image outside source atlases: ${path}`);
-          tileset.image = relative(dirname(mapPath), emitPng(path, readFileSync(source)));
-        }
-        const checkLayers = (layers: TiledLayer[]): void => {
-          for (const layer of layers) {
-            if (layer.type === 'group') checkLayers(layer.layers);
-            emitNativeOceanAudio(layer,mapPath,emit);
-            if (layer.type === 'imagelayer') throw new Error(`Image layer unsupported by pinned WorkAdventure; use sponsor tile layers: ${layer.name}`);
-          }
-        };
-        checkLayers(map.layers);
-        const mapBytes = JSON.stringify(map);
-        emit(mapPath, mapBytes);
-        const wam = JSON.parse(readFileSync(`maps/${id}.wam`, 'utf8'));
-        // Version the final runtime-rewritten bytes so browser caches cannot reuse an older tilemap.
-        wam.mapUrl = `${id}.tmj?v=${digest(mapBytes)}`;
-        emit(`maps/${id}.wam`, JSON.stringify(wam));
-      }
-      const sources = JSON.parse(readFileSync('art/sources.json', 'utf8')) as Record<string, { attribution: string; url: string; license: string; licenseFile: string; changes: string }>;
-      const escape = (s: string) => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-      const creditLink = (path: string) => {
-        const bytes = emitted.get(`credits/${path}`);
-        if (bytes === undefined) throw new Error(`Missing credit dependency: ${path}`);
-        return escape(`${path}?v=${digest(bytes)}`);
-      };
-      const titles: Record<string,string> = {workadventure:'WorkAdventure starter tilesets','lpc-office':'LPC Revised: The Office','lpc-space':'LPC goes to space',original:'Original VarCamp art', 'lpc-ship':'LPC Ship', 'lpc-dock':'Reid Dock tileset', 'lpc-containers':'LPC Containers', 'lpc-water':'LPC Base Water','ocean-audio':'Ocean wave loop'};
-      const fullCredits: Record<string,string> = {'lpc-office':'Credits.txt', 'lpc-ship':'CREDITS-ship.txt', 'lpc-containers':'CREDITS-container.txt', 'lpc-water':'AUTHORS'};
-      const sections = Object.entries(sources).map(([id, s]) => {
-        const directory=id==='ocean-audio'?'assets/audio':`assets/tilesets/${id}`;
-        for (const file of readdirSync(directory)) if (!/\.(png|mp3)$/.test(file)) emit(`credits/${id}/${file}`, readFileSync(`${directory}/${file}`));
-        return `<section><h2>${escape(titles[id])}</h2><p>${escape(s.attribution)}</p><p><a href="${escape(s.url)}">Source</a> · <a href="${creditLink(`${id}/${basename(s.licenseFile)}`)}">${escape(s.license)}</a> · <a href="${creditLink(`${id}/ATTRIBUTION.md`)}">Attribution record</a></p><p>${escape(s.changes)}</p>${fullCredits[id] ? `<p><a href="${creditLink(`${id}/${fullCredits[id]}`)}">Full upstream artist credits</a></p>` : ''}</section>`;
-      }).join('\n');
-      emit('credits/LICENSE.starter', readFileSync('docs/dependencies/LICENSE.starter'));
-      emit('credits/sources.json', readFileSync('art/sources.json'));
-      emit('credits/sponsors.json', readFileSync('art/sponsors.json'));
-      emit('credits/index.html', `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>VarCamp world credits</title><style>body{max-width:55rem;margin:2rem auto;padding:0 1rem;font:18px/1.6 system-ui;color:#17243a}a{color:#164dc4}</style><h1>VarCamp world credits</h1><p>This release is a WorkAdventure map package. Its source sheets remain separate and byte-identical; the release does not repack, combine or rescale them. Map composition selects source tiles. Each work retains its own terms.</p>${sections}<h2>Demo sponsor marks</h2><p>The original fictional DEMO marks are CC0. Replacement artwork retains its recorded owner and terms. <a href="${creditLink('sponsors.json')}">Sponsor provenance and replacement instructions</a>.</p><h2>Code and editable sources</h2><p>Starter code: TheCodingMachine, MIT. <a href="${creditLink('LICENSE.starter')}">Retained notice</a>. Editable maps, semantic layouts and original SVG masters remain in the Git handover. The art is not collectively MIT.</p></html>`);
+      const wokaFiles=[...readZodiacWokaPublication(),...readReadableZodiacWokaPublication()];
+      emitNativeMapAssets(sourceMaps,runtime.fileName,wokaFiles,asset=>this.emitFile(asset));
     },
   };
 }

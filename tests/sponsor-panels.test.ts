@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
@@ -8,9 +8,9 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { WORLD_CATALOG } from '../src/world/catalog';
 import { buildMap } from '../tools/maps/builder';
 import { renderMap } from '../tools/maps/render';
-import type { MapLayout, TiledMap } from '../tools/maps/types';
+import type { MapLayout, TiledMap, TiledLayer } from '../tools/maps/types';
 import type { TileCatalog } from '../tools/art/catalog';
-import { worldRelease } from '../tools/release';
+import {syntheticReleasePlugin} from './helpers/synthetic-release-plugin';
 
 const project = process.cwd();
 const fingerprint = (path: string, bytes: Buffer = readFileSync(path)) => path.replace(/\.png$/, `.${createHash('sha256').update(bytes).digest('hex')}.png`);
@@ -26,7 +26,7 @@ async function png(path: string, width = 192, height = 64, color = '#00d58f'): P
 let fixture: string;
 beforeEach(async () => {
   fixture = mkdtempSync(resolve(tmpdir(), 'varcamp-sponsor-'));
-  for (const path of ['art', 'assets/sponsors', 'assets/tilesets/original', 'maps', 'src', 'docs/dependencies']) mkdirSync(resolve(fixture, path), { recursive: true });
+  for (const path of ['art', 'assets/sponsors', 'assets/tilesets/original', 'maps', 'world/layouts', 'src', 'docs/dependencies']) mkdirSync(resolve(fixture, path), { recursive: true });
   writeFileSync(resolve(fixture, 'art/sources.json'), JSON.stringify({ original: { attribution: 'Fixture author', license: 'CC0', licenseFile: 'assets/tilesets/original/LICENSE.txt', changes: 'Fixture', url: 'https://example.com' } }));
   writeFileSync(resolve(fixture, 'assets/tilesets/original/LICENSE.txt'), 'CC0 fixture');
   writeFileSync(resolve(fixture, 'assets/tilesets/original/ATTRIBUTION.md'), 'Fixture author');
@@ -36,16 +36,22 @@ beforeEach(async () => {
   await png(resolve(fixture, logo));
   await png(resolve(fixture, tiles['floor-charcoal'].sheet), 64, 32, '#102030');
   symlinkSync(resolve(project, '.tools'), resolve(fixture, '.tools'));
+  mkdirSync(resolve(fixture,'public/wokas'),{recursive:true});
+  cpSync(resolve(project,'public/wokas/varcamp-zodiac-v1'),resolve(fixture,'public/wokas/varcamp-zodiac-v1'),{recursive:true});
   process.chdir(fixture);
 });
 afterEach(() => { process.chdir(project); rmSync(fixture, { recursive: true, force: true }); });
 
 async function release(map: TiledMap): Promise<string> {
-  for (const id of Object.keys(WORLD_CATALOG)) {
-    writeFileSync(`maps/${id}.tmj`, JSON.stringify(map));
+  for (const [id,definition] of Object.entries(WORLD_CATALOG)) {
+    const source=structuredClone(map);source.width=definition.width;source.height=definition.height;
+    const identity=source.properties?.find(p=>p.name==='worldMapId');if(!identity)throw Error('Synthetic sponsor map must retain its source identity');identity.value=id;
+    const resize=(layers:TiledLayer[]):void=>{for(const layer of layers){if(layer.type==='group')resize(layer.layers);else if(layer.type==='tilelayer'){const before=layer.data,width=layer.width,height=layer.height;layer.width=definition.width;layer.height=definition.height;layer.data=Array.from({length:definition.width*definition.height},(_,i)=>{const x=i%definition.width,y=Math.floor(i/definition.width);return x<width&&y<height?before[y*width+x]:0;});}}};resize(source.layers);
+    writeFileSync(`world/layouts/${id}.json`,JSON.stringify({id,width:definition.width,height:definition.height,placements:[],entries:[],exits:[],areas:[],inspectionZones:[]}));
+    writeFileSync(`maps/${id}.tmj`, JSON.stringify(source));
     writeFileSync(`maps/${id}.wam`, JSON.stringify({ version: '2.1.0', mapUrl: `${id}.tmj`, entities: {}, areas: [], entityCollections: [] }));
   }
-  await build({ configFile: false, publicDir: false, logLevel: 'silent', plugins: [worldRelease()], build: { outDir: 'release', rollupOptions: { input: { 'src-main': resolve('src/main.ts') } } } });
+  await build({ configFile: false, publicDir: false, logLevel: 'silent', plugins: [syntheticReleasePlugin()], build: { outDir: 'release', rollupOptions: { input: { 'src-main': resolve('src/main.ts') } } } });
   return resolve('release');
 }
 

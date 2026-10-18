@@ -1,0 +1,739 @@
+{
+  "version": 2,
+  "effect": {
+    "name": "world-ambient-orbit-playground-leaves-2",
+    "anchor": "play-garden-west-flowers",
+    "kind": "leaves",
+    "clip": {
+      "x": 4,
+      "y": 19,
+      "width": 2,
+      "height": 2
+    },
+    "carrierCells": 4,
+    "level": "belowAvatar",
+    "clock": {
+      "stepMs": 250,
+      "periodMs": 12000
+    },
+    "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+  },
+  "componentNames": [
+    "world-ambient-orbit-playground-leaves-2"
+  ],
+  "partition": "whole",
+  "depthReceipt": {
+    "policy": "opaque-owner-upper-v1",
+    "owner": null,
+    "sheetSha256": null,
+    "opaqueUpperSupport": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+  },
+  "overlay": {
+    "name": "world-ambient-orbit-playground-leaves-2",
+    "image": "assets/tilesets/original/world-ambient-orbit-playground-leaves-2.png",
+    "sourceId": "original",
+    "level": "belowAvatar",
+    "x": 4,
+    "y": 19,
+    "width": 2,
+    "height": 2,
+    "carrierTileIds": [
+      71,
+      72,
+      73,
+      74
+    ],
+    "animations": [
+      {
+        "id": 71,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 250
+          },
+          {
+            "tileid": 2,
+            "duration": 250
+          },
+          {
+            "tileid": 3,
+            "duration": 250
+          },
+          {
+            "tileid": 4,
+            "duration": 250
+          },
+          {
+            "tileid": 5,
+            "duration": 250
+          },
+          {
+            "tileid": 6,
+            "duration": 250
+          },
+          {
+            "tileid": 7,
+            "duration": 250
+          },
+          {
+            "tileid": 8,
+            "duration": 250
+          },
+          {
+            "tileid": 9,
+            "duration": 250
+          },
+          {
+            "tileid": 10,
+            "duration": 250
+          },
+          {
+            "tileid": 11,
+            "duration": 500
+          },
+          {
+            "tileid": 12,
+            "duration": 250
+          },
+          {
+            "tileid": 13,
+            "duration": 250
+          },
+          {
+            "tileid": 14,
+            "duration": 250
+          },
+          {
+            "tileid": 15,
+            "duration": 250
+          },
+          {
+            "tileid": 16,
+            "duration": 250
+          },
+          {
+            "tileid": 17,
+            "duration": 250
+          },
+          {
+            "tileid": 18,
+            "duration": 250
+          },
+          {
+            "tileid": 19,
+            "duration": 250
+          },
+          {
+            "tileid": 20,
+            "duration": 250
+          },
+          {
+            "tileid": 22,
+            "duration": 250
+          },
+          {
+            "tileid": 26,
+            "duration": 250
+          },
+          {
+            "tileid": 30,
+            "duration": 250
+          },
+          {
+            "tileid": 34,
+            "duration": 250
+          },
+          {
+            "tileid": 38,
+            "duration": 250
+          },
+          {
+            "tileid": 42,
+            "duration": 250
+          },
+          {
+            "tileid": 46,
+            "duration": 250
+          },
+          {
+            "tileid": 0,
+            "duration": 5000
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 5000
+          },
+          {
+            "tileid": 21,
+            "duration": 250
+          },
+          {
+            "tileid": 23,
+            "duration": 250
+          },
+          {
+            "tileid": 27,
+            "duration": 250
+          },
+          {
+            "tileid": 31,
+            "duration": 250
+          },
+          {
+            "tileid": 35,
+            "duration": 250
+          },
+          {
+            "tileid": 39,
+            "duration": 250
+          },
+          {
+            "tileid": 43,
+            "duration": 250
+          },
+          {
+            "tileid": 47,
+            "duration": 250
+          },
+          {
+            "tileid": 50,
+            "duration": 250
+          },
+          {
+            "tileid": 52,
+            "duration": 250
+          },
+          {
+            "tileid": 0,
+            "duration": 4500
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 5250
+          },
+          {
+            "tileid": 24,
+            "duration": 250
+          },
+          {
+            "tileid": 28,
+            "duration": 250
+          },
+          {
+            "tileid": 32,
+            "duration": 250
+          },
+          {
+            "tileid": 36,
+            "duration": 250
+          },
+          {
+            "tileid": 40,
+            "duration": 250
+          },
+          {
+            "tileid": 44,
+            "duration": 250
+          },
+          {
+            "tileid": 48,
+            "duration": 250
+          },
+          {
+            "tileid": 0,
+            "duration": 5000
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 5250
+          },
+          {
+            "tileid": 25,
+            "duration": 250
+          },
+          {
+            "tileid": 29,
+            "duration": 250
+          },
+          {
+            "tileid": 33,
+            "duration": 250
+          },
+          {
+            "tileid": 37,
+            "duration": 250
+          },
+          {
+            "tileid": 41,
+            "duration": 250
+          },
+          {
+            "tileid": 45,
+            "duration": 250
+          },
+          {
+            "tileid": 49,
+            "duration": 250
+          },
+          {
+            "tileid": 51,
+            "duration": 250
+          },
+          {
+            "tileid": 53,
+            "duration": 250
+          },
+          {
+            "tileid": 54,
+            "duration": 250
+          },
+          {
+            "tileid": 55,
+            "duration": 250
+          },
+          {
+            "tileid": 56,
+            "duration": 250
+          },
+          {
+            "tileid": 57,
+            "duration": 250
+          },
+          {
+            "tileid": 58,
+            "duration": 250
+          },
+          {
+            "tileid": 59,
+            "duration": 250
+          },
+          {
+            "tileid": 60,
+            "duration": 500
+          },
+          {
+            "tileid": 61,
+            "duration": 250
+          },
+          {
+            "tileid": 62,
+            "duration": 250
+          },
+          {
+            "tileid": 63,
+            "duration": 250
+          },
+          {
+            "tileid": 64,
+            "duration": 250
+          },
+          {
+            "tileid": 65,
+            "duration": 250
+          },
+          {
+            "tileid": 66,
+            "duration": 250
+          },
+          {
+            "tileid": 67,
+            "duration": 250
+          },
+          {
+            "tileid": 68,
+            "duration": 250
+          },
+          {
+            "tileid": 69,
+            "duration": 250
+          },
+          {
+            "tileid": 70,
+            "duration": 250
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/world-ambient-orbit-playground-leaves-2.json",
+      "atlasSha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "inputs": [
+        {
+          "path": "art/source/world-ambient.json",
+          "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+        },
+        {
+          "path": "art/source/world-ambient-assets.json",
+          "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+        },
+        {
+          "path": "art/source/world-ambient-generation.json",
+          "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+        },
+        {
+          "path": "art/source/world-ambient-plants.json",
+          "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+        },
+        {
+          "path": "art/source/world-ambient-layer-ownership.json",
+          "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+        },
+        {
+          "path": "art/source/world-ambient-leaves-poses.png",
+          "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec"
+        },
+        {
+          "path": "tools/maps/animated-decoration-contract.json",
+          "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+        },
+        {
+          "path": "tools/art/world-ambient.ts",
+          "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+        },
+        {
+          "path": "tools/art/world-ambient-assets.ts",
+          "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+        },
+        {
+          "path": "tools/maps/animated-decoration.ts",
+          "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+        },
+        {
+          "path": "tools/maps/world-ambient.ts",
+          "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+        },
+        {
+          "path": "tools/maps/world-ambient-depth.ts",
+          "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+        },
+        {
+          "path": "tools/maps/world-ambient-ownership.ts",
+          "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+        },
+        {
+          "path": "tools/maps/native-projection.ts",
+          "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+        },
+        {
+          "path": "tools/maps/native-ownership-context.ts",
+          "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+        },
+        {
+          "path": "art/source/native-ownership-context.json",
+          "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "rawPoseStrip": {
+    "path": "art/source/world-ambient-orbit-playground-leaves-2-poses.png",
+    "width": 8,
+    "height": 12,
+    "frames": 4,
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec"
+  },
+  "poseStrip": {
+    "path": "art/source/world-ambient-orbit-playground-leaves-2-poses.png",
+    "width": 8,
+    "height": 12,
+    "frames": 4,
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec"
+  },
+  "tracks": [
+    {
+      "id": "world-ambient-orbit-playground-leaves-2-actor",
+      "samples": [
+        {
+          "x": 8,
+          "y": 8,
+          "pose": 0
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "pose": 0
+        },
+        {
+          "x": 10,
+          "y": 10,
+          "pose": 0
+        },
+        {
+          "x": 11,
+          "y": 10,
+          "pose": 1
+        },
+        {
+          "x": 11,
+          "y": 11,
+          "pose": 1
+        },
+        {
+          "x": 12,
+          "y": 12,
+          "pose": 1
+        },
+        {
+          "x": 13,
+          "y": 13,
+          "pose": 2
+        },
+        {
+          "x": 14,
+          "y": 13,
+          "pose": 2
+        },
+        {
+          "x": 15,
+          "y": 14,
+          "pose": 2
+        },
+        {
+          "x": 16,
+          "y": 15,
+          "pose": 3
+        },
+        {
+          "x": 17,
+          "y": 16,
+          "pose": 3
+        },
+        {
+          "x": 17,
+          "y": 16,
+          "pose": 3
+        },
+        {
+          "x": 18,
+          "y": 17,
+          "pose": 0
+        },
+        {
+          "x": 19,
+          "y": 18,
+          "pose": 0
+        },
+        {
+          "x": 20,
+          "y": 19,
+          "pose": 0
+        },
+        {
+          "x": 21,
+          "y": 19,
+          "pose": 1
+        },
+        {
+          "x": 22,
+          "y": 20,
+          "pose": 1
+        },
+        {
+          "x": 22,
+          "y": 21,
+          "pose": 1
+        },
+        {
+          "x": 23,
+          "y": 22,
+          "pose": 2
+        },
+        {
+          "x": 24,
+          "y": 23,
+          "pose": 2
+        },
+        {
+          "x": 25,
+          "y": 23,
+          "pose": 2
+        },
+        {
+          "x": 26,
+          "y": 24,
+          "pose": 3
+        },
+        {
+          "x": 27,
+          "y": 25,
+          "pose": 3
+        },
+        {
+          "x": 28,
+          "y": 26,
+          "pose": 3
+        },
+        {
+          "x": 28,
+          "y": 26,
+          "pose": 0
+        },
+        {
+          "x": 29,
+          "y": 27,
+          "pose": 0
+        },
+        {
+          "x": 30,
+          "y": 28,
+          "pose": 0
+        },
+        {
+          "x": 31,
+          "y": 29,
+          "pose": 1
+        },
+        {
+          "x": 32,
+          "y": 29,
+          "pose": 1
+        },
+        {
+          "x": 33,
+          "y": 30,
+          "pose": 1
+        },
+        {
+          "x": 34,
+          "y": 31,
+          "pose": 2
+        },
+        {
+          "x": 34,
+          "y": 32,
+          "pose": 2
+        },
+        {
+          "x": 35,
+          "y": 33,
+          "pose": 2
+        },
+        {
+          "x": 36,
+          "y": 33,
+          "pose": 3
+        },
+        {
+          "x": 37,
+          "y": 34,
+          "pose": 3
+        },
+        {
+          "x": 38,
+          "y": 35,
+          "pose": 3
+        },
+        {
+          "x": 39,
+          "y": 36,
+          "pose": 0
+        },
+        {
+          "x": 39,
+          "y": 36,
+          "pose": 0
+        },
+        {
+          "x": 40,
+          "y": 37,
+          "pose": 0
+        },
+        {
+          "x": 41,
+          "y": 38,
+          "pose": 1
+        },
+        {
+          "x": 42,
+          "y": 39,
+          "pose": 1
+        },
+        {
+          "x": 43,
+          "y": 39,
+          "pose": 1
+        },
+        {
+          "x": 44,
+          "y": 40,
+          "pose": 2
+        },
+        {
+          "x": 45,
+          "y": 41,
+          "pose": 2
+        },
+        {
+          "x": 45,
+          "y": 42,
+          "pose": 2
+        },
+        {
+          "x": 46,
+          "y": 42,
+          "pose": 3
+        },
+        {
+          "x": 47,
+          "y": 43,
+          "pose": 3
+        },
+        {
+          "x": 48,
+          "y": 44,
+          "pose": 3
+        }
+      ]
+    }
+  ],
+  "maxPaintedPixels": 60,
+  "rawMaxPaintedPixels": 60,
+  "diagnostics": {
+    "phaseCount": 48,
+    "periodMs": 12000,
+    "stepMs": 250,
+    "sharedFrameTiles": 71,
+    "decodedRgbaBytes": 327680,
+    "atlas": {
+      "width": 512,
+      "height": 160,
+      "columns": 16,
+      "tilecount": 80
+    },
+    "tracks": [
+      {
+        "id": "world-ambient-orbit-playground-leaves-2-actor",
+        "visiblePhases": 48,
+        "positionCount": 45,
+        "poseCount": 4
+      }
+    ]
+  }
+}

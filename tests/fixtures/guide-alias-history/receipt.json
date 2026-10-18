@@ -1,0 +1,99 @@
+{
+  "schema": "varcamp-observed-runtime-alias-history-v1",
+  "nativeFile": "floor-garden-before-canonical.tmj",
+  "nativeBytes": 3722692,
+  "nativeSha256": "969e46ce861f5ce6d5a279f5b266717447506d1da8609cbc576a2bdabdd0bf98",
+  "rawAliasedGeometrySha256": "792a943881b117bad1246c038020f4315bbe7d29e2ee76bf311bd38ee9cb140b",
+  "normalizedNativeGeometrySha256": "f33ae42c82c3c50bc668a074e36533e4544ed0ef150d73032bc5ad61f817dc0f",
+  "objectLayer": {
+    "id": 56,
+    "name": "inspection-zones",
+    "objects": [
+      {
+        "id": 2,
+        "type": "room"
+      },
+      {
+        "id": 3,
+        "type": "room"
+      },
+      {
+        "id": 4,
+        "type": "room"
+      },
+      {
+        "id": 5,
+        "type": "room"
+      },
+      {
+        "id": 6,
+        "type": "room"
+      },
+      {
+        "id": 7,
+        "type": "room"
+      },
+      {
+        "id": 8,
+        "type": "room"
+      },
+      {
+        "id": 9,
+        "type": "room"
+      },
+      {
+        "id": 10,
+        "type": "room"
+      },
+      {
+        "id": 11,
+        "type": "room"
+      },
+      {
+        "id": 12,
+        "type": "room"
+      },
+      {
+        "id": 13,
+        "type": "room"
+      },
+      {
+        "id": 14,
+        "type": "landmark"
+      },
+      {
+        "id": 15,
+        "type": "landmark"
+      },
+      {
+        "id": 16,
+        "type": "landmark"
+      },
+      {
+        "id": 17,
+        "type": "landmark"
+      },
+      {
+        "id": 18,
+        "type": "landmark"
+      },
+      {
+        "id": 19,
+        "type": "landmark"
+      },
+      {
+        "id": 20,
+        "type": "landmark"
+      },
+      {
+        "id": 21,
+        "type": "landmark"
+      },
+      {
+        "id": 22,
+        "type": "landmark"
+      }
+    ]
+  },
+  "provenance": "Exact approved floor-garden native before shared canonical layer-order migration. Copied from retained immutable source, never reconstructed from current native."
+}

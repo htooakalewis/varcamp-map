@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "kind": "seal",
+  "poseGroup": "seal",
+  "overlay": {
+    "name": "coast-life-shore-seal",
+    "image": "assets/tilesets/original/coast-life-shore-seal.png",
+    "sourceId": "original",
+    "level": "belowAvatar",
+    "x": 33,
+    "y": 37,
+    "width": 2,
+    "height": 2,
+    "carrierTileIds": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "animations": [
+      {
+        "id": 25,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 1600
+          },
+          {
+            "tileid": 5,
+            "duration": 1600
+          },
+          {
+            "tileid": 9,
+            "duration": 1600
+          },
+          {
+            "tileid": 13,
+            "duration": 1600
+          },
+          {
+            "tileid": 17,
+            "duration": 1600
+          },
+          {
+            "tileid": 21,
+            "duration": 1600
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "frames": [
+          {
+            "tileid": 2,
+            "duration": 1600
+          },
+          {
+            "tileid": 6,
+            "duration": 1600
+          },
+          {
+            "tileid": 10,
+            "duration": 1600
+          },
+          {
+            "tileid": 14,
+            "duration": 1600
+          },
+          {
+            "tileid": 18,
+            "duration": 1600
+          },
+          {
+            "tileid": 22,
+            "duration": 1600
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "frames": [
+          {
+            "tileid": 3,
+            "duration": 1600
+          },
+          {
+            "tileid": 7,
+            "duration": 1600
+          },
+          {
+            "tileid": 11,
+            "duration": 1600
+          },
+          {
+            "tileid": 15,
+            "duration": 1600
+          },
+          {
+            "tileid": 19,
+            "duration": 1600
+          },
+          {
+            "tileid": 23,
+            "duration": 1600
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "frames": [
+          {
+            "tileid": 4,
+            "duration": 1600
+          },
+          {
+            "tileid": 8,
+            "duration": 1600
+          },
+          {
+            "tileid": 12,
+            "duration": 1600
+          },
+          {
+            "tileid": 16,
+            "duration": 1600
+          },
+          {
+            "tileid": 20,
+            "duration": 1600
+          },
+          {
+            "tileid": 24,
+            "duration": 1600
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/coast-life-shore-seal.json",
+      "atlasSha256": "edf6b3cac7fd9f389a406a95e3839b3925a40a5e26ce35280923a884bf8c2a48",
+      "inputs": [
+        {
+          "path": "art/source/coast-life-tracks.json",
+          "sha256": "f14d2a1703e20f072da35c9b80aec50df830007b6661d4d538045d65f08f150d"
+        },
+        {
+          "path": "art/source/coast-life-seal-poses.png",
+          "sha256": "eaa359f2cced4234c1aa817228e5157f510c34eb44d159aa4556286dc109a97a"
+        },
+        {
+          "path": "art/source/coast-life-assets.json",
+          "sha256": "c5cb02654fb2dd80862e67ea0dfe082027562b53f6415776e09a6657295d65c4"
+        },
+        {
+          "path": "art/source/coast-life-generation.json",
+          "sha256": "95f98310ad0a58fa85eb1047cb00f1b296ff1ef640f5df2e358206155dff5942"
+        },
+        {
+          "path": "tools/art/coast-life.ts",
+          "sha256": "86bb817ebc64644289cb701f03b8dc61db0344c70ec2bfc9d4829811bd03fd93"
+        },
+        {
+          "path": "tools/maps/coast-life-habitat.ts",
+          "sha256": "0a5ca4b6e947e674751f4bb64d066e823fd21f97797c2e80e019e583d8b2499d"
+        },
+        {
+          "path": "tools/maps/coast-aerial.ts",
+          "sha256": "02e961133c3eb28c8922c62a417f0d15134638fe4401c93c95a8fd87e3b2dc48"
+        },
+        {
+          "path": "tools/maps/animated-decoration.ts",
+          "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+        },
+        {
+          "path": "tools/maps/animated-decoration-contract.json",
+          "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 24,
+    "periodMs": 9600,
+    "stepMs": 400,
+    "sharedFrameTiles": 25,
+    "decodedRgbaBytes": 131072,
+    "atlas": {
+      "width": 512,
+      "height": 64,
+      "columns": 16,
+      "tilecount": 32
+    },
+    "tracks": [
+      {
+        "id": "coast-life-shore-seal-rest",
+        "visiblePhases": 24,
+        "positionCount": 1,
+        "poseCount": 6
+      }
+    ]
+  }
+}

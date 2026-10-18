@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/garden-generated-master.png",
+    "sha256": "d51c74c5a0939719527854debad34a23ee667bb0990f8c58a8344d10e101ffb2"
+  },
+  "operation": "alpha-tight subject bounds; aspect-preserving nearest-neighbor fit; original RGBA retained",
+  "crops": [
+    {
+      "id": "tree-round",
+      "sourceCell": 0,
+      "crop": {
+        "left": 33,
+        "top": 45,
+        "width": 290,
+        "height": 337
+      },
+      "target": {
+        "x": 2,
+        "y": 24,
+        "width": 60,
+        "height": 70
+      },
+      "footprint": {
+        "x": 0,
+        "y": 0,
+        "width": 2,
+        "height": 3
+      }
+    },
+    {
+      "id": "tree-birch",
+      "sourceCell": 1,
+      "crop": {
+        "left": 359,
+        "top": 35,
+        "width": 252,
+        "height": 347
+      },
+      "target": {
+        "x": 66,
+        "y": 11,
+        "width": 60,
+        "height": 83
+      },
+      "footprint": {
+        "x": 2,
+        "y": 0,
+        "width": 2,
+        "height": 3
+      }
+    },
+    {
+      "id": "tree-flowering",
+      "sourceCell": 2,
+      "crop": {
+        "left": 645,
+        "top": 47,
+        "width": 281,
+        "height": 335
+      },
+      "target": {
+        "x": 130,
+        "y": 22,
+        "width": 60,
+        "height": 72
+      },
+      "footprint": {
+        "x": 4,
+        "y": 0,
+        "width": 2,
+        "height": 3
+      }
+    },
+    {
+      "id": "tree-evergreen",
+      "sourceCell": 3,
+      "crop": {
+        "left": 950,
+        "top": 42,
+        "width": 257,
+        "height": 343
+      },
+      "target": {
+        "x": 194,
+        "y": 14,
+        "width": 60,
+        "height": 80
+      },
+      "footprint": {
+        "x": 6,
+        "y": 0,
+        "width": 2,
+        "height": 3
+      }
+    },
+    {
+      "id": "shrub",
+      "sourceCell": 4,
+      "crop": {
+        "left": 32,
+        "top": 458,
+        "width": 277,
+        "height": 215
+      },
+      "target": {
+        "x": 14,
+        "y": 98,
+        "width": 36,
+        "height": 28
+      },
+      "footprint": {
+        "x": 0,
+        "y": 3,
+        "width": 2,
+        "height": 1
+      }
+    },
+    {
+      "id": "blueberry",
+      "sourceCell": 5,
+      "crop": {
+        "left": 349,
+        "top": 458,
+        "width": 255,
+        "height": 216
+      },
+      "target": {
+        "x": 79,
+        "y": 98,
+        "width": 33,
+        "height": 28
+      },
+      "footprint": {
+        "x": 2,
+        "y": 3,
+        "width": 2,
+        "height": 1
+      }
+    },
+    {
+      "id": "lavender",
+      "sourceCell": 6,
+      "crop": {
+        "left": 645,
+        "top": 443,
+        "width": 267,
+        "height": 227
+      },
+      "target": {
+        "x": 143,
+        "y": 98,
+        "width": 33,
+        "height": 28
+      },
+      "footprint": {
+        "x": 4,
+        "y": 3,
+        "width": 2,
+        "height": 1
+      }
+    },
+    {
+      "id": "fern",
+      "sourceCell": 7,
+      "crop": {
+        "left": 934,
+        "top": 443,
+        "width": 294,
+        "height": 241
+      },
+      "target": {
+        "x": 194,
+        "y": 103,
+        "width": 28,
+        "height": 23
+      },
+      "footprint": {
+        "x": 6,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "hosta",
+      "sourceCell": 8,
+      "crop": {
+        "left": 41,
+        "top": 746,
+        "width": 263,
+        "height": 197
+      },
+      "target": {
+        "x": 226,
+        "y": 105,
+        "width": 28,
+        "height": 21
+      },
+      "footprint": {
+        "x": 7,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "flower-bed",
+      "sourceCell": 9,
+      "crop": {
+        "left": 344,
+        "top": 735,
+        "width": 268,
+        "height": 207
+      },
+      "target": {
+        "x": 2,
+        "y": 144,
+        "width": 60,
+        "height": 46
+      },
+      "footprint": {
+        "x": 0,
+        "y": 4,
+        "width": 2,
+        "height": 2
+      }
+    },
+    {
+      "id": "tulips",
+      "sourceCell": 10,
+      "crop": {
+        "left": 650,
+        "top": 729,
+        "width": 265,
+        "height": 214
+      },
+      "target": {
+        "x": 66,
+        "y": 142,
+        "width": 60,
+        "height": 48
+      },
+      "footprint": {
+        "x": 2,
+        "y": 4,
+        "width": 2,
+        "height": 2
+      }
+    },
+    {
+      "id": "wildflowers",
+      "sourceCell": 11,
+      "crop": {
+        "left": 957,
+        "top": 737,
+        "width": 263,
+        "height": 216
+      },
+      "target": {
+        "x": 130,
+        "y": 141,
+        "width": 60,
+        "height": 49
+      },
+      "footprint": {
+        "x": 4,
+        "y": 4,
+        "width": 2,
+        "height": 2
+      }
+    },
+    {
+      "id": "grass-tuft",
+      "sourceCell": 12,
+      "crop": {
+        "left": 40,
+        "top": 990,
+        "width": 268,
+        "height": 203
+      },
+      "target": {
+        "x": 194,
+        "y": 137,
+        "width": 28,
+        "height": 21
+      },
+      "footprint": {
+        "x": 6,
+        "y": 4,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "clover",
+      "sourceCell": 13,
+      "crop": {
+        "left": 344,
+        "top": 1013,
+        "width": 267,
+        "height": 180
+      },
+      "target": {
+        "x": 226,
+        "y": 139,
+        "width": 28,
+        "height": 19
+      },
+      "footprint": {
+        "x": 7,
+        "y": 4,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "moss-stones",
+      "sourceCell": 14,
+      "crop": {
+        "left": 648,
+        "top": 1020,
+        "width": 252,
+        "height": 173
+      },
+      "target": {
+        "x": 194,
+        "y": 171,
+        "width": 28,
+        "height": 19
+      },
+      "footprint": {
+        "x": 6,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "mushrooms",
+      "sourceCell": 15,
+      "crop": {
+        "left": 973,
+        "top": 1006,
+        "width": 212,
+        "height": 178
+      },
+      "target": {
+        "x": 226,
+        "y": 166,
+        "width": 28,
+        "height": 24
+      },
+      "footprint": {
+        "x": 7,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": "plant-tree",
+      "sourceCell": 3,
+      "crop": {
+        "left": 950,
+        "top": 42,
+        "width": 257,
+        "height": 343
+      },
+      "target": {
+        "x": 2,
+        "y": 217,
+        "width": 28,
+        "height": 37
+      },
+      "footprint": {
+        "x": 0,
+        "y": 6,
+        "width": 1,
+        "height": 2
+      }
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/plaza-garden.png",
+    "width": 256,
+    "height": 256,
+    "sha256": "d596b52d98bd34085f5a7655b5156430f22e12d2d29a7d06ad4d129d0f834e6f"
+  }
+}

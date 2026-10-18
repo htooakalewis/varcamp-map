@@ -1,0 +1,288 @@
+{
+  "scope": "ORIGINAL_PNG_INTERIOR_NATIVE_MOTION",
+  "overlay": {
+    "name": "interior-ambient-water",
+    "image": "assets/tilesets/original/interior-motion-water.png",
+    "sourceId": "interior-reference",
+    "level": "belowAvatar",
+    "x": 8,
+    "y": 36,
+    "width": 4,
+    "height": 3,
+    "carrierTileIds": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "animations": [
+      {
+        "id": 29,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 600
+          },
+          {
+            "tileid": 13,
+            "duration": 600
+          },
+          {
+            "tileid": 21,
+            "duration": 600
+          },
+          {
+            "tileid": 13,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "frames": [
+          {
+            "tileid": 2,
+            "duration": 600
+          },
+          {
+            "tileid": 14,
+            "duration": 600
+          },
+          {
+            "tileid": 22,
+            "duration": 600
+          },
+          {
+            "tileid": 14,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "frames": [
+          {
+            "tileid": 3,
+            "duration": 600
+          },
+          {
+            "tileid": 15,
+            "duration": 600
+          },
+          {
+            "tileid": 23,
+            "duration": 600
+          },
+          {
+            "tileid": 15,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "frames": [
+          {
+            "tileid": 4,
+            "duration": 600
+          },
+          {
+            "tileid": 16,
+            "duration": 600
+          },
+          {
+            "tileid": 24,
+            "duration": 600
+          },
+          {
+            "tileid": 16,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "frames": [
+          {
+            "tileid": 5,
+            "duration": 600
+          },
+          {
+            "tileid": 17,
+            "duration": 600
+          },
+          {
+            "tileid": 25,
+            "duration": 600
+          },
+          {
+            "tileid": 17,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "frames": [
+          {
+            "tileid": 6,
+            "duration": 600
+          },
+          {
+            "tileid": 18,
+            "duration": 600
+          },
+          {
+            "tileid": 26,
+            "duration": 600
+          },
+          {
+            "tileid": 18,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "frames": [
+          {
+            "tileid": 7,
+            "duration": 600
+          },
+          {
+            "tileid": 19,
+            "duration": 600
+          },
+          {
+            "tileid": 27,
+            "duration": 600
+          },
+          {
+            "tileid": 19,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "frames": [
+          {
+            "tileid": 8,
+            "duration": 600
+          },
+          {
+            "tileid": 20,
+            "duration": 600
+          },
+          {
+            "tileid": 28,
+            "duration": 600
+          },
+          {
+            "tileid": 20,
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "frames": [
+          {
+            "tileid": 9,
+            "duration": 2400
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "frames": [
+          {
+            "tileid": 10,
+            "duration": 2400
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "frames": [
+          {
+            "tileid": 11,
+            "duration": 2400
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "frames": [
+          {
+            "tileid": 12,
+            "duration": 2400
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/interior-motion-lunar-hall-water.json",
+      "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613",
+      "inputs": [
+        {
+          "path": "art/source/interior-reference-original.png",
+          "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+        },
+        {
+          "path": "art/source/interior-steam-original.png",
+          "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+        },
+        {
+          "path": "art/source/interior-steam-pose.png",
+          "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+        },
+        {
+          "path": "art/source/interior-reference-native.png",
+          "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/art/interior-reference-motion.ts",
+          "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 4,
+    "periodMs": 2400,
+    "stepMs": 600,
+    "sharedFrameTiles": 29,
+    "decodedRgbaBytes": 196608,
+    "atlas": {
+      "width": 512,
+      "height": 96,
+      "columns": 16,
+      "tilecount": 48
+    },
+    "tracks": [
+      {
+        "id": "water",
+        "visiblePhases": 4,
+        "positionCount": 1,
+        "poseCount": 4
+      }
+    ]
+  }
+}

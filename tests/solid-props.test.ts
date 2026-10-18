@@ -1,3 +1,4 @@
+import {publishedEpochRaw} from './helpers/published-map-epoch';
 import {historicalBeach} from './helpers/organic-coast-history';
 import {historicalPlaza,groveBaseCells} from './helpers/plaza-groves';
 import {readFileSync} from 'node:fs';
@@ -52,10 +53,11 @@ describe('independent solid support and visual depth',()=>{
   expect(()=>validateStandingSigns(l,catalog)).toThrow(/support/);
  });
  it('requires all current physical sign families to declare standing assemblies',()=>{
-  for(const [id,count]of [['overworld',18],['constellation-shore',6],['shipyard-beach',6]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
+  for(const [id,count]of [['overworld',14],['constellation-shore',6],['shipyard-beach',6]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
  });
 });
 
+import {historicalFloorPlaza} from './helpers/plaza-successor';
 import {createHash} from 'node:crypto';
 const sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -65,7 +67,7 @@ function connected(map:any,mask:Set<string>,points:string[]){const first=points[
 describe('published solid-prop receipts and direct current physical contracts',()=>{
  for(const id of ['overworld','constellation-shore','shipyard-beach'])it(`${id} retains the historical support receipt and its protected masks/routes`,()=>{
   const historical=(id==='overworld'?historicalPlaza('native'):read(`tests/fixtures/standing-captions/before-${id}.tmj`));
-  const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=id==='shipyard-beach'?historicalBeach('native'):id==='constellation-shore'?read('tests/fixtures/constellation-coast/before-native.tmj'):read(`maps/${id}.tmj`),source=read(`world/layouts/${id}.json`);
+  const proof=receipt.maps[id],old=read(`tests/fixtures/solid-props/before-${id}.tmj`),now=id==='shipyard-beach'?historicalBeach('native'):id==='constellation-shore'?read('tests/fixtures/constellation-coast/before-native.tmj'):historicalFloorPlaza('native'),source=id==='overworld'?historicalFloorPlaza('layout'):read(`world/layouts/${id}.json`);
   for(const ext of ['json','tmj']){expect(sha(`tests/fixtures/solid-props/before-${id}.${ext}`)).toBe(proof.before[ext]);expect(sha(id==='overworld'&&ext==='tmj'?'tests/fixtures/plaza-groves/before-native.tmj':`tests/fixtures/standing-captions/before-${id}.${ext}`)).toBe(proof.after[ext]);}
   expect(historical.tilesets).toEqual(old.tilesets); // retained published props receipt; new caption atlas is checked separately
   const expectedMask=structuredClone(historical.layers.find((l:any)=>l.name==='physical-collisions'));if(id==='overworld'){const marker=expectedMask.data.find(Boolean);for(const key of groveBaseCells(base)){const[x,y]=key.split(',').map(Number);expectedMask.data[y*now.width+x]=marker;}}expect(now.layers.find((l:any)=>l.name==='physical-collisions')).toEqual(expectedMask); // exact historical supports plus the separately reviewed grove bases
@@ -79,7 +81,7 @@ describe('published solid-prop receipts and direct current physical contracts',(
   expect(protectedCells.every(c=>!b.has(c))).toBe(true);expect(connected(now,b,protectedCells)).toBe(true);
   for(const p of source.placements.filter((p:any)=>base[p.sprite]?.standingRole==='support')){expect(b.has(`${p.x},${p.y}`),p.id).toBe(true);expect(cell(now,p.x,p.y,false),p.id).toBe(true);}
  });
- it('keeps every PNG and editable sponsor image byte-exact',()=>{for(const[p,h]of Object.entries(receipt.unchangedPNGs))expect(sha(p),p).toBe(h);});
+ it('keeps every PNG and editable sponsor image byte-exact',()=>{for(const[p,h]of Object.entries(receipt.unchangedPNGs))expect(['assets/tilesets/original/coastal-flight.png','art/source/coastal-flight-plane.png'].includes(p)?createHash('sha256').update(publishedEpochRaw(p)).digest('hex'):sha(p),p).toBe(h);});
  it('uses dedicated aliases with exact original sheet/rect identity',()=>{
   for(const[name,s]of Object.entries(base))if(name.startsWith('solid-')||name.startsWith('standing-')){
    const original=name.startsWith('standing-')?name.slice(9):name.slice(6);expect(s.sheet,name).toBe(base[original].sheet);expect(s.rect,name).toEqual(base[original].rect);

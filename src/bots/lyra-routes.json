@@ -2,18 +2,22 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "ff2d682ae76144ada9f67b93a1af479159733ce086a31b66d01c3a4289eaa9ed",
-      "maps/overworld.tmj": "6ae3de6475c7410101e1c7e2689f581c83f044f86bc19b6dc996f763d28541f2",
+      "world/layouts/overworld.json": "d21e2a8f7a3bb4341b14fdd65fd3059511392dfc38c04c021ca79416182746d3",
+      "maps/overworld.tmj": "65d9705f7c44078bf7f593b4d966315cac67f0b02029660f7d2666bbd18ebcd8",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
-      "tests/helpers/visibility-history.ts": "12aa4f359784a935834d2ad15d209d172c6220c9146619af9d7e09b2cec356f4",
+      "tests/helpers/visibility-history.ts": "1e049c084a1de2eec245f75193849b6afdc298a626c6039a6a2d25c6695aefdf",
       "tests/helpers/editor-catalog-history.ts": "7fa9ca198b99dbbd188775c70574704ccadbe8a0da2a378c55e82502418608f0",
       "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
-      "tests/helpers/physical-prop-contracts.ts": "e9eeb98998ab7e793407d4472e4998c6e0d7c6c9911756a72080384241db3afd"
+      "tests/helpers/physical-prop-contracts.ts": "874f91f2dfd71df6c409efb37f1d3ae7ff08282febff1c29c277b267e94bad30",
+      "art/tile-catalog.json": "2085fbbcd9c115d8a536c8f37759921ab697f78186564c2cfe85e17f7cb8262c",
+      "tools/bots/route-audit.ts": "51e76b7cdbabdf101af887c397367dd4f47c6df14c2c79c1b7640c31e9d36bd8",
+      "tests/guide-route-audit.test.ts": "aea68acb558f4bcaeb4e0d0b7586c8aaf84f8ce80cafa2abf428a63039141c9b",
+      "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15"
     },
     "allowedCellsSha256": "9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f",
-    "geometrySha256": "d35e4eaa230c3b9cff7a734f63e0a7b5b689ebcbc5e47e8c9e41f86b1ffe91df",
+    "geometrySha256": "00806be51646d87cd223593381d87748b424b3e1a2b008c1af29f3c9b3004ecb",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

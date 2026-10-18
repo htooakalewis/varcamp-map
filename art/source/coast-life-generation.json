@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "tool": "builtin image_gen imagegen",
+  "date": "2026-10-18",
+  "masters": [
+    {
+      "path": "art/source/coast-life-props-master.png",
+      "sha256": "f4ff6d260295a726cad745f41ecf9ce92fcd8e7b401adbf5b486ea9f23c6206e",
+      "originalPath": "/Users/htooayelwin/.codex/generated_images/01a126ce-338a-7773-9578-da74bfc3b927/exec-e451660a-813c-4d9c-902c-2413ad43496e.png",
+      "approval": "approved-by-user"
+    },
+    {
+      "path": "art/source/coast-life-gull-master.png",
+      "sha256": "e7b53062caf20205e57d131edca2f5812296e00b83e541b478277e55e1c9d00a",
+      "originalPath": "/Users/htooayelwin/.codex/generated_images/01a126ce-338a-7773-9578-da74bfc3b927/exec-8480cd74-86db-45a8-9599-3dc96ad1a7dc.png",
+      "approval": "approved-by-user"
+    },
+    {
+      "path": "art/source/coast-life-marine-master.png",
+      "sha256": "e0b7f0b660f7a80b94d9d2e1afe8250ba992addf9414cb893be8856e45391444",
+      "originalPath": "/Users/htooayelwin/.codex/generated_images/01a126ce-338a-7773-9578-da74bfc3b927/exec-524e6f10-4408-4158-918e-f6fcb1214bac.png",
+      "approval": "approved-by-user"
+    },
+    {
+      "path": "art/source/coast-life-plane-master.png",
+      "sha256": "adc80121fed90b68bddbf34dc98c3c85d3efd3e67eb874b9acb68563dd3b6e5d",
+      "originalPath": "/Users/htooayelwin/.codex/generated_images/01a126ce-338a-7773-9578-da74bfc3b927/exec-af6fe9c5-1793-434e-b3c2-c41660f36e6f.png",
+      "approval": "approved-by-user"
+    },
+    {
+      "path": "art/source/coast-life-small-props-master.png",
+      "sha256": "0e2c174ee426fe78bb52aa7b7fbc9c83199db20db34127170d96ce9c55466c44",
+      "originalPath": "/Users/htooayelwin/.codex/generated_images/01a14dc6-aa8f-7cf3-8905-db4ef89942a1/exec-ed2e188f-a547-49e7-8456-6378b9ffc890.png",
+      "approval": "generated-within-user-approved-beach-object-scope"
+    }
+  ],
+  "supplementalPrompt": "Use case: stylized-concept\nAsset type: original transparent PNG sprite sheet for a detailed natural tropical beach in a top-down 2D pixel game using Tiled.\nPrimary request: one cohesive 3-column by 2-row atlas of six separate beach props, matching the detailed natural wooden furniture and painterly pixel-art texture of the approved shore props reference. Each object must be completely contained in its own equal cell with generous transparent margins and no overlap. Row 1: left, a woven blue and cream beach towel lying flat, softly rumpled fabric with fringed edges, top-down; middle, a small round low weathered timber beach table viewed from above and slightly south, two cups and a shell atop it, visible short legs; right, a beach volleyball net between two weathered wood posts with realistic hanging woven net, seen from slightly above and south, horizontally wide 5:2 aspect. Row 2: left, a tasteful realistic small sandcastle with irregular damp sand texture, two low turrets and a bucket, top-down game view; middle, two alternating bare human footprints pressed into sand, tiny natural scallop shells and scattered small gray pebbles, a single compact ground-detail cluster seen directly overhead; right, a separate natural cluster of small beach pebbles and three delicate seashells, overhead. All six sprites have realistic proportions, subtle shadows only directly beneath their objects, rich material detail legible after downscaling. No scene, floor tile or landscape, no words, grid lines, frames, labels, UI, people, faces, cartoon eyes, logos, watermark or white/black background. Actual fully transparent background and clean alpha edges. Orthographic 2D game sprites, no isometric diamond tiles. Match the existing natural shore art's weathered wood, cream fabric and restrained blue tones.\n",
+  "finalPixelSources": "Only these original generated PNGs. Downloaded public-reference images supply no final pixels."
+}

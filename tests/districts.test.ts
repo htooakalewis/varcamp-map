@@ -32,7 +32,7 @@ for(const [element,signs] of Object.entries(districts))describe(`${element} comp
  it('furnishes its activity and social areas without reverting to duplicated meeting shells',()=>{
   const l=load(element),activity=l.inspectionZones.find(z=>z.name===`${element}-activity`)!;
   expect(l.placements.some(p=>p.sprite===`sigil-${element}`)).toBe(true);expect(l.placements.some(p=>p.sprite==='quest-shrine')).toBe(true);
-  const theme={fire:['forge-aries','table-workshop'],earth:['bookcase','table-circular'],air:['table-circular','desk-coding'],water:['flower-bed','water-wall']}[element]!;
+  const theme={fire:['forge-aries','table-workshop'],earth:['bookcase','table-circular'],air:['table-circular','desk-coding'],water:['plaza-flower-bed','water-wall']}[element]!;
   for(const sprite of theme)expect(l.placements.some(p=>p.sprite===sprite&&inside(p,activity)),`${element} missing ${sprite} in activity`).toBe(true);
   expect(l.placements.some(p=>/sofa|lounge|bench/.test(p.sprite))).toBe(true);
   expect(new Set(l.inspectionZones.map(z=>z.name)).size).toBe(l.inspectionZones.length);
