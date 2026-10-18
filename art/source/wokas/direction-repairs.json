@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "mode": "builtin-imagegen-precise-object-edit",
+  "priorProductDeltaSha256": "6460ca7e0f6973f39fa25087d1361977dd9f65d16724db17e11efa059ddab05e",
+  "repairs": [
+    {
+      "sign": "leo",
+      "gender": "male",
+      "targetFrame": 5,
+      "direction": "left",
+      "source": "art/source/wokas/leo-male-left-third-repair.png",
+      "bytes": 741794,
+      "sha256": "ea93cd4b968823802f3aa772b753d8e2cd97711385e1cad9f0de800f99c37679",
+      "sourceSize": [
+        1247,
+        1261
+      ],
+      "prompt": "art/source/wokas/leo-male-left-third-repair-prompt.txt",
+      "promptSha256": "2a83ef3232fa1cd62d2167477b226bb2973a4ecc9c545606bd960f6bdada141c",
+      "originalSourceHeight": 214,
+      "originalUniformScale": [
+        1,
+        8
+      ],
+      "reason": "Both original male source5 and source8 face RIGHT; a third LEFT pose is absent. Targeted builtin imagegen replacement, no mirroring or idle duplication."
+    },
+    {
+      "sign": "capricorn",
+      "gender": "male",
+      "targetFrame": 5,
+      "direction": "left",
+      "source": "art/source/wokas/capricorn-male-left-third-repair.png",
+      "bytes": 590746,
+      "sha256": "522bdaee7f05cc1631315bb9b225b8873e6422fa3f7f3743bedd462b8edb6725",
+      "sourceSize": [
+        1318,
+        1193
+      ],
+      "prompt": "art/source/wokas/capricorn-male-left-third-repair-prompt.txt",
+      "promptSha256": "43204f779fab76c82f917fac52fe238037fa921610919545151eae5af2aa7539",
+      "originalSourceHeight": 224,
+      "originalUniformScale": [
+        14,
+        115
+      ],
+      "reason": "Both original male source5 and source8 face RIGHT; a third LEFT pose is absent. Targeted builtin imagegen replacement, no mirroring or idle duplication."
+    }
+  ]
+}

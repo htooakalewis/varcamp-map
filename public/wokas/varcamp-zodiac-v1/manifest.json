@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "status": "SOURCE_PACKAGE_NOT_LIVE_SELECTION",
+  "format": {
+    "sheet": [
+      96,
+      128
+    ],
+    "frame": [
+      32,
+      32
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "footBaseline": 30,
+    "maxSubjectSize": 28
+  },
+  "assets": [
+    {
+      "file": "aries-male.png",
+      "bytes": 14962,
+      "sha256": "80b51e0278fe9c935847acc75320e7ca99e465f73202d3948a897a68b886012e"
+    },
+    {
+      "file": "aries-female.png",
+      "bytes": 14217,
+      "sha256": "d635c1c6195304a9f246643e781371eaf4a519cb3eb07dd6139537359a4c9087"
+    },
+    {
+      "file": "taurus-male.png",
+      "bytes": 14281,
+      "sha256": "7b4dee2fe823ebff2441154d51ce5d40cbc74ccb1f30ba74baba7659fb75f196"
+    },
+    {
+      "file": "taurus-female.png",
+      "bytes": 14360,
+      "sha256": "0b4dac01dbc556b472eb1869984dbd2563796ed0b10dfde5049bf72fc677d4a9"
+    },
+    {
+      "file": "gemini-male.png",
+      "bytes": 14948,
+      "sha256": "4845898265a49d01ba977c500d197a5ccbbb603ec539c7f4e7d9bf92ada0bd77"
+    },
+    {
+      "file": "gemini-female.png",
+      "bytes": 14338,
+      "sha256": "c1135a966f8424b03f341136323189481aff8b04a3c7b456e52b97af9c723d24"
+    },
+    {
+      "file": "cancer-male.png",
+      "bytes": 14116,
+      "sha256": "618b32bd69b2d465d75a2b45b4a503386f5271013447f5007916cb767ab0124d"
+    },
+    {
+      "file": "cancer-female.png",
+      "bytes": 14747,
+      "sha256": "dfb153117fa109b412e051ee53cc06c62eac8b6e7d7a32e99eaa85ec6ff55ada"
+    },
+    {
+      "file": "leo-male.png",
+      "bytes": 15088,
+      "sha256": "c1cd7f2b71e30f7e9323348f47f2511b826f09193abb795be17b67a660f00dcf"
+    },
+    {
+      "file": "leo-female.png",
+      "bytes": 15040,
+      "sha256": "8e103fbad1db9c332970c078fdff2db054b3590e10d342335d89b03d677b1f79"
+    },
+    {
+      "file": "virgo-male.png",
+      "bytes": 14107,
+      "sha256": "659532affcdc2e25aedb640aa1ca408781018a4584b87612b6eb1ae426cca4a3"
+    },
+    {
+      "file": "virgo-female.png",
+      "bytes": 13722,
+      "sha256": "fa0ba278433ccb30b0c0175ad34792e3283389eb6102806f8644ee3f01b6052d"
+    },
+    {
+      "file": "libra-male.png",
+      "bytes": 15448,
+      "sha256": "f9d5e515208d49dbd5d8bf3bd7a3dc4a11bca538d4e47733f7b1f614ea90830a"
+    },
+    {
+      "file": "libra-female.png",
+      "bytes": 15150,
+      "sha256": "5616603fa0ef5f2e1c09a15a40f554a37f4f514241eb61c482242b2ebfbf11e9"
+    },
+    {
+      "file": "scorpio-male.png",
+      "bytes": 12447,
+      "sha256": "29a0372e34e49f00588c85ae419fd9a02df1024dc8b8e6c79749ba5b3b8b0f4d"
+    },
+    {
+      "file": "scorpio-female.png",
+      "bytes": 13825,
+      "sha256": "cdb3d6589ebec441fe8deeec890c3f2fc9c0722f383f6793bccec72b44967de5"
+    },
+    {
+      "file": "sagittarius-male.png",
+      "bytes": 14552,
+      "sha256": "066ff9841675025332b08413f4bbdf633e1e0d319b47318739153acc62305e6f"
+    },
+    {
+      "file": "sagittarius-female.png",
+      "bytes": 13357,
+      "sha256": "db20db2877dacf86686a30e802a341578af4603707237f1251d78d0858b2338c"
+    },
+    {
+      "file": "capricorn-male.png",
+      "bytes": 15380,
+      "sha256": "7dc89eb666a1565e2e813edfb02c10e5d4211cc8d71e48c36d428488ef9d39bc"
+    },
+    {
+      "file": "capricorn-female.png",
+      "bytes": 14079,
+      "sha256": "982c7aa7634f7786c1539f1adb3fb565eb974f5bba647dd25368a11f0b846161"
+    },
+    {
+      "file": "aquarius-male.png",
+      "bytes": 16575,
+      "sha256": "ec89ed6861ce6a7eaa281c44791692881c5e6725e2fc0f62125b9fd34ee89622"
+    },
+    {
+      "file": "aquarius-female.png",
+      "bytes": 13934,
+      "sha256": "14df546b7b7f14b41a50861a1242138743f78cf9b3cde05a4de728c2a8791a43"
+    },
+    {
+      "file": "pisces-male.png",
+      "bytes": 15255,
+      "sha256": "fbc1caf4a04533e378a4eedff9f532987a75c65e8bc2aad42b713231368c6bcf"
+    },
+    {
+      "file": "pisces-female.png",
+      "bytes": 15018,
+      "sha256": "dd9b2b37fdab9b78dd13ea1c07b912aa91bec9137a31d44ca4385b93d4d44f9f"
+    }
+  ]
+}
