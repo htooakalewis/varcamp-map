@@ -25,22 +25,24 @@ function sample(map: TiledMap, atlas: Buffer, width: number, time: number): Buff
  if (!engine) { engine = parse(structuredClone(map)).tilesets.find(s => s.firstgid === set.firstgid)!; engineCache.set(map, engine); }
  const output = Buffer.alloc(1536 * 96 * 4);
  for (let y = 0; y < 3; y++) for (let x = 0; x < 48; x++) {
-  const gid = engine.getAnimatedTileId(layer.data[(y + 6) * 48 + x], time);
+  const gid = engine.getAnimatedTileId(layer.data[(y + metadata.overlay.y) * 48 + x], time);
   if (gid === null) throw new Error('Pinned Phaser could not resolve native animation frame');
   const local = gid - set.firstgid, sx = local % set.columns! * 32, sy = Math.floor(local / set.columns!) * 32;
   for (let row = 0; row < 32; row++) atlas.copy(output, ((y * 32 + row) * 1536 + x * 32) * 4, ((sy + row) * width + sx) * 4, ((sy + row) * width + sx + 32) * 4);
  }
  return output;
 }
-function centroid(raw: Buffer, color: number[]): number {
+function centroid(raw: Buffer, color?: number[]): number {
  let count = 0, total = 0;
- for (let i = 0; i < raw.length; i += 4) if (color.every((v, channel) => raw[i + channel] === v)) { count++; total += i / 4 % 1536; }
+ // The top14px contains aircraft pixels only: the editable banner begins aty14.
+ // Measure its alpha geometry rather than an obsolete plane paint color.
+ for (let i = 0; i < raw.length; i += 4) if (color?color.every((v, channel) => raw[i + channel] === v):Math.floor(i/4/1536)<14&&raw[i+3]>0) { count++; total += i / 4 % 1536; }
  if (!count) throw new Error('Plane/banner identifying pixels absent');
  return total / count;
 }
 function displacement(map: TiledMap, raw: Buffer, width: number): { body: number[]; banner: number[] } {
  const frames = [0, 1200, 2400].map(t => sample(map, raw, width, t));
- const body = frames.map(f => centroid(f, [247, 221, 156, 255]));
+ const body = frames.map(f => centroid(f));
  const banner = frames.map(f => centroid(f, [233, 184, 94, 255]));
  return { body: [body[1] - body[0], body[2] - body[1]], banner: [banner[1] - banner[0], banner[2] - banner[1]] };
 }
@@ -57,7 +59,7 @@ beforeAll(async () => {
 });
 
 describe('native coastal flight', () => {
- it('emits frame metadata and GIDs on a dedicated noncolliding above-avatar layer', () => {
+ it('keeps generic explicitly optional overlay behavior independent of the mandatory coast policy', () => {
   const { tmj } = buildMap({ ...base(), animatedOverlays: [tinyOverlay()] }, loadTileCatalog());
   const layer = tmj.layers.find(l => l.name === 'coastal-flight-probe') as TileLayer | undefined;
   expect(layer, 'builder must not silently omit authored animation').toBeDefined();
@@ -103,10 +105,10 @@ describe('native coastal flight', () => {
   expect(Math.min(...xs)).toBeGreaterThanOrEqual(14 * 32);
   expect(Math.max(...xs)).toBeLessThan(34 * 32);
  });
- it('keeps validated source pixels native and emits a bounded sparse, noncolliding first-view band', async () => {
+ it('keeps validated source pixels native and emits a bounded sparse, noncolliding peripheral band', async () => {
   const overlay = map.layers.find(l => l.name === 'coastal-flight') as TileLayer;
   expect(overlay.data.filter(Boolean)).toHaveLength(144);
-  expect(metadata.overlay).toMatchObject({ x: 0, y: 6, width: 48, height: 3 });
+  expect(metadata.overlay).toMatchObject({ x: 0, y: 0, width: 48, height: 3, level: 'belowAvatar' });
   expect(metadata.atlas.decodedRgbaBytes).toBeLessThanOrEqual(4 * 1024 * 1024);
   const source = await sharp(readFileSync(metadata.inputs.plane.path)).ensureAlpha().raw().toBuffer();
   const sponsor = await sharp(readFileSync(metadata.inputs.sponsor.path)).ensureAlpha().raw().toBuffer();

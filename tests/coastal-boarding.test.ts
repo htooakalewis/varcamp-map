@@ -1,4 +1,5 @@
-import { historicalEditorWamBytes } from './helpers/editor-catalog-history';
+import{publishedEpochJson,publishedEpochRaw}from'./helpers/published-map-epoch';
+import { historicalEditorWamBytes, approvedEditorCollections } from './helpers/editor-catalog-history';
 import{readFileSync}from'node:fs';
 import{historicalBytes,visibilityHistoryMaps}from'./helpers/visibility-history';
 import{createHash}from'node:crypto';
@@ -62,13 +63,33 @@ describe('native coastal boarding and nautical proportions',()=>{
    };
    // Keep original8dc retirement receipts independent of later publication pins.
    if(path.endsWith('.wam'))expect(createHash('sha256').update(historicalEditorWamBytes(path.slice(5,-4))).digest('hex'),path+' original retirement bytes').toBe(retiredWamReceipts[path]);
-   expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path+' current reviewed replacement').toBe(revision.toSha256);
+   // First prove the unchanged original retirement 'to' from genuine history;
+   // the separately chained current receipt owns subsequent refinements.
+   const id=path.split('/').at(-1)!.replace(/\.(tmj|wam|json)$/,'');let retired:Buffer;
+   if(path.endsWith('.wam')){const original=historicalEditorWamBytes(id).toString();expect(original.split('"entityCollections": []')).toHaveLength(2);retired=Buffer.from(original.replace('"entityCollections": []','"entityCollections": '+JSON.stringify(approvedEditorCollections)));}
+   else if(visibilityHistoryMaps.includes(id))retired=publishedEpochRaw(path);
+   else{
+    const l=JSON.parse(readFileSync('tests/fixtures/interior-reference/historical-layouts.json','utf8'))[id];expect(l,id+' historical room input').toBeDefined();
+    if(path.endsWith('.json'))retired=Buffer.from((JSON.stringify(l,null,2)+'\n').replace(/[\u007f-\uffff]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0')));
+    else{
+     const m=buildMap(l,publishedEpochJson('art/tile-catalog.json')).tmj;
+     if(path.includes('/preview/')){for(const p of m.properties??[])if(p.name==='script')p.value='../'+p.value;for(const t of m.tilesets)if(t.image)t.image='../'+t.image;for(const layer of m.layers)for(const p of layer.properties??[])if(p.name==='exitUrl')p.value=String(p.value).replace('.wam#','.tmj#');retired=Buffer.from(JSON.stringify(m,null,2)+'\n');}
+     else retired=Buffer.from(JSON.stringify(m)+'\n');
+    }
+   }
+   expect(createHash('sha256').update(retired).digest('hex'),path+' original independent retirement bytes').toBe(revision.toSha256);
+   let effective=revision.toSha256;
+   for(const name of ['2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure','2026-10-18-standing-captions','2026-10-18-standing-captions-ci-closure','2026-10-18-beach-groves-guide-identity','2026-10-18-organic-coast','2026-10-18-constellation-coast','2026-10-18-campus-refinement']){
+    const rows=JSON.parse(readFileSync(`publication/revisions/${name}.json`,'utf8')).revisions.filter((r:{path:string})=>r.path===path);expect(rows.length).toBeLessThanOrEqual(1);for(const row of rows){expect(row.fromSha256,path+' closed current succession').toBe(effective);effective=row.toSha256;}
+   }
+   expect(createHash('sha256').update(readFileSync(path)).digest('hex'),path+' final distinct current receipt').toBe(effective);
   }else if(visibilityHistoryMaps.some(id=>path===`maps/${id}.tmj`||path===`world/layouts/${id}.json`)){
    // Exact17d4 normalization precedes the older coastal byte receipt. No
    // publication 'from' hash is substituted for this independent baseline.
    const id=path.split('/').at(-1)!.replace(/\.(tmj|json)$/,'');
    const restored=historicalBytes(id,path.endsWith('.tmj')?'tmj':'json');
    expect(createHash('sha256').update(restored).digest('hex'),path+' original coastal composition').toBe(hash);
+  }else if(['moon-grotto','orbit-playground','star-garden'].some(id=>path===`maps/${id}.tmj`||path===`world/layouts/${id}.json`)){expect(createHash('sha256').update(publishedEpochRaw(path)).digest('hex'),path+' genuine unchanged historical body').toBe(hash);
   }else expect(createHash('sha256').update(path.endsWith('.wam')?historicalEditorWamBytes(path.slice(5,-4)):readFileSync(path==='maps/constellation-shore.tmj'?'tests/fixtures/solid-props/before-constellation-shore.tmj':path==='world/layouts/constellation-shore.json'?'tests/fixtures/solid-props/before-constellation-shore.json':path)).digest('hex'),path).toBe(hash);
  }const old=JSON.parse(readFileSync('docs/qa/coastal-reassessment-2026-10-16/implementation/before-inputs/art/tile-catalog.json.before','utf8')),catalog=loadTileCatalog();for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);});
 

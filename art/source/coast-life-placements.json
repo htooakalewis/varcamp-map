@@ -1,0 +1,1029 @@
+{
+  "version": 1,
+  "maps": {
+    "shipyard-beach": [
+      {
+        "id": "shell-1",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 14,
+        "y": 22,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shell-2",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 30,
+        "y": 23,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shell-3",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 42,
+        "y": 21,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shell-4",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 16,
+        "y": 9,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "tender-west",
+        "originalSprite": "boat-wood",
+        "sprite": "coast-life-boat-wood",
+        "x": 3,
+        "y": 29,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "repair-hut",
+        "originalSprite": "beach-cabana",
+        "sprite": "coast-life-beach-cabana",
+        "x": 8,
+        "y": 12,
+        "width": 5,
+        "height": 5,
+        "layer": "props"
+      },
+      {
+        "id": "beach-bar",
+        "originalSprite": "beach-tiki-bar",
+        "sprite": "coast-life-beach-tiki-bar",
+        "x": 34,
+        "y": 12,
+        "width": 6,
+        "height": 5,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-west",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 3,
+        "y": 7,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-northwest",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 11,
+        "y": 4,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-north",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 15,
+        "y": 5,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-east",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 38,
+        "y": 5,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-bar",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 31,
+        "y": 11,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-southeast",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 41,
+        "y": 17,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-palm-southwest",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 3,
+        "y": 20,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-shade-west",
+        "originalSprite": "beach-parasol-coral",
+        "sprite": "coast-life-beach-parasol-coral",
+        "x": 4,
+        "y": 14,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-shade-arrival",
+        "originalSprite": "beach-parasol-teal",
+        "sprite": "coast-life-beach-parasol-teal",
+        "x": 17,
+        "y": 6,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-shade-bar",
+        "originalSprite": "beach-parasol-coral",
+        "sprite": "coast-life-beach-parasol-coral",
+        "x": 37,
+        "y": 17,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-west-a",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 4,
+        "y": 18,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-west-b",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 7,
+        "y": 20,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-arrival-a",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 17,
+        "y": 10,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-arrival-b",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 20,
+        "y": 10,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-bar-a",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 35,
+        "y": 20,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-seat-bar-b",
+        "originalSprite": "solid-beach-recliner",
+        "sprite": "coast-life-solid-beach-recliner",
+        "x": 40,
+        "y": 20,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "beach-towel-west",
+        "originalSprite": "beach-woven-towel",
+        "sprite": "coast-life-beach-woven-towel",
+        "x": 9,
+        "y": 22,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-towel-arrival",
+        "originalSprite": "beach-woven-towel",
+        "sprite": "coast-life-beach-woven-towel",
+        "x": 19,
+        "y": 8,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-towel-bar",
+        "originalSprite": "beach-woven-towel",
+        "sprite": "coast-life-beach-woven-towel",
+        "x": 38,
+        "y": 21,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-plant-west",
+        "originalSprite": "beach-shrub",
+        "sprite": "coast-life-beach-shrub",
+        "x": 5,
+        "y": 8,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-plant-hut",
+        "originalSprite": "beach-shrub",
+        "sprite": "coast-life-beach-shrub",
+        "x": 11,
+        "y": 7,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-plant-east",
+        "originalSprite": "beach-shrub",
+        "sprite": "coast-life-beach-shrub",
+        "x": 40,
+        "y": 9,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-plant-bar",
+        "originalSprite": "beach-shrub",
+        "sprite": "coast-life-beach-shrub",
+        "x": 32,
+        "y": 19,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-plant-southwest",
+        "originalSprite": "beach-shrub",
+        "sprite": "coast-life-beach-shrub",
+        "x": 10,
+        "y": 24,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "strand-grass-0",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 7,
+        "y": 6,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-1",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 9,
+        "y": 5,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-2",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 4,
+        "y": 12,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-3",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 4,
+        "y": 16,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-4",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 5,
+        "y": 22,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-5",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 8,
+        "y": 26,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-6",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 12,
+        "y": 26,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-7",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 39,
+        "y": 6,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-8",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 42,
+        "y": 10,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-9",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 43,
+        "y": 14,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-10",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 43,
+        "y": 21,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-11",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 40,
+        "y": 26,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-grass-12",
+        "originalSprite": "beach-grass",
+        "sprite": "coast-life-beach-grass",
+        "x": 34,
+        "y": 26,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-0",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 8,
+        "y": 8,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-1",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 5,
+        "y": 13,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-2",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 6,
+        "y": 23,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-3",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 9,
+        "y": 25,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-4",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 41,
+        "y": 8,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-5",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 42,
+        "y": 13,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-6",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 42,
+        "y": 23,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "strand-pebble-7",
+        "originalSprite": "beach-pebbles",
+        "sprite": "coast-life-beach-pebbles",
+        "x": 36,
+        "y": 26,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "beach-cafe-shade",
+        "originalSprite": "beach-parasol-teal",
+        "sprite": "coast-life-beach-parasol-teal",
+        "x": 29,
+        "y": 5,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-cafe-table",
+        "originalSprite": "solid-beach-low-table",
+        "sprite": "coast-life-solid-beach-low-table",
+        "x": 29,
+        "y": 9,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-cafe-palm",
+        "originalSprite": "beach-palm",
+        "sprite": "coast-life-beach-palm",
+        "x": 33,
+        "y": 4,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "beach-west-side-table",
+        "originalSprite": "solid-beach-low-table",
+        "sprite": "coast-life-solid-beach-low-table",
+        "x": 8,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "beach-bar-side-table",
+        "originalSprite": "solid-beach-low-table",
+        "sprite": "coast-life-solid-beach-low-table",
+        "x": 38,
+        "y": 19,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      }
+    ],
+    "constellation-shore": [
+      {
+        "id": "shore-palm-west",
+        "originalSprite": "coast-palm",
+        "sprite": "coast-life-coast-palm",
+        "x": 3,
+        "y": 12,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-palm-east",
+        "originalSprite": "coast-palm",
+        "sprite": "coast-life-coast-palm",
+        "x": 34,
+        "y": 17,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-palm-point-west",
+        "originalSprite": "coast-palm",
+        "sprite": "coast-life-coast-palm",
+        "x": 5,
+        "y": 27,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-palm-point-east",
+        "originalSprite": "coast-palm",
+        "sprite": "coast-life-coast-palm",
+        "x": 30,
+        "y": 28,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-palm-arrival",
+        "originalSprite": "coast-palm",
+        "sprite": "coast-life-coast-palm",
+        "x": 13,
+        "y": 7,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-parasol-west",
+        "originalSprite": "solid-coast-parasol",
+        "sprite": "coast-life-solid-coast-parasol",
+        "x": 7,
+        "y": 18,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-parasol-east",
+        "originalSprite": "solid-coast-parasol",
+        "sprite": "coast-life-solid-coast-parasol",
+        "x": 28,
+        "y": 18,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-parasol-lounge",
+        "originalSprite": "solid-coast-parasol",
+        "sprite": "coast-life-solid-coast-parasol",
+        "x": 14,
+        "y": 20,
+        "width": 3,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "shore-chair-west",
+        "originalSprite": "solid-coast-deck-chair",
+        "sprite": "coast-life-solid-coast-deck-chair",
+        "x": 4,
+        "y": 22,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "shore-chair-west-two",
+        "originalSprite": "solid-coast-deck-chair",
+        "sprite": "coast-life-solid-coast-deck-chair",
+        "x": 11,
+        "y": 22,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "shore-chair-east",
+        "originalSprite": "solid-coast-deck-chair",
+        "sprite": "coast-life-solid-coast-deck-chair",
+        "x": 32,
+        "y": 23,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "shore-chair-lounge",
+        "originalSprite": "solid-coast-deck-chair",
+        "sprite": "coast-life-solid-coast-deck-chair",
+        "x": 23,
+        "y": 22,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "shore-towel-west",
+        "originalSprite": "coast-towel",
+        "sprite": "coast-life-coast-towel",
+        "x": 7,
+        "y": 22,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "shore-towel-east",
+        "originalSprite": "coast-towel",
+        "sprite": "coast-life-coast-towel",
+        "x": 28,
+        "y": 23,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "shore-towel-east-two",
+        "originalSprite": "coast-towel",
+        "sprite": "coast-life-coast-towel",
+        "x": 31,
+        "y": 25,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "shore-towel-lounge",
+        "originalSprite": "coast-towel",
+        "sprite": "coast-life-coast-towel",
+        "x": 18,
+        "y": 22,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "shore-beach-bar",
+        "originalSprite": "solid-coast-beach-bar",
+        "sprite": "coast-life-solid-coast-beach-bar",
+        "x": 26,
+        "y": 10,
+        "width": 6,
+        "height": 5,
+        "layer": "props"
+      },
+      {
+        "id": "shore-sandcastle",
+        "originalSprite": "solid-coast-sandcastle",
+        "sprite": "coast-life-solid-coast-sandcastle",
+        "x": 7,
+        "y": 28,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "shore-volley-net",
+        "originalSprite": "solid-coast-volley-net",
+        "sprite": "coast-life-solid-coast-volley-net",
+        "x": 5,
+        "y": 20,
+        "width": 5,
+        "height": 2,
+        "layer": "architecture"
+      },
+      {
+        "id": "jetty-mooring-9-30",
+        "originalSprite": "coast-mooring-post",
+        "sprite": "coast-life-coast-mooring-post",
+        "x": 9,
+        "y": 30,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "jetty-mooring-12-30",
+        "originalSprite": "coast-mooring-post",
+        "sprite": "coast-life-coast-mooring-post",
+        "x": 12,
+        "y": 30,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "jetty-mooring-9-36",
+        "originalSprite": "coast-mooring-post",
+        "sprite": "coast-life-coast-mooring-post",
+        "x": 9,
+        "y": 36,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "jetty-mooring-12-36",
+        "originalSprite": "coast-mooring-post",
+        "sprite": "coast-life-coast-mooring-post",
+        "x": 12,
+        "y": 36,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "shore-shell-a",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 12,
+        "y": 17,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shore-shell-b",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 23,
+        "y": 20,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shore-shell-c",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 33,
+        "y": 28,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shore-shell-d",
+        "originalSprite": "coast-shell",
+        "sprite": "coast-life-coast-shell",
+        "x": 10,
+        "y": 28,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "shore-boat-west",
+        "originalSprite": "boat-wood",
+        "sprite": "coast-life-boat-wood",
+        "x": 3,
+        "y": 32,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "shore-boat-east",
+        "originalSprite": "boat-wood",
+        "sprite": "coast-life-boat-wood",
+        "x": 36,
+        "y": 31,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "shore-boat-bay",
+        "originalSprite": "boat-wood",
+        "sprite": "coast-life-boat-wood",
+        "x": 26,
+        "y": 35,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      {
+        "id": "underwater-rock-0",
+        "originalSprite": "coast-underwater-rock",
+        "sprite": "coast-life-coast-underwater-rock",
+        "x": 1,
+        "y": 22,
+        "width": 2,
+        "height": 2,
+        "layer": "architecture"
+      },
+      {
+        "id": "underwater-rock-1",
+        "originalSprite": "coast-underwater-rock",
+        "sprite": "coast-life-coast-underwater-rock",
+        "x": 35,
+        "y": 7,
+        "width": 2,
+        "height": 2,
+        "layer": "architecture"
+      },
+      {
+        "id": "underwater-rock-2",
+        "originalSprite": "coast-underwater-rock",
+        "sprite": "coast-life-coast-underwater-rock",
+        "x": 18,
+        "y": 31,
+        "width": 2,
+        "height": 2,
+        "layer": "architecture"
+      },
+      {
+        "id": "underwater-rock-3",
+        "originalSprite": "coast-underwater-rock",
+        "sprite": "coast-life-coast-underwater-rock",
+        "x": 33,
+        "y": 37,
+        "width": 2,
+        "height": 2,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-0",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 17,
+        "y": 11,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-1",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 16,
+        "y": 13,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-2",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 15,
+        "y": 17,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-3",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 19,
+        "y": 19,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-4",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 26,
+        "y": 23,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-5",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 30,
+        "y": 27,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "footprints-6",
+        "originalSprite": "coast-footprints",
+        "sprite": "coast-life-coast-footprints",
+        "x": 11,
+        "y": 27,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "pebbles-0",
+        "originalSprite": "coast-pebble-cluster",
+        "sprite": "coast-life-coast-pebble-cluster",
+        "x": 5,
+        "y": 14,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "pebbles-1",
+        "originalSprite": "coast-pebble-cluster",
+        "sprite": "coast-life-coast-pebble-cluster",
+        "x": 33,
+        "y": 12,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "pebbles-2",
+        "originalSprite": "coast-pebble-cluster",
+        "sprite": "coast-life-coast-pebble-cluster",
+        "x": 6,
+        "y": 28,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      },
+      {
+        "id": "pebbles-3",
+        "originalSprite": "coast-pebble-cluster",
+        "sprite": "coast-life-coast-pebble-cluster",
+        "x": 29,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "layer": "architecture"
+      }
+    ]
+  }
+}

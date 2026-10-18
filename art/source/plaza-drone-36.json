@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/drone-approved-master.png",
+    "sha256": "2196cbaf1a6dcc63d08affc6beae9c18fa4c9bb3556273e0f674d8023e3b131c"
+  },
+  "overlay": {
+    "name": "plaza-drone-36",
+    "image": "assets/tilesets/original/plaza-drone-36.png",
+    "sourceId": "plaza-original-drones",
+    "level": "belowAvatar",
+    "x": 45,
+    "y": 111,
+    "width": 15,
+    "height": 5,
+    "carrierTileIds": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "animations": [
+      {
+        "id": 46,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 24600
+          },
+          {
+            "tileid": 43,
+            "duration": 200
+          },
+          {
+            "tileid": 45,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55000
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 24400
+          },
+          {
+            "tileid": 39,
+            "duration": 200
+          },
+          {
+            "tileid": 44,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55200
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 24200
+          },
+          {
+            "tileid": 37,
+            "duration": 200
+          },
+          {
+            "tileid": 40,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55400
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 24400
+          },
+          {
+            "tileid": 41,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55400
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 24000
+          },
+          {
+            "tileid": 35,
+            "duration": 200
+          },
+          {
+            "tileid": 38,
+            "duration": 200
+          },
+          {
+            "tileid": 42,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55400
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23800
+          },
+          {
+            "tileid": 33,
+            "duration": 200
+          },
+          {
+            "tileid": 36,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 55800
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23600
+          },
+          {
+            "tileid": 29,
+            "duration": 200
+          },
+          {
+            "tileid": 34,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56000
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23400
+          },
+          {
+            "tileid": 27,
+            "duration": 200
+          },
+          {
+            "tileid": 30,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56200
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23600
+          },
+          {
+            "tileid": 31,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56200
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23200
+          },
+          {
+            "tileid": 25,
+            "duration": 200
+          },
+          {
+            "tileid": 28,
+            "duration": 200
+          },
+          {
+            "tileid": 32,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56200
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 23000
+          },
+          {
+            "tileid": 23,
+            "duration": 200
+          },
+          {
+            "tileid": 26,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56600
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22800
+          },
+          {
+            "tileid": 21,
+            "duration": 200
+          },
+          {
+            "tileid": 24,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 56800
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22600
+          },
+          {
+            "tileid": 17,
+            "duration": 200
+          },
+          {
+            "tileid": 22,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57000
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22200
+          },
+          {
+            "tileid": 11,
+            "duration": 200
+          },
+          {
+            "tileid": 15,
+            "duration": 200
+          },
+          {
+            "tileid": 18,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57200
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22200
+          },
+          {
+            "tileid": 12,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57600
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22600
+          },
+          {
+            "tileid": 19,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57200
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22200
+          },
+          {
+            "tileid": 13,
+            "duration": 200
+          },
+          {
+            "tileid": 16,
+            "duration": 200
+          },
+          {
+            "tileid": 20,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57200
+          }
+        ]
+      },
+      {
+        "id": 101,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 22000
+          },
+          {
+            "tileid": 9,
+            "duration": 200
+          },
+          {
+            "tileid": 14,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57600
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 21800
+          },
+          {
+            "tileid": 7,
+            "duration": 200
+          },
+          {
+            "tileid": 10,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 57800
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 21600
+          },
+          {
+            "tileid": 6,
+            "duration": 200
+          },
+          {
+            "tileid": 8,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 58000
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 21200
+          },
+          {
+            "tileid": 3,
+            "duration": 200
+          },
+          {
+            "tileid": 5,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 58400
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 21000
+          },
+          {
+            "tileid": 1,
+            "duration": 200
+          },
+          {
+            "tileid": 4,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 58600
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 109,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 110,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 113,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 115,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 117,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 119,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 120,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 21000
+          },
+          {
+            "tileid": 2,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 58800
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/plaza-drone-36.json",
+      "atlasSha256": "509eb3580433d5672c097b98dfd800de2ccc0a0a1afca45237364d7c252f5486",
+      "inputs": [
+        {
+          "path": "tools/art/plaza-drones.ts",
+          "sha256": "326cca89c7dba0b8a4321ce882dca2bfcaa54c47b02ab057df6e103270ed1df6"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 400,
+    "periodMs": 80000,
+    "stepMs": 200,
+    "sharedFrameTiles": 46,
+    "decodedRgbaBytes": 524288,
+    "atlas": {
+      "width": 512,
+      "height": 256,
+      "columns": 16,
+      "tilecount": 128
+    },
+    "tracks": [
+      {
+        "id": "drone-1",
+        "visiblePhases": 20,
+        "positionCount": 20,
+        "poseCount": 3
+      },
+      {
+        "id": "drone-2",
+        "visiblePhases": 0,
+        "positionCount": 0,
+        "poseCount": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,1115 @@
+{
+  "id": "comet-maze",
+  "width": 48,
+  "height": 48,
+  "placements": [
+    {
+      "id": "maze-solid",
+      "sprite": "wall-charcoal",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-0",
+      "sprite": "path-stone",
+      "x": 5,
+      "y": 32,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-1",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 23,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-2",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 23,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-3",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 14,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-4",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 14,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-5",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 14,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-6",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 23,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-7",
+      "sprite": "path-stone",
+      "x": 41,
+      "y": 14,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-8",
+      "sprite": "path-stone",
+      "x": 41,
+      "y": 5,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-9",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 14,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-10",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 14,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-11",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 32,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-12",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 32,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-13",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 23,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-14",
+      "sprite": "path-stone",
+      "x": 5,
+      "y": 23,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-15",
+      "sprite": "path-stone",
+      "x": 5,
+      "y": 14,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-16",
+      "sprite": "path-stone",
+      "x": 5,
+      "y": 5,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-17",
+      "sprite": "path-stone",
+      "x": 5,
+      "y": 5,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-18",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 5,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-19",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 5,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-20",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 32,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-21",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 23,
+      "width": 12,
+      "height": 3,
+      "layer": "terrain"
+    },
+    {
+      "id": "corridor-22",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 23,
+      "width": 3,
+      "height": 12,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-0-0",
+      "sprite": "floor-cosmic",
+      "x": 4,
+      "y": 4,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-1-0",
+      "sprite": "floor-cosmic",
+      "x": 13,
+      "y": 4,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-2-0",
+      "sprite": "floor-cosmic",
+      "x": 22,
+      "y": 4,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-3-0",
+      "sprite": "floor-cosmic",
+      "x": 31,
+      "y": 4,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-4-0",
+      "sprite": "floor-cosmic",
+      "x": 40,
+      "y": 4,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-0-1",
+      "sprite": "floor-cosmic",
+      "x": 4,
+      "y": 13,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-1-1",
+      "sprite": "floor-cosmic",
+      "x": 13,
+      "y": 13,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-2-1",
+      "sprite": "floor-cosmic",
+      "x": 22,
+      "y": 13,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-3-1",
+      "sprite": "floor-cosmic",
+      "x": 31,
+      "y": 13,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-4-1",
+      "sprite": "floor-cosmic",
+      "x": 40,
+      "y": 13,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-0-2",
+      "sprite": "floor-cosmic",
+      "x": 4,
+      "y": 22,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-1-2",
+      "sprite": "floor-cosmic",
+      "x": 13,
+      "y": 22,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-2-2",
+      "sprite": "floor-cosmic",
+      "x": 22,
+      "y": 22,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-3-2",
+      "sprite": "floor-cosmic",
+      "x": 31,
+      "y": 22,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-4-2",
+      "sprite": "floor-cosmic",
+      "x": 40,
+      "y": 22,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-0-3",
+      "sprite": "floor-cosmic",
+      "x": 4,
+      "y": 31,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-1-3",
+      "sprite": "floor-cosmic",
+      "x": 13,
+      "y": 31,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-2-3",
+      "sprite": "floor-cosmic",
+      "x": 22,
+      "y": 31,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-3-3",
+      "sprite": "floor-cosmic",
+      "x": 31,
+      "y": 31,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "court-4-3",
+      "sprite": "floor-cosmic",
+      "x": 40,
+      "y": 31,
+      "width": 5,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "lobby-floor",
+      "sprite": "floor-cosmic",
+      "x": 2,
+      "y": 39,
+      "width": 44,
+      "height": 8,
+      "layer": "terrain"
+    },
+    {
+      "id": "maze-lobby-approach",
+      "sprite": "floor-blue",
+      "x": 5,
+      "y": 32,
+      "width": 3,
+      "height": 13,
+      "layer": "terrain"
+    },
+    {
+      "id": "finish-court",
+      "sprite": "floor-cosmic",
+      "x": 38,
+      "y": 2,
+      "width": 8,
+      "height": 10,
+      "layer": "terrain"
+    },
+    {
+      "id": "checkpoint-crystal-1",
+      "sprite": "crystal-cyan",
+      "x": 13,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "checkpoint-sigil-1",
+      "sprite": "sigil-water",
+      "x": 17,
+      "y": 35,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "checkpoint-crystal-2",
+      "sprite": "crystal-cyan",
+      "x": 22,
+      "y": 12,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "checkpoint-sigil-2",
+      "sprite": "sigil-air",
+      "x": 26,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "checkpoint-crystal-3",
+      "sprite": "crystal-cyan",
+      "x": 40,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "checkpoint-sigil-3",
+      "sprite": "sigil-fire",
+      "x": 44,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "finish-shrine",
+      "sprite": "quest-shrine",
+      "x": 40,
+      "y": 3,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "finish-stars",
+      "sprite": "constellation-pisces",
+      "x": 42,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "finish-light-west",
+      "sprite": "light-amber",
+      "x": 38,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "finish-light-east",
+      "sprite": "light-cyan",
+      "x": 45,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "layer": "props",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "wall-stars-0",
+      "sprite": "constellation-aries",
+      "x": 9,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-0",
+      "sprite": "light-amber",
+      "x": 12,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-stars-1",
+      "sprite": "constellation-gemini",
+      "x": 27,
+      "y": 10,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-1",
+      "sprite": "light-amber",
+      "x": 30,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-stars-2",
+      "sprite": "constellation-libra",
+      "x": 9,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-2",
+      "sprite": "light-amber",
+      "x": 12,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-stars-3",
+      "sprite": "constellation-aquarius",
+      "x": 36,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-3",
+      "sprite": "light-amber",
+      "x": 39,
+      "y": 28,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-stars-4",
+      "sprite": "constellation-leo",
+      "x": 27,
+      "y": 37,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-light-4",
+      "sprite": "light-amber",
+      "x": 30,
+      "y": 37,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "wall-rune-0",
+      "sprite": "rune-frame",
+      "x": 18,
+      "y": 9,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "wall-rune-1",
+      "sprite": "rune-frame",
+      "x": 36,
+      "y": 18,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "wall-rune-2",
+      "sprite": "rune-frame",
+      "x": 18,
+      "y": 27,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "wall-rune-3",
+      "sprite": "rune-frame",
+      "x": 9,
+      "y": 37,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "lobby-bench-west",
+      "sprite": "bench-curved",
+      "x": 16,
+      "y": 44,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "lobby-sofa",
+      "sprite": "sofa-blue",
+      "x": 35,
+      "y": 44,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "lobby-table",
+      "sprite": "table-small-wood",
+      "x": 31,
+      "y": 45,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "lobby-planter",
+      "sprite": "plant-palm",
+      "x": 42,
+      "y": 42,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "lobby-light-west",
+      "sprite": "light-amber",
+      "x": 2,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "props",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "lobby-light-east",
+      "sprite": "light-cyan",
+      "x": 39,
+      "y": 44,
+      "width": 1,
+      "height": 2,
+      "layer": "props",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "return-rune",
+      "sprite": "rune-threshold",
+      "x": 4,
+      "y": 45,
+      "width": 4,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "comet-plaza-rune",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 25,
+      "y": 45,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "authored-navy-fascia-0",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 1,
+      "y": 1,
+      "width": 37,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-1",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 9,
+      "y": 10,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-2",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 18,
+      "y": 18,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-3",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 27,
+      "y": 9,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-4",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 36,
+      "y": 19,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-5",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 9,
+      "y": 28,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "authored-navy-fascia-6",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 27,
+      "y": 37,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "wayfinding-wallboard-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 3,
+      "y": 44,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 3,
+      "y": 44,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 3,
+      "y": 44,
+      "width": 9,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 3,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 11,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 24,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 24,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 24,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 24,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 30,
+      "y": 44,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-face",
+      "sprite": "sign-board-face",
+      "x": 12,
+      "y": 41,
+      "width": 24,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-north",
+      "sprite": "sign-board-north",
+      "x": 12,
+      "y": 41,
+      "width": 24,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-south",
+      "sprite": "sign-board-south",
+      "x": 12,
+      "y": 42,
+      "width": 24,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-west",
+      "sprite": "sign-board-west",
+      "x": 12,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-east",
+      "sprite": "sign-board-east",
+      "x": 35,
+      "y": 41,
+      "width": 1,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-north",
+      "x": 6,
+      "y": 40,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-east",
+      "x": 23,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "signs": [
+    {
+      "name": "checkpoint-label-1",
+      "text": "01",
+      "x": 13,
+      "y": 29,
+      "width": 3,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "checkpoint-label-2",
+      "text": "02",
+      "x": 22,
+      "y": 11,
+      "width": 3,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "checkpoint-label-3",
+      "text": "03",
+      "x": 40,
+      "y": 20,
+      "width": 3,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "finish-title",
+      "text": "COMET SHRINE",
+      "x": 38,
+      "y": 2,
+      "width": 8,
+      "height": 1,
+      "fontSize": 17,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "maze-title",
+      "text": "COMET MAZE",
+      "x": 12,
+      "y": 39,
+      "width": 19,
+      "height": 1,
+      "fontSize": 23,
+      "color": "#f1d9a0",
+      "align": "left"
+    },
+    {
+      "name": "maze-instructions",
+      "text": "\u2191 MAZE \u00b7 FIND 3 CRYSTALS + SHRINE\n\u2193 ORBIT RETURN \u00b7 PLAZA TO THE EAST",
+      "x": 12,
+      "y": 41,
+      "width": 24,
+      "height": 2,
+      "fontSize": 17,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "return-label",
+      "text": "\u2193 ORBIT MAZE",
+      "x": 3,
+      "y": 44,
+      "width": 9,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    },
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 PLAZA",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 24,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "align": "left"
+    }
+  ],
+  "entries": [
+    {
+      "name": "comet-entry",
+      "isDefault": true,
+      "x": 5,
+      "y": 41,
+      "width": 3,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "orbit-return",
+      "destination": "orbit-maze",
+      "entry": "from-comet",
+      "x": 5,
+      "y": 45,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-maze",
+      "x": 26,
+      "y": 45,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "comet-checkpoint-1",
+      "name": "comet-checkpoint-1",
+      "x": 14,
+      "y": 32,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    },
+    {
+      "id": "comet-checkpoint-2",
+      "name": "comet-checkpoint-2",
+      "x": 23,
+      "y": 14,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    },
+    {
+      "id": "comet-checkpoint-3",
+      "name": "comet-checkpoint-3",
+      "x": 41,
+      "y": 23,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    },
+    {
+      "id": "comet-finish",
+      "name": "comet-finish",
+      "x": 40,
+      "y": 7,
+      "width": 3,
+      "height": 3,
+      "properties": []
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "comet-lobby",
+      "kind": "auxiliary",
+      "x": 2,
+      "y": 39,
+      "width": 44,
+      "height": 8
+    },
+    {
+      "name": "comet-finish-court",
+      "kind": "auxiliary",
+      "x": 38,
+      "y": 2,
+      "width": 8,
+      "height": 10
+    }
+  ]
+}

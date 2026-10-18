@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import type {TileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
+import {assertPlazaSuccessor,historicalFloorPlaza} from './plaza-successor';
 const dir='tests/fixtures/plaza-groves/';
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 const need=(ok:unknown,message:string)=>{if(!ok)throw Error('Grove '+message);};
@@ -15,7 +16,7 @@ export function historicalPlaza(kind:'layout'|'native'|'preview'|'routes'|'catal
 }
 export function grovePlacements():MapLayout['placements']{const raw=readFileSync(dir+'placements.json');need(sha(raw)===receipt().placementsSha256,'reviewed placement roster changed');return JSON.parse(raw.toString());}
 export function groveBaseCells(catalog:TileCatalog):Set<string>{return new Set(grovePlacements().flatMap(p=>catalog[p.sprite].blockingCells.map(([x,y])=>`${p.x+x},${p.y+y}`)));}
-export function assertCurrentGroves(layout:MapLayout,map:TiledMap,catalog:TileCatalog):void{
+export function assertReviewedGroves(layout:MapLayout,map:TiledMap,catalog:TileCatalog):void{
  const beforeLayout=historicalPlaza('layout') as MapLayout,before=historicalPlaza('native') as TiledMap,placements=grovePlacements();
  const originalCatalog=historicalPlaza('catalog');for(const key of new Set(placements.map(p=>p.sprite)))need(isDeepStrictEqual(catalog[key],originalCatalog[key]),'original six catalog definitions changed');
  need(placements.length===96&&new Set(placements.map(p=>p.id)).size===96,'exact96 IDs required');
@@ -34,4 +35,8 @@ export function assertCurrentGroves(layout:MapLayout,map:TiledMap,catalog:TileCa
  need(occupied.size===420&&bases.size===120,'reviewed cell cardinality changed');
  expected.layers.splice(floor,0,below);expected.layers.push(above);expected.nextlayerid=id+2;
  need(isDeepStrictEqual(map,expected),'current native is not the exact forward delta');
+}
+export function assertCurrentGroves(layout:MapLayout,map:TiledMap,catalog:TileCatalog):void{
+ try{assertReviewedGroves(historicalFloorPlaza('layout') as MapLayout,historicalFloorPlaza('native') as TiledMap,catalog);assertPlazaSuccessor(layout,map,catalog);}
+ catch(error){throw Error('Grove successor '+String(error));}
 }

@@ -1,3 +1,4 @@
+import {publishedEpochJson} from './helpers/published-map-epoch';
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -15,6 +16,7 @@ const sha=(value:string|Buffer)=>createHash('sha256').update(value).digest('hex'
 const semantic=(value:unknown)=>sha(JSON.stringify(value));
 const require=createRequire(import.meta.url);
 const descriptors=JSON.parse(readFileSync('world/editor-collections.json','utf8'));
+const historicalInteriors=JSON.parse(readFileSync('tests/fixtures/interior-reference/historical-layouts.json','utf8'));
 const historicalBuilderPins:Record<string,string>={"overworld": "a7aabbbb1986691f82deb6caf197d3ffa982f1315b99fe03c16312613f8d61cd", "constellation-shore": "7b968e10d076333eb636730543a4e29fe67da5f2b64152885588821b7f630614", "shipyard-beach": "07200965ed00e3497ea974adecf20ab8516021186eaace5b431c0277aa5cc939"};
 const expected=['FurnitureCollection','OfficeCollection'].map(name=>({url:`https://varcamp.3-1-133-135.sslip.io/collections/${name}.json`,type:'file'}));
 
@@ -52,7 +54,7 @@ describe('builder catalog defaults',()=>{
   expect(descriptors).toEqual(expected);
  });
  for(const [id,proof]of Object.entries(before.maps) as [string,any][]){
-  it(`${id} adds native catalogs while preserving every other builder output${id==='overworld'?' of its frozen historical input':''}`,()=>{
+  it(`${id} adds native catalogs while preserving every other builder output${id==='overworld'||historicalInteriors[id]?' of its frozen historical input':''}`,()=>{
    // This catalog-only receipt predates the separate return-navigation release.
    const raw=readFileSync(id==='overworld'?'tests/fixtures/overworld-history/pre-return-layout.json':id==='constellation-shore'?'tests/fixtures/solid-props/before-constellation-shore.json':['fa-ship','shipyard-beach'].includes(id)?`tests/fixtures/beach-composition/before-${id}.json`:`world/layouts/${id}.json`,'utf8');
    if(id==='overworld')expect(sha(raw)).toBe('49d0f002a11c0966550eb9025c2c3ce0e7f023605960ea6c91341decce506093');
@@ -67,13 +69,18 @@ describe('builder catalog defaults',()=>{
     const{entityCollections,...currentRest}=current;expect(semantic(currentRest)).toBe(proof.wamExceptEntityCollections);
     return;
    }
-   const layout=JSON.parse(raw) as MapLayout;
-   const{tmj,wam}=buildMap(layout,catalog),{entityCollections,...rest}=wam;
+   // This historical catalog-only receipt keeps its original room composition.
+   // Current fourteen-room defaults are independently verified below.
+   const layout=(historicalInteriors[id]??(id==='fa-ship'?JSON.parse(raw):publishedEpochJson(`world/layouts/${id}.json`))) as MapLayout;
+   const{tmj,wam}=buildMap(layout,publishedEpochJson('art/tile-catalog.json')),{entityCollections,...rest}=wam;
    expect(entityCollections).toEqual(descriptors);
    expect(semantic(tmj)).toBe(proof.native);
    expect(semantic(rest)).toBe(proof.wamExceptEntityCollections);
   });
  }
+ it('registers both native catalogs in every current authored map',()=>{
+  for(const id of readdirSync('world/layouts').filter(p=>p.endsWith('.json')).map(p=>p.slice(0,-5))){const layout=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8')) as MapLayout;expect(buildMap(layout,catalog).wam.entityCollections,id).toEqual(descriptors);}
+ });
  it('returns fresh arrays and descriptor objects for each authored map',()=>{
   const layout=JSON.parse(readFileSync('world/layouts/speaker-aries.json','utf8')) as MapLayout;
   const first=buildMap(layout,catalog).wam,second=buildMap(layout,catalog).wam;

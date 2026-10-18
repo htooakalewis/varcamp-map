@@ -1,0 +1,518 @@
+{
+  "id": "star-garden",
+  "width": 40,
+  "height": 40,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "floor-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "authored-twilight",
+      "sprite": "night-wash",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40,
+      "layer": "atmosphere"
+    },
+    {
+      "id": "court",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 3,
+      "y": 7,
+      "width": 34,
+      "height": 30
+    },
+    {
+      "id": "boundary-north",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-south",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 38,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-west",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "boundary-east",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 38,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "north-navy",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 2,
+      "y": 1,
+      "width": 36,
+      "height": 2
+    },
+    {
+      "id": "arrival-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 16,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "plaza-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 18,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "branch-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 5,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "branch-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 6,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "dawn-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 5,
+      "y": 10,
+      "width": 10,
+      "height": 8
+    },
+    {
+      "id": "dawn-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 6,
+      "y": 11,
+      "width": 8,
+      "height": 6
+    },
+    {
+      "id": "dawn-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 6,
+      "y": 11,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "dawn-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 11,
+      "y": 11,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "dusk-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 25,
+      "y": 10,
+      "width": 10,
+      "height": 8
+    },
+    {
+      "id": "dusk-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 26,
+      "y": 11,
+      "width": 8,
+      "height": 6
+    },
+    {
+      "id": "dusk-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 26,
+      "y": 11,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "dusk-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 31,
+      "y": 11,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "solar-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 5,
+      "y": 22,
+      "width": 10,
+      "height": 8
+    },
+    {
+      "id": "solar-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 6,
+      "y": 23,
+      "width": 8,
+      "height": 6
+    },
+    {
+      "id": "solar-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 6,
+      "y": 23,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "solar-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 11,
+      "y": 23,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "lunar-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 25,
+      "y": 22,
+      "width": 10,
+      "height": 8
+    },
+    {
+      "id": "lunar-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 26,
+      "y": 23,
+      "width": 8,
+      "height": 6
+    },
+    {
+      "id": "lunar-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 26,
+      "y": 23,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "lunar-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 31,
+      "y": 23,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "garden-fountain-edge",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 17,
+      "y": 13,
+      "width": 6,
+      "height": 9
+    },
+    {
+      "id": "garden-fountain",
+      "sprite": "water-blue",
+      "layer": "terrain",
+      "x": 18,
+      "y": 14,
+      "width": 4,
+      "height": 7
+    },
+    {
+      "id": "garden-lily",
+      "sprite": "lily-pad",
+      "layer": "props",
+      "x": 19,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "garden-star",
+      "sprite": "glyph-virgo",
+      "layer": "props",
+      "x": 19,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "garden-bench-west",
+      "sprite": "bench-park",
+      "layer": "props",
+      "x": 13,
+      "y": 17,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "garden-bench-east",
+      "sprite": "bench-park",
+      "layer": "props",
+      "x": 25,
+      "y": 17,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 15,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 26,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 4,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 14,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 19,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-south",
+      "x": 7,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "arrival",
+      "x": 19,
+      "y": 32,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-campus",
+      "x": 19,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "branch-return",
+      "destination": "campus-exploration",
+      "entry": "from-star-garden",
+      "x": 7,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "garden-conversation",
+      "name": "garden-conversation",
+      "properties": [],
+      "x": 17,
+      "y": 24,
+      "width": 6,
+      "height": 4
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "four-star-beds",
+      "kind": "landmark",
+      "x": 4,
+      "y": 9,
+      "width": 32,
+      "height": 22
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 ZODIAC PLAZA",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "branch-return-label",
+      "text": "\u2193 EXPLORATION",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "garden-title",
+      "text": "STAR GARDEN",
+      "fontSize": 26,
+      "color": "#f4d77b",
+      "x": 11,
+      "y": 3,
+      "width": 20,
+      "height": 2,
+      "align": "left"
+    },
+    {
+      "name": "garden-note",
+      "text": "PAUSE BENEATH THE STARS",
+      "fontSize": 15,
+      "color": "#f4d77b",
+      "x": 12,
+      "y": 30,
+      "width": 18,
+      "height": 1,
+      "align": "left"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "operation": "uniform nearest-neighbor export; approved source RGBA retained",
+  "inputs": {
+    "zodiac": {
+      "path": "art/source/plaza-original/zodiac-approved-master.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "03b70e9d0822474cc60b33571b2bfc02a936620e5edb55ad8aba3fb3d83c7d8c"
+    },
+    "brand": {
+      "path": "art/source/plaza-original/varcamp-approved-master.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "4eff60f9cd3422d2f5dbb75b546653445eeb402a594cc4299680bec9d1055103"
+    }
+  },
+  "exports": {
+    "zodiac": {
+      "path": "assets/tilesets/original/zodiac-emblems.png",
+      "width": 512,
+      "height": 384,
+      "cellWidth": 128,
+      "cellHeight": 128,
+      "sha256": "da65988d7efc69908599c6a8a2077d2172664af5f6a0be68384b8edd5cf87372"
+    },
+    "brand": {
+      "path": "assets/sponsors/varcamp-2026.png",
+      "width": 192,
+      "height": 64,
+      "sha256": "355f9df9be585dbdfe67b7cbbd34cfd893c0fc9f6e1463a5c3d92f3552c9cc8f"
+    }
+  }
+}

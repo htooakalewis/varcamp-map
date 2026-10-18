@@ -1,0 +1,568 @@
+{
+  "id": "nebula-arcade",
+  "width": 40,
+  "height": 40,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "floor-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "authored-twilight",
+      "sprite": "night-wash",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40,
+      "layer": "atmosphere"
+    },
+    {
+      "id": "court",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 3,
+      "y": 7,
+      "width": 34,
+      "height": 30
+    },
+    {
+      "id": "boundary-north",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-south",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 38,
+      "width": 40,
+      "height": 2
+    },
+    {
+      "id": "boundary-west",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "boundary-east",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 38,
+      "y": 2,
+      "width": 2,
+      "height": 36
+    },
+    {
+      "id": "north-navy",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 2,
+      "y": 1,
+      "width": 36,
+      "height": 2
+    },
+    {
+      "id": "arrival-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 16,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "plaza-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 18,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "branch-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 5,
+      "y": 30,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "branch-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 6,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "arcade-room",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 3,
+      "y": 5,
+      "width": 34,
+      "height": 28
+    },
+    {
+      "id": "arcade-aisle",
+      "sprite": "floor-blue",
+      "layer": "terrain",
+      "x": 15,
+      "y": 12,
+      "width": 10,
+      "height": 20
+    },
+    {
+      "id": "stage-floor",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 12,
+      "y": 7,
+      "width": 16,
+      "height": 5
+    },
+    {
+      "id": "tournament-screen",
+      "sprite": "screen-presentation",
+      "layer": "props",
+      "x": 17,
+      "y": 7,
+      "width": 6,
+      "height": 3,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "stage-console",
+      "sprite": "desk-coding",
+      "layer": "props",
+      "x": 18,
+      "y": 11,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "cabinet-west0",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 5,
+      "y": 10,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-west0",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 8,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cabinet-west1",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 5,
+      "y": 17,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-west1",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 8,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cabinet-west2",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 5,
+      "y": 24,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-west2",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 8,
+      "y": 24,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cabinet-east0",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 31,
+      "y": 10,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-east0",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 34,
+      "y": 10,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cabinet-east1",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 31,
+      "y": 17,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-east1",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 34,
+      "y": 17,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cabinet-east2",
+      "sprite": "arcade-cabinet",
+      "layer": "props",
+      "x": 31,
+      "y": 24,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "cabinet-light-east2",
+      "sprite": "light-cyan",
+      "layer": "props",
+      "x": 34,
+      "y": 24,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "arcade-lounge-west",
+      "sprite": "sofa-blue",
+      "layer": "props",
+      "x": 12,
+      "y": 25,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "arcade-lounge-east",
+      "sprite": "sofa-blue",
+      "layer": "props",
+      "x": 25,
+      "y": 25,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "social-table-west",
+      "sprite": "table-small-white",
+      "layer": "props",
+      "x": 13,
+      "y": 29,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "social-table-east",
+      "sprite": "table-small-white",
+      "layer": "props",
+      "x": 26,
+      "y": 29,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 15,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 26,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 4,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-branch-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 14,
+      "y": 37,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-south",
+      "x": 19,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-south",
+      "x": 7,
+      "y": 34,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "arcade-entry",
+      "x": 19,
+      "y": 32,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-festival",
+      "x": 19,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "branch-return",
+      "destination": "zodiac-festival-park",
+      "entry": "from-arcade",
+      "x": 7,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "stage-approach",
+      "name": "stage-approach",
+      "properties": [],
+      "x": 17,
+      "y": 14,
+      "width": 6,
+      "height": 3
+    },
+    {
+      "id": "cabinet-social-west",
+      "name": "cabinet-social-west",
+      "properties": [],
+      "x": 5,
+      "y": 28,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "cabinet-social-east",
+      "name": "cabinet-social-east",
+      "properties": [],
+      "x": 31,
+      "y": 28,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "table-social-west",
+      "name": "table-social-west",
+      "properties": [],
+      "x": 10,
+      "y": 28,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "id": "table-social-east",
+      "name": "table-social-east",
+      "properties": [],
+      "x": 27,
+      "y": 28,
+      "width": 3,
+      "height": 3
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "tournament-stage",
+      "kind": "landmark",
+      "x": 12,
+      "y": 6,
+      "width": 16,
+      "height": 11
+    },
+    {
+      "name": "arcade-cabinets",
+      "kind": "landmark",
+      "x": 4,
+      "y": 9,
+      "width": 8,
+      "height": 19
+    },
+    {
+      "name": "social-tables",
+      "kind": "landmark",
+      "x": 10,
+      "y": 24,
+      "width": 20,
+      "height": 8
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 ZODIAC PLAZA",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 15,
+      "y": 37,
+      "width": 12,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "branch-return-label",
+      "text": "\u2193 FESTIVAL PARK",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 4,
+      "y": 37,
+      "width": 11,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "arcade-title",
+      "text": "NEBULA ARCADE",
+      "fontSize": 26,
+      "color": "#f4d77b",
+      "x": 10,
+      "y": 3,
+      "width": 20,
+      "height": 2,
+      "align": "left"
+    },
+    {
+      "name": "tournament-label",
+      "text": "PLAY \u00b7 WATCH \u00b7 MEET",
+      "fontSize": 16,
+      "color": "#f4d77b",
+      "x": 14,
+      "y": 19,
+      "width": 13,
+      "height": 1,
+      "align": "left"
+    }
+  ]
+}

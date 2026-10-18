@@ -1,0 +1,4686 @@
+{
+  "baselineCommit": "36c7df35b3dd019a5679a3f310fe242ec210d063",
+  "catalogKeys": [
+    "arcade-cabinet",
+    "arrow-east",
+    "arrow-north",
+    "arrow-south",
+    "arrow-west",
+    "balance-libra",
+    "balance-wall-relief",
+    "beach-cabana",
+    "beach-grass",
+    "beach-low-table",
+    "beach-palm",
+    "beach-parasol-coral",
+    "beach-parasol-teal",
+    "beach-pebbles",
+    "beach-recliner",
+    "beach-sand-0",
+    "beach-sand-1",
+    "beach-sand-10",
+    "beach-sand-11",
+    "beach-sand-12",
+    "beach-sand-13",
+    "beach-sand-14",
+    "beach-sand-15",
+    "beach-sand-2",
+    "beach-sand-3",
+    "beach-sand-4",
+    "beach-sand-5",
+    "beach-sand-6",
+    "beach-sand-7",
+    "beach-sand-8",
+    "beach-sand-9",
+    "beach-sea-veil",
+    "beach-shrub",
+    "beach-tiki-bar",
+    "beach-woven-towel",
+    "beacon",
+    "bench-curved",
+    "bench-park",
+    "boat-wood",
+    "bookcase",
+    "bridge-rail-bottom",
+    "bridge-rail-top",
+    "bridge-stone-rails",
+    "chair-lounge",
+    "chair-north-cream",
+    "chair-north-slate",
+    "chair-presentation",
+    "coast-barrel",
+    "coast-beach-bar",
+    "coast-bulwark",
+    "coast-cannon",
+    "coast-cloud",
+    "coast-crate",
+    "coast-deck-chair",
+    "coast-deck-plank",
+    "coast-dock-plank",
+    "coast-fish",
+    "coast-flag",
+    "coast-foam-east",
+    "coast-foam-north",
+    "coast-foam-south",
+    "coast-foam-west",
+    "coast-footprints",
+    "coast-gull",
+    "coast-harbor-hut",
+    "coast-hatch",
+    "coast-mast",
+    "coast-mooring-post",
+    "coast-palm",
+    "coast-parasol",
+    "coast-pebble-cluster",
+    "coast-rope-horizontal",
+    "coast-rope-vertical",
+    "coast-sailing-ship",
+    "coast-sand",
+    "coast-sandcastle",
+    "coast-sea",
+    "coast-shallows",
+    "coast-shell",
+    "coast-sign-board",
+    "coast-sign-pointer-left",
+    "coast-sign-pointer-right",
+    "coast-sign-post",
+    "coast-sponsor-balloon",
+    "coast-sponsor-plane",
+    "coast-square-sail",
+    "coast-towel",
+    "coast-underwater-rock",
+    "coast-volley-net",
+    "coast-wet-sand",
+    "coast-wheel",
+    "coast-yard-aft",
+    "coast-yard-fore",
+    "coast-yard-starboard",
+    "coffee-maker",
+    "comet-statue",
+    "console-green",
+    "console-keypad",
+    "constellation-aquarius",
+    "constellation-aries",
+    "constellation-cancer",
+    "constellation-capricorn",
+    "constellation-coast-land-100",
+    "constellation-coast-land-1012",
+    "constellation-coast-land-1016",
+    "constellation-coast-land-1028",
+    "constellation-coast-land-1032",
+    "constellation-coast-land-1036",
+    "constellation-coast-land-104",
+    "constellation-coast-land-1040",
+    "constellation-coast-land-1052",
+    "constellation-coast-land-1056",
+    "constellation-coast-land-1060",
+    "constellation-coast-land-108",
+    "constellation-coast-land-1080",
+    "constellation-coast-land-1084",
+    "constellation-coast-land-1088",
+    "constellation-coast-land-1092",
+    "constellation-coast-land-1112",
+    "constellation-coast-land-1116",
+    "constellation-coast-land-1120",
+    "constellation-coast-land-1140",
+    "constellation-coast-land-1144",
+    "constellation-coast-land-1148",
+    "constellation-coast-land-1152",
+    "constellation-coast-land-124",
+    "constellation-coast-land-128",
+    "constellation-coast-land-140",
+    "constellation-coast-land-144",
+    "constellation-coast-land-148",
+    "constellation-coast-land-164",
+    "constellation-coast-land-168",
+    "constellation-coast-land-192",
+    "constellation-coast-land-196",
+    "constellation-coast-land-200",
+    "constellation-coast-land-248",
+    "constellation-coast-land-252",
+    "constellation-coast-land-256",
+    "constellation-coast-land-260",
+    "constellation-coast-land-264",
+    "constellation-coast-land-28",
+    "constellation-coast-land-284",
+    "constellation-coast-land-288",
+    "constellation-coast-land-292",
+    "constellation-coast-land-32",
+    "constellation-coast-land-328",
+    "constellation-coast-land-332",
+    "constellation-coast-land-336",
+    "constellation-coast-land-340",
+    "constellation-coast-land-344",
+    "constellation-coast-land-348",
+    "constellation-coast-land-352",
+    "constellation-coast-land-356",
+    "constellation-coast-land-36",
+    "constellation-coast-land-360",
+    "constellation-coast-land-364",
+    "constellation-coast-land-368",
+    "constellation-coast-land-372",
+    "constellation-coast-land-392",
+    "constellation-coast-land-400",
+    "constellation-coast-land-404",
+    "constellation-coast-land-408",
+    "constellation-coast-land-412",
+    "constellation-coast-land-416",
+    "constellation-coast-land-420",
+    "constellation-coast-land-424",
+    "constellation-coast-land-428",
+    "constellation-coast-land-440",
+    "constellation-coast-land-444",
+    "constellation-coast-land-448",
+    "constellation-coast-land-452",
+    "constellation-coast-land-456",
+    "constellation-coast-land-460",
+    "constellation-coast-land-476",
+    "constellation-coast-land-480",
+    "constellation-coast-land-492",
+    "constellation-coast-land-496",
+    "constellation-coast-land-500",
+    "constellation-coast-land-516",
+    "constellation-coast-land-52",
+    "constellation-coast-land-520",
+    "constellation-coast-land-524",
+    "constellation-coast-land-536",
+    "constellation-coast-land-540",
+    "constellation-coast-land-552",
+    "constellation-coast-land-556",
+    "constellation-coast-land-56",
+    "constellation-coast-land-560",
+    "constellation-coast-land-572",
+    "constellation-coast-land-576",
+    "constellation-coast-land-592",
+    "constellation-coast-land-596",
+    "constellation-coast-land-60",
+    "constellation-coast-land-600",
+    "constellation-coast-land-604",
+    "constellation-coast-land-616",
+    "constellation-coast-land-620",
+    "constellation-coast-land-624",
+    "constellation-coast-land-636",
+    "constellation-coast-land-64",
+    "constellation-coast-land-640",
+    "constellation-coast-land-652",
+    "constellation-coast-land-656",
+    "constellation-coast-land-668",
+    "constellation-coast-land-672",
+    "constellation-coast-land-676",
+    "constellation-coast-land-680",
+    "constellation-coast-land-684",
+    "constellation-coast-land-688",
+    "constellation-coast-land-700",
+    "constellation-coast-land-704",
+    "constellation-coast-land-708",
+    "constellation-coast-land-720",
+    "constellation-coast-land-724",
+    "constellation-coast-land-728",
+    "constellation-coast-land-732",
+    "constellation-coast-land-748",
+    "constellation-coast-land-752",
+    "constellation-coast-land-756",
+    "constellation-coast-land-76",
+    "constellation-coast-land-760",
+    "constellation-coast-land-784",
+    "constellation-coast-land-788",
+    "constellation-coast-land-792",
+    "constellation-coast-land-796",
+    "constellation-coast-land-80",
+    "constellation-coast-land-812",
+    "constellation-coast-land-816",
+    "constellation-coast-land-820",
+    "constellation-coast-land-824",
+    "constellation-coast-land-84",
+    "constellation-coast-land-844",
+    "constellation-coast-land-848",
+    "constellation-coast-land-864",
+    "constellation-coast-land-868",
+    "constellation-coast-land-872",
+    "constellation-coast-land-876",
+    "constellation-coast-land-896",
+    "constellation-coast-land-900",
+    "constellation-coast-land-904",
+    "constellation-coast-land-908",
+    "constellation-coast-land-920",
+    "constellation-coast-land-924",
+    "constellation-coast-land-944",
+    "constellation-coast-land-948",
+    "constellation-coast-land-964",
+    "constellation-coast-land-968",
+    "constellation-coast-land-972",
+    "constellation-coast-land-976",
+    "constellation-coast-land-988",
+    "constellation-coast-land-992",
+    "constellation-coast-land-996",
+    "constellation-coast-water-0",
+    "constellation-coast-water-1000",
+    "constellation-coast-water-1004",
+    "constellation-coast-water-1008",
+    "constellation-coast-water-1020",
+    "constellation-coast-water-1024",
+    "constellation-coast-water-1044",
+    "constellation-coast-water-1048",
+    "constellation-coast-water-1064",
+    "constellation-coast-water-1068",
+    "constellation-coast-water-1072",
+    "constellation-coast-water-1076",
+    "constellation-coast-water-1096",
+    "constellation-coast-water-1100",
+    "constellation-coast-water-1104",
+    "constellation-coast-water-1108",
+    "constellation-coast-water-112",
+    "constellation-coast-water-1124",
+    "constellation-coast-water-1128",
+    "constellation-coast-water-1132",
+    "constellation-coast-water-1136",
+    "constellation-coast-water-1156",
+    "constellation-coast-water-116",
+    "constellation-coast-water-1160",
+    "constellation-coast-water-1164",
+    "constellation-coast-water-1168",
+    "constellation-coast-water-1172",
+    "constellation-coast-water-1176",
+    "constellation-coast-water-1180",
+    "constellation-coast-water-1184",
+    "constellation-coast-water-1188",
+    "constellation-coast-water-1192",
+    "constellation-coast-water-1196",
+    "constellation-coast-water-12",
+    "constellation-coast-water-120",
+    "constellation-coast-water-1200",
+    "constellation-coast-water-1204",
+    "constellation-coast-water-1208",
+    "constellation-coast-water-132",
+    "constellation-coast-water-136",
+    "constellation-coast-water-152",
+    "constellation-coast-water-156",
+    "constellation-coast-water-16",
+    "constellation-coast-water-160",
+    "constellation-coast-water-172",
+    "constellation-coast-water-176",
+    "constellation-coast-water-180",
+    "constellation-coast-water-184",
+    "constellation-coast-water-188",
+    "constellation-coast-water-20",
+    "constellation-coast-water-204",
+    "constellation-coast-water-208",
+    "constellation-coast-water-212",
+    "constellation-coast-water-216",
+    "constellation-coast-water-220",
+    "constellation-coast-water-224",
+    "constellation-coast-water-228",
+    "constellation-coast-water-232",
+    "constellation-coast-water-236",
+    "constellation-coast-water-24",
+    "constellation-coast-water-240",
+    "constellation-coast-water-244",
+    "constellation-coast-water-268",
+    "constellation-coast-water-272",
+    "constellation-coast-water-276",
+    "constellation-coast-water-280",
+    "constellation-coast-water-296",
+    "constellation-coast-water-300",
+    "constellation-coast-water-304",
+    "constellation-coast-water-308",
+    "constellation-coast-water-312",
+    "constellation-coast-water-316",
+    "constellation-coast-water-320",
+    "constellation-coast-water-324",
+    "constellation-coast-water-376",
+    "constellation-coast-water-380",
+    "constellation-coast-water-384",
+    "constellation-coast-water-388",
+    "constellation-coast-water-396",
+    "constellation-coast-water-4",
+    "constellation-coast-water-40",
+    "constellation-coast-water-432",
+    "constellation-coast-water-436",
+    "constellation-coast-water-44",
+    "constellation-coast-water-464",
+    "constellation-coast-water-468",
+    "constellation-coast-water-472",
+    "constellation-coast-water-48",
+    "constellation-coast-water-484",
+    "constellation-coast-water-488",
+    "constellation-coast-water-504",
+    "constellation-coast-water-508",
+    "constellation-coast-water-512",
+    "constellation-coast-water-528",
+    "constellation-coast-water-532",
+    "constellation-coast-water-544",
+    "constellation-coast-water-548",
+    "constellation-coast-water-564",
+    "constellation-coast-water-568",
+    "constellation-coast-water-580",
+    "constellation-coast-water-584",
+    "constellation-coast-water-588",
+    "constellation-coast-water-608",
+    "constellation-coast-water-612",
+    "constellation-coast-water-628",
+    "constellation-coast-water-632",
+    "constellation-coast-water-644",
+    "constellation-coast-water-648",
+    "constellation-coast-water-660",
+    "constellation-coast-water-664",
+    "constellation-coast-water-68",
+    "constellation-coast-water-692",
+    "constellation-coast-water-696",
+    "constellation-coast-water-712",
+    "constellation-coast-water-716",
+    "constellation-coast-water-72",
+    "constellation-coast-water-736",
+    "constellation-coast-water-740",
+    "constellation-coast-water-744",
+    "constellation-coast-water-764",
+    "constellation-coast-water-768",
+    "constellation-coast-water-772",
+    "constellation-coast-water-776",
+    "constellation-coast-water-780",
+    "constellation-coast-water-8",
+    "constellation-coast-water-800",
+    "constellation-coast-water-804",
+    "constellation-coast-water-808",
+    "constellation-coast-water-828",
+    "constellation-coast-water-832",
+    "constellation-coast-water-836",
+    "constellation-coast-water-840",
+    "constellation-coast-water-852",
+    "constellation-coast-water-856",
+    "constellation-coast-water-860",
+    "constellation-coast-water-88",
+    "constellation-coast-water-880",
+    "constellation-coast-water-884",
+    "constellation-coast-water-888",
+    "constellation-coast-water-892",
+    "constellation-coast-water-912",
+    "constellation-coast-water-916",
+    "constellation-coast-water-92",
+    "constellation-coast-water-928",
+    "constellation-coast-water-932",
+    "constellation-coast-water-936",
+    "constellation-coast-water-940",
+    "constellation-coast-water-952",
+    "constellation-coast-water-956",
+    "constellation-coast-water-96",
+    "constellation-coast-water-960",
+    "constellation-coast-water-980",
+    "constellation-coast-water-984",
+    "constellation-gemini",
+    "constellation-leo",
+    "constellation-libra",
+    "constellation-pisces",
+    "constellation-sagittarius",
+    "constellation-scorpio",
+    "constellation-taurus",
+    "constellation-virgo",
+    "copy-machine",
+    "counter-left",
+    "counter-right",
+    "crystal-cyan",
+    "desk-coding",
+    "desk-cream",
+    "desk-curved",
+    "desk-glass",
+    "door-open",
+    "door-wood-closed",
+    "exterior-gate-campus",
+    "exterior-gate-festival",
+    "exterior-gate-lunar",
+    "exterior-gate-maze",
+    "exterior-gate-shipyard",
+    "exterior-gate-solar",
+    "exterior-road-east",
+    "exterior-road-north",
+    "exterior-road-plaza",
+    "exterior-road-south",
+    "exterior-road-west",
+    "floor-blue",
+    "floor-charcoal",
+    "floor-cosmic",
+    "floor-inlay",
+    "floor-wood",
+    "floor-wood-long",
+    "flower-bed",
+    "forge-aries",
+    "forge-wall-relief",
+    "glass-pane",
+    "glass-partition",
+    "glass-pod",
+    "glyph-aquarius",
+    "glyph-aries",
+    "glyph-cancer",
+    "glyph-capricorn",
+    "glyph-gemini",
+    "glyph-leo",
+    "glyph-libra",
+    "glyph-pisces",
+    "glyph-sagittarius",
+    "glyph-scorpio",
+    "glyph-taurus",
+    "glyph-virgo",
+    "ground-grass",
+    "ground-sand",
+    "hub-building-south",
+    "hub-emblem-aquarius",
+    "hub-emblem-aries",
+    "hub-emblem-cancer",
+    "hub-emblem-capricorn",
+    "hub-emblem-gemini",
+    "hub-emblem-leo",
+    "hub-emblem-libra",
+    "hub-emblem-pisces",
+    "hub-emblem-sagittarius",
+    "hub-emblem-scorpio",
+    "hub-emblem-taurus",
+    "hub-emblem-virgo",
+    "hub-label-aquarius",
+    "hub-label-aries",
+    "hub-label-cancer",
+    "hub-label-capricorn",
+    "hub-label-gemini",
+    "hub-label-leo",
+    "hub-label-libra",
+    "hub-label-pisces",
+    "hub-label-sagittarius",
+    "hub-label-scorpio",
+    "hub-label-taurus",
+    "hub-label-virgo",
+    "hub-moon-fountain",
+    "hub-nav-arrival-crosspost",
+    "hub-nav-brand",
+    "hub-nav-directory",
+    "hub-nav-east",
+    "hub-nav-gate-campus",
+    "hub-nav-gate-festival",
+    "hub-nav-gate-lunar",
+    "hub-nav-gate-maze",
+    "hub-nav-gate-shipyard",
+    "hub-nav-gate-solar",
+    "hub-nav-north",
+    "hub-nav-south",
+    "hub-nav-welcome",
+    "hub-nav-west",
+    "hub-nav-you-are-here",
+    "label-aries",
+    "label-libra",
+    "laptop",
+    "lectern",
+    "light-amber",
+    "light-cyan",
+    "lily-pad",
+    "lounge-crescent",
+    "lounge-terraced",
+    "naval-barrel",
+    "naval-cannon",
+    "naval-crate",
+    "naval-dock",
+    "naval-grate",
+    "naval-lpc-ship-1-belowAvatar",
+    "naval-lpc-ship-103-belowAvatar",
+    "naval-lpc-ship-104-belowAvatar",
+    "naval-lpc-ship-105-belowAvatar",
+    "naval-lpc-ship-106-belowAvatar",
+    "naval-lpc-ship-109-belowAvatar",
+    "naval-lpc-ship-110-belowAvatar",
+    "naval-lpc-ship-111-belowAvatar",
+    "naval-lpc-ship-112-belowAvatar",
+    "naval-lpc-ship-113-belowAvatar",
+    "naval-lpc-ship-114-belowAvatar",
+    "naval-lpc-ship-129-belowAvatar",
+    "naval-lpc-ship-134-belowAvatar",
+    "naval-lpc-ship-135-belowAvatar",
+    "naval-lpc-ship-136-belowAvatar",
+    "naval-lpc-ship-137-belowAvatar",
+    "naval-lpc-ship-141-belowAvatar",
+    "naval-lpc-ship-142-belowAvatar",
+    "naval-lpc-ship-143-belowAvatar",
+    "naval-lpc-ship-144-belowAvatar",
+    "naval-lpc-ship-145-belowAvatar",
+    "naval-lpc-ship-146-belowAvatar",
+    "naval-lpc-ship-161-belowAvatar",
+    "naval-lpc-ship-162-belowAvatar",
+    "naval-lpc-ship-163-belowAvatar",
+    "naval-lpc-ship-167-belowAvatar",
+    "naval-lpc-ship-168-belowAvatar",
+    "naval-lpc-ship-169-belowAvatar",
+    "naval-lpc-ship-175-belowAvatar",
+    "naval-lpc-ship-176-belowAvatar",
+    "naval-lpc-ship-177-belowAvatar",
+    "naval-lpc-ship-178-belowAvatar",
+    "naval-lpc-ship-193-belowAvatar",
+    "naval-lpc-ship-194-belowAvatar",
+    "naval-lpc-ship-195-belowAvatar",
+    "naval-lpc-ship-196-belowAvatar",
+    "naval-lpc-ship-197-belowAvatar",
+    "naval-lpc-ship-198-belowAvatar",
+    "naval-lpc-ship-199-belowAvatar",
+    "naval-lpc-ship-2-belowAvatar",
+    "naval-lpc-ship-200-belowAvatar",
+    "naval-lpc-ship-201-belowAvatar",
+    "naval-lpc-ship-206-belowAvatar",
+    "naval-lpc-ship-207-belowAvatar",
+    "naval-lpc-ship-208-belowAvatar",
+    "naval-lpc-ship-209-belowAvatar",
+    "naval-lpc-ship-226-belowAvatar",
+    "naval-lpc-ship-227-belowAvatar",
+    "naval-lpc-ship-228-belowAvatar",
+    "naval-lpc-ship-229-belowAvatar",
+    "naval-lpc-ship-230-belowAvatar",
+    "naval-lpc-ship-231-belowAvatar",
+    "naval-lpc-ship-232-belowAvatar",
+    "naval-lpc-ship-269-belowAvatar",
+    "naval-lpc-ship-3-belowAvatar",
+    "naval-lpc-ship-33-belowAvatar",
+    "naval-lpc-ship-34-belowAvatar",
+    "naval-lpc-ship-340-belowAvatar",
+    "naval-lpc-ship-35-belowAvatar",
+    "naval-lpc-ship-36-belowAvatar",
+    "naval-lpc-ship-37-belowAvatar",
+    "naval-lpc-ship-38-belowAvatar",
+    "naval-lpc-ship-39-belowAvatar",
+    "naval-lpc-ship-4-belowAvatar",
+    "naval-lpc-ship-40-belowAvatar",
+    "naval-lpc-ship-41-belowAvatar",
+    "naval-lpc-ship-425-belowAvatar",
+    "naval-lpc-ship-427-belowAvatar",
+    "naval-lpc-ship-430-belowAvatar",
+    "naval-lpc-ship-431-belowAvatar",
+    "naval-lpc-ship-432-belowAvatar",
+    "naval-lpc-ship-433-belowAvatar",
+    "naval-lpc-ship-450-belowAvatar",
+    "naval-lpc-ship-451-belowAvatar",
+    "naval-lpc-ship-452-belowAvatar",
+    "naval-lpc-ship-453-belowAvatar",
+    "naval-lpc-ship-454-belowAvatar",
+    "naval-lpc-ship-455-belowAvatar",
+    "naval-lpc-ship-456-belowAvatar",
+    "naval-lpc-ship-457-belowAvatar",
+    "naval-lpc-ship-458-belowAvatar",
+    "naval-lpc-ship-460-belowAvatar",
+    "naval-lpc-ship-463-belowAvatar",
+    "naval-lpc-ship-464-belowAvatar",
+    "naval-lpc-ship-481-belowAvatar",
+    "naval-lpc-ship-482-belowAvatar",
+    "naval-lpc-ship-483-belowAvatar",
+    "naval-lpc-ship-484-belowAvatar",
+    "naval-lpc-ship-485-belowAvatar",
+    "naval-lpc-ship-486-belowAvatar",
+    "naval-lpc-ship-487-belowAvatar",
+    "naval-lpc-ship-488-belowAvatar",
+    "naval-lpc-ship-489-belowAvatar",
+    "naval-lpc-ship-496-belowAvatar",
+    "naval-lpc-ship-499-belowAvatar",
+    "naval-lpc-ship-5-belowAvatar",
+    "naval-lpc-ship-512-belowAvatar",
+    "naval-lpc-ship-513-belowAvatar",
+    "naval-lpc-ship-514-belowAvatar",
+    "naval-lpc-ship-516-belowAvatar",
+    "naval-lpc-ship-517-belowAvatar",
+    "naval-lpc-ship-518-belowAvatar",
+    "naval-lpc-ship-519-belowAvatar",
+    "naval-lpc-ship-520-belowAvatar",
+    "naval-lpc-ship-536-belowAvatar",
+    "naval-lpc-ship-543-belowAvatar",
+    "naval-lpc-ship-544-belowAvatar",
+    "naval-lpc-ship-545-belowAvatar",
+    "naval-lpc-ship-546-belowAvatar",
+    "naval-lpc-ship-548-belowAvatar",
+    "naval-lpc-ship-549-belowAvatar",
+    "naval-lpc-ship-550-belowAvatar",
+    "naval-lpc-ship-551-belowAvatar",
+    "naval-lpc-ship-552-belowAvatar",
+    "naval-lpc-ship-557-belowAvatar",
+    "naval-lpc-ship-575-belowAvatar",
+    "naval-lpc-ship-577-belowAvatar",
+    "naval-lpc-ship-578-belowAvatar",
+    "naval-lpc-ship-579-belowAvatar",
+    "naval-lpc-ship-580-belowAvatar",
+    "naval-lpc-ship-581-belowAvatar",
+    "naval-lpc-ship-583-belowAvatar",
+    "naval-lpc-ship-584-belowAvatar",
+    "naval-lpc-ship-591-belowAvatar",
+    "naval-lpc-ship-592-belowAvatar",
+    "naval-lpc-ship-593-belowAvatar",
+    "naval-lpc-ship-6-belowAvatar",
+    "naval-lpc-ship-600-belowAvatar",
+    "naval-lpc-ship-602-belowAvatar",
+    "naval-lpc-ship-603-belowAvatar",
+    "naval-lpc-ship-604-belowAvatar",
+    "naval-lpc-ship-605-belowAvatar",
+    "naval-lpc-ship-606-belowAvatar",
+    "naval-lpc-ship-607-belowAvatar",
+    "naval-lpc-ship-610-belowAvatar",
+    "naval-lpc-ship-611-belowAvatar",
+    "naval-lpc-ship-612-belowAvatar",
+    "naval-lpc-ship-613-belowAvatar",
+    "naval-lpc-ship-614-belowAvatar",
+    "naval-lpc-ship-615-belowAvatar",
+    "naval-lpc-ship-616-belowAvatar",
+    "naval-lpc-ship-617-belowAvatar",
+    "naval-lpc-ship-619-belowAvatar",
+    "naval-lpc-ship-621-belowAvatar",
+    "naval-lpc-ship-623-belowAvatar",
+    "naval-lpc-ship-624-belowAvatar",
+    "naval-lpc-ship-625-belowAvatar",
+    "naval-lpc-ship-631-belowAvatar",
+    "naval-lpc-ship-635-belowAvatar",
+    "naval-lpc-ship-636-belowAvatar",
+    "naval-lpc-ship-637-belowAvatar",
+    "naval-lpc-ship-638-belowAvatar",
+    "naval-lpc-ship-639-belowAvatar",
+    "naval-lpc-ship-645-belowAvatar",
+    "naval-lpc-ship-646-belowAvatar",
+    "naval-lpc-ship-647-belowAvatar",
+    "naval-lpc-ship-648-belowAvatar",
+    "naval-lpc-ship-649-belowAvatar",
+    "naval-lpc-ship-65-belowAvatar",
+    "naval-lpc-ship-652-belowAvatar",
+    "naval-lpc-ship-653-belowAvatar",
+    "naval-lpc-ship-655-belowAvatar",
+    "naval-lpc-ship-657-belowAvatar",
+    "naval-lpc-ship-66-belowAvatar",
+    "naval-lpc-ship-660-belowAvatar",
+    "naval-lpc-ship-666-belowAvatar",
+    "naval-lpc-ship-67-belowAvatar",
+    "naval-lpc-ship-68-belowAvatar",
+    "naval-lpc-ship-69-belowAvatar",
+    "naval-lpc-ship-692-belowAvatar",
+    "naval-lpc-ship-698-belowAvatar",
+    "naval-lpc-ship-7-belowAvatar",
+    "naval-lpc-ship-71-belowAvatar",
+    "naval-lpc-ship-72-belowAvatar",
+    "naval-lpc-ship-73-belowAvatar",
+    "naval-lpc-ship-768-belowAvatar",
+    "naval-lpc-ship-769-belowAvatar",
+    "naval-lpc-ship-77-belowAvatar",
+    "naval-lpc-ship-8-belowAvatar",
+    "naval-lpc-ship-801-belowAvatar",
+    "naval-lpc-ship-802-belowAvatar",
+    "naval-lpc-ship-803-belowAvatar",
+    "naval-lpc-ship-804-belowAvatar",
+    "naval-lpc-ship-816-belowAvatar",
+    "naval-lpc-ship-817-belowAvatar",
+    "naval-lpc-ship-818-belowAvatar",
+    "naval-lpc-ship-82-belowAvatar",
+    "naval-lpc-ship-835-belowAvatar",
+    "naval-lpc-ship-836-belowAvatar",
+    "naval-lpc-ship-837-belowAvatar",
+    "naval-lpc-ship-838-belowAvatar",
+    "naval-lpc-ship-839-belowAvatar",
+    "naval-lpc-ship-840-belowAvatar",
+    "naval-lpc-ship-9-belowAvatar",
+    "naval-lpc-ship-97-belowAvatar",
+    "naval-lpc-ship-98-belowAvatar",
+    "naval-lpc-ship-accessories-0-belowAvatar",
+    "naval-lpc-ship-accessories-120-belowAvatar",
+    "naval-lpc-ship-accessories-122-belowAvatar",
+    "naval-lpc-ship-accessories-123-belowAvatar",
+    "naval-lpc-ship-accessories-124-belowAvatar",
+    "naval-lpc-ship-accessories-125-belowAvatar",
+    "naval-lpc-ship-accessories-13-belowAvatar",
+    "naval-lpc-ship-accessories-136-belowAvatar",
+    "naval-lpc-ship-accessories-138-belowAvatar",
+    "naval-lpc-ship-accessories-152-belowAvatar",
+    "naval-lpc-ship-accessories-154-belowAvatar",
+    "naval-lpc-ship-accessories-155-belowAvatar",
+    "naval-lpc-ship-accessories-156-belowAvatar",
+    "naval-lpc-ship-accessories-157-belowAvatar",
+    "naval-lpc-ship-accessories-16-belowAvatar",
+    "naval-lpc-ship-accessories-168-belowAvatar",
+    "naval-lpc-ship-accessories-169-belowAvatar",
+    "naval-lpc-ship-accessories-29-belowAvatar",
+    "naval-lpc-ship-accessories-32-belowAvatar",
+    "naval-lpc-ship-accessories-45-belowAvatar",
+    "naval-lpc-ship-accessories-60-belowAvatar",
+    "naval-lpc-ship-accessories-76-belowAvatar",
+    "naval-lpc-ship-accessories-77-belowAvatar",
+    "naval-lpc-ship-accessories-80-belowAvatar",
+    "naval-lpc-ship-accessories-93-belowAvatar",
+    "naval-lpc-ship-accessories-97-belowAvatar",
+    "naval-mast-base",
+    "naval-name-boarding",
+    "naval-name-hull",
+    "naval-rigging-10-aboveAvatar",
+    "naval-rigging-100-aboveAvatar",
+    "naval-rigging-1001-aboveAvatar",
+    "naval-rigging-1002-aboveAvatar",
+    "naval-rigging-1003-aboveAvatar",
+    "naval-rigging-1004-aboveAvatar",
+    "naval-rigging-1005-aboveAvatar",
+    "naval-rigging-1006-aboveAvatar",
+    "naval-rigging-1007-aboveAvatar",
+    "naval-rigging-1008-aboveAvatar",
+    "naval-rigging-101-aboveAvatar",
+    "naval-rigging-102-aboveAvatar",
+    "naval-rigging-103-aboveAvatar",
+    "naval-rigging-104-aboveAvatar",
+    "naval-rigging-105-aboveAvatar",
+    "naval-rigging-106-aboveAvatar",
+    "naval-rigging-107-aboveAvatar",
+    "naval-rigging-11-aboveAvatar",
+    "naval-rigging-126-aboveAvatar",
+    "naval-rigging-127-aboveAvatar",
+    "naval-rigging-131-aboveAvatar",
+    "naval-rigging-132-aboveAvatar",
+    "naval-rigging-133-aboveAvatar",
+    "naval-rigging-134-aboveAvatar",
+    "naval-rigging-135-aboveAvatar",
+    "naval-rigging-136-aboveAvatar",
+    "naval-rigging-137-aboveAvatar",
+    "naval-rigging-138-aboveAvatar",
+    "naval-rigging-139-aboveAvatar",
+    "naval-rigging-158-aboveAvatar",
+    "naval-rigging-159-aboveAvatar",
+    "naval-rigging-163-aboveAvatar",
+    "naval-rigging-164-aboveAvatar",
+    "naval-rigging-165-aboveAvatar",
+    "naval-rigging-166-aboveAvatar",
+    "naval-rigging-167-aboveAvatar",
+    "naval-rigging-168-aboveAvatar",
+    "naval-rigging-169-aboveAvatar",
+    "naval-rigging-170-aboveAvatar",
+    "naval-rigging-171-aboveAvatar",
+    "naval-rigging-190-aboveAvatar",
+    "naval-rigging-191-aboveAvatar",
+    "naval-rigging-195-aboveAvatar",
+    "naval-rigging-196-aboveAvatar",
+    "naval-rigging-197-aboveAvatar",
+    "naval-rigging-198-aboveAvatar",
+    "naval-rigging-199-aboveAvatar",
+    "naval-rigging-200-aboveAvatar",
+    "naval-rigging-201-aboveAvatar",
+    "naval-rigging-202-aboveAvatar",
+    "naval-rigging-203-aboveAvatar",
+    "naval-rigging-222-aboveAvatar",
+    "naval-rigging-223-aboveAvatar",
+    "naval-rigging-227-aboveAvatar",
+    "naval-rigging-228-aboveAvatar",
+    "naval-rigging-229-aboveAvatar",
+    "naval-rigging-230-aboveAvatar",
+    "naval-rigging-231-aboveAvatar",
+    "naval-rigging-232-aboveAvatar",
+    "naval-rigging-233-aboveAvatar",
+    "naval-rigging-234-aboveAvatar",
+    "naval-rigging-235-aboveAvatar",
+    "naval-rigging-254-aboveAvatar",
+    "naval-rigging-255-aboveAvatar",
+    "naval-rigging-259-aboveAvatar",
+    "naval-rigging-260-aboveAvatar",
+    "naval-rigging-261-aboveAvatar",
+    "naval-rigging-262-aboveAvatar",
+    "naval-rigging-263-aboveAvatar",
+    "naval-rigging-264-aboveAvatar",
+    "naval-rigging-265-aboveAvatar",
+    "naval-rigging-266-aboveAvatar",
+    "naval-rigging-267-aboveAvatar",
+    "naval-rigging-286-aboveAvatar",
+    "naval-rigging-287-aboveAvatar",
+    "naval-rigging-291-aboveAvatar",
+    "naval-rigging-292-aboveAvatar",
+    "naval-rigging-293-aboveAvatar",
+    "naval-rigging-294-aboveAvatar",
+    "naval-rigging-295-aboveAvatar",
+    "naval-rigging-296-aboveAvatar",
+    "naval-rigging-297-aboveAvatar",
+    "naval-rigging-298-aboveAvatar",
+    "naval-rigging-299-aboveAvatar",
+    "naval-rigging-3-aboveAvatar",
+    "naval-rigging-318-aboveAvatar",
+    "naval-rigging-319-aboveAvatar",
+    "naval-rigging-324-aboveAvatar",
+    "naval-rigging-325-aboveAvatar",
+    "naval-rigging-326-aboveAvatar",
+    "naval-rigging-327-aboveAvatar",
+    "naval-rigging-328-aboveAvatar",
+    "naval-rigging-329-aboveAvatar",
+    "naval-rigging-330-aboveAvatar",
+    "naval-rigging-331-aboveAvatar",
+    "naval-rigging-348-aboveAvatar",
+    "naval-rigging-349-aboveAvatar",
+    "naval-rigging-35-aboveAvatar",
+    "naval-rigging-350-aboveAvatar",
+    "naval-rigging-351-aboveAvatar",
+    "naval-rigging-358-aboveAvatar",
+    "naval-rigging-359-aboveAvatar",
+    "naval-rigging-36-aboveAvatar",
+    "naval-rigging-360-aboveAvatar",
+    "naval-rigging-361-aboveAvatar",
+    "naval-rigging-362-aboveAvatar",
+    "naval-rigging-363-aboveAvatar",
+    "naval-rigging-37-aboveAvatar",
+    "naval-rigging-38-aboveAvatar",
+    "naval-rigging-382-aboveAvatar",
+    "naval-rigging-383-aboveAvatar",
+    "naval-rigging-39-aboveAvatar",
+    "naval-rigging-395-aboveAvatar",
+    "naval-rigging-4-aboveAvatar",
+    "naval-rigging-40-aboveAvatar",
+    "naval-rigging-41-aboveAvatar",
+    "naval-rigging-414-aboveAvatar",
+    "naval-rigging-415-aboveAvatar",
+    "naval-rigging-42-aboveAvatar",
+    "naval-rigging-43-aboveAvatar",
+    "naval-rigging-446-aboveAvatar",
+    "naval-rigging-447-aboveAvatar",
+    "naval-rigging-478-aboveAvatar",
+    "naval-rigging-479-aboveAvatar",
+    "naval-rigging-510-aboveAvatar",
+    "naval-rigging-511-aboveAvatar",
+    "naval-rigging-542-aboveAvatar",
+    "naval-rigging-543-aboveAvatar",
+    "naval-rigging-574-aboveAvatar",
+    "naval-rigging-575-aboveAvatar",
+    "naval-rigging-576-aboveAvatar",
+    "naval-rigging-577-aboveAvatar",
+    "naval-rigging-6-aboveAvatar",
+    "naval-rigging-60-aboveAvatar",
+    "naval-rigging-606-aboveAvatar",
+    "naval-rigging-607-aboveAvatar",
+    "naval-rigging-608-aboveAvatar",
+    "naval-rigging-609-aboveAvatar",
+    "naval-rigging-61-aboveAvatar",
+    "naval-rigging-62-aboveAvatar",
+    "naval-rigging-63-aboveAvatar",
+    "naval-rigging-638-aboveAvatar",
+    "naval-rigging-639-aboveAvatar",
+    "naval-rigging-640-aboveAvatar",
+    "naval-rigging-641-aboveAvatar",
+    "naval-rigging-668-aboveAvatar",
+    "naval-rigging-669-aboveAvatar",
+    "naval-rigging-67-aboveAvatar",
+    "naval-rigging-670-aboveAvatar",
+    "naval-rigging-671-aboveAvatar",
+    "naval-rigging-672-aboveAvatar",
+    "naval-rigging-673-aboveAvatar",
+    "naval-rigging-674-aboveAvatar",
+    "naval-rigging-675-aboveAvatar",
+    "naval-rigging-676-aboveAvatar",
+    "naval-rigging-677-aboveAvatar",
+    "naval-rigging-678-aboveAvatar",
+    "naval-rigging-679-aboveAvatar",
+    "naval-rigging-68-aboveAvatar",
+    "naval-rigging-680-aboveAvatar",
+    "naval-rigging-69-aboveAvatar",
+    "naval-rigging-7-aboveAvatar",
+    "naval-rigging-70-aboveAvatar",
+    "naval-rigging-702-aboveAvatar",
+    "naval-rigging-703-aboveAvatar",
+    "naval-rigging-704-aboveAvatar",
+    "naval-rigging-705-aboveAvatar",
+    "naval-rigging-706-aboveAvatar",
+    "naval-rigging-707-aboveAvatar",
+    "naval-rigging-708-aboveAvatar",
+    "naval-rigging-709-aboveAvatar",
+    "naval-rigging-71-aboveAvatar",
+    "naval-rigging-710-aboveAvatar",
+    "naval-rigging-711-aboveAvatar",
+    "naval-rigging-712-aboveAvatar",
+    "naval-rigging-72-aboveAvatar",
+    "naval-rigging-73-aboveAvatar",
+    "naval-rigging-734-aboveAvatar",
+    "naval-rigging-735-aboveAvatar",
+    "naval-rigging-736-aboveAvatar",
+    "naval-rigging-737-aboveAvatar",
+    "naval-rigging-74-aboveAvatar",
+    "naval-rigging-742-aboveAvatar",
+    "naval-rigging-743-aboveAvatar",
+    "naval-rigging-744-aboveAvatar",
+    "naval-rigging-75-aboveAvatar",
+    "naval-rigging-764-aboveAvatar",
+    "naval-rigging-765-aboveAvatar",
+    "naval-rigging-768-aboveAvatar",
+    "naval-rigging-769-aboveAvatar",
+    "naval-rigging-774-aboveAvatar",
+    "naval-rigging-775-aboveAvatar",
+    "naval-rigging-776-aboveAvatar",
+    "naval-rigging-781-aboveAvatar",
+    "naval-rigging-782-aboveAvatar",
+    "naval-rigging-783-aboveAvatar",
+    "naval-rigging-784-aboveAvatar",
+    "naval-rigging-8-aboveAvatar",
+    "naval-rigging-800-aboveAvatar",
+    "naval-rigging-801-aboveAvatar",
+    "naval-rigging-802-aboveAvatar",
+    "naval-rigging-806-aboveAvatar",
+    "naval-rigging-807-aboveAvatar",
+    "naval-rigging-808-aboveAvatar",
+    "naval-rigging-813-aboveAvatar",
+    "naval-rigging-814-aboveAvatar",
+    "naval-rigging-815-aboveAvatar",
+    "naval-rigging-816-aboveAvatar",
+    "naval-rigging-832-aboveAvatar",
+    "naval-rigging-833-aboveAvatar",
+    "naval-rigging-834-aboveAvatar",
+    "naval-rigging-838-aboveAvatar",
+    "naval-rigging-839-aboveAvatar",
+    "naval-rigging-840-aboveAvatar",
+    "naval-rigging-841-aboveAvatar",
+    "naval-rigging-842-aboveAvatar",
+    "naval-rigging-843-aboveAvatar",
+    "naval-rigging-844-aboveAvatar",
+    "naval-rigging-845-aboveAvatar",
+    "naval-rigging-846-aboveAvatar",
+    "naval-rigging-847-aboveAvatar",
+    "naval-rigging-848-aboveAvatar",
+    "naval-rigging-864-aboveAvatar",
+    "naval-rigging-865-aboveAvatar",
+    "naval-rigging-866-aboveAvatar",
+    "naval-rigging-870-aboveAvatar",
+    "naval-rigging-871-aboveAvatar",
+    "naval-rigging-872-aboveAvatar",
+    "naval-rigging-873-aboveAvatar",
+    "naval-rigging-874-aboveAvatar",
+    "naval-rigging-875-aboveAvatar",
+    "naval-rigging-876-aboveAvatar",
+    "naval-rigging-877-aboveAvatar",
+    "naval-rigging-878-aboveAvatar",
+    "naval-rigging-879-aboveAvatar",
+    "naval-rigging-880-aboveAvatar",
+    "naval-rigging-896-aboveAvatar",
+    "naval-rigging-897-aboveAvatar",
+    "naval-rigging-898-aboveAvatar",
+    "naval-rigging-899-aboveAvatar",
+    "naval-rigging-9-aboveAvatar",
+    "naval-rigging-900-aboveAvatar",
+    "naval-rigging-901-aboveAvatar",
+    "naval-rigging-902-aboveAvatar",
+    "naval-rigging-903-aboveAvatar",
+    "naval-rigging-904-aboveAvatar",
+    "naval-rigging-909-aboveAvatar",
+    "naval-rigging-910-aboveAvatar",
+    "naval-rigging-911-aboveAvatar",
+    "naval-rigging-912-aboveAvatar",
+    "naval-rigging-928-aboveAvatar",
+    "naval-rigging-929-aboveAvatar",
+    "naval-rigging-930-aboveAvatar",
+    "naval-rigging-934-aboveAvatar",
+    "naval-rigging-935-aboveAvatar",
+    "naval-rigging-936-aboveAvatar",
+    "naval-rigging-94-aboveAvatar",
+    "naval-rigging-941-aboveAvatar",
+    "naval-rigging-942-aboveAvatar",
+    "naval-rigging-943-aboveAvatar",
+    "naval-rigging-944-aboveAvatar",
+    "naval-rigging-95-aboveAvatar",
+    "naval-rigging-963-aboveAvatar",
+    "naval-rigging-964-aboveAvatar",
+    "naval-rigging-965-aboveAvatar",
+    "naval-rigging-966-aboveAvatar",
+    "naval-rigging-967-aboveAvatar",
+    "naval-rigging-968-aboveAvatar",
+    "naval-rigging-973-aboveAvatar",
+    "naval-rigging-974-aboveAvatar",
+    "naval-rigging-975-aboveAvatar",
+    "naval-rigging-976-aboveAvatar",
+    "naval-rigging-99-aboveAvatar",
+    "naval-ship-cannon-16-belowAvatar",
+    "naval-ship-cannon-24-belowAvatar",
+    "naval-ship-cannon-8-belowAvatar",
+    "naval-water-0",
+    "naval-water-1",
+    "naval-water-2",
+    "night-wash",
+    "npc-dockmaster",
+    "npc-guide",
+    "npc-maze-keeper",
+    "organic-coast-land-1000",
+    "organic-coast-land-1004",
+    "organic-coast-land-1008",
+    "organic-coast-land-1056",
+    "organic-coast-land-1060",
+    "organic-coast-land-1064",
+    "organic-coast-land-1068",
+    "organic-coast-land-1080",
+    "organic-coast-land-1084",
+    "organic-coast-land-1088",
+    "organic-coast-land-1092",
+    "organic-coast-land-1132",
+    "organic-coast-land-1136",
+    "organic-coast-land-1140",
+    "organic-coast-land-1160",
+    "organic-coast-land-1164",
+    "organic-coast-land-1168",
+    "organic-coast-land-1172",
+    "organic-coast-land-1176",
+    "organic-coast-land-1196",
+    "organic-coast-land-1200",
+    "organic-coast-land-1204",
+    "organic-coast-land-1208",
+    "organic-coast-land-124",
+    "organic-coast-land-1252",
+    "organic-coast-land-1256",
+    "organic-coast-land-1260",
+    "organic-coast-land-1276",
+    "organic-coast-land-128",
+    "organic-coast-land-1280",
+    "organic-coast-land-1284",
+    "organic-coast-land-156",
+    "organic-coast-land-160",
+    "organic-coast-land-164",
+    "organic-coast-land-168",
+    "organic-coast-land-172",
+    "organic-coast-land-176",
+    "organic-coast-land-192",
+    "organic-coast-land-196",
+    "organic-coast-land-200",
+    "organic-coast-land-204",
+    "organic-coast-land-208",
+    "organic-coast-land-212",
+    "organic-coast-land-232",
+    "organic-coast-land-236",
+    "organic-coast-land-240",
+    "organic-coast-land-244",
+    "organic-coast-land-28",
+    "organic-coast-land-288",
+    "organic-coast-land-292",
+    "organic-coast-land-296",
+    "organic-coast-land-300",
+    "organic-coast-land-304",
+    "organic-coast-land-308",
+    "organic-coast-land-312",
+    "organic-coast-land-316",
+    "organic-coast-land-32",
+    "organic-coast-land-320",
+    "organic-coast-land-324",
+    "organic-coast-land-328",
+    "organic-coast-land-344",
+    "organic-coast-land-348",
+    "organic-coast-land-352",
+    "organic-coast-land-380",
+    "organic-coast-land-384",
+    "organic-coast-land-388",
+    "organic-coast-land-392",
+    "organic-coast-land-396",
+    "organic-coast-land-400",
+    "organic-coast-land-404",
+    "organic-coast-land-408",
+    "organic-coast-land-412",
+    "organic-coast-land-416",
+    "organic-coast-land-420",
+    "organic-coast-land-440",
+    "organic-coast-land-444",
+    "organic-coast-land-448",
+    "organic-coast-land-452",
+    "organic-coast-land-456",
+    "organic-coast-land-472",
+    "organic-coast-land-476",
+    "organic-coast-land-480",
+    "organic-coast-land-500",
+    "organic-coast-land-504",
+    "organic-coast-land-520",
+    "organic-coast-land-524",
+    "organic-coast-land-536",
+    "organic-coast-land-540",
+    "organic-coast-land-552",
+    "organic-coast-land-556",
+    "organic-coast-land-560",
+    "organic-coast-land-580",
+    "organic-coast-land-584",
+    "organic-coast-land-588",
+    "organic-coast-land-600",
+    "organic-coast-land-604",
+    "organic-coast-land-620",
+    "organic-coast-land-624",
+    "organic-coast-land-628",
+    "organic-coast-land-644",
+    "organic-coast-land-648",
+    "organic-coast-land-664",
+    "organic-coast-land-668",
+    "organic-coast-land-672",
+    "organic-coast-land-684",
+    "organic-coast-land-688",
+    "organic-coast-land-692",
+    "organic-coast-land-696",
+    "organic-coast-land-708",
+    "organic-coast-land-712",
+    "organic-coast-land-728",
+    "organic-coast-land-732",
+    "organic-coast-land-748",
+    "organic-coast-land-752",
+    "organic-coast-land-756",
+    "organic-coast-land-76",
+    "organic-coast-land-768",
+    "organic-coast-land-772",
+    "organic-coast-land-788",
+    "organic-coast-land-792",
+    "organic-coast-land-796",
+    "organic-coast-land-80",
+    "organic-coast-land-800",
+    "organic-coast-land-804",
+    "organic-coast-land-808",
+    "organic-coast-land-812",
+    "organic-coast-land-816",
+    "organic-coast-land-820",
+    "organic-coast-land-824",
+    "organic-coast-land-828",
+    "organic-coast-land-84",
+    "organic-coast-land-844",
+    "organic-coast-land-848",
+    "organic-coast-land-852",
+    "organic-coast-land-856",
+    "organic-coast-land-860",
+    "organic-coast-land-864",
+    "organic-coast-land-868",
+    "organic-coast-land-872",
+    "organic-coast-land-876",
+    "organic-coast-land-88",
+    "organic-coast-land-896",
+    "organic-coast-land-900",
+    "organic-coast-land-904",
+    "organic-coast-land-908",
+    "organic-coast-land-912",
+    "organic-coast-land-92",
+    "organic-coast-land-932",
+    "organic-coast-land-936",
+    "organic-coast-land-940",
+    "organic-coast-land-944",
+    "organic-coast-land-948",
+    "organic-coast-land-96",
+    "organic-coast-land-972",
+    "organic-coast-land-976",
+    "organic-coast-land-996",
+    "organic-coast-water-0",
+    "organic-coast-water-100",
+    "organic-coast-water-1012",
+    "organic-coast-water-1016",
+    "organic-coast-water-1020",
+    "organic-coast-water-1024",
+    "organic-coast-water-1028",
+    "organic-coast-water-1032",
+    "organic-coast-water-1036",
+    "organic-coast-water-104",
+    "organic-coast-water-1040",
+    "organic-coast-water-1044",
+    "organic-coast-water-1048",
+    "organic-coast-water-1052",
+    "organic-coast-water-1072",
+    "organic-coast-water-1076",
+    "organic-coast-water-108",
+    "organic-coast-water-1096",
+    "organic-coast-water-1100",
+    "organic-coast-water-1104",
+    "organic-coast-water-1108",
+    "organic-coast-water-1112",
+    "organic-coast-water-1116",
+    "organic-coast-water-112",
+    "organic-coast-water-1120",
+    "organic-coast-water-1124",
+    "organic-coast-water-1128",
+    "organic-coast-water-1144",
+    "organic-coast-water-1148",
+    "organic-coast-water-1152",
+    "organic-coast-water-1156",
+    "organic-coast-water-116",
+    "organic-coast-water-1180",
+    "organic-coast-water-1184",
+    "organic-coast-water-1188",
+    "organic-coast-water-1192",
+    "organic-coast-water-12",
+    "organic-coast-water-120",
+    "organic-coast-water-1212",
+    "organic-coast-water-1216",
+    "organic-coast-water-1220",
+    "organic-coast-water-1224",
+    "organic-coast-water-1228",
+    "organic-coast-water-1232",
+    "organic-coast-water-1236",
+    "organic-coast-water-1240",
+    "organic-coast-water-1244",
+    "organic-coast-water-1248",
+    "organic-coast-water-1264",
+    "organic-coast-water-1268",
+    "organic-coast-water-1272",
+    "organic-coast-water-1288",
+    "organic-coast-water-1292",
+    "organic-coast-water-1296",
+    "organic-coast-water-1300",
+    "organic-coast-water-1304",
+    "organic-coast-water-1308",
+    "organic-coast-water-1312",
+    "organic-coast-water-1316",
+    "organic-coast-water-132",
+    "organic-coast-water-1320",
+    "organic-coast-water-136",
+    "organic-coast-water-140",
+    "organic-coast-water-144",
+    "organic-coast-water-148",
+    "organic-coast-water-152",
+    "organic-coast-water-16",
+    "organic-coast-water-180",
+    "organic-coast-water-184",
+    "organic-coast-water-188",
+    "organic-coast-water-20",
+    "organic-coast-water-216",
+    "organic-coast-water-220",
+    "organic-coast-water-224",
+    "organic-coast-water-228",
+    "organic-coast-water-24",
+    "organic-coast-water-248",
+    "organic-coast-water-252",
+    "organic-coast-water-256",
+    "organic-coast-water-260",
+    "organic-coast-water-264",
+    "organic-coast-water-268",
+    "organic-coast-water-272",
+    "organic-coast-water-276",
+    "organic-coast-water-280",
+    "organic-coast-water-284",
+    "organic-coast-water-332",
+    "organic-coast-water-336",
+    "organic-coast-water-340",
+    "organic-coast-water-356",
+    "organic-coast-water-36",
+    "organic-coast-water-360",
+    "organic-coast-water-364",
+    "organic-coast-water-368",
+    "organic-coast-water-372",
+    "organic-coast-water-376",
+    "organic-coast-water-4",
+    "organic-coast-water-40",
+    "organic-coast-water-424",
+    "organic-coast-water-428",
+    "organic-coast-water-432",
+    "organic-coast-water-436",
+    "organic-coast-water-44",
+    "organic-coast-water-460",
+    "organic-coast-water-464",
+    "organic-coast-water-468",
+    "organic-coast-water-48",
+    "organic-coast-water-484",
+    "organic-coast-water-488",
+    "organic-coast-water-492",
+    "organic-coast-water-496",
+    "organic-coast-water-508",
+    "organic-coast-water-512",
+    "organic-coast-water-516",
+    "organic-coast-water-52",
+    "organic-coast-water-528",
+    "organic-coast-water-532",
+    "organic-coast-water-544",
+    "organic-coast-water-548",
+    "organic-coast-water-56",
+    "organic-coast-water-564",
+    "organic-coast-water-568",
+    "organic-coast-water-572",
+    "organic-coast-water-576",
+    "organic-coast-water-592",
+    "organic-coast-water-596",
+    "organic-coast-water-60",
+    "organic-coast-water-608",
+    "organic-coast-water-612",
+    "organic-coast-water-616",
+    "organic-coast-water-632",
+    "organic-coast-water-636",
+    "organic-coast-water-64",
+    "organic-coast-water-640",
+    "organic-coast-water-652",
+    "organic-coast-water-656",
+    "organic-coast-water-660",
+    "organic-coast-water-676",
+    "organic-coast-water-68",
+    "organic-coast-water-680",
+    "organic-coast-water-700",
+    "organic-coast-water-704",
+    "organic-coast-water-716",
+    "organic-coast-water-72",
+    "organic-coast-water-720",
+    "organic-coast-water-724",
+    "organic-coast-water-736",
+    "organic-coast-water-740",
+    "organic-coast-water-744",
+    "organic-coast-water-760",
+    "organic-coast-water-764",
+    "organic-coast-water-776",
+    "organic-coast-water-780",
+    "organic-coast-water-784",
+    "organic-coast-water-8",
+    "organic-coast-water-832",
+    "organic-coast-water-836",
+    "organic-coast-water-840",
+    "organic-coast-water-880",
+    "organic-coast-water-884",
+    "organic-coast-water-888",
+    "organic-coast-water-892",
+    "organic-coast-water-916",
+    "organic-coast-water-920",
+    "organic-coast-water-924",
+    "organic-coast-water-928",
+    "organic-coast-water-952",
+    "organic-coast-water-956",
+    "organic-coast-water-960",
+    "organic-coast-water-964",
+    "organic-coast-water-968",
+    "organic-coast-water-980",
+    "organic-coast-water-984",
+    "organic-coast-water-988",
+    "organic-coast-water-992",
+    "path-stone",
+    "pedestal-stone",
+    "plant-flower",
+    "plant-grass",
+    "plant-palm",
+    "plant-tree",
+    "quest-shrine",
+    "rune-frame",
+    "rune-ring",
+    "rune-threshold",
+    "screen-content",
+    "screen-presentation",
+    "screen-wide",
+    "ship-bunk",
+    "ship-bunks-label",
+    "ship-captain-label",
+    "ship-cargo-barrel",
+    "ship-cargo-crate",
+    "ship-cargo-label",
+    "ship-chart-table",
+    "ship-compass",
+    "ship-compass-rug",
+    "ship-galley",
+    "ship-helm-label",
+    "ship-lantern",
+    "ship-lower-deck-label",
+    "ship-mess-bench",
+    "ship-mess-label",
+    "ship-mess-table",
+    "ship-pantry",
+    "ship-plank",
+    "ship-porthole",
+    "ship-rope-coil",
+    "ship-stairs",
+    "ship-wall",
+    "shrub-rock",
+    "sigil-air",
+    "sigil-earth",
+    "sigil-fire",
+    "sigil-water",
+    "sign-board-bolts",
+    "sign-board-east",
+    "sign-board-face",
+    "sign-board-north",
+    "sign-board-south",
+    "sign-board-west",
+    "sign-compass",
+    "sign-post",
+    "sofa-blue",
+    "sofa-cream",
+    "solid-beach-low-table",
+    "solid-beach-recliner",
+    "solid-coast-beach-bar",
+    "solid-coast-deck-chair",
+    "solid-coast-parasol",
+    "solid-coast-sandcastle",
+    "solid-coast-sign-board",
+    "solid-coast-sign-post",
+    "solid-coast-volley-net",
+    "solid-sign-post",
+    "stage-backdrop",
+    "standing-exterior-road-east",
+    "standing-exterior-road-north",
+    "standing-exterior-road-plaza",
+    "standing-exterior-road-south",
+    "standing-exterior-road-west",
+    "standing-hub-nav-arrival-crosspost",
+    "standing-hub-nav-brand",
+    "standing-hub-nav-directory",
+    "standing-hub-nav-welcome",
+    "standing-hub-nav-you-are-here",
+    "table-broad",
+    "table-circular",
+    "table-small-white",
+    "table-small-wood",
+    "table-workshop",
+    "telescope",
+    "tree-evergreen",
+    "tree-flowering",
+    "tree-round",
+    "wall-charcoal",
+    "wall-display",
+    "wall-navy",
+    "wall-plaque",
+    "water-blue",
+    "water-cooler",
+    "water-wall",
+    "wave-glass",
+    "window-white"
+  ],
+  "catalogSha256": "882e7cc6e60a9b88b90d2ac26e4171a9a2965e1060ddc3ce347355de51a84203",
+  "placements": [
+    {
+      "map": "shipyard-beach",
+      "placementId": "shell-1",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 14,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "shell-2",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 30,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "shell-3",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 42,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "shell-4",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 16,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "tender-west",
+      "originalSprite": "boat-wood",
+      "newSprite": "coast-life-boat-wood",
+      "x": 3,
+      "y": 29,
+      "width": 2,
+      "height": 1,
+      "nativePixels": [
+        64,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "repair-hut",
+      "originalSprite": "beach-cabana",
+      "newSprite": "coast-life-beach-cabana",
+      "x": 8,
+      "y": 12,
+      "width": 5,
+      "height": 5,
+      "nativePixels": [
+        160,
+        160
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-bar",
+      "originalSprite": "beach-tiki-bar",
+      "newSprite": "coast-life-beach-tiki-bar",
+      "x": 34,
+      "y": 12,
+      "width": 6,
+      "height": 5,
+      "nativePixels": [
+        192,
+        160
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-west",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 3,
+      "y": 7,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-northwest",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 11,
+      "y": 4,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-north",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 15,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-east",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 38,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-bar",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 31,
+      "y": 11,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-southeast",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 41,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-palm-southwest",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 3,
+      "y": 20,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-shade-west",
+      "originalSprite": "beach-parasol-coral",
+      "newSprite": "coast-life-beach-parasol-coral",
+      "x": 4,
+      "y": 14,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-shade-arrival",
+      "originalSprite": "beach-parasol-teal",
+      "newSprite": "coast-life-beach-parasol-teal",
+      "x": 17,
+      "y": 6,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-shade-bar",
+      "originalSprite": "beach-parasol-coral",
+      "newSprite": "coast-life-beach-parasol-coral",
+      "x": 37,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-west-a",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 4,
+      "y": 18,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-west-b",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 7,
+      "y": 20,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-arrival-a",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 17,
+      "y": 10,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-arrival-b",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 20,
+      "y": 10,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-bar-a",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 35,
+      "y": 20,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-seat-bar-b",
+      "originalSprite": "solid-beach-recliner",
+      "newSprite": "coast-life-solid-beach-recliner",
+      "x": 40,
+      "y": 20,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-towel-west",
+      "originalSprite": "beach-woven-towel",
+      "newSprite": "coast-life-beach-woven-towel",
+      "x": 9,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-towel-arrival",
+      "originalSprite": "beach-woven-towel",
+      "newSprite": "coast-life-beach-woven-towel",
+      "x": 19,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-towel-bar",
+      "originalSprite": "beach-woven-towel",
+      "newSprite": "coast-life-beach-woven-towel",
+      "x": 38,
+      "y": 21,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-plant-west",
+      "originalSprite": "beach-shrub",
+      "newSprite": "coast-life-beach-shrub",
+      "x": 5,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-plant-hut",
+      "originalSprite": "beach-shrub",
+      "newSprite": "coast-life-beach-shrub",
+      "x": 11,
+      "y": 7,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-plant-east",
+      "originalSprite": "beach-shrub",
+      "newSprite": "coast-life-beach-shrub",
+      "x": 40,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-plant-bar",
+      "originalSprite": "beach-shrub",
+      "newSprite": "coast-life-beach-shrub",
+      "x": 32,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-plant-southwest",
+      "originalSprite": "beach-shrub",
+      "newSprite": "coast-life-beach-shrub",
+      "x": 10,
+      "y": 24,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-0",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 7,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-1",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 9,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-2",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 4,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-3",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 4,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-4",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 5,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-5",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 8,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-6",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 12,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-7",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 39,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-8",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 42,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-9",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 43,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-10",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 43,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-11",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 40,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-grass-12",
+      "originalSprite": "beach-grass",
+      "newSprite": "coast-life-beach-grass",
+      "x": 34,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-0",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 8,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-1",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 5,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-2",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 6,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-3",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 9,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-4",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 41,
+      "y": 8,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-5",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 42,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-6",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 42,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "strand-pebble-7",
+      "originalSprite": "beach-pebbles",
+      "newSprite": "coast-life-beach-pebbles",
+      "x": 36,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-cafe-shade",
+      "originalSprite": "beach-parasol-teal",
+      "newSprite": "coast-life-beach-parasol-teal",
+      "x": 29,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-cafe-table",
+      "originalSprite": "solid-beach-low-table",
+      "newSprite": "coast-life-solid-beach-low-table",
+      "x": 29,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-cafe-palm",
+      "originalSprite": "beach-palm",
+      "newSprite": "coast-life-beach-palm",
+      "x": 33,
+      "y": 4,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-west-side-table",
+      "originalSprite": "solid-beach-low-table",
+      "newSprite": "coast-life-solid-beach-low-table",
+      "x": 8,
+      "y": 17,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "placementId": "beach-bar-side-table",
+      "originalSprite": "solid-beach-low-table",
+      "newSprite": "coast-life-solid-beach-low-table",
+      "x": 38,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-palm-west",
+      "originalSprite": "coast-palm",
+      "newSprite": "coast-life-coast-palm",
+      "x": 3,
+      "y": 12,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-palm-east",
+      "originalSprite": "coast-palm",
+      "newSprite": "coast-life-coast-palm",
+      "x": 34,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-palm-point-west",
+      "originalSprite": "coast-palm",
+      "newSprite": "coast-life-coast-palm",
+      "x": 5,
+      "y": 27,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-palm-point-east",
+      "originalSprite": "coast-palm",
+      "newSprite": "coast-life-coast-palm",
+      "x": 30,
+      "y": 28,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-palm-arrival",
+      "originalSprite": "coast-palm",
+      "newSprite": "coast-life-coast-palm",
+      "x": 13,
+      "y": 7,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "aboveAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-parasol-west",
+      "originalSprite": "solid-coast-parasol",
+      "newSprite": "coast-life-solid-coast-parasol",
+      "x": 7,
+      "y": 18,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-parasol-east",
+      "originalSprite": "solid-coast-parasol",
+      "newSprite": "coast-life-solid-coast-parasol",
+      "x": 28,
+      "y": 18,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-parasol-lounge",
+      "originalSprite": "solid-coast-parasol",
+      "newSprite": "coast-life-solid-coast-parasol",
+      "x": 14,
+      "y": 20,
+      "width": 3,
+      "height": 4,
+      "nativePixels": [
+        96,
+        128
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          1,
+          3
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-chair-west",
+      "originalSprite": "solid-coast-deck-chair",
+      "newSprite": "coast-life-solid-coast-deck-chair",
+      "x": 4,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-chair-west-two",
+      "originalSprite": "solid-coast-deck-chair",
+      "newSprite": "coast-life-solid-coast-deck-chair",
+      "x": 11,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-chair-east",
+      "originalSprite": "solid-coast-deck-chair",
+      "newSprite": "coast-life-solid-coast-deck-chair",
+      "x": 32,
+      "y": 23,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-chair-lounge",
+      "originalSprite": "solid-coast-deck-chair",
+      "newSprite": "coast-life-solid-coast-deck-chair",
+      "x": 23,
+      "y": 22,
+      "width": 2,
+      "height": 3,
+      "nativePixels": [
+        64,
+        96
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-towel-west",
+      "originalSprite": "coast-towel",
+      "newSprite": "coast-life-coast-towel",
+      "x": 7,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-towel-east",
+      "originalSprite": "coast-towel",
+      "newSprite": "coast-life-coast-towel",
+      "x": 28,
+      "y": 23,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-towel-east-two",
+      "originalSprite": "coast-towel",
+      "newSprite": "coast-life-coast-towel",
+      "x": 31,
+      "y": 25,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-towel-lounge",
+      "originalSprite": "coast-towel",
+      "newSprite": "coast-life-coast-towel",
+      "x": 18,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-beach-bar",
+      "originalSprite": "solid-coast-beach-bar",
+      "newSprite": "coast-life-solid-coast-beach-bar",
+      "x": 26,
+      "y": 10,
+      "width": 6,
+      "height": 5,
+      "nativePixels": [
+        192,
+        160
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-sandcastle",
+      "originalSprite": "solid-coast-sandcastle",
+      "newSprite": "coast-life-solid-coast-sandcastle",
+      "x": 7,
+      "y": 28,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-volley-net",
+      "originalSprite": "solid-coast-volley-net",
+      "newSprite": "coast-life-solid-coast-volley-net",
+      "x": 5,
+      "y": 20,
+      "width": 5,
+      "height": 2,
+      "nativePixels": [
+        160,
+        64
+      ],
+      "layer": "architecture",
+      "blockingCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "jetty-mooring-9-30",
+      "originalSprite": "coast-mooring-post",
+      "newSprite": "coast-life-coast-mooring-post",
+      "x": 9,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "jetty-mooring-12-30",
+      "originalSprite": "coast-mooring-post",
+      "newSprite": "coast-life-coast-mooring-post",
+      "x": 12,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "jetty-mooring-9-36",
+      "originalSprite": "coast-mooring-post",
+      "newSprite": "coast-life-coast-mooring-post",
+      "x": 9,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "jetty-mooring-12-36",
+      "originalSprite": "coast-mooring-post",
+      "newSprite": "coast-life-coast-mooring-post",
+      "x": 12,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-shell-a",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 12,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-shell-b",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 23,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-shell-c",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-shell-d",
+      "originalSprite": "coast-shell",
+      "newSprite": "coast-life-coast-shell",
+      "x": 10,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-boat-west",
+      "originalSprite": "boat-wood",
+      "newSprite": "coast-life-boat-wood",
+      "x": 3,
+      "y": 32,
+      "width": 2,
+      "height": 1,
+      "nativePixels": [
+        64,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-boat-east",
+      "originalSprite": "boat-wood",
+      "newSprite": "coast-life-boat-wood",
+      "x": 36,
+      "y": 31,
+      "width": 2,
+      "height": 1,
+      "nativePixels": [
+        64,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "shore-boat-bay",
+      "originalSprite": "boat-wood",
+      "newSprite": "coast-life-boat-wood",
+      "x": 26,
+      "y": 35,
+      "width": 2,
+      "height": 1,
+      "nativePixels": [
+        64,
+        32
+      ],
+      "layer": "props",
+      "blockingCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "underwater-rock-0",
+      "originalSprite": "coast-underwater-rock",
+      "newSprite": "coast-life-coast-underwater-rock",
+      "x": 1,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "underwater-rock-1",
+      "originalSprite": "coast-underwater-rock",
+      "newSprite": "coast-life-coast-underwater-rock",
+      "x": 35,
+      "y": 7,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "underwater-rock-2",
+      "originalSprite": "coast-underwater-rock",
+      "newSprite": "coast-life-coast-underwater-rock",
+      "x": 18,
+      "y": 31,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "underwater-rock-3",
+      "originalSprite": "coast-underwater-rock",
+      "newSprite": "coast-life-coast-underwater-rock",
+      "x": 33,
+      "y": 37,
+      "width": 2,
+      "height": 2,
+      "nativePixels": [
+        64,
+        64
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-0",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 17,
+      "y": 11,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-1",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 16,
+      "y": 13,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-2",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 15,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-3",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 19,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-4",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 26,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-5",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 30,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "footprints-6",
+      "originalSprite": "coast-footprints",
+      "newSprite": "coast-life-coast-footprints",
+      "x": 11,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "pebbles-0",
+      "originalSprite": "coast-pebble-cluster",
+      "newSprite": "coast-life-coast-pebble-cluster",
+      "x": 5,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "pebbles-1",
+      "originalSprite": "coast-pebble-cluster",
+      "newSprite": "coast-life-coast-pebble-cluster",
+      "x": 33,
+      "y": 12,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "pebbles-2",
+      "originalSprite": "coast-pebble-cluster",
+      "newSprite": "coast-life-coast-pebble-cluster",
+      "x": 6,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    },
+    {
+      "map": "constellation-shore",
+      "placementId": "pebbles-3",
+      "originalSprite": "coast-pebble-cluster",
+      "newSprite": "coast-life-coast-pebble-cluster",
+      "x": 29,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "nativePixels": [
+        32,
+        32
+      ],
+      "layer": "architecture",
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "upperCells": null
+    }
+  ],
+  "maps": {
+    "shipyard-beach": {
+      "terrainSha256": "5c3a8cb278a0a6ac3bab675ae1203bac59f9737ab57c3b3cfc0d07d120a59d87",
+      "collisionSha256": "9f513ee563a481f3f0a6a37052f28599d1f95eb1c18f26c359483a3325c0e909",
+      "terrainPlacementsSha256": "5031d020c5df674c724feb0fe8cbc87fda5d8eeb36a32747fd3dfb96425612b9",
+      "controls": {
+        "entries": [
+          {
+            "name": "shipyard-entry",
+            "x": 22,
+            "y": 6,
+            "width": 4,
+            "height": 2,
+            "isDefault": true
+          },
+          {
+            "name": "from-fa-ship",
+            "x": 18,
+            "y": 30,
+            "width": 2,
+            "height": 2
+          },
+          {
+            "name": "from-constellation-shore",
+            "x": 45,
+            "y": 32,
+            "width": 2,
+            "height": 2
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-shipyard",
+            "x": 22,
+            "y": 4,
+            "width": 4,
+            "height": 1
+          },
+          {
+            "name": "board-fa-ship",
+            "destination": "fa-ship",
+            "entry": "arrival",
+            "x": 18,
+            "y": 36,
+            "width": 4,
+            "height": 1
+          },
+          {
+            "name": "shore-gate",
+            "destination": "constellation-shore",
+            "entry": "arrival",
+            "x": 45,
+            "y": 36,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "harbor-workshop",
+            "name": "harbor-workshop",
+            "properties": [],
+            "x": 13,
+            "y": 18,
+            "width": 5,
+            "height": 3
+          },
+          {
+            "id": "pier-lookout",
+            "name": "pier-lookout",
+            "properties": [],
+            "x": 21,
+            "y": 25,
+            "width": 5,
+            "height": 4
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "\u2191 PLAZA",
+            "x": 22,
+            "y": 2,
+            "width": 5,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "workshop-label",
+            "text": "BOAT WORKSHOP",
+            "x": 7,
+            "y": 10,
+            "width": 8,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "dockmaster-station",
+            "text": "BEACH BAR",
+            "x": 33,
+            "y": 10,
+            "width": 7,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "boarding-label",
+            "text": "\u2193 FA SHIP",
+            "x": 18,
+            "y": 32,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "shore-label",
+            "text": "\u2193 SHORE",
+            "x": 44,
+            "y": 30,
+            "width": 3,
+            "height": 1,
+            "fontSize": 14,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "arrival-routes",
+            "text": "FA SHIP \u2193   SHORE \u2192",
+            "x": 19,
+            "y": 15,
+            "width": 10,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          }
+        ],
+        "standingSigns": [
+          {
+            "face": "wood-sign-plaza-return-label",
+            "supports": [
+              "wood-sign-plaza-return-label-support-0"
+            ],
+            "text": "plaza-return-label"
+          },
+          {
+            "face": "wood-sign-workshop-label",
+            "supports": [
+              "wood-sign-workshop-label-support-0",
+              "wood-sign-workshop-label-support-1"
+            ],
+            "text": "workshop-label"
+          },
+          {
+            "face": "wood-sign-dockmaster-station",
+            "supports": [
+              "wood-sign-dockmaster-station-support-0",
+              "wood-sign-dockmaster-station-support-1"
+            ],
+            "text": "dockmaster-station"
+          },
+          {
+            "face": "wood-sign-boarding-label",
+            "supports": [
+              "wood-sign-boarding-label-support-0"
+            ],
+            "text": "boarding-label"
+          },
+          {
+            "face": "wood-sign-shore-label",
+            "supports": [
+              "wood-sign-shore-label-support-0"
+            ],
+            "text": "shore-label"
+          },
+          {
+            "face": "wood-sign-arrival-routes",
+            "supports": [
+              "wood-sign-arrival-routes-support-0",
+              "wood-sign-arrival-routes-support-1"
+            ],
+            "text": "arrival-routes"
+          }
+        ]
+      },
+      "semanticLayerHashes": {
+        "floorLayer": "180ced0426ee82a0085fa428a55aad6d6619b23449569301ddb2a7edf445e696",
+        "shipyard-entry": "4dbf96f6b199a3f6489e72961fceab53e5f72534da5a4c5ffea86584ff618873",
+        "from-fa-ship": "98b78c6229a3514298cb55a0eb387575aef19e315c9e8f7999e0909167492647",
+        "from-constellation-shore": "424ba3a4e87f14c97d93a7659b6e308b7c574be974e6089978545f3c6080929a",
+        "exit-plaza-return": "791a3582b9993944c4f9123273ac1ffb9614d19f1b7eb4887ab7da12fb9545ad",
+        "exit-board-fa-ship": "a4d16248efc0db061955f52811258ea22509628ef862ac2b48e01eb7e964d245",
+        "exit-shore-gate": "a89f04c3a6254a2ab77e84c79ac6000daa0c012f407797dd619657460858366f",
+        "wayfinding-text": "5165bae5529df8db79b4b2aa1476b7d81a4f33f774b1f1e2e9685ed7fa0151b2",
+        "inspection-zones": "2865e9ad4d99082f39585390fce1ca0c54f2eb8036ac4b8a29bf63198e3c1719",
+        "standing-caption-plaza-return-label": "1e8c387559f79c8648115a1e7b639fb7e84b9e62a40f92b4faff36f901bb44e2",
+        "standing-caption-workshop-label": "861ff3a56a8b395e58bca4e5fda29e7740fc42b40fcf9a0dc716121a881b72f7",
+        "standing-caption-dockmaster-station": "2b09c5cb4169c9ba1a17228630dc99f2455aae55ccb9dcabccab2e9a4112a109",
+        "standing-caption-boarding-label": "93779b92ebba5a951b7ce542c9284962f404268ced956d0b13b7d0933035b418",
+        "standing-caption-shore-label": "581d8472d91c3985ebec9c86a373a98771dae6cd16eb122724f40704469de505",
+        "standing-caption-arrival-routes": "56dd97098c8b2c01840cf2250b751c892e50a60458384ce000b459b2f35194f6"
+      }
+    },
+    "constellation-shore": {
+      "terrainSha256": "e653ec309d142d2161b48f148dbd4b5f16b22063fb6e318bee5393e5fe0028cb",
+      "collisionSha256": "9f059ad035b272588898b6c8dd845aaf2eb9608a628776ef0744900d6fe8f6ff",
+      "terrainPlacementsSha256": "b19df7925c60fde8e08ea8458405686fe415267cbc775d9f4db15b236f004b39",
+      "controls": {
+        "entries": [
+          {
+            "name": "arrival",
+            "x": 19,
+            "y": 8,
+            "width": 2,
+            "height": 2,
+            "isDefault": true
+          }
+        ],
+        "exits": [
+          {
+            "name": "plaza-return",
+            "destination": "overworld",
+            "entry": "from-shipyard",
+            "x": 19,
+            "y": 3,
+            "width": 2,
+            "height": 1
+          },
+          {
+            "name": "harbor-return",
+            "destination": "shipyard-beach",
+            "entry": "from-constellation-shore",
+            "x": 7,
+            "y": 13,
+            "width": 2,
+            "height": 1
+          }
+        ],
+        "areas": [
+          {
+            "id": "beach-games",
+            "name": "beach-games",
+            "properties": [],
+            "x": 6,
+            "y": 24,
+            "width": 5,
+            "height": 3
+          },
+          {
+            "id": "picnic-bay",
+            "name": "picnic-bay",
+            "properties": [],
+            "x": 26,
+            "y": 25,
+            "width": 6,
+            "height": 3
+          },
+          {
+            "id": "shore-lounge",
+            "name": "shore-lounge",
+            "properties": [],
+            "x": 17,
+            "y": 25,
+            "width": 6,
+            "height": 3
+          }
+        ],
+        "signs": [
+          {
+            "name": "plaza-return-label",
+            "text": "\u2191 PLAZA",
+            "x": 18,
+            "y": 5,
+            "width": 7,
+            "height": 1,
+            "fontSize": 18,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "harbor-return-label",
+            "text": "\u2193 HARBOR",
+            "x": 6,
+            "y": 12,
+            "width": 8,
+            "height": 1,
+            "fontSize": 18,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "shore-title",
+            "text": "CONSTELLATION SHORE",
+            "x": 12,
+            "y": 15,
+            "width": 14,
+            "height": 1,
+            "fontSize": 20,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "games-pocket-label",
+            "text": "VOLLEYBALL",
+            "x": 4,
+            "y": 16,
+            "width": 7,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "picnic-pocket-label",
+            "text": "BEACH BAR",
+            "x": 27,
+            "y": 16,
+            "width": 7,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          },
+          {
+            "name": "lounge-pocket-label",
+            "text": "BAY LOUNGE",
+            "x": 17,
+            "y": 21,
+            "width": 7,
+            "height": 1,
+            "fontSize": 16,
+            "color": "#fff2c7",
+            "align": "left",
+            "padding": 4
+          }
+        ],
+        "standingSigns": [
+          {
+            "face": "wood-sign-plaza-return-label",
+            "supports": [
+              "wood-sign-post-plaza-return-label"
+            ],
+            "text": "plaza-return-label"
+          },
+          {
+            "face": "wood-sign-harbor-return-label",
+            "supports": [
+              "wood-sign-post-harbor-return-label"
+            ],
+            "text": "harbor-return-label"
+          },
+          {
+            "face": "wood-sign-shore-title",
+            "supports": [
+              "wood-sign-shore-title-support-0",
+              "wood-sign-shore-title-support-1"
+            ],
+            "text": "shore-title"
+          },
+          {
+            "face": "wood-sign-games-pocket-label",
+            "supports": [
+              "wood-sign-games-pocket-label-support-0",
+              "wood-sign-games-pocket-label-support-1"
+            ],
+            "text": "games-pocket-label"
+          },
+          {
+            "face": "wood-sign-picnic-pocket-label",
+            "supports": [
+              "wood-sign-picnic-pocket-label-support-0",
+              "wood-sign-picnic-pocket-label-support-1"
+            ],
+            "text": "picnic-pocket-label"
+          },
+          {
+            "face": "wood-sign-lounge-pocket-label",
+            "supports": [
+              "wood-sign-lounge-pocket-label-support-0"
+            ],
+            "text": "lounge-pocket-label"
+          }
+        ]
+      },
+      "semanticLayerHashes": {
+        "floorLayer": "bd10caed854ab6f547d363e198b4be668cd865b61dad5b9b0abffc62f4b237cb",
+        "arrival": "7e0c7ee4a3caadc50390e01e5688938c3d947e9df42d2b308157a664ca76a1a1",
+        "exit-plaza-return": "48e2b18c4a7e0c6684aa31e3a1fefc3fe6a2134891a6c68e0ba5128662ffb775",
+        "exit-harbor-return": "57b070de8e72dca719fa311bfc4f5a23d9aa37e8262c7727f016ec6accb9d5f5",
+        "wayfinding-text": "f7bb7678c8e5bf2c5d43d387378be1f16b0aa6c81c0d79f67b2f7627fbed18fb",
+        "inspection-zones": "25795b76c091095a51670ae7c5169d61196298b9da0d5647076ef91c5eebf09d",
+        "standing-caption-plaza-return-label": "2cc1dec14163b8d6e02d02eddb0c66b0732a6bfc1ef1709f46a45640751d1fd2",
+        "standing-caption-harbor-return-label": "0b0e3292615b198a771c9ee00937a3ebdd32f61b62707bb4870ea3a202b3eb9f",
+        "standing-caption-shore-title": "5feea16d8b8b4489c212a1e0d2f2eefd7111af631f84394693c770aa841796da",
+        "standing-caption-games-pocket-label": "38321fcac89eee48c4ccd60bdce2c61e7c6c8f74911bd2ceb0efc6b4422d0683",
+        "standing-caption-picnic-pocket-label": "cdefc58328cf27fa23ad853b8c541cda5d134a0a434263e06ad1b4a0ff918f74",
+        "standing-caption-lounge-pocket-label": "abf1f21a3fa10fefaff115b8bbf68af84a5ca27b5e0b82d2c1f5d80b57cb315a"
+      }
+    }
+  }
+}

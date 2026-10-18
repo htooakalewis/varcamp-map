@@ -1,0 +1,789 @@
+{
+  "version": 1,
+  "origin": "Original generated PNG masters in the user-approved art scope. Crop/alpha-preserving native-size technical exports.",
+  "generation": "art/source/coast-life-generation.json",
+  "masters": [
+    {
+      "path": "art/source/coast-life-props-master.png",
+      "sha256": "f4ff6d260295a726cad745f41ecf9ce92fcd8e7b401adbf5b486ea9f23c6206e"
+    },
+    {
+      "path": "art/source/coast-life-small-props-master.png",
+      "sha256": "0e2c174ee426fe78bb52aa7b7fbc9c83199db20db34127170d96ce9c55466c44"
+    },
+    {
+      "path": "art/source/coast-life-gull-master.png",
+      "sha256": "e7b53062caf20205e57d131edca2f5812296e00b83e541b478277e55e1c9d00a"
+    },
+    {
+      "path": "art/source/coast-life-marine-master.png",
+      "sha256": "e0b7f0b660f7a80b94d9d2e1afe8250ba992addf9414cb893be8856e45391444"
+    },
+    {
+      "path": "art/source/coast-life-plane-master.png",
+      "sha256": "adc80121fed90b68bddbf34dc98c3c85d3efd3e67eb874b9acb68563dd3b6e5d"
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/coast-life-props.png",
+    "width": 1024,
+    "height": 256,
+    "sha256": "9a5406671f0b4327181a06a071f1a809121a152ba7b06e65b7e7fd8d9a74cfc8",
+    "rects": {
+      "coast-life-beach-cabana": {
+        "x": 0,
+        "y": 0,
+        "width": 5,
+        "height": 5
+      },
+      "coast-life-beach-tiki-bar": {
+        "x": 5,
+        "y": 0,
+        "width": 6,
+        "height": 5
+      },
+      "coast-life-solid-coast-beach-bar": {
+        "x": 11,
+        "y": 0,
+        "width": 6,
+        "height": 5
+      },
+      "coast-life-beach-palm": {
+        "x": 17,
+        "y": 0,
+        "width": 3,
+        "height": 4
+      },
+      "coast-life-coast-palm": {
+        "x": 20,
+        "y": 0,
+        "width": 3,
+        "height": 4
+      },
+      "coast-life-beach-parasol-coral": {
+        "x": 23,
+        "y": 0,
+        "width": 3,
+        "height": 4
+      },
+      "coast-life-beach-parasol-teal": {
+        "x": 26,
+        "y": 0,
+        "width": 3,
+        "height": 4
+      },
+      "coast-life-solid-coast-parasol": {
+        "x": 29,
+        "y": 0,
+        "width": 3,
+        "height": 4
+      },
+      "coast-life-solid-beach-recliner": {
+        "x": 0,
+        "y": 5,
+        "width": 2,
+        "height": 3
+      },
+      "coast-life-solid-coast-deck-chair": {
+        "x": 2,
+        "y": 5,
+        "width": 2,
+        "height": 3
+      },
+      "coast-life-beach-woven-towel": {
+        "x": 4,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-coast-towel": {
+        "x": 6,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-beach-shrub": {
+        "x": 8,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-solid-beach-low-table": {
+        "x": 10,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-coast-underwater-rock": {
+        "x": 12,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-solid-coast-sandcastle": {
+        "x": 14,
+        "y": 5,
+        "width": 2,
+        "height": 2
+      },
+      "coast-life-solid-coast-volley-net": {
+        "x": 16,
+        "y": 5,
+        "width": 5,
+        "height": 2
+      },
+      "coast-life-boat-wood": {
+        "x": 21,
+        "y": 5,
+        "width": 2,
+        "height": 1
+      },
+      "coast-life-beach-grass": {
+        "x": 23,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "coast-life-beach-pebbles": {
+        "x": 24,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "coast-life-coast-footprints": {
+        "x": 25,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "coast-life-coast-mooring-post": {
+        "x": 26,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "coast-life-coast-pebble-cluster": {
+        "x": 27,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "coast-life-coast-shell": {
+        "x": 28,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      }
+    }
+  },
+  "props": {
+    "coast-life-beach-cabana": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 370,
+        "top": 351,
+        "width": 324,
+        "height": 294
+      },
+      "width": 160,
+      "height": 160,
+      "sha256": "10e9d2cb4993eadf012d65048819851f861c0622b433d886b813651f8ec4ee20"
+    },
+    "coast-life-beach-tiki-bar": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 0,
+        "top": 345,
+        "width": 365,
+        "height": 300
+      },
+      "width": 192,
+      "height": 160,
+      "sha256": "dc4591578c4ae6fae1a3c2da8f66e212305c97ffe76beb6a0eab2602afab4a9f"
+    },
+    "coast-life-solid-coast-beach-bar": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 0,
+        "top": 345,
+        "width": 365,
+        "height": 300
+      },
+      "width": 192,
+      "height": 160,
+      "sha256": "dc4591578c4ae6fae1a3c2da8f66e212305c97ffe76beb6a0eab2602afab4a9f"
+    },
+    "coast-life-beach-palm": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 636,
+        "top": 0,
+        "width": 322,
+        "height": 355
+      },
+      "width": 96,
+      "height": 128,
+      "sha256": "e75b97b3f10856301d36a8d969c9794139aa10779c6bed283fe09a07592964db"
+    },
+    "coast-life-coast-palm": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 636,
+        "top": 0,
+        "width": 322,
+        "height": 355
+      },
+      "width": 96,
+      "height": 128,
+      "sha256": "e75b97b3f10856301d36a8d969c9794139aa10779c6bed283fe09a07592964db"
+    },
+    "coast-life-beach-parasol-coral": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 8,
+        "top": 643,
+        "width": 325,
+        "height": 309
+      },
+      "width": 96,
+      "height": 128,
+      "sha256": "93f13c0bfb0b2b16be86b28aa62ac2076c560de78458a998cb3e3e09c7a38d9a"
+    },
+    "coast-life-beach-parasol-teal": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 8,
+        "top": 643,
+        "width": 325,
+        "height": 309
+      },
+      "width": 96,
+      "height": 128,
+      "sha256": "93f13c0bfb0b2b16be86b28aa62ac2076c560de78458a998cb3e3e09c7a38d9a"
+    },
+    "coast-life-solid-coast-parasol": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 8,
+        "top": 643,
+        "width": 325,
+        "height": 309
+      },
+      "width": 96,
+      "height": 128,
+      "sha256": "93f13c0bfb0b2b16be86b28aa62ac2076c560de78458a998cb3e3e09c7a38d9a"
+    },
+    "coast-life-solid-beach-recliner": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 995,
+        "top": 361,
+        "width": 220,
+        "height": 279
+      },
+      "width": 64,
+      "height": 96,
+      "sha256": "846279ceb59d4c0e50924c1d1b3423b1e05b5c4416358462cf2990e53af02172"
+    },
+    "coast-life-solid-coast-deck-chair": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 737,
+        "top": 359,
+        "width": 170,
+        "height": 281
+      },
+      "width": 64,
+      "height": 96,
+      "sha256": "3c5a256d7dda2e934071a51f2e6a3aea02e36137e458474347bfed1989f1d6c2"
+    },
+    "coast-life-beach-woven-towel": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 45,
+        "top": 40,
+        "width": 390,
+        "height": 505
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "f1dc36d3b8a7e40e89da2015eb306c189baddad1b44c5b91d9fa1ef44c3665b4"
+    },
+    "coast-life-coast-towel": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 45,
+        "top": 40,
+        "width": 390,
+        "height": 505
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "f1dc36d3b8a7e40e89da2015eb306c189baddad1b44c5b91d9fa1ef44c3665b4"
+    },
+    "coast-life-beach-shrub": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 356,
+        "top": 959,
+        "width": 275,
+        "height": 278
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "1a940f2360ba91adfdd213a34b6df8e0439081ccefbe85656aad898cc9b57014"
+    },
+    "coast-life-solid-beach-low-table": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 465,
+        "top": 150,
+        "width": 375,
+        "height": 368
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "92e4bf1bbd2609c6c4a0658a7710209920ea5d1a48b7db22b1ea8892398c2918"
+    },
+    "coast-life-coast-underwater-rock": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 4,
+        "top": 968,
+        "width": 322,
+        "height": 270
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "5df169fbb69fbaf758ba747a687408a0b2987e69a95236896bf60db3a31b7258"
+    },
+    "coast-life-solid-coast-sandcastle": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 25,
+        "top": 570,
+        "width": 510,
+        "height": 420
+      },
+      "width": 64,
+      "height": 64,
+      "sha256": "f24f9688fb001a8f24e5f4199f2433b6589f701c63060fb72fb36989cf88863d"
+    },
+    "coast-life-solid-coast-volley-net": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 870,
+        "top": 80,
+        "width": 640,
+        "height": 430
+      },
+      "width": 160,
+      "height": 64,
+      "sha256": "482cc8e04f822ae407376ebf3c958becf612d8e028060cbe49a48074ae052ce2"
+    },
+    "coast-life-boat-wood": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 704,
+        "top": 646,
+        "width": 163,
+        "height": 308
+      },
+      "width": 64,
+      "height": 32,
+      "sha256": "8e168fc8f61be40a6d47300bd6835f69cebcb493a1104353e4f7acad0c521b4e"
+    },
+    "coast-life-beach-grass": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 356,
+        "top": 959,
+        "width": 275,
+        "height": 278
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "e7254e75acfcd82880d05dfde204a17c12959aeffb18c11f4c51bb596b3f67f5"
+    },
+    "coast-life-beach-pebbles": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 1060,
+        "top": 610,
+        "width": 440,
+        "height": 350
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "dfaffc7cda7d57bf8bc34f57f7e3eed87c7b2090a49e57e7e5ffdce7e1be3d06"
+    },
+    "coast-life-coast-footprints": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 580,
+        "top": 565,
+        "width": 430,
+        "height": 425
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "69de1eccf6a25e9f8f9087f22b015e23d8cbbc9cc4de8aa65241f38a611c87a6"
+    },
+    "coast-life-coast-mooring-post": {
+      "source": "art/source/coast-life-props-master.png",
+      "crop": {
+        "left": 680,
+        "top": 958,
+        "width": 154,
+        "height": 279
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "e78be41fe1aed4327edd0e4336a156a820d779be6ccd0f14a65b011a961f180c"
+    },
+    "coast-life-coast-pebble-cluster": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 1060,
+        "top": 610,
+        "width": 440,
+        "height": 350
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "dfaffc7cda7d57bf8bc34f57f7e3eed87c7b2090a49e57e7e5ffdce7e1be3d06"
+    },
+    "coast-life-coast-shell": {
+      "source": "art/source/coast-life-small-props-master.png",
+      "crop": {
+        "left": 1060,
+        "top": 610,
+        "width": 440,
+        "height": 350
+      },
+      "width": 32,
+      "height": 32,
+      "sha256": "dfaffc7cda7d57bf8bc34f57f7e3eed87c7b2090a49e57e7e5ffdce7e1be3d06"
+    }
+  },
+  "additionalParts": {
+    "parasolPole": {
+      "master": "props",
+      "crop": {
+        "left": 480,
+        "top": 927,
+        "width": 18,
+        "height": 37
+      }
+    }
+  },
+  "poseCrops": {
+    "gull": [
+      {
+        "left": 48,
+        "top": 60,
+        "width": 315,
+        "height": 330
+      },
+      {
+        "left": 0,
+        "top": 435,
+        "width": 427,
+        "height": 246
+      },
+      {
+        "left": 40,
+        "top": 724,
+        "width": 332,
+        "height": 286
+      },
+      {
+        "left": 463,
+        "top": 49,
+        "width": 233,
+        "height": 320
+      },
+      {
+        "left": 430,
+        "top": 428,
+        "width": 269,
+        "height": 288
+      },
+      {
+        "left": 436,
+        "top": 747,
+        "width": 255,
+        "height": 275
+      },
+      {
+        "left": 730,
+        "top": 100,
+        "width": 375,
+        "height": 280
+      },
+      {
+        "left": 695,
+        "top": 435,
+        "width": 446,
+        "height": 250
+      },
+      {
+        "left": 738,
+        "top": 722,
+        "width": 362,
+        "height": 280
+      },
+      {
+        "left": 1150,
+        "top": 47,
+        "width": 248,
+        "height": 323
+      },
+      {
+        "left": 1136,
+        "top": 427,
+        "width": 275,
+        "height": 288
+      },
+      {
+        "left": 1127,
+        "top": 744,
+        "width": 267,
+        "height": 280
+      }
+    ],
+    "marine": {
+      "columns": 6,
+      "rows": 3,
+      "width": 1774,
+      "height": 887,
+      "roundCellBoundaries": true,
+      "fishLeft": "horizontal mirror of the six right-facing approved PNG cells"
+    }
+  },
+  "poseGroups": {
+    "fish": [
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "81ca26536cda471ee3848ba6b26ff69a48f5c8e121c725e0c2519d1b7d57d755"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "ecd9220a259bfc354e5fc63244a04f8521fd01ab64d9342fa4fad3bb2179e859"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "f35c6af322424c69c6cc85f58b6d9aaa61b57fd1bed190b7ef1e0ad05373db49"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "89d314229a7d76f6038ed201a085be676b73ddf84c87e168efbc062fd46b183b"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "37a06008ac95f46b28e93cc049012a12d55aee2ba15410639e218233c141ba0e"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "f78da68da8211a0f3b61149c52090dceaa8460e3b0a1fa3d2206d5213b84aa2f"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "e75145f7fe4bafd9fe93a954ad7074479b9449ce93e242dce9b5bbbdef546a56"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "9489c2211a37404b8502c12257316c2a6ade8fa25736840aa096ba727b8129f2"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "c234193c19f1b9c13af2990ac1735269ba975efbd10adb81aa56aa0366c64c82"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "9302e73f9ec7bb9fa82f1c778c4e0be4deea84cfcce2792bac9b117ffa72aa5e"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "855affde2463f0f29ac53f5521d8dd160d421097f599f6e0ebb974108fa3515d"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "9ae6230de052d845486f7b1560d8116a38a31560e62e75d4a0f88fd8b7cd98fc"
+      }
+    ],
+    "gull": [
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "581ccc6ddaaf6dbacdd3253ce1d637c4038117b6e061b06f3fbb1f55dd3eca1a"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "1f2d9b4215a2e5f8414928f11c61ac08f39e8d37d72ac397d237db2bd3fbafd2"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "9f7c73f57d7cabfead6f6492e317c73494bc4a031e43dca932987c805ea928c0"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "4460152d18b9f29bb9c25edf1b03ade9e988942af704feb6f0c31f322c7392b5"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "315abef7eebe6a7e7a5bef1cd2f3e9b753ce2176e3dc0d07f3ccd29756fad784"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "9882498b9ae5d771101de3995d01e374ca864dd9d1702c046e7f7d88d5aa4937"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "0f2b1581036498e8fd41d76fe20a6eadfbb71e319ac7f65b40b96e1b23151161"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "4c3686dff4b5320884b56ed7151f3c367f9c7a5727dfd30ac519912ba4406d7b"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "ede0549fbf0f90e5d89666fffdee96b32686a4e2f92a18509ecaa84e3c1996df"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "088a92a54b2be193e32332b9b3a0093bf3027251ddb1fe90bcc2da4c159bd6f4"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "3ec72b6b5ca6ac9193f0ecfa6b97eebcb0f754b2251201a4140377188808b027"
+      },
+      {
+        "width": 32,
+        "height": 32,
+        "rgbaSha256": "42d5afd7f743ebf7c1e8f78a4868260e14474626b2c80c1a1a6e39f3d27ad264"
+      }
+    ],
+    "dolphin": [
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "1c0273095382988333e2f2b5ae487cea460737ed9be65cbad9c5de537f95bf75"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "c8f95df046a376888f98e4537ca176713e3bba37a821cdf37091bc3b712d9c7a"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "87a39f1a1ba5de015e88badff421654f480a74204ef2fc9cb18373835b284fb3"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "bcc53d441739e12a98088ea3df0ddbc8c215f87cb92704cf84b6249709a24b1f"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "f4be1ce5273170d9e1414e9b442ce58e52267b61f446890fc355bb25456e1102"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "f7e04bf2557d73eafb7f0ca74c0a3b9ec1e0d7c6cb347f92e4db0e8a9e0ecf95"
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "rgbaSha256": "1291c2a1946d2acec1846590c3b010fd773175539ff5f5d9f1545aa78ae45feb"
+      }
+    ],
+    "seal": [
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "577b06f575ddad2f5427d3efbe73bcb384a1a555ec906ecb3d00749ad4b7ca13"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "8ad5bb4a882ee8c39e8e78df419e2a9b799b37039de9ac05485c5ca6854b57d4"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "667e2994c140ab72bc2fc8f3d61259646407dff17c40f3bf5beb6b6859d45f15"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "49513a7a2a41e70e4b4d6a4067cebbac81ab9b355dd98c04805922ca8ae1345b"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "d03631391caabc854e8cd384c60953925f5fcac36ec04b9d435c2a94a1faaba5"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "rgbaSha256": "4ff01c009562b92994c125e7aff606ffafcaf1faeaecfc38b7ed54ea95044606"
+      }
+    ]
+  },
+  "poseStrips": [
+    {
+      "path": "art/source/coast-life-fish-poses.png",
+      "sha256": "2c1864d0e40d0870539312cb11bc242965c6fc47a40fccc1ee8430e99018801e"
+    },
+    {
+      "path": "art/source/coast-life-gull-poses.png",
+      "sha256": "36167c9fe1a2282cd225de0a6b39dcd3088f3f49e837ca1e8052961e84137216"
+    },
+    {
+      "path": "art/source/coast-life-dolphin-poses.png",
+      "sha256": "a0d8cb497fb5203a64cf933cd241f888b13484acd29a06969b1019208ca1a8bb"
+    },
+    {
+      "path": "art/source/coast-life-seal-poses.png",
+      "sha256": "eaa359f2cced4234c1aa817228e5157f510c34eb44d159aa4556286dc109a97a"
+    }
+  ],
+  "plane": {
+    "source": "art/source/coast-life-plane-master.png",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 724,
+      "height": 724
+    },
+    "width": 192,
+    "height": 96,
+    "sha256": "a918a951e0de167a1ae7d189641817c5f391467b6ff3dc803e5c5c0bc00fa1c9"
+  }
+}

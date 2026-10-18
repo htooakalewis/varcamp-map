@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/drone-approved-master.png",
+    "sha256": "2196cbaf1a6dcc63d08affc6beae9c18fa4c9bb3556273e0f674d8023e3b131c"
+  },
+  "overlay": {
+    "name": "plaza-drone-26",
+    "image": "assets/tilesets/original/plaza-drone-26.png",
+    "sourceId": "plaza-original-drones",
+    "level": "belowAvatar",
+    "x": 41,
+    "y": 75,
+    "width": 4,
+    "height": 6,
+    "carrierTileIds": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "animations": [
+      {
+        "id": 42,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 65800
+          },
+          {
+            "tileid": 1,
+            "duration": 200
+          },
+          {
+            "tileid": 2,
+            "duration": 200
+          },
+          {
+            "tileid": 4,
+            "duration": 200
+          },
+          {
+            "tileid": 6,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 13400
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 66000
+          },
+          {
+            "tileid": 3,
+            "duration": 200
+          },
+          {
+            "tileid": 5,
+            "duration": 200
+          },
+          {
+            "tileid": 7,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 13400
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 66400
+          },
+          {
+            "tileid": 8,
+            "duration": 200
+          },
+          {
+            "tileid": 10,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 13200
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 66400
+          },
+          {
+            "tileid": 9,
+            "duration": 200
+          },
+          {
+            "tileid": 11,
+            "duration": 200
+          },
+          {
+            "tileid": 12,
+            "duration": 200
+          },
+          {
+            "tileid": 13,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 12800
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 67000
+          },
+          {
+            "tileid": 14,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 12800
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 67000
+          },
+          {
+            "tileid": 15,
+            "duration": 200
+          },
+          {
+            "tileid": 17,
+            "duration": 200
+          },
+          {
+            "tileid": 19,
+            "duration": 200
+          },
+          {
+            "tileid": 21,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 12200
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 67000
+          },
+          {
+            "tileid": 16,
+            "duration": 200
+          },
+          {
+            "tileid": 18,
+            "duration": 200
+          },
+          {
+            "tileid": 20,
+            "duration": 200
+          },
+          {
+            "tileid": 22,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 12200
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 67600
+          },
+          {
+            "tileid": 23,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 12200
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 67600
+          },
+          {
+            "tileid": 24,
+            "duration": 200
+          },
+          {
+            "tileid": 25,
+            "duration": 200
+          },
+          {
+            "tileid": 26,
+            "duration": 200
+          },
+          {
+            "tileid": 28,
+            "duration": 200
+          },
+          {
+            "tileid": 32,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 11400
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 68000
+          },
+          {
+            "tileid": 27,
+            "duration": 200
+          },
+          {
+            "tileid": 29,
+            "duration": 200
+          },
+          {
+            "tileid": 33,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 11400
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 68200
+          },
+          {
+            "tileid": 30,
+            "duration": 200
+          },
+          {
+            "tileid": 34,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 11400
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 68200
+          },
+          {
+            "tileid": 31,
+            "duration": 200
+          },
+          {
+            "tileid": 35,
+            "duration": 200
+          },
+          {
+            "tileid": 36,
+            "duration": 200
+          },
+          {
+            "tileid": 37,
+            "duration": 200
+          },
+          {
+            "tileid": 39,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 10800
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 80000
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 68800
+          },
+          {
+            "tileid": 38,
+            "duration": 200
+          },
+          {
+            "tileid": 40,
+            "duration": 200
+          },
+          {
+            "tileid": 41,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 10600
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/plaza-drone-26.json",
+      "atlasSha256": "9c4e03077169cd6d5a55afc203daaf81db4002cca5502745e63aa6002cdeb756",
+      "inputs": [
+        {
+          "path": "tools/art/plaza-drones.ts",
+          "sha256": "326cca89c7dba0b8a4321ce882dca2bfcaa54c47b02ab057df6e103270ed1df6"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 400,
+    "periodMs": 80000,
+    "stepMs": 200,
+    "sharedFrameTiles": 42,
+    "decodedRgbaBytes": 327680,
+    "atlas": {
+      "width": 512,
+      "height": 160,
+      "columns": 16,
+      "tilecount": 80
+    },
+    "tracks": [
+      {
+        "id": "drone-1",
+        "visiblePhases": 0,
+        "positionCount": 0,
+        "poseCount": 0
+      },
+      {
+        "id": "drone-2",
+        "visiblePhases": 18,
+        "positionCount": 18,
+        "poseCount": 3
+      }
+    ]
+  }
+}

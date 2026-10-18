@@ -15,6 +15,8 @@ export interface TileAnimationFrame { tileid: number; duration: number; }
 /** One bounded native atlas/clock, kept separate from scenery stacking and collision masks. */
 export interface LayoutAnimatedOverlay extends TileRect {
   name: string; image: string; sourceId: string;
+  /** Native depth policy. Existing aerial overlays default above; new motion specifies this explicitly. */
+  level?: 'belowAvatar' | 'aboveAvatar';
   carrierTileIds: number[];
   animations: { id: number; frames: TileAnimationFrame[] }[];
   provenance?: { metadataPath: string; atlasSha256: string; inputs: { path: string; sha256: string }[] };

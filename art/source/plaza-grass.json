@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/grass-generated-master.png",
+    "sha256": "17045eb5a1ccdfd323029e833451bb1476d0c2d6c3ba8e959db9ff692e61a8c3"
+  },
+  "operation": "2×2 original texture cells; uniform nearest-neighbor native export",
+  "atlas": {
+    "path": "assets/tilesets/original/plaza-grass.png",
+    "width": 64,
+    "height": 64,
+    "sha256": "39d3d490995a1bb14f9c2a5746236304f54d40028f99c57cdf48571828f836f3"
+  }
+}

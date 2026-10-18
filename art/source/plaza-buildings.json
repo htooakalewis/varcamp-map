@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/plaza-original/buildings-cleaned-master.png",
+    "sha256": "8d0328ff7493ed9e6af84430b5a75c929a981671bfe77c84970a56793ed0ae97"
+  },
+  "priorMaster": {
+    "path": "art/source/plaza-original/buildings-generated-master.png",
+    "sha256": "a91894146c4958e128a299774ace60f1af0e486ffa5d70533759ad7fcf3c1af9"
+  },
+  "alphaThreshold": 192,
+  "operation": "alpha-tight whole-subject crops; uniform nearest-neighbor fit; centered south edge; below192alpha becomes RGBA0000; every selected foreground RGBA retained",
+  "normalization": {
+    "retainedForegroundPixels": 461545,
+    "clearedMattePixels": 53399,
+    "foregroundRgbaSha256": "b5acf47e8412ae5a0c8f95c2787fae319b81539e578e9faa1a516d17c9bf42c8"
+  },
+  "crops": [
+    {
+      "cell": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 27,
+        "top": 84,
+        "width": 574,
+        "height": 503
+      },
+      "target": {
+        "x": 0,
+        "y": 47,
+        "width": 384,
+        "height": 337
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 653,
+        "top": 84,
+        "width": 575,
+        "height": 504
+      },
+      "target": {
+        "x": 384,
+        "y": 47,
+        "width": 384,
+        "height": 337
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 0,
+        "top": 627,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 24,
+        "top": 658,
+        "width": 580,
+        "height": 514
+      },
+      "target": {
+        "x": 0,
+        "y": 428,
+        "width": 384,
+        "height": 340
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "cell": {
+        "left": 627,
+        "top": 627,
+        "width": 627,
+        "height": 627
+      },
+      "crop": {
+        "left": 637,
+        "top": 657,
+        "width": 604,
+        "height": 515
+      },
+      "target": {
+        "x": 384,
+        "y": 441,
+        "width": 384,
+        "height": 327
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/plaza-buildings.png",
+    "width": 768,
+    "height": 768,
+    "sha256": "31226f5771a387009495e824b784f17c05d49a341e99129afcd6b75a5be74d57"
+  }
+}

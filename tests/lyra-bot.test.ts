@@ -1,11 +1,12 @@
-import {historicalPlaza,groveBaseCells} from './helpers/plaza-groves';
-import {arrivalPlaques} from './helpers/physical-prop-contracts';
+import {auditGuideRoutes} from '../tools/bots/route-audit';
+import {historicalPlaza} from './helpers/plaza-groves';
+import {historicalFloorPlaza} from './helpers/plaza-successor';
 import {loadTileCatalog} from '../tools/art/catalog';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { LyraAdapter, Bubble, ChatEvent, Point } from '../src/bots/controller';
-import type { TiledMap, TiledLayer } from '../tools/maps/types';
+import type { TiledMap } from '../tools/maps/types';
 
 const native = () => JSON.parse(readFileSync('maps/overworld.tmj', 'utf8')) as TiledMap;
 async function modules() {
@@ -43,46 +44,17 @@ beforeEach(() => vi.useFakeTimers());
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); });
 
 describe('audited native navigation', () => {
-  it('pins provenance and independently excludes collision, exits, interaction, scenery and logo footprints', async () => {
+  it('pins current provenance and audits physical/depth boundaries while preserving walkable floor graphics', async () => {
     const { ROUTES, planRoute } = await modules();
-    const map = native();
     expect(ROUTES.allowedCells).toHaveLength(743);
     expect(createHash('sha256').update(JSON.stringify(ROUTES.allowedCells)).digest('hex')).toBe('9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f');
     for (const [path, hash] of Object.entries(ROUTES.provenance.sourceSha256)) expect(createHash('sha256').update(readFileSync(path)).digest('hex'), path).toBe(hash);
-    const collisionGids = new Set<number>();
-    for (const s of map.tilesets) for (const t of s.tiles ?? []) if (t.properties?.some(p => p.name === 'collides' && p.value === true)) collisionGids.add(s.firstgid + t.id);
-    const layers: TiledLayer[] = [];
-    const collect = (ls: TiledLayer[]) => { for (const l of ls) { layers.push(l); if (l.type === 'group') collect(l.layers); } }; collect(map.layers);
-    const blocked = new Set<number>(), portals = new Set<number>();
-    for (const l of layers) if (l.type === 'tilelayer') l.data.forEach((gid, i) => { if (collisionGids.has((gid >>> 0) & 0x1fffffff)) blocked.add(i); if (gid && l.properties?.some(p => p.name === 'exitUrl')) portals.add(i); });
-    expect(portals.size).toBe(48);
-    const priorMap = JSON.parse(readFileSync('tests/fixtures/solid-props/before-overworld.tmj', 'utf8')) as TiledMap;
-    const priorCollisionGids = new Set<number>();
-    for (const sheet of priorMap.tilesets) for (const tile of sheet.tiles ?? []) if (tile.properties?.some(p => p.name === 'collides' && p.value === true)) priorCollisionGids.add(sheet.firstgid + tile.id);
-    const priorBlocked = new Set<number>();
-    const priorCensus = (rows: TiledLayer[]) => { for (const row of rows) { if (row.type === 'group') priorCensus(row.layers); else if (row.type === 'tilelayer') row.data.forEach((gid, i) => { if (priorCollisionGids.has((gid >>> 0) & 0x1fffffff)) priorBlocked.add(i); }); } };
-    priorCensus(priorMap.layers);
-    expect(priorBlocked.size).toBe(6336);
-    expect(blocked.size).toBe(6336 + 20 + groveBaseCells(loadTileCatalog()).size);
-    const layout = JSON.parse(readFileSync('world/layouts/overworld.json', 'utf8'));
-    expect(arrivalPlaques(layout,loadTileCatalog())).toHaveLength(9);
-    const rects = [...layout.placements.filter((p: { layer: string }) => p.layer === 'props'), ...layout.images];
-    const terrain = new Map<string, string>();
-    for (const p of layout.placements.filter((p: { layer: string }) => p.layer === 'terrain')) {
-      for (let y = p.y; y < p.y + p.height; y++) for (let x = p.x; x < p.x + p.width; x++) terrain.set(`${x},${y}`, p.sprite);
-    }
-    const wam = JSON.parse(readFileSync('maps/overworld.wam', 'utf8'));
-    const violations: string[] = [];
-    for (const [x, y] of ROUTES.allowedCells) {
-      if (!['path-stone','floor-blue','floor-inlay','floor-charcoal','floor-wood'].includes(terrain.get(`${x},${y}`)!)) violations.push(`terrain ${x},${y}`);
-      if (Math.hypot(x - 63.5, y - 63.5) > 60) violations.push(`radius ${x},${y}`);
-      if (blocked.has(y * 128 + x)) violations.push(`native collision ${x},${y}`);
-      if (portals.has(y * 128 + x)) violations.push(`native portal ${x},${y}`);
-      for (const r of rects) if (x >= r.x && x < r.x + r.width && y >= r.y && y < r.y + r.height) violations.push(`footprint ${r.id ?? r.name} ${x},${y}`);
-      for (const a of wam.areas) if ((x * 32 + 16) >= a.x && (x * 32 + 16) < a.x + a.width && (y * 32 + 16) >= a.y && (y * 32 + 16) < a.y + a.height) violations.push(`WAM ${a.name} ${x},${y}`);
-    }
-    expect(violations).toEqual([]);
-    for (const n of [...blocked, ...portals]) expect(() => planRoute([70, 70], [n % 128, Math.floor(n / 128)])).toThrow();
+    const map=native(),layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));
+    const result=auditGuideRoutes({map,layout,wam,catalog:loadTileCatalog(),routes:ROUTES});
+    expect(result).toMatchObject({allowedCells:743,startupReservedCells:4,nativeCollisionCells:6516,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
+    const collisionGids=new Set<number>();for(const s of map.tilesets)for(const t of s.tiles??[])if(t.properties?.some(p=>p.name==='collides'&&p.value===true))collisionGids.add(s.firstgid+t.id);
+    const forbidden=new Set<number>();for(const l of map.layers)if(l.type==='tilelayer')l.data.forEach((g,i)=>{if(collisionGids.has((g&0x0fffffff)>>>0)||(g&&l.properties?.some(p=>p.name==='exitUrl')))forbidden.add(i);});
+    for(const n of forbidden)expect(()=>planRoute([70,70],[n%128,Math.floor(n/128)])).toThrow();
     for (const d of ROUTES.destinations) {
       const route = planRoute([70, 70], d.tile);
       expect(route.at(-1)).toEqual(d.tile);
@@ -239,6 +211,25 @@ describe('review regressions',()=>{
 });
 
 describe('audited WorkAdventure runtime object aliases',()=>{
+  const historyFolder='tests/fixtures/guide-alias-history/';
+  const preCanonicalNative=():TiledMap=>{
+    const raw=readFileSync(historyFolder+'receipt.json');
+    expect(createHash('sha256').update(raw).digest('hex')).toBe('23d0dbcdd40ffd006da667926b2adb8d0bef4137e5fcf4b877a8ec3ba42e7b9a');
+    const receipt=JSON.parse(raw.toString());
+    expect(Object.keys(receipt).sort()).toEqual(['schema','nativeFile','nativeBytes','nativeSha256','rawAliasedGeometrySha256','normalizedNativeGeometrySha256','objectLayer','provenance'].sort());
+    expect(receipt.schema).toBe('varcamp-observed-runtime-alias-history-v1');
+    expect(receipt.nativeFile).toBe('floor-garden-before-canonical.tmj');
+    expect(receipt.nativeSha256).toBe('969e46ce861f5ce6d5a279f5b266717447506d1da8609cbc576a2bdabdd0bf98');
+    expect(receipt.rawAliasedGeometrySha256).toBe('792a943881b117bad1246c038020f4315bbe7d29e2ee76bf311bd38ee9cb140b');
+    expect(receipt.normalizedNativeGeometrySha256).toBe('f33ae42c82c3c50bc668a074e36533e4544ed0ef150d73032bc5ad61f817dc0f');
+    expect(receipt.objectLayer).toEqual({id:56,name:'inspection-zones',objects:[...Array.from({length:12},(_,i)=>({id:i+2,type:'room'})),...Array.from({length:9},(_,i)=>({id:i+14,type:'landmark'}))]});
+    const bytes=readFileSync(historyFolder+receipt.nativeFile);
+    expect(bytes.length).toBe(receipt.nativeBytes);
+    expect(createHash('sha256').update(bytes).digest('hex')).toBe(receipt.nativeSha256);
+    return JSON.parse(bytes.toString());
+  };
+  const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
+  const rawGeometry=(map:TiledMap)=>({width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')});
   // Reconstruct exactly the 21 additions recorded by the complete raw-vs-WA map audit.
   const runtimeMap = () => {
     const map = native();const layer=map.layers.find(l=>l.id===56);
@@ -250,12 +241,8 @@ describe('audited WorkAdventure runtime object aliases',()=>{
     for(const object of layer.objects)Object.assign(object,{class:object.type});
     return map;
   };
-  it('accepts exactly the observed redundant object classes without mutating the native/runtime map',async()=>{
-    const {guardMap}=await modules();const map=runtimeMap();const before=JSON.stringify(map);
-    // Independent current fixture after the reviewed solid support/depth changes; the same 21 observed WA class aliases and object IDs remain exact.
-    const sorted=(value:unknown):unknown=>Array.isArray(value)?value.map(sorted):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,sorted(v)])):value;
-    const geometry={width:map.width,height:map.height,tilewidth:map.tilewidth,tileheight:map.tileheight,layers:map.layers,tilesets:map.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:map.properties!.filter(p=>p.name!=='script')};
-    // Preserve the prior published alias receipt independently of this new release.
+  it('preserves all four immutable historical native/runtime alias receipts',()=>{
+    // Historical raw-digest oracles stay attached to their actual immutable native epochs.
     const prior=JSON.parse(readFileSync('tests/fixtures/solid-props/before-overworld.tmj','utf8'));
     for(const object of prior.layers.find((l:any)=>l.id===56).objects)object.class=object.type;
     const priorGeometry={width:prior.width,height:prior.height,tilewidth:prior.tilewidth,tileheight:prior.tileheight,layers:prior.layers,tilesets:prior.tilesets.map((t:Record<string,unknown>)=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:prior.properties.filter((p:{name:string})=>p.name!=='script')};
@@ -264,8 +251,34 @@ describe('audited WorkAdventure runtime object aliases',()=>{
     for(const object of propsPublished.layers.find((l:any)=>l.id===56).objects)object.class=object.type;
     const propsGeometry={width:propsPublished.width,height:propsPublished.height,tilewidth:propsPublished.tilewidth,tileheight:propsPublished.tileheight,layers:propsPublished.layers,tilesets:propsPublished.tilesets.map((t:Record<string,unknown>)=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:propsPublished.properties.filter((p:{name:string})=>p.name!=='script')};
     expect(createHash('sha256').update(JSON.stringify(sorted(propsGeometry))).digest('hex')).toBe('687b7189a946a2d4c246f30e64ccd4f87e1a7da86c514557d598bff5211fe37f');
-    expect(createHash('sha256').update(JSON.stringify(sorted(geometry))).digest('hex')).toBe('f1ac2d7ff9cc00205b425cc35736913e2fd8a4354b3b91060a0d0ba7bbbaab42');
-    await expect(guardMap(map)).resolves.toBeUndefined();expect(JSON.stringify(map)).toBe(before);
+    const floorPublished=historicalFloorPlaza('native') as TiledMap;
+    const oldLayer=floorPublished.layers.find(l=>l.id===56);if(oldLayer?.type!=='objectgroup')throw Error('Missing historical alias fixture');
+    for(const object of oldLayer.objects)object.class=object.type;
+    const floorGeometry={width:floorPublished.width,height:floorPublished.height,tilewidth:floorPublished.tilewidth,tileheight:floorPublished.tileheight,layers:floorPublished.layers,tilesets:floorPublished.tilesets.map(t=>Object.fromEntries(Object.entries(t).filter(([k])=>k!=='image'))),properties:floorPublished.properties!.filter(p=>p.name!=='script')};
+    expect(createHash('sha256').update(JSON.stringify(sorted(floorGeometry))).digest('hex')).toBe('f1ac2d7ff9cc00205b425cc35736913e2fd8a4354b3b91060a0d0ba7bbbaab42');
+    const preCanonical=preCanonicalNative();
+    expect(createHash('sha256').update(JSON.stringify(sorted(rawGeometry(preCanonical)))).digest('hex')).toBe('f33ae42c82c3c50bc668a074e36533e4544ed0ef150d73032bc5ad61f817dc0f');
+    const preLayer=preCanonical.layers.find(l=>l.id===56);if(preLayer?.type!=='objectgroup')throw Error('Missing pre-canonical alias fixture');
+    expect(preLayer.objects.map(o=>[o.id,o.type])).toEqual([...Array.from({length:12},(_,i)=>[i+2,'room']),...Array.from({length:9},(_,i)=>[i+14,'landmark'])]);
+    for(const object of preLayer.objects)Object.assign(object,{class:object.type});
+    expect(createHash('sha256').update(JSON.stringify(sorted(rawGeometry(preCanonical)))).digest('hex')).toBe('792a943881b117bad1246c038020f4315bbe7d29e2ee76bf311bd38ee9cb140b');
+  });
+  it('accepts exactly the observed redundant object classes without mutating the current independently audited native/runtime map',async()=>{
+    const {guardMap,ROUTES}=await modules();const source=native(),map=runtimeMap();
+    expect(createHash('sha256').update(readFileSync('maps/overworld.tmj')).digest('hex')).toBe(ROUTES.provenance.sourceSha256['maps/overworld.tmj']);
+    const beforeSource=JSON.stringify(source),beforeRuntime=JSON.stringify(map),restored=structuredClone(map);
+    const sourceLayer=source.layers.find(l=>l.id===56),runtimeLayer=restored.layers.find(l=>l.id===56);
+    if(sourceLayer?.type!=='objectgroup'||runtimeLayer?.type!=='objectgroup')throw Error('Missing current observed alias layer');
+    expect(runtimeLayer.objects).toHaveLength(21);
+    for(const [index,object]of runtimeLayer.objects.entries()){
+      expect(Object.hasOwn(sourceLayer.objects[index],'class')).toBe(false);
+      expect(object.class).toBe(sourceLayer.objects[index].type);
+      Reflect.deleteProperty(object,'class');
+    }
+    expect(restored).toEqual(source); // Only the independently observed 21 class additions are permitted.
+    await expect(guardMap(source)).resolves.toBeUndefined();
+    await expect(guardMap(map)).resolves.toBeUndefined();
+    expect(JSON.stringify(source)).toBe(beforeSource);expect(JSON.stringify(map)).toBe(beforeRuntime);
   });
   it('keeps contradictory/class-only objects and every geometry/collision/exit change signature-bearing',async()=>{
     const {guardMap}=await modules();
@@ -279,6 +292,7 @@ describe('audited WorkAdventure runtime object aliases',()=>{
       (m:TiledMap)=>{const l=m.layers.find(l=>l.name==='physical-collisions');if(l?.type==='tilelayer')l.data[70*128+70]=1;},
       (m:TiledMap)=>{m.layers.find(l=>l.name==='exit-solar')!.properties![0].value='different.wam';},
       (m:TiledMap)=>{m.tilesets.find(s=>s.name==='navigation-mask')!.tiles![0].properties![0].value=true;},
+      (m:TiledMap)=>{const historical=preCanonicalNative(),layers=new Map(m.layers.map(l=>[l.name,l]));expect([...layers.keys()].sort()).toEqual(historical.layers.map(l=>l.name).sort());m.layers=historical.layers.map(l=>layers.get(l.name)!);},
     ]){const changed=runtimeMap();mutate(changed);await expect(guardMap(changed)).rejects.toThrow(/signature|geometry/i);}
   });
 });

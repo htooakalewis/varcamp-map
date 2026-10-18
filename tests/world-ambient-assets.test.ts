@@ -1,0 +1,6 @@
+import{readFileSync}from'node:fs';
+import sharp from'sharp';
+import{expect,it}from'vitest';
+import{packAmbientPoses,renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
+it('stitches native PNG poses without premultiplication channel drift, including almost-transparent colors',async()=>{const rgba=Buffer.from([123,45,67,1,77,88,99,2,144,55,66,127,19,29,39,254]),pose={width:2,height:2,rgba};const png=await packAmbientPoses([pose,pose]);const raw=await sharp(png).ensureAlpha().raw().toBuffer();const expected=Buffer.concat([rgba.subarray(0,8),rgba.subarray(0,8),rgba.subarray(8,16),rgba.subarray(8,16)]);expect(raw).toEqual(expected);});
+it('reproduces every original FX/plant PNG and crop receipt solely from immutable approved/generated inputs',async()=>{const r=await renderWorldAmbientAssets();expect(r.metadata).toEqual(JSON.parse(readFileSync('art/source/world-ambient-assets.json','utf8')));expect(r.plants.equals(readFileSync(r.metadata.plants.path))).toBe(true);for(const[name,png]of Object.entries(r.strips)){expect(png.equals(readFileSync(`art/source/world-ambient-${name}-poses.png`)),name).toBe(true);expect(new Set(r.groups[name].map(p=>p.rgba.toString('base64'))).size,name).toBeGreaterThan(2);}expect(r.metadata.marineSources.every((p:any)=>!Object.values(r.metadata.groups).some((g:any)=>p.path===g.path))).toBe(true);},10000);

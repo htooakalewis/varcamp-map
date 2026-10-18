@@ -1,0 +1,1057 @@
+{
+  "id": "zodiac-festival-park",
+  "width": 48,
+  "height": 48,
+  "placements": [
+    {
+      "id": "foundation",
+      "sprite": "floor-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "id": "authored-twilight",
+      "sprite": "night-wash",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "layer": "atmosphere"
+    },
+    {
+      "id": "court",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 3,
+      "y": 7,
+      "width": 42,
+      "height": 38
+    },
+    {
+      "id": "boundary-north",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 2
+    },
+    {
+      "id": "boundary-south",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 46,
+      "width": 48,
+      "height": 2
+    },
+    {
+      "id": "boundary-west",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 44
+    },
+    {
+      "id": "boundary-east",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 46,
+      "y": 2,
+      "width": 2,
+      "height": 44
+    },
+    {
+      "id": "north-navy",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 2,
+      "y": 1,
+      "width": 44,
+      "height": 2
+    },
+    {
+      "id": "arrival-way",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 20,
+      "y": 38,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "plaza-threshold",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 22,
+      "y": 44,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "arcade-base",
+      "sprite": "floor-blue",
+      "layer": "terrain",
+      "x": 8,
+      "y": 7,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "arcade-wall",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 8,
+      "y": 7,
+      "width": 8,
+      "height": 2,
+      "renderRole": "cutaway"
+    },
+    {
+      "id": "arcade-door",
+      "sprite": "door-open",
+      "layer": "props",
+      "x": 9,
+      "y": 9,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "arcade-rune",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 9,
+      "y": 10,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "playground-base",
+      "sprite": "floor-blue",
+      "layer": "terrain",
+      "x": 32,
+      "y": 7,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "playground-wall",
+      "sprite": "wall-navy",
+      "layer": "architecture",
+      "x": 32,
+      "y": 7,
+      "width": 8,
+      "height": 2,
+      "renderRole": "cutaway"
+    },
+    {
+      "id": "playground-door",
+      "sprite": "door-open",
+      "layer": "props",
+      "x": 33,
+      "y": 9,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "playground-rune",
+      "sprite": "rune-threshold",
+      "layer": "props",
+      "x": 33,
+      "y": 10,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "festival-spine",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 21,
+      "y": 12,
+      "width": 6,
+      "height": 28
+    },
+    {
+      "id": "festival-crosswalk",
+      "sprite": "path-stone",
+      "layer": "terrain",
+      "x": 4,
+      "y": 25,
+      "width": 40,
+      "height": 5
+    },
+    {
+      "id": "pond-gold-edge",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 18,
+      "y": 16,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "id": "moonlit-pond",
+      "sprite": "water-blue",
+      "layer": "terrain",
+      "x": 19,
+      "y": 17,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "id": "pond-lilies",
+      "sprite": "lily-pad",
+      "layer": "props",
+      "x": 20,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "pond-lily-east",
+      "sprite": "lily-pad",
+      "layer": "props",
+      "x": 26,
+      "y": 21,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "fire-garden-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 5,
+      "y": 16,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "id": "fire-garden-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 6,
+      "y": 17,
+      "width": 8,
+      "height": 5
+    },
+    {
+      "id": "fire-garden-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 6,
+      "y": 17,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "fire-garden-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 11,
+      "y": 17,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "fire-sigil",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 10,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "earth-garden-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 33,
+      "y": 16,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "id": "earth-garden-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 34,
+      "y": 17,
+      "width": 8,
+      "height": 5
+    },
+    {
+      "id": "earth-garden-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 34,
+      "y": 17,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "earth-garden-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 39,
+      "y": 17,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "earth-sigil",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 38,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "air-garden-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 5,
+      "y": 29,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "id": "air-garden-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 6,
+      "y": 30,
+      "width": 8,
+      "height": 5
+    },
+    {
+      "id": "air-garden-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 6,
+      "y": 30,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "air-garden-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 11,
+      "y": 30,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "air-sigil",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 10,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "water-garden-frame",
+      "sprite": "floor-inlay",
+      "layer": "terrain",
+      "x": 33,
+      "y": 29,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "id": "water-garden-soil",
+      "sprite": "ground-grass",
+      "layer": "terrain",
+      "x": 34,
+      "y": 30,
+      "width": 8,
+      "height": 5
+    },
+    {
+      "id": "water-garden-flowers",
+      "sprite": "flower-bed",
+      "layer": "props",
+      "x": 34,
+      "y": 30,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "water-garden-tree",
+      "sprite": "tree-flowering",
+      "layer": "props",
+      "x": 39,
+      "y": 30,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "id": "water-sigil",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 38,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-aries",
+      "sprite": "glyph-aries",
+      "layer": "props",
+      "x": 17,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-taurus",
+      "sprite": "glyph-taurus",
+      "layer": "props",
+      "x": 19,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-gemini",
+      "sprite": "glyph-gemini",
+      "layer": "props",
+      "x": 21,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-cancer",
+      "sprite": "glyph-cancer",
+      "layer": "props",
+      "x": 23,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-leo",
+      "sprite": "glyph-leo",
+      "layer": "props",
+      "x": 25,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-virgo",
+      "sprite": "glyph-virgo",
+      "layer": "props",
+      "x": 27,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-libra",
+      "sprite": "glyph-libra",
+      "layer": "props",
+      "x": 17,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-scorpio",
+      "sprite": "glyph-scorpio",
+      "layer": "props",
+      "x": 19,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-sagittarius",
+      "sprite": "glyph-sagittarius",
+      "layer": "props",
+      "x": 21,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-capricorn",
+      "sprite": "glyph-capricorn",
+      "layer": "props",
+      "x": 23,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-aquarius",
+      "sprite": "glyph-aquarius",
+      "layer": "props",
+      "x": 25,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "zodiac-pisces",
+      "sprite": "glyph-pisces",
+      "layer": "props",
+      "x": 27,
+      "y": 31,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "picnic-table",
+      "sprite": "table-circular",
+      "layer": "props",
+      "x": 5,
+      "y": 39,
+      "width": 4,
+      "height": 3
+    },
+    {
+      "id": "quiet-bench",
+      "sprite": "bench-park",
+      "layer": "props",
+      "x": 39,
+      "y": 40,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-face",
+      "sprite": "sign-board-face",
+      "x": 19,
+      "y": 45,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-north",
+      "sprite": "sign-board-north",
+      "x": 19,
+      "y": 45,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-south",
+      "sprite": "sign-board-south",
+      "x": 19,
+      "y": 45,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-west",
+      "sprite": "sign-board-west",
+      "x": 19,
+      "y": 45,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-plaza-return-label-east",
+      "sprite": "sign-board-east",
+      "x": 30,
+      "y": 45,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arcade-label-face",
+      "sprite": "sign-board-face",
+      "x": 7,
+      "y": 6,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arcade-label-north",
+      "sprite": "sign-board-north",
+      "x": 7,
+      "y": 6,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arcade-label-south",
+      "sprite": "sign-board-south",
+      "x": 7,
+      "y": 6,
+      "width": 10,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arcade-label-west",
+      "sprite": "sign-board-west",
+      "x": 7,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arcade-label-east",
+      "sprite": "sign-board-east",
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-playground-label-face",
+      "sprite": "sign-board-face",
+      "x": 30,
+      "y": 6,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-playground-label-north",
+      "sprite": "sign-board-north",
+      "x": 30,
+      "y": 6,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-playground-label-south",
+      "sprite": "sign-board-south",
+      "x": 30,
+      "y": 6,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-playground-label-west",
+      "sprite": "sign-board-west",
+      "x": 30,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-playground-label-east",
+      "sprite": "sign-board-east",
+      "x": 41,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arrival-routes-face",
+      "sprite": "sign-board-face",
+      "x": 17,
+      "y": 34,
+      "width": 14,
+      "height": 4,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arrival-routes-north",
+      "sprite": "sign-board-north",
+      "x": 17,
+      "y": 34,
+      "width": 14,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arrival-routes-south",
+      "sprite": "sign-board-south",
+      "x": 17,
+      "y": 37,
+      "width": 14,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arrival-routes-west",
+      "sprite": "sign-board-west",
+      "x": 17,
+      "y": 34,
+      "width": 1,
+      "height": 4,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-arrival-routes-east",
+      "sprite": "sign-board-east",
+      "x": 30,
+      "y": 34,
+      "width": 1,
+      "height": 4,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-north",
+      "x": 23,
+      "y": 38,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-west",
+      "x": 19,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-3",
+      "sprite": "arrow-east",
+      "x": 28,
+      "y": 16,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wall-arrow-4",
+      "sprite": "arrow-south",
+      "x": 23,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    }
+  ],
+  "entries": [
+    {
+      "name": "festival-entry",
+      "x": 23,
+      "y": 40,
+      "width": 2,
+      "height": 2,
+      "isDefault": true
+    },
+    {
+      "name": "from-arcade",
+      "x": 10,
+      "y": 12,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "name": "from-playground",
+      "x": 34,
+      "y": 12,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-festival",
+      "x": 23,
+      "y": 44,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "arcade",
+      "destination": "nebula-arcade",
+      "entry": "arcade-entry",
+      "x": 10,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "name": "playground",
+      "destination": "orbit-playground",
+      "entry": "arrival",
+      "x": 34,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "pond-view",
+      "name": "pond-view",
+      "properties": [],
+      "x": 22,
+      "y": 25,
+      "width": 4,
+      "height": 3
+    },
+    {
+      "id": "fire-conversation",
+      "name": "fire-conversation",
+      "properties": [],
+      "x": 8,
+      "y": 23,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "earth-conversation",
+      "name": "earth-conversation",
+      "properties": [],
+      "x": 36,
+      "y": 23,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "air-conversation",
+      "name": "air-conversation",
+      "properties": [],
+      "x": 8,
+      "y": 36,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "water-conversation",
+      "name": "water-conversation",
+      "properties": [],
+      "x": 36,
+      "y": 36,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "picnic-conversation",
+      "name": "picnic-conversation",
+      "properties": [],
+      "x": 10,
+      "y": 39,
+      "width": 4,
+      "height": 3
+    },
+    {
+      "id": "quiet-lawn",
+      "name": "quiet-lawn",
+      "properties": [
+        {
+          "id": "quiet-lawn-silent",
+          "type": "silent"
+        }
+      ],
+      "x": 34,
+      "y": 39,
+      "width": 4,
+      "height": 3
+    },
+    {
+      "id": "star-overlook-view",
+      "name": "star-overlook-view",
+      "x": 22,
+      "y": 12,
+      "width": 3,
+      "height": 2,
+      "properties": []
+    }
+  ],
+  "inspectionZones": [
+    {
+      "name": "moonlit-pond",
+      "kind": "landmark",
+      "x": 18,
+      "y": 16,
+      "width": 12,
+      "height": 12
+    },
+    {
+      "name": "fire-garden",
+      "kind": "landmark",
+      "x": 5,
+      "y": 16,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "name": "earth-garden",
+      "kind": "landmark",
+      "x": 33,
+      "y": 16,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "name": "air-garden",
+      "kind": "landmark",
+      "x": 5,
+      "y": 29,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "name": "water-garden",
+      "kind": "landmark",
+      "x": 33,
+      "y": 29,
+      "width": 10,
+      "height": 7
+    },
+    {
+      "name": "picnic-lawn",
+      "kind": "landmark",
+      "x": 4,
+      "y": 38,
+      "width": 12,
+      "height": 5
+    },
+    {
+      "name": "quiet-lawn",
+      "kind": "landmark",
+      "x": 32,
+      "y": 38,
+      "width": 11,
+      "height": 5
+    },
+    {
+      "name": "hidden-star-overlook",
+      "kind": "landmark",
+      "x": 21,
+      "y": 12,
+      "width": 6,
+      "height": 4
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2193 ZODIAC PLAZA",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 19,
+      "y": 45,
+      "width": 12,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "festival-title",
+      "text": "ZODIAC FESTIVAL PARK",
+      "fontSize": 25,
+      "color": "#f4d77b",
+      "x": 13,
+      "y": 3,
+      "width": 25,
+      "height": 2,
+      "align": "left"
+    },
+    {
+      "name": "arcade-label",
+      "text": "\u2191 NEBULA ARCADE",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 7,
+      "y": 6,
+      "width": 10,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "playground-label",
+      "text": "\u2191 ORBIT PLAYGROUND",
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "x": 30,
+      "y": 6,
+      "width": 12,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "fire-garden-label",
+      "text": "FIRE",
+      "fontSize": 15,
+      "color": "#f4d77b",
+      "x": 5,
+      "y": 15,
+      "width": 10,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "earth-garden-label",
+      "text": "EARTH",
+      "fontSize": 15,
+      "color": "#f4d77b",
+      "x": 33,
+      "y": 15,
+      "width": 10,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "air-garden-label",
+      "text": "AIR",
+      "fontSize": 15,
+      "color": "#f4d77b",
+      "x": 5,
+      "y": 28,
+      "width": 10,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "water-garden-label",
+      "text": "WATER",
+      "fontSize": 15,
+      "color": "#f4d77b",
+      "x": 33,
+      "y": 28,
+      "width": 10,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "overlook-label",
+      "text": "STAR WALK",
+      "fontSize": 14,
+      "color": "#f4d77b",
+      "x": 20,
+      "y": 13,
+      "width": 8,
+      "height": 1,
+      "align": "left"
+    },
+    {
+      "name": "arrival-routes",
+      "text": "\u2196 ARCADE \u00b7 NORTHWEST\nPLAYGROUND \u00b7 NORTHEAST \u2197\n\u2193 PLAZA \u00b7 SOUTH GATE",
+      "x": 17,
+      "y": 34,
+      "width": 14,
+      "height": 4,
+      "fontSize": 16,
+      "color": "#fff0b0",
+      "align": "left"
+    }
+  ]
+}

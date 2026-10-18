@@ -29,9 +29,17 @@
     }
   ],
   "replacement": {
-    "instructions": "Replace the chosen assets/sponsors/demo-0N.png with an authorized transparent 192×64 PNG at the identical path. Run npm run maps:build to refresh previews, then npm run buildmap to package the current bytes. No code edit, atlas generation or SVG rasterization is needed. PNG assets are intentionally not hash-frozen. Keep panel frames in the map, outside these bitmaps.",
+    "instructions": "Replace the chosen assets/sponsors/demo-0N.png with an authorized transparent 192\u00d764 PNG at the identical path. Run npm run maps:build to refresh previews, then npm run buildmap to package the current bytes. No code edit, atlas generation or SVG rasterization is needed. PNG assets are intentionally not hash-frozen. Logos are walkable floor inlays below avatars; do not add mounting posts or frames.",
     "licenseNote": "CC0 applies to the original fictional demo marks only. Record the replacement artwork owner, permission and applicable terms here when replacing a mark; replacing a file does not relicense the new artwork.",
     "documentation": "docs/operating/sponsors.md"
   },
-  "nativeRepresentation": "Each unchanged 192×64 PNG is an embedded 32px tileset with 6 columns and 12 cells, drawn in row-major order by an ordinary visible 6×2 sponsor tile-layer footprint. This is compatible with the pinned WorkAdventure renderer; image-only layers are unsupported."
+  "nativeRepresentation": "Each unchanged 192\u00d764 PNG is an embedded 32px tileset with 6 columns and 12 cells, drawn in row-major order by an ordinary visible 6\u00d72 sponsor tile-layer footprint. This is compatible with the pinned WorkAdventure renderer; image-only layers are unsupported.",
+  "eventIdentity": {
+    "name": "VarCamp Myanmar 2026",
+    "image": "assets/sponsors/varcamp-2026.png",
+    "source": "art/source/plaza-original/varcamp-approved-master.png",
+    "owner": "VarCamp organizers",
+    "permission": "Generated event identity explicitly approved by organizer; official brand reference https://var.camp/",
+    "licenseNote": "The fictional sponsor CC0 dedication does not apply to the VarCamp brand; see art/source/plaza-original/NOTICE.txt."
+  }
 }

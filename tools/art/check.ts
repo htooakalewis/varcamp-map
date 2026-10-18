@@ -1,4 +1,14 @@
 import{checkStandingCaptionArt}from'./standing-captions';
+import{checkWorldAmbientArt}from'./world-ambient-check';
+import {renderPlazaIdentity} from './plaza-generated';
+import {renderPlazaGarden} from './plaza-garden';
+import {renderPlazaBuildings,renderPlazaGrass} from './plaza-buildings';
+import {renderPlazaDrones} from './plaza-drones';
+import {renderPlazaPots} from './plaza-pots';
+import {renderCoastLifeAssets} from './coast-life-assets';
+import {renderCoastLife} from './coast-life';
+import {renderInteriorReferenceMotion} from './interior-reference-motion';
+import {isDeepStrictEqual} from 'node:util';
 import {validateSpriteDepth} from '../maps/solid-props';
 import {renderRoadster} from './roadster';
 import {renderCoastalFlight} from './coastal-flight';
@@ -16,6 +26,7 @@ import { SIGN_IDS, ELEMENT_IDS } from '../../src/world/catalog';
 interface SourceRecord { attribution: string; url: string; license: string; licenseFile: string; changes: string; files: { path: string; sha256: string }[]; }
 export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promise<string[]> {
   const errors: string[]=[];
+  errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
   const sources=JSON.parse(readFileSync('art/sources.json','utf8')) as Record<string,SourceRecord>;
   for (const id of [...SIGN_IDS.flatMap(sign=>[`glyph-${sign}`,`constellation-${sign}`]), ...ELEMENT_IDS.map(el=>`sigil-${el}`), 'telescope','quest-shrine','door-open','npc-guide','npc-maze-keeper','npc-dockmaster']) {
@@ -60,6 +71,17 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   const roadster=await renderRoadster();
   if(!readFileSync('assets/tilesets/original/roadster.png').equals(roadster.png))errors.push('roadster: animated PNG differs from compiled original poses');
   if(JSON.stringify(JSON.parse(readFileSync('art/source/roadster.json','utf8')))!==JSON.stringify(roadster.metadata))errors.push('roadster: metadata differs from compiled original poses');
+  const identity=await renderPlazaIdentity(),garden=await renderPlazaGarden(),buildings=await renderPlazaBuildings(),grass=await renderPlazaGrass(),drones=await renderPlazaDrones(),pots=await renderPlazaPots();
+  const nativeOutputs:[string,Buffer][]=[['assets/tilesets/original/zodiac-emblems.png',identity.zodiac],['assets/sponsors/varcamp-2026.png',identity.brand],['assets/tilesets/original/plaza-garden.png',garden.png],['assets/tilesets/original/plaza-buildings.png',buildings.png],['assets/tilesets/original/plaza-grass.png',grass.png],['assets/tilesets/original/plaza-pots.png',pots.png],['art/source/plaza-drone-poses.png',drones.posePng],...drones.resources.map(r=>[r.overlay.image,r.png] as [string,Buffer])];
+  for(const[path,expected]of nativeOutputs)if(!existsSync(path)||!readFileSync(path).equals(expected))errors.push(`${path}: differs from retained original native export`);
+  const descriptors:[string,unknown][]=[['art/source/plaza-generated.json',identity.metadata],['art/source/plaza-garden.json',garden.metadata],['art/source/plaza-buildings.json',buildings.metadata],['art/source/plaza-grass.json',grass.metadata],['art/source/plaza-pots.json',pots.metadata],['art/source/plaza-drones.json',drones.metadata],...drones.resources.map(r=>[r.metadataPath,{version:1,source:drones.metadata.source,overlay:r.overlay,diagnostics:r.diagnostics}] as [string,unknown])];
+  for(const[path,expected]of descriptors)if(!existsSync(path)||!isDeepStrictEqual(JSON.parse(readFileSync(path,'utf8')),expected))errors.push(`${path}: differs from original native export receipt`);
+  const coastAssets=await renderCoastLifeAssets(),coastLife=await renderCoastLife(),interior=await renderInteriorReferenceMotion();
+  const addedOutputs:[string,Buffer][]=[['assets/tilesets/original/coast-life-props.png',coastAssets.atlas],['art/source/coastal-flight-plane.png',coastAssets.plane],...Object.entries(coastAssets.poseStrips).map(([group,png])=>[`art/source/coast-life-${group}-poses.png`,png] as [string,Buffer]),...coastLife.map(r=>[r.overlay.image,r.png] as [string,Buffer]),...interior.artifacts.entries()];
+  for(const[path,expected]of addedOutputs)if(!existsSync(path)||!readFileSync(path).equals(expected))errors.push(`${path}: differs from native PNG producer`);
+  for(const[path,expected]of [['art/source/coast-life-assets.json',coastAssets.metadata],...coastLife.map(r=>[r.overlay.provenance!.metadataPath,r.metadata])] as [string,unknown][])if(!existsSync(path)||!isDeepStrictEqual(JSON.parse(readFileSync(path,'utf8')),expected))errors.push(`${path}: differs from native coast producer`);
+  for(const[path,expected]of interior.layouts){const actual=JSON.parse(readFileSync(path,'utf8'));if(!isDeepStrictEqual(actual.animatedOverlays,expected.animatedOverlays))errors.push(`${path}: differs from native interior motion descriptor`);}
+  if(!isDeepStrictEqual(catalog['interior-ref-plant-motion-base'],interior.catalogEntry))errors.push('interior-reference: animated plant base differs from producer');
   return errors;
 }
 if (process.argv[1] && import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {

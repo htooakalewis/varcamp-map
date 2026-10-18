@@ -1,16 +1,14 @@
+import{publishedEpochJson}from'./published-map-epoch';
 import { historicalEditorLayout, editorCompilerProofCopy } from './editor-catalog-history';
 // Frozen 17d4 receipts and the independently approved 133+24 role transformation.
 // This inverse first verifies current visual semantics, then restores ONLY scenery
 // data/explicit added layers and proves the entire original native/layout receipt.
 // Historical tests apply their older start/robot/Roadster inverses only afterward.
-import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import { buildMap } from '../../tools/maps/builder';
-import { loadTileCatalog } from '../../tools/art/catalog';
 import type { MapLayout, TiledMap } from '../../tools/maps/types';
 const sha=(v:unknown)=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const scenery=(l:any)=>/^scenery-(belowAvatar|aboveAvatar)-\d+$/.test(l.name);
 function requireEqual(actual:unknown,expected:unknown,why:string){if(!isDeepStrictEqual(actual,expected))throw Error(why);}
 const receipts = {
@@ -308,15 +306,15 @@ const receipts = {
   }
 };
 
-export function historicalLayout(id:string,input:MapLayout=json(`world/layouts/${id}.json`)):MapLayout {
+export function historicalLayout(id:string,input:MapLayout=publishedEpochJson(`world/layouts/${id}.json`)):MapLayout {
  const proof=receipts[id as keyof typeof receipts];if(!proof)throw Error(`No approved visibility receipt: ${id}`);
  requireEqual(Object.fromEntries(input.placements.filter(p=>p.renderRole).map(p=>[p.id,p.renderRole])),proof.roles,`${id}: unapproved role transformation`);
  const restored=historicalEditorLayout(id,input);for(const p of restored.placements)delete p.renderRole;
  requireEqual(sha(restored),proof.layout,`${id}: frozen 17d4 authored receipt`);return restored;
 }
-export function historicalNative(id:string,input:TiledMap=json(`maps/${id}.tmj`)):TiledMap {
+export function historicalNative(id:string,input:TiledMap=publishedEpochJson(`maps/${id}.tmj`)):TiledMap {
  const proof=receipts[id as keyof typeof receipts];if(!proof)throw Error(`No approved visibility receipt: ${id}`);
- const current=json(`world/layouts/${id}.json`) as MapLayout,prior=historicalLayout(id,current),catalog=loadTileCatalog();
+ const current=publishedEpochJson(`world/layouts/${id}.json`) as MapLayout,prior=historicalLayout(id,current),catalog=publishedEpochJson('art/tile-catalog.json');
  const now=buildMap(current,catalog).tmj,old=buildMap(editorCompilerProofCopy(id,prior),catalog).tmj;
  function pixels(map:TiledMap,source:TiledMap,layer:any):number[]{
   const expected=source.layers.find(l=>l.name===layer.name) as any;

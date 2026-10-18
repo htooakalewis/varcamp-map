@@ -1,0 +1,1250 @@
+{
+  "version": 1,
+  "kind": "dolphin",
+  "poseGroup": "dolphin",
+  "overlay": {
+    "name": "coast-life-harbor-dolphin",
+    "image": "assets/tilesets/original/coast-life-harbor-dolphin.png",
+    "sourceId": "original",
+    "level": "belowAvatar",
+    "x": 0,
+    "y": 40,
+    "width": 10,
+    "height": 8,
+    "carrierTileIds": [
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "animations": [
+      {
+        "id": 73,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1800
+          },
+          {
+            "tileid": 12,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 34000
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1800
+          },
+          {
+            "tileid": 13,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 34000
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1800
+          },
+          {
+            "tileid": 14,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 34000
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1800
+          },
+          {
+            "tileid": 15,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 34000
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 101,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 1,
+            "duration": 200
+          },
+          {
+            "tileid": 16,
+            "duration": 200
+          },
+          {
+            "tileid": 27,
+            "duration": 200
+          },
+          {
+            "tileid": 39,
+            "duration": 200
+          },
+          {
+            "tileid": 50,
+            "duration": 200
+          },
+          {
+            "tileid": 62,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 2,
+            "duration": 200
+          },
+          {
+            "tileid": 17,
+            "duration": 200
+          },
+          {
+            "tileid": 28,
+            "duration": 200
+          },
+          {
+            "tileid": 40,
+            "duration": 200
+          },
+          {
+            "tileid": 51,
+            "duration": 200
+          },
+          {
+            "tileid": 63,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 3,
+            "duration": 200
+          },
+          {
+            "tileid": 18,
+            "duration": 200
+          },
+          {
+            "tileid": 29,
+            "duration": 200
+          },
+          {
+            "tileid": 41,
+            "duration": 200
+          },
+          {
+            "tileid": 52,
+            "duration": 200
+          },
+          {
+            "tileid": 64,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 4,
+            "duration": 200
+          },
+          {
+            "tileid": 19,
+            "duration": 200
+          },
+          {
+            "tileid": 30,
+            "duration": 200
+          },
+          {
+            "tileid": 42,
+            "duration": 200
+          },
+          {
+            "tileid": 53,
+            "duration": 200
+          },
+          {
+            "tileid": 65,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 109,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 110,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 113,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 5,
+            "duration": 200
+          },
+          {
+            "tileid": 20,
+            "duration": 200
+          },
+          {
+            "tileid": 31,
+            "duration": 200
+          },
+          {
+            "tileid": 43,
+            "duration": 200
+          },
+          {
+            "tileid": 54,
+            "duration": 200
+          },
+          {
+            "tileid": 66,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 115,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 6,
+            "duration": 200
+          },
+          {
+            "tileid": 21,
+            "duration": 200
+          },
+          {
+            "tileid": 32,
+            "duration": 200
+          },
+          {
+            "tileid": 44,
+            "duration": 200
+          },
+          {
+            "tileid": 55,
+            "duration": 200
+          },
+          {
+            "tileid": 67,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 7,
+            "duration": 200
+          },
+          {
+            "tileid": 22,
+            "duration": 200
+          },
+          {
+            "tileid": 33,
+            "duration": 200
+          },
+          {
+            "tileid": 45,
+            "duration": 200
+          },
+          {
+            "tileid": 56,
+            "duration": 200
+          },
+          {
+            "tileid": 68,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 117,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 8,
+            "duration": 200
+          },
+          {
+            "tileid": 23,
+            "duration": 200
+          },
+          {
+            "tileid": 34,
+            "duration": 200
+          },
+          {
+            "tileid": 46,
+            "duration": 200
+          },
+          {
+            "tileid": 57,
+            "duration": 200
+          },
+          {
+            "tileid": 69,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 119,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 120,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 121,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 123,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 124,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 9,
+            "duration": 200
+          },
+          {
+            "tileid": 24,
+            "duration": 200
+          },
+          {
+            "tileid": 35,
+            "duration": 200
+          },
+          {
+            "tileid": 47,
+            "duration": 200
+          },
+          {
+            "tileid": 58,
+            "duration": 200
+          },
+          {
+            "tileid": 70,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 125,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 10,
+            "duration": 200
+          },
+          {
+            "tileid": 25,
+            "duration": 200
+          },
+          {
+            "tileid": 36,
+            "duration": 200
+          },
+          {
+            "tileid": 48,
+            "duration": 200
+          },
+          {
+            "tileid": 59,
+            "duration": 200
+          },
+          {
+            "tileid": 71,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 1600
+          },
+          {
+            "tileid": 11,
+            "duration": 200
+          },
+          {
+            "tileid": 26,
+            "duration": 200
+          },
+          {
+            "tileid": 37,
+            "duration": 200
+          },
+          {
+            "tileid": 49,
+            "duration": 200
+          },
+          {
+            "tileid": 60,
+            "duration": 200
+          },
+          {
+            "tileid": 72,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33200
+          }
+        ]
+      },
+      {
+        "id": 127,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 2000
+          },
+          {
+            "tileid": 38,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 200
+          },
+          {
+            "tileid": 61,
+            "duration": 200
+          },
+          {
+            "tileid": 0,
+            "duration": 33400
+          }
+        ]
+      },
+      {
+        "id": 128,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 129,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 130,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 131,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 132,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 133,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 134,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 136,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 137,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 138,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 139,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 140,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 141,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 142,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 143,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 144,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 145,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 146,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 147,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 148,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 149,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 150,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 151,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      },
+      {
+        "id": 152,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 36000
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/coast-life-harbor-dolphin.json",
+      "atlasSha256": "f00854bed514d05de28c0d8dc6bf06ce3a916c761acf231858bf3d9429c2f268",
+      "inputs": [
+        {
+          "path": "art/source/coast-life-tracks.json",
+          "sha256": "f14d2a1703e20f072da35c9b80aec50df830007b6661d4d538045d65f08f150d"
+        },
+        {
+          "path": "art/source/coast-life-dolphin-poses.png",
+          "sha256": "a0d8cb497fb5203a64cf933cd241f888b13484acd29a06969b1019208ca1a8bb"
+        },
+        {
+          "path": "art/source/coast-life-assets.json",
+          "sha256": "c5cb02654fb2dd80862e67ea0dfe082027562b53f6415776e09a6657295d65c4"
+        },
+        {
+          "path": "art/source/coast-life-generation.json",
+          "sha256": "95f98310ad0a58fa85eb1047cb00f1b296ff1ef640f5df2e358206155dff5942"
+        },
+        {
+          "path": "tools/art/coast-life.ts",
+          "sha256": "86bb817ebc64644289cb701f03b8dc61db0344c70ec2bfc9d4829811bd03fd93"
+        },
+        {
+          "path": "tools/maps/coast-life-habitat.ts",
+          "sha256": "0a5ca4b6e947e674751f4bb64d066e823fd21f97797c2e80e019e583d8b2499d"
+        },
+        {
+          "path": "tools/maps/coast-aerial.ts",
+          "sha256": "02e961133c3eb28c8922c62a417f0d15134638fe4401c93c95a8fd87e3b2dc48"
+        },
+        {
+          "path": "tools/maps/animated-decoration.ts",
+          "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+        },
+        {
+          "path": "tools/maps/animated-decoration-contract.json",
+          "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 180,
+    "periodMs": 36000,
+    "stepMs": 200,
+    "sharedFrameTiles": 73,
+    "decodedRgbaBytes": 655360,
+    "atlas": {
+      "width": 512,
+      "height": 320,
+      "columns": 16,
+      "tilecount": 160
+    },
+    "tracks": [
+      {
+        "id": "coast-life-harbor-dolphin-rare-breach",
+        "visiblePhases": 6,
+        "positionCount": 6,
+        "poseCount": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "scope": "ORIGINAL_GENERATED_INTERIOR_PNG_NATIVE_EXPORT",
+  "generator": "Built-in image_gen tool",
+  "originalMaster": "art/source/interior-reference-original.png",
+  "originalMasterSize": [
+    1774,
+    887
+  ],
+  "originalMasterSha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c",
+  "atlas": "assets/tilesets/original/interior-reference.png",
+  "atlasSize": [
+    512,
+    256
+  ],
+  "atlasSha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79",
+  "transform": "Independent visual-selected crops, aspect-preserving nearest-neighbor downsample, transparent native32px grid; no procedural furniture painting. All source alpha retained within crops.",
+  "sprites": [
+    {
+      "key": "interior-ref-desk-cluster",
+      "crop": [
+        8,
+        132,
+        438,
+        405
+      ],
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 6,
+        "height": 4
+      },
+      "exportPixels": [
+        188,
+        119
+      ],
+      "pastePixels": [
+        2,
+        7
+      ]
+    },
+    {
+      "key": "interior-ref-sofa",
+      "crop": [
+        458,
+        173,
+        905,
+        389
+      ],
+      "rect": {
+        "x": 6,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "exportPixels": [
+        124,
+        60
+      ],
+      "pastePixels": [
+        194,
+        2
+      ]
+    },
+    {
+      "key": "interior-ref-cabinet",
+      "crop": [
+        950,
+        16,
+        1267,
+        405
+      ],
+      "rect": {
+        "x": 10,
+        "y": 0,
+        "width": 2,
+        "height": 3
+      },
+      "exportPixels": [
+        60,
+        74
+      ],
+      "pastePixels": [
+        322,
+        20
+      ]
+    },
+    {
+      "key": "interior-ref-refreshment",
+      "crop": [
+        1356,
+        145,
+        1752,
+        398
+      ],
+      "rect": {
+        "x": 12,
+        "y": 0,
+        "width": 3,
+        "height": 2
+      },
+      "exportPixels": [
+        92,
+        59
+      ],
+      "pastePixels": [
+        386,
+        3
+      ]
+    },
+    {
+      "key": "interior-ref-plant",
+      "crop": [
+        55,
+        446,
+        392,
+        838
+      ],
+      "rect": {
+        "x": 0,
+        "y": 4,
+        "width": 3,
+        "height": 3
+      },
+      "exportPixels": [
+        79,
+        92
+      ],
+      "pastePixels": [
+        8,
+        130
+      ]
+    },
+    {
+      "key": "interior-ref-aquarium",
+      "crop": [
+        470,
+        461,
+        863,
+        832
+      ],
+      "rect": {
+        "x": 3,
+        "y": 4,
+        "width": 4,
+        "height": 3
+      },
+      "exportPixels": [
+        97,
+        92
+      ],
+      "pastePixels": [
+        111,
+        130
+      ]
+    },
+    {
+      "key": "interior-ref-forge",
+      "crop": [
+        899,
+        458,
+        1352,
+        862
+      ],
+      "rect": {
+        "x": 7,
+        "y": 4,
+        "width": 4,
+        "height": 3
+      },
+      "exportPixels": [
+        103,
+        92
+      ],
+      "pastePixels": [
+        236,
+        130
+      ]
+    },
+    {
+      "key": "interior-ref-server",
+      "crop": [
+        1431,
+        452,
+        1672,
+        845
+      ],
+      "rect": {
+        "x": 11,
+        "y": 4,
+        "width": 2,
+        "height": 3
+      },
+      "exportPixels": [
+        56,
+        92
+      ],
+      "pastePixels": [
+        356,
+        130
+      ]
+    }
+  ],
+  "producer": {
+    "path": "tools/art/interior-reference-export.py",
+    "sha256": "118ecd4a14b497776e5f976bdc992af048716c9c430e23c1573495b837eb1ffd"
+  }
+}

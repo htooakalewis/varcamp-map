@@ -1,0 +1,512 @@
+{
+  "version": 2,
+  "effect": {
+    "name": "world-ambient-earth-district-lamp-2",
+    "anchor": "west-lamp",
+    "kind": "lamp",
+    "clip": {
+      "x": 1,
+      "y": 3,
+      "width": 1,
+      "height": 2
+    },
+    "carrierCells": 2,
+    "level": "belowAvatar",
+    "clock": {
+      "stepMs": 250,
+      "periodMs": 12000
+    },
+    "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+  },
+  "componentNames": [
+    "world-ambient-earth-district-lamp-2"
+  ],
+  "partition": "whole",
+  "depthReceipt": {
+    "policy": "opaque-owner-upper-v1",
+    "owner": {
+      "placement": {
+        "id": "west-lamp",
+        "sprite": "light-amber",
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "visual": {
+        "sheet": "assets/tilesets/original/magic.png",
+        "rect": {
+          "x": 12,
+          "y": 0,
+          "width": 1,
+          "height": 2
+        }
+      },
+      "upperCells": []
+    },
+    "sheetSha256": "ac9008b87dab629541131d315982cc2fae296c22e6db5437aab651a6de2dc452",
+    "opaqueUpperSupport": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+  },
+  "overlay": {
+    "name": "world-ambient-earth-district-lamp-2",
+    "image": "assets/tilesets/original/world-ambient-earth-district-lamp-2.png",
+    "sourceId": "original",
+    "level": "belowAvatar",
+    "x": 1,
+    "y": 3,
+    "width": 1,
+    "height": 2,
+    "carrierTileIds": [
+      5,
+      6
+    ],
+    "animations": [
+      {
+        "id": 5,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 4,
+            "duration": 750
+          },
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 4,
+            "duration": 750
+          },
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 4,
+            "duration": 750
+          },
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 4,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/world-ambient-earth-district-lamp-2.json",
+      "atlasSha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "inputs": [
+        {
+          "path": "art/source/world-ambient.json",
+          "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+        },
+        {
+          "path": "art/source/world-ambient-assets.json",
+          "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+        },
+        {
+          "path": "art/source/world-ambient-generation.json",
+          "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+        },
+        {
+          "path": "art/source/world-ambient-plants.json",
+          "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+        },
+        {
+          "path": "art/source/world-ambient-layer-ownership.json",
+          "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+        },
+        {
+          "path": "art/source/world-ambient-lamp-poses.png",
+          "sha256": "6cb32828f033bf15689130a4b880dae9a6302499f9358942c1b553efe1adbc7d"
+        },
+        {
+          "path": "tools/maps/animated-decoration-contract.json",
+          "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+        },
+        {
+          "path": "tools/art/world-ambient.ts",
+          "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+        },
+        {
+          "path": "tools/art/world-ambient-assets.ts",
+          "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+        },
+        {
+          "path": "tools/maps/animated-decoration.ts",
+          "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+        },
+        {
+          "path": "tools/maps/world-ambient.ts",
+          "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+        },
+        {
+          "path": "tools/maps/world-ambient-depth.ts",
+          "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+        },
+        {
+          "path": "tools/maps/world-ambient-ownership.ts",
+          "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+        },
+        {
+          "path": "tools/maps/native-projection.ts",
+          "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+        },
+        {
+          "path": "tools/maps/native-ownership-context.ts",
+          "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+        },
+        {
+          "path": "art/source/native-ownership-context.json",
+          "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "rawPoseStrip": {
+    "path": "art/source/world-ambient-earth-district-lamp-2-poses.png",
+    "width": 32,
+    "height": 64,
+    "frames": 48,
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190"
+  },
+  "poseStrip": {
+    "path": "art/source/world-ambient-earth-district-lamp-2-poses.png",
+    "width": 32,
+    "height": 64,
+    "frames": 48,
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190"
+  },
+  "tracks": [
+    {
+      "id": "world-ambient-earth-district-lamp-2-actor",
+      "samples": [
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 2
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 3
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 4
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 5
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 6
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 7
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 9
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 10
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 11
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 12
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 13
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 14
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 15
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 16
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 17
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 18
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 19
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 20
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 21
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 22
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 23
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 24
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 25
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 26
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 27
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 28
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 29
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 30
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 31
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 32
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 33
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 34
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 35
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 36
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 37
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 38
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 39
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 40
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 41
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 42
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 43
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 44
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 45
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 46
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 47
+        }
+      ]
+    }
+  ],
+  "maxPaintedPixels": 50,
+  "rawMaxPaintedPixels": 50,
+  "diagnostics": {
+    "phaseCount": 48,
+    "periodMs": 12000,
+    "stepMs": 250,
+    "sharedFrameTiles": 5,
+    "decodedRgbaBytes": 65536,
+    "atlas": {
+      "width": 512,
+      "height": 32,
+      "columns": 16,
+      "tilecount": 16
+    },
+    "tracks": [
+      {
+        "id": "world-ambient-earth-district-lamp-2-actor",
+        "visiblePhases": 48,
+        "positionCount": 1,
+        "poseCount": 48
+      }
+    ]
+  }
+}

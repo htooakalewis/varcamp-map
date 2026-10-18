@@ -1,0 +1,754 @@
+{
+  "version": 1,
+  "maps": [
+    {
+      "id": "air-district",
+      "width": 36,
+      "height": 34,
+      "effects": [
+        {
+          "name": "world-ambient-air-district-device-1",
+          "anchor": "studio-laptop-a",
+          "kind": "device",
+          "clip": {
+            "x": 24,
+            "y": 14,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-air-district-lamp-2",
+          "anchor": "studio-cyan-west",
+          "kind": "lamp",
+          "clip": {
+            "x": 3,
+            "y": 13,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "campus-exploration",
+      "width": 48,
+      "height": 48,
+      "effects": [
+        {
+          "name": "world-ambient-campus-exploration-device-1",
+          "anchor": "directory-screen",
+          "kind": "device",
+          "clip": {
+            "x": 22,
+            "y": 21,
+            "width": 3,
+            "height": 2
+          },
+          "carrierCells": 6,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-campus-exploration-leaves-2",
+          "anchor": "court-bed-northwest-flowers",
+          "kind": "leaves",
+          "clip": {
+            "x": 7,
+            "y": 17,
+            "width": 2,
+            "height": 2
+          },
+          "carrierCells": 4,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+        }
+      ]
+    },
+    {
+      "id": "comet-maze",
+      "width": 48,
+      "height": 48,
+      "effects": [
+        {
+          "name": "world-ambient-comet-maze-lamp-1",
+          "anchor": "finish-light-west",
+          "kind": "lamp",
+          "clip": {
+            "x": 38,
+            "y": 3,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-comet-maze-lamp-2",
+          "anchor": "finish-light-east",
+          "kind": "lamp",
+          "clip": {
+            "x": 45,
+            "y": 3,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "earth-district",
+      "width": 36,
+      "height": 34,
+      "effects": [
+        {
+          "name": "world-ambient-earth-district-device-1",
+          "anchor": "library-notes-laptop",
+          "kind": "device",
+          "clip": {
+            "x": 26,
+            "y": 28,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-earth-district-lamp-2",
+          "anchor": "west-lamp",
+          "kind": "lamp",
+          "clip": {
+            "x": 1,
+            "y": 3,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "fa-ship",
+      "width": 48,
+      "height": 56,
+      "effects": [
+        {
+          "name": "world-ambient-fa-ship-gull-1",
+          "anchor": "offshore-north-gull",
+          "kind": "gull",
+          "clip": {
+            "x": 2,
+            "y": 7,
+            "width": 16,
+            "height": 3
+          },
+          "carrierCells": 48,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 200,
+            "periodMs": 16000
+          },
+          "paintPolicy": "One32px approved-original bird flaps and travels fully across a sparse open sky lane; no ground controls."
+        },
+        {
+          "name": "world-ambient-fa-ship-fish-2",
+          "anchor": "offshore-southwest-fish",
+          "kind": "fish",
+          "clip": {
+            "x": 0,
+            "y": 44,
+            "width": 8,
+            "height": 6
+          },
+          "carrierCells": 48,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 200,
+            "periodMs": 16000
+          },
+          "paintPolicy": "One32px approved-original fish swims/tail poses only in true open sea; whole bounding box excludes hull, docks, boats and props."
+        }
+      ]
+    },
+    {
+      "id": "fa-ship-interior",
+      "width": 40,
+      "height": 26,
+      "effects": [
+        {
+          "name": "world-ambient-fa-ship-interior-steam-1",
+          "anchor": "galley-copper",
+          "kind": "steam",
+          "clip": {
+            "x": 4,
+            "y": 6,
+            "width": 3,
+            "height": 2
+          },
+          "carrierCells": 6,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-fa-ship-interior-lamp-2",
+          "anchor": "warm-lantern-3-3",
+          "kind": "lamp",
+          "clip": {
+            "x": 3,
+            "y": 3,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "fire-district",
+      "width": 36,
+      "height": 34,
+      "effects": [
+        {
+          "name": "world-ambient-fire-district-heat-1",
+          "anchor": "forge-bench",
+          "kind": "heat",
+          "clip": {
+            "x": 4,
+            "y": 14,
+            "width": 4,
+            "height": 3
+          },
+          "carrierCells": 12,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-fire-district-steam-2",
+          "anchor": "east-coffee",
+          "kind": "steam",
+          "clip": {
+            "x": 30,
+            "y": 28,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "hidden-observatory",
+      "width": 40,
+      "height": 36,
+      "effects": [
+        {
+          "name": "world-ambient-hidden-observatory-instrument-1",
+          "anchor": "central-telescope",
+          "kind": "instrument",
+          "clip": {
+            "x": 19,
+            "y": 8,
+            "width": 3,
+            "height": 3
+          },
+          "carrierCells": 9,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-hidden-observatory-device-2",
+          "anchor": "archive-laptop",
+          "kind": "device",
+          "clip": {
+            "x": 4,
+            "y": 29,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "moon-cafe",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-moon-cafe-steam-1",
+          "anchor": "cafe-coffee",
+          "kind": "steam",
+          "clip": {
+            "x": 12,
+            "y": 10,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-moon-cafe-bubbles-2",
+          "anchor": "cafe-cooler",
+          "kind": "bubbles",
+          "clip": {
+            "x": 29,
+            "y": 12,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "moon-grotto",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-moon-grotto-ripples-1",
+          "anchor": "moon-pool-left",
+          "kind": "ripples",
+          "clip": {
+            "x": 14,
+            "y": 12,
+            "width": 4,
+            "height": 6
+          },
+          "carrierCells": 24,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Sparse original ripple strokes strictly on visible blocked water, excluding bridge/lily/other prop footprints."
+        },
+        {
+          "name": "world-ambient-moon-grotto-crystal-2",
+          "anchor": "grotto-crystal-west",
+          "kind": "crystal",
+          "clip": {
+            "x": 13,
+            "y": 22,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "nebula-arcade",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-nebula-arcade-device-1",
+          "anchor": "tournament-screen",
+          "kind": "device",
+          "clip": {
+            "x": 17,
+            "y": 7,
+            "width": 6,
+            "height": 3
+          },
+          "carrierCells": 18,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-nebula-arcade-device-2",
+          "anchor": "cabinet-west0",
+          "kind": "device",
+          "clip": {
+            "x": 5,
+            "y": 10,
+            "width": 2,
+            "height": 3
+          },
+          "carrierCells": 6,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-nebula-arcade-device-3",
+          "anchor": "cabinet-east1",
+          "kind": "device",
+          "clip": {
+            "x": 31,
+            "y": 17,
+            "width": 2,
+            "height": 3
+          },
+          "carrierCells": 6,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "orbit-maze",
+      "width": 80,
+      "height": 80,
+      "effects": [
+        {
+          "name": "world-ambient-orbit-maze-lamp-1",
+          "anchor": "cell-light-10-10",
+          "kind": "lamp",
+          "clip": {
+            "x": 7,
+            "y": 7,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-orbit-maze-lamp-2",
+          "anchor": "cell-light-70-58",
+          "kind": "lamp",
+          "clip": {
+            "x": 67,
+            "y": 55,
+            "width": 1,
+            "height": 2
+          },
+          "carrierCells": 2,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "orbit-playground",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-orbit-playground-device-1",
+          "anchor": "game-console",
+          "kind": "device",
+          "clip": {
+            "x": 24,
+            "y": 14,
+            "width": 1,
+            "height": 1
+          },
+          "carrierCells": 1,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-orbit-playground-leaves-2",
+          "anchor": "play-garden-west-flowers",
+          "kind": "leaves",
+          "clip": {
+            "x": 4,
+            "y": 19,
+            "width": 2,
+            "height": 2
+          },
+          "carrierCells": 4,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+        }
+      ]
+    },
+    {
+      "id": "star-garden",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-star-garden-ripples-1",
+          "anchor": "garden-fountain",
+          "kind": "ripples",
+          "clip": {
+            "x": 18,
+            "y": 14,
+            "width": 4,
+            "height": 7
+          },
+          "carrierCells": 28,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Sparse original ripple strokes strictly on visible blocked water, excluding bridge/lily/other prop footprints."
+        },
+        {
+          "name": "world-ambient-star-garden-leaves-2",
+          "anchor": "dawn-flowers",
+          "kind": "leaves",
+          "clip": {
+            "x": 6,
+            "y": 11,
+            "width": 2,
+            "height": 2
+          },
+          "carrierCells": 4,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+        }
+      ]
+    },
+    {
+      "id": "stargazer-terrace",
+      "width": 40,
+      "height": 40,
+      "effects": [
+        {
+          "name": "world-ambient-stargazer-terrace-instrument-1",
+          "anchor": "observatory-telescope",
+          "kind": "instrument",
+          "clip": {
+            "x": 18,
+            "y": 10,
+            "width": 3,
+            "height": 3
+          },
+          "carrierCells": 9,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        },
+        {
+          "name": "world-ambient-stargazer-terrace-leaves-2",
+          "anchor": "terrace-garden-west-flowers",
+          "kind": "leaves",
+          "clip": {
+            "x": 5,
+            "y": 17,
+            "width": 2,
+            "height": 2
+          },
+          "carrierCells": 4,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+        }
+      ]
+    },
+    {
+      "id": "water-district",
+      "width": 36,
+      "height": 34,
+      "effects": [
+        {
+          "name": "world-ambient-water-district-ripples-1",
+          "anchor": "reflecting-pool",
+          "kind": "ripples",
+          "clip": {
+            "x": 24,
+            "y": 14,
+            "width": 8,
+            "height": 5
+          },
+          "carrierCells": 40,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Sparse original ripple strokes strictly on visible blocked water, excluding bridge/lily/other prop footprints."
+        },
+        {
+          "name": "world-ambient-water-district-cascade-2",
+          "anchor": "water-wall-feature",
+          "kind": "cascade",
+          "clip": {
+            "x": 4,
+            "y": 6,
+            "width": 4,
+            "height": 3
+          },
+          "carrierCells": 12,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+        }
+      ]
+    },
+    {
+      "id": "zodiac-festival-park",
+      "width": 48,
+      "height": 48,
+      "effects": [
+        {
+          "name": "world-ambient-zodiac-festival-park-ripples-1",
+          "anchor": "moonlit-pond",
+          "kind": "ripples",
+          "clip": {
+            "x": 19,
+            "y": 17,
+            "width": 10,
+            "height": 7
+          },
+          "carrierCells": 70,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "Sparse original ripple strokes strictly on visible blocked water, excluding bridge/lily/other prop footprints."
+        },
+        {
+          "name": "world-ambient-zodiac-festival-park-leaves-2",
+          "anchor": "fire-garden-flowers",
+          "kind": "leaves",
+          "clip": {
+            "x": 6,
+            "y": 17,
+            "width": 2,
+            "height": 2
+          },
+          "carrierCells": 4,
+          "level": "belowAvatar",
+          "clock": {
+            "stepMs": 250,
+            "periodMs": 12000
+          },
+          "paintPolicy": "One or two tiny original leaves inside the existing garden patch; never cover the road."
+        }
+      ]
+    }
+  ]
+}

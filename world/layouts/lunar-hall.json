@@ -186,7 +186,7 @@
     },
     {
       "id": "stage-gold-border",
-      "sprite": "floor-inlay",
+      "sprite": "floor-blue",
       "x": 16,
       "y": 5,
       "width": 32,
@@ -314,33 +314,6 @@
       "height": 2,
       "layer": "props",
       "renderRole": "cutaway"
-    },
-    {
-      "id": "staff-workstation",
-      "sprite": "desk-coding",
-      "x": 52,
-      "y": 7,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "staff-laptop",
-      "sprite": "laptop",
-      "x": 53,
-      "y": 7,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "staff-seat",
-      "sprite": "chair-north-slate",
-      "x": 53,
-      "y": 10,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
     },
     {
       "id": "staff-sofa",
@@ -1001,30 +974,28 @@
     },
     {
       "id": "gallery-palm-west",
-      "sprite": "plant-palm",
+      "sprite": "world-ambient-plant-palm",
       "x": 3,
       "y": 24,
       "width": 3,
       "height": 3,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gallery-palm-east",
-      "sprite": "plant-palm",
+      "sprite": "world-ambient-plant-palm",
       "x": 58,
       "y": 24,
       "width": 3,
       "height": 3,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gallery-sofa-west",
-      "sprite": "sofa-cream",
+      "sprite": "interior-ref-sofa",
       "x": 5,
       "y": 32,
-      "width": 3,
+      "width": 4,
       "height": 2,
       "layer": "props"
     },
@@ -1039,7 +1010,7 @@
     },
     {
       "id": "gallery-books-west",
-      "sprite": "bookcase",
+      "sprite": "interior-ref-cabinet",
       "x": 3,
       "y": 36,
       "width": 2,
@@ -1093,10 +1064,10 @@
     },
     {
       "id": "foyer-sofa-west-two",
-      "sprite": "sofa-cream",
+      "sprite": "interior-ref-sofa",
       "x": 12,
       "y": 47,
-      "width": 3,
+      "width": 4,
       "height": 2,
       "layer": "props"
     },
@@ -1111,7 +1082,7 @@
     },
     {
       "id": "foyer-palm-west",
-      "sprite": "plant-palm",
+      "sprite": "interior-ref-plant",
       "x": 2,
       "y": 48,
       "width": 3,
@@ -1147,29 +1118,11 @@
       "layer": "props"
     },
     {
-      "id": "foyer-counter",
-      "sprite": "desk-cream",
-      "x": 47,
-      "y": 47,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "foyer-coffee",
-      "sprite": "coffee-maker",
-      "x": 47,
-      "y": 47,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "foyer-sofa-east",
-      "sprite": "sofa-cream",
+      "sprite": "interior-ref-sofa",
       "x": 52,
       "y": 48,
-      "width": 3,
+      "width": 4,
       "height": 2,
       "layer": "props"
     },
@@ -1184,7 +1137,7 @@
     },
     {
       "id": "foyer-palm-east",
-      "sprite": "plant-palm",
+      "sprite": "interior-ref-plant",
       "x": 59,
       "y": 47,
       "width": 3,
@@ -1245,6 +1198,69 @@
       "width": 1,
       "height": 1,
       "layer": "architecture"
+    },
+    {
+      "id": "interior-ref-staff-work-cluster",
+      "sprite": "interior-ref-desk-cluster",
+      "x": 51,
+      "y": 7,
+      "width": 6,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-gallery-water",
+      "sprite": "interior-ref-aquarium",
+      "x": 8,
+      "y": 36,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "x": 3,
+      "y": 28,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-resource-cabinet",
+      "sprite": "interior-ref-cabinet",
+      "x": 50,
+      "y": 32,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-gallery-server",
+      "sprite": "interior-ref-server",
+      "x": 60,
+      "y": 28,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-refreshments",
+      "sprite": "interior-ref-refreshment",
+      "x": 47,
+      "y": 47,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "interior-ref-foyer-library",
+      "sprite": "interior-ref-cabinet",
+      "x": 17,
+      "y": 47,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -1407,7 +1423,7 @@
     },
     {
       "name": "plaza-wayfinding",
-      "text": "\u2190 CENTRAL AISLE \u00b7 PLAZA \u2193",
+      "text": "← CENTRAL AISLE · PLAZA ↓",
       "x": 35,
       "y": 52,
       "width": 27,
@@ -1481,6 +1497,682 @@
       "fontSize": 13,
       "color": "#f1d9a0",
       "align": "left"
+    }
+  ],
+  "animatedOverlays": [
+    {
+      "name": "interior-ambient-plant",
+      "image": "assets/tilesets/original/interior-motion-plant.png",
+      "sourceId": "interior-reference",
+      "level": "belowAvatar",
+      "x": 3,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "carrierTileIds": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "animations": [
+        {
+          "id": 19,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 7,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 13,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "frames": [
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 8,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 14,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "frames": [
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 9,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 15,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "frames": [
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 10,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 16,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "frames": [
+            {
+              "tileid": 5,
+              "duration": 750
+            },
+            {
+              "tileid": 11,
+              "duration": 750
+            },
+            {
+              "tileid": 5,
+              "duration": 750
+            },
+            {
+              "tileid": 17,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "frames": [
+            {
+              "tileid": 6,
+              "duration": 750
+            },
+            {
+              "tileid": 12,
+              "duration": 750
+            },
+            {
+              "tileid": 6,
+              "duration": 750
+            },
+            {
+              "tileid": 18,
+              "duration": 750
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/interior-motion-lunar-hall-plant.json",
+        "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a",
+        "inputs": [
+          {
+            "path": "art/source/interior-reference-original.png",
+            "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+          },
+          {
+            "path": "art/source/interior-steam-original.png",
+            "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+          },
+          {
+            "path": "art/source/interior-steam-pose.png",
+            "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+          },
+          {
+            "path": "art/source/interior-reference-native.png",
+            "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/art/interior-reference-motion.ts",
+            "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          }
+        ]
+      }
+    },
+    {
+      "name": "interior-ambient-steam",
+      "image": "assets/tilesets/original/interior-motion-steam.png",
+      "sourceId": "interior-reference",
+      "level": "belowAvatar",
+      "x": 47,
+      "y": 47,
+      "width": 1,
+      "height": 1,
+      "carrierTileIds": [
+        5
+      ],
+      "animations": [
+        {
+          "id": 5,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 400
+            },
+            {
+              "tileid": 2,
+              "duration": 400
+            },
+            {
+              "tileid": 3,
+              "duration": 400
+            },
+            {
+              "tileid": 4,
+              "duration": 400
+            },
+            {
+              "tileid": 0,
+              "duration": 800
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/interior-motion-lunar-hall-steam.json",
+        "atlasSha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418",
+        "inputs": [
+          {
+            "path": "art/source/interior-reference-original.png",
+            "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+          },
+          {
+            "path": "art/source/interior-steam-original.png",
+            "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+          },
+          {
+            "path": "art/source/interior-steam-pose.png",
+            "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+          },
+          {
+            "path": "art/source/interior-reference-native.png",
+            "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/art/interior-reference-motion.ts",
+            "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          }
+        ]
+      }
+    },
+    {
+      "name": "interior-ambient-server",
+      "image": "assets/tilesets/original/interior-motion-server.png",
+      "sourceId": "interior-reference",
+      "level": "belowAvatar",
+      "x": 60,
+      "y": 28,
+      "width": 2,
+      "height": 3,
+      "carrierTileIds": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "animations": [
+        {
+          "id": 15,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 7,
+              "duration": 750
+            },
+            {
+              "tileid": 11,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "frames": [
+            {
+              "tileid": 2,
+              "duration": 3000
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "frames": [
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 8,
+              "duration": 750
+            },
+            {
+              "tileid": 12,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "frames": [
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 9,
+              "duration": 750
+            },
+            {
+              "tileid": 13,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "frames": [
+            {
+              "tileid": 5,
+              "duration": 750
+            },
+            {
+              "tileid": 10,
+              "duration": 750
+            },
+            {
+              "tileid": 14,
+              "duration": 750
+            },
+            {
+              "tileid": 5,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "frames": [
+            {
+              "tileid": 6,
+              "duration": 3000
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/interior-motion-lunar-hall-server.json",
+        "atlasSha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8",
+        "inputs": [
+          {
+            "path": "art/source/interior-reference-original.png",
+            "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+          },
+          {
+            "path": "art/source/interior-steam-original.png",
+            "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+          },
+          {
+            "path": "art/source/interior-steam-pose.png",
+            "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+          },
+          {
+            "path": "art/source/interior-reference-native.png",
+            "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/art/interior-reference-motion.ts",
+            "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          }
+        ]
+      }
+    },
+    {
+      "name": "interior-ambient-water",
+      "image": "assets/tilesets/original/interior-motion-water.png",
+      "sourceId": "interior-reference",
+      "level": "belowAvatar",
+      "x": 8,
+      "y": 36,
+      "width": 4,
+      "height": 3,
+      "carrierTileIds": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "animations": [
+        {
+          "id": 29,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 600
+            },
+            {
+              "tileid": 13,
+              "duration": 600
+            },
+            {
+              "tileid": 21,
+              "duration": 600
+            },
+            {
+              "tileid": 13,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "frames": [
+            {
+              "tileid": 2,
+              "duration": 600
+            },
+            {
+              "tileid": 14,
+              "duration": 600
+            },
+            {
+              "tileid": 22,
+              "duration": 600
+            },
+            {
+              "tileid": 14,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "frames": [
+            {
+              "tileid": 3,
+              "duration": 600
+            },
+            {
+              "tileid": 15,
+              "duration": 600
+            },
+            {
+              "tileid": 23,
+              "duration": 600
+            },
+            {
+              "tileid": 15,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "frames": [
+            {
+              "tileid": 4,
+              "duration": 600
+            },
+            {
+              "tileid": 16,
+              "duration": 600
+            },
+            {
+              "tileid": 24,
+              "duration": 600
+            },
+            {
+              "tileid": 16,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "frames": [
+            {
+              "tileid": 5,
+              "duration": 600
+            },
+            {
+              "tileid": 17,
+              "duration": 600
+            },
+            {
+              "tileid": 25,
+              "duration": 600
+            },
+            {
+              "tileid": 17,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "frames": [
+            {
+              "tileid": 6,
+              "duration": 600
+            },
+            {
+              "tileid": 18,
+              "duration": 600
+            },
+            {
+              "tileid": 26,
+              "duration": 600
+            },
+            {
+              "tileid": 18,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "frames": [
+            {
+              "tileid": 7,
+              "duration": 600
+            },
+            {
+              "tileid": 19,
+              "duration": 600
+            },
+            {
+              "tileid": 27,
+              "duration": 600
+            },
+            {
+              "tileid": 19,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "frames": [
+            {
+              "tileid": 8,
+              "duration": 600
+            },
+            {
+              "tileid": 20,
+              "duration": 600
+            },
+            {
+              "tileid": 28,
+              "duration": 600
+            },
+            {
+              "tileid": 20,
+              "duration": 600
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "frames": [
+            {
+              "tileid": 9,
+              "duration": 2400
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "frames": [
+            {
+              "tileid": 10,
+              "duration": 2400
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "frames": [
+            {
+              "tileid": 11,
+              "duration": 2400
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "frames": [
+            {
+              "tileid": 12,
+              "duration": 2400
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/interior-motion-lunar-hall-water.json",
+        "atlasSha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613",
+        "inputs": [
+          {
+            "path": "art/source/interior-reference-original.png",
+            "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+          },
+          {
+            "path": "art/source/interior-steam-original.png",
+            "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+          },
+          {
+            "path": "art/source/interior-steam-pose.png",
+            "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+          },
+          {
+            "path": "art/source/interior-reference-native.png",
+            "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/art/interior-reference-motion.ts",
+            "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          }
+        ]
+      }
     }
   ]
 }

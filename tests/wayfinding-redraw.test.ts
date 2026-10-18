@@ -1,17 +1,18 @@
+import{stageCurrentArtInputs}from'./helpers/current-interior-fixture';
 import{readShipFloorLabels}from'../tools/maps/beach-ship';
 import{assertNativeStandingCaptions}from'../tools/maps/standing-captions';
 import{readStandingCaptions}from'../tools/art/standing-captions';
 import {standingFace as declaredFace} from './helpers/physical-prop-contracts';
-import { readFileSync, readdirSync, cpSync, mkdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { readFileSync, readdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { resolve, dirname } from 'node:path';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {EXTERIOR_GATE_COPY,EXTERIOR_ROAD_COPY} from '../tools/art/exterior-gates';
 import { loadTileCatalog } from '../tools/art/catalog';
 import { buildMap } from '../tools/maps/builder';
 import { checkArt } from '../tools/art/check';
 import { addNpcGuides } from '../tools/maps/npc-guides';
-import type { MapLayout, TileRect, LayoutAnimatedOverlay, Placement, TiledMap } from '../tools/maps/types';
+import type { MapLayout, TileRect, Placement, TiledMap } from '../tools/maps/types';
 
 const layouts = addNpcGuides(readdirSync('world/layouts').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(`world/layouts/${f}`,'utf8')) as MapLayout));
 // One predicate is used by both fixture cases and the complete production-layout audit.
@@ -70,16 +71,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
  it('detects a stale wayfinding PNG after its editable master changes',async()=>{
   const root=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-wayfinding-art-'));
   try{
-   cpSync(resolve(root,'art'),resolve(fixture,'art'),{recursive:true});
-   cpSync(resolve(root,'assets'),resolve(fixture,'assets'),{recursive:true});
-   // Art/assets are copied above; include every animation's declared compiler/schema inputs.
-   // Derive this closure from canonical receipts so adding an overlay cannot stale a hand list.
-   for(const metadata of readdirSync(resolve(root,'art/source')).filter(file=>file.endsWith('.json'))){
-    const overlay=JSON.parse(readFileSync(resolve(root,'art/source',metadata),'utf8')).overlay as LayoutAnimatedOverlay|undefined;
-    for(const input of overlay?.provenance?.inputs??[]){
-     mkdirSync(dirname(resolve(fixture,input.path)),{recursive:true});cpSync(resolve(root,input.path),resolve(fixture,input.path));
-    }
-   }
+   stageCurrentArtInputs(root,fixture);
    const file=resolve(fixture,'art/source/wayfinding.svg');
    writeFileSync(file,readFileSync(file,'utf8').replace('#0c1d30','#ff0000'));
    process.chdir(fixture);

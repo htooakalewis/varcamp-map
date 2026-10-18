@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "master": {
+    "path": "art/source/world-ambient-fx-master.png",
+    "sha256": "5b3ccc87bc78b6e5923b422ecd1d1322ad620d82198a7547d8896ca441e50ce9"
+  },
+  "generation": "art/source/world-ambient-generation.json",
+  "marineSources": [
+    {
+      "path": "art/source/world-ambient-approved-fish-strip.png",
+      "originalPath": "art/source/coast-life-fish-poses.png",
+      "provenance": "Exact approved original native pose strip reused from frozen coast candidate; generated master/crop receipts remain with coast release.",
+      "sha256": "2c1864d0e40d0870539312cb11bc242965c6fc47a40fccc1ee8430e99018801e",
+      "derivation": "Immutable approved coast pose PNG input. Exported public pose strip is a separate lossless straight-alpha RAW stitch; output never serves as its own source."
+    },
+    {
+      "path": "art/source/world-ambient-approved-gull-strip.png",
+      "originalPath": "art/source/coast-life-gull-poses.png",
+      "provenance": "Exact approved original native pose strip reused from frozen coast candidate; generated master/crop receipts remain with coast release.",
+      "sha256": "36167c9fe1a2282cd225de0a6b39dcd3088f3f49e837ca1e8052961e84137216",
+      "derivation": "Immutable approved coast pose PNG input. Exported public pose strip is a separate lossless straight-alpha RAW stitch; output never serves as its own source."
+    }
+  ],
+  "recipes": [
+    {
+      "name": "steam",
+      "bounds": [
+        0,
+        340
+      ],
+      "xs": [
+        [
+          60,
+          235
+        ],
+        [
+          260,
+          465
+        ],
+        [
+          505,
+          670
+        ],
+        [
+          735,
+          885
+        ]
+      ],
+      "size": [
+        16,
+        24
+      ],
+      "opacity": 0.55
+    },
+    {
+      "name": "ripples",
+      "bounds": [
+        345,
+        535
+      ],
+      "xs": [
+        [
+          20,
+          230
+        ],
+        [
+          230,
+          455
+        ],
+        [
+          450,
+          700
+        ],
+        [
+          690,
+          940
+        ]
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "opacity": 0.7
+    },
+    {
+      "name": "device",
+      "bounds": [
+        565,
+        715
+      ],
+      "xs": [
+        [
+          65,
+          225
+        ],
+        [
+          285,
+          445
+        ],
+        [
+          495,
+          675
+        ],
+        [
+          720,
+          900
+        ]
+      ],
+      "size": [
+        24,
+        10
+      ],
+      "opacity": 0.6
+    },
+    {
+      "name": "lamp",
+      "bounds": [
+        745,
+        955
+      ],
+      "xs": [
+        [
+          60,
+          205
+        ],
+        [
+          285,
+          430
+        ],
+        [
+          505,
+          665
+        ],
+        [
+          735,
+          890
+        ]
+      ],
+      "size": [
+        8,
+        12
+      ],
+      "opacity": 0.55
+    },
+    {
+      "name": "leaves",
+      "bounds": [
+        975,
+        1175
+      ],
+      "xs": [
+        [
+          55,
+          230
+        ],
+        [
+          285,
+          450
+        ],
+        [
+          475,
+          690
+        ],
+        [
+          745,
+          900
+        ]
+      ],
+      "size": [
+        8,
+        12
+      ],
+      "opacity": 0.9
+    },
+    {
+      "name": "cascade",
+      "bounds": [
+        1178,
+        1448
+      ],
+      "xs": [
+        [
+          65,
+          205
+        ],
+        [
+          285,
+          430
+        ],
+        [
+          515,
+          665
+        ],
+        [
+          735,
+          890
+        ]
+      ],
+      "size": [
+        12,
+        24
+      ],
+      "opacity": 0.65
+    },
+    {
+      "name": "glint",
+      "bounds": [
+        1450,
+        1659
+      ],
+      "xs": [
+        [
+          55,
+          220
+        ],
+        [
+          275,
+          445
+        ],
+        [
+          495,
+          675
+        ],
+        [
+          725,
+          905
+        ]
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "opacity": 0.45
+    }
+  ],
+  "plants": {
+    "path": "assets/tilesets/original/world-ambient-plants.png",
+    "sha256": "4fa0fa471186b1b0725ac10a914bd9104df86e7382b2ec4f233da547dee44f11",
+    "sources": [
+      {
+        "path": "art/source/world-ambient-planter-approved-atlas.png",
+        "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79",
+        "crop": {
+          "left": 0,
+          "top": 128,
+          "width": 96,
+          "height": 96
+        },
+        "receipt": "Exact approved original interior planter; art/source/interior-reference-original.png c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c; original crop55,446..392,838; native96canvas"
+      }
+    ]
+  },
+  "groups": {
+    "steam": {
+      "path": "art/source/world-ambient-steam-poses.png",
+      "sha256": "7c28027b2b34c45f8047bd32ee7043d710b7a7a8e3a7d57fca1e72b675afd14f",
+      "width": 16,
+      "height": 24,
+      "frames": 4,
+      "rgbaHashes": [
+        "57efe2c0ad75b49bf76dca95345300b486074af008315d652234876709e51a77",
+        "1f724b0526831eef08d1a817572840ea7c6818fb583802a9478f62e361f9531f",
+        "0d26576db4b106a3e14d7d316168c033b8c2f074b11fccb4a51c1e5544e7e246",
+        "9dcc8defcb79e3026e131e44d60e2cfbab49e3274db5e3e4d3153eb4bd24a2e0"
+      ],
+      "maxPaintedPixels": 189
+    },
+    "ripples": {
+      "path": "art/source/world-ambient-ripples-poses.png",
+      "sha256": "466c99b9b59af2a685f45494fec256b5e3147b4f1ba80a11e778d9cf447cecfb",
+      "width": 32,
+      "height": 16,
+      "frames": 4,
+      "rgbaHashes": [
+        "ceb6e1def060b9bc70a7a775858ff4847c0c946a2d79beb39ba542825bd3ee30",
+        "5315b8b78f6c5b2d8e6f52ad9d3d7012086eb9b70b4884d5623a75369915c723",
+        "adaf04a8c6c9dc5c74c363511a0be51b167aa0ff1cbcc6ae12a2e426a1e9bf80",
+        "fd826d8453e8b198b8894203f85afb0d95a35b21c7d88574753bfe04b3e2579f"
+      ],
+      "maxPaintedPixels": 378
+    },
+    "device": {
+      "path": "art/source/world-ambient-device-poses.png",
+      "sha256": "211dbb717a1be6dfe351be4f9081ff9734dfc65f9e103d1095815d8d9fde7f47",
+      "width": 24,
+      "height": 10,
+      "frames": 4,
+      "rgbaHashes": [
+        "941b3b61969259cb9b77a11abe8dda3198300b6d79e6da356dc1279fa36431e3",
+        "c3f122f6f77b920a8a2fd5c8d4ffd3893e526cf173580640a3df2ae5f2da6a85",
+        "a9930298629567fc3b332dcad7a0e19918285d2c741277091825bc2897c858b1",
+        "c52f354f3a8df4f9b6ddf8fad3543afe23c3aa4ed90b9c3c8c444d35dd6eee1b"
+      ],
+      "maxPaintedPixels": 166
+    },
+    "lamp": {
+      "path": "art/source/world-ambient-lamp-poses.png",
+      "sha256": "6cb32828f033bf15689130a4b880dae9a6302499f9358942c1b553efe1adbc7d",
+      "width": 8,
+      "height": 12,
+      "frames": 4,
+      "rgbaHashes": [
+        "d00869c2aad3deafa3de9a0f53a0c8835556ea75903c6378122023e357039337",
+        "99c5cb72b19362f254d4ce631011df9be305ee60a6e50c525dd68a50e3b94fef",
+        "e159e56444faec327d6f140caca701c03ba220052aa92d0f1acd6bda5eb190f0",
+        "ba01172140f648bf6dd3ef7699b7b6a7d23393751f74e48d32af2d17f8fe0de4"
+      ],
+      "maxPaintedPixels": 50
+    },
+    "leaves": {
+      "path": "art/source/world-ambient-leaves-poses.png",
+      "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+      "width": 8,
+      "height": 12,
+      "frames": 4,
+      "rgbaHashes": [
+        "2b1893a29d87e60e6e4dbddd122832cab1b6aecaf9e78e514eb7d1f79456b7f9",
+        "002e188ada0d68bae331b665475ac6ee847c815aa5a3f2d77c762d14bc0645c7",
+        "a31ded5e4a780ec24a62a1b6db7b121f10a117bd3471ffa4eb8688da4195ac0b",
+        "5b44e0d96bf476cc2ca88b7b94945583307e2931a1f485e20454e68622567d07"
+      ],
+      "maxPaintedPixels": 60
+    },
+    "cascade": {
+      "path": "art/source/world-ambient-cascade-poses.png",
+      "sha256": "9e8152dedb61f03cb042bd891aaad5af017827c70bb41e97057862df4ee07621",
+      "width": 12,
+      "height": 24,
+      "frames": 4,
+      "rgbaHashes": [
+        "4fc385594d9ad31ba34af1a1ee3b59d276978eaf4e881ba025246c805cb31ce6",
+        "725c69e8c74892557464c895769756f286b79f7a65360ffd37d5dd41e522d3a9",
+        "0c25f4dfbde4cd55f4c84968c99cfd5f3bf98d0a03a8d719a59ec22de2158fb4",
+        "bf9aa2bba1bb2eb675469536e43d7408eb8313eb533d6bd680ec20c685cf5c1d"
+      ],
+      "maxPaintedPixels": 146
+    },
+    "glint": {
+      "path": "art/source/world-ambient-glint-poses.png",
+      "sha256": "2c5718ce5a484ecbd3080e6262d347b4cad34c7cdd2e7427d0a5bfebd704d749",
+      "width": 12,
+      "height": 12,
+      "frames": 4,
+      "rgbaHashes": [
+        "5fede51d09f7c7d074beb7ad9a3db930ca96eae32ea2325fd1b80e9bf9dfc862",
+        "63400a1d5f7af5170c753cfbf442f3d42bf21a63bdbad4fec075b6cf66693569",
+        "7118643cb1981d4389101440a22eab3caf4bcfcd99fba895fda60039b0bef2db",
+        "1aa1e24566d1c3a6454d54626d295c50505306b43499a1a053e08872688cb389"
+      ],
+      "maxPaintedPixels": 85
+    },
+    "fish": {
+      "path": "art/source/world-ambient-fish-poses.png",
+      "sha256": "2c1864d0e40d0870539312cb11bc242965c6fc47a40fccc1ee8430e99018801e",
+      "width": 32,
+      "height": 32,
+      "frames": 12,
+      "rgbaHashes": [
+        "6c2d8df9dd7576135b8361e1ec5dd9d1da4276cfdf7f42922a86e5184bf7056c",
+        "ff3f063f9233506456fa81e5d5813f75c1970614293b42c4da2df7a2dc526b49",
+        "4dae47c1b521cd2d0ddd02b2072e49889c4ac8691badf128317673eb6a4a3f96",
+        "72831f6fb5bb17d1bb82c05cd43626a6b4f930bd1b4527de9aa9ba19c68b753e",
+        "206c1d0bba3e8ebcc26da4d2a4fcea67f639610146a87954882e0a2d8ddcdd05",
+        "6a5e1abf7a15e879e623af0ae43dcb0b5958c1ba55885540d18cb4e2a6f5419d",
+        "0b72d1fa5a1936443f96b8fb162daed8208a5e2b84c96b74fdadf9089eaf0caf",
+        "ebc10d14faf11dadb80613491fe1001579055b79d1f98e3d8d6b131a19b598a8",
+        "26008f40fc52f4ca6cccd813bedf28660f27c56c0dc2b7e2d9332e4a7bc711bb",
+        "137b9dbb84bcabeab8e95885a7878c98834e40d6fad628bc92a46d392c0e0a8e",
+        "96103e21feed8951dd438d3aa0578d5c17a6c6d680fe1039e06d2b95d93a09ce",
+        "400e047033597f6ca92584250ac3345d1f26fd071b930f62bf72c45edf8d8d26"
+      ],
+      "maxPaintedPixels": 418
+    },
+    "gull": {
+      "path": "art/source/world-ambient-gull-poses.png",
+      "sha256": "36167c9fe1a2282cd225de0a6b39dcd3088f3f49e837ca1e8052961e84137216",
+      "width": 32,
+      "height": 32,
+      "frames": 12,
+      "rgbaHashes": [
+        "54a77165f8941aa6f6cc2d9668a52dd2075eb1e4e0b4e0cf2ce80310ee103338",
+        "cc5b93623654a9db63e9ccad4ec5d7c96b85890e9247cc893c16bee0a872270d",
+        "8c3e96a5a37bbc76b760eb75a8b9dc75340afe693e236edfed197b7f61dd85cc",
+        "60b524fc6b62fa698731917cbdffca8fcdc45882a979e0234e1077b74db696d3",
+        "fdf70dd4d0a09e133d656b993f085f7bc1bba4c4d8ffd56fe06f99e60373c7f4",
+        "73b44a6be2519800f8de3eba71691eb89c3dac09a42cd02092a67487cc7d79b3",
+        "e427fddae55893f82abb71f2ac5a5e233556e635d92b1aeee84c8919615800b7",
+        "b76d0c8a9bf7e19d00c529b37248aaa2cf2d0c9cd2eee67380d607aa5f18fe3c",
+        "040b67616a4a442c9aa5817b6253991923d911d3bf480ec31495cf6e12d1d2f5",
+        "b0c8277ceb53d20885cf49b58611eb1188d819d0241b8cb116d4650a8ab92315",
+        "7b207fb2d9453ada15c062f503cf4a5d4d664a710bb0098a037d8dc71e26989c",
+        "63da7b2b70731dcc078908d5ba5a4050cdf2550676133c5738da56ea95db7177"
+      ],
+      "maxPaintedPixels": 601
+    }
+  }
+}

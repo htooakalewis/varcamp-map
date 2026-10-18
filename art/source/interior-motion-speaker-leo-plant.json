@@ -1,0 +1,204 @@
+{
+  "scope": "ORIGINAL_PNG_INTERIOR_NATIVE_MOTION",
+  "overlay": {
+    "name": "interior-ambient-plant",
+    "image": "assets/tilesets/original/interior-motion-plant.png",
+    "sourceId": "interior-reference",
+    "level": "belowAvatar",
+    "x": 2,
+    "y": 3,
+    "width": 3,
+    "height": 2,
+    "carrierTileIds": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "animations": [
+      {
+        "id": 19,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 7,
+            "duration": 750
+          },
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 13,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "frames": [
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 8,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 750
+          },
+          {
+            "tileid": 14,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "frames": [
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 9,
+            "duration": 750
+          },
+          {
+            "tileid": 3,
+            "duration": 750
+          },
+          {
+            "tileid": 15,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "frames": [
+          {
+            "tileid": 4,
+            "duration": 750
+          },
+          {
+            "tileid": 10,
+            "duration": 750
+          },
+          {
+            "tileid": 4,
+            "duration": 750
+          },
+          {
+            "tileid": 16,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "frames": [
+          {
+            "tileid": 5,
+            "duration": 750
+          },
+          {
+            "tileid": 11,
+            "duration": 750
+          },
+          {
+            "tileid": 5,
+            "duration": 750
+          },
+          {
+            "tileid": 17,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "frames": [
+          {
+            "tileid": 6,
+            "duration": 750
+          },
+          {
+            "tileid": 12,
+            "duration": 750
+          },
+          {
+            "tileid": 6,
+            "duration": 750
+          },
+          {
+            "tileid": 18,
+            "duration": 750
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/interior-motion-speaker-leo-plant.json",
+      "atlasSha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a",
+      "inputs": [
+        {
+          "path": "art/source/interior-reference-original.png",
+          "sha256": "c3f0d3716b93052c18238e2b0b65795eb1ba6de6bf95776643d821884963e73c"
+        },
+        {
+          "path": "art/source/interior-steam-original.png",
+          "sha256": "679f4d16f9bffa98f83269f751a47edde769e8d61c76fd204c280748721ccf75"
+        },
+        {
+          "path": "art/source/interior-steam-pose.png",
+          "sha256": "f5b15cdb214a98b6f37f3c2503695d6b2710bbaa57ecb7e0abd9907f02ee1236"
+        },
+        {
+          "path": "art/source/interior-reference-native.png",
+          "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/art/interior-reference-motion.ts",
+          "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "phaseCount": 4,
+    "periodMs": 3000,
+    "stepMs": 750,
+    "sharedFrameTiles": 19,
+    "decodedRgbaBytes": 131072,
+    "atlas": {
+      "width": 512,
+      "height": 64,
+      "columns": 16,
+      "tilecount": 32
+    },
+    "tracks": [
+      {
+        "id": "plant",
+        "visiblePhases": 4,
+        "positionCount": 3,
+        "poseCount": 1
+      }
+    ]
+  }
+}

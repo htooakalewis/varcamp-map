@@ -1,0 +1,602 @@
+{
+  "version": 2,
+  "effect": {
+    "name": "world-ambient-fa-ship-interior-steam-1",
+    "anchor": "galley-copper",
+    "kind": "steam",
+    "clip": {
+      "x": 4,
+      "y": 6,
+      "width": 3,
+      "height": 2
+    },
+    "carrierCells": 6,
+    "level": "belowAvatar",
+    "clock": {
+      "stepMs": 250,
+      "periodMs": 12000
+    },
+    "paintPolicy": "Contained in painted existing fixture; no image-wide glow. Source pose/mask must keep face labels legible."
+  },
+  "componentNames": [
+    "world-ambient-fa-ship-interior-steam-1",
+    "world-ambient-fa-ship-interior-steam-1-upper"
+  ],
+  "partition": "opaqueOwnerUpper",
+  "depthReceipt": {
+    "policy": "opaque-owner-upper-v1",
+    "owner": {
+      "placement": {
+        "id": "galley-copper",
+        "sprite": "ship-galley",
+        "x": 4,
+        "y": 6,
+        "width": 3,
+        "height": 2,
+        "layer": "decor",
+        "renderRole": null
+      },
+      "visual": {
+        "sheet": "assets/tilesets/original/ship-interior.png",
+        "rect": {
+          "x": 7,
+          "y": 0,
+          "width": 3,
+          "height": 2
+        }
+      },
+      "upperCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "sheetSha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415",
+    "opaqueUpperSupport": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  "overlay": {
+    "name": "world-ambient-fa-ship-interior-steam-1-upper",
+    "image": "assets/tilesets/original/world-ambient-fa-ship-interior-steam-1-upper.png",
+    "sourceId": "original",
+    "level": "aboveAvatar",
+    "x": 4,
+    "y": 6,
+    "width": 3,
+    "height": 2,
+    "carrierTileIds": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "animations": [
+      {
+        "id": 18,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "frames": [
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 250
+          },
+          {
+            "tileid": 3,
+            "duration": 250
+          },
+          {
+            "tileid": 4,
+            "duration": 250
+          },
+          {
+            "tileid": 5,
+            "duration": 500
+          },
+          {
+            "tileid": 6,
+            "duration": 250
+          },
+          {
+            "tileid": 7,
+            "duration": 750
+          },
+          {
+            "tileid": 8,
+            "duration": 750
+          },
+          {
+            "tileid": 9,
+            "duration": 250
+          },
+          {
+            "tileid": 4,
+            "duration": 500
+          },
+          {
+            "tileid": 5,
+            "duration": 500
+          },
+          {
+            "tileid": 10,
+            "duration": 250
+          },
+          {
+            "tileid": 11,
+            "duration": 750
+          },
+          {
+            "tileid": 1,
+            "duration": 750
+          },
+          {
+            "tileid": 2,
+            "duration": 250
+          },
+          {
+            "tileid": 12,
+            "duration": 500
+          },
+          {
+            "tileid": 13,
+            "duration": 500
+          },
+          {
+            "tileid": 14,
+            "duration": 250
+          },
+          {
+            "tileid": 15,
+            "duration": 750
+          },
+          {
+            "tileid": 16,
+            "duration": 750
+          },
+          {
+            "tileid": 17,
+            "duration": 250
+          },
+          {
+            "tileid": 12,
+            "duration": 500
+          },
+          {
+            "tileid": 13,
+            "duration": 500
+          },
+          {
+            "tileid": 14,
+            "duration": 250
+          },
+          {
+            "tileid": 11,
+            "duration": 750
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "frames": [
+          {
+            "tileid": 0,
+            "duration": 12000
+          }
+        ]
+      }
+    ],
+    "provenance": {
+      "metadataPath": "art/source/world-ambient-fa-ship-interior-steam-1-upper.json",
+      "atlasSha256": "5b8548f4d53e683e5344a230c2f982eea4c3b3ce34ca355d1f51bc822e3cf391",
+      "inputs": [
+        {
+          "path": "art/source/world-ambient.json",
+          "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+        },
+        {
+          "path": "art/source/world-ambient-assets.json",
+          "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+        },
+        {
+          "path": "art/source/world-ambient-generation.json",
+          "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+        },
+        {
+          "path": "art/source/world-ambient-plants.json",
+          "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+        },
+        {
+          "path": "art/source/world-ambient-layer-ownership.json",
+          "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+        },
+        {
+          "path": "art/source/world-ambient-steam-poses.png",
+          "sha256": "7c28027b2b34c45f8047bd32ee7043d710b7a7a8e3a7d57fca1e72b675afd14f"
+        },
+        {
+          "path": "tools/maps/animated-decoration-contract.json",
+          "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+        },
+        {
+          "path": "tools/art/world-ambient.ts",
+          "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+        },
+        {
+          "path": "tools/art/world-ambient-assets.ts",
+          "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+        },
+        {
+          "path": "tools/maps/animated-decoration.ts",
+          "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+        },
+        {
+          "path": "tools/maps/world-ambient.ts",
+          "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+        },
+        {
+          "path": "tools/maps/world-ambient-depth.ts",
+          "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+        },
+        {
+          "path": "tools/maps/world-ambient-ownership.ts",
+          "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+        },
+        {
+          "path": "tools/maps/native-projection.ts",
+          "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+        },
+        {
+          "path": "tools/maps/native-ownership-context.ts",
+          "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+        },
+        {
+          "path": "art/source/native-ownership-context.json",
+          "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+        },
+        {
+          "path": "tools/art/native-motion.ts",
+          "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+        },
+        {
+          "path": "tools/maps/builder.ts",
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+        },
+        {
+          "path": "tools/maps/types.ts",
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+        }
+      ]
+    }
+  },
+  "rawPoseStrip": {
+    "path": "art/source/world-ambient-fa-ship-interior-steam-1-poses.png",
+    "width": 96,
+    "height": 64,
+    "frames": 48,
+    "sha256": "3bfebce43ba2eec39b43571ec1ade8b207babc35b478599efd1cd685e98b248b"
+  },
+  "poseStrip": {
+    "path": "art/source/world-ambient-fa-ship-interior-steam-1-upper-poses.png",
+    "width": 96,
+    "height": 64,
+    "frames": 48,
+    "sha256": "e72d930ee12797c12fdd6f52fdfb1387749669f1b957d62e0731da1ab3a802ad"
+  },
+  "tracks": [
+    {
+      "id": "world-ambient-fa-ship-interior-steam-1-actor",
+      "samples": [
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 2
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 3
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 4
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 5
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 6
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 7
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 9
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 10
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 11
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 12
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 13
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 14
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 15
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 16
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 17
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 18
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 19
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 20
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 21
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 22
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 23
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 24
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 25
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 26
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 27
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 28
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 29
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 30
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 31
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 32
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 33
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 34
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 35
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 36
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 37
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 38
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 39
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 40
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 41
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 42
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 43
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 44
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 45
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 46
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "pose": 47
+        }
+      ]
+    }
+  ],
+  "maxPaintedPixels": 177,
+  "rawMaxPaintedPixels": 189,
+  "diagnostics": {
+    "phaseCount": 48,
+    "periodMs": 12000,
+    "stepMs": 250,
+    "sharedFrameTiles": 18,
+    "decodedRgbaBytes": 131072,
+    "atlas": {
+      "width": 512,
+      "height": 64,
+      "columns": 16,
+      "tilecount": 32
+    },
+    "tracks": [
+      {
+        "id": "world-ambient-fa-ship-interior-steam-1-actor",
+        "visiblePhases": 48,
+        "positionCount": 1,
+        "poseCount": 48
+      }
+    ]
+  }
+}

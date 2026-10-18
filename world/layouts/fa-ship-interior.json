@@ -1639,7 +1639,7 @@
   "signs": [
     {
       "name": "upper-deck-direction",
-      "text": "\u2191 FA SHIP / UPPER DECK",
+      "text": "↑ FA SHIP / UPPER DECK",
       "x": 17,
       "y": 8,
       "width": 9,
@@ -1649,13 +1649,679 @@
     },
     {
       "name": "plaza-direction",
-      "text": "PLAZA \u2192",
+      "text": "PLAZA →",
       "x": 31,
       "y": 12,
       "width": 6,
       "height": 1,
       "fontSize": 16,
       "align": "left"
+    }
+  ],
+  "animatedOverlays": [
+    {
+      "name": "world-ambient-fa-ship-interior-steam-1",
+      "image": "assets/tilesets/original/world-ambient-fa-ship-interior-steam-1.png",
+      "sourceId": "original",
+      "level": "belowAvatar",
+      "x": 4,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "carrierTileIds": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "animations": [
+        {
+          "id": 12,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 250
+            },
+            {
+              "tileid": 3,
+              "duration": 250
+            },
+            {
+              "tileid": 4,
+              "duration": 250
+            },
+            {
+              "tileid": 5,
+              "duration": 500
+            },
+            {
+              "tileid": 0,
+              "duration": 1000
+            },
+            {
+              "tileid": 6,
+              "duration": 750
+            },
+            {
+              "tileid": 7,
+              "duration": 250
+            },
+            {
+              "tileid": 4,
+              "duration": 500
+            },
+            {
+              "tileid": 5,
+              "duration": 500
+            },
+            {
+              "tileid": 0,
+              "duration": 1000
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 250
+            },
+            {
+              "tileid": 8,
+              "duration": 500
+            },
+            {
+              "tileid": 9,
+              "duration": 500
+            },
+            {
+              "tileid": 0,
+              "duration": 1000
+            },
+            {
+              "tileid": 10,
+              "duration": 750
+            },
+            {
+              "tileid": 11,
+              "duration": 250
+            },
+            {
+              "tileid": 8,
+              "duration": 500
+            },
+            {
+              "tileid": 9,
+              "duration": 500
+            },
+            {
+              "tileid": 0,
+              "duration": 1000
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/world-ambient-fa-ship-interior-steam-1.json",
+        "atlasSha256": "2ed25ae50464b51b072716e760051a39d83297832c1429e28a1e90a5d55ac575",
+        "inputs": [
+          {
+            "path": "art/source/world-ambient.json",
+            "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+          },
+          {
+            "path": "art/source/world-ambient-assets.json",
+            "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+          },
+          {
+            "path": "art/source/world-ambient-generation.json",
+            "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+          },
+          {
+            "path": "art/source/world-ambient-plants.json",
+            "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+          },
+          {
+            "path": "art/source/world-ambient-layer-ownership.json",
+            "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+          },
+          {
+            "path": "art/source/world-ambient-steam-poses.png",
+            "sha256": "7c28027b2b34c45f8047bd32ee7043d710b7a7a8e3a7d57fca1e72b675afd14f"
+          },
+          {
+            "path": "tools/maps/animated-decoration-contract.json",
+            "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+          },
+          {
+            "path": "tools/art/world-ambient.ts",
+            "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+          },
+          {
+            "path": "tools/art/world-ambient-assets.ts",
+            "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+          },
+          {
+            "path": "tools/maps/animated-decoration.ts",
+            "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+          },
+          {
+            "path": "tools/maps/world-ambient.ts",
+            "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+          },
+          {
+            "path": "tools/maps/world-ambient-depth.ts",
+            "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+          },
+          {
+            "path": "tools/maps/world-ambient-ownership.ts",
+            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+          },
+          {
+            "path": "tools/maps/native-projection.ts",
+            "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+          },
+          {
+            "path": "tools/maps/native-ownership-context.ts",
+            "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+          },
+          {
+            "path": "art/source/native-ownership-context.json",
+            "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          },
+          {
+            "path": "tools/maps/types.ts",
+            "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+          }
+        ]
+      }
+    },
+    {
+      "name": "world-ambient-fa-ship-interior-steam-1-upper",
+      "image": "assets/tilesets/original/world-ambient-fa-ship-interior-steam-1-upper.png",
+      "sourceId": "original",
+      "level": "aboveAvatar",
+      "x": 4,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "carrierTileIds": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "animations": [
+        {
+          "id": 18,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 250
+            },
+            {
+              "tileid": 3,
+              "duration": 250
+            },
+            {
+              "tileid": 4,
+              "duration": 250
+            },
+            {
+              "tileid": 5,
+              "duration": 500
+            },
+            {
+              "tileid": 6,
+              "duration": 250
+            },
+            {
+              "tileid": 7,
+              "duration": 750
+            },
+            {
+              "tileid": 8,
+              "duration": 750
+            },
+            {
+              "tileid": 9,
+              "duration": 250
+            },
+            {
+              "tileid": 4,
+              "duration": 500
+            },
+            {
+              "tileid": 5,
+              "duration": 500
+            },
+            {
+              "tileid": 10,
+              "duration": 250
+            },
+            {
+              "tileid": 11,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 250
+            },
+            {
+              "tileid": 12,
+              "duration": 500
+            },
+            {
+              "tileid": 13,
+              "duration": 500
+            },
+            {
+              "tileid": 14,
+              "duration": 250
+            },
+            {
+              "tileid": 15,
+              "duration": 750
+            },
+            {
+              "tileid": 16,
+              "duration": 750
+            },
+            {
+              "tileid": 17,
+              "duration": 250
+            },
+            {
+              "tileid": 12,
+              "duration": 500
+            },
+            {
+              "tileid": 13,
+              "duration": 500
+            },
+            {
+              "tileid": 14,
+              "duration": 250
+            },
+            {
+              "tileid": 11,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/world-ambient-fa-ship-interior-steam-1-upper.json",
+        "atlasSha256": "5b8548f4d53e683e5344a230c2f982eea4c3b3ce34ca355d1f51bc822e3cf391",
+        "inputs": [
+          {
+            "path": "art/source/world-ambient.json",
+            "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+          },
+          {
+            "path": "art/source/world-ambient-assets.json",
+            "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+          },
+          {
+            "path": "art/source/world-ambient-generation.json",
+            "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+          },
+          {
+            "path": "art/source/world-ambient-plants.json",
+            "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+          },
+          {
+            "path": "art/source/world-ambient-layer-ownership.json",
+            "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+          },
+          {
+            "path": "art/source/world-ambient-steam-poses.png",
+            "sha256": "7c28027b2b34c45f8047bd32ee7043d710b7a7a8e3a7d57fca1e72b675afd14f"
+          },
+          {
+            "path": "tools/maps/animated-decoration-contract.json",
+            "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+          },
+          {
+            "path": "tools/art/world-ambient.ts",
+            "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+          },
+          {
+            "path": "tools/art/world-ambient-assets.ts",
+            "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+          },
+          {
+            "path": "tools/maps/animated-decoration.ts",
+            "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+          },
+          {
+            "path": "tools/maps/world-ambient.ts",
+            "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+          },
+          {
+            "path": "tools/maps/world-ambient-depth.ts",
+            "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+          },
+          {
+            "path": "tools/maps/world-ambient-ownership.ts",
+            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+          },
+          {
+            "path": "tools/maps/native-projection.ts",
+            "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+          },
+          {
+            "path": "tools/maps/native-ownership-context.ts",
+            "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+          },
+          {
+            "path": "art/source/native-ownership-context.json",
+            "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          },
+          {
+            "path": "tools/maps/types.ts",
+            "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+          }
+        ]
+      }
+    },
+    {
+      "name": "world-ambient-fa-ship-interior-lamp-2",
+      "image": "assets/tilesets/original/world-ambient-fa-ship-interior-lamp-2.png",
+      "sourceId": "original",
+      "level": "aboveAvatar",
+      "x": 3,
+      "y": 3,
+      "width": 1,
+      "height": 2,
+      "carrierTileIds": [
+        5,
+        6
+      ],
+      "animations": [
+        {
+          "id": 5,
+          "frames": [
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            },
+            {
+              "tileid": 1,
+              "duration": 750
+            },
+            {
+              "tileid": 2,
+              "duration": 750
+            },
+            {
+              "tileid": 3,
+              "duration": 750
+            },
+            {
+              "tileid": 4,
+              "duration": 750
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "frames": [
+            {
+              "tileid": 0,
+              "duration": 12000
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "metadataPath": "art/source/world-ambient-fa-ship-interior-lamp-2.json",
+        "atlasSha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+        "inputs": [
+          {
+            "path": "art/source/world-ambient.json",
+            "sha256": "c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad"
+          },
+          {
+            "path": "art/source/world-ambient-assets.json",
+            "sha256": "6ae4ccdcd02332020e5e214b7bfae51a54301a17f7025532db8b00e74cb9efe4"
+          },
+          {
+            "path": "art/source/world-ambient-generation.json",
+            "sha256": "03c8bb57b1c562500ae93a68354ed1b5a92932ec618d42149f00b868322a59e5"
+          },
+          {
+            "path": "art/source/world-ambient-plants.json",
+            "sha256": "377d7696270f34ebc24be8146d4be6666855d4d88c39489f7263f81383dbd322"
+          },
+          {
+            "path": "art/source/world-ambient-layer-ownership.json",
+            "sha256": "05a405619414e50e1f34c87ca08f3fd950ea7b41ad86a68ea5958abfe743cea7"
+          },
+          {
+            "path": "art/source/world-ambient-lamp-poses.png",
+            "sha256": "6cb32828f033bf15689130a4b880dae9a6302499f9358942c1b553efe1adbc7d"
+          },
+          {
+            "path": "tools/maps/animated-decoration-contract.json",
+            "sha256": "0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189"
+          },
+          {
+            "path": "tools/art/world-ambient.ts",
+            "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+          },
+          {
+            "path": "tools/art/world-ambient-assets.ts",
+            "sha256": "c31418c798144082883e79981d3c9e3f177efc7634fbbbce4228dc7c1ab91c86"
+          },
+          {
+            "path": "tools/maps/animated-decoration.ts",
+            "sha256": "b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf"
+          },
+          {
+            "path": "tools/maps/world-ambient.ts",
+            "sha256": "ae11fbbfe29018e6049534ff0acda86837871a84b11b53fbdfb0120a533b6c9f"
+          },
+          {
+            "path": "tools/maps/world-ambient-depth.ts",
+            "sha256": "a57cfee780a21f69a774ca6532ca7d958b53b25318596b942c88f00732f65cf0"
+          },
+          {
+            "path": "tools/maps/world-ambient-ownership.ts",
+            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+          },
+          {
+            "path": "tools/maps/native-projection.ts",
+            "sha256": "ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554"
+          },
+          {
+            "path": "tools/maps/native-ownership-context.ts",
+            "sha256": "3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50"
+          },
+          {
+            "path": "art/source/native-ownership-context.json",
+            "sha256": "13771be6fe7d219358711bd70815f2ece46d580ec182c9277df7ab41c3b141db"
+          },
+          {
+            "path": "tools/art/native-motion.ts",
+            "sha256": "8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6"
+          },
+          {
+            "path": "tools/maps/builder.ts",
+            "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
+          },
+          {
+            "path": "tools/maps/types.ts",
+            "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
+          }
+        ]
+      }
     }
   ]
 }

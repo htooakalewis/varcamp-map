@@ -1,0 +1,693 @@
+{
+  "version": 1,
+  "maps": {
+    "air-district": [],
+    "campus-exploration": [
+      {
+        "id": "court-bed-northwest-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 7,
+        "y": 17,
+        "width": 7,
+        "height": 2,
+        "layer": "terrain"
+      },
+      {
+        "id": "court-bed-northwest-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 7,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-northwest-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 12,
+        "y": 16,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-northeast-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 34,
+        "y": 17,
+        "width": 7,
+        "height": 2,
+        "layer": "terrain"
+      },
+      {
+        "id": "court-bed-northeast-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 34,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-northeast-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 39,
+        "y": 16,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-southwest-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 14,
+        "y": 39,
+        "width": 5,
+        "height": 2,
+        "layer": "terrain"
+      },
+      {
+        "id": "court-bed-southwest-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 14,
+        "y": 39,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-southwest-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 17,
+        "y": 38,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-southeast-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 30,
+        "y": 39,
+        "width": 5,
+        "height": 2,
+        "layer": "terrain"
+      },
+      {
+        "id": "court-bed-southeast-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 30,
+        "y": 39,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "court-bed-southeast-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 33,
+        "y": 38,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "directory-tree-west",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 16,
+        "y": 30,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "directory-tree-east",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 29,
+        "y": 30,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "comet-maze": [
+      {
+        "id": "lobby-planter",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 42,
+        "y": 42,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "earth-district": [
+      {
+        "id": "reading-palm",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 30,
+        "y": 12,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "fa-ship": [],
+    "fa-ship-interior": [],
+    "fire-district": [],
+    "hidden-observatory": [
+      {
+        "id": "quiet-palm",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 35,
+        "y": 20,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "moon-cafe": [
+      {
+        "id": "cafe-palm-west",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 4,
+        "y": 28,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "cafe-palm-east",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 33,
+        "y": 28,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "moon-grotto": [],
+    "nebula-arcade": [],
+    "orbit-maze": [
+      {
+        "id": "quiet-flowerbed",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 23,
+        "y": 76,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "social-garden-bed",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 50,
+        "y": 71,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "quiet-plant",
+        "oldSprite": "plant-grass",
+        "newSprite": "plaza-plant-grass",
+        "x": 28,
+        "y": 76,
+        "width": 1,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "social-palm",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 50,
+        "y": 75,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "quiet-palm-edge",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 30,
+        "y": 75,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "social-conversation-plant",
+        "oldSprite": "plant-grass",
+        "newSprite": "plaza-plant-grass",
+        "x": 51,
+        "y": 67,
+        "width": 1,
+        "height": 2,
+        "layer": "props"
+      }
+    ],
+    "orbit-playground": [
+      {
+        "id": "play-garden-west-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 4,
+        "y": 19,
+        "width": 4,
+        "height": 4,
+        "layer": "terrain"
+      },
+      {
+        "id": "play-garden-west-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 4,
+        "y": 19,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "play-garden-west-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 5,
+        "y": 19,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "play-garden-east-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 32,
+        "y": 19,
+        "width": 4,
+        "height": 4,
+        "layer": "terrain"
+      },
+      {
+        "id": "play-garden-east-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 32,
+        "y": 19,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "play-garden-east-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 33,
+        "y": 19,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "star-garden": [
+      {
+        "id": "dawn-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 6,
+        "y": 11,
+        "width": 8,
+        "height": 6,
+        "layer": "terrain"
+      },
+      {
+        "id": "dawn-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 6,
+        "y": 11,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "dawn-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 11,
+        "y": 11,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "dusk-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 26,
+        "y": 11,
+        "width": 8,
+        "height": 6,
+        "layer": "terrain"
+      },
+      {
+        "id": "dusk-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 26,
+        "y": 11,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "dusk-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 31,
+        "y": 11,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "solar-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 6,
+        "y": 23,
+        "width": 8,
+        "height": 6,
+        "layer": "terrain"
+      },
+      {
+        "id": "solar-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 6,
+        "y": 23,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "solar-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 11,
+        "y": 23,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "lunar-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 26,
+        "y": 23,
+        "width": 8,
+        "height": 6,
+        "layer": "terrain"
+      },
+      {
+        "id": "lunar-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 26,
+        "y": 23,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "lunar-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 31,
+        "y": 23,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "stargazer-terrace": [
+      {
+        "id": "terrace-garden-west-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 5,
+        "y": 17,
+        "width": 4,
+        "height": 4,
+        "layer": "terrain"
+      },
+      {
+        "id": "terrace-garden-west-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 5,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "terrace-garden-west-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 6,
+        "y": 17,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "terrace-garden-east-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 31,
+        "y": 17,
+        "width": 4,
+        "height": 4,
+        "layer": "terrain"
+      },
+      {
+        "id": "terrace-garden-east-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 31,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "terrace-garden-east-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 32,
+        "y": 17,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "water-district": [
+      {
+        "id": "conservatory-bed-west",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 3,
+        "y": 13,
+        "width": 4,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "conservatory-tree-west",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 4,
+        "y": 13,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "conservatory-bed-middle",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 10,
+        "y": 18,
+        "width": 4,
+        "height": 4,
+        "layer": "props"
+      },
+      {
+        "id": "conservatory-palm",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 10,
+        "y": 18,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "conservatory-palm-east",
+        "oldSprite": "plant-palm",
+        "newSprite": "world-ambient-plant-palm",
+        "x": 31,
+        "y": 28,
+        "width": 3,
+        "height": 3,
+        "layer": "props"
+      }
+    ],
+    "zodiac-festival-park": [
+      {
+        "id": "fire-garden-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 6,
+        "y": 17,
+        "width": 8,
+        "height": 5,
+        "layer": "terrain"
+      },
+      {
+        "id": "fire-garden-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 6,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "fire-garden-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 11,
+        "y": 17,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "earth-garden-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 34,
+        "y": 17,
+        "width": 8,
+        "height": 5,
+        "layer": "terrain"
+      },
+      {
+        "id": "earth-garden-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 34,
+        "y": 17,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "earth-garden-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 39,
+        "y": 17,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "air-garden-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 6,
+        "y": 30,
+        "width": 8,
+        "height": 5,
+        "layer": "terrain"
+      },
+      {
+        "id": "air-garden-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 6,
+        "y": 30,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "air-garden-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 11,
+        "y": 30,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      {
+        "id": "water-garden-soil",
+        "oldSprite": "ground-grass",
+        "newSprite": "plaza-grass-01",
+        "x": 34,
+        "y": 30,
+        "width": 8,
+        "height": 5,
+        "layer": "terrain"
+      },
+      {
+        "id": "water-garden-flowers",
+        "oldSprite": "flower-bed",
+        "newSprite": "plaza-flower-bed",
+        "x": 34,
+        "y": 30,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      {
+        "id": "water-garden-tree",
+        "oldSprite": "tree-flowering",
+        "newSprite": "plaza-tree-flowering",
+        "x": 39,
+        "y": 30,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      }
+    ]
+  }
+}

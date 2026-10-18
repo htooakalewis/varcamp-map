@@ -1,0 +1,282 @@
+[
+  {
+    "name": "world-ambient-air-district-device-1",
+    "path": "art/source/world-ambient-air-district-device-1-poses.png",
+    "sha256": "d3514fad56df360dac6af00f35941d551206dc50b8ce326412ee5a5df8a6bdcd",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-air-district-lamp-2",
+    "path": "art/source/world-ambient-air-district-lamp-2-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-campus-exploration-device-1",
+    "path": "art/source/world-ambient-campus-exploration-device-1-poses.png",
+    "sha256": "6abb4f74c3644d861cf69a45ed8edc6f002dd460e74dd3d37ba36ea003dd9cb7",
+    "width": 96,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-campus-exploration-leaves-2",
+    "path": "art/source/world-ambient-campus-exploration-leaves-2-poses.png",
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+    "width": 8,
+    "height": 12,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-comet-maze-lamp-1",
+    "path": "art/source/world-ambient-comet-maze-lamp-1-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-comet-maze-lamp-2",
+    "path": "art/source/world-ambient-comet-maze-lamp-2-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-earth-district-device-1",
+    "path": "art/source/world-ambient-earth-district-device-1-poses.png",
+    "sha256": "d3514fad56df360dac6af00f35941d551206dc50b8ce326412ee5a5df8a6bdcd",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-earth-district-lamp-2",
+    "path": "art/source/world-ambient-earth-district-lamp-2-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-fa-ship-gull-1",
+    "path": "art/source/world-ambient-fa-ship-gull-1-poses.png",
+    "sha256": "36167c9fe1a2282cd225de0a6b39dcd3088f3f49e837ca1e8052961e84137216",
+    "width": 32,
+    "height": 32,
+    "frames": 12
+  },
+  {
+    "name": "world-ambient-fa-ship-fish-2",
+    "path": "art/source/world-ambient-fa-ship-fish-2-poses.png",
+    "sha256": "2c1864d0e40d0870539312cb11bc242965c6fc47a40fccc1ee8430e99018801e",
+    "width": 32,
+    "height": 32,
+    "frames": 12
+  },
+  {
+    "name": "world-ambient-fa-ship-interior-steam-1",
+    "path": "art/source/world-ambient-fa-ship-interior-steam-1-poses.png",
+    "sha256": "3bfebce43ba2eec39b43571ec1ade8b207babc35b478599efd1cd685e98b248b",
+    "width": 96,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-fa-ship-interior-lamp-2",
+    "path": "art/source/world-ambient-fa-ship-interior-lamp-2-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-fire-district-heat-1",
+    "path": "art/source/world-ambient-fire-district-heat-1-poses.png",
+    "sha256": "c7265b2b8616718eab60cd1c9df9ae6f3c3e73a82dc792ae6d89e22cb43abe6c",
+    "width": 128,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-fire-district-steam-2",
+    "path": "art/source/world-ambient-fire-district-steam-2-poses.png",
+    "sha256": "253710287d57e6c2e95b2f5b0dd0edd2a258a3845f04d9419fae0187538573e5",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-hidden-observatory-instrument-1",
+    "path": "art/source/world-ambient-hidden-observatory-instrument-1-poses.png",
+    "sha256": "ab6eeee3c7e7d1272d9f93f617203b46fea558108fff72eec3251eb35ff72917",
+    "width": 96,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-hidden-observatory-device-2",
+    "path": "art/source/world-ambient-hidden-observatory-device-2-poses.png",
+    "sha256": "d3514fad56df360dac6af00f35941d551206dc50b8ce326412ee5a5df8a6bdcd",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-moon-cafe-steam-1",
+    "path": "art/source/world-ambient-moon-cafe-steam-1-poses.png",
+    "sha256": "253710287d57e6c2e95b2f5b0dd0edd2a258a3845f04d9419fae0187538573e5",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-moon-cafe-bubbles-2",
+    "path": "art/source/world-ambient-moon-cafe-bubbles-2-poses.png",
+    "sha256": "47995c6465b7763113f5cd718b6144067a2a08ff7ad75fb0ada7b5f9e7f3ed74",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-moon-grotto-ripples-1",
+    "path": "art/source/world-ambient-moon-grotto-ripples-1-poses.png",
+    "sha256": "466c99b9b59af2a685f45494fec256b5e3147b4f1ba80a11e778d9cf447cecfb",
+    "width": 32,
+    "height": 16,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-moon-grotto-crystal-2",
+    "path": "art/source/world-ambient-moon-grotto-crystal-2-poses.png",
+    "sha256": "f901335b0262fa8207c7dc92efd5fc666041b851ae0b5932b9beed1af0e7df64",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-nebula-arcade-device-1",
+    "path": "art/source/world-ambient-nebula-arcade-device-1-poses.png",
+    "sha256": "2943255b48f76765c4dda7ac003d2b0a22422f49b05b22a00e2fd0722c6e19b8",
+    "width": 192,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-nebula-arcade-device-2",
+    "path": "art/source/world-ambient-nebula-arcade-device-2-poses.png",
+    "sha256": "f44577b45af83128c806ad5ec038c966c08ebf422b0889ff8a4b2ca99991e709",
+    "width": 64,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-nebula-arcade-device-3",
+    "path": "art/source/world-ambient-nebula-arcade-device-3-poses.png",
+    "sha256": "f44577b45af83128c806ad5ec038c966c08ebf422b0889ff8a4b2ca99991e709",
+    "width": 64,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-orbit-maze-lamp-1",
+    "path": "art/source/world-ambient-orbit-maze-lamp-1-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-orbit-maze-lamp-2",
+    "path": "art/source/world-ambient-orbit-maze-lamp-2-poses.png",
+    "sha256": "7b3352209f6f4b628891328fd25f62b76595e3f9420ce4e1ad9b524b6e5d9190",
+    "width": 32,
+    "height": 64,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-orbit-playground-device-1",
+    "path": "art/source/world-ambient-orbit-playground-device-1-poses.png",
+    "sha256": "8f80431ec6c4cc6a3afb9b7f0ad5407166551d4e5756979da570765ed08e2adb",
+    "width": 32,
+    "height": 32,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-orbit-playground-leaves-2",
+    "path": "art/source/world-ambient-orbit-playground-leaves-2-poses.png",
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+    "width": 8,
+    "height": 12,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-star-garden-ripples-1",
+    "path": "art/source/world-ambient-star-garden-ripples-1-poses.png",
+    "sha256": "466c99b9b59af2a685f45494fec256b5e3147b4f1ba80a11e778d9cf447cecfb",
+    "width": 32,
+    "height": 16,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-star-garden-leaves-2",
+    "path": "art/source/world-ambient-star-garden-leaves-2-poses.png",
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+    "width": 8,
+    "height": 12,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-stargazer-terrace-instrument-1",
+    "path": "art/source/world-ambient-stargazer-terrace-instrument-1-poses.png",
+    "sha256": "ab6eeee3c7e7d1272d9f93f617203b46fea558108fff72eec3251eb35ff72917",
+    "width": 96,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-stargazer-terrace-leaves-2",
+    "path": "art/source/world-ambient-stargazer-terrace-leaves-2-poses.png",
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+    "width": 8,
+    "height": 12,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-water-district-ripples-1",
+    "path": "art/source/world-ambient-water-district-ripples-1-poses.png",
+    "sha256": "466c99b9b59af2a685f45494fec256b5e3147b4f1ba80a11e778d9cf447cecfb",
+    "width": 32,
+    "height": 16,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-water-district-cascade-2",
+    "path": "art/source/world-ambient-water-district-cascade-2-poses.png",
+    "sha256": "0e3dd6ee431e446fe537cd175017a7c1ec96644e53b1b29ae990d2db789ce3b7",
+    "width": 128,
+    "height": 96,
+    "frames": 48
+  },
+  {
+    "name": "world-ambient-zodiac-festival-park-ripples-1",
+    "path": "art/source/world-ambient-zodiac-festival-park-ripples-1-poses.png",
+    "sha256": "466c99b9b59af2a685f45494fec256b5e3147b4f1ba80a11e778d9cf447cecfb",
+    "width": 32,
+    "height": 16,
+    "frames": 4
+  },
+  {
+    "name": "world-ambient-zodiac-festival-park-leaves-2",
+    "path": "art/source/world-ambient-zodiac-festival-park-leaves-2-poses.png",
+    "sha256": "1ccbed0a2d41dffabe4cee13ee37341b1dfc92d66d6e6194acb592459b84abec",
+    "width": 8,
+    "height": 12,
+    "frames": 4
+  }
+]

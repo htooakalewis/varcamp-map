@@ -55,7 +55,7 @@ export async function renderRoadster() {
  const columns = 16, width = columns * 32, height = Math.ceil(tiles.length / columns) * 32, raw = Buffer.alloc(width * height * 4);
  for (const [id, tile] of tiles.entries()) for (let row = 0; row < 32; row++) tile.copy(raw, ((Math.floor(id / columns) * 32 + row) * width + id % columns * 32) * 4, row * 128, (row + 1) * 128);
  const png = await sharp(raw, { raw: { width, height, channels: 4 } }).png().toBuffer();
- const overlay: LayoutAnimatedOverlay = { name: 'roadster', image: atlasPath, sourceId: 'original', ...spec.position, width: 5, height: 5, carrierTileIds, animations,
+ const overlay: LayoutAnimatedOverlay = { name: 'roadster', image: atlasPath, sourceId: 'original', level: 'belowAvatar', ...spec.position, width: 5, height: 5, carrierTileIds, animations,
   provenance: { metadataPath, atlasSha256: hash(png), inputs: [spec.source.path, authoringPath, 'tools/art/roadster.ts', 'tools/maps/builder.ts', 'tools/maps/types.ts'].map(path => ({ path, sha256: hash(readFileSync(path)) })) } };
  const metadata = { version: 1, source: { ...spec.source, sha256: hash(source) }, framePixels: 160, alphaThreshold: spec.alphaThreshold, scale: spec.scale, crops, cycleMs: spec.poses.reduce((n: number, p: {duration:number}) => n + p.duration, 0), atlas: { width, height, columns, tilecount: width * height / 1024, sha256: hash(png) }, overlay };
  return { png, metadata, frames };

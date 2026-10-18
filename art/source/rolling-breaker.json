@@ -3,7 +3,7 @@
   "license": "CC0-1.0",
   "source": "Original VarCamp full-width pixel geometry; no imported pixels",
   "masterSha256": "236bf015dde56f0ff14638a680e47ff08fca9e505fb69e9e2211779384c45eb1",
-  "producerSha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364",
+  "producerSha256": "8a6eae3b213e5ab7fb102951710baf062851dc479ea47d11521f4dd1e8a2f9b7",
   "svgSha256": "239e20a73b36246b0685c94c221dcc968bae84657426e19946f9ac987b7ffa38",
   "atlasSha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503",
   "overlays": [
@@ -11,6 +11,7 @@
       "name": "rolling-breaker-west",
       "image": "assets/tilesets/original/rolling-breaker.png",
       "sourceId": "original",
+      "level": "belowAvatar",
       "x": 8,
       "y": 1,
       "width": 12,
@@ -945,7 +946,7 @@
           },
           {
             "path": "tools/art/beach-ship.ts",
-            "sha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364"
+            "sha256": "8a6eae3b213e5ab7fb102951710baf062851dc479ea47d11521f4dd1e8a2f9b7"
           }
         ]
       }
@@ -954,6 +955,7 @@
       "name": "rolling-breaker-east",
       "image": "assets/tilesets/original/rolling-breaker.png",
       "sourceId": "original",
+      "level": "belowAvatar",
       "x": 29,
       "y": 1,
       "width": 12,
@@ -1888,7 +1890,7 @@
           },
           {
             "path": "tools/art/beach-ship.ts",
-            "sha256": "8ce690ee222b5c804419233e07c4adef15cc7f7d7a7899e6656d8c8279b04364"
+            "sha256": "8a6eae3b213e5ab7fb102951710baf062851dc479ea47d11521f4dd1e8a2f9b7"
           }
         ]
       }

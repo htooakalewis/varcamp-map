@@ -393,6 +393,7 @@
     "name": "roadster",
     "image": "assets/tilesets/original/roadster.png",
     "sourceId": "original",
+    "level": "belowAvatar",
     "x": 73,
     "y": 60,
     "width": 5,
@@ -2165,15 +2166,15 @@
         },
         {
           "path": "tools/art/roadster.ts",
-          "sha256": "238c572ebd95f86a231cb128f144ea1845709ba3d08bf70932030f9f218c03e0"
+          "sha256": "dde0e2746566c2f4d9426dea3d053f2529efd15a7b2b437c37afac1d24c5b6e8"
         },
         {
           "path": "tools/maps/builder.ts",
-          "sha256": "74289a920f153b48d8973960d42010b1788f5d794cd31aae6fda0b74ce2ef056"
+          "sha256": "f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50"
         },
         {
           "path": "tools/maps/types.ts",
-          "sha256": "3717d81490ceb482a475ce6f81a61bef226db1116c2f49d456f8d5f9404b4c2f"
+          "sha256": "cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767"
         }
       ]
     }
