@@ -7,7 +7,7 @@ import type {MapLayout,TiledMap,TileRect,WamFile} from '../maps/types';
 interface Routes {allowedCells:number[][];startupReservedCells:number[][];home:number[];patrol:number[][];destinations:{id:string;tile:number[];gate:string;onward:string}[]}
 interface Input {map:TiledMap;layout:MapLayout;catalog:TileCatalog;wam:WamFile;routes:Routes}
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Guide route audit: '+message);};
-const W=128,N=W*W,GRAPH_SHA='9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f';
+const W=128,N=W*W,GRAPH_SHA='04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9';
 const STARTUP=[[63,65],[64,65],[63,66],[64,66]];
 const index=(x:number,y:number)=>y*W+x;
 const cell=(p:number[])=>{need(Array.isArray(p)&&p.length===2&&p.every(Number.isInteger)&&p.every(n=>n>=0&&n<W),'invalid graph coordinate');return index(p[0],p[1]);};
@@ -21,10 +21,10 @@ export function auditGuideRoutes({map,layout,catalog,wam,routes}:Input){
  need(layout.id==='overworld'&&layout.width===W&&layout.height===W&&map.type==='map'&&map.orientation==='orthogonal'&&map.width===W&&map.height===W&&map.tilewidth===32&&map.tileheight===32&&map.infinite===false,'current map/layout identity changed');
  const identity=map.properties?.filter(p=>p.name==='worldMapId')??[];
  need(identity.length===1&&identity[0].type==='string'&&identity[0].value==='overworld','native world identity changed');
- need(routes.allowedCells.length===743&&createHash('sha256').update(JSON.stringify(routes.allowedCells)).digest('hex')===GRAPH_SHA,'normal graph roster changed');
+ need(routes.allowedCells.length===792&&createHash('sha256').update(JSON.stringify(routes.allowedCells)).digest('hex')===GRAPH_SHA,'normal graph roster changed');
  need(JSON.stringify(routes.startupReservedCells)===JSON.stringify(STARTUP),'startup escape roster changed');
  const allowed=new Set(routes.allowedCells.map(cell)),reserved=new Set(routes.startupReservedCells.map(cell)),checked=new Set([...allowed,...reserved]);
- need(allowed.size===743&&!overlaps(allowed,reserved),'normal graph duplicate/reserved cell');
+ need(allowed.size===792&&!overlaps(allowed,reserved),'normal graph duplicate/reserved cell');
  const homes=[cell(routes.home),...routes.patrol.map(cell),...routes.destinations.map(d=>cell(d.tile))];
  need(homes.every(i=>allowed.has(i)),'home/patrol/destination outside normal graph');
  const connected=new Set([homes[0]]),queue=[homes[0]];

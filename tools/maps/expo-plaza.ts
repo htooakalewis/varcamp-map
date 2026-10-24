@@ -4,15 +4,19 @@ import {buildMap} from './builder';
 import {reconcileNativeProjection} from './native-projection';
 import type {TileCatalog} from '../art/catalog';
 import type {MapLayout,Placement,TileRect,TiledMap,TileLayer} from './types';
-/** Expo plaza: one closed forward source operation applied after the welcome-sign
- * retirement. The two plaza-grove gardens under the reception (rows 74-90, x36-92)
- * become ten expo booths. Every booth uses atlases already reserved by the current
- * overworld native context; the audited guide corridors stay prop-free and act as
- * the open gaps between booths. Sponsor marks and pixel captions are not part of
- * this operation: both need atlases outside the frozen native reservation roster. */
+/** Expo hall: one closed forward source operation applied after the welcome-sign
+ * retirement. The band under the welcome reception (rows 74-89, x40-87) becomes one
+ * rectangular exhibition hall on a single floor-charcoal floor: two mirrored blocks
+ * (west x40-58, east x69-87) either side of the central road (x60-67, the main aisle),
+ * each block holding two rows of three identical 5x4 stalls facing a shared two-row
+ * aisle (rows 80-81). Row 89 is the clear south walkway. Every stall uses atlases the
+ * overworld native context already reserves; the audited guide graph runs on the road,
+ * the aisle and the walkway only. Sponsor logos, captions and the sticker sheet are not
+ * part of this operation (they need the atlas epoch): the `sigil-*` runes stand in for
+ * stickers and a 4x2 carpet-only rectangle per stall is reserved for the logo inlay. */
 export const EXPO_PLAZA=Object.freeze({
  /** First expo placement; its presence marks a layout as post-expo. */
- marker:'expo-a1-floor-0',
+ marker:'expo-hall-floor-west',
  /** Garden groups of refinePlazaFloorGarden whose only grass was paved by the expo. */
  retiredGardens:['inner-2','inner-3'] as readonly string[],
  /** Grove furniture, trees, flowers, lily pads, both ponds and the three lawn strips of the two south gardens. */
@@ -23,58 +27,97 @@ export const EXPO_PLAZA=Object.freeze({
   'inner-garden-southwest-lawn','inner-garden-southeast-lawn-east','inner-garden-southeast-lawn-south',
   ...['inner-2','inner-3'].flatMap(g=>[0,1,2,3,4,5].map(i=>`plaza-garden-${g}-${i}`)),
  ] as readonly string[],
- /** Inside-court cell range per row (the gold ring is the boundary); rows outside are untouched. */
- court:{73:[38,89],74:[39,88],75:[39,88],76:[40,87],77:[40,87],78:[41,86],79:[41,86],80:[42,86],81:[43,86],82:[43,86],83:[45,82],84:[46,81],85:[47,80],86:[48,79],87:[50,77],88:[52,75]} as Record<number,[number,number]>,
+ /** Hall floor rectangle (terrain); the reception rows <=73 and the pavilion rows >=90 keep their terrain. */
+ hall:{x:40,y:74,width:48,height:16} as TileRect,
+ /** Central road columns (path-stone) left untouched inside the hall rectangle. */
+ road:{x:60,width:8},
+ /** Stall fronts open onto this two-row aisle; the south walkway is one clear row. */
+ aisle:{y:80,height:2},walkway:{y:89},
+ /** Wall caps of the north back walls rise one row above the hall floor; nothing else leaves it. */
+ capRow:73,
+ floor:'floor-charcoal',carpet:{sponsor:'floor-cosmic',hub:'floor-wood'} as Record<'sponsor'|'hub',string>,
+ /** The same three sticker stand-ins along every back wall (left, centre, right). */
+ stickers:['sigil-fire','sigil-earth','sigil-air'] as readonly string[],
 });
-export interface ExpoBooth{id:string;name:string;kind:'sponsor'|'hub';floor:TileRect[];walls:TileRect[];glass:TileRect[];sills:TileRect[];counter:{x:number;y:number};chair?:{x:number;y:number};palm?:{x:number;y:number};stickers:[number,number][];}
+export interface ExpoBooth{
+ id:string;block:'west'|'east';row:'north'|'south';kind:'sponsor'|'hub';name:string;
+ /** 5x4 carpeted interior. */interior:TileRect;
+ /** Carpet-only 4x2 rectangle just inside the sticker row, reserved for the logo inlay. */logo:TileRect;
+ /** 2x2 desk-cream counter; its blocking front row is the counter line. */counter:TileRect;
+ /** 1x2 chair-presentation behind the counter on the interior side. */chair:TileRect;
+ /** Three sticker stand-ins on the interior row next to the back wall. */stickers:[number,number][];
+ /** Two balloon bunches on the front corners of the counter line. */balloons:TileRect[];
+ /** Framed poster centred on the back wall. */poster:TileRect;
+ /** Back-wall cells (cap row + face row) and the x of both side-wall columns. */backWall:TileRect;sides:[number,number];
+}
 const r=(x:number,y:number,width:number,height:number):TileRect=>({x,y,width,height});
-/** Row A faces south (aisle rows 80-81); Row B faces north into the same aisle. */
-export const EXPO_BOOTHS:readonly ExpoBooth[]=Object.freeze([
- {id:'a1',name:'DEMO ORBIT',kind:'sponsor',floor:[r(40,73,6,5),r(41,78,5,2)],walls:[r(39,73,7,2)],glass:[],sills:[],counter:{x:41,y:78},chair:{x:41,y:76},palm:{x:43,y:75},stickers:[[40,75],[40,76],[40,77]]},
- {id:'a2',name:'DEMO NOVA',kind:'sponsor',floor:[r(46,73,6,7)],walls:[r(46,73,6,2),r(46,75,1,4)],glass:[],sills:[],counter:{x:47,y:78},chair:{x:47,y:76},stickers:[[49,75],[50,75],[51,75]]},
- {id:'a3',name:'CODE CIRCLE',kind:'hub',floor:[r(53,73,5,7)],walls:[r(56,73,2,2)],glass:[r(53,73,3,2)],sills:[],counter:{x:53,y:78},chair:{x:53,y:76},stickers:[[55,75],[56,75],[57,75]]},
- {id:'a4',name:'DESIGN GUILD',kind:'hub',floor:[r(71,74,5,6)],walls:[r(74,74,1,2)],glass:[r(71,74,3,2)],sills:[],counter:{x:71,y:78},chair:{x:71,y:76},stickers:[[74,76],[75,76],[75,77]]},
- {id:'a5',name:'DEMO ATLAS',kind:'sponsor',floor:[r(77,74,7,6)],walls:[r(77,74,7,2),r(83,76,1,4)],glass:[],sills:[],counter:{x:77,y:78},chair:{x:77,y:76},stickers:[[80,76],[81,76],[82,76]]},
- {id:'a6',name:'DEMO VECTOR',kind:'sponsor',floor:[r(84,73,5,3),r(84,76,4,2),r(84,78,3,2)],walls:[r(84,73,5,2)],glass:[],sills:[],counter:{x:84,y:78},chair:{x:84,y:76},stickers:[[86,75],[87,75],[88,75]]},
- {id:'b1',name:'DATA CLUB',kind:'hub',floor:[r(46,82,5,3),r(47,85,4,1)],walls:[r(46,82,1,2)],glass:[],sills:[r(47,84,4,2)],counter:{x:49,y:82},stickers:[[47,84],[48,84],[47,83]]},
- {id:'b2',name:'GAME JAM',kind:'hub',floor:[r(52,82,4,7)],walls:[r(55,87,1,2)],glass:[r(52,87,3,2)],sills:[],counter:{x:52,y:82},chair:{x:52,y:84},stickers:[[55,84],[55,85],[55,86]]},
- {id:'b3',name:'DEMO LUMEN',kind:'sponsor',floor:[r(71,82,5,7)],walls:[r(71,87,5,2)],glass:[],sills:[],counter:{x:71,y:82},chair:{x:71,y:84},stickers:[[75,84],[75,85],[75,86]]},
- {id:'b4',name:'OPEN SOURCE',kind:'hub',floor:[r(77,82,5,3),r(77,85,4,1)],walls:[r(81,82,1,2)],glass:[],sills:[r(77,84,4,2)],counter:{x:77,y:82},stickers:[[79,84],[80,84],[80,83]]},
-]);
-const SIGILS=['sigil-fire','sigil-earth','sigil-air','sigil-water'];
-/** Deterministic expansion; terrain floors first so the walls' bases sit on booth floor. */
+const NAMES={north:['DEMO ORBIT','DEMO NOVA','DEMO ATLAS','DEMO VECTOR','DEMO LUMEN','INFO DESK'],south:['CODE CIRCLE','DESIGN GUILD','DATA CLUB','GAME JAM','OPEN SOURCE','YOUR LOGO HERE']};
+/** Geometry of one stall. West stalls put the logo on the left and the chair on the right;
+ * east stalls are their mirror image about the road centre (x63.5), so a visitor walking
+ * either aisle sees six identical fronts per block. North stalls: cap row 73, wall face 74,
+ * interior 75-78, counter line 79. South stalls: counter line 82, interior 83-86, cap 87,
+ * wall face 88 (the wall-navy sprite is cap-over-face, so the south back wall ends on 88). */
+function booth(block:'west'|'east',row:'north'|'south',i:number):ExpoBooth{
+ const x0=block==='west'?41+6*i:70+6*i,m=block==='west'?(c:number)=>x0+c:(c:number)=>x0+4-c;
+ const north=row==='north',y=north?75:83,id=`${north?'n':'s'}${block==='west'?i+1:i+4}`,kind=north?'sponsor':'hub';
+ return {
+  id,block,row,kind,name:NAMES[row][block==='west'?i:i+3],interior:r(x0,y,5,4),
+  logo:r(Math.min(m(0),m(3)),north?76:84,4,2),counter:r(Math.min(m(2),m(3)),north?78:82,2,2),chair:r(m(4),north?76:84,1,2),
+  stickers:[[x0,north?75:86],[x0+2,north?75:86],[x0+4,north?75:86]],balloons:[r(x0,north?78:82,1,2),r(x0+4,north?78:82,1,2)],
+  poster:r(x0+2,north?73:87,1,2),backWall:r(x0,north?73:87,5,2),sides:[x0-1,x0+5],
+ };
+}
+export const EXPO_BOOTHS:readonly ExpoBooth[]=Object.freeze((['north','south'] as const).flatMap(row=>(['west','east'] as const).flatMap(block=>[0,1,2].map(i=>booth(block,row,i)))));
+/** Deterministic expansion; hall floor and carpets first, then per block-row the walls (with their
+ * terrain seals) and the identical stall furniture. */
 export function expoPlacements():Placement[]{
- const out:Placement[]=[];
- for(const [i,b] of EXPO_BOOTHS.entries()){
-  const prefix=`expo-${b.id}`,floor=b.kind==='sponsor'?'floor-cosmic':'floor-wood';
-  b.floor.forEach((f,n)=>out.push({id:`${prefix}-floor-${n}`,sprite:floor,layer:'terrain',...f}));
-  b.walls.forEach((w,n)=>out.push({id:`${prefix}-wall-${n}`,sprite:'wall-navy',layer:'props',...w}));
-  b.glass.forEach((g,n)=>out.push({id:`${prefix}-glass-${n}`,sprite:'glass-partition',layer:'props',...g}));
-  b.sills.forEach((s,n)=>out.push({id:`${prefix}-sill-${n}`,sprite:'wall-navy',layer:'props',renderRole:'cutaway',...s}));
-  out.push({id:`${prefix}-counter`,sprite:b.kind==='sponsor'?'desk-cream':'table-workshop',layer:'props',x:b.counter.x,y:b.counter.y,width:2,height:2});
-  if(b.chair)out.push({id:`${prefix}-chair`,sprite:'chair-presentation',layer:'props',x:b.chair.x,y:b.chair.y,width:1,height:2});
-  if(b.palm)out.push({id:`${prefix}-palm`,sprite:'plant-palm',layer:'props',x:b.palm.x,y:b.palm.y,width:3,height:3});
-  b.stickers.forEach(([x,y],n)=>out.push({id:`${prefix}-sticker-${n}`,sprite:SIGILS[(i+n)%4],layer:'props',x,y,width:1,height:1}));
+ const out:Placement[]=[],add=(id:string,sprite:string,rect:TileRect,extra:Partial<Placement>={})=>out.push({id,sprite,layer:'props',...rect,...extra});
+ const {hall,road,floor,carpet,capRow}=EXPO_PLAZA;
+ out.push({id:'expo-hall-floor-west',sprite:floor,layer:'terrain',...r(hall.x,hall.y,road.x-hall.x,hall.height)});
+ out.push({id:'expo-hall-floor-east',sprite:floor,layer:'terrain',...r(road.x+road.width,hall.y,hall.x+hall.width-road.x-road.width,hall.height)});
+ for(const b of EXPO_BOOTHS)out.push({id:`expo-${b.id}-carpet`,sprite:carpet[b.kind],layer:'terrain',...b.interior});
+ for(const row of ['north','south'] as const)for(const block of ['west','east'] as const){
+  const stalls=EXPO_BOOTHS.filter(b=>b.row===row&&b.block===block),north=row==='north',wallY=north?capRow:83,prefix=`expo-${block}-${row}`;
+  // Side walls: three stacked cap/face sprites from the back wall to the row before the counter line.
+  // The wall-navy cap cell is opaque but does not block, so a blocking wall-charcoal terrain cell is
+  // painted under every interior cap (never on the reception cap row 73) to keep the partitions solid.
+  const columns=[...new Set(stalls.flatMap(b=>b.sides))].sort((a,b)=>a-b);
+  for(const x of columns){
+   add(`${prefix}-side-${x}`,'wall-navy',r(x,wallY,1,6));
+   for(const y of north?[75,77]:[83,85,87])add(`${prefix}-seal-${x}-${y}`,'wall-charcoal',r(x,y,1,1),{layer:'terrain'});
+  }
+  for(const b of stalls){
+   const p=`expo-${b.id}`,w=b.backWall;
+   if(!north)add(`${p}-seal-cap`,'wall-charcoal',r(w.x,w.y,5,1),{layer:'terrain'});
+   // The poster column is a grounded wall segment so the framed poster can hang on it without a second raised plane.
+   add(`${p}-wall-0`,'wall-navy',r(w.x,w.y,2,2));add(`${p}-wall-1`,'wall-navy',r(w.x+2,w.y,1,2),{renderRole:'grounded'});add(`${p}-wall-2`,'wall-navy',r(w.x+3,w.y,2,2));
+   add(`${p}-poster`,'poster-night-city',b.poster);
+   b.stickers.forEach(([x,y],n)=>add(`${p}-sticker-${n}`,EXPO_PLAZA.stickers[n],r(x,y,1,1)));
+   add(`${p}-chair`,'chair-presentation',b.chair);add(`${p}-counter`,'desk-cream',b.counter);
+   b.balloons.forEach((rect,n)=>add(`${p}-balloons-${n}`,'balloons-party',rect));
+  }
  }
  return out;
 }
 export const isExpoPlaza=(layout:MapLayout):boolean=>layout.placements.some(p=>p.id===EXPO_PLAZA.marker);
 const cells=(p:TileRect)=>Array.from({length:p.width*p.height},(_,i)=>[p.x+i%p.width,p.y+Math.floor(i/p.width)] as const);
 /** Pure forward operation on the retired-sign plaza. Protected controls, images and
- * standing signs are never touched; every expo cell stays inside the court and off
- * the audited guide graph (floors are terrain and may underlie a guide cell). */
+ * standing signs are never touched; every expo cell stays inside the hall (terrain) or
+ * on its cap row (props), off the road and off the audited guide graph. */
 export function applyExpoPlaza(original:MapLayout):MapLayout{
  if(original.id!=='overworld'||original.width!==128||original.height!==128)throw Error('Closed 128² plaza source required');
  if(isExpoPlaza(original))throw Error('Expo plaza already applied');
  const l=structuredClone(original),ids=new Set(l.placements.map(p=>p.id));
  for(const id of EXPO_PLAZA.retiredPlacements)if(l.placements.filter(p=>p.id===id).length!==1)throw Error(`Expo retires missing/ambiguous placement ${id}`);
  l.placements=l.placements.filter(p=>!EXPO_PLAZA.retiredPlacements.includes(p.id));
- const guide=new Set(routes.allowedCells.map(([x,y])=>`${x},${y}`)),added=expoPlacements();
+ const guide=new Set(routes.allowedCells.map(([x,y])=>`${x},${y}`)),added=expoPlacements(),{hall,road,capRow,aisle,walkway}=EXPO_PLAZA;
  for(const p of added){
   if(ids.has(p.id))throw Error(`Expo placement id already used: ${p.id}`);ids.add(p.id);
   for(const [x,y] of cells(p)){
-   const range=EXPO_PLAZA.court[y];if(!range||x<range[0]||x>range[1])throw Error(`Expo ${p.id} leaves the court at ${x},${y}`);
-   if(p.layer!=='terrain'&&guide.has(`${x},${y}`))throw Error(`Expo ${p.id} covers guide cell ${x},${y}`);
+   const top=p.layer==='terrain'?hall.y:capRow;
+   if(x<hall.x||x>=hall.x+hall.width||y<top||y>=hall.y+hall.height)throw Error(`Expo ${p.id} leaves the hall at ${x},${y}`);
+   if(x>=road.x&&x<road.x+road.width)throw Error(`Expo ${p.id} covers the road at ${x},${y}`);
+   if(p.layer!=='terrain'&&(guide.has(`${x},${y}`)||(y>=aisle.y&&y<aisle.y+aisle.height)||y===walkway.y))throw Error(`Expo ${p.id} covers an aisle/guide cell ${x},${y}`);
   }
  }
  // refinePlazaFloorGarden re-appends thresholds and gardens last; the expo sits before that tail.

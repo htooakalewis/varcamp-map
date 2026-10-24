@@ -502,6 +502,64 @@
     "level": "belowAvatar",
     "sourceId": "workadventure"
   },
+  "poster-night-city": {
+    "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+    "rect": {
+      "x": 8,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
+  "balloons-party": {
+    "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
+    "rect": {
+      "x": 10,
+      "y": 6,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "workadventure"
+  },
+  "curtain-divider-stripe": {
+    "sheet": "assets/tilesets/workadventure/WA_Other_Furniture.png",
+    "rect": {
+      "x": 1,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
+  "curtain-divider-navy": {
+    "sheet": "assets/tilesets/workadventure/WA_Other_Furniture.png",
+    "rect": {
+      "x": 2,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
   "bookcase": {
     "sheet": "assets/tilesets/workadventure/WA_Other_Furniture.png",
     "rect": {

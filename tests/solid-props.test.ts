@@ -76,7 +76,8 @@ describe('published solid-prop receipts and direct current physical contracts',(
   const startLayers=now.layers.filter((l:any)=>l.type==='tilelayer'&&l.properties?.some((p:any)=>p.name==='startLayer'&&p.value===true));
   const entryCells=startLayers.flatMap((l:any)=>l.data.flatMap((v:number,i:number)=>v?[`${i%now.width},${Math.floor(i/now.width)}`]:[]));
   const exits=source.exits.flatMap((e:any)=>Array.from({length:e.width*e.height},(_,i)=>`${e.x+i%e.width},${e.y+Math.floor(i/e.width)}`));
-  const route=id==='overworld'?read('src/bots/lyra-routes.json').allowedCells.map((c:number[])=>c.join(',')):[];
+  // The historical support receipt is checked against the guide graph of its own epoch; the current graph is audited against the current native by guide-route-audit.
+  const route=id==='overworld'?historicalPlaza('routes').allowedCells.map((c:number[])=>c.join(',')):[];
   expect(route.length).toBe(id==='overworld'?743:0);const protectedCells=[...new Set<string>([...entryCells,...exits,...route])];
   expect(protectedCells.every(c=>!b.has(c))).toBe(true);expect(connected(now,b,protectedCells)).toBe(true);
   for(const p of source.placements.filter((p:any)=>base[p.sprite]?.standingRole==='support')){expect(b.has(`${p.x},${p.y}`),p.id).toBe(true);expect(cell(now,p.x,p.y,false),p.id).toBe(true);}

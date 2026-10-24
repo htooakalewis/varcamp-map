@@ -53,3 +53,6 @@ ops/acceptance/output/
 
 # Orca workspace drops (screenshots pasted into agent chats)
 .orca/
+
+# Agent worktrees
+.claude/worktrees/

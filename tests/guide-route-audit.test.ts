@@ -2,7 +2,8 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
 import {auditGuideRoutes} from '../tools/bots/route-audit';
-import {historicalFloorPlaza} from './helpers/plaza-successor';
+import {historicalFloorPlaza,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} from './helpers/plaza-successor';
+import {EXPO_PLAZA} from '../tools/maps/expo-plaza';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {planRoute,startupRoute} from '../src/bots/venue';
 import {PERSONAS} from '../src/bots/personas';
@@ -15,17 +16,20 @@ const layer=(d:ReturnType<typeof data>,name:string)=>d.map.layers.find((l:any)=>
 const maskGid=(d:ReturnType<typeof data>,collides:boolean)=>{const s=d.map.tilesets.find((t:any)=>t.name==='navigation-mask');return s.firstgid+s.tiles.find((t:any)=>t.properties.some((p:any)=>p.name==='collides'&&p.value===collides)).id;};
 
 describe('final plaza guide physical/depth audit',()=>{
- it('keeps the old conservative full-footprint rule on actual immutable before-plaza source',()=>{
-  const l=historicalFloorPlaza('layout') as MapLayout,routes=data().routes,overlaps=[];
-  for(const [x,y] of routes.allowedCells)for(const p of [...l.placements.filter((p:any)=>p.layer==='props'),...(l.images??[])])if(x>=p.x&&x<p.x+p.width&&y>=p.y&&y<p.y+p.height)overlaps.push(`${'id' in p?p.id:p.name}:${x},${y}`);
+ it('keeps the old conservative full-footprint rule on every immutable before-plaza prop that survives the approved retirements',()=>{
+  // The expo hall aisle crosses the retired south-garden benches and the retired arrival label; every other historical footprint stays untouched by the graph.
+  const retired=new Set([...WELCOME_PLAZA_RETIREMENT.placements,...WELCOME_SIGN_RETIREMENT.placements,...EXPO_PLAZA.retiredPlacements]);
+  const l=historicalFloorPlaza('layout') as MapLayout,routes=data().routes,overlaps=[],crossed=new Set<string>();
+  for(const [x,y] of routes.allowedCells)for(const p of [...l.placements.filter((p:any)=>p.layer==='props'),...(l.images??[])])if(x>=p.x&&x<p.x+p.width&&y>=p.y&&y<p.y+p.height){if('id' in p&&retired.has(p.id))crossed.add(p.id);else overlaps.push(`${'id' in p?p.id:p.name}:${x},${y}`);}
   expect(overlaps).toEqual([]);
+  expect([...crossed].sort()).toEqual(['arrival-position-label','inner-garden-southeast-bench','inner-garden-southeast-tea-table','inner-garden-southwest-bench','inner-garden-southwest-tea-table']);
  });
- it('accepts the final exact743-cell graph and intentional below-avatar floor identity',()=>{
+ it('accepts the final exact792-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:743,startupReservedCells:4,nativeCollisionCells:6537,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
+  expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6665,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
   expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual(['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`).sort());
   const {provenance,...graph}=d.routes;
-  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('911e70291ddc5304cd76fe3cb2404295364d1b24657ab278e3c2c83306c9ec1e');
+  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('083815da9057307c02218ec83816d0280a17b24143f2c90a16a3287e3d186899');
  });
  it('explicitly retains only the inherited four-cell welcome escape, never ordinary area entry',()=>{
   const d=data();expect(check(d).startupInsideWelcomeArea).toEqual([[63,65],[64,65],[63,66],[64,66]]);

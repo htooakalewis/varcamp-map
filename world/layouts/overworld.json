@@ -12574,133 +12574,387 @@
       "layer": "props"
     },
     {
-      "id": "expo-a1-floor-0",
-      "sprite": "floor-cosmic",
+      "id": "expo-hall-floor-west",
+      "sprite": "floor-charcoal",
       "layer": "terrain",
       "x": 40,
-      "y": 73,
-      "width": 6,
-      "height": 5
+      "y": 74,
+      "width": 20,
+      "height": 16
     },
     {
-      "id": "expo-a1-floor-1",
+      "id": "expo-hall-floor-east",
+      "sprite": "floor-charcoal",
+      "layer": "terrain",
+      "x": 68,
+      "y": 74,
+      "width": 20,
+      "height": 16
+    },
+    {
+      "id": "expo-n1-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
       "x": 41,
-      "y": 78,
+      "y": 75,
       "width": 5,
-      "height": 2
+      "height": 4
     },
     {
-      "id": "expo-a1-wall-0",
+      "id": "expo-n2-carpet",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 47,
+      "y": 75,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-n3-carpet",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 53,
+      "y": 75,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-n4-carpet",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 70,
+      "y": 75,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-n5-carpet",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 76,
+      "y": 75,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-n6-carpet",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 82,
+      "y": 75,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s1-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 41,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s2-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 47,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s3-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 53,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s4-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 70,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s5-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 76,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-s6-carpet",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 82,
+      "y": 83,
+      "width": 5,
+      "height": 4
+    },
+    {
+      "id": "expo-west-north-side-40",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 39,
+      "x": 40,
       "y": 73,
-      "width": 7,
-      "height": 2
-    },
-    {
-      "id": "expo-a1-counter",
-      "sprite": "desk-cream",
-      "layer": "props",
-      "x": 41,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-a1-chair",
-      "sprite": "chair-presentation",
-      "layer": "props",
-      "x": 41,
-      "y": 76,
       "width": 1,
-      "height": 2
+      "height": 6
     },
     {
-      "id": "expo-a1-palm",
-      "sprite": "plant-palm",
-      "layer": "props",
-      "x": 43,
-      "y": 75,
-      "width": 3,
-      "height": 3
-    },
-    {
-      "id": "expo-a1-sticker-0",
-      "sprite": "sigil-fire",
-      "layer": "props",
+      "id": "expo-west-north-seal-40-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
       "x": 40,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a1-sticker-1",
-      "sprite": "sigil-earth",
-      "layer": "props",
-      "x": 40,
-      "y": 76,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-a1-sticker-2",
-      "sprite": "sigil-air",
-      "layer": "props",
+      "id": "expo-west-north-seal-40-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
       "x": 40,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a2-floor-0",
-      "sprite": "floor-cosmic",
+      "id": "expo-west-north-side-46",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-north-seal-46-75",
+      "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
-      "y": 73,
-      "width": 6,
-      "height": 7
-    },
-    {
-      "id": "expo-a2-wall-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 46,
-      "y": 73,
-      "width": 6,
-      "height": 2
-    },
-    {
-      "id": "expo-a2-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
       "x": 46,
       "y": 75,
       "width": 1,
-      "height": 4
+      "height": 1
     },
     {
-      "id": "expo-a2-counter",
-      "sprite": "desk-cream",
+      "id": "expo-west-north-seal-46-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 46,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-north-side-52",
+      "sprite": "wall-navy",
       "layer": "props",
-      "x": 47,
-      "y": 78,
+      "x": 52,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-north-seal-52-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 52,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-north-seal-52-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 52,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-north-side-58",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 58,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-north-seal-58-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 58,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-north-seal-58-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 58,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 41,
+      "y": 73,
       "width": 2,
       "height": 2
     },
     {
-      "id": "expo-a2-chair",
+      "id": "expo-n1-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 43,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n1-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 44,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n1-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 43,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n1-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 41,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 43,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 45,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 47,
+      "x": 45,
       "y": 76,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a2-sticker-0",
+      "id": "expo-n1-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 43,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n1-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 41,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n1-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 45,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 47,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 49,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n2-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 50,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 49,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 47,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-sticker-1",
       "sprite": "sigil-earth",
       "layer": "props",
       "x": 49,
@@ -12709,17 +12963,8 @@
       "height": 1
     },
     {
-      "id": "expo-a2-sticker-1",
+      "id": "expo-n2-sticker-2",
       "sprite": "sigil-air",
-      "layer": "props",
-      "x": 50,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-a2-sticker-2",
-      "sprite": "sigil-water",
       "layer": "props",
       "x": 51,
       "y": 75,
@@ -12727,16 +12972,62 @@
       "height": 1
     },
     {
-      "id": "expo-a3-floor-0",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 53,
-      "y": 73,
-      "width": 5,
-      "height": 7
+      "id": "expo-n2-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 51,
+      "y": 76,
+      "width": 1,
+      "height": 2
     },
     {
-      "id": "expo-a3-wall-0",
+      "id": "expo-n2-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 49,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 47,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n2-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 51,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n3-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 53,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n3-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 55,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n3-wall-2",
       "sprite": "wall-navy",
       "layer": "props",
       "x": 56,
@@ -12745,35 +13036,26 @@
       "height": 2
     },
     {
-      "id": "expo-a3-glass-0",
-      "sprite": "glass-partition",
+      "id": "expo-n3-poster",
+      "sprite": "poster-night-city",
       "layer": "props",
-      "x": 53,
+      "x": 55,
       "y": 73,
-      "width": 3,
-      "height": 2
-    },
-    {
-      "id": "expo-a3-counter",
-      "sprite": "table-workshop",
-      "layer": "props",
-      "x": 53,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-a3-chair",
-      "sprite": "chair-presentation",
-      "layer": "props",
-      "x": 53,
-      "y": 76,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a3-sticker-0",
-      "sprite": "sigil-air",
+      "id": "expo-n3-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 53,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-sticker-1",
+      "sprite": "sigil-earth",
       "layer": "props",
       "x": 55,
       "y": 75,
@@ -12781,17 +13063,8 @@
       "height": 1
     },
     {
-      "id": "expo-a3-sticker-1",
-      "sprite": "sigil-water",
-      "layer": "props",
-      "x": 56,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-a3-sticker-2",
-      "sprite": "sigil-fire",
+      "id": "expo-n3-sticker-2",
+      "sprite": "sigil-air",
       "layer": "props",
       "x": 57,
       "y": 75,
@@ -12799,206 +13072,407 @@
       "height": 1
     },
     {
-      "id": "expo-a4-floor-0",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 71,
-      "y": 74,
-      "width": 5,
-      "height": 6
-    },
-    {
-      "id": "expo-a4-wall-0",
-      "sprite": "wall-navy",
+      "id": "expo-n3-chair",
+      "sprite": "chair-presentation",
       "layer": "props",
-      "x": 74,
-      "y": 74,
+      "x": 57,
+      "y": 76,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a4-glass-0",
-      "sprite": "glass-partition",
+      "id": "expo-n3-counter",
+      "sprite": "desk-cream",
       "layer": "props",
-      "x": 71,
-      "y": 74,
-      "width": 3,
-      "height": 2
-    },
-    {
-      "id": "expo-a4-counter",
-      "sprite": "table-workshop",
-      "layer": "props",
-      "x": 71,
+      "x": 55,
       "y": 78,
       "width": 2,
       "height": 2
     },
     {
-      "id": "expo-a4-chair",
-      "sprite": "chair-presentation",
+      "id": "expo-n3-balloons-0",
+      "sprite": "balloons-party",
       "layer": "props",
-      "x": 71,
-      "y": 76,
+      "x": 53,
+      "y": 78,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a4-sticker-0",
-      "sprite": "sigil-water",
+      "id": "expo-n3-balloons-1",
+      "sprite": "balloons-party",
       "layer": "props",
-      "x": 74,
-      "y": 76,
+      "x": 57,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-east-north-side-69",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 69,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-north-seal-69-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 69,
+      "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a4-sticker-1",
-      "sprite": "sigil-fire",
+      "id": "expo-east-north-seal-69-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 69,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-north-side-75",
+      "sprite": "wall-navy",
       "layer": "props",
       "x": 75,
-      "y": 76,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-north-seal-75-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 75,
+      "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a4-sticker-2",
-      "sprite": "sigil-earth",
-      "layer": "props",
+      "id": "expo-east-north-seal-75-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
       "x": 75,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a5-floor-0",
-      "sprite": "floor-cosmic",
-      "layer": "terrain",
-      "x": 77,
-      "y": 74,
-      "width": 7,
+      "id": "expo-east-north-side-81",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 81,
+      "y": 73,
+      "width": 1,
       "height": 6
     },
     {
-      "id": "expo-a5-wall-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 77,
-      "y": 74,
-      "width": 7,
-      "height": 2
-    },
-    {
-      "id": "expo-a5-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 83,
-      "y": 76,
+      "id": "expo-east-north-seal-81-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 81,
+      "y": 75,
       "width": 1,
-      "height": 4
+      "height": 1
     },
     {
-      "id": "expo-a5-counter",
-      "sprite": "desk-cream",
+      "id": "expo-east-north-seal-81-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 81,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-north-side-87",
+      "sprite": "wall-navy",
       "layer": "props",
-      "x": 77,
-      "y": 78,
+      "x": 87,
+      "y": 73,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-north-seal-87-75",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 87,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-north-seal-87-77",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 87,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 70,
+      "y": 73,
       "width": 2,
       "height": 2
     },
     {
-      "id": "expo-a5-chair",
-      "sprite": "chair-presentation",
+      "id": "expo-n4-wall-1",
+      "sprite": "wall-navy",
       "layer": "props",
-      "x": 77,
-      "y": 76,
+      "x": 72,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n4-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 73,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n4-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 72,
+      "y": 73,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a5-sticker-0",
+      "id": "expo-n4-sticker-0",
       "sprite": "sigil-fire",
       "layer": "props",
-      "x": 80,
-      "y": 76,
+      "x": 70,
+      "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a5-sticker-1",
+      "id": "expo-n4-sticker-1",
       "sprite": "sigil-earth",
       "layer": "props",
-      "x": 81,
-      "y": 76,
+      "x": 72,
+      "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a5-sticker-2",
+      "id": "expo-n4-sticker-2",
       "sprite": "sigil-air",
       "layer": "props",
-      "x": 82,
-      "y": 76,
+      "x": 74,
+      "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a6-floor-0",
-      "sprite": "floor-cosmic",
-      "layer": "terrain",
-      "x": 84,
-      "y": 73,
-      "width": 5,
-      "height": 3
-    },
-    {
-      "id": "expo-a6-floor-1",
-      "sprite": "floor-cosmic",
-      "layer": "terrain",
-      "x": 84,
-      "y": 76,
-      "width": 4,
-      "height": 2
-    },
-    {
-      "id": "expo-a6-floor-2",
-      "sprite": "floor-cosmic",
-      "layer": "terrain",
-      "x": 84,
-      "y": 78,
-      "width": 3,
-      "height": 2
-    },
-    {
-      "id": "expo-a6-wall-0",
-      "sprite": "wall-navy",
+      "id": "expo-n4-chair",
+      "sprite": "chair-presentation",
       "layer": "props",
-      "x": 84,
-      "y": 73,
-      "width": 5,
+      "x": 70,
+      "y": 76,
+      "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a6-counter",
+      "id": "expo-n4-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 84,
+      "x": 71,
       "y": 78,
       "width": 2,
       "height": 2
     },
     {
-      "id": "expo-a6-chair",
+      "id": "expo-n4-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 70,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n4-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 74,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 76,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 78,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n5-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 79,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 78,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 76,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 78,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 80,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 84,
+      "x": 76,
       "y": 76,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-a6-sticker-0",
+      "id": "expo-n5-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 77,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 76,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 80,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 82,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 84,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n6-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 85,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 84,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 82,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-sticker-1",
       "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 84,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-sticker-2",
+      "sprite": "sigil-air",
       "layer": "props",
       "x": 86,
       "y": 75,
@@ -13006,63 +13480,379 @@
       "height": 1
     },
     {
-      "id": "expo-a6-sticker-1",
+      "id": "expo-n6-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 82,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 83,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 82,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 86,
+      "y": 78,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-west-south-side-40",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 40,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-south-seal-40-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 40,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-40-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 40,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-40-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 40,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-side-46",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-south-seal-46-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 46,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-46-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 46,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-46-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 46,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-side-52",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 52,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-south-seal-52-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 52,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-52-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 52,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-52-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 52,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-side-58",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 58,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-west-south-seal-58-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 58,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-58-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 58,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-west-south-seal-58-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 58,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 41,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 41,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s1-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 43,
+      "y": 87,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-s1-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 44,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s1-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 43,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s1-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 41,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 43,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-sticker-2",
       "sprite": "sigil-air",
       "layer": "props",
-      "x": 87,
-      "y": 75,
+      "x": 45,
+      "y": 86,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-a6-sticker-2",
-      "sprite": "sigil-water",
+      "id": "expo-s1-chair",
+      "sprite": "chair-presentation",
       "layer": "props",
-      "x": 88,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b1-floor-0",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 46,
-      "y": 82,
-      "width": 5,
-      "height": 3
-    },
-    {
-      "id": "expo-b1-floor-1",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 47,
-      "y": 85,
-      "width": 4,
-      "height": 1
-    },
-    {
-      "id": "expo-b1-wall-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 46,
-      "y": 82,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-b1-sill-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "renderRole": "cutaway",
-      "x": 47,
+      "x": 45,
       "y": 84,
-      "width": 4,
+      "width": 1,
       "height": 2
     },
     {
-      "id": "expo-b1-counter",
-      "sprite": "table-workshop",
+      "id": "expo-s1-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 43,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s1-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 41,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s1-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 45,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s2-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 47,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 47,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s2-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 49,
+      "y": 87,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-s2-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 50,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s2-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 49,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s2-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 47,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 49,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 51,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 51,
+      "y": 84,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s2-counter",
+      "sprite": "desk-cream",
       "layer": "props",
       "x": 49,
       "y": 82,
@@ -13070,97 +13860,80 @@
       "height": 2
     },
     {
-      "id": "expo-b1-sticker-0",
-      "sprite": "sigil-air",
+      "id": "expo-s2-balloons-0",
+      "sprite": "balloons-party",
       "layer": "props",
       "x": 47,
-      "y": 84,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b1-sticker-1",
-      "sprite": "sigil-water",
-      "layer": "props",
-      "x": 48,
-      "y": 84,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b1-sticker-2",
-      "sprite": "sigil-fire",
-      "layer": "props",
-      "x": 47,
-      "y": 83,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b2-floor-0",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 52,
       "y": 82,
-      "width": 4,
-      "height": 7
+      "width": 1,
+      "height": 2
     },
     {
-      "id": "expo-b2-wall-0",
+      "id": "expo-s2-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 51,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s3-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 53,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 53,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s3-wall-1",
       "sprite": "wall-navy",
       "layer": "props",
       "x": 55,
       "y": 87,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
-      "id": "expo-b2-glass-0",
-      "sprite": "glass-partition",
+      "id": "expo-s3-wall-2",
+      "sprite": "wall-navy",
       "layer": "props",
-      "x": 52,
+      "x": 56,
       "y": 87,
-      "width": 3,
-      "height": 2
-    },
-    {
-      "id": "expo-b2-counter",
-      "sprite": "table-workshop",
-      "layer": "props",
-      "x": 52,
-      "y": 82,
       "width": 2,
       "height": 2
     },
     {
-      "id": "expo-b2-chair",
-      "sprite": "chair-presentation",
+      "id": "expo-s3-poster",
+      "sprite": "poster-night-city",
       "layer": "props",
-      "x": 52,
-      "y": 84,
+      "x": 55,
+      "y": 87,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-b2-sticker-0",
-      "sprite": "sigil-water",
-      "layer": "props",
-      "x": 55,
-      "y": 84,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b2-sticker-1",
+      "id": "expo-s3-sticker-0",
       "sprite": "sigil-fire",
       "layer": "props",
-      "x": 55,
-      "y": 85,
+      "x": 53,
+      "y": 86,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-b2-sticker-2",
+      "id": "expo-s3-sticker-1",
       "sprite": "sigil-earth",
       "layer": "props",
       "x": 55,
@@ -13169,25 +13942,278 @@
       "height": 1
     },
     {
-      "id": "expo-b3-floor-0",
-      "sprite": "floor-cosmic",
-      "layer": "terrain",
-      "x": 71,
-      "y": 82,
-      "width": 5,
-      "height": 7
+      "id": "expo-s3-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 57,
+      "y": 86,
+      "width": 1,
+      "height": 1
     },
     {
-      "id": "expo-b3-wall-0",
-      "sprite": "wall-navy",
+      "id": "expo-s3-chair",
+      "sprite": "chair-presentation",
       "layer": "props",
-      "x": 71,
-      "y": 87,
-      "width": 5,
+      "x": 57,
+      "y": 84,
+      "width": 1,
       "height": 2
     },
     {
-      "id": "expo-b3-counter",
+      "id": "expo-s3-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 55,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s3-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 53,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s3-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 57,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-east-south-side-69",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 69,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-south-seal-69-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 69,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-69-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 69,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-69-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 69,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-side-75",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 75,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-south-seal-75-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 75,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-75-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 75,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-75-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 75,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-side-81",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 81,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-south-seal-81-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 81,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-81-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 81,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-81-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 81,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-side-87",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 87,
+      "y": 83,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "id": "expo-east-south-seal-87-83",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 87,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-87-85",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 87,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-east-south-seal-87-87",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 87,
+      "y": 87,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 70,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 70,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s4-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 72,
+      "y": 87,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-s4-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 73,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s4-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 72,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s4-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 70,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 72,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 74,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 70,
+      "y": 84,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s4-counter",
       "sprite": "desk-cream",
       "layer": "props",
       "x": 71,
@@ -13196,81 +14222,108 @@
       "height": 2
     },
     {
-      "id": "expo-b3-chair",
-      "sprite": "chair-presentation",
+      "id": "expo-s4-balloons-0",
+      "sprite": "balloons-party",
       "layer": "props",
-      "x": 71,
-      "y": 84,
+      "x": 70,
+      "y": 82,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-b3-sticker-0",
+      "id": "expo-s4-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 74,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 76,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 76,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 78,
+      "y": 87,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-s5-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 79,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 78,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-sticker-0",
       "sprite": "sigil-fire",
       "layer": "props",
-      "x": 75,
-      "y": 84,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b3-sticker-1",
-      "sprite": "sigil-earth",
-      "layer": "props",
-      "x": 75,
-      "y": 85,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-b3-sticker-2",
-      "sprite": "sigil-air",
-      "layer": "props",
-      "x": 75,
+      "x": 76,
       "y": 86,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-b4-floor-0",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 77,
-      "y": 82,
-      "width": 5,
-      "height": 3
-    },
-    {
-      "id": "expo-b4-floor-1",
-      "sprite": "floor-wood",
-      "layer": "terrain",
-      "x": 77,
-      "y": 85,
-      "width": 4,
+      "id": "expo-s5-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 78,
+      "y": 86,
+      "width": 1,
       "height": 1
     },
     {
-      "id": "expo-b4-wall-0",
-      "sprite": "wall-navy",
+      "id": "expo-s5-sticker-2",
+      "sprite": "sigil-air",
       "layer": "props",
-      "x": 81,
-      "y": 82,
+      "x": 80,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 76,
+      "y": 84,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-b4-sill-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "renderRole": "cutaway",
-      "x": 77,
-      "y": 84,
-      "width": 4,
-      "height": 2
-    },
-    {
-      "id": "expo-b4-counter",
-      "sprite": "table-workshop",
+      "id": "expo-s5-counter",
+      "sprite": "desk-cream",
       "layer": "props",
       "x": 77,
       "y": 82,
@@ -13278,31 +14331,131 @@
       "height": 2
     },
     {
-      "id": "expo-b4-sticker-0",
+      "id": "expo-s5-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 76,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 80,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-seal-cap",
+      "sprite": "wall-charcoal",
+      "layer": "terrain",
+      "x": 82,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 82,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 84,
+      "y": 87,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-s6-wall-2",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 85,
+      "y": 87,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-poster",
+      "sprite": "poster-night-city",
+      "layer": "props",
+      "x": 84,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 82,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-sticker-1",
       "sprite": "sigil-earth",
       "layer": "props",
-      "x": 79,
-      "y": 84,
+      "x": 84,
+      "y": 86,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-b4-sticker-1",
+      "id": "expo-s6-sticker-2",
       "sprite": "sigil-air",
       "layer": "props",
-      "x": 80,
-      "y": 84,
+      "x": 86,
+      "y": 86,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-b4-sticker-2",
-      "sprite": "sigil-water",
+      "id": "expo-s6-chair",
+      "sprite": "chair-presentation",
       "layer": "props",
-      "x": 80,
-      "y": 83,
+      "x": 82,
+      "y": 84,
       "width": 1,
-      "height": 1
+      "height": 2
+    },
+    {
+      "id": "expo-s6-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 83,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-balloons-0",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 82,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s6-balloons-1",
+      "sprite": "balloons-party",
+      "layer": "props",
+      "x": 86,
+      "y": 82,
+      "width": 1,
+      "height": 2
     },
     {
       "id": "aries-zodiac-threshold",
