@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {refinePlazaFloorGarden} from '../../tools/maps/plaza-floor-garden';
 import {refineNativePlaza} from '../../tools/maps/plaza-native';
-import {EXPO_PLAZA,applyExpoPlaza,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
+import {EXPO_PLAZA,applyExpoPlaza,expoFixtures,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
 import {plazaGardenSprites} from '../../tools/art/plaza-garden';
 import {renderRoadster} from '../../tools/art/roadster';
 import {renderPlazaDrones} from '../../tools/art/plaza-drones';
@@ -88,26 +88,36 @@ export function retirePlazaProps(layout:MapLayout,native:TiledMap,catalog:TileCa
 export const retireWelcomePlazaProps=(layout:MapLayout,native:TiledMap,catalog:TileCatalog)=>retirePlazaProps(layout,native,catalog,WELCOME_PLAZA_RETIREMENT);
 /** Approved expo hall, applied after the welcome-sign retirement: the two south grove
  * gardens, both ponds, three lawn strips and their furniture (33 placements, five of
- * them terrain) become one rectangular hall of twelve identical stalls (208 placements:
- * hall floor, carpets and wall seals as terrain; walls, posters, stickers, chairs,
- * counters and balloons as props) on atlases the native context already reserves.
- * The producer is pinned; the native delta is exactly the projection of the source
- * delta, with the atlas and layer rosters unchanged. */
-export const EXPO_PLAZA_PRODUCER_SHA256='82b4d97f3ec89f19db21d11b0ebe843b997279ce9c11056775164addab03fb6b';
+ * them terrain) become one rectangular hall of twelve identical stalls (243 placements:
+ * hall floor, carpets and wall seals as terrain; walls, posters, stickers, nameplate
+ * fascias and posts, chairs, counters and balloons as props), ten 4x2 logo inlays and
+ * twelve nameplate captions. The producer is pinned; the native delta is exactly the
+ * projection of the source delta: every pre-expo atlas and layer stays in place and the
+ * expo reservation family (sticker sheet, booth marks, caption atlas) is admitted after
+ * the fleet with one panel per logo and one caption layer per nameplate. */
+export const EXPO_PLAZA_PRODUCER_SHA256='2a9171789878605788c2554524fc5415d07807bc5f4a9069a5750d1afe302879';
+export const EXPO_PLAZA_COUNTS=Object.freeze({placements:243,images:10,captions:12});
 export function applyExpoPlazaSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
  assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),EXPO_PLAZA_PRODUCER_SHA256,'Expo plaza producer changed');
- assert.equal(EXPO_PLAZA.retiredPlacements.length,33);assert.equal(expoPlacements().length,208);
+ const fixtures=expoFixtures(),{placements,images,captions}=EXPO_PLAZA_COUNTS;
+ assert.equal(EXPO_PLAZA.retiredPlacements.length,33);assert.equal(expoPlacements().length,placements);assert.equal(fixtures.images.length,images);assert.equal(fixtures.captions.length,captions);
  const l=applyExpoPlaza(layout);
- assert.equal(l.placements.length,layout.placements.length-33+208);
+ assert.equal(l.placements.length,layout.placements.length-33+placements);
+ assert.equal(l.images!.length,layout.images!.length+images);assert.equal(l.signs!.length,(layout.signs??[]).length+captions);assert.equal(l.standingSigns!.length,(layout.standingSigns??[]).length+captions);
  const map=expoPlazaNative(native,l,catalog);
- assert.deepEqual(map.tilesets,native.tilesets,'Expo must not change the reserved atlas roster');
- assert.deepEqual(map.layers.map(x=>x.name),native.layers.map(x=>x.name),'Expo must not change the native layer roster');
- assert.equal(map.nextlayerid,native.nextlayerid);
+ assert.deepEqual(map.tilesets.slice(0,native.tilesets.length),native.tilesets,'Expo must keep every pre-expo atlas reservation');
+ const admitted=map.tilesets.slice(native.tilesets.length);
+ assert.deepEqual(admitted.map(t=>t.name),['booth-stickers',...fixtures.images.map(i=>i.name),'standing-captions'],'Expo admits exactly the expo reservation family after the fleet');
+ assert.equal(admitted[0].firstgid,Math.max(...native.tilesets.map(t=>t.firstgid+t.tilecount!)));
+ const added=new Set([...fixtures.images.map(i=>i.name),...fixtures.captions.map(c=>'standing-caption-'+c.sign.name)]);
+ assert.deepEqual(map.layers.map(x=>x.name).filter(n=>!added.has(n)),native.layers.map(x=>x.name),'Expo must keep every pre-expo native layer in order');
+ assert.deepEqual(map.layers.map(x=>x.name).filter(n=>added.has(n)).sort(),[...added].sort(),'Expo adds exactly one panel per logo and one caption layer per nameplate');
+ assert.equal(map.nextlayerid,native.nextlayerid!+added.size);
  assertNativeSourceProjection(map,buildMap(l,catalog).tmj);
  return{layout:l,native:map};
 }
-/** One shared actual forward producer transaction for groves/redraw tests. */
-export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+/** The approved chain up to (excluding) the expo hall: the input of applyExpoPlazaSuccessor. */
+export async function expectedPreExpoSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  for(const [id,s] of Object.entries(plazaGardenSprites()))assert.deepEqual(catalog[id],s,`Original grounded tree/canopy contract ${id}`);
  return (async()=>{
   assert.equal(createHash('sha256').update(readFileSync('tools/art/plaza-fleet.ts')).digest('hex'),'3ffa9d3b2da3aba95251226725d56516ecfc5e0688944a73d41e178cb3ba6960');
@@ -123,9 +133,14 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
   const manual=appendReviewedFleetNative(base,fleet.aircraft);
   assert.deepEqual(reconcileNativeProjection(legacy,buildMap(l,catalog).tmj),manual,'Production current forward transaction differs from independent three-append native oracle');
   assert.ok(readFileSync('maps/overworld.wam').equals(approvedHistoricalRaw('maps/overworld.wam')),'Fleet must retain all organizer controls');
-  const plaza=retireWelcomePlazaProps(l,manual,catalog),signs=retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
-  return applyExpoPlazaSuccessor(signs.layout,signs.native,catalog);
+  const plaza=retireWelcomePlazaProps(l,manual,catalog);
+  return retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
  })();
+}
+/** One shared actual forward producer transaction for groves/redraw tests. */
+export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+ const signs=await expectedPreExpoSuccessor(catalog);
+ return applyExpoPlazaSuccessor(signs.layout,signs.native,catalog);
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

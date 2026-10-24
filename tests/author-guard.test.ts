@@ -12,6 +12,8 @@ it('explicit author export refuses to erase native changes after its recorded ex
  try{
   mkdirSync(join(root,'world/layouts'),{recursive:true});mkdirSync(join(root,'art'));cpSync('art/sources.json',join(root,'art/sources.json'));cpSync('assets',join(root,'assets'),{recursive:true});
   cpSync('world/layouts/overworld.json',join(root,'world/layouts/overworld.json'));
+  // The overworld's expo booth nameplates compile through its own caption family (descriptor, SVG master, glyph font and producer).
+  for(const file of ['art/source/expo-captions.json','art/source/expo-captions.svg','art/source/hub-nameplates.json','tools/art/standing-captions.ts']){mkdirSync(dirname(join(root,file)),{recursive:true});cpSync(file,join(root,file));}
   const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout;
   // The isolated authoring directory owns every file the overlay receipt validates.
   for(const overlay of layout.animatedOverlays??[])if(overlay.provenance){

@@ -22,7 +22,10 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
  expect(l.images!.find(p=>p.name==='VarCamp 2026 Floor')).toMatchObject({image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false});
  expect(l.placements.filter(p=>/^standing-sponsor-|^sponsor-frame-|^sponsor-trim-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id))).toEqual([]);
  expect(l.standingSigns!.filter(s=>s.face==='varcamp-nameplate'||s.faceKind==='image')).toEqual([]);
- expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate')).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
+ // The twelve expo booth nameplates (fascia faces over fascia posts) are the only assemblies added since the retirements.
+ const nameplate=(face:string)=>/^expo-[ns]\d-nameplate-fascia$/.test(face);
+ expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&!nameplate(s.face))).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
+ expect(l.standingSigns!.filter(s=>nameplate(s.face))).toHaveLength(12);
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
@@ -54,5 +57,7 @@ it('retains all twelve doorway footprints while consuming original generated pav
  expect(l.placements.filter(p=>['plant-grass','plant-flower'].includes(p.sprite))).toEqual([]);
  expect(l.placements.filter(p=>p.layer==='terrain'&&p.sprite.startsWith('plaza-grass-')).length).toBeGreaterThan(100);
  for(const p of l.placements.filter(p=>p.sprite.startsWith('plaza-grass-')))expect(catalog[p.sprite]).toMatchObject({sourceId:'plaza-original-garden',blockingCells:[],level:'belowAvatar'});
- expect(l.entries).toEqual(old.entries);expect(l.exits).toEqual(old.exits);expect(l.areas).toEqual(old.areas);expect(l.signs).toEqual(old.signs);
+ expect(l.entries).toEqual(old.entries);expect(l.exits).toEqual(old.exits);expect(l.areas).toEqual(old.areas);
+ // The expo hall appended its twelve booth nameplate captions after the original signs.
+ expect(l.signs!.slice(0,old.signs!.length)).toEqual(old.signs);expect(l.signs!.slice(old.signs!.length).map(s=>s.name)).toEqual(['n1','n2','n3','n4','n5','n6','s1','s2','s3','s4','s5','s6'].map(id=>`expo-${id}-nameplate`));
 });

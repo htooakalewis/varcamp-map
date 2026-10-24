@@ -270,7 +270,10 @@ describe('audited WorkAdventure runtime object aliases',()=>{
       (m:TiledMap)=>{const l=m.layers.find(l=>l.name==='physical-collisions');if(l?.type==='tilelayer')l.data[70*128+70]=1;},
       (m:TiledMap)=>{m.layers.find(l=>l.name==='exit-solar')!.properties![0].value='different.wam';},
       (m:TiledMap)=>{m.tilesets.find(s=>s.name==='navigation-mask')!.tiles![0].properties![0].value=true;},
-      (m:TiledMap)=>{const historical=preCanonicalNative(),layers=new Map(m.layers.map(l=>[l.name,l])),fleet=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];expect([...layers.keys()].sort()).toEqual([...historical.layers.map(l=>l.name),...fleet].sort());const oldNames=new Set(historical.layers.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(historical.layers[index++].name)!:l);expect(index).toBe(historical.layers.length);},
+      (m:TiledMap)=>{const historical=preCanonicalNative(),layers=new Map(m.layers.map(l=>[l.name,l])),fleet=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
+        // The expo hall added one panel layer per booth logo and one caption layer per nameplate after the fleet.
+        const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),expo=[...layout.images.filter((i:{name:string})=>i.name.startsWith('Expo / ')).map((i:{name:string})=>i.name),...layout.standingSigns.filter((s:{text?:string})=>/^expo-[ns]\d-nameplate$/.test(s.text??'')).map((s:{text?:string})=>'standing-caption-'+s.text)];expect(expo).toHaveLength(22);
+        expect([...layers.keys()].sort()).toEqual([...historical.layers.map(l=>l.name),...fleet,...expo].sort());const oldNames=new Set(historical.layers.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(historical.layers[index++].name)!:l);expect(index).toBe(historical.layers.length);},
     ]){const changed=runtimeMap();mutate(changed);await expect(guardMap(changed)).rejects.toThrow(/signature|geometry/i);}
   });
 });

@@ -44,7 +44,7 @@ describe('portable standing caption depth',()=>{
 
 it('has a narrow forward caption authoring operation without weakening scenery refinement',async()=>{const module=await import('../tools/maps/solid-props');expect((module as any).refineStandingCaptions).toBeTypeOf('function');});
 
-import{captionSpecs,renderCaptionMaster,readStandingCaptions,CAPTION_IMAGE}from'../tools/art/standing-captions';
+import{captionSpecs,renderCaptionMaster,readStandingCaptions,captionFamily,CAPTION_IMAGE,EXPO_CAPTION_IMAGE}from'../tools/art/standing-captions';
 import{refineStandingCaptions,assertNativeStandingCaptions}from'../tools/maps/standing-captions';
 import sharp from'sharp';
 it('renders exact twelve caption strings with original pixel glyphs and safe transparent padding',async()=>{
@@ -63,6 +63,14 @@ for(const id of ['constellation-shore','shipyard-beach']as const){
 }
 it.each(['unknown-atlas','collision','offset','localid','textsignature'])('refuses %s forward-caption mutation',kind=>{const epoch=readEpoch5d('constellation-shore'),l=epoch.layout,old=epoch.before,intended=buildMap(l,epoch.catalog).tmj,atlas=intended.tilesets.find(t=>t.name==='standing-captions')!,layer=intended.layers.find(l=>l.name.startsWith('standing-caption-'))as any;if(kind==='unknown-atlas')atlas.image='../assets/sponsors/demo-01.png';if(kind==='collision')atlas.tiles=[{id:0,properties:[{name:'collides',type:'bool',value:true}]}];if(kind==='offset')layer.offsetx=1;if(kind==='localid')layer.data[layer.data.findIndex(Boolean)]++;if(kind==='textsignature')old.layers.find((l:any)=>l.name==='wayfinding-text').objects[0].text.text='changed';expect(()=>refineStandingCaptions(old,intended,l)).toThrow();});
 it.each([NaN,Infinity,0,-1])('rejects malformed standing caption size %s',fontSize=>{const spec=captionSpecs(json('world/layouts/constellation-shore.json'))[0];spec.sign.fontSize=fontSize;expect(()=>renderCaptionMaster([spec])).toThrow(/size/);});
+it('keeps the shared beach sheet closed to the overworld: expo captions belong to their own family and files',()=>{
+ const shared=captionFamily('shipyard-beach');expect(shared).toEqual({id:'shared',image:CAPTION_IMAGE,meta:'art/source/standing-captions.json',svg:'art/source/standing-captions.svg'});expect(captionFamily('constellation-shore')).toBe(shared);
+ expect(captionFamily('overworld')).toEqual({id:'expo',image:EXPO_CAPTION_IMAGE,meta:'art/source/expo-captions.json',svg:'art/source/expo-captions.svg'});
+ const meta=json(shared.meta);expect(meta.specs.map((s:any)=>s.map)).not.toContain('overworld');expect(meta.specs).toHaveLength(12);expect(meta.producerSha256).toBe(createHash('sha256').update(readFileSync('tools/art/standing-captions.ts')).digest('hex'));
+ const forged=structuredClone(meta);forged.specs[0]={...forged.specs[0],map:'overworld'};const cwd=process.cwd(),dir=mkdtempSync(join(tmpdir(),'varcamp-caption-family-'));
+ try{for(const file of [shared.meta,shared.svg,'art/source/hub-nameplates.json','tools/art/standing-captions.ts',CAPTION_IMAGE]){mkdirSync(join(dir,dirname(file)),{recursive:true});writeFileSync(join(dir,file),file===shared.meta?JSON.stringify(forged):readFileSync(file));}process.chdir(dir);expect(()=>readStandingCaptions(json(resolve(cwd,'world/layouts/constellation-shore.json')))).toThrow(/family/);}finally{process.chdir(cwd);rmSync(dir,{recursive:true,force:true});}
+ const expo=readStandingCaptions(json('world/layouts/overworld.json'))!;expect(expo.image).toBe(EXPO_CAPTION_IMAGE);expect(expo.rows).toHaveLength(12);expect(expo.rows.every(r=>r.map==='overworld'&&/^expo-[ns]\d-nameplate$/.test(r.sign.name))).toBe(true);expect([expo.width,expo.height]).toEqual([512,96]);
+});
 it('enforces the approved six-row atlas rather than growing to512square',()=>{const spec=captionSpecs(json('world/layouts/constellation-shore.json'))[0];expect(()=>renderCaptionMaster(Array.from({length:7},(_,i)=>({...spec,map:'fixture',sign:{...spec.sign,name:`row-${i}`,text:'A',width:16}})))).toThrow(/512x192/);});
 
 it('refuses stale caption PNG bytes in an isolated ordinary art fixture',()=>{

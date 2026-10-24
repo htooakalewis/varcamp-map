@@ -1,4 +1,5 @@
-import{cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,symlinkSync,existsSync}from'node:fs';
+import{cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,symlinkSync,existsSync,readdirSync}from'node:fs';
+import{CAPTION_FAMILIES,captionFamily,captionSpecs,renderCaptionMaster}from'../tools/art/standing-captions';
 import{resolve}from'node:path';
 import{tmpdir}from'node:os';
 import{createHash}from'node:crypto';
@@ -20,12 +21,7 @@ import{renderCoastLife}from'../tools/art/coast-life';
 import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion';
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
-import{approvedFleetStaticPins,approvedBirdRecipePins,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
-/** Original expo-plaza booth sticker art (acbae60, 2026-10-24): the only rows added to the closed original
- * registry since the frozen pre-aerial snapshot, registered at their sorted indices with an appended changes note. */
-const approvedBoothStickerPins:Record<string,string>={'art/source/booth-stickers.svg':'839720ee00ad4c94b1358698d89f59ddd867065a55031004c3d7c874908c9c72','assets/tilesets/original/booth-stickers.png':'b319354b5e5b8dbd1b549fa98af6d77280361fff907aee5dc03d4b0c84535241'};
-const approvedBoothStickerRows:readonly[number,string][]=[[0,'art/source/booth-stickers.svg'],[44,'assets/tilesets/original/booth-stickers.png']];
-const approvedBoothStickerChangesNote=' Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied.';
+import{approvedFleetStaticPins,approvedBirdRecipePins,approvedExpoStaticPins,approvedExpoStaticRows,approvedExpoCaptionRows,approvedExpoRegistryNote,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
 const digest=(v:unknown)=>sha(JSON.stringify(stable(v))),read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -50,8 +46,8 @@ it('retains the exact independently reviewed126-path registration epoch and its 
 });
 /** Descriptor authority comes from actual pure producer outputs, never a JSON
  * prefix, current source-registry contents or a caller acceptance flag. */
-async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:Buffer}>>{
- const outputs=new Map<string,{json:unknown}|{bytes:Buffer}>();const add=(path:string,value:unknown)=>{if(outputs.has(path))throw Error('Duplicate native descriptor owner: '+path);outputs.set(path,{json:value});};
+async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:Buffer}|{pixels:Buffer}>>{
+ const outputs=new Map<string,{json:unknown}|{bytes:Buffer}|{pixels:Buffer}>();const add=(path:string,value:unknown)=>{if(outputs.has(path))throw Error('Duplicate native descriptor owner: '+path);outputs.set(path,{json:value});};
  add('art/source/roadster.json',(await renderRoadster()).metadata);const flight=await renderCoastalFlight();add('art/source/coastal-flight.json',flight.metadata);outputs.set(flight.metadata.overlay.image,{bytes:flight.png});
  add('art/source/plaza-generated.json',(await renderPlazaIdentity()).metadata);add('art/source/plaza-garden.json',(await renderPlazaGarden()).metadata);
  add('art/source/plaza-buildings.json',(await renderPlazaBuildings()).metadata);add('art/source/plaza-grass.json',(await renderPlazaGrass()).metadata);add('art/source/plaza-pots.json',(await renderPlazaPots()).metadata);
@@ -60,6 +56,10 @@ async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:B
  add('art/source/coast-life-assets.json',(await renderCoastLifeAssets()).metadata);for(const r of await renderCoastLife()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
  add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
+ // Caption family descriptors are rendered by the current caption producer from the linked layouts; the glyph PNGs themselves stay static registry rows.
+ for(const family of CAPTION_FAMILIES){const specs=readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>read('world/layouts/'+f)).filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(l));if(!specs.length)continue;const master=renderCaptionMaster(specs);add(family.meta,{schemaVersion:1,specs,glyphsSha256:sha(readFileSync('art/source/hub-nameplates.json')),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(master.svg),pngSha256:sha(readFileSync(family.image))});
+  // The expo family (overworld booth nameplates) is fully rendered: its SVG master is the producer's bytes and its glyph PNG the producer's pixels.
+  if(family.id==='expo'){outputs.set(family.svg,{bytes:Buffer.from(master.svg)});outputs.set(family.image,{pixels:await sharp(Buffer.from(master.svg)).ensureAlpha().raw().toBuffer()});}}
  return outputs;
 }
 it('binds every current registry path and preserves static artwork while validating genuine generated descriptors',async()=>{
@@ -67,22 +67,19 @@ it('binds every current registry path and preserves static artwork while validat
  const before=JSON.parse(beforeRaw.toString()),current=read('art/sources.json');
  assertApprovedLayoutSuccessor('speaker-aries',read('world/layouts/speaker-aries.json'));
  const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
- expect(Object.keys(current)).toEqual(Object.keys(before));expect(current.original.files).toHaveLength(198);
+ expect(Object.keys(current)).toEqual(Object.keys(before));expect(current.original.files).toHaveLength(201);const expoPaths=[...Object.keys(approvedExpoStaticPins),...Object.keys(approvedExpoCaptionRows)].sort();expect(expoPaths).toHaveLength(5);
  const generated=await generatedDescriptors();
  for(const id of Object.keys(before)){
-  const{files:oldFiles,...oldMetadata}=before[id],{files:registeredFiles,...currentMetadata}=current[id];
-  expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedBoothStickerChangesNote}:oldMetadata);
-  const stickerRows=registeredFiles.flatMap((r:any,i:number)=>Object.hasOwn(approvedBoothStickerPins,r.path)?[[i,r] as const]:[]);
-  expect(stickerRows.map(([i,r]:any)=>[i,r.path]),id+' exact approved booth sticker rows').toEqual(id==='original'?approvedBoothStickerRows:[]);
-  for(const[,row]of stickerRows){expect(Object.keys(row).sort()).toEqual(['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(readFileSync(row.path)));expect(row.sha256,row.path+' exact independently reviewed booth sticker art').toBe(approvedBoothStickerPins[row.path]);}
-  const currentFiles=registeredFiles.filter((r:any)=>!Object.hasOwn(approvedBoothStickerPins,r.path));
-  expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
+  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote}:oldMetadata);
+  if(id==='original'){expect(currentFiles.map((r:any)=>r.path).filter((p:string)=>!expoPaths.includes(p)),id+' closed path roster/order').toEqual(oldFiles.map((r:any)=>r.path));for(const[path,index]of Object.entries({...approvedExpoStaticRows,...approvedExpoCaptionRows}))expect(currentFiles[index].path,path+' registered expo row position').toBe(path);}
+  else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
   for(let i=0;i<currentFiles.length;i++){
-   const row=currentFiles[i],old=oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
+   const row=currentFiles[i],old=id==='original'?oldFiles.find((r:any)=>r.path===row.path):oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
    const produced=generated.get(row.path);
-   if(produced){if('json'in produced)expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(produced.json);else expect(bytes.equals(produced.bytes),row.path+' genuine native/pose PNG').toBe(true);}
+   if(produced){if('json'in produced)expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(produced.json);else if('pixels'in produced)expect((await sharp(bytes).ensureAlpha().raw().toBuffer()).equals(produced.pixels),row.path+' genuine caption glyph pixels').toBe(true);else expect(bytes.equals(produced.bytes),row.path+' genuine native/pose PNG').toBe(true);}
    else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(approvedBirdRecipePins[row.path]);
    else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);
+   else if(Object.hasOwn(approvedExpoStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed expo sticker artwork').toBe(approvedExpoStaticPins[row.path]);
    else{expect(old,row.path+' no undeclared extension').toBeDefined();expect(row,row.path+' unchanged static/master/source').toEqual(old);}
   }
  }

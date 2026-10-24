@@ -12808,45 +12808,27 @@
       "height": 1
     },
     {
-      "id": "expo-n1-wall-0",
+      "id": "expo-n1-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 41,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n1-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 43,
+      "x": 45,
       "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n1-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 44,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-n1-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 43,
+      "x": 45,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n1-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 41,
       "y": 75,
@@ -12855,7 +12837,7 @@
     },
     {
       "id": "expo-n1-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 43,
       "y": 75,
@@ -12864,7 +12846,7 @@
     },
     {
       "id": "expo-n1-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 45,
       "y": 75,
@@ -12913,40 +12895,31 @@
       "layer": "props",
       "x": 47,
       "y": 73,
-      "width": 2,
+      "width": 1,
       "height": 2
     },
     {
-      "id": "expo-n2-wall-1",
+      "id": "expo-n2-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 49,
+      "x": 51,
       "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n2-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 50,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-n2-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 49,
+      "x": 51,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n2-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 47,
       "y": 75,
@@ -12955,7 +12928,7 @@
     },
     {
       "id": "expo-n2-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 49,
       "y": 75,
@@ -12964,7 +12937,7 @@
     },
     {
       "id": "expo-n2-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 51,
       "y": 75,
@@ -13008,45 +12981,27 @@
       "height": 2
     },
     {
-      "id": "expo-n3-wall-0",
+      "id": "expo-n3-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 53,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n3-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n3-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 56,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-n3-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n3-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 53,
       "y": 75,
@@ -13055,7 +13010,7 @@
     },
     {
       "id": "expo-n3-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 55,
       "y": 75,
@@ -13064,7 +13019,7 @@
     },
     {
       "id": "expo-n3-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 57,
       "y": 75,
@@ -13221,40 +13176,22 @@
       "layer": "props",
       "x": 70,
       "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n4-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 72,
-      "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n4-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 73,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-n4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 72,
+      "x": 70,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n4-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 70,
       "y": 75,
@@ -13263,7 +13200,7 @@
     },
     {
       "id": "expo-n4-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 72,
       "y": 75,
@@ -13272,7 +13209,7 @@
     },
     {
       "id": "expo-n4-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 74,
       "y": 75,
@@ -13321,40 +13258,22 @@
       "layer": "props",
       "x": 76,
       "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n5-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 78,
-      "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n5-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 79,
-      "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-n5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 78,
+      "x": 76,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n5-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 76,
       "y": 75,
@@ -13363,7 +13282,7 @@
     },
     {
       "id": "expo-n5-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 78,
       "y": 75,
@@ -13372,7 +13291,7 @@
     },
     {
       "id": "expo-n5-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 80,
       "y": 75,
@@ -13421,40 +13340,31 @@
       "layer": "props",
       "x": 82,
       "y": 73,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n6-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 84,
-      "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n6-wall-2",
+      "id": "expo-n6-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 85,
+      "x": 86,
       "y": 73,
-      "width": 2,
+      "width": 1,
       "height": 2
     },
     {
       "id": "expo-n6-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 84,
+      "x": 82,
       "y": 73,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n6-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 82,
       "y": 75,
@@ -13463,7 +13373,7 @@
     },
     {
       "id": "expo-n6-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 84,
       "y": 75,
@@ -13472,7 +13382,7 @@
     },
     {
       "id": "expo-n6-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 86,
       "y": 75,
@@ -13669,45 +13579,27 @@
       "height": 1
     },
     {
-      "id": "expo-s1-wall-0",
+      "id": "expo-s1-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 41,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s1-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 43,
+      "x": 45,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s1-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 44,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-s1-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 43,
+      "x": 45,
       "y": 87,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-s1-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 41,
       "y": 86,
@@ -13716,7 +13608,7 @@
     },
     {
       "id": "expo-s1-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 43,
       "y": 86,
@@ -13725,7 +13617,7 @@
     },
     {
       "id": "expo-s1-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 45,
       "y": 86,
@@ -13778,45 +13670,27 @@
       "height": 1
     },
     {
-      "id": "expo-s2-wall-0",
+      "id": "expo-s2-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 47,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s2-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 49,
+      "x": 51,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s2-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 50,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-s2-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 49,
+      "x": 51,
       "y": 87,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-s2-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 47,
       "y": 86,
@@ -13825,7 +13699,7 @@
     },
     {
       "id": "expo-s2-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 49,
       "y": 86,
@@ -13834,7 +13708,7 @@
     },
     {
       "id": "expo-s2-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 51,
       "y": 86,
@@ -13892,40 +13766,31 @@
       "layer": "props",
       "x": 53,
       "y": 87,
-      "width": 2,
+      "width": 1,
       "height": 2
     },
     {
-      "id": "expo-s3-wall-1",
+      "id": "expo-s3-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s3-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 56,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-s3-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 87,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-s3-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-bolt",
       "layer": "props",
       "x": 53,
       "y": 86,
@@ -13934,7 +13799,7 @@
     },
     {
       "id": "expo-s3-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 55,
       "y": 86,
@@ -13943,7 +13808,7 @@
     },
     {
       "id": "expo-s3-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 57,
       "y": 86,
@@ -14145,40 +14010,31 @@
       "layer": "props",
       "x": 70,
       "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s4-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 72,
-      "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s4-wall-2",
+      "id": "expo-s4-wall-4",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 73,
+      "x": 74,
       "y": 87,
-      "width": 2,
+      "width": 1,
       "height": 2
     },
     {
       "id": "expo-s4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 72,
+      "x": 70,
       "y": 87,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-s4-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-pin",
       "layer": "props",
       "x": 70,
       "y": 86,
@@ -14187,7 +14043,7 @@
     },
     {
       "id": "expo-s4-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 72,
       "y": 86,
@@ -14196,7 +14052,7 @@
     },
     {
       "id": "expo-s4-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 74,
       "y": 86,
@@ -14254,40 +14110,22 @@
       "layer": "props",
       "x": 76,
       "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s5-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 78,
-      "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s5-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 79,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
       "id": "expo-s5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 78,
+      "x": 76,
       "y": 87,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-s5-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-smile",
       "layer": "props",
       "x": 76,
       "y": 86,
@@ -14296,7 +14134,7 @@
     },
     {
       "id": "expo-s5-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 78,
       "y": 86,
@@ -14305,7 +14143,7 @@
     },
     {
       "id": "expo-s5-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 80,
       "y": 86,
@@ -14358,45 +14196,8 @@
       "height": 1
     },
     {
-      "id": "expo-s6-wall-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 82,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s6-wall-1",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 84,
-      "y": 87,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s6-wall-2",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 85,
-      "y": 87,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s6-poster",
-      "sprite": "poster-night-city",
-      "layer": "props",
-      "x": 84,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
       "id": "expo-s6-sticker-0",
-      "sprite": "sigil-fire",
+      "sprite": "sticker-leaf",
       "layer": "props",
       "x": 82,
       "y": 86,
@@ -14405,7 +14206,7 @@
     },
     {
       "id": "expo-s6-sticker-1",
-      "sprite": "sigil-earth",
+      "sprite": "sticker-star",
       "layer": "props",
       "x": 84,
       "y": 86,
@@ -14414,7 +14215,7 @@
     },
     {
       "id": "expo-s6-sticker-2",
-      "sprite": "sigil-air",
+      "sprite": "sticker-heart",
       "layer": "props",
       "x": 86,
       "y": 86,
@@ -14456,6 +14257,519 @@
       "y": 82,
       "width": 1,
       "height": 2
+    },
+    {
+      "id": "expo-n1-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 41,
+      "y": 73,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 41,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 42,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 43,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n1-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 44,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 48,
+      "y": 73,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 48,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 49,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 50,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 53,
+      "y": 73,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 53,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 54,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 55,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n3-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 56,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 71,
+      "y": 73,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 71,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 72,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 73,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n4-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 74,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 77,
+      "y": 73,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 77,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 78,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 79,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n5-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 80,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 83,
+      "y": 73,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 83,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 84,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 85,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 41,
+      "y": 87,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 41,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 42,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 43,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 44,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 47,
+      "y": 87,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 47,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 48,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 49,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 50,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 54,
+      "y": 87,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 54,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 55,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 56,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 71,
+      "y": 87,
+      "width": 3,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 71,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 72,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 73,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 77,
+      "y": 87,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 77,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 78,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 79,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s5-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 80,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia",
+      "sprite": "expo-fascia",
+      "layer": "props",
+      "x": 82,
+      "y": 87,
+      "width": 5,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-0",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 82,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 83,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 84,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 85,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-4",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 86,
+      "y": 88,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "aries-zodiac-threshold",
@@ -16284,7 +16598,152 @@
       "height": 6
     }
   ],
-  "signs": [],
+  "signs": [
+    {
+      "name": "expo-n1-nameplate",
+      "text": "DEMO ORBIT",
+      "x": 41,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-n2-nameplate",
+      "text": "DEMO NOVA",
+      "x": 48,
+      "y": 73,
+      "width": 3,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-n3-nameplate",
+      "text": "DEMO ATLAS",
+      "x": 53,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-n4-nameplate",
+      "text": "DEMO VECTOR",
+      "x": 71,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-n5-nameplate",
+      "text": "DEMO LUMEN",
+      "x": 77,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-n6-nameplate",
+      "text": "INFO DESK",
+      "x": 83,
+      "y": 73,
+      "width": 3,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s1-nameplate",
+      "text": "CODE CIRCLE",
+      "x": 41,
+      "y": 87,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s2-nameplate",
+      "text": "DESIGN GUILD",
+      "x": 47,
+      "y": 87,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s3-nameplate",
+      "text": "DATA CLUB",
+      "x": 54,
+      "y": 87,
+      "width": 3,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s4-nameplate",
+      "text": "GAME JAM",
+      "x": 71,
+      "y": 87,
+      "width": 3,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s5-nameplate",
+      "text": "OPEN SOURCE",
+      "x": 77,
+      "y": 87,
+      "width": 4,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    },
+    {
+      "name": "expo-s6-nameplate",
+      "text": "YOUR LOGO HERE",
+      "x": 82,
+      "y": 87,
+      "width": 5,
+      "height": 1,
+      "fontSize": 18,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 1
+    }
+  ],
   "images": [
     {
       "name": "Sponsors / Demo 01",
@@ -16310,6 +16769,96 @@
       "x": 69,
       "y": 67,
       "width": 6,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Demo Orbit Compact",
+      "image": "assets/sponsors/demo-01-compact.png",
+      "x": 41,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Demo Nova Compact",
+      "image": "assets/sponsors/demo-02-compact.png",
+      "x": 47,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Demo Atlas Compact",
+      "image": "assets/sponsors/demo-03-compact.png",
+      "x": 53,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Demo Vector",
+      "image": "assets/sponsors/demo-04.png",
+      "x": 71,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Demo Lumen",
+      "image": "assets/sponsors/demo-05.png",
+      "x": 77,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Code Circle",
+      "image": "assets/sponsors/hub-01.png",
+      "x": 41,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Design Guild",
+      "image": "assets/sponsors/hub-02.png",
+      "x": 47,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Data Club",
+      "image": "assets/sponsors/hub-03.png",
+      "x": 53,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Game Jam",
+      "image": "assets/sponsors/hub-04.png",
+      "x": 71,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / Open Source",
+      "image": "assets/sponsors/hub-05.png",
+      "x": 77,
+      "y": 84,
+      "width": 4,
       "height": 2,
       "standing": false
     },
@@ -18105,11 +18654,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -18705,11 +19254,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -19519,11 +20068,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -19723,11 +20272,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -20129,11 +20678,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -22199,11 +22748,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -22455,11 +23004,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -23539,11 +24088,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -25345,11 +25894,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -27399,11 +27948,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -28813,11 +29362,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -30037,11 +30586,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -30537,11 +31086,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -30881,11 +31430,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -32017,11 +32566,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -32617,11 +33166,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -32869,11 +33418,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -34299,11 +34848,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -34631,11 +35180,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -36937,11 +37486,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -38023,11 +38572,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -38841,11 +39390,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -40215,11 +40764,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -41589,11 +42138,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -42383,11 +42932,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -42583,11 +43132,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -43667,11 +44216,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -44159,11 +44708,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -46315,11 +46864,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -47661,11 +48210,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -49725,11 +50274,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -51293,11 +51842,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -53123,11 +53672,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -53471,11 +54020,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -55311,11 +55860,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -55659,11 +56208,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -56807,11 +57356,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -57865,11 +58414,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -58671,11 +59220,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -60073,11 +60622,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -60421,11 +60970,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -61369,11 +61918,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -62561,11 +63110,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -63875,11 +64424,11 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a"
+            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
           },
           {
             "path": "tools/maps/types.ts",
-            "sha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034"
+            "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
           }
         ]
       }
@@ -63951,6 +64500,123 @@
       "supports": [
         "gate-plaza-return-campus-support-0"
       ]
+    },
+    {
+      "face": "expo-n1-nameplate-fascia",
+      "supports": [
+        "expo-n1-nameplate-fascia-post-0",
+        "expo-n1-nameplate-fascia-post-1",
+        "expo-n1-nameplate-fascia-post-2",
+        "expo-n1-nameplate-fascia-post-3"
+      ],
+      "text": "expo-n1-nameplate"
+    },
+    {
+      "face": "expo-n2-nameplate-fascia",
+      "supports": [
+        "expo-n2-nameplate-fascia-post-0",
+        "expo-n2-nameplate-fascia-post-1",
+        "expo-n2-nameplate-fascia-post-2"
+      ],
+      "text": "expo-n2-nameplate"
+    },
+    {
+      "face": "expo-n3-nameplate-fascia",
+      "supports": [
+        "expo-n3-nameplate-fascia-post-0",
+        "expo-n3-nameplate-fascia-post-1",
+        "expo-n3-nameplate-fascia-post-2",
+        "expo-n3-nameplate-fascia-post-3"
+      ],
+      "text": "expo-n3-nameplate"
+    },
+    {
+      "face": "expo-n4-nameplate-fascia",
+      "supports": [
+        "expo-n4-nameplate-fascia-post-0",
+        "expo-n4-nameplate-fascia-post-1",
+        "expo-n4-nameplate-fascia-post-2",
+        "expo-n4-nameplate-fascia-post-3"
+      ],
+      "text": "expo-n4-nameplate"
+    },
+    {
+      "face": "expo-n5-nameplate-fascia",
+      "supports": [
+        "expo-n5-nameplate-fascia-post-0",
+        "expo-n5-nameplate-fascia-post-1",
+        "expo-n5-nameplate-fascia-post-2",
+        "expo-n5-nameplate-fascia-post-3"
+      ],
+      "text": "expo-n5-nameplate"
+    },
+    {
+      "face": "expo-n6-nameplate-fascia",
+      "supports": [
+        "expo-n6-nameplate-fascia-post-0",
+        "expo-n6-nameplate-fascia-post-1",
+        "expo-n6-nameplate-fascia-post-2"
+      ],
+      "text": "expo-n6-nameplate"
+    },
+    {
+      "face": "expo-s1-nameplate-fascia",
+      "supports": [
+        "expo-s1-nameplate-fascia-post-0",
+        "expo-s1-nameplate-fascia-post-1",
+        "expo-s1-nameplate-fascia-post-2",
+        "expo-s1-nameplate-fascia-post-3"
+      ],
+      "text": "expo-s1-nameplate"
+    },
+    {
+      "face": "expo-s2-nameplate-fascia",
+      "supports": [
+        "expo-s2-nameplate-fascia-post-0",
+        "expo-s2-nameplate-fascia-post-1",
+        "expo-s2-nameplate-fascia-post-2",
+        "expo-s2-nameplate-fascia-post-3"
+      ],
+      "text": "expo-s2-nameplate"
+    },
+    {
+      "face": "expo-s3-nameplate-fascia",
+      "supports": [
+        "expo-s3-nameplate-fascia-post-0",
+        "expo-s3-nameplate-fascia-post-1",
+        "expo-s3-nameplate-fascia-post-2"
+      ],
+      "text": "expo-s3-nameplate"
+    },
+    {
+      "face": "expo-s4-nameplate-fascia",
+      "supports": [
+        "expo-s4-nameplate-fascia-post-0",
+        "expo-s4-nameplate-fascia-post-1",
+        "expo-s4-nameplate-fascia-post-2"
+      ],
+      "text": "expo-s4-nameplate"
+    },
+    {
+      "face": "expo-s5-nameplate-fascia",
+      "supports": [
+        "expo-s5-nameplate-fascia-post-0",
+        "expo-s5-nameplate-fascia-post-1",
+        "expo-s5-nameplate-fascia-post-2",
+        "expo-s5-nameplate-fascia-post-3"
+      ],
+      "text": "expo-s5-nameplate"
+    },
+    {
+      "face": "expo-s6-nameplate-fascia",
+      "supports": [
+        "expo-s6-nameplate-fascia-post-0",
+        "expo-s6-nameplate-fascia-post-1",
+        "expo-s6-nameplate-fascia-post-2",
+        "expo-s6-nameplate-fascia-post-3",
+        "expo-s6-nameplate-fascia-post-4"
+      ],
+      "text": "expo-s6-nameplate"
     }
   ]
 }

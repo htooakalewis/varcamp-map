@@ -25092,5 +25092,37 @@
     "blockingCells": [],
     "level": "belowAvatar",
     "sourceId": "original"
+  },
+  "expo-fascia": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original",
+    "standingRole": "face"
+  },
+  "expo-fascia-post": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original",
+    "upperCells": [],
+    "standingRole": "support"
   }
 }

@@ -589,9 +589,9 @@
       "reasons": [
         "actual readStandingCaptions dependency"
       ],
-      "currentSha256": "ea7bcec7f20e2e441bb8cfd8ec5bf551bf358e5d98eddcf49bd83d8cd68a2e8e",
-      "mode": "current-body-exact-old",
-      "storedPath": "art/source/standing-captions.json"
+      "currentSha256": "238130bbc9a19e441bf98199b9f8a71e6d16343d43271a1eb8cfe90dc6f09b7f",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/art/source/standing-captions.json"
     },
     {
       "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",
@@ -913,9 +913,9 @@
       "reasons": [
         "transitive historical CLI module"
       ],
-      "currentSha256": "1f73bebab6c29ba4e3a2aa4a5621477ff9dd6b2b26add33ae96046aa70836266",
-      "mode": "current-body-exact-old",
-      "storedPath": "tools/art/standing-captions.ts"
+      "currentSha256": "d9f65a8d2728e6c0d71549e3057f337c6c5fea4133a07d347c6526cc01818526",
+      "mode": "already-approved-fixture",
+      "storedPath": "tests/fixtures/published-491-map-epoch/tools/art/standing-captions.ts.txt"
     },
     {
       "sourceCommit": "491f506ebda2ccd904801ee0781e8a6b5f5a0c36",

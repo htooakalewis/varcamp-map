@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "specs": [
+    {
+      "map": "overworld",
+      "face": "expo-n1-nameplate-fascia",
+      "sign": {
+        "name": "expo-n1-nameplate",
+        "text": "DEMO ORBIT",
+        "x": 41,
+        "y": 73,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-n2-nameplate-fascia",
+      "sign": {
+        "name": "expo-n2-nameplate",
+        "text": "DEMO NOVA",
+        "x": 48,
+        "y": 73,
+        "width": 3,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-n3-nameplate-fascia",
+      "sign": {
+        "name": "expo-n3-nameplate",
+        "text": "DEMO ATLAS",
+        "x": 53,
+        "y": 73,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-n4-nameplate-fascia",
+      "sign": {
+        "name": "expo-n4-nameplate",
+        "text": "DEMO VECTOR",
+        "x": 71,
+        "y": 73,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-n5-nameplate-fascia",
+      "sign": {
+        "name": "expo-n5-nameplate",
+        "text": "DEMO LUMEN",
+        "x": 77,
+        "y": 73,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-n6-nameplate-fascia",
+      "sign": {
+        "name": "expo-n6-nameplate",
+        "text": "INFO DESK",
+        "x": 83,
+        "y": 73,
+        "width": 3,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s1-nameplate-fascia",
+      "sign": {
+        "name": "expo-s1-nameplate",
+        "text": "CODE CIRCLE",
+        "x": 41,
+        "y": 87,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s2-nameplate-fascia",
+      "sign": {
+        "name": "expo-s2-nameplate",
+        "text": "DESIGN GUILD",
+        "x": 47,
+        "y": 87,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s3-nameplate-fascia",
+      "sign": {
+        "name": "expo-s3-nameplate",
+        "text": "DATA CLUB",
+        "x": 54,
+        "y": 87,
+        "width": 3,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s4-nameplate-fascia",
+      "sign": {
+        "name": "expo-s4-nameplate",
+        "text": "GAME JAM",
+        "x": 71,
+        "y": 87,
+        "width": 3,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s5-nameplate-fascia",
+      "sign": {
+        "name": "expo-s5-nameplate",
+        "text": "OPEN SOURCE",
+        "x": 77,
+        "y": 87,
+        "width": 4,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    },
+    {
+      "map": "overworld",
+      "face": "expo-s6-nameplate-fascia",
+      "sign": {
+        "name": "expo-s6-nameplate",
+        "text": "YOUR LOGO HERE",
+        "x": 82,
+        "y": 87,
+        "width": 5,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      }
+    }
+  ],
+  "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+  "producerSha256": "d9f65a8d2728e6c0d71549e3057f337c6c5fea4133a07d347c6526cc01818526",
+  "svgSha256": "c2cdb3b3bf9436ceab4e1000183d835ab2a0109039722546fef8958f00a286d0",
+  "pngSha256": "7ed997c529eb793d81384202be3da289e899ebfa256cdd8b0c3b0bd3cb65ce5f"
+}
