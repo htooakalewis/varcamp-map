@@ -22,7 +22,7 @@ describe('final plaza guide physical/depth audit',()=>{
  });
  it('accepts the final exact743-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:743,startupReservedCells:4,nativeCollisionCells:6501,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
+  expect(result).toMatchObject({allowedCells:743,startupReservedCells:4,nativeCollisionCells:6537,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
   expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual(['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`).sort());
   const {provenance,...graph}=d.routes;
   expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('911e70291ddc5304cd76fe3cb2404295364d1b24657ab278e3c2c83306c9ec1e');

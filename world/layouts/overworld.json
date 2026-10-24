@@ -10495,15 +10495,6 @@
       "layer": "terrain"
     },
     {
-      "id": "inner-garden-southwest-lawn",
-      "sprite": "plaza-grass-01",
-      "x": 44,
-      "y": 72,
-      "width": 8,
-      "height": 10,
-      "layer": "terrain"
-    },
-    {
       "id": "inner-garden-southwest-walk",
       "sprite": "path-stone",
       "x": 44,
@@ -10511,60 +10502,6 @@
       "width": 8,
       "height": 2,
       "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-southwest-tree-0",
-      "sprite": "plaza-tree-round",
-      "x": 44,
-      "y": 72,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southwest-tree-1",
-      "sprite": "plaza-tree-round",
-      "x": 50,
-      "y": 72,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southwest-tree-2",
-      "sprite": "plaza-tree-round",
-      "x": 44,
-      "y": 76,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southwest-flower",
-      "sprite": "plaza-flower-bed",
-      "x": 50,
-      "y": 76,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southwest-bench",
-      "sprite": "bench-park",
-      "x": 46,
-      "y": 80,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southwest-tea-table",
-      "sprite": "table-small-wood",
-      "x": 49,
-      "y": 80,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
     },
     {
       "id": "inner-garden-southeast-rim",
@@ -10576,24 +10513,6 @@
       "layer": "terrain"
     },
     {
-      "id": "inner-garden-southeast-lawn-east",
-      "sprite": "plaza-grass-02",
-      "x": 79,
-      "y": 72,
-      "width": 7,
-      "height": 2,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-southeast-lawn-south",
-      "sprite": "plaza-grass-01",
-      "x": 78,
-      "y": 74,
-      "width": 8,
-      "height": 8,
-      "layer": "terrain"
-    },
-    {
       "id": "inner-garden-southeast-walk",
       "sprite": "path-stone",
       "x": 78,
@@ -10601,60 +10520,6 @@
       "width": 8,
       "height": 2,
       "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-southeast-tree-0",
-      "sprite": "plaza-tree-flowering",
-      "x": 79,
-      "y": 72,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southeast-tree-1",
-      "sprite": "plaza-tree-flowering",
-      "x": 84,
-      "y": 72,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southeast-tree-2",
-      "sprite": "plaza-tree-flowering",
-      "x": 78,
-      "y": 76,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southeast-flower",
-      "sprite": "plaza-flower-bed",
-      "x": 84,
-      "y": 76,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southeast-bench",
-      "sprite": "bench-park",
-      "x": 80,
-      "y": 80,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-southeast-tea-table",
-      "sprite": "table-small-wood",
-      "x": 83,
-      "y": 80,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
     },
     {
       "id": "solar-return-court",
@@ -10936,33 +10801,6 @@
       "layer": "terrain"
     },
     {
-      "id": "water-garden-west",
-      "sprite": "water-blue",
-      "x": 54,
-      "y": 77,
-      "width": 4,
-      "height": 3,
-      "layer": "terrain"
-    },
-    {
-      "id": "water-garden-west-lily",
-      "sprite": "lily-pad",
-      "x": 55,
-      "y": 78,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "water-garden-west-bench",
-      "sprite": "bench-park",
-      "x": 55,
-      "y": 82,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "water-garden-west-terrace",
       "sprite": "path-stone",
       "x": 53,
@@ -10979,33 +10817,6 @@
       "width": 6,
       "height": 5,
       "layer": "terrain"
-    },
-    {
-      "id": "water-garden-east",
-      "sprite": "water-blue",
-      "x": 71,
-      "y": 77,
-      "width": 4,
-      "height": 3,
-      "layer": "terrain"
-    },
-    {
-      "id": "water-garden-east-lily",
-      "sprite": "lily-pad",
-      "x": 72,
-      "y": 78,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "water-garden-east-bench",
-      "sprite": "bench-park",
-      "x": 72,
-      "y": 82,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
     },
     {
       "id": "water-garden-east-terrace",
@@ -12763,6 +12574,737 @@
       "layer": "props"
     },
     {
+      "id": "expo-a1-floor-0",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 40,
+      "y": 73,
+      "width": 6,
+      "height": 5
+    },
+    {
+      "id": "expo-a1-floor-1",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 41,
+      "y": 78,
+      "width": 5,
+      "height": 2
+    },
+    {
+      "id": "expo-a1-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 39,
+      "y": 73,
+      "width": 7,
+      "height": 2
+    },
+    {
+      "id": "expo-a1-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 41,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a1-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 41,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a1-palm",
+      "sprite": "plant-palm",
+      "layer": "props",
+      "x": 43,
+      "y": 75,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "id": "expo-a1-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 40,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a1-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 40,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a1-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 40,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a2-floor-0",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 46,
+      "y": 73,
+      "width": 6,
+      "height": 7
+    },
+    {
+      "id": "expo-a2-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 73,
+      "width": 6,
+      "height": 2
+    },
+    {
+      "id": "expo-a2-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 75,
+      "width": 1,
+      "height": 4
+    },
+    {
+      "id": "expo-a2-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 47,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a2-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 47,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a2-sticker-0",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 49,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a2-sticker-1",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 50,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a2-sticker-2",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 51,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a3-floor-0",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 53,
+      "y": 73,
+      "width": 5,
+      "height": 7
+    },
+    {
+      "id": "expo-a3-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 56,
+      "y": 73,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a3-glass-0",
+      "sprite": "glass-partition",
+      "layer": "props",
+      "x": 53,
+      "y": 73,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "expo-a3-counter",
+      "sprite": "table-workshop",
+      "layer": "props",
+      "x": 53,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a3-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 53,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a3-sticker-0",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 55,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a3-sticker-1",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 56,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a3-sticker-2",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 57,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a4-floor-0",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 71,
+      "y": 74,
+      "width": 5,
+      "height": 6
+    },
+    {
+      "id": "expo-a4-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 74,
+      "y": 74,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a4-glass-0",
+      "sprite": "glass-partition",
+      "layer": "props",
+      "x": 71,
+      "y": 74,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "expo-a4-counter",
+      "sprite": "table-workshop",
+      "layer": "props",
+      "x": 71,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a4-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 71,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a4-sticker-0",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 74,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a4-sticker-1",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 75,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a4-sticker-2",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 75,
+      "y": 77,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a5-floor-0",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 77,
+      "y": 74,
+      "width": 7,
+      "height": 6
+    },
+    {
+      "id": "expo-a5-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 77,
+      "y": 74,
+      "width": 7,
+      "height": 2
+    },
+    {
+      "id": "expo-a5-wall-1",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 83,
+      "y": 76,
+      "width": 1,
+      "height": 4
+    },
+    {
+      "id": "expo-a5-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 77,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a5-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 77,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a5-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 80,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a5-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 81,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a5-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 82,
+      "y": 76,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a6-floor-0",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 84,
+      "y": 73,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "expo-a6-floor-1",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 84,
+      "y": 76,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "expo-a6-floor-2",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 84,
+      "y": 78,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "expo-a6-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 84,
+      "y": 73,
+      "width": 5,
+      "height": 2
+    },
+    {
+      "id": "expo-a6-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 84,
+      "y": 78,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-a6-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 84,
+      "y": 76,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-a6-sticker-0",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 86,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a6-sticker-1",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 87,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-a6-sticker-2",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 88,
+      "y": 75,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b1-floor-0",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 46,
+      "y": 82,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "expo-b1-floor-1",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 47,
+      "y": 85,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-b1-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-b1-sill-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "renderRole": "cutaway",
+      "x": 47,
+      "y": 84,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "expo-b1-counter",
+      "sprite": "table-workshop",
+      "layer": "props",
+      "x": 49,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-b1-sticker-0",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 47,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b1-sticker-1",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 48,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b1-sticker-2",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 47,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b2-floor-0",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 52,
+      "y": 82,
+      "width": 4,
+      "height": 7
+    },
+    {
+      "id": "expo-b2-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 55,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-b2-glass-0",
+      "sprite": "glass-partition",
+      "layer": "props",
+      "x": 52,
+      "y": 87,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "id": "expo-b2-counter",
+      "sprite": "table-workshop",
+      "layer": "props",
+      "x": 52,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-b2-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 52,
+      "y": 84,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-b2-sticker-0",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 55,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b2-sticker-1",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 55,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b2-sticker-2",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 55,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b3-floor-0",
+      "sprite": "floor-cosmic",
+      "layer": "terrain",
+      "x": 71,
+      "y": 82,
+      "width": 5,
+      "height": 7
+    },
+    {
+      "id": "expo-b3-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 71,
+      "y": 87,
+      "width": 5,
+      "height": 2
+    },
+    {
+      "id": "expo-b3-counter",
+      "sprite": "desk-cream",
+      "layer": "props",
+      "x": 71,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-b3-chair",
+      "sprite": "chair-presentation",
+      "layer": "props",
+      "x": 71,
+      "y": 84,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-b3-sticker-0",
+      "sprite": "sigil-fire",
+      "layer": "props",
+      "x": 75,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b3-sticker-1",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 75,
+      "y": 85,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b3-sticker-2",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 75,
+      "y": 86,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b4-floor-0",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 77,
+      "y": 82,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "expo-b4-floor-1",
+      "sprite": "floor-wood",
+      "layer": "terrain",
+      "x": 77,
+      "y": 85,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "id": "expo-b4-wall-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 81,
+      "y": 82,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-b4-sill-0",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "renderRole": "cutaway",
+      "x": 77,
+      "y": 84,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "id": "expo-b4-counter",
+      "sprite": "table-workshop",
+      "layer": "props",
+      "x": 77,
+      "y": 82,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "id": "expo-b4-sticker-0",
+      "sprite": "sigil-earth",
+      "layer": "props",
+      "x": 79,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b4-sticker-1",
+      "sprite": "sigil-air",
+      "layer": "props",
+      "x": 80,
+      "y": 84,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-b4-sticker-2",
+      "sprite": "sigil-water",
+      "layer": "props",
+      "x": 80,
+      "y": 83,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "aries-zodiac-threshold",
       "sprite": "zodiac-emblem-aries",
       "x": 100,
@@ -14054,114 +14596,6 @@
       "sprite": "plaza-mushrooms",
       "x": 84,
       "y": 53,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-0",
-      "sprite": "plaza-tree-round",
-      "x": 47,
-      "y": 75,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-1",
-      "sprite": "plaza-shrub",
-      "x": 47,
-      "y": 74,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-2",
-      "sprite": "plaza-lavender",
-      "x": 47,
-      "y": 73,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-3",
-      "sprite": "plaza-fern",
-      "x": 46,
-      "y": 75,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-4",
-      "sprite": "plaza-grass-tuft",
-      "x": 46,
-      "y": 74,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-2-5",
-      "sprite": "plaza-clover",
-      "x": 46,
-      "y": 76,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-0",
-      "sprite": "plaza-tree-birch",
-      "x": 82,
-      "y": 75,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-1",
-      "sprite": "plaza-shrub",
-      "x": 82,
-      "y": 74,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-2",
-      "sprite": "plaza-blueberry",
-      "x": 82,
-      "y": 73,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-3",
-      "sprite": "plaza-fern",
-      "x": 81,
-      "y": 75,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-4",
-      "sprite": "plaza-grass-tuft",
-      "x": 81,
-      "y": 74,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-3-5",
-      "sprite": "plaza-clover",
-      "x": 81,
-      "y": 76,
       "width": 1,
       "height": 1,
       "layer": "props"

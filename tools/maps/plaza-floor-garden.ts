@@ -1,6 +1,7 @@
 import {isDeepStrictEqual} from 'node:util';
 import {SIGN_IDS} from '../../src/world/catalog';
 import routes from '../../src/bots/lyra-routes.json';
+import {EXPO_PLAZA,isExpoPlaza} from './expo-plaza';
 import type {MapLayout,Placement,TileRect} from './types';
 const cells=(r:TileRect)=>Array.from({length:r.width*r.height},(_,i)=>[r.x+i%r.width,r.y+Math.floor(i/r.width)] as const);
 /** One deterministic forward source operation. Entrances, activities and room labels are never redrawn. */
@@ -29,7 +30,10 @@ export function refinePlazaFloorGarden(original:MapLayout):MapLayout{
  for(let i=0;i<8;i++){const a=i*Math.PI/4;groups.push({id:`outer-${i}`,x:Math.round(64+53*Math.cos(a)),y:Math.round(64+53*Math.sin(a)),radius:9});}
  for(const [i,[x,y]] of [[47,52],[82,52],[47,75],[82,75]].entries())groups.push({id:`inner-${i}`,x,y,radius:8});
  const dimensions:Record<string,[number,number]>={'plaza-tree-birch':[2,3],'plaza-tree-round':[2,3],'plaza-shrub':[2,1],'plaza-blueberry':[2,1],'plaza-lavender':[2,1],'plaza-fern':[1,1],'plaza-hosta':[1,1],'plaza-grass-tuft':[1,1],'plaza-clover':[1,1],'plaza-moss-stones':[1,1],'plaza-mushrooms':[1,1]};
+ // The expo plaza paved the two south inner gardens; after that closed operation they are not regrown.
+ const retired=isExpoPlaza(l)?new Set(EXPO_PLAZA.retiredGardens):new Set<string>();
  for(const [gi,g] of groups.entries()){
+  if(retired.has(g.id))continue;
   const requested=[gi%2?'plaza-tree-birch':'plaza-tree-round','plaza-shrub',gi%2?'plaza-blueberry':'plaza-lavender','plaza-fern','plaza-grass-tuft',gi%3?'plaza-clover':'plaza-mushrooms'];
   const candidates=[];for(let y=Math.max(2,g.y-g.radius);y<Math.min(125,g.y+g.radius);y++)for(let x=Math.max(2,g.x-g.radius);x<Math.min(125,g.x+g.radius);x++)candidates.push({x,y,d:(x-g.x)**2+(y-g.y)**2});
   candidates.sort((a,b)=>a.d-b.d||a.y-b.y||a.x-b.x);

@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {refinePlazaFloorGarden} from '../../tools/maps/plaza-floor-garden';
 import {refineNativePlaza} from '../../tools/maps/plaza-native';
+import {EXPO_PLAZA,applyExpoPlaza,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
 import {plazaGardenSprites} from '../../tools/art/plaza-garden';
 import {renderRoadster} from '../../tools/art/roadster';
 import {renderPlazaDrones} from '../../tools/art/plaza-drones';
@@ -85,6 +86,24 @@ export function retirePlazaProps(layout:MapLayout,native:TiledMap,catalog:TileCa
  return{layout:l,native:map};
 }
 export const retireWelcomePlazaProps=(layout:MapLayout,native:TiledMap,catalog:TileCatalog)=>retirePlazaProps(layout,native,catalog,WELCOME_PLAZA_RETIREMENT);
+/** Approved expo plaza, applied after the welcome-sign retirement: the two south grove
+ * gardens, both ponds, three lawn strips and their furniture (33 placements, five of
+ * them terrain) become ten booths (81 placements) on atlases the native context already reserves.
+ * The producer is pinned; the native delta is exactly the projection of the source
+ * delta, with the atlas and layer rosters unchanged. */
+export const EXPO_PLAZA_PRODUCER_SHA256='6e93753023de3c0507ab54ce475c5090010c1adb440bbca82952dfbcb66e43e9';
+export function applyExpoPlazaSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
+ assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),EXPO_PLAZA_PRODUCER_SHA256,'Expo plaza producer changed');
+ assert.equal(EXPO_PLAZA.retiredPlacements.length,33);assert.equal(expoPlacements().length,81);
+ const l=applyExpoPlaza(layout);
+ assert.equal(l.placements.length,layout.placements.length-33+81);
+ const map=expoPlazaNative(native,l,catalog);
+ assert.deepEqual(map.tilesets,native.tilesets,'Expo must not change the reserved atlas roster');
+ assert.deepEqual(map.layers.map(x=>x.name),native.layers.map(x=>x.name),'Expo must not change the native layer roster');
+ assert.equal(map.nextlayerid,native.nextlayerid);
+ assertNativeSourceProjection(map,buildMap(l,catalog).tmj);
+ return{layout:l,native:map};
+}
 /** One shared actual forward producer transaction for groves/redraw tests. */
 export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  for(const [id,s] of Object.entries(plazaGardenSprites()))assert.deepEqual(catalog[id],s,`Original grounded tree/canopy contract ${id}`);
@@ -102,8 +121,8 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
   const manual=appendReviewedFleetNative(base,fleet.aircraft);
   assert.deepEqual(reconcileNativeProjection(legacy,buildMap(l,catalog).tmj),manual,'Production current forward transaction differs from independent three-append native oracle');
   assert.ok(readFileSync('maps/overworld.wam').equals(approvedHistoricalRaw('maps/overworld.wam')),'Fleet must retain all organizer controls');
-  const plaza=retireWelcomePlazaProps(l,manual,catalog);
-  return retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
+  const plaza=retireWelcomePlazaProps(l,manual,catalog),signs=retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
+  return applyExpoPlazaSuccessor(signs.layout,signs.native,catalog);
  })();
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{

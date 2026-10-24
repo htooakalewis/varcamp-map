@@ -25,7 +25,9 @@ describe('landscaped zodiac campus', () => {
       expect(l.placements.some(p=>p.sprite==='plaza-flower-bed'&&intersects(p,frame!))).toBe(true);
       expect(l.placements.some(p=>['plaza-tree-round','plaza-tree-evergreen','plaza-tree-flowering'].includes(p.sprite)&&intersects(p,frame!))).toBe(true);
     }
-    const ponds=l.placements.filter(p=>p.sprite==='water-blue'&&p.width<l.width);expect(ponds).toHaveLength(2);
+    // The expo plaza paved both former water gardens; no bounded pond remains on the campus.
+    const ponds=l.placements.filter(p=>p.sprite==='water-blue'&&p.width<l.width);expect(ponds).toHaveLength(0);
+    expect(l.placements.filter(p=>/^water-garden-(?:west|east)(?:-lily|-bench)?$/.test(p.id))).toEqual([]);
     for(const pond of ponds){expect(l.placements.some(p=>p.sprite==='floor-inlay'&&p.x<pond.x&&p.y<pond.y&&p.x+p.width>pond.x+pond.width&&p.y+p.height>pond.y+pond.height)).toBe(true);expect(l.placements.some(p=>p.sprite==='lily-pad'&&intersects(p,pond))).toBe(true);}
   });
   it('keeps planted beds and ponds separate from spawns, exit triggers and interactive areas',()=>{

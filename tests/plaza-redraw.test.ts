@@ -36,7 +36,7 @@ it('is idempotent and retains every real native semantic layer and reachable gui
  for(const p of [...l.entries,...l.exits,...l.areas])for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)expect(seen.has(y*128+x),p.name).toBe(true);
  const floor=native.layers.findIndex(p=>p.name==='floorLayer');
  for(const image of l.images!)expect(native.layers.findIndex(p=>p.name===image.name),image.name).toBeLessThan(floor);
- expect(l.placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(144);
+ expect(l.placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(132);
 },20000); // first successor call renders roadster/drone/fleet art and runs the projection gate
 
 it('retains all twelve doorway footprints while consuming original generated pavilion and grass artwork',()=>{

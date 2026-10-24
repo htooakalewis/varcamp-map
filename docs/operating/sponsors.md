@@ -13,6 +13,10 @@ The arrival uses three independent visible Tiled tile layers. Each complete PNG 
 3. Update the corresponding record in `art/sponsors.json` with the replacement owner, permission and applicable license. CC0 covers the original fictional marks only; it does not grant rights to replacement branding.
 4. Run `npm run maps:build` to validate maps and refresh previews, then `npm run buildmap` to create the release. Review the arrival preview at native scale and check the PNG in `dist/assets/sponsors/`. The release includes the bytes currently on disk, with no content hash freeze. Changing logos needs no code changes or atlas rebuild.
 
+## Expo booths
+
+The expo plaza south of the welcome court (overworld rows 73-88, columns 39-88; `tools/maps/expo-plaza.ts`) has ten booths in two rows facing the shared aisle. Row A, left to right: A1 DEMO ORBIT, A2 DEMO NOVA, A3 CODE CIRCLE (hub), A4 DESIGN GUILD (hub), A5 DEMO ATLAS, A6 DEMO VECTOR. Row B: B1 DATA CLUB (hub), B2 GAME JAM (hub), B3 DEMO LUMEN, B4 OPEN SOURCE (hub). Sponsor booths have the deep-blue carpet, hub booths the wood floor; the audited guide corridors are the open gaps between booths. The mark slots per booth are recorded in `art/sponsors.json`: A1 `demo-01.png` and A5 `demo-03.png` are the two 6×2 (192×64) slots, every other booth takes a 4×2 (128×64) mark (`demo-02-compact.png`, `hub-01.png`, `hub-02.png`, `demo-04.png`, `hub-03.png`, `hub-04.png`, `demo-05.png`, `hub-05.png`). Those marks are not yet placed: the three 6×2 inlays stay on the arrival floor, and placing a mark in a booth needs a reviewed native epoch, because every booth mark is a new embedded tileset and the current overworld atlas roster is closed by `art/source/native-ownership-context.json`, while `tools/maps/builder.ts` accepts only the 6×2 footprint; both files are provenance inputs of the animated overlays across the world. Until that epoch the booths carry no logo or caption; the small floor runes are stand-ins for the sticker sprites in `assets/tilesets/original/booth-stickers.png`, which need the same epoch.
+
 Map authors use an optional `images` array in the layout, for example:
 
 ```json

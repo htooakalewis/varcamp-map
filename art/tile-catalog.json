@@ -24962,5 +24962,77 @@
         1
       ]
     ]
+  },
+  "sticker-star": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "sticker-heart": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "sticker-bolt": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 2,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "sticker-pin": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 3,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "sticker-smile": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "sticker-leaf": {
+    "sheet": "assets/tilesets/original/booth-stickers.png",
+    "rect": {
+      "x": 5,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
   }
 }
