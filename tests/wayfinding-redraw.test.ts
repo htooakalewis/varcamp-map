@@ -160,7 +160,9 @@ describe('audience wayfinding in exported Tiled maps',()=>{
     const returnRune=s.name==='plaza-wayfinding'&&p.id==='door-sigil'&&p.sprite==='rune-threshold';
     const staffWall=['solar-hall','lunar-hall'].includes(l.id)&&s.name==='staff-label'&&p.id==='staff-north-wall'&&p.sprite==='wall-navy';
     const coastalBoard=['shipyard-beach','constellation-shore','fa-ship'].includes(l.id)&&p.id===`wood-sign-${s.name}`;
-    if(!facade&&!returnRune&&!staffWall&&!coastalBoard)expect(overlap(s,p),`${l.id}/${s.name} obscures ${p.id}`).toBe(false);
+    // Expo booth nameplates are standing captions whose text is rendered onto their own navy fascia (the back-wall cap row).
+    const boothFascia=l.id==='overworld'&&/^expo-[ns]\d-nameplate$/.test(s.name)&&p.id===`${s.name}-fascia`&&p.sprite==='expo-fascia';
+    if(!facade&&!returnRune&&!staffWall&&!coastalBoard&&!boothFascia)expect(overlap(s,p),`${l.id}/${s.name} obscures ${p.id}`).toBe(false);
    }
   }
  });

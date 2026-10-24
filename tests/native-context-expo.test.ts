@@ -12,25 +12,36 @@ const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const fleetNames=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
 const markNames=EXPO_MARK_IDS.map(id=>EXPO_MARKS[id].name);
 const member=(t:TiledTileset)=>markNames.includes(t.name??'')||t.image===EXPO_STICKER_ATLAS.image||t.image===EXPO_CAPTION_ATLAS.image;
-/** Synthetic current caption atlas body: the ownership context judges tileset identity, not files. */
-const captionAtlas=(firstgid:number):TiledTileset=>({firstgid,name:'standing-captions',tilewidth:32,tileheight:32,columns:16,tilecount:48,image:EXPO_CAPTION_ATLAS.image,imagewidth:512,imageheight:96,properties:[{name:'tilesetCopyright',type:'string',value:'Original VarCamp pixel glyph captions; CC0-1.0'},{name:'captionAtlasSha256',type:'string',value:'a'.repeat(64)}]});
-let catalog:ReturnType<typeof loadTileCatalog>,layout:MapLayout,current:TiledMap,historical:TiledMap,source:TiledMap,expoLayout:MapLayout,expoSource:TiledMap,expoNative:TiledMap;
+const nameplate=(id:string)=>/^expo-[ns]\d-nameplate/.test(id);
+let catalog:ReturnType<typeof loadTileCatalog>,layout:MapLayout,current:TiledMap,historical:TiledMap,source:TiledMap,pre:TiledMap,expoLayout:MapLayout,expoSource:TiledMap,expoNative:TiledMap;
 beforeAll(()=>{
  catalog=loadTileCatalog();layout=read('world/layouts/overworld.json');current=read('maps/overworld.tmj');source=buildMap(layout,catalog).tmj;
  historical=structuredClone(current);historical.tilesets=structuredClone(registered.maps.overworld.atlases);
- expoLayout=structuredClone(layout);expoLayout.images!.push(...EXPO_MARK_IDS.map((id,i)=>expoLogoImage(id,2+(i%6)*7,100+Math.floor(i/6)*3)));expoLayout.placements.push(expoSticker('expo-test-sticker','sticker-star',3,110));
- expoSource=buildMap(expoLayout,catalog).tmj;expoSource.tilesets.push(captionAtlas(Math.max(...expoSource.tilesets.map(t=>t.firstgid+t.tilecount!))));
- expoNative=structuredClone(current);let next=11602;
+ // The expo hall placed ten marks, the sticker sheet and the caption atlas. The policy scenario below
+ // starts from the exact pre-expo context (registered + fleet, no member, no hall panel/caption layer)
+ // and a source without the hall's expo entries, then admits all twelve marks synthetically.
+ const hallLayers=new Set([...layout.images!.filter(i=>markNames.includes(i.name)).map(i=>i.name),...(layout.standingSigns??[]).filter(s=>nameplate(s.face)).map(s=>'standing-caption-'+s.text)]);
+ pre=structuredClone(current);pre.tilesets=current.tilesets.filter(t=>!member(t));pre.layers=current.layers.filter(l=>!hallLayers.has(l.name));
+ // The twelve hall nameplates stay linked (their fascia posts are part of the collision mask the
+ // pre-expo native keeps), so the source carries the real overworld caption atlas as its last tileset.
+ expoLayout=structuredClone(layout);expoLayout.images=layout.images!.filter(i=>!markNames.includes(i.name));expoLayout.placements=layout.placements.filter(p=>!p.sprite.startsWith('sticker-'));
+ expoLayout.images.push(...EXPO_MARK_IDS.map((id,i)=>expoLogoImage(id,2+(i%6)*7,100+Math.floor(i/6)*3)));expoLayout.placements.push(expoSticker('expo-test-sticker','sticker-star',3,110));
+ expoSource=buildMap(expoLayout,catalog).tmj;expect(expoSource.tilesets.at(-1)).toMatchObject({name:'standing-captions',image:EXPO_CAPTION_ATLAS.image,tilecount:48,imageheight:96});
+ expoNative=structuredClone(pre);let next=11602;
  for(const t of expoSource.tilesets.filter(member)){expoNative.tilesets.push({...structuredClone(t),firstgid:next,name:/^art-\d+$/.test(t.name!)?EXPO_STICKER_ATLAS.name:t.name});next+=t.tilecount!;}
 });
-it('the current plaza carries every registered and fleet reservation and no expo atlas yet',()=>{
+it('the current plaza carries every registered and fleet reservation and, after them, the expo hall family from GID 11602',()=>{
  expect(()=>assertNativeOwnershipContext(current,source)).not.toThrow();
- expect(current.tilesets).toHaveLength(68);expect(Math.max(...current.tilesets.map(t=>t.firstgid+t.tilecount!))).toBe(11602);
- expect(current.tilesets.some(member)).toBe(false);expect(source.tilesets.some(member)).toBe(false);
+ expect(pre.tilesets).toHaveLength(68);expect(Math.max(...pre.tilesets.map(t=>t.firstgid+t.tilecount!))).toBe(11602);expect(pre.tilesets.some(member)).toBe(false);
+ expect(current.tilesets).toHaveLength(80);expect(current.tilesets.slice(0,68)).toEqual(pre.tilesets);expect(current.tilesets[68].firstgid).toBe(11602);
+ const hallMarks=layout.images!.filter(i=>markNames.includes(i.name)).map(i=>i.name);expect(hallMarks).toHaveLength(10);
+ expect(current.tilesets.slice(68).map(t=>t.name)).toEqual(['booth-stickers',...hallMarks,'standing-captions']);
+ expect(current.tilesets.at(-1)).toMatchObject({image:EXPO_CAPTION_ATLAS.image,columns:16,imagewidth:512});
+ expect(expoSource.tilesets.filter(member)).toHaveLength(14);
 });
 it('admits exactly the registered expo family after the fleet, in source order, with its exact geometry',()=>{
  expect(()=>assertNativeOwnershipContext(expoNative,expoSource)).not.toThrow();
- expect(expoNative.tilesets.slice(0,68)).toEqual(current.tilesets);
+ expect(expoNative.tilesets.slice(0,68)).toEqual(pre.tilesets);
  const added=expoNative.tilesets.slice(68);
  expect(added.map(t=>t.name)).toEqual(['booth-stickers',...markNames,'standing-captions']);
  expect(added.map(t=>t.firstgid)).toEqual([11602,11608,11620,11632,11640,11648,11656,11664,11672,11680,11688,11696,11704,11712]);
@@ -39,16 +50,18 @@ it('admits exactly the registered expo family after the fleet, in source order, 
  expect(added.at(-1)).toMatchObject({image:EXPO_CAPTION_ATLAS.image,columns:16,tilecount:48,imageheight:96});
 });
 it('the production author transaction admits the expo marks and sticker sheet from the exact pre-expo current plaza',()=>{
- const sourceWithoutCaptions=structuredClone(expoSource);sourceWithoutCaptions.tilesets.pop();
- const result=reconcileNativeProjection(current,sourceWithoutCaptions);
+ const sourceWithoutCaptions=structuredClone(expoSource);sourceWithoutCaptions.tilesets.pop();sourceWithoutCaptions.layers=sourceWithoutCaptions.layers.filter(l=>!l.name.startsWith('standing-caption-'));
+ const result=reconcileNativeProjection(pre,sourceWithoutCaptions);
  expect(result.tilesets).toEqual(expoNative.tilesets.slice(0,-1));
  expect(result.layers.filter(l=>markNames.includes(l.name))).toHaveLength(12);
  expect(()=>assertNativeOwnershipContext(result,sourceWithoutCaptions)).not.toThrow();
 });
 it('author may enter the exact historical, the exact pre-expo current or the already-expo context, never a partial one',()=>{
  expect(()=>assertNativeAuthoringContext(historical,expoSource)).not.toThrow();
- expect(()=>assertNativeAuthoringContext(current,expoSource)).not.toThrow();
+ expect(()=>assertNativeAuthoringContext(pre,expoSource)).not.toThrow();
  expect(()=>assertNativeAuthoringContext(expoNative,expoSource)).not.toThrow();
+ expect(()=>assertNativeAuthoringContext(current,source)).not.toThrow();
+ expect(()=>assertNativeAuthoringContext(current,expoSource)).toThrow(/native context/i);// the hall context is not the twelve-mark closure
  const partial=structuredClone(expoNative);partial.tilesets.pop();
  expect(()=>assertNativeAuthoringContext(partial,expoSource)).toThrow(/native context/i);
  const unfleeted=structuredClone(historical);unfleeted.tilesets.push(...expoNative.tilesets.slice(68));
@@ -80,7 +93,7 @@ it.each(['duplicate-mark','mark-image','mark-geometry','mark-panel-flag','rename
  if(kind==='caption-columns'){captions.columns=8;captions.imagewidth=256;captions.tilecount=24;}
  if(kind==='caption-hash')captions.properties=captions.properties!.filter(p=>p.name!=='captionAtlasSha256');
  expect(()=>assertNativeOwnershipContext(expoNative,s)).toThrow(/native context/i);
- expect(()=>assertNativeAuthoringContext(current,s)).toThrow(/native context/i);
+ expect(()=>assertNativeAuthoringContext(pre,s)).toThrow(/native context/i);
  expect(()=>assertNativeAuthoringContext(historical,s)).toThrow(/native context/i);
 });
 it('expo closure cannot be selected on another current map identity',()=>{

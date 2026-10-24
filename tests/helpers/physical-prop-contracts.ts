@@ -46,17 +46,24 @@ export function assertRaisedSponsorFootprints(layout:MapLayout,catalog:TileCatal
  }
 }
 export function sponsorSupportIds(layout:MapLayout,catalog:TileCatalog):Set<string>{
- validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,4,'Exactly three sponsors plus event floor identity');
+ validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,14,'Exactly three sponsors, ten expo booth logos and the event floor identity');
  assert.ok(layout.images!.every(i=>i.standing===false),'Every current logo is an explicit floor inlay');
  assert.ok(!layout.standingSigns?.some(s=>s.faceKind==='image'||s.face==='varcamp-nameplate'),'Floor logos have no standing assemblies');
  assert.ok(!layout.placements.some(p=>/^standing-sponsor-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id)),'Retired logo posts/brand board remain');
  return new Set();
 }
+/** The ten expo booth logos: registered 4x2 marks on the carpet reserve of the stalls n1-n5 and
+ * s1-s6 minus s6 (tools/maps/expo-plaza.ts); the INFO DESK and YOUR LOGO HERE stalls have none. */
+export const expoBoothLogos=[
+ ['Expo / Demo Orbit Compact','demo-01-compact',41,76],['Expo / Demo Nova Compact','demo-02-compact',47,76],['Expo / Demo Atlas Compact','demo-03-compact',53,76],['Expo / Demo Vector','demo-04',71,76],['Expo / Demo Lumen','demo-05',77,76],
+ ['Expo / Code Circle','hub-01',41,84],['Expo / Design Guild','hub-02',47,84],['Expo / Data Club','hub-03',53,84],['Expo / Game Jam','hub-04',71,84],['Expo / Open Source','hub-05',77,84],
+].map(([name,file,x,y])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:4,height:2,standing:false}));
 /** Current floor representation has no physical posts; every actual cell must remain visible and connected. */
 export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map:TiledMap):void{
  sponsorSupportIds(layout,catalog);
  const images=layout.images!,expected=[
   ...[0,1,2].map(i=>({name:`Sponsors / Demo 0${i+1}`,image:`assets/sponsors/demo-0${i+1}.png`,x:53+i*8,y:67,width:6,height:2,standing:false})),
+  ...expoBoothLogos,
   {name:'VarCamp 2026 Floor',image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false},
  ];assert.deepEqual(images,expected,'Current floor identity roster/position changed');
  const mask=map.layers.find(l=>l.name==='physical-collisions') as TileLayer;assert.ok(mask?.type==='tilelayer');
@@ -67,7 +74,7 @@ export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map
  for(const image of images){
   for(const p of layout.placements.filter(p=>!['terrain','atmosphere'].includes(p.layer)))assert.ok(!(p.x<image.x+image.width&&p.x+p.width>image.x&&p.y<image.y+image.height&&p.y+p.height>image.y),`${image.name} unrelated prop overlap ${p.id}`);
   const layers=map.layers.filter(l=>l.name===image.name),atlases=map.tilesets.filter(t=>t.image==='../'+image.image);assert.equal(layers.length,1);assert.equal(atlases.length,1);
-  const l=layers[0] as TileLayer,t=atlases[0];assert.equal(l.type,'tilelayer');assert.ok(map.layers.indexOf(l)<floor,'Floor logo must be below avatar');assert.equal(l.visible,true);assert.equal(l.opacity,1);assert.equal(l.data.filter(Boolean).length,12);
-  for(let y=0;y<2;y++)for(let x=0;x<6;x++)assert.equal(l.data[(image.y+y)*map.width+image.x+x],t.firstgid+y*6+x,'Floor logo actual native cell changed');
+  const l=layers[0] as TileLayer,t=atlases[0];assert.equal(l.type,'tilelayer');assert.ok(map.layers.indexOf(l)<floor,'Floor logo must be below avatar');assert.equal(l.visible,true);assert.equal(l.opacity,1);assert.equal(l.data.filter(Boolean).length,image.width*2);
+  for(let y=0;y<2;y++)for(let x=0;x<image.width;x++)assert.equal(l.data[(image.y+y)*map.width+image.x+x],t.firstgid+y*image.width+x,'Floor logo actual native cell changed');
  }
 }

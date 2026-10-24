@@ -25,7 +25,10 @@ export const approvedExpoStaticPins:Record<string,string>={
  'assets/tilesets/original/booth-stickers.png':'b319354b5e5b8dbd1b549fa98af6d77280361fff907aee5dc03d4b0c84535241',
 };
 /** Where those two rows sit inside the otherwise unchanged `original` registry order. */
-export const approvedExpoStaticRows:Record<string,number>={'art/source/booth-stickers.svg':0,'assets/tilesets/original/booth-stickers.png':44};
+export const approvedExpoStaticRows:Record<string,number>={'art/source/booth-stickers.svg':0,'assets/tilesets/original/booth-stickers.png':46};
+/** The expo caption family (hall epoch): descriptor, SVG master and glyph PNG rendered by the
+ * caption producer from the twelve linked overworld booth nameplates, registered in path order. */
+export const approvedExpoCaptionRows:Record<string,number>={'art/source/expo-captions.json':28,'art/source/expo-captions.svg':29,'assets/tilesets/original/expo-captions.png':62};
 /** The one sentence the expo epoch appended to the `original` registry's change log. */
 export const approvedExpoRegistryNote=' Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied.';
 export const approvedBirdRecipePins:Record<string,string>={
