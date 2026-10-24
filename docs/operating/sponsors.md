@@ -15,7 +15,34 @@ The arrival uses three independent visible Tiled tile layers. Each complete PNG 
 
 ## Expo booths
 
-The expo plaza south of the welcome court (overworld rows 73-88, columns 39-88; `tools/maps/expo-plaza.ts`) has ten booths in two rows facing the shared aisle. Row A, left to right: A1 DEMO ORBIT, A2 DEMO NOVA, A3 CODE CIRCLE (hub), A4 DESIGN GUILD (hub), A5 DEMO ATLAS, A6 DEMO VECTOR. Row B: B1 DATA CLUB (hub), B2 GAME JAM (hub), B3 DEMO LUMEN, B4 OPEN SOURCE (hub). Sponsor booths have the deep-blue carpet, hub booths the wood floor; the audited guide corridors are the open gaps between booths. The mark slots per booth are recorded in `art/sponsors.json`: A1 `demo-01.png` and A5 `demo-03.png` are the two 6×2 (192×64) slots, every other booth takes a 4×2 (128×64) mark (`demo-02-compact.png`, `hub-01.png`, `hub-02.png`, `demo-04.png`, `hub-03.png`, `hub-04.png`, `demo-05.png`, `hub-05.png`). Those marks are not yet placed: the three 6×2 inlays stay on the arrival floor, and placing a mark in a booth needs a reviewed native epoch, because every booth mark is a new embedded tileset and the current overworld atlas roster is closed by `art/source/native-ownership-context.json`, while `tools/maps/builder.ts` accepts only the 6×2 footprint; both files are provenance inputs of the animated overlays across the world. Until that epoch the booths carry no logo or caption; the small floor runes are stand-ins for the sticker sprites in `assets/tilesets/original/booth-stickers.png`, which need the same epoch.
+The expo plaza south of the welcome court (overworld rows 73-88, columns 39-88; `tools/maps/expo-plaza.ts`) has ten booths in two rows facing the shared aisle. Row A, left to right: A1 DEMO ORBIT, A2 DEMO NOVA, A3 CODE CIRCLE (hub), A4 DESIGN GUILD (hub), A5 DEMO ATLAS, A6 DEMO VECTOR. Row B: B1 DATA CLUB (hub), B2 GAME JAM (hub), B3 DEMO LUMEN, B4 OPEN SOURCE (hub). Sponsor booths have the deep-blue carpet, hub booths the wood floor; the audited guide corridors are the open gaps between booths. The mark slots per booth are recorded in `art/sponsors.json`: A1 `demo-01.png` and A5 `demo-03.png` are the two 6×2 (192×64) slots, every other booth takes a 4×2 (128×64) mark (`demo-02-compact.png`, `hub-01.png`, `hub-02.png`, `demo-04.png`, `hub-03.png`, `hub-04.png`, `demo-05.png`, `hub-05.png`). Those marks are not yet placed: the three 6×2 inlays stay on the arrival floor; until the booth producer places them the booths carry no logo or caption, and the small floor runes are stand-ins for the sticker sprites in `assets/tilesets/original/booth-stickers.png`.
+
+### Expo epoch (reviewed atlas admission)
+
+The overworld atlas roster is closed by `art/source/native-ownership-context.json` (65 registered atlases) plus two reviewed reservation families in `tools/maps/native-ownership-context.ts`: the plaza fleet (three drone atlases, mandatory) and, after it, the **expo family**, which admits exactly these new embedded tilesets when the current source carries them, each at most once, in source order from GID 11602, with the registered identity and geometry below. The registered DATA file is never rewritten; `tests/native-context-expo.test.ts` pins the policy.
+
+| Member | Tileset / layer name | Image | Native footprint |
+| --- | --- | --- | --- |
+| Booth mark `demo-01` | `Expo / Demo Orbit` | `assets/sponsors/demo-01.png` | 192×64 / 6×2 |
+| Booth mark `demo-03` | `Expo / Demo Atlas` | `assets/sponsors/demo-03.png` | 192×64 / 6×2 |
+| Booth mark `demo-01-compact` | `Expo / Demo Orbit Compact` | `assets/sponsors/demo-01-compact.png` | 128×64 / 4×2 |
+| Booth mark `demo-02-compact` | `Expo / Demo Nova Compact` | `assets/sponsors/demo-02-compact.png` | 128×64 / 4×2 |
+| Booth mark `demo-03-compact` | `Expo / Demo Atlas Compact` | `assets/sponsors/demo-03-compact.png` | 128×64 / 4×2 |
+| Booth mark `demo-04` | `Expo / Demo Vector` | `assets/sponsors/demo-04.png` | 128×64 / 4×2 |
+| Booth mark `demo-05` | `Expo / Demo Lumen` | `assets/sponsors/demo-05.png` | 128×64 / 4×2 |
+| Booth mark `hub-01` | `Expo / Code Circle` | `assets/sponsors/hub-01.png` | 128×64 / 4×2 |
+| Booth mark `hub-02` | `Expo / Design Guild` | `assets/sponsors/hub-02.png` | 128×64 / 4×2 |
+| Booth mark `hub-03` | `Expo / Data Club` | `assets/sponsors/hub-03.png` | 128×64 / 4×2 |
+| Booth mark `hub-04` | `Expo / Game Jam` | `assets/sponsors/hub-04.png` | 128×64 / 4×2 |
+| Booth mark `hub-05` | `Expo / Open Source` | `assets/sponsors/hub-05.png` | 128×64 / 4×2 |
+| Sticker sheet | `booth-stickers` (ordinary art atlas) | `assets/tilesets/original/booth-stickers.png` | 192×32 / 6×1 |
+| Booth captions | `standing-captions` (overworld role) | `assets/tilesets/original/expo-captions.png` | 512 wide, up to 6 rows |
+
+`tools/maps/builder.ts` now accepts two native panel footprints, exactly per `images[]` entry: 6×2 tiles with a 192×64 PNG, or 4×2 tiles with a 128×64 PNG. A 4×2 entry over a 192×64 file, a 6×2 entry over a 128×64 file, and every other size are rejected at author, build and release time. `demo-01.png` on a booth is a reserved second copy of the arrival inlay's image under its expo name; the two tilesets share bytes, not GIDs.
+
+Booth captions use the standing-caption machinery (`tools/art/standing-captions.ts`): the shared `standing-captions.png` is full at its approved six rows and registered in the two beach contexts, so the overworld renders its captions into its own family, `assets/tilesets/original/expo-captions.png` with `art/source/expo-captions.{json,svg}`, created by `npx tsx tools/art/standing-captions.ts` once a caption is linked (the beach bytes never move). A caption needs a face sprite: `expo-fascia` (the navy wall top, above avatars) with one blocking `expo-fascia-post` (the wall base) under each column, both in `art/tile-catalog.json`.
+
+The booth producer composes entries through `tools/maps/expo-fixtures.ts`: `expoLogoImage(mark, x, y)` returns the `images[]` entry with the registered name and exact footprint; `expoSticker(id, sprite, x, y)` a 1×1 walkable decal from the six `sticker-*` sprites; `expoCaption(id, text, x, y, width, options?)` the fascia placement, its posts, the centred `signs[]` text (18px glyphs, padding 1; `DESIGN GUILD` needs 4 tiles, `GAME JAM` fits 3) and the `standingSigns` link, validated against the caption glyph set at construction; `withExpoCaption(layout, caption)` appends one assembly to a layout copy. When the first expo captions ship, register the three new `expo-captions` files in `art/sources.json` (`original`) and refresh the shared-roster test fixtures that list that registry. Nothing may be placed on a guide allowed cell (`src/bots/lyra-routes.json`), and `tests/helpers/physical-prop-contracts.ts` still pins the four arrival inlays as the complete `images[]` roster until the booth producer extends it.
 
 Map authors use an optional `images` array in the layout, for example:
 
