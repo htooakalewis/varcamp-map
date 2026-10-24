@@ -7,12 +7,12 @@ import{renderCoastalFlight}from'../tools/art/coastal-flight';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js'));
 const clean=(b:Buffer)=>{for(let i=0;i<b.length;i+=4)if(b[i+3]===0)b.fill(0,i,i+4);return b;};
-it('all244 aircraft and640 gull native phases retain exact approved pixels at the separate lower-plane and above-scenery bird depths, including wraps',async()=>{
+it('all244 aircraft and992 gull native phases retain exact approved pixels at the separate lower-plane and above-scenery bird depths, including wraps',async()=>{
  const flight=await renderCoastalFlight(),art=clean(await sharp(flight.art).ensureAlpha().raw().toBuffer()),recipe=read('art/source/coast-life-tracks.json');let checked=0;
  for(const id of ['shipyard-beach','constellation-shore']){
   const map=read(`maps/${id}.tmj`),layout=read(`world/layouts/${id}.json`),engine=parse(structuredClone(map)),floor=map.layers.findIndex((l:any)=>l.name==='floorLayer');
   const rows=recipe.maps[id].filter((r:any)=>r.kind==='gull');const expectedBirds=(id==='shipyard-beach'?['coast-life-harbor-gull-north','coast-life-harbor-gull-south']:['coast-life-shore-gull-north','coast-life-shore-gull-south']);expect(rows.map((r:any)=>r.name)).toEqual(expectedBirds);expect(map.layers.slice(-2).map((l:any)=>l.name)).toEqual(expectedBirds);
-  if(id==='shipyard-beach')rows.unshift({name:'coastal-flight',rect:{x:0,y:0,width:48,height:3},stepMs:100,periodMs:24400});
+  if(id==='shipyard-beach')rows.unshift({name:'coastal-flight',rect:{x:0,y:11,width:48,height:3},stepMs:100,periodMs:24400});
   for(const row of rows){
    const layer=map.layers.find((l:any)=>l.name===row.name),set=map.tilesets.find((s:any)=>s.name===row.name),native=engine.tilesets.find((s:any)=>s.firstgid===set.firstgid),w=row.rect.width*32,h=row.rect.height*32;
    if(row.name==='coastal-flight'){expect(map.layers.indexOf(layer),row.name).toBeLessThan(floor);expect(layout.animatedOverlays.find((o:any)=>o.name===row.name).level).toBe('belowAvatar');}else{expect(expectedBirds).toContain(row.name);expect(map.layers.indexOf(layer),row.name).toBeGreaterThan(floor);expect(layout.animatedOverlays.find((o:any)=>o.name===row.name).level).toBe('aboveScenery');}
@@ -24,8 +24,8 @@ it('all244 aircraft and640 gull native phases retain exact approved pixels at th
     if(row.name==='coastal-flight'){
      const travel=512+index*8,position=travel<1536?travel:travel-1952,src=Math.max(0,-position),dst=Math.max(0,position),length=Math.min(416-src,1536-dst);
      for(let y=0;y<96;y++)if(length>0)art.copy(expected,(y*w+dst)*4,(y*416+src)*4,(y*416+src+length)*4);
-     // Its source-space band is0..95; the default arrival begins at192px.
-     expect(row.rect.y*32+h).toBeLessThanOrEqual(192);
+     // Its source-space band is352..447: the upper-middle beach rows11-13.
+     expect(row.rect.y*32).toBe(352);
     }else{
      const[pw,ph]=row.poseSize;
      for(const track of row.tracks){const s=track.samples[index];if(s.pose===null)continue;for(let y=0;y<ph;y++)for(let x=0;x<pw;x++){const dx=s.x+x,dy=s.y+y,src=(y*strip!.info.width+s.pose*pw+x)*4;if(dx<0||dx>=w||dy<0||dy>=h||strip!.data[src+3]===0)continue;strip!.data.copy(expected,(dy*w+dx)*4,src,src+4);}}
@@ -38,5 +38,5 @@ it('all244 aircraft and640 gull native phases retain exact approved pixels at th
    }
   }
  }
- expect(checked).toBe(889);
+ expect(checked).toBe(1241);
 },20000);

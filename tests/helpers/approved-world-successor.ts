@@ -19,15 +19,16 @@ export const approvedFleetStaticPins:Record<string,string>={
  'art/source/plaza-fleet-recipe.json':'343db1ef1f79eaf111759651092ae82efeaa61ae152fe971c5f30ce4d41f78f3',
 };
 export const approvedBirdRecipePins:Record<string,string>={
- 'art/source/coast-life-tracks.json':'217492cbda6599786c51d484eb499abdaee167baf8b808e81696db5d5fb73001',
- 'art/source/world-ambient.json':'8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635',
+ 'art/source/coast-life-tracks.json':'bd0dbb1202ccd1e84a89f0e796ab839371f102ebec1de4cb67053c84a190e7f6',
+ 'art/source/world-ambient.json':'a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7',
 };
 const changes:Record<string,readonly[string,string]>={
- 'art/source/world-ambient.json':['c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad','8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635'],
+ 'art/source/world-ambient.json':['c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad','a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7'],
+ 'tools/art/world-ambient.ts':['0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1','46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac'],
  'tools/maps/animated-decoration-contract.json':['0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189','aba9d15769f308f593fb41966dc4a3822a974d4dee53bc1aeaf43d48f1eafbeb'],
  'tools/maps/animated-decoration.ts':['b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf','1537c89158cf3b10520e3072bf53087190cf8d0dd58a1994bac0292bfbcfaac1'],
- 'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','85d75a795ab129a9eb00c1231b0507f35962a3495f317fa129321f9f2665133a'],
- 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','82ec0ae0d0c6e08be99452397221e744eb63b973088cd5b7550a91714e3df66b'],
+ 'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48'],
+ 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','dd2aa8402e8026652ad9db7a2e9f0b8be0f1b6af7d9bee67221fd8c4a5789c65'],
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],
  'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a'],
  'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034'],
@@ -49,7 +50,7 @@ export function approvedHistoricalRaw(path:string):Buffer{
 }
 export function approvedHistoricalLayout(id:string):MapLayout{return JSON.parse(approvedHistoricalRaw(`world/layouts/${id}.json`).toString());}
 export function approvedHistoricalPlaza():TiledMap{return JSON.parse(approvedHistoricalRaw('maps/overworld.tmj').toString());}
-/** No field removal: only eight reviewed input SHA transitions, from exact old
+/** No field removal: only nine reviewed input SHA transitions, from exact old
  * values to independently reviewed current producer bytes, preserve every key. */
 export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
  for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),after,'Reviewed producer epoch changed '+path);

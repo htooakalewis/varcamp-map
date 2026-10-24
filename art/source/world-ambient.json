@@ -183,16 +183,16 @@
           "anchor": "offshore-north-gull",
           "kind": "gull",
           "clip": {
-            "x": 2,
-            "y": 16,
-            "width": 16,
-            "height": 3
+            "x": 0,
+            "y": 17,
+            "width": 48,
+            "height": 1
           },
           "carrierCells": 48,
           "level": "aboveScenery",
           "clock": {
             "stepMs": 200,
-            "periodMs": 16000
+            "periodMs": 32000
           },
           "paintPolicy": "One32px approved-original bird flaps and travels above Tiled scenery in a blocked-water lane; actual native alpha clears all attendee and functional footprints."
         },

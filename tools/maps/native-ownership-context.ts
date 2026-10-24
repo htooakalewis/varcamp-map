@@ -1,6 +1,7 @@
 import{isDeepStrictEqual}from'node:util';
 import registered from'../../art/source/native-ownership-context.json';
 import{WORLD_CATALOG}from'../../src/world/catalog';
+import contract from'./animated-decoration-contract.json';
 import type{TiledMap,TiledLayer,TiledTileset}from'./types';
 
 interface ContextRow{
@@ -15,6 +16,9 @@ const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Native context
 // The sole new production reservation family. Names/images are independent
 // authority; candidate-native bodies and allocation maxima are never inputs.
 const fleetNames=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
+// Closed current decoration roster: a registered role atlas body is owned by its
+// source producer (verified by the domain guards), never by the native candidate.
+const roleNames=(id:string):string[]=>((contract.maps as Record<string,{name:string}[]>)[id]??[]).map(r=>r.name);
 const identities=(map:TiledMap)=>map.properties?.filter(p=>p.name==='worldMapId').map(p=>String(p.value))??[];
 // Domain identity comes from the independently declared current34 roster, not
 // presence of a context DATA row or an art/animation marker on the input map.
@@ -39,6 +43,15 @@ function currentAtlases(row:ContextRow,source:TiledMap):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
+ // A registered role atlas keeps its exact historical GID reservation while its
+ // body comes from the current source producer; it may never grow past it.
+ for(const name of roleNames(identities(source)[0])){
+  const index=expected.findIndex(t=>t.name===name);if(index<0)continue;
+  const sets=source.tilesets.filter(t=>t.name===name);need(sets.length<=1,'source role atlas ambiguous: '+name);if(!sets.length)continue;// an omitted role keeps its registered body; the roster guards report it
+  const set=sets[0],old=expected[index];
+  need(set.image===old.image&&set.image!.startsWith('../assets/tilesets/original/')&&set.tilewidth===32&&set.tileheight===32&&set.imagewidth===512&&set.columns===16&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&Number.isSafeInteger(set.tilecount)&&set.tilecount===set.imageheight!/32*16&&set.tilecount!<=old.tilecount!,'role source atlas identity/geometry leaves its registered reservation: '+name);
+  expected[index]={...structuredClone(set),firstgid:old.firstgid};
+ }
  for(const old of row.retired){
   // This exact historical interval is unavailable forever. The replacement's
   // semantic body comes from the current PNG/source builder, never a mutable

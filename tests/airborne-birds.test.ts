@@ -22,7 +22,7 @@ const parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-
 const catalog=read('art/tile-catalog.json');
 const current=(id:string)=>({map:read(`maps/${id}.tmj`),layout:read(`world/layouts/${id}.json`)});
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
-const originalPngs=['bc70e62b8137e867bcf40b32b354e9a5cf443259d60ab25406fad2f46b182f24','d845f9067f30d06a9e2426cdf8ec592cfc9e6ed13aba9a236ec8c63782f5cb04','d56ebae4e90b20a2a7417653ce8979d0cafab04b6a6bb6ee8a1039d0d9e2ea81','146fa37f45feb41ec4a6c648b9153cca32a3b078ed3e766b0a4d9407f4f627e9','f34e22dbb01dd56f3d869557bf5d38e2c550470fac697483487876a0814fdc79'];
+const originalPngs=['db4c33367d4a80f34cd8c3c6c12fb60d0022a5ace57040e52b7a4246c9f215e0','9319509aa81178337efa25cfca5e054786a57e03ee66f1a7dba737692793c145','ff3e47a8d9ab5d671e9a8f50c20f5a824511d5b6ff2b034a40740f10889420bb','40c6d52a27be1dd3beb7c5b3555279979b9bab28a8b172b5ff916c16ad3ed752','711e93790792c1214e66fcf3dd15fbc9d718be74cec8f8dec974d1b313c6dcdb'];
 it('mandatory current classes contain exactly133 lower, two actual owning-upper and five finite airborne roles',()=>{
  const classes=Object.values(currentDecorationRoles()).flat();expect(classes).toHaveLength(140);expect(classes.filter(r=>r.role==='avatarForeground')).toHaveLength(133);expect(classes.filter(r=>r.role==='opaqueOwnerUpper')).toHaveLength(2);expect(classes.filter(r=>r.role==='airborne')).toHaveLength(5);
 });
@@ -35,7 +35,7 @@ it.each(AIRBORNE_BIRDS)('$name actual Phaser phases and wrap equal consumed nati
    const local=native.getAnimatedTileId(set.firstgid+o.carrierTileIds[cell],t)-set.firstgid,sx=local%16*32,sy=Math.floor(local/16)*32;
    for(let y=0;y<32;y++)image.data.copy(expected,((Math.floor(cell/o.width)*32+y)*w+cell%o.width*32)*4,((sy+y)*image.info.width+sx)*4,((sy+y)*image.info.width+sx+32)*4);
   }expect(actual.equals(expected)).toBe(true);phases++;
- });expect(phases).toBe(16000/r.stepMs+1);
+ });expect(phases).toBe(r.periodMs/r.stepMs+1);
  expect(()=>assertNativeAirborne(map,layout)).not.toThrow();
 },10000);
 it.each(['shipyard-beach','constellation-shore','fa-ship'])('%s actual current normal/release boundary accepts complete airborne projection',id=>{
@@ -63,9 +63,9 @@ it.each(['before-scenery','hidden','opacity','offset','flip','frame','clock','wa
  expect(()=>assertNativeAirborne(map,layout)).toThrow(/airborne safety/i);
 });
 it('the separate strict aerial decoder accepts actual atlas geometry without widening the owner cap',()=>{
- const path='assets/tilesets/original/coast-life-harbor-gull-north.png',bytes=readFileSync(path);expect(()=>decodeArtRgbaPng(bytes,512,1120)).toThrow(/PNG/);expect(decodeAirborneRgbaPng(bytes,512,1120).rgba.length).toBe(2293760);
- expect(()=>decodeAirborneRgbaPng(bytes,512,1152)).toThrow(/PNG/);expect(()=>decodeAirborneRgbaPng(Buffer.concat([bytes,Buffer.alloc(196608)]),512,1120)).toThrow(/PNG/);
- const corrupt=Buffer.from(bytes);corrupt[50]^=1;expect(()=>decodeAirborneRgbaPng(corrupt,512,1120)).toThrow(/PNG/);
+ const path='assets/tilesets/original/coast-life-harbor-gull-north.png',bytes=readFileSync(path);expect(()=>decodeArtRgbaPng(bytes,512,512)).toThrow(/PNG/);expect(decodeAirborneRgbaPng(bytes,512,512).rgba.length).toBe(1048576);
+ expect(()=>decodeAirborneRgbaPng(bytes,512,544)).toThrow(/PNG/);expect(()=>decodeAirborneRgbaPng(Buffer.concat([bytes,Buffer.alloc(196608)]),512,512)).toThrow(/PNG/);
+ const corrupt=Buffer.from(bytes);corrupt[50]^=1;expect(()=>decodeAirborneRgbaPng(corrupt,512,512)).toThrow(/PNG/);
 });
 it('generic source reconciliation keeps deferred paint after all protected nonfloor layers without changing their bodies/order',()=>{
  const layout={id:'unit-diagnostic',width:4,height:4,placements:[],entries:[],exits:[],areas:[],inspectionZones:[],signs:[{name:'low-sign',text:'clear',x:3,y:3,width:1,height:1}],animatedOverlays:[{name:'generic-air',image:'assets/tilesets/original/guides.png',sourceId:'original',level:'aboveScenery',x:0,y:0,width:1,height:1,carrierTileIds:[0],animations:[{id:0,frames:[{tileid:1,duration:100}]}]}]}as unknown as MapLayout;

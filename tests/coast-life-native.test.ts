@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {expect,it} from 'vitest';
 import {assertNativeCoastLife} from '../tools/maps/coast-life';
+import {submergeFishPose} from '../tools/art/coast-life';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const parse=createRequire(import.meta.url)(resolve('docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseTilesets.js'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
@@ -20,7 +21,7 @@ it('renders genuine original wildlife poses and world travel through the actual 
  for(const [id,rows]of Object.entries(recipe.maps)as [string,any[]][]){const map=read(`maps/${id}.tmj`),engine=parse(structuredClone(map));for(const row of rows){
   const layer=map.layers.find((l:any)=>l.name===row.name),set=map.tilesets.find((t:any)=>t.name===row.name),native=engine.tilesets.find((t:any)=>t.firstgid===set.firstgid);
   const raw=await sharp(readFileSync(row.name?`assets/tilesets/original/${row.name}.png`:'')).ensureAlpha().raw().toBuffer();
-  const strip=await sharp(readFileSync(`art/source/coast-life-${row.poseGroup}-poses.png`)).ensureAlpha().raw().toBuffer({resolveWithObject:true});
+  const strip=await sharp(readFileSync(`art/source/coast-life-${row.poseGroup}-poses.png`)).ensureAlpha().raw().toBuffer({resolveWithObject:true});if(row.kind==='fish')strip.data=submergeFishPose(strip.data);
   const [pw,ph]=row.poseSize,w=row.rect.width*32,h=row.rect.height*32,phases=[0,1,8,10,Math.floor(row.periodMs/row.stepMs/2),row.periodMs/row.stepMs-1,row.periodMs/row.stepMs];const signatures=[];
   for(const phase of phases){const expected=Buffer.alloc(w*h*4),actual=Buffer.alloc(w*h*4),index=phase%(row.periodMs/row.stepMs);
    for(const track of row.tracks){const s=track.samples[index];for(let y=0;y<ph;y++)for(let x=0;x<pw;x++){const dx=s.x+x,dy=s.y+y,src=(y*strip.info.width+s.pose*pw+x)*4;if(dx<0||dx>=w||dy<0||dy>=h||strip.data[src+3]===0)continue;strip.data.copy(expected,(dy*w+dx)*4,src,src+4);}}

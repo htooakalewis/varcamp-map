@@ -47,14 +47,14 @@ it('retains the exact independently reviewed126-path registration epoch and its 
  * prefix, current source-registry contents or a caller acceptance flag. */
 async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:Buffer}>>{
  const outputs=new Map<string,{json:unknown}|{bytes:Buffer}>();const add=(path:string,value:unknown)=>{if(outputs.has(path))throw Error('Duplicate native descriptor owner: '+path);outputs.set(path,{json:value});};
- add('art/source/roadster.json',(await renderRoadster()).metadata);add('art/source/coastal-flight.json',(await renderCoastalFlight()).metadata);
+ add('art/source/roadster.json',(await renderRoadster()).metadata);const flight=await renderCoastalFlight();add('art/source/coastal-flight.json',flight.metadata);outputs.set(flight.metadata.overlay.image,{bytes:flight.png});
  add('art/source/plaza-generated.json',(await renderPlazaIdentity()).metadata);add('art/source/plaza-garden.json',(await renderPlazaGarden()).metadata);
  add('art/source/plaza-buildings.json',(await renderPlazaBuildings()).metadata);add('art/source/plaza-grass.json',(await renderPlazaGrass()).metadata);add('art/source/plaza-pots.json',(await renderPlazaPots()).metadata);
  const drones=await renderPlazaDrones();add('art/source/plaza-drones.json',drones.metadata);for(const r of drones.resources)add(r.metadataPath,{version:1,source:drones.metadata.source,overlay:r.overlay,diagnostics:r.diagnostics});
  const fleet=await renderPlazaFleet();add('art/source/plaza-fleet.json',fleet.metadata);for(const r of fleet.aircraft){add(r.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});outputs.set(r.posePath,{bytes:r.posePng});}
- add('art/source/coast-life-assets.json',(await renderCoastLifeAssets()).metadata);for(const r of await renderCoastLife())add(r.overlay.provenance!.metadataPath,r.metadata);
+ add('art/source/coast-life-assets.json',(await renderCoastLifeAssets()).metadata);for(const r of await renderCoastLife()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
- add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient())add(r.overlay.provenance!.metadataPath,r.metadata);
+ add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  return outputs;
 }
 it('binds every current registry path and preserves static artwork while validating genuine generated descriptors',async()=>{

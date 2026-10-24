@@ -1537,11 +1537,11 @@
     ],
     "provenance": {
       "metadataPath": "art/source/coast-life-harbor-fish-east.json",
-      "atlasSha256": "9f39dee751cef7254fe69ffa490cacdfa7a997de72bfb36727a8346090be9a59",
+      "atlasSha256": "82e0390a539d37e031159a4700bf4d70ee686e3f17034729cbe408bb3f94dc1f",
       "inputs": [
         {
           "path": "art/source/coast-life-tracks.json",
-          "sha256": "217492cbda6599786c51d484eb499abdaee167baf8b808e81696db5d5fb73001"
+          "sha256": "bd0dbb1202ccd1e84a89f0e796ab839371f102ebec1de4cb67053c84a190e7f6"
         },
         {
           "path": "art/source/coast-life-fish-poses.png",
@@ -1557,7 +1557,7 @@
         },
         {
           "path": "tools/art/coast-life.ts",
-          "sha256": "86bb817ebc64644289cb701f03b8dc61db0344c70ec2bfc9d4829811bd03fd93"
+          "sha256": "2b323b99457159727d2609789bba00efbd5999fb8c6e8d577dc9951109add5f9"
         },
         {
           "path": "tools/maps/coast-life-habitat.ts",
@@ -1565,7 +1565,7 @@
         },
         {
           "path": "tools/maps/coast-aerial.ts",
-          "sha256": "02e961133c3eb28c8922c62a417f0d15134638fe4401c93c95a8fd87e3b2dc48"
+          "sha256": "382f3d1950f2844e1539967de75ffc4e957a7b6e04167301087fd7508053f788"
         },
         {
           "path": "tools/maps/animated-decoration.ts",

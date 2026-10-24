@@ -3,14 +3,15 @@ import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
 import{decodeAirborneRgbaPng}from'../art/native-png';
 import type{LayoutAnimatedOverlay,MapLayout,TiledMap,TileRect}from'./types';
-/** Finite original32px bird roles. Rectangles may cross nonwalkable scenery,
- * never attendee/control/label pixels. Existing PNGs and clocks stay native. */
+/** Finite original32px bird roles. Each lane spans the full map width so a
+ * bird enters at one edge and leaves at the other; rectangles may cross
+ * nonwalkable scenery, never attendee/control/label pixels. Clocks are pinned. */
 export const AIRBORNE_BIRDS=[
- {map:'shipyard-beach',name:'coast-life-harbor-gull-north',x:0,y:39,width:20,height:3,stepMs:100},
- {map:'shipyard-beach',name:'coast-life-harbor-gull-south',x:23,y:34,width:20,height:3,stepMs:100},
- {map:'constellation-shore',name:'coast-life-shore-gull-north',x:0,y:37,width:18,height:3,stepMs:100},
- {map:'constellation-shore',name:'coast-life-shore-gull-south',x:18,y:34,width:20,height:3,stepMs:100},
- {map:'fa-ship',name:'world-ambient-fa-ship-gull-1',x:2,y:16,width:16,height:3,stepMs:200},
+ {map:'shipyard-beach',name:'coast-life-harbor-gull-north',x:0,y:38,width:48,height:3,stepMs:100,periodMs:27000},
+ {map:'shipyard-beach',name:'coast-life-harbor-gull-south',x:0,y:41,width:48,height:3,stepMs:100,periodMs:27000},
+ {map:'constellation-shore',name:'coast-life-shore-gull-north',x:0,y:37,width:40,height:3,stepMs:100,periodMs:22600},
+ {map:'constellation-shore',name:'coast-life-shore-gull-south',x:0,y:37,width:40,height:3,stepMs:100,periodMs:22600},
+ {map:'fa-ship',name:'world-ambient-fa-ship-gull-1',x:0,y:17,width:48,height:1,stepMs:200,periodMs:32000},
 ]as const;
 const need=(ok:unknown,m:string):void=>{if(!ok)throw Error('Airborne safety '+m);};
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
@@ -42,12 +43,12 @@ export function visitAirborneNativePhases(map:TiledMap,o:LayoutAnimatedOverlay,v
   if(!expected.has(i)){need(gid===0,'native bird pixels outside declared lane');continue;}
   need((gid&0xf0000000)===0&&gid===set.firstgid+expected.get(i)!,'native bird carrier/flip changed');
   const defs=set.tiles?.filter(t=>t.id===gid-set.firstgid);need(defs?.length===1&&defs[0].animation?.length,'native bird clock missing');const frames=defs![0].animation!;
-  need(isDeepStrictEqual(frames,o.animations.find(a=>a.id===gid-set.firstgid)?.frames)&&frames.every(f=>Number.isSafeInteger(f.tileid)&&f.tileid>=0&&f.tileid<set.tilecount!&&Number.isSafeInteger(f.duration)&&f.duration>=r.stepMs&&f.duration%r.stepMs===0)&&frames.reduce((n,f)=>n+f.duration,0)===16000,'native bird clock/frame binding changed');
+  need(isDeepStrictEqual(frames,o.animations.find(a=>a.id===gid-set.firstgid)?.frames)&&frames.every(f=>Number.isSafeInteger(f.tileid)&&f.tileid>=0&&f.tileid<set.tilecount!&&Number.isSafeInteger(f.duration)&&f.duration>=r.stepMs&&f.duration%r.stepMs===0)&&frames.reduce((n,f)=>n+f.duration,0)===r.periodMs,'native bird clock/frame binding changed');
   carriers.push({cx:i%map.width-o.x,cy:Math.floor(i/map.width)-o.y,frames});
  }
  need(carriers.length===o.width*o.height,'native bird carriers incomplete');const w=o.width*32,h=o.height*32;
- for(let t=0;t<=16000;t+=r.stepMs){const rgba=Buffer.alloc(w*h*4);
-  for(const c of carriers){let time=t%16000,local=-1;for(const f of c.frames){if(time<f.duration){local=f.tileid;break;}time-=f.duration;}need(local>=0,'native clock has no actual frame');const sx=local%16*32,sy=Math.floor(local/16)*32;
+ for(let t=0;t<=r.periodMs;t+=r.stepMs){const rgba=Buffer.alloc(w*h*4);
+  for(const c of carriers){let time=t%r.periodMs,local=-1;for(const f of c.frames){if(time<f.duration){local=f.tileid;break;}time-=f.duration;}need(local>=0,'native clock has no actual frame');const sx=local%16*32,sy=Math.floor(local/16)*32;
    for(let y=0;y<32;y++)image.rgba.copy(rgba,((c.cy*32+y)*w+c.cx*32)*4,((sy+y)*image.width+sx)*4,((sy+y)*image.width+sx+32)*4);
   }visit(rgba,t);
  }

@@ -838,7 +838,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635"
+            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -866,7 +866,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -890,11 +890,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "85d75a795ab129a9eb00c1231b0507f35962a3495f317fa129321f9f2665133a"
+            "sha256": "adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "82ec0ae0d0c6e08be99452397221e744eb63b973088cd5b7550a91714e3df66b"
+            "sha256": "dd2aa8402e8026652ad9db7a2e9f0b8be0f1b6af7d9bee67221fd8c4a5789c65"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -1014,7 +1014,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "8cc53a33e6b740791a1ba53ca512b8ab883411599827e982cd2f22a3a3b57635"
+            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -1042,7 +1042,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1"
+            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -1066,11 +1066,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "85d75a795ab129a9eb00c1231b0507f35962a3495f317fa129321f9f2665133a"
+            "sha256": "adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "82ec0ae0d0c6e08be99452397221e744eb63b973088cd5b7550a91714e3df66b"
+            "sha256": "dd2aa8402e8026652ad9db7a2e9f0b8be0f1b6af7d9bee67221fd8c4a5789c65"
           },
           {
             "path": "art/source/native-ownership-context.json",

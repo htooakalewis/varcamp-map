@@ -5,7 +5,7 @@ import{approvedUnchangedLayoutIds,approvedHistoricalLayout,approvedHistoricalRaw
 import before from'./fixtures/interior-original-palms/before.json';
 const digest=(v:unknown)=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const current=(id:string)=>JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));
-it('ties genuine old14 interior hash oracles and every current30 source body to only the eight reviewed forward inputs',()=>{
+it('ties genuine old14 interior hash oracles and every current30 source body to only the nine reviewed forward inputs',()=>{
  expect(approvedUnchangedLayoutIds).toHaveLength(30);
  for(const[id,pin]of Object.entries(before.maps)){
   const old=approvedHistoricalLayout(id),rest=structuredClone(old);delete(rest as Partial<typeof rest>).placements;

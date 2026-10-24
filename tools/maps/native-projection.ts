@@ -1,5 +1,6 @@
 import {isDeepStrictEqual} from 'node:util';
 import{assertNativeOwnershipContext,assertNativeAuthoringContext}from'./native-ownership-context';
+import contract from'./animated-decoration-contract.json';
 import ocean from '../../world/beach-ship-native.json';
 import type {TiledMap,TiledTileset,TiledLayer,TileLayer,TiledProperty} from './types';
 
@@ -84,8 +85,11 @@ export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):Ti
   const matches=result.tilesets.filter(t=>ordinary(set)?!named.has(t.name)&&t.image===set.image:t.name===set.name&&t.image===set.image);need(matches.length<=1,'ambiguous author atlas role');
   const prior=matches[0];if(prior&&isDeepStrictEqual(body(prior,ordinary(set)),body(set,ordinary(set))))continue;
   if(prior){
-   need(prior.image==='../assets/tilesets/original/world-ambient-plants.png'&&set.image===prior.image,'unowned atlas epoch changed');
+   const role=((contract.maps as Record<string,{name:string}[]>)[String(native.properties?.find(p=>p.name==='worldMapId')?.value)]??[]).some(r=>r.name===prior.name);
+   need(role||(prior.image==='../assets/tilesets/original/world-ambient-plants.png'&&set.image===prior.image),'unowned atlas epoch changed');
    need(references(result.layers,prior.firstgid,prior.firstgid+prior.tilecount!).every(name=>owned.has(name)),'retired owned atlas has protected references');
+   // A registered role atlas is refreshed inside its exact reservation; only the plants epoch is retired and reallocated.
+   if(role){need(set.tilecount!<=prior.tilecount!,'role atlas exceeds its registered reservation');result.tilesets[result.tilesets.indexOf(prior)]={...structuredClone(set),firstgid:prior.firstgid,name:prior.name};continue;}
    result.tilesets=result.tilesets.filter(t=>t!==prior);
   }
   const target={...structuredClone(set),firstgid:next,name:prior?.name??(ordinary(set)?set.image!.split('/').at(-1)!.replace(/\.png$/,''):set.name)};need(!result.tilesets.some(t=>t.name===target.name),'new atlas name already reserved');result.tilesets.push(target);next+=set.tilecount!;

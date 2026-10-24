@@ -11,6 +11,11 @@ import {assertCoastAerialLayout,orderCoastAerialOverlays} from '../maps/coast-ae
 const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 const recipePath='art/source/coast-life-tracks.json';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+const WATER=[38,96,150];
+/** Fish swim under the surface: each painted pixel is pulled a quarter of the way
+ * toward the sea colour and drawn at60% alpha. Dolphins and seals break the surface
+ * and keep their original pixels. Pure: returns a new buffer. */
+export function submergeFishPose(rgba:Buffer):Buffer{const out=Buffer.from(rgba);for(let i=0;i<out.length;i+=4){if(!out[i+3])continue;for(let c=0;c<3;c++)out[i+c]=Math.round(out[i+c]*.75+WATER[c]*.25);out[i+3]=Math.round(out[i+3]*.6);}return out;}
 export async function renderCoastLife(){
  const recipe=read(recipePath);const results=[];
  for(const [map,rows]of Object.entries(recipe.maps)as [string,any[]][]){for(const row of rows){
@@ -18,7 +23,7 @@ export async function renderCoastLife(){
   const posePath=`art/source/coast-life-${row.poseGroup}-poses.png`,input=readFileSync(posePath);
   const {data,info}=await sharp(input).ensureAlpha().raw().toBuffer({resolveWithObject:true});
   const [width,height]=row.poseSize;if(info.height!==height||info.width%width)throw Error(`Invalid original coast pose strip: ${posePath}`);
-  const poses=[];for(let i=0;i<info.width/width;i++){const rgba=Buffer.alloc(width*height*4);for(let y=0;y<height;y++)data.copy(rgba,y*width*4,(y*info.width+i*width)*4,(y*info.width+(i+1)*width)*4);poses.push({width,height,rgba});}
+  const poses=[];for(let i=0;i<info.width/width;i++){const rgba=Buffer.alloc(width*height*4);for(let y=0;y<height;y++)data.copy(rgba,y*width*4,(y*info.width+i*width)*4,(y*info.width+(i+1)*width)*4);poses.push({width,height,rgba:row.kind==='fish'?submergeFishPose(rgba):rgba});}
   const image=`assets/tilesets/original/${row.name}.png`,metadataPath=`art/source/${row.name}.json`;
   const spec:NativeMotionSpec={name:row.name,image,sourceId:'original',level:row.level,rect:row.rect,stepMs:row.stepMs,periodMs:row.periodMs,poses,tracks:row.tracks};
   const result=await renderNativeMotion(spec);

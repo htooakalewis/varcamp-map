@@ -30,7 +30,17 @@ export async function renderCoastalFlight(): Promise<{ png: Buffer; metadata: Co
   const plane = readFileSync(planePath), sponsor = readSponsorImage(sponsorPath);
   const planeInfo = await sharp(plane).metadata();
   if (planeInfo.width !== 192 || planeInfo.height !== 96) throw new Error('Flight plane source must remain native 192×96');
-  const frame = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="416" height="96" shape-rendering="crispEdges"><path d="M194 48H225" stroke="#ead6a3" stroke-width="2"/><path d="M2 14H194L196 16V80L194 82H2L0 80V16Z" fill="#e9b85e"/><path d="M3 17H193V79H3Z" fill="#173b52"/></svg>');
+  // A navy cloth flag towed behind the aircraft: bridle lines run from two gold
+  // rings on the cream leading hem to the tail hook at (259,48); the trailing
+  // edge flutters in three scallops. The banner column begins at y14 and the
+  // sponsor logo is composited over the cloth unchanged.
+  const frame = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="416" height="96" shape-rendering="crispEdges">'
+    + '<path d="M194 36L210 48L194 60" fill="none" stroke="#ead6a3" stroke-width="2"/><path d="M208 48H259" stroke="#ead6a3" stroke-width="2"/>'
+    + '<path d="M186 14H0Q20 25.3 0 36.7Q20 48 0 59.3Q20 70.7 0 82H186Z" fill="#173b52"/>'
+    + '<path d="M0 14H186V15H0Z" fill="#2f6283"/><path d="M0 81H186V82H0Z" fill="#0d2131"/>'
+    + '<rect x="185" y="14" width="9" height="68" fill="#ead6a3"/><rect x="185" y="14" width="1" height="68" fill="#c9ad74"/><rect x="193" y="14" width="1" height="68" fill="#c9ad74"/>'
+    + '<circle cx="190" cy="36" r="5" fill="#e9b85e"/><circle cx="190" cy="36" r="2" fill="#173b52"/><circle cx="190" cy="60" r="5" fill="#e9b85e"/><circle cx="190" cy="60" r="2" fill="#173b52"/>'
+    + '</svg>');
   const art = await sharp(frame, { density: 72 }).composite([{ input: sponsor, left: 2, top: 16 }, { input: plane, left: 224, top: 0 }]).png().toBuffer();
   const raw = await sharp(art).ensureAlpha().raw().toBuffer();
   for (let i = 0; i < raw.length; i += 4) if (raw[i + 3] === 0) raw.fill(0, i, i + 4);

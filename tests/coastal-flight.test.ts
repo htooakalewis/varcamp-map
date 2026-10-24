@@ -108,7 +108,7 @@ describe('native coastal flight', () => {
  it('keeps validated source pixels native and emits a bounded sparse, noncolliding peripheral band', async () => {
   const overlay = map.layers.find(l => l.name === 'coastal-flight') as TileLayer;
   expect(overlay.data.filter(Boolean)).toHaveLength(144);
-  expect(metadata.overlay).toMatchObject({ x: 0, y: 0, width: 48, height: 3, level: 'belowAvatar' });
+  expect(metadata.overlay).toMatchObject({ x: 0, y: 11, width: 48, height: 3, level: 'belowAvatar' });
   expect(metadata.atlas.decodedRgbaBytes).toBeLessThanOrEqual(4 * 1024 * 1024);
   const source = await sharp(readFileSync(metadata.inputs.plane.path)).ensureAlpha().raw().toBuffer();
   const sponsor = await sharp(readFileSync(metadata.inputs.sponsor.path)).ensureAlpha().raw().toBuffer();
