@@ -13,12 +13,19 @@ export const AIRBORNE_BIRDS=[
  {map:'constellation-shore',name:'coast-life-shore-gull-south',x:0,y:37,width:40,height:3,stepMs:100,periodMs:22600},
  {map:'fa-ship',name:'world-ambient-fa-ship-gull-1',x:0,y:17,width:48,height:1,stepMs:200,periodMs:32000},
 ]as const;
+/** The one sponsor aircraft role (2026-10-24 owner decision): it draws above
+ * every tile, object and attendee as a purely visual crossing of the spawn
+ * strip, so it is deliberately exempt from the bird lane rules (offshore
+ * blocked lane, 32px sprite, attendee-envelope alpha). Only this closed row
+ * may claim that exemption; every other aboveScenery overlay is a bird. */
+export const AIRCRAFT=[{map:'shipyard-beach',name:'coastal-flight'}]as const;
+export const isCurrentAircraft=(map:string,name:string)=>AIRCRAFT.some(r=>r.map===map&&r.name===name);
 const need=(ok:unknown,m:string):void=>{if(!ok)throw Error('Airborne safety '+m);};
 const overlap=(a:TileRect,b:TileRect)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
 export const isCurrentAirborne=(map:string,name:string)=>AIRBORNE_BIRDS.some(r=>r.map===map&&r.name===name);
 export function assertAirborneSource(layout:MapLayout):void{
  const rows=AIRBORNE_BIRDS.filter(r=>r.map===layout.id),overlays=layout.animatedOverlays??[];
- need(overlays.filter(o=>o.level==='aboveScenery').length===rows.length,'closed five-role source class changed');
+ need(overlays.filter(o=>o.level==='aboveScenery'&&!isCurrentAircraft(layout.id,o.name)).length===rows.length,'closed five-role source class changed');
  const terrain=Array(layout.width*layout.height).fill('')as string[];
  for(const p of layout.placements.filter(p=>p.layer==='terrain'))for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)terrain[y*layout.width+x]=p.sprite;
  for(const r of rows){const matches=overlays.filter(o=>o.name===r.name);need(matches.length===1,'required bird missing: '+r.name);const o=matches[0];
@@ -53,8 +60,9 @@ export function visitAirborneNativePhases(map:TiledMap,o:LayoutAnimatedOverlay,v
   }visit(rgba,t);
  }
 }
-/** One closed airborne class. Native map order has to put birds after all
- * scenery, while actual alpha must remain outside any possible attendee body. */
+/** One closed airborne class. Native map order has to put birds (and the
+ * registered aircraft) after all scenery, while actual bird alpha must remain
+ * outside any possible attendee body. */
 export function assertNativeAirborne(map:TiledMap,layout:MapLayout):void{
  assertAirborneSource(layout);const rows=AIRBORNE_BIRDS.filter(r=>r.map===layout.id);if(!rows.length)return;
  const names=(layout.animatedOverlays??[]).filter(o=>o.level==='aboveScenery').map(o=>o.name);need(isDeepStrictEqual(map.layers.slice(-names.length).map(l=>l.name),names),'airborne birds are not at the end of the complete native stack');

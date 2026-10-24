@@ -23,8 +23,8 @@ const catalog=read('art/tile-catalog.json');
 const current=(id:string)=>({map:read(`maps/${id}.tmj`),layout:read(`world/layouts/${id}.json`)});
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 const originalPngs=['db4c33367d4a80f34cd8c3c6c12fb60d0022a5ace57040e52b7a4246c9f215e0','9319509aa81178337efa25cfca5e054786a57e03ee66f1a7dba737692793c145','ff3e47a8d9ab5d671e9a8f50c20f5a824511d5b6ff2b034a40740f10889420bb','40c6d52a27be1dd3beb7c5b3555279979b9bab28a8b172b5ff916c16ad3ed752','711e93790792c1214e66fcf3dd15fbc9d718be74cec8f8dec974d1b313c6dcdb'];
-it('mandatory current classes contain exactly133 lower, two actual owning-upper and five finite airborne roles',()=>{
- const classes=Object.values(currentDecorationRoles()).flat();expect(classes).toHaveLength(140);expect(classes.filter(r=>r.role==='avatarForeground')).toHaveLength(133);expect(classes.filter(r=>r.role==='opaqueOwnerUpper')).toHaveLength(2);expect(classes.filter(r=>r.role==='airborne')).toHaveLength(5);
+it('mandatory current classes contain exactly132 lower, two actual owning-upper, five finite airborne and one aircraft role',()=>{
+ const classes=Object.values(currentDecorationRoles()).flat();expect(classes).toHaveLength(140);expect(classes.filter(r=>r.role==='avatarForeground')).toHaveLength(132);expect(classes.filter(r=>r.role==='opaqueOwnerUpper')).toHaveLength(2);expect(classes.filter(r=>r.role==='airborne')).toHaveLength(5);expect(classes.filter(r=>r.role==='aircraft')).toEqual([{name:'coastal-flight',role:'aircraft'}]);
 });
 it.each(AIRBORNE_BIRDS)('$name actual Phaser phases and wrap equal consumed nativeRGBA, preserving the approved PNG bytes',async r=>{
  const{map,layout}=current(r.map),o=layout.animatedOverlays.find((o:any)=>o.name===r.name),set=map.tilesets.find((s:any)=>s.name===r.name),native=parse(structuredClone(map)).tilesets.find((s:any)=>s.name===r.name),bytes=readFileSync(o.image),index=AIRBORNE_BIRDS.indexOf(r),image=await sharp(bytes).ensureAlpha().raw().toBuffer({resolveWithObject:true});
@@ -45,7 +45,7 @@ it.each(['old-unsafe-lane','lower','implicit','unknown-airborne','missing','func
  const{layout}=current('shipyard-beach'),o=layout.animatedOverlays.find((o:any)=>o.name==='coast-life-harbor-gull-north');
  if(kind==='old-unsafe-lane'){o.x=2;o.y=10;}
  if(kind==='lower')o.level='belowAvatar';if(kind==='implicit')delete o.level;
- if(kind==='unknown-airborne')layout.animatedOverlays.find((o:any)=>o.name==='coastal-flight').level='aboveScenery';
+ if(kind==='unknown-airborne')layout.animatedOverlays.find((o:any)=>o.name==='coast-life-harbor-fish-west').level='aboveScenery';
  if(kind==='missing')layout.animatedOverlays=layout.animatedOverlays.filter((p:any)=>p!==o);
  if(kind==='functional-overlap')layout.entries.push({name:'unsafe',x:o.x,y:o.y,width:1,height:1});
  if(kind==='label-overlap')layout.signs.push({name:'unsafe',text:'unsafe',x:o.x,y:o.y,width:1,height:1});

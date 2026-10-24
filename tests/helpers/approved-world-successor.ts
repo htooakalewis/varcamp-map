@@ -25,8 +25,8 @@ export const approvedBirdRecipePins:Record<string,string>={
 const changes:Record<string,readonly[string,string]>={
  'art/source/world-ambient.json':['c4c7651c3b7e31d7e5762ee0ede695209080ee9d76ed8f9ce27a44d404a596ad','a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7'],
  'tools/art/world-ambient.ts':['0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1','46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac'],
- 'tools/maps/animated-decoration-contract.json':['0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189','aba9d15769f308f593fb41966dc4a3822a974d4dee53bc1aeaf43d48f1eafbeb'],
- 'tools/maps/animated-decoration.ts':['b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf','1537c89158cf3b10520e3072bf53087190cf8d0dd58a1994bac0292bfbcfaac1'],
+ 'tools/maps/animated-decoration-contract.json':['0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189','fd6a605e785551d6709e60cd1c2ae5c477e5152169b9ae7e8b78ac4d14f4a4e0'],
+ 'tools/maps/animated-decoration.ts':['b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf','b4e0788debcb53cbbac97488d88f6da2a3bdf0f0b2d6effe251f8552b4590621'],
  'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48'],
  'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','dd2aa8402e8026652ad9db7a2e9f0b8be0f1b6af7d9bee67221fd8c4a5789c65'],
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],

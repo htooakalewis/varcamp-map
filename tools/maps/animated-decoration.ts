@@ -4,10 +4,11 @@ import{isDeepStrictEqual}from'node:util';
 import{WORLD_CATALOG,SIGN_IDS}from'../../src/world/catalog';
 import{decodeArtRgbaPng}from'../art/native-png';
 import{ambientDepthOwner,opaqueAmbientOwnerSupport}from'./world-ambient-depth';
-import{assertAirborneSource,assertNativeAirborne,isCurrentAirborne}from'./airborne';
+import{assertAirborneSource,assertNativeAirborne,isCurrentAirborne,isCurrentAircraft}from'./airborne';
 import type{TileCatalog}from'../art/catalog';
 import type{MapLayout,TiledMap,LayoutAnimatedOverlay}from'./types';
-type Role={name:string;role:'avatarForeground'|'opaqueOwnerUpper'|'airborne';owner?:NonNullable<ReturnType<typeof ambientDepthOwner>>&{sheetSha256:string}};
+// 'aircraft': the single registered sponsor aircraft drawn above everything (see airborne.ts AIRCRAFT).
+type Role={name:string;role:'avatarForeground'|'opaqueOwnerUpper'|'airborne'|'aircraft';owner?:NonNullable<ReturnType<typeof ambientDepthOwner>>&{sheetSha256:string}};
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Animation safety '+message);};
@@ -18,7 +19,7 @@ const sorted=(a:readonly string[])=>a.slice().sort();
 export function currentDecorationRoles():Record<string,Role[]>{
  const contract=read('tools/maps/animated-decoration-contract.json'),ids=Object.keys(WORLD_CATALOG),interiors=[...SIGN_IDS.map(s=>'speaker-'+s),'solar-hall','lunar-hall'],interior=read('world/interior-reference-contract.json'),ambient=read('art/source/world-ambient.json');
  need(contract&&typeof contract==='object'&&!Array.isArray(contract)&&contract.version===1&&isDeepStrictEqual(Object.keys(contract).sort(),['maps','version'])&&contract.maps&&isDeepStrictEqual(sorted(Object.keys(contract.maps)),sorted(ids)),'closed current map contract changed');
- let count=0,upper=0,airborne=0;
+ let count=0,upper=0,airborne=0,aircraft=0;
  for(const id of ids){
   const rows=contract.maps[id];need(Array.isArray(rows)&&rows.every((r:any)=>r&&typeof r.name==='string')&&new Set(rows.map((r:Role)=>r.name)).size===rows.length,'role rows missing/duplicate: '+id);let names:string[];
   if(id==='overworld')names=['roadster',...Array.from({length:40},(_,i)=>'plaza-drone-'+String(i).padStart(2,'0')),'plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
@@ -30,16 +31,16 @@ export function currentDecorationRoles():Record<string,Role[]>{
    need(names.length===(id==='fa-ship-interior'||id==='nebula-arcade'?3:2),'independent ambient component count changed: '+id);
   }
   need(isDeepStrictEqual(rows.map((r:Role)=>r.name),sorted(names)),'required role roster/order changed: '+id);
-  for(const r of rows){const isUpper=r.role==='opaqueOwnerUpper';need(r&&isDeepStrictEqual(Object.keys(r).sort(),isUpper?['name','owner','role']:['name','role'])&&typeof r.name==='string'&&['avatarForeground','opaqueOwnerUpper','airborne'].includes(r.role),'role schema changed');if(isUpper){upper++;need(id==='fa-ship-interior'&&r.owner&&/^[a-f0-9]{64}$/.test(r.owner.sheetSha256),'owning upper family/registration changed');}need((r.role==='airborne')===isCurrentAirborne(id,r.name),'closed airborne role changed');if(r.role==='airborne')airborne++;count++;}
+  for(const r of rows){const isUpper=r.role==='opaqueOwnerUpper';need(r&&isDeepStrictEqual(Object.keys(r).sort(),isUpper?['name','owner','role']:['name','role'])&&typeof r.name==='string'&&['avatarForeground','opaqueOwnerUpper','airborne','aircraft'].includes(r.role),'role schema changed');if(isUpper){upper++;need(id==='fa-ship-interior'&&r.owner&&/^[a-f0-9]{64}$/.test(r.owner.sheetSha256),'owning upper family/registration changed');}need((r.role==='airborne')===isCurrentAirborne(id,r.name),'closed airborne role changed');if(r.role==='airborne')airborne++;need((r.role==='aircraft')===isCurrentAircraft(id,r.name),'closed aircraft role changed');if(r.role==='aircraft')aircraft++;count++;}
  }
- need(count===140&&upper===2&&airborne===5,'closed140-role/two-upper ownership count changed');return contract.maps;
+ need(count===140&&upper===2&&airborne===5&&aircraft===1,'closed140-role/two-upper/one-aircraft ownership count changed');return contract.maps;
 }
 /** Shared current author/current acceptance source policy; historical generic
  * builders never call this and retain their independently tested behavior. */
 export function assertAnimatedDecorationSource(layout:MapLayout):Role[]{
  const roles=currentDecorationRoles()[layout.id];need(roles,'unknown current map identity');const overlays=layout.animatedOverlays??[];
  need(isDeepStrictEqual(sorted(overlays.map(o=>o.name)),roles.map(r=>r.name)),'required source roles missing/unknown: '+layout.id);
- for(const r of roles){const o=overlays.find(o=>o.name===r.name)!;need(o.level===(r.role==='avatarForeground'?'belowAvatar':r.role==='airborne'?'aboveScenery':'aboveAvatar'),'explicit role depth changed: '+r.name);}
+ for(const r of roles){const o=overlays.find(o=>o.name===r.name)!;need(o.level===(r.role==='avatarForeground'?'belowAvatar':r.role==='airborne'||r.role==='aircraft'?'aboveScenery':'aboveAvatar'),'explicit role depth changed: '+r.name);}
  assertAirborneSource(layout);return roles;
 }
 /** Prove pixels the real native consumer can reference, rather than trusting

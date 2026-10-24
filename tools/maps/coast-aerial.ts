@@ -4,20 +4,21 @@ import type{LayoutAnimatedOverlay,MapLayout,TiledMap}from'./types';
 import type{TileCatalog}from'../art/catalog';
 import{assertAnimatedDecorationSource,assertNativeAnimationSafety}from'./animated-decoration';
 
-/** Original aircraft pixels stay native. This upper-middle beach band (rows
- * 11-13) is mostly shore, not sea:16 naval-water +8 curved-water +7 curved-land
- * +113 sand cells;38 blocked and106 walkable,47 existing prop footprint cells.
- * Avatar foreground (belowAvatar) is therefore
- * mandatory: the aircraft passes under attendees, never over them. No
- * entry/exit/activity/sign is crossed. */
-export const COASTAL_FLIGHT_RECT={x:0,y:11,width:48,height:3}as const;
+/** Original aircraft pixels stay native. This spawn-strip band (rows5-7, just
+ * under the shoreline) is mixed:36 naval-water +26 curved-water +35 curved-land
+ * +47 sand cells;64 blocked and80 walkable,54 existing prop footprint cells. It
+ * crosses the shipyard-entry rows6-7. By the2026-10-24 owner decision the
+ * aircraft is purely visual and drawn above every tile, object and attendee
+ * (contract role 'aircraft'), so that entry overlap is accepted; no sign is
+ * crossed. */
+export const COASTAL_FLIGHT_RECT={x:0,y:5,width:48,height:3}as const;
 const aerialRoles={
  'shipyard-beach':['coastal-flight','coast-life-harbor-gull-north','coast-life-harbor-gull-south'],
  'constellation-shore':['coast-life-shore-gull-north','coast-life-shore-gull-south'],
 }as const;
-// Genuine pre-correction source/native DATA for rows11-13, not hashes from a
+// Genuine pre-correction source/native DATA for rows5-7, not hashes from a
 // candidate being checked: shipyard terrain, props and physical mask unchanged.
-const band={terrain:'aa78aaa63915225a254013ae027e78c3674a537c0f73b4cdbfd8c78a02806c8f',blocked:'c65f15f5761c6a9c90f315be481b7f3b7d4d8911d2fbf1d983643124292b2bd4',props:'6beea084522b08b7aac90871021fa9a38717a35323187d937311960bf5223afb'};
+const band={terrain:'421a5004204b5aaf9df4cf3ea8c7d9c979f1e9e80e3b86bfa61c856ba8ad3d0b',blocked:'8a7b430a8d7ee98e954c79c336ef85559e9b3b68007f00c2c805ce18b73f5f66',props:'295a20b3aea18fe0a8ffc37803895ba7fe8930ab830c6a016d0b694d300961d2'};
 const bandCells=(rows:number)=>({from:COASTAL_FLIGHT_RECT.y*48,to:(COASTAL_FLIGHT_RECT.y+rows)*48});
 const sha=(data:unknown)=>createHash('sha256').update(JSON.stringify(data)).digest('hex');
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Coast aerial '+message);};
@@ -45,7 +46,9 @@ export function assertCoastAerialLayout(layout:MapLayout):void{
  for(const p of layout.placements.filter(p=>p.layer!=='terrain'&&p.sprite!=='beach-sea-veil'))for(let y=Math.max(rect.y,p.y);y<Math.min(rect.y+3,p.y+p.height);y++)for(let x=p.x;x<p.x+p.width;x++)propCells.add(y*48+x);
  need(sha([...propCells].sort((a,b)=>a-b).map(i=>[i%48,Math.floor(i/48)]))===band.props,'genuine flight-band prop footprint changed');
  const overlap=(p:{x:number;y:number;width:number;height:number})=>p.x<48&&p.x+p.width>0&&p.y<rect.y+3&&p.y+p.height>rect.y;
- need(![...layout.entries,...layout.exits,...layout.areas,...layout.signs??[]].some(overlap),'aircraft crosses an entry/exit/activity/sign footprint');
+ // The2026-10-24 owner decision supersedes the former entry/exit/activity ban for
+ // the aircraft only (it draws above everything); standing labels stay clear.
+ need(!(layout.signs??[]).some(overlap),'aircraft crosses a sign footprint');
 }
 /** Current boundary also binds physical DATA and avatar depth; full native
  * envelopes/atlas/frame/order parity remains owned by native-projection.ts. */
