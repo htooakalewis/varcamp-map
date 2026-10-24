@@ -12701,7 +12701,7 @@
     },
     {
       "id": "expo-west-north-side-40",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 40,
       "y": 73,
@@ -12728,7 +12728,7 @@
     },
     {
       "id": "expo-west-north-side-47",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 47,
       "y": 73,
@@ -12755,7 +12755,7 @@
     },
     {
       "id": "expo-west-north-side-54",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 54,
       "y": 73,
@@ -12782,7 +12782,7 @@
     },
     {
       "id": "expo-west-north-side-61",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 61,
       "y": 73,
@@ -12809,32 +12809,30 @@
     },
     {
       "id": "expo-n1-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 41,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n1-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 46,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n1-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 41,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n1-sticker-0",
@@ -12888,7 +12886,8 @@
       "x": 41,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n1-balloons-1",
@@ -12897,21 +12896,21 @@
       "x": 46,
       "y": 78,
       "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-n2-wall-0",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 48,
-      "y": 73,
-      "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
+      "id": "expo-n2-wall-0",
+      "sprite": "expo-wall-navy",
+      "layer": "props",
+      "x": 48,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "expo-n2-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 53,
       "y": 73,
@@ -12923,9 +12922,9 @@
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 48,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n2-sticker-0",
@@ -12979,7 +12978,8 @@
       "x": 48,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n2-balloons-1",
@@ -12988,36 +12988,35 @@
       "x": 53,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n3-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 55,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n3-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 60,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n3-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 55,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n3-sticker-0",
@@ -13071,7 +13070,8 @@
       "x": 55,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n3-balloons-1",
@@ -13080,11 +13080,12 @@
       "x": 60,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-east-north-side-66",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 66,
       "y": 73,
@@ -13111,7 +13112,7 @@
     },
     {
       "id": "expo-east-north-side-73",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 73,
       "y": 73,
@@ -13138,7 +13139,7 @@
     },
     {
       "id": "expo-east-north-side-80",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 80,
       "y": 73,
@@ -13165,7 +13166,7 @@
     },
     {
       "id": "expo-east-north-side-87",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 87,
       "y": 73,
@@ -13192,7 +13193,7 @@
     },
     {
       "id": "expo-n4-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 67,
       "y": 73,
@@ -13201,22 +13202,21 @@
     },
     {
       "id": "expo-n4-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 72,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 72,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n4-sticker-0",
@@ -13270,7 +13270,8 @@
       "x": 67,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n4-balloons-1",
@@ -13279,11 +13280,12 @@
       "x": 72,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n5-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 74,
       "y": 73,
@@ -13292,22 +13294,21 @@
     },
     {
       "id": "expo-n5-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 79,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 79,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n5-sticker-0",
@@ -13361,7 +13362,8 @@
       "x": 74,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n5-balloons-1",
@@ -13370,11 +13372,12 @@
       "x": 79,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n6-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 81,
       "y": 73,
@@ -13383,22 +13386,21 @@
     },
     {
       "id": "expo-n6-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 86,
       "y": 73,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-n6-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 86,
-      "y": 73,
+      "y": 74,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-n6-sticker-0",
@@ -13452,7 +13454,8 @@
       "x": 81,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n6-balloons-1",
@@ -13461,11 +13464,12 @@
       "x": 86,
       "y": 78,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-west-south-side-40",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 40,
       "y": 83,
@@ -13501,7 +13505,7 @@
     },
     {
       "id": "expo-west-south-side-47",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 47,
       "y": 83,
@@ -13537,7 +13541,7 @@
     },
     {
       "id": "expo-west-south-side-54",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 54,
       "y": 83,
@@ -13573,7 +13577,7 @@
     },
     {
       "id": "expo-west-south-side-61",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 61,
       "y": 83,
@@ -13618,17 +13622,16 @@
     },
     {
       "id": "expo-s1-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 41,
       "y": 87,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-s1-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 46,
       "y": 87,
@@ -13640,9 +13643,9 @@
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 41,
-      "y": 87,
+      "y": 88,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-s1-sticker-0",
@@ -13696,7 +13699,8 @@
       "x": 41,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s1-balloons-1",
@@ -13705,7 +13709,8 @@
       "x": 46,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s2-seal-cap",
@@ -13718,17 +13723,16 @@
     },
     {
       "id": "expo-s2-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 48,
       "y": 87,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-s2-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 53,
       "y": 87,
@@ -13740,9 +13744,9 @@
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 48,
-      "y": 87,
+      "y": 88,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-s2-sticker-0",
@@ -13796,7 +13800,8 @@
       "x": 48,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s2-balloons-1",
@@ -13805,7 +13810,8 @@
       "x": 53,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s3-seal-cap",
@@ -13818,17 +13824,16 @@
     },
     {
       "id": "expo-s3-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 55,
       "y": 87,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-s3-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 60,
       "y": 87,
@@ -13840,9 +13845,9 @@
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 55,
-      "y": 87,
+      "y": 88,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-s3-sticker-0",
@@ -13896,7 +13901,8 @@
       "x": 55,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s3-balloons-1",
@@ -13905,11 +13911,12 @@
       "x": 60,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-east-south-side-66",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 66,
       "y": 83,
@@ -13945,7 +13952,7 @@
     },
     {
       "id": "expo-east-south-side-73",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 73,
       "y": 83,
@@ -13981,7 +13988,7 @@
     },
     {
       "id": "expo-east-south-side-80",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 80,
       "y": 83,
@@ -14017,7 +14024,7 @@
     },
     {
       "id": "expo-east-south-side-87",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 87,
       "y": 83,
@@ -14062,7 +14069,7 @@
     },
     {
       "id": "expo-s4-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 67,
       "y": 87,
@@ -14071,22 +14078,21 @@
     },
     {
       "id": "expo-s4-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 72,
       "y": 87,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-s4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 72,
-      "y": 87,
+      "y": 88,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-s4-sticker-0",
@@ -14140,7 +14146,8 @@
       "x": 67,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s4-balloons-1",
@@ -14149,7 +14156,8 @@
       "x": 72,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s5-seal-cap",
@@ -14162,7 +14170,7 @@
     },
     {
       "id": "expo-s5-wall-0",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 74,
       "y": 87,
@@ -14171,22 +14179,21 @@
     },
     {
       "id": "expo-s5-wall-5",
-      "sprite": "wall-navy",
+      "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 79,
       "y": 87,
       "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "height": 2
     },
     {
       "id": "expo-s5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
       "x": 79,
-      "y": 87,
+      "y": 88,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "expo-s5-sticker-0",
@@ -14240,7 +14247,8 @@
       "x": 74,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s5-balloons-1",
@@ -14249,7 +14257,8 @@
       "x": 79,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s6-seal-cap",
@@ -14312,7 +14321,8 @@
       "x": 81,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-s6-balloons-1",
@@ -14321,7 +14331,8 @@
       "x": 86,
       "y": 82,
       "width": 1,
-      "height": 2
+      "height": 2,
+      "renderRole": "grounded"
     },
     {
       "id": "expo-n1-nameplate-fascia",

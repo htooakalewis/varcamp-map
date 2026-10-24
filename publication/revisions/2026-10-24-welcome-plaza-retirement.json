@@ -22,7 +22,7 @@
     {
       "path": "art/tile-catalog.json",
       "fromSha256": "2085fbbcd9c115d8a536c8f37759921ab697f78186564c2cfe85e17f7cb8262c",
-      "toSha256": "44cc9476f242db3c4a3f8b16e8a591f345996aca159138c40a6c9b19e4c412de",
+      "toSha256": "5c80d4a32481a75d1a89fa7fbcd88003b4f81a7006ce2ab29125a4843c61005a",
       "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor, curved reception desk, welcome board with its two posts and the blue sofa from the overworld, replace the south plaza groves with a rectangular expo hall of twelve identical stalls with nameplates, sponsor and community-hub logo inlays and sticker badges admitted through the expo atlas epoch (closed roster extended by a named reservation family, 4x2 panels, caption family), re-route the guide bots onto the central road and hall aisles (new audited graph), make every coastal gull flight continuous over the ships, tow a sponsor flag behind the seaplane on the shoreline strip above everything, submerge the fish poses, add CC0 placeholder marks for five sponsors and five community hubs plus a sticker tileset, record the live-acceptance documentation fixes, the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication; 2026-10-24."
     },
     {
@@ -52,7 +52,7 @@
     {
       "path": "maps/overworld.tmj",
       "fromSha256": "9c141a299bbd1f6dcb8bbf29466f1fa0b73441d259be9c65f53371ffdefe4be6",
-      "toSha256": "514b545252e899bc4add53a3b5f447dd741909f81a0ab85e4a443353e24d26d6",
+      "toSha256": "20f73c686f4f0dd74d02e42167c509bb4409d130e426ba04f97dc35e0bc80027",
       "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor, curved reception desk, welcome board with its two posts and the blue sofa from the overworld, replace the south plaza groves with a rectangular expo hall of twelve identical stalls with nameplates, sponsor and community-hub logo inlays and sticker badges admitted through the expo atlas epoch (closed roster extended by a named reservation family, 4x2 panels, caption family), re-route the guide bots onto the central road and hall aisles (new audited graph), make every coastal gull flight continuous over the ships, tow a sponsor flag behind the seaplane on the shoreline strip above everything, submerge the fish poses, add CC0 placeholder marks for five sponsors and five community hubs plus a sticker tileset, record the live-acceptance documentation fixes, the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication; 2026-10-24."
     },
     {
@@ -70,7 +70,7 @@
     {
       "path": "maps/preview/overworld.tmj",
       "fromSha256": "84540122405757614b9b9e5c55593cbc2c2915b138c9d1ecef4727247c07c5a5",
-      "toSha256": "412577a45e1845b8510a7afb14bac6146e6833df3e243d252b715d48b4f209be",
+      "toSha256": "15bb6b93fbae0c50a664741833586365388651d9c562fa3409094ce8849bcc3d",
       "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor, curved reception desk, welcome board with its two posts and the blue sofa from the overworld, replace the south plaza groves with a rectangular expo hall of twelve identical stalls with nameplates, sponsor and community-hub logo inlays and sticker badges admitted through the expo atlas epoch (closed roster extended by a named reservation family, 4x2 panels, caption family), re-route the guide bots onto the central road and hall aisles (new audited graph), make every coastal gull flight continuous over the ships, tow a sponsor flag behind the seaplane on the shoreline strip above everything, submerge the fish poses, add CC0 placeholder marks for five sponsors and five community hubs plus a sticker tileset, record the live-acceptance documentation fixes, the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication; 2026-10-24."
     },
     {
@@ -250,7 +250,7 @@
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "768728e52acc2bfbd5a881e81087bab36affb1e57a9743f04eb3bef2fca83f73",
-      "toSha256": "306a7d6d73367a733aaf8793eeaf9fc89f1567bdf8a23719b170eb528f339424",
+      "toSha256": "92ddf5d19d63a867af98fea51f1addc87417a2e474f44f886d06a6a85e1ad19e",
       "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor, curved reception desk, welcome board with its two posts and the blue sofa from the overworld, replace the south plaza groves with a rectangular expo hall of twelve identical stalls with nameplates, sponsor and community-hub logo inlays and sticker badges admitted through the expo atlas epoch (closed roster extended by a named reservation family, 4x2 panels, caption family), re-route the guide bots onto the central road and hall aisles (new audited graph), make every coastal gull flight continuous over the ships, tow a sponsor flag behind the seaplane on the shoreline strip above everything, submerge the fish poses, add CC0 placeholder marks for five sponsors and five community hubs plus a sticker tileset, record the live-acceptance documentation fixes, the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication; 2026-10-24."
     },
     {

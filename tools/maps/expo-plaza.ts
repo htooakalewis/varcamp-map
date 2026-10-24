@@ -20,7 +20,15 @@ import type {LayoutImage,MapLayout,Placement,TileRect,TiledMap,TileLayer} from '
  * three sticker decals along the back wall and a nameplate caption on
  * the back-wall cap row (fascia over blocking posts), rendered by the overworld's own
  * standing-captions atlas. The remaining walls, poster, chair, counter and balloons use
- * atlases the overworld native context already reserves. */
+ * atlases the overworld native context already reserves.
+ * Avatar depth: a woka is drawn about half a tile above its feet, so any above-avatar tile
+ * directly north of a walkable cell covers its upper body. Every wall is therefore the split
+ * `expo-wall-navy` (wall-navy art and support with an explicit upper partition: the cap row
+ * stays above avatars so a woka on the reception row 73 stays behind the wall top; the
+ * blocking face row renders below avatars so a woka on the first interior row, the counter
+ * line, the aisle or the walkway stands in front of it). The nameplate assembly already has
+ * that split (fascia above, posts below). Posters hang on the face row; the balloons, which
+ * stand on walkable cells, are grounded. */
 export const EXPO_PLAZA=Object.freeze({
  /** First expo placement; its presence marks a layout as post-expo. */
  marker:'expo-hall-floor-west',
@@ -68,7 +76,7 @@ export interface ExpoBooth{
   * column beside it, so that stall's chair stands against the back wall instead. */chair:TileRect;
  /** Three sticker decals on the interior row next to the back wall, and their sprites. */stickers:[number,number][];stickerSprites:[ExpoSticker,ExpoSticker,ExpoSticker];
  /** Two balloon bunches on the front corners of the counter line. */balloons:TileRect[];
- /** Framed poster on the back-wall end column opposite the chair (omitted when the nameplate needs the whole wall). */poster:TileRect;
+ /** 1x1 framed poster on the back-wall face row of the end column opposite the chair (omitted when the nameplate needs the whole wall). */poster:TileRect;
  /** Back-wall cells (cap row + face row) and the x of both side-wall columns. */backWall:TileRect;sides:[number,number];
 }
 const r=(x:number,y:number,width:number,height:number):TileRect=>({x,y,width,height});
@@ -88,7 +96,7 @@ function booth(block:'west'|'east',row:'north'|'south',i:number):ExpoBooth{
   logo:r(wide?x0:x0+1,logoY,wide?6:4,2),counter:r(x0+2,north?78:82,2,2),chair:r(m(5),wide?(north?74:86):logoY,1,2),
   stickers:[[m(0),north?75:86],[m(2),north?75:86],[m(4),north?75:86]],stickerSprites:[0,1,2].map(j=>EXPO_PLAZA.stickers[(index+j)%EXPO_PLAZA.stickers.length]) as [ExpoSticker,ExpoSticker,ExpoSticker],
   balloons:[r(x0,north?78:82,1,2),r(x0+5,north?78:82,1,2)],
-  poster:r(m(0),north?73:87,1,2),backWall:r(x0,north?73:87,6,2),sides:[x0-1,x0+6],
+  poster:r(m(0),north?74:88,1,1),backWall:r(x0,north?73:87,6,2),sides:[x0-1,x0+6],
  };
 }
 export const EXPO_BOOTHS:readonly ExpoBooth[]=Object.freeze((['north','south'] as const).flatMap(row=>(['west','east'] as const).flatMap(block=>[0,1,2].map(i=>booth(block,row,i)))));
@@ -115,29 +123,27 @@ export function expoFixtures():ExpoFixtures{
  for(const row of ['north','south'] as const)for(const block of ['west','east'] as const){
   const stalls=EXPO_BOOTHS.filter(b=>b.row===row&&b.block===block),north=row==='north',wallY=north?capRow:83,prefix=`expo-${block}-${row}`;
   // Side walls: three stacked cap/face sprites from the back wall to the row before the counter line.
-  // The wall-navy cap cell is opaque but does not block, so a blocking wall-charcoal terrain cell is
-  // painted under every interior cap (never on the reception cap row 73) to keep the partitions solid.
+  // The cap cell is opaque but does not block, so a blocking wall-charcoal terrain cell is painted
+  // under every interior cap (never on the reception cap row 73) to keep the partitions solid.
   const columns=[...new Set(stalls.flatMap(b=>b.sides))].sort((a,b)=>a-b);
   for(const x of columns){
-   add(`${prefix}-side-${x}`,'wall-navy',r(x,wallY,1,6));
+   add(`${prefix}-side-${x}`,'expo-wall-navy',r(x,wallY,1,6));
    for(const y of north?[75,77]:[83,85,87])add(`${prefix}-seal-${x}-${y}`,'wall-charcoal',r(x,y,1,1),{layer:'terrain'});
   }
   for(const b of stalls){
    const p=`expo-${b.id}`,w=b.backWall,caption=boothNameplate(b),poster=caption.sign.width<w.width;
    if(!north)add(`${p}-seal-cap`,'wall-charcoal',r(w.x,w.y,w.width,1),{layer:'terrain'});
-   // Back wall: the nameplate fascia and posts stand on their columns; the others are wall-navy. The poster
-   // column is a grounded wall segment so the framed poster can hang on it without a second raised plane,
-   // and so is the chair column when a six-column mark pushes the chair against the back wall (its top
-   // cell, which carries the seat graphic, then draws in front of the wall face).
-   const against=b.chair.y===w.y+1;
+   // Back wall: the nameplate fascia and posts stand on their columns; the others are split walls. The
+   // poster and, when a six-column mark pushes it against the back wall, the chair's seat draw over the
+   // below-avatar face row, so neither needs a second raised plane.
    for(let x=w.x;x<w.x+w.width;x++){
     if(x>=caption.face.x&&x<caption.face.x+caption.face.width)continue;
-    add(`${p}-wall-${x-w.x}`,'wall-navy',r(x,w.y,1,2),(poster&&x===b.poster.x)||(against&&x===b.chair.x)?{renderRole:'grounded'}:{});
+    add(`${p}-wall-${x-w.x}`,'expo-wall-navy',r(x,w.y,1,2));
    }
    if(poster)add(`${p}-poster`,'poster-night-city',b.poster);
    b.stickers.forEach(([x,y],n)=>out.push(expoSticker(`${p}-sticker-${n}`,b.stickerSprites[n],x,y)));
    add(`${p}-chair`,'chair-presentation',b.chair);add(`${p}-counter`,'desk-cream',b.counter);
-   b.balloons.forEach((rect,n)=>add(`${p}-balloons-${n}`,'balloons-party',rect));
+   b.balloons.forEach((rect,n)=>add(`${p}-balloons-${n}`,'balloons-party',rect,{renderRole:'grounded'}));
    if(b.mark)images.push(expoLogoImage(b.mark,b.logo.x,b.logo.y));
    captions.push(caption);
   }

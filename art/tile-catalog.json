@@ -505,10 +505,10 @@
   "poster-night-city": {
     "sheet": "assets/tilesets/workadventure/WA_Decoration.png",
     "rect": {
-      "x": 8,
+      "x": 2,
       "y": 2,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     "blockingCells": [],
     "level": "belowAvatar",
@@ -1248,6 +1248,29 @@
       [
         0,
         1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "expo-wall-navy": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "upperCells": [
+      [
+        0,
+        0
       ]
     ],
     "level": "aboveAvatar",

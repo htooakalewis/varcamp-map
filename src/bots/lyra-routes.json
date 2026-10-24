@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "306a7d6d73367a733aaf8793eeaf9fc89f1567bdf8a23719b170eb528f339424",
-      "maps/overworld.tmj": "514b545252e899bc4add53a3b5f447dd741909f81a0ab85e4a443353e24d26d6",
+      "world/layouts/overworld.json": "92ddf5d19d63a867af98fea51f1addc87417a2e474f44f886d06a6a85e1ad19e",
+      "maps/overworld.tmj": "20f73c686f4f0dd74d02e42167c509bb4409d130e426ba04f97dc35e0bc80027",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
@@ -11,13 +11,13 @@
       "tests/helpers/editor-catalog-history.ts": "7fa9ca198b99dbbd188775c70574704ccadbe8a0da2a378c55e82502418608f0",
       "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
       "tests/helpers/physical-prop-contracts.ts": "fe9303aec83aef2ee4148819a237d9cd1f25095205c07057f41c8458da94d32e",
-      "art/tile-catalog.json": "44cc9476f242db3c4a3f8b16e8a591f345996aca159138c40a6c9b19e4c412de",
+      "art/tile-catalog.json": "5c80d4a32481a75d1a89fa7fbcd88003b4f81a7006ce2ab29125a4843c61005a",
       "tools/bots/route-audit.ts": "b7443e9745e1a7f78a03cb6418a37dd9cdf950cda85329f66e6839bd4fd2cfd8",
       "tests/guide-route-audit.test.ts": "b2d6843a91e02196fe6521780f18a4dc31434806ee773c93c07573890edbe4cf",
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15"
     },
     "allowedCellsSha256": "04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9",
-    "geometrySha256": "7486422367aa5c55d1716c8f505a1637b2d22ddabd8aefe4d0c46b2ad0b465cd",
+    "geometrySha256": "7f6ddc2f66f943ed1b27753db637f309a9c19c418ea186fa89220e4ba65fb8b6",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [
