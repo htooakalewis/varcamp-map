@@ -1,6 +1,6 @@
 """Source-verified isolated production entry; this file is externally pinned by Root."""
 import hashlib,json,os,pathlib,platform,signal,stat,sys,time
-SOURCE_MANIFEST_SHA256='6db733e64a4b255ddb08e06cf7cb3e7561773a21163692723e1209febae331c8'
+SOURCE_MANIFEST_SHA256='f7d8746a6343b78805571548705feaf347db1de206699c5fd9a50d158797a4ee'
 FILES={'__init__.py','deadline.py','failure_record.py','owned_client.py','release_binding.py','runtime_predicates.py','service_cli.py','service_contract.py','service_engine.py','service_health.py','service_journal.py','service_operator.py','service_plan.py'}
 INTERPRETER={'executable':'/usr/bin/python3','resolvedExecutable':'/usr/bin/python3.12','executableSha256':'c86f21d0da9290ece2d7d49a3f7ed52aed59cb029abdf0ea25c79634f6cbe960','version':'3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]','versionInfo':[3,12,3,'final',0],'isolated':1,'noSite':1,'dontWriteBytecode':1,'pycachePrefix':None,'platform':'linux','machine':'aarch64','uid':0,'euid':0}
 

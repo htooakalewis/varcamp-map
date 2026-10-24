@@ -7,7 +7,7 @@ from service import release_binding
 from helpers import plan,SOURCE_PATHS
 
 def value():
- p=plan();r=copy.deepcopy(p.release);controller={'url':'https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v='+'2345'*16,'bytes':1,'sha256':'2345'*16}
+ p=plan();r=copy.deepcopy(p.release);controller={'url':'https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js?v='+'2345'*16,'bytes':1,'sha256':'2345'*16}
  rows=[{'kind':'controller',**controller,'status':200},
  {'kind':'app-frontend','url':'https://varcamp.3-1-133-135.sslip.io/assets/main-TEST.js','bytes':12,'sha256':'1234'*16,'status':200},
  {'kind':'iframe-sdk','url':'https://varcamp.3-1-133-135.sslip.io/iframe_api.js','bytes':2,'sha256':'3456'*16,'status':200},

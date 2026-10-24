@@ -61,9 +61,9 @@
       "sha256": "f6396854a32e28adf3e0f9b77203fcb0dde5c06a47fa414ae9017ec05713a523"
     },
     "service/service_plan.py": {
-      "bytes": 9655,
+      "bytes": 9660,
       "mode": 384,
-      "sha256": "cb1fa568d2373ba7a1d04401ed2fc1d175906f88acc7aea3b150aed0043991da"
+      "sha256": "baeff9d8928918daa680633e6fd03b305f72ce7d3a510f0a69cd5c2e3ecdfe6f"
     }
   },
   "scope": "varcamp-guide-service-source-v1"

@@ -4,7 +4,7 @@ import { isAbsolute } from 'node:path';
 
 const moduleSha256 = '2bcaacf2f0d18e9e8167d3cc194b9d8ece68ecbf30b26bc8d3f7dac7c653728c';
 const shared = Object.freeze({ moduleSha256, moduleBytes: 30474,
-  moduleUrl: `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=${moduleSha256}`,
+  moduleUrl: `https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js?v=${moduleSha256}`,
   roomUrl: 'https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam',
 });
 export const profiles = Object.freeze(Object.fromEntries([

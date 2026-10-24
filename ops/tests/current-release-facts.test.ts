@@ -12,17 +12,20 @@ function fixture(){
  put('maps/one.tmj','{}');put('maps/one.wam','{}');
  put('publication/source-manifest.json',JSON.stringify({maps:1,wams:1,extensionInventory:{'ops/example.mjs':'a'.repeat(64)}}));
  put('ops/images.lock.json',JSON.stringify({workadventureSource:'b'.repeat(40)}));put('ops/play-cookie/provenance.json',JSON.stringify({baselineSourceCommit:'b'.repeat(40)}));
- put('.github/workflows/pages.yml',"node-version: '26.11.1'\npath: tiled-1.12.2\nnode-version: '26.11.1'\n");
+ put('.nvmrc','26.11.1\n');put('tools/maps/render.ts',"execFile(resolve('.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer'))\n");
  put('package-lock.json',JSON.stringify({packages:Object.fromEntries(['vite','typescript','vitest','tsx','zod','sharp'].map(key=>['node_modules/'+key,{version:'1.2.3'}]))}));
  return {root,put};
 }
 it('derives facts from the catalog/native pair/manifest and compatible declared pins',()=>{
- const {root,put}=fixture();expect(currentFacts(root)).toMatchObject({mapPairs:1,extensionCount:1,nodeVersion:'26.11.1',workAdventureSource:'b'.repeat(40)});
+ const {root,put}=fixture();expect(currentFacts(root)).toMatchObject({mapPairs:1,extensionCount:1,nodeVersion:'26.11.1',tiledVersion:'1.12.2',workAdventureSource:'b'.repeat(40)});
  put('publication/source-manifest.json',JSON.stringify({maps:2,wams:2,extensionInventory:{}}));expect(()=>currentFacts(root)).toThrow(/map|catalog/i);
 });
-it('rejects split workflow Node pins and mismatched actual hosting provenance',()=>{
- const {root,put}=fixture();put('.github/workflows/pages.yml',"node-version: '26.11.1'\nnode-version: '26.8.2'\npath: tiled-1.12.2\n");expect(()=>currentFacts(root)).toThrow(/Node/);
- put('.github/workflows/pages.yml',"node-version: '26.11.1'\npath: tiled-1.12.2\n");put('ops/play-cookie/provenance.json',JSON.stringify({baselineSourceCommit:'c'.repeat(40)}));expect(()=>currentFacts(root)).toThrow(/WorkAdventure/);
+it('rejects a malformed, empty or multi-line .nvmrc, ambiguous Tiled pins and mismatched actual hosting provenance',()=>{
+ const {root,put}=fixture();put('.nvmrc','');expect(()=>currentFacts(root)).toThrow(/Node/);
+ put('.nvmrc','v26.11.1\n');expect(()=>currentFacts(root)).toThrow(/Node/);
+ put('.nvmrc','26.11.1\n26.8.2\n');expect(()=>currentFacts(root)).toThrow(/Node/);
+ put('.nvmrc','26.11.1\n');put('tools/maps/render.ts','tiled-1.12.2 tiled-1.11.0');expect(()=>currentFacts(root)).toThrow(/Tiled/);
+ put('tools/maps/render.ts','tiled-1.12.2');put('ops/play-cookie/provenance.json',JSON.stringify({baselineSourceCommit:'c'.repeat(40)}));expect(()=>currentFacts(root)).toThrow(/WorkAdventure/);
 });
 it('rejects stale generated facts and missing active links while leaving historical sections alone',()=>{
  const {root,put}=fixture();put('README.md','[Current](docs/current-release-facts.md)');put('docs/dependencies.md','# Dependencies\n\n## Foundation (historical)\n[Old](missing-history.md)\n## Current tools and release\n[Missing](missing-current.md)');

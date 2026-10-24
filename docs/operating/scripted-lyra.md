@@ -7,11 +7,11 @@ Build and verify with:
 ```sh
 npx vitest run tests/lyra-bot.test.ts tests/lyra-bot-personas.test.ts tests/lyra-bot-release.test.ts --maxWorkers=1 --testTimeout=30000
 npm run buildmap
-node publication/verify-source.mjs
+node publication/verify-source.mjs .
 shasum -a 256 dist/bots/lyra.js
 ```
 
-Publication and activation are separate steps. The stable public destination is `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js`. Before activating any release, verify successful full canonical CI and Pages deployment, then compare the exact HTTPS module bytes with the reviewed artifact. A separately reviewed private service installation must establish current status from its exact owned IDs and journal; the public unbound template cannot authorize activation. A build alone is not live acceptance. After those checks, test that two independent visitor sessions observe exactly three distinct moving guides and shared replies. Source tests and a local build do not establish live acceptance.
+Publication and activation are separate steps. The stable public destination is `https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js`, served from the live demo's map storage (see [publication](publication.md)). Before activating any release, confirm the devbox publication completed and the verify-source receipt passed, then compare the exact HTTPS module bytes with the reviewed artifact. A separately reviewed private service installation must establish current status from its exact owned IDs and journal; the public unbound template cannot authorize activation. A build alone is not live acceptance. After those checks, test that two independent visitor sessions observe exactly three distinct moving guides and shared replies. Source tests and a local build do not establish live acceptance.
 
 ## Talk to a nearby guide
 
@@ -37,9 +37,9 @@ Watch the dedicated browser console for `VARCAMP_GUIDE_TERMINAL` structured reco
 
 The [official custom-script guide](https://docs.workadventu.re/admin/bots/custom-script/) describes dedicated headless browsers and a Custom script URL. When the intended world's Bots manager and entitlement are available:
 
-1. Publish the reviewed complete `dist` package on HTTPS, preserving its runtime and source-map assets. Verify that the dedicated `bots/lyra.js` module is self-contained and has no unresolved shared-chunk import before activation.
+1. Publish the reviewed complete `dist` package to the live map storage with the devbox procedure in [publication](publication.md), preserving its runtime and source-map assets. Verify that the dedicated `bots/lyra.js` module is self-contained and has no unresolved shared-chunk import before activation.
 2. Compute the SHA-256 of the exact published `bots/lyra.js` bytes and compare it with the reviewed artifact.
-3. For a Lyra default session, create one bot named `Lyra[BOT]`, choose **Custom script**, and set its script URL to `https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v=<sha256>` using the full verified module SHA-256. The query versions browser caching; it does not validate downloaded bytes. Complete steps 1–2 before activation.
+3. For a Lyra default session, create one bot named `Lyra[BOT]`, choose **Custom script**, and set its script URL to `https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js?v=<sha256>` using the full verified module SHA-256. The query versions browser caching; it does not validate downloaded bytes. Complete steps 1–2 before activation.
 4. Join the current overworld using its native welcome spawn. Keep camera and microphone off. Start one dedicated session per configured persona; Nova and Orion require their matching fixed persona metadata and public names. Hosted metadata configuration remains unverified.
 5. Use two separate visitor sessions to verify one shared avatar, changing positions, targeted Nearby Guides panel replies, escort ownership and retained visitor movement control. Stop through the manager and confirm only Lyra disappears.
 

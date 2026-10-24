@@ -4,7 +4,7 @@ Organiser editing is optional. The maps listed in [current release facts](../cur
 
 Open a root `maps/<id>.tmj` in Tiled 1.12.2. Tiles are orthogonal 32px. Preserve embedded tilesets, boolean `collides`, `floorLayer`, default/named entry layers, exit destinations and inspection objects. Keep named entry/exit rectangles clear and connected. `npm run maps:build` preserves native maps and validates/refreshes their previews. `npm run maps:author` explicitly recompiles hand-composed JSON sources, with a whole-batch native edit guard. Reconcile direct Tiled edits before author compilation; its explicit `--initialize` bypass is only for an intentional backed-up redraw. Edit original SVGs and export with the existing art toolchain; retain source/license/hash records. Avoid changing live organiser metadata by regenerating WAMs and blindly uploading them.
 
-Use the canonical CI Node version in [current release facts](../current-release-facts.md). `npm run buildmap` makes a fresh `dist/` with the catalog map pairs listed in [current release facts](../current-release-facts.md), referenced unchanged atlases, Vite runtime/journal and public credits. The development optimizer remains available for preview; release packaging keeps source tilesets separate with their original embedded credits. `npm test`, `npm run art:check`, `npm run maps:validate`, the pinned full WAM schema check and actual native/browser QA are distinct checks. The package test requires a built `dist/`. The source tree and private files are never the upload root.
+Use the pinned Node version in [current release facts](../current-release-facts.md) (`.nvmrc` carries the same pin). `npm run buildmap` makes a fresh `dist/` with the catalog map pairs listed in [current release facts](../current-release-facts.md), referenced unchanged atlases, Vite runtime/journal and public credits. The development optimizer remains available for preview; release packaging keeps source tilesets separate with their original embedded credits. `npm test`, `npm run art:check`, `npm run maps:validate`, the pinned full WAM schema check and actual native/browser QA are distinct checks. The package test requires a built `dist/`. The source tree and private files are never the upload root.
 
 ## Tiled rendering
 
@@ -26,22 +26,22 @@ The live `varcamp` tree retains legacy previews/rehearsal files separately from 
 After building and verifying locally, prepare a fresh plan:
 
 ```
-python3 ops/release_upload.py prepare --target varcamp-demo --plan .qa/release-YYYYMMDD
+python3 ops/release_upload.py prepare --target varcamp-demo --plan .qa/release-YYYYMMDD --environment /srv/varcamp/private/environment
 ```
 
-For a reviewed native delta, append `--reviewed-wams .qa/reviewed-wams.zip`. Inspect `plan.json`, `baseline.zip`, `release.zip` and `package.zip`. These are different artifacts: the release contains exactly the catalog TMJ/WAM pairs listed in [current facts](../current-release-facts.md), while the upload includes the full retained live tree and deliberately omits preserved WAMs. Readbacks must include all saved WAMs and every retained/new file. Keep a recovery archive and inventory before proceeding.
+For a reviewed native delta, append `--reviewed-wams .qa/reviewed-wams.zip`. Every rebuild moves the WAM `?v=` pins, so an ordinary release first generates that ZIP with `ops/migrate_wam_tokens.py`; see [publication](publication.md) for the complete procedure. Inspect `plan.json`, `baseline.zip`, `release.zip` and `package.zip`. These are different artifacts: the release contains exactly the catalog TMJ/WAM pairs listed in [current facts](../current-release-facts.md), while the upload includes the full retained live tree and deliberately omits preserved WAMs. Readbacks must include all saved WAMs and every retained/new file. Keep a recovery archive and inventory before proceeding.
 
 First perform a normal organiser edit/save/reupload rehearsal in a separately owned sibling namespace, with exact prior absence evidence. Use ordinary login and native editor controls. Wait beyond the 15-second save interval; archive and compare the saved native delta, then upload the preserving package and compare two complete readbacks beyond another interval. Reload and verify the actual editor/attendee view. This demonstrates one quiet normal save scenario, not concurrency or atomicity.
 
 Coordinate a quiet editor window at the concrete prepared-plan checkpoint. Stop changes in the target editor, allow autosave to settle, and confirm the planned baseline still matches. Then run:
 
 ```
-python3 ops/release_upload.py apply --plan .qa/release-YYYYMMDD --quiet-editor-window
+python3 ops/release_upload.py apply --plan .qa/release-YYYYMMDD --environment /srv/varcamp/private/environment --quiet-editor-window
 ```
 
 The command compares the whole live inventory twice 16 seconds apart, aborts on any change, uploads once, and verifies two full delayed archive readbacks. It never silently restores stale WAMs. Reconcile a changed baseline with the organiser and prepare a new plan. Failure after upload may leave a partial tree: preserve current evidence and compare recovery with current editor state before an explicitly reviewed recovery. There is no upload/editor lock, revision check or atomic rollback. Omitted WAMs do not necessarily trigger live refresh; verify a fresh room load and ordinary reload.
 
-Credentials stay in ignored `ops/private/environment` and are read in process memory. Do not put them in command arguments, logs, screenshots or artifacts. Stock `upload-wa-map` sends incompatible Bearer authentication; the project integration uses Basic with normal certificate verification. The old `ops/upload-rehearsal.py` refuses all writes. `npm run upload-only -- prepare ...` delegates to the same guarded planner.
+Credentials stay in `/srv/varcamp/private/environment` (the tool's default is the ignored `ops/private/environment`; pass `--environment` on the devbox) and are read in process memory. Do not put them in command arguments, logs, screenshots or artifacts. Stock `upload-wa-map` sends incompatible Bearer authentication; the project integration uses Basic with normal certificate verification. The old `ops/upload-rehearsal.py` refuses all writes. `npm run upload-only -- prepare ...` delegates to the same guarded planner.
 
 ## Evidence and limits
 

@@ -1,6 +1,6 @@
 # Devbox demo deployment
 
-The [devbox guest demo](https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam) is the Compose project `varcamp` at `/srv/varcamp` on the project's arm64 AWS devbox. It is separate from [GitHub Pages publication](github-publication.md): Pages hosts static map files; the devbox runs the WorkAdventure services (Traefik, play, back, map-storage, icons, redis, postgres, keycloak) that serve the venue.
+The [devbox guest demo](https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam) is the Compose project `varcamp` at `/srv/varcamp` on the project's arm64 AWS devbox. The devbox runs the WorkAdventure services (Traefik, play, back, map-storage, icons, redis, postgres, keycloak) that serve the venue; its `map-storage` service also hosts the published map files described in [publication](publication.md).
 
 The demo is deliberately reachable from the public internet through Traefik with Let's Encrypt certificates. It is the only public service on that box. The map editor stays restricted to the `MAP_EDITOR_ALLOWED_USERS` list; anonymous visitors can walk the maps but cannot edit them.
 
@@ -34,6 +34,10 @@ diff /tmp/deployed.json /tmp/repo.json
 ```
 
 Expected differences: the `play` image line and the `play` volumes block. Anything else is drift and needs either a repository change or a deployed-file correction. `ops/tests/config-isolation.test.ts` pins the `MAP_EDITOR_ALLOWED_USERS` default and override behaviour.
+
+## Publishing maps
+
+Map releases are uploaded from this box straight into the `map-storage` service's `varcamp-demo` directory, served at `https://maps.3-1-133-135.sslip.io/varcamp-demo/`, with the guarded `ops/release_upload.py` tool. The full six-step procedure, its artifacts, the quiet-editor rule and rollback are in [publication](publication.md). The guide module `bots/lyra.js` is served from the same map-storage tree at `https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js`; a map or module change moves its hash, so the guide containers below keep running on their private release pin until it is re-qualified. Credentials for the upload stay in `/srv/varcamp/private/environment`.
 
 ## Guide services
 

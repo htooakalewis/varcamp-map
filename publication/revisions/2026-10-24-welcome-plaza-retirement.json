@@ -5,43 +5,43 @@
       "path": "maps/overworld.tmj",
       "fromSha256": "9c141a299bbd1f6dcb8bbf29466f1fa0b73441d259be9c65f53371ffdefe4be6",
       "toSha256": "63ae2efb649600a8033b8478172e10209462a279966c488a534d6e55c940da21",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "maps/preview/overworld.tmj",
       "fromSha256": "84540122405757614b9b9e5c55593cbc2c2915b138c9d1ecef4727247c07c5a5",
       "toSha256": "d0bfae0063b30697b9c5a728d1877b1be1c2a68f9518b74a052f2ccec2f9cf74",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "tests/campus-decoration.test.ts",
       "fromSha256": "2df4b3a9a36702ca4f372f22fe77002c75d73b993c928ad7d2a6cac05d0cd9b2",
       "toSha256": "7a0ff83a1174f53645a7920b8763a89734a79c1a75ec3c9adb045e151be67635",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "tests/medium-hub.test.ts",
       "fromSha256": "930d77a152ba7bbdb9a1553f23be12030f5f1d70c5bf79c3624f4c1ac7d3a935",
       "toSha256": "887d94a436b204dfb6398186db2a031f6faf1c7b530bbadca4432264a4abca65",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "tests/wayfinding-redraw.test.ts",
       "fromSha256": "58f5c060a6266c1de26563cb25ecec2d2c6de701cd61ebb399bfffacc147e0db",
       "toSha256": "e262e21c6c8f3eccd32c6de47be7006830e5bbd4958df7e8435902451d618391",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "tests/zodiac-wheel.test.ts",
       "fromSha256": "3ca022fa6dd7bf816ecfda6ebba409a3177dad9b724695dd23c38f8992938d2c",
       "toSha256": "6e9bbe13e561e03108395c528973088e0316a3fb2adb84fbadc3dd40090c4c37",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     },
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "768728e52acc2bfbd5a881e81087bab36affb1e57a9743f04eb3bef2fca83f73",
       "toSha256": "6c8ab0338c60a25096414f71ddd88452a33f5a6bafed243c7917d5fb3167e2fe",
-      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default and the opt-in acceptance smoke; 2026-10-24."
+      "reason": "Retire the welcome-plaza directory and position signs, compass marker, wide monitor and curved reception desk from the overworld (45 native cells, 8 source placements, 2 standing signs), re-audit the guide routes (6516 -> 6506 collision cells, geometry re-pinned), record the live-acceptance documentation fixes (guides menu path, 10-character names, .nvmrc), the compose editor-allowlist default, the opt-in acceptance smoke, and the move from GitHub Pages/CI to direct devbox publication (npm run deploy:demo, migrate_wam_tokens, guide module served from map storage); 2026-10-24."
     }
   ]
 }

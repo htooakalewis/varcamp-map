@@ -13,7 +13,7 @@ class InputClosureError(PlanError):
   self.uncertain_fd=fd;self.original=original;self.close_error=close_error;super().__init__('Uncertain private input close; original error retained')
 INPUT_SECONDS=5
 SOURCE_ROWS=(('/opt/lyra/runner.mjs','source'),('/opt/lyra/candidate-render-policy.mjs','source'),('/opt/lyra/config.mjs','source'),('/opt/lyra/evidence.mjs','source'),('/opt/lyra/healthcheck.mjs','source'),('/opt/lyra/browser-session.mjs','source'),('/opt/lyra/node_modules/playwright-core/package.json','sdk-package'),('/opt/lyra/node_modules/playwright-core/browsers.json','sdk-browsers'),('/opt/lyra/node_modules/playwright-core/lib/coreBundle.js','sdk-resolver'))
-PUBLIC_PATTERNS={'controller':r'https://htooayelwinict\.github\.io/varcamp-map/bots/lyra\.js\?v=[a-f0-9]{64}','app-frontend':r'https://varcamp\.3-1-133-135\.sslip\.io/assets/main-[A-Za-z0-9_-]+\.js','iframe-sdk':r'https://varcamp\.3-1-133-135\.sslip\.io/iframe_api\.js','main':r'https://maps\.3-1-133-135\.sslip\.io/varcamp-demo/assets/src-main-[A-Za-z0-9_-]+\.js','GameManager':r'https://varcamp\.3-1-133-135\.sslip\.io/assets/GameManager-[A-Za-z0-9_-]+\.js'}
+PUBLIC_PATTERNS={'controller':r'https://maps\.3-1-133-135\.sslip\.io/varcamp-demo/bots/lyra\.js\?v=[a-f0-9]{64}','app-frontend':r'https://varcamp\.3-1-133-135\.sslip\.io/assets/main-[A-Za-z0-9_-]+\.js','iframe-sdk':r'https://varcamp\.3-1-133-135\.sslip\.io/iframe_api\.js','main':r'https://maps\.3-1-133-135\.sslip\.io/varcamp-demo/assets/src-main-[A-Za-z0-9_-]+\.js','GameManager':r'https://varcamp\.3-1-133-135\.sslip\.io/assets/GameManager-[A-Za-z0-9_-]+\.js'}
 def need(ok,reason):
  if not ok:raise PlanError(reason)
 def digest(raw):return hashlib.sha256(raw).hexdigest()
@@ -59,7 +59,7 @@ def _load_bound(directory,manifest_sha):
  release=value['release'];need(type(release)is dict and set(release)=={'room','image','imageConfigSha256','imageEnv','imageLabels','controller','public','app','executingSources','sources','native'}and release['room']==ROOM,'Closed fixed guide release')
  need(type(release['image'])is str and re.fullmatch('sha256:[a-f0-9]{64}',release['image']),'Immutable final image')
  need(type(release['controller'])is dict and set(release['controller'])=={'url','bytes','sha256'},'Controller pin')
- need(release['controller']['url']=='https://htooayelwinict.github.io/varcamp-map/bots/lyra.js?v='+release['controller']['sha256'],'Fixed current controller URL')
+ need(release['controller']['url']=='https://maps.3-1-133-135.sslip.io/varcamp-demo/bots/lyra.js?v='+release['controller']['sha256'],'Fixed current controller URL')
  need(pin(release['imageConfigSha256']),'Actual image full Config pin')
  need(type(release['public'])is list and len(release['public'])==5 and all(type(x)is dict and set(x)=={'kind','url','bytes','sha256','status'}for x in release['public'])and {x['kind']for x in release['public']}==set(PUBLIC_PATTERNS),'Actual five closed public bodies')
  for row in release['public']:

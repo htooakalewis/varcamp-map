@@ -28,13 +28,14 @@ it('partitions every test in the owned roots between actual Vitest discovery and
   for (const path of native) expect(readFileSync(join(root, path), 'utf8')).toMatch(/from\s*['"]node:test['"]/);
 });
 
-it('runs native Node suites explicitly in canonical CI while preserving npm test argument forwarding', () => {
+it('runs native Node suites explicitly before Vitest in the devbox deploy script while preserving npm test argument forwarding', () => {
   const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
   expect(pkg.scripts.test).toBe('vitest run');
   expect(pkg.scripts['test:node']).toBe('node --test ops/tests/*.test.mjs');
-  const workflow = readFileSync(join(root, '.github/workflows/pages.yml'), 'utf8');
-  const native = workflow.indexOf('run: npm run test:node');
-  const vitest = workflow.indexOf('run: npm test -- --maxWorkers=1 --testTimeout=30000');
+  expect(pkg.scripts['deploy:demo']).toBe('bash ops/deploy-demo.sh');
+  const deploy = readFileSync(join(root, 'ops/deploy-demo.sh'), 'utf8');
+  const native = deploy.indexOf('npm run test:node');
+  const vitest = deploy.indexOf('npm test -- --maxWorkers=1 --testTimeout=30000');
   expect(native).toBeGreaterThan(-1);
   expect(vitest).toBeGreaterThan(native);
 });
