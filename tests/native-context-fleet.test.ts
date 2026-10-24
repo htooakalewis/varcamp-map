@@ -12,7 +12,8 @@ beforeAll(()=>{
  // The fleet policy is pinned on the pre-expo closure: the hall's logo inlays, sticker decals and nameplate captions
  // (the expo reservation family admitted after the fleet) are left out of this source.
  const layout=read('world/layouts/overworld.json'),nameplate=(id:string)=>/^expo-[ns]\d-nameplate/.test(id);
- layout.images=layout.images.filter((i:{name:string})=>!i.name.startsWith('Expo / '));layout.placements=layout.placements.filter((p:{id:string;sprite:string})=>!p.sprite.startsWith('sticker-')&&!nameplate(p.id));
+ // The brand assets (the court fountain and the road lamps, admitted after the expo family) are left out too.
+ layout.images=layout.images.filter((i:{name:string})=>!i.name.startsWith('Expo / '));layout.placements=layout.placements.filter((p:{id:string;sprite:string})=>!p.sprite.startsWith('sticker-')&&!nameplate(p.id)&&!['plaza-fountain','plaza-lamp'].includes(p.sprite));
  layout.signs=layout.signs.filter((s:{name:string})=>!nameplate(s.name));layout.standingSigns=layout.standingSigns.filter((s:{face:string})=>!nameplate(s.face));
  source=buildMap(layout,read('art/tile-catalog.json')).tmj;
  native=read('maps/overworld.tmj');native.tilesets=structuredClone(registered.maps.overworld.atlases);

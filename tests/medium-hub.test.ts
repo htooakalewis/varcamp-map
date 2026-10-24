@@ -64,8 +64,8 @@ describe('medium authored arrival',()=>{
   // Conservatively use30×16 tiles and reserve1tile above/sides plus2tiles below for normal HUD.
   const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!;
   const arrows=[{name:'north',x:post.x+1.5,y:post.y,width:3,height:1},{name:'west',x:post.x,y:post.y+1,width:3,height:1},{name:'east',x:post.x+3,y:post.y+1,width:3,height:1},{name:'south',x:post.x+1.5,y:post.y+2,width:3,height:1}];
-  // The ten expo booth logos live in the hall band south of the first viewport; only the arrival inlays must be in view.
-  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=[...arrival,...arrows];expect(l.images).toHaveLength(14);expect(arrival).toHaveLength(4);
+  // The eleven expo booth logos live in the hall band south of the first viewport; only the arrival inlays must be in view.
+  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=[...arrival,...arrows];expect(l.images).toHaveLength(15);expect(arrival).toHaveLength(4);
   const supportIds=sponsorSupportIds(l,loadTileCatalog());
   assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);

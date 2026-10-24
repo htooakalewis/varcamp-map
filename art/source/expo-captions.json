@@ -102,10 +102,10 @@
       "face": "expo-s1-nameplate-fascia",
       "sign": {
         "name": "expo-s1-nameplate",
-        "text": "CODE CIRCLE",
-        "x": 42,
+        "text": "AWS UG MYANMAR",
+        "x": 41,
         "y": 87,
-        "width": 4,
+        "width": 6,
         "height": 1,
         "fontSize": 18,
         "color": "#f1d9a0",
@@ -118,10 +118,10 @@
       "face": "expo-s2-nameplate-fascia",
       "sign": {
         "name": "expo-s2-nameplate",
-        "text": "DESIGN GUILD",
-        "x": 49,
+        "text": "BSIDES MYANMAR",
+        "x": 48,
         "y": 87,
-        "width": 4,
+        "width": 6,
         "height": 1,
         "fontSize": 18,
         "color": "#f1d9a0",
@@ -134,7 +134,7 @@
       "face": "expo-s3-nameplate-fascia",
       "sign": {
         "name": "expo-s3-nameplate",
-        "text": "DATA CLUB",
+        "text": "OPENINFRA MM",
         "x": 56,
         "y": 87,
         "width": 4,
@@ -150,7 +150,7 @@
       "face": "expo-s4-nameplate-fascia",
       "sign": {
         "name": "expo-s4-nameplate",
-        "text": "GAME JAM",
+        "text": "CODE CIRCLE",
         "x": 68,
         "y": 87,
         "width": 4,
@@ -166,7 +166,7 @@
       "face": "expo-s5-nameplate-fascia",
       "sign": {
         "name": "expo-s5-nameplate",
-        "text": "OPEN SOURCE",
+        "text": "DESIGN GUILD",
         "x": 75,
         "y": 87,
         "width": 4,
@@ -196,6 +196,6 @@
   ],
   "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
   "producerSha256": "d9f65a8d2728e6c0d71549e3057f337c6c5fea4133a07d347c6526cc01818526",
-  "svgSha256": "4c554f8984df07b5465b1bf157f207c6234f2c11a8da66206813116f05df58fe",
-  "pngSha256": "10348e48197c6b2248c0e7ad1093ad47beaebffae97803f7cbbc75c6f83aab70"
+  "svgSha256": "e169fa009eae605da921a209d1f1a5dc6d4ab0bc3cf291bb39fd559d1e577e58",
+  "pngSha256": "aa8c8b93e8617916167d3da6cdc4d2739f52cc3e24a3d3009b4d2de1bea5bfd2"
 }

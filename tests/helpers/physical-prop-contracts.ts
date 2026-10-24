@@ -46,18 +46,19 @@ export function assertRaisedSponsorFootprints(layout:MapLayout,catalog:TileCatal
  }
 }
 export function sponsorSupportIds(layout:MapLayout,catalog:TileCatalog):Set<string>{
- validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,14,'Exactly three sponsors, ten expo booth logos and the event floor identity');
+ validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,15,'Exactly three sponsors, eleven expo booth logos and the event floor identity');
  assert.ok(layout.images!.every(i=>i.standing===false),'Every current logo is an explicit floor inlay');
  assert.ok(!layout.standingSigns?.some(s=>s.faceKind==='image'||s.face==='varcamp-nameplate'),'Floor logos have no standing assemblies');
  assert.ok(!layout.placements.some(p=>/^standing-sponsor-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id)),'Retired logo posts/brand board remain');
  return new Set();
 }
-/** The ten expo booth logos on the six-wide carpet reserves of the stalls n1-n5 and s1-s5
+/** The eleven expo booth logos on the six-wide carpet reserves of the stalls n1-n6 and s1-s5
  * (tools/maps/expo-plaza.ts): the two admitted 6x2 marks fill DEMO ORBIT and DEMO ATLAS, every
- * other stall centres its 4x2 mark; the INFO DESK and YOUR LOGO HERE stalls have none. */
+ * other stall centres its 4x2 mark; the INFO DESK carries the owner-provided VarCamp lockup, s1-s3
+ * the three owner-provided community partner marks; only the YOUR LOGO HERE stall has none. */
 export const expoBoothLogos=[
- ['Expo / Demo Orbit','demo-01',41,76,6],['Expo / Demo Nova Compact','demo-02-compact',49,76,4],['Expo / Demo Atlas','demo-03',55,76,6],['Expo / Demo Vector','demo-04',68,76,4],['Expo / Demo Lumen','demo-05',75,76,4],
- ['Expo / Code Circle','hub-01',42,84,4],['Expo / Design Guild','hub-02',49,84,4],['Expo / Data Club','hub-03',56,84,4],['Expo / Game Jam','hub-04',68,84,4],['Expo / Open Source','hub-05',75,84,4],
+ ['Expo / Demo Orbit','demo-01',41,76,6],['Expo / Demo Nova Compact','demo-02-compact',49,76,4],['Expo / Demo Atlas','demo-03',55,76,6],['Expo / Demo Vector','demo-04',68,76,4],['Expo / Demo Lumen','demo-05',75,76,4],['Expo / VarCamp','varcamp-horizontal',82,76,4],
+ ['Expo / AWS User Group Myanmar','partner-aws-ug-mm',42,84,4],['Expo / BSides Myanmar','partner-bsides-mm',49,84,4],['Expo / OpenInfra User Group Myanmar','partner-openinfra-mm',56,84,4],['Expo / Code Circle','hub-01',68,84,4],['Expo / Design Guild','hub-02',75,84,4],
 ].map(([name,file,x,y,width])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:Number(width),height:2,standing:false}));
 /** Current floor representation has no physical posts; every actual cell must remain visible and connected. */
 export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map:TiledMap):void{

@@ -54,9 +54,12 @@ export const EXPO_PLAZA=Object.freeze({
  floor:'floor-charcoal',carpet:{sponsor:'floor-cosmic',hub:'floor-wood'} as Record<'sponsor'|'hub',string>,
  /** Registered booth mark per stall (tools/maps/native-ownership-context.ts EXPO_MARKS): the two admitted
   * 6x2 marks fill the six-wide reserve of DEMO ORBIT and DEMO ATLAS, every other stall takes its 4x2 mark.
-  * The expo family admits every mark at most once and registers no 4x2 VarCamp mark, so the INFO DESK (n6)
-  * and the YOUR LOGO HERE (s6) stalls carry a nameplate over an empty carpet reserve. */
- marks:{n1:'demo-01',n2:'demo-02-compact',n3:'demo-03',n4:'demo-04',n5:'demo-05',s1:'hub-01',s2:'hub-02',s3:'hub-03',s4:'hub-04',s5:'hub-05'} as Readonly<Record<string,ExpoMarkId|undefined>>,
+  * The three owner-provided community partner marks (AWS User Group Myanmar, BSides Myanmar, OpenInfra
+  * User Group Myanmar) take the first three hub stalls, the VarCamp lockup marks the INFO DESK (n6), and
+  * the two better generic placeholders (CODE CIRCLE, DESIGN GUILD) move to s4 and s5. The expo family
+  * admits every mark at most once, so only the YOUR LOGO HERE (s6) stall carries a nameplate over an
+  * empty carpet reserve. */
+ marks:{n1:'demo-01',n2:'demo-02-compact',n3:'demo-03',n4:'demo-04',n5:'demo-05',n6:'varcamp-horizontal',s1:'partner-aws-ug-mm',s2:'partner-bsides-mm',s3:'partner-openinfra-mm',s4:'hub-01',s5:'hub-02'} as Readonly<Record<string,ExpoMarkId|undefined>>,
  /** Nameplate fit policy: the narrowest even width whose 18px glyphs fit, so the plate stays centred on
   * the six-column back wall: four tiles between the end columns, or the whole wall (that stall hangs
   * no poster). */
@@ -80,7 +83,10 @@ export interface ExpoBooth{
  /** Back-wall cells (cap row + face row) and the x of both side-wall columns. */backWall:TileRect;sides:[number,number];
 }
 const r=(x:number,y:number,width:number,height:number):TileRect=>({x,y,width,height});
-const NAMES={north:['DEMO ORBIT','DEMO NOVA','DEMO ATLAS','DEMO VECTOR','DEMO LUMEN','INFO DESK'],south:['CODE CIRCLE','DESIGN GUILD','DATA CLUB','GAME JAM','OPEN SOURCE','YOUR LOGO HERE']};
+/** Nameplate texts. AWS UG MYANMAR and BSIDES MYANMAR exceed the four-tile ink limit of the fit policy
+ * (so would the AWS USER GROUP fallback), so those two plates take the whole wall like YOUR LOGO HERE;
+ * OPENINFRA MM fits four tiles. */
+const NAMES={north:['DEMO ORBIT','DEMO NOVA','DEMO ATLAS','DEMO VECTOR','DEMO LUMEN','INFO DESK'],south:['AWS UG MYANMAR','BSIDES MYANMAR','OPENINFRA MM','CODE CIRCLE','DESIGN GUILD','YOUR LOGO HERE']};
 /** Geometry of one stall. West stalls put the poster on the left end column and the chair on
  * the right; east stalls are their mirror image about the road centre (x63.5), so a visitor
  * walking either aisle sees six identical fronts per block. North stalls: cap row 73, wall

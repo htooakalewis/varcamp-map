@@ -15,7 +15,7 @@ const base=():MapLayout=>({id:'overworld',width:40,height:24,placements:[{id:'fl
 afterEach(()=>process.chdir(project));
 describe('expo logo inlays',()=>{
  it('returns the registered tileset name, PNG and exact 6×2 or 4×2 floor footprint for every mark',()=>{
-  expect(EXPO_MARK_IDS).toHaveLength(12);
+  expect(EXPO_MARK_IDS).toHaveLength(16);
   for(const id of EXPO_MARK_IDS){const image=expoLogoImage(id,3,5);expect(image).toEqual({name:EXPO_MARKS[id].name,image:`assets/sponsors/${id}.png`,x:3,y:5,width:EXPO_MARKS[id].columns,height:2,standing:false});expect(existsSync(image.image)).toBe(true);}
   expect(EXPO_MARK_IDS.filter(id=>EXPO_MARKS[id].columns===6)).toEqual(['demo-01','demo-03']);
   expect(()=>expoLogoImage('demo-02' as never,0,0)).toThrow(/unregistered/i);

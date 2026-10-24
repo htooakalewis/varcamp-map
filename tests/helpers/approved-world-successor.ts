@@ -31,6 +31,22 @@ export const approvedExpoStaticRows:Record<string,number>={'art/source/booth-sti
 export const approvedExpoCaptionRows:Record<string,number>={'art/source/expo-captions.json':28,'art/source/expo-captions.svg':29,'assets/tilesets/original/expo-captions.png':62};
 /** The one sentence the expo epoch appended to the `original` registry's change log. */
 export const approvedExpoRegistryNote=' Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied.';
+/** The brand epoch (owner-provided 2026 assets): the one registry id added beside the closed `original`
+ * registry, with its complete reviewed metadata and the two native exports it owns. The masters stay
+ * with the organiser; the credit files live in assets/tilesets/varcamp-organiser. */
+export const approvedBrandAssetRegistry={
+ 'varcamp-organiser':{
+  attribution:'Ornate azure fountain and lamp post pixel illustrations supplied by the VarCamp Myanmar 2026 organiser (varcamp2026_assets drop, 2026-10-22); native 32px exports by the VarCamp map team',
+  url:'https://var.camp/',
+  license:'Supplied by the VarCamp organiser for the 2026 event; event-use permission, all rights retained by the owner; not CC0',
+  licenseFile:'assets/tilesets/varcamp-organiser/LICENSE.txt',
+  changes:'Alpha-bounding-box crop and aspect-preserving Lanczos3 downscale of the supplied masters to the native tile footprint (fountain 128x96 / 4x3 tiles, lamp 32x96 / 1x3 tiles), centred on the transparent grid, alpha thresholded to binary. Master hashes are recorded in ATTRIBUTION.md; the masters are not redistributed. No other registry row changed.',
+  files:[
+   {path:'assets/tilesets/original/plaza-fountain.png',sha256:'cec850cca9c6f9e1e2c523314105dc201500d8009db29e15022e8fc382d97af4'},
+   {path:'assets/tilesets/original/plaza-lamp.png',sha256:'6ef8f70c29743dc6eddf4387f8be88d34505908b353ebdbb52fda9975405fd44'},
+  ],
+ },
+};
 export const approvedBirdRecipePins:Record<string,string>={
  'art/source/coast-life-tracks.json':'bd0dbb1202ccd1e84a89f0e796ab839371f102ebec1de4cb67053c84a190e7f6',
  'art/source/world-ambient.json':'a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7',
@@ -41,7 +57,7 @@ const changes:Record<string,readonly[string,string]>={
  'tools/maps/animated-decoration-contract.json':['0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189','fd6a605e785551d6709e60cd1c2ae5c477e5152169b9ae7e8b78ac4d14f4a4e0'],
  'tools/maps/animated-decoration.ts':['b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf','b4e0788debcb53cbbac97488d88f6da2a3bdf0f0b2d6effe251f8552b4590621'],
  'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48'],
- 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','21609175a04a025098b43eba47480938ef59162c341573f4b88edc4c3b3e51e6'],
+ 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','7b284b0ef575f0b28d922baa72a77494378d1198ab5e345b75cb5da9c36dbfea'],
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],
  'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19'],
  'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb'],

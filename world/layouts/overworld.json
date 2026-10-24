@@ -13621,33 +13621,6 @@
       "height": 1
     },
     {
-      "id": "expo-s1-wall-0",
-      "sprite": "expo-wall-navy",
-      "layer": "props",
-      "x": 41,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-s1-wall-5",
-      "sprite": "expo-wall-navy",
-      "layer": "props",
-      "x": 46,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-s1-poster",
-      "sprite": "poster-night-city",
-      "layer": "props",
-      "x": 41,
-      "y": 88,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-s1-sticker-0",
       "sprite": "sticker-star",
       "layer": "props",
@@ -13719,33 +13692,6 @@
       "x": 48,
       "y": 87,
       "width": 6,
-      "height": 1
-    },
-    {
-      "id": "expo-s2-wall-0",
-      "sprite": "expo-wall-navy",
-      "layer": "props",
-      "x": 48,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-s2-wall-5",
-      "sprite": "expo-wall-navy",
-      "layer": "props",
-      "x": 53,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-s2-poster",
-      "sprite": "poster-night-city",
-      "layer": "props",
-      "x": 48,
-      "y": 88,
-      "width": 1,
       "height": 1
     },
     {
@@ -14608,16 +14554,16 @@
       "id": "expo-s1-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 42,
+      "x": 41,
       "y": 87,
-      "width": 4,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s1-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 42,
+      "x": 41,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14626,7 +14572,7 @@
       "id": "expo-s1-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 43,
+      "x": 42,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14635,7 +14581,7 @@
       "id": "expo-s1-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 44,
+      "x": 43,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14644,7 +14590,25 @@
       "id": "expo-s1-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
+      "x": 44,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-4",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
       "x": 45,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s1-nameplate-fascia-post-5",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 46,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14653,16 +14617,16 @@
       "id": "expo-s2-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 49,
+      "x": 48,
       "y": 87,
-      "width": 4,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s2-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 49,
+      "x": 48,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14671,7 +14635,7 @@
       "id": "expo-s2-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 50,
+      "x": 49,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14680,7 +14644,7 @@
       "id": "expo-s2-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 51,
+      "x": 50,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14689,7 +14653,25 @@
       "id": "expo-s2-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
+      "x": 51,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-4",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
       "x": 52,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s2-nameplate-fascia-post-5",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 53,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14891,6 +14873,69 @@
       "y": 88,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "plaza-fountain",
+      "sprite": "plaza-fountain",
+      "x": 49,
+      "y": 70,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "plaza-lamp-62-74",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 62,
+      "y": 72,
+      "width": 1,
+      "height": 3
+    },
+    {
+      "id": "plaza-lamp-62-79",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 62,
+      "y": 77,
+      "width": 1,
+      "height": 3
+    },
+    {
+      "id": "plaza-lamp-62-84",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 62,
+      "y": 82,
+      "width": 1,
+      "height": 3
+    },
+    {
+      "id": "plaza-lamp-65-74",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 65,
+      "y": 72,
+      "width": 1,
+      "height": 3
+    },
+    {
+      "id": "plaza-lamp-65-79",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 65,
+      "y": 77,
+      "width": 1,
+      "height": 3
+    },
+    {
+      "id": "plaza-lamp-65-84",
+      "sprite": "plaza-lamp",
+      "layer": "props",
+      "x": 65,
+      "y": 82,
+      "width": 1,
+      "height": 3
     },
     {
       "id": "aries-zodiac-threshold",
@@ -16794,10 +16839,10 @@
     },
     {
       "name": "expo-s1-nameplate",
-      "text": "CODE CIRCLE",
-      "x": 42,
+      "text": "AWS UG MYANMAR",
+      "x": 41,
       "y": 87,
-      "width": 4,
+      "width": 6,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16806,10 +16851,10 @@
     },
     {
       "name": "expo-s2-nameplate",
-      "text": "DESIGN GUILD",
-      "x": 49,
+      "text": "BSIDES MYANMAR",
+      "x": 48,
       "y": 87,
-      "width": 4,
+      "width": 6,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16818,7 +16863,7 @@
     },
     {
       "name": "expo-s3-nameplate",
-      "text": "DATA CLUB",
+      "text": "OPENINFRA MM",
       "x": 56,
       "y": 87,
       "width": 4,
@@ -16830,7 +16875,7 @@
     },
     {
       "name": "expo-s4-nameplate",
-      "text": "GAME JAM",
+      "text": "CODE CIRCLE",
       "x": 68,
       "y": 87,
       "width": 4,
@@ -16842,7 +16887,7 @@
     },
     {
       "name": "expo-s5-nameplate",
-      "text": "OPEN SOURCE",
+      "text": "DESIGN GUILD",
       "x": 75,
       "y": 87,
       "width": 4,
@@ -16939,9 +16984,45 @@
       "standing": false
     },
     {
+      "name": "Expo / VarCamp",
+      "image": "assets/sponsors/varcamp-horizontal.png",
+      "x": 82,
+      "y": 76,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / AWS User Group Myanmar",
+      "image": "assets/sponsors/partner-aws-ug-mm.png",
+      "x": 42,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / BSides Myanmar",
+      "image": "assets/sponsors/partner-bsides-mm.png",
+      "x": 49,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Expo / OpenInfra User Group Myanmar",
+      "image": "assets/sponsors/partner-openinfra-mm.png",
+      "x": 56,
+      "y": 84,
+      "width": 4,
+      "height": 2,
+      "standing": false
+    },
+    {
       "name": "Expo / Code Circle",
       "image": "assets/sponsors/hub-01.png",
-      "x": 42,
+      "x": 68,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -16950,33 +17031,6 @@
     {
       "name": "Expo / Design Guild",
       "image": "assets/sponsors/hub-02.png",
-      "x": 49,
-      "y": 84,
-      "width": 4,
-      "height": 2,
-      "standing": false
-    },
-    {
-      "name": "Expo / Data Club",
-      "image": "assets/sponsors/hub-03.png",
-      "x": 56,
-      "y": 84,
-      "width": 4,
-      "height": 2,
-      "standing": false
-    },
-    {
-      "name": "Expo / Game Jam",
-      "image": "assets/sponsors/hub-04.png",
-      "x": 68,
-      "y": 84,
-      "width": 4,
-      "height": 2,
-      "standing": false
-    },
-    {
-      "name": "Expo / Open Source",
-      "image": "assets/sponsors/hub-05.png",
       "x": 75,
       "y": 84,
       "width": 4,
@@ -64688,7 +64742,9 @@
         "expo-s1-nameplate-fascia-post-0",
         "expo-s1-nameplate-fascia-post-1",
         "expo-s1-nameplate-fascia-post-2",
-        "expo-s1-nameplate-fascia-post-3"
+        "expo-s1-nameplate-fascia-post-3",
+        "expo-s1-nameplate-fascia-post-4",
+        "expo-s1-nameplate-fascia-post-5"
       ],
       "text": "expo-s1-nameplate"
     },
@@ -64698,7 +64754,9 @@
         "expo-s2-nameplate-fascia-post-0",
         "expo-s2-nameplate-fascia-post-1",
         "expo-s2-nameplate-fascia-post-2",
-        "expo-s2-nameplate-fascia-post-3"
+        "expo-s2-nameplate-fascia-post-3",
+        "expo-s2-nameplate-fascia-post-4",
+        "expo-s2-nameplate-fascia-post-5"
       ],
       "text": "expo-s2-nameplate"
     },

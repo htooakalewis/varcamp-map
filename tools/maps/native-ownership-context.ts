@@ -35,7 +35,36 @@ export const EXPO_MARKS=Object.freeze({
  'hub-03':{name:'Expo / Data Club',columns:4},
  'hub-04':{name:'Expo / Game Jam',columns:4},
  'hub-05':{name:'Expo / Open Source',columns:4},
+ // Owner-provided 2026 marks (art/sponsors.json, kind community-partner / event identity): the
+ // three community partner hubs and the VarCamp lockup of the INFO DESK stall.
+ 'partner-aws-ug-mm':{name:'Expo / AWS User Group Myanmar',columns:4},
+ 'partner-bsides-mm':{name:'Expo / BSides Myanmar',columns:4},
+ 'partner-openinfra-mm':{name:'Expo / OpenInfra User Group Myanmar',columns:4},
+ 'varcamp-horizontal':{name:'Expo / VarCamp',columns:4},
 }as Record<string,{name:string;columns:6|4}>);
+/** The third reviewed reservation family: the owner-provided brand assets of the welcome
+ * court and the expo hall road (tools/maps/brand-assets.ts). Exactly these two ordinary art
+ * atlases may join the overworld after the expo family, each at most once, in current source
+ * order, under the native names below with the registered image and geometry: the 4x3 plaza
+ * fountain sprite sheet and the 1x3 lamp post sheet. Nothing else may be appended. */
+export const BRAND_ATLASES=Object.freeze({
+ 'plaza-fountain':{image:'../assets/tilesets/original/plaza-fountain.png',imagewidth:128,imageheight:96,columns:4,tilecount:12},
+ 'plaza-lamp':{image:'../assets/tilesets/original/plaza-lamp.png',imagewidth:32,imageheight:96,columns:1,tilecount:3},
+}as Record<string,{image:string;imagewidth:number;imageheight:number;columns:number;tilecount:number}>);
+const brandAtlasByImage=new Map(Object.entries(BRAND_ATLASES).map(([name,atlas])=>[atlas.image,{...atlas,name}]));
+/** Brand family membership is decided by the registered PNG identity only (an ordinary `art-N`
+ * source atlas, or the native atlas carrying the registered name); no other atlas may use it. */
+const brandMember=(set:TiledTileset)=>brandAtlasByImage.get(set.image??'');
+function brandAtlases(source:TiledMap,start:number):TiledTileset[]{
+ const seen=new Set<string>(),result:TiledTileset[]=[];let next=start;
+ for(const set of source.tilesets){
+  const atlas=brandMember(set);if(!atlas)continue;
+  need(!seen.has(atlas.name),'brand asset source atlas duplicated: '+atlas.name);seen.add(atlas.name);
+  need(/^art-\d+$/.test(set.name??'')&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===atlas.columns&&set.tilecount===atlas.tilecount&&set.imagewidth===atlas.imagewidth&&set.imageheight===atlas.imageheight&&!set.tiles,'brand asset atlas identity/geometry leaves its registered reservation: '+atlas.name);
+  result.push({...structuredClone(set),firstgid:next,name:atlas.name});next+=set.tilecount!;
+ }
+ return result;
+}
 export const EXPO_STICKER_ATLAS=Object.freeze({name:'booth-stickers',image:'../assets/tilesets/original/booth-stickers.png',imagewidth:192,imageheight:32,columns:6,tilecount:6});
 export const EXPO_CAPTION_ATLAS=Object.freeze({name:'standing-captions',image:'../assets/tilesets/original/expo-captions.png',imagewidth:512,columns:16,maxImageHeight:192});
 const expoMarkByName=new Map(Object.entries(EXPO_MARKS).map(([file,mark])=>[mark.name,{...mark,image:`../assets/sponsors/${file}.png`}]));
@@ -93,7 +122,11 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  need(isDeepStrictEqual(actual.layers.filter(l=>l.type!=='tilelayer'&&l.name!=='floorLayer'),row.protectedLayers),'protected nonfloor layer bodies/roster changed');
  need(isDeepStrictEqual(actual.layers.filter(l=>l.type!=='tilelayer').map(l=>l.name),row.protectedNonfloorOrder),'protected nonfloor order changed');
 }
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:{expo:boolean}={expo:true}):TiledTileset[]{
+/** Reviewed epochs on the overworld, each admitted only after every earlier one: the fleet is
+ * mandatory, the expo family may be absent only together with the brand family. */
+interface Epoch{expo:boolean;brand:boolean}
+const CURRENT:Epoch={expo:true,brand:true},PRE_BRAND:Epoch={expo:true,brand:false},PRE_EXPO:Epoch={expo:false,brand:false};
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -122,9 +155,10 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:{expo:boolean}={exp
    need(set.image===`../assets/tilesets/original/${set.name}.png`&&set.tilewidth===32&&set.tileheight===32&&set.imagewidth===512&&set.columns===16&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&Number.isSafeInteger(set.tilecount)&&set.tilecount===set.imageheight!/32*16&&set.tilecount!<=1024,'plaza fleet source atlas identity/geometry changed');
    expected.push({...structuredClone(set),firstgid:next});next+=set.tilecount!;
   }
-  // Expo epoch: admitted only here, only after every fleet reservation.
+  // Expo epoch: admitted only here, only after every fleet reservation; the brand assets only after it.
   const expo=expoAtlases(source,row,next);if(epoch.expo)expected.push(...expo);
- }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');}
+  const brand=brandAtlases(source,next+expo.reduce((n,set)=>n+set.tilecount!,0));if(epoch.brand)expected.push(...brand);
+ }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');}
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -145,7 +179,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
- // Expo epoch entry: the exact pre-expo current context (every registered and
- // fleet reservation, no expo member) is the only other admitted author input.
- need(isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,{expo:false})),'author input atlas ownership is neither exact registered nor current');
+ // Epoch entry: the exact pre-expo current context (every registered and fleet reservation,
+ // no expo or brand member) and the exact pre-brand context (the complete expo family, no
+ // brand member) are the only other admitted author inputs.
+ need(isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,PRE_BRAND))||isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,PRE_EXPO)),'author input atlas ownership is neither exact registered nor current');
 }

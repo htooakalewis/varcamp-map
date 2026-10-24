@@ -7,6 +7,7 @@ import {isDeepStrictEqual} from 'node:util';
 import {refinePlazaFloorGarden} from '../../tools/maps/plaza-floor-garden';
 import {refineNativePlaza} from '../../tools/maps/plaza-native';
 import {EXPO_PLAZA,applyExpoPlaza,expoFixtures,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
+import {applyBrandAssets,brandAssetPlacements,brandAssetsNative} from '../../tools/maps/brand-assets';
 import {plazaGardenSprites} from '../../tools/art/plaza-garden';
 import {renderRoadster} from '../../tools/art/roadster';
 import {renderPlazaDrones} from '../../tools/art/plaza-drones';
@@ -95,8 +96,10 @@ export const retireWelcomePlazaProps=(layout:MapLayout,native:TiledMap,catalog:T
  * projection of the source delta: every pre-expo atlas and layer stays in place and the
  * expo reservation family (sticker sheet, booth marks, caption atlas) is admitted after
  * the fleet with one panel per logo and one caption layer per nameplate. */
-export const EXPO_PLAZA_PRODUCER_SHA256='42deb837d37ea9bbcfd81a7c9865d81a502744295ccd2aee67fb8594686f2004';
-export const EXPO_PLAZA_COUNTS=Object.freeze({placements:255,images:10,captions:12});
+export const EXPO_PLAZA_PRODUCER_SHA256='11d400811d48b3e47e8f4966ae4b32b7afdee1e1abdb7a514b474ece52471a67';
+/** Brand epoch: eleven logo inlays (the three owner-provided partner marks on s1-s3, the VarCamp lockup
+ * on n6, the generic placeholders on s4-s5) and two six-wide plates fewer posters/more posts. */
+export const EXPO_PLAZA_COUNTS=Object.freeze({placements:253,images:11,captions:12});
 export function applyExpoPlazaSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
  assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),EXPO_PLAZA_PRODUCER_SHA256,'Expo plaza producer changed');
  const fixtures=expoFixtures(),{placements,images,captions}=EXPO_PLAZA_COUNTS;
@@ -137,10 +140,36 @@ export async function expectedPreExpoSuccessor(catalog:TileCatalog):Promise<{lay
   return retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
  })();
 }
-/** One shared actual forward producer transaction for groves/redraw tests. */
-export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+/** Approved owner-provided brand assets, applied after the expo hall: the 4x3 court fountain and six
+ * 1x3 road lamps (seven placements, no image, sign or control). The producer is pinned; the native
+ * delta is exactly the projection of the source delta: every expo-epoch atlas and layer stays in
+ * place and the two brand atlases are admitted after the expo family under their registered names. */
+export const BRAND_ASSETS_PRODUCER_SHA256='ab66e87410ffb7ca0efb71f4328f81553e5b605d5437b5dfaf546f4d22806e90';
+export const BRAND_ASSETS_COUNTS=Object.freeze({placements:7,atlases:['plaza-fountain','plaza-lamp']});
+export function applyBrandAssetsSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
+ assert.equal(createHash('sha256').update(readFileSync('tools/maps/brand-assets.ts')).digest('hex'),BRAND_ASSETS_PRODUCER_SHA256,'Brand assets producer changed');
+ assert.equal(brandAssetPlacements().length,BRAND_ASSETS_COUNTS.placements);
+ const l=applyBrandAssets(layout);
+ assert.equal(l.placements.length,layout.placements.length+BRAND_ASSETS_COUNTS.placements);
+ for(const key of ['images','signs','standingSigns','animatedOverlays'] as const)assert.deepEqual(l[key],layout[key],'Brand assets touch no '+key);
+ const map=brandAssetsNative(native,l,catalog);
+ assert.deepEqual(map.tilesets.slice(0,native.tilesets.length),native.tilesets,'Brand assets must keep every expo-epoch atlas reservation');
+ assert.deepEqual(map.tilesets.slice(native.tilesets.length).map(t=>t.name),BRAND_ASSETS_COUNTS.atlases,'Brand assets admit exactly the two registered atlases after the expo family');
+ assert.equal(map.tilesets[native.tilesets.length].firstgid,Math.max(...native.tilesets.map(t=>t.firstgid+t.tilecount!)));
+ assert.deepEqual(map.layers.map(x=>x.name),native.layers.map(x=>x.name),'Brand assets add no native layer');
+ assert.equal(map.nextlayerid,native.nextlayerid);
+ assertNativeSourceProjection(map,buildMap(l,catalog).tmj);
+ return{layout:l,native:map};
+}
+/** The approved chain up to (excluding) the brand assets: the input of applyBrandAssetsSuccessor. */
+export async function expectedExpoSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  const signs=await expectedPreExpoSuccessor(catalog);
  return applyExpoPlazaSuccessor(signs.layout,signs.native,catalog);
+}
+/** One shared actual forward producer transaction for groves/redraw tests. */
+export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+ const expo=await expectedExpoSuccessor(catalog);
+ return applyBrandAssetsSuccessor(expo.layout,expo.native,catalog);
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

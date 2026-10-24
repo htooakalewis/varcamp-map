@@ -214,6 +214,74 @@
       "permission": "Original fictional community hub placeholder dedicated under CC0; no organization affiliation. Replaceable per docs/operating/sponsors.md; record the replacement owner and terms here.",
       "license": "CC0-1.0",
       "eyebrow": "COMMUNITY HUB"
+    },
+    {
+      "name": "AWS UG MYANMAR",
+      "kind": "community-partner",
+      "image": "assets/sponsors/partner-aws-ug-mm.png",
+      "source": "owner-supplied master varcamp2026_assets/brand/community-aws-user-group-mm.webp (sha256 cac00844342c16b67741edcb1c4fa4e98535d897bacf3b5024fa7ae95a918bbe), not stored in this repository",
+      "size": {
+        "width": 128,
+        "height": 64,
+        "tileWidth": 4,
+        "tileHeight": 2
+      },
+      "owner": "AWS User Group Myanmar",
+      "permission": "Supplied by the VarCamp organiser for the 2026 event; owner-provided mark, rights retained by its owner. Not covered by the CC0 dedication of the original placeholder marks. Replaceable per docs/operating/sponsors.md at the identical path; record any replacement owner and terms here.",
+      "license": "Owner mark; supplied by the VarCamp organiser for the 2026 event; not CC0",
+      "changes": "Transparent-background webp fitted into the 120x56 content box (Lanczos3), centred, no recolouring",
+      "eyebrow": "COMMUNITY PARTNER"
+    },
+    {
+      "name": "BSIDES MYANMAR",
+      "kind": "community-partner",
+      "image": "assets/sponsors/partner-bsides-mm.png",
+      "source": "owner-supplied master varcamp2026_assets/brand/community-bs.webp (sha256 f53a07d5b40f48e30cf5993291283d8cf45b907306519b5d95e29cf341e34a22), not stored in this repository",
+      "size": {
+        "width": 128,
+        "height": 64,
+        "tileWidth": 4,
+        "tileHeight": 2
+      },
+      "owner": "BSides Myanmar",
+      "permission": "Supplied by the VarCamp organiser for the 2026 event; owner-provided mark, rights retained by its owner. Not covered by the CC0 dedication of the original placeholder marks. Replaceable per docs/operating/sponsors.md at the identical path; record any replacement owner and terms here.",
+      "license": "Owner mark; supplied by the VarCamp organiser for the 2026 event; not CC0",
+      "changes": "Transparent-background webp fitted into the 120x56 content box (Lanczos3), centred, no recolouring",
+      "eyebrow": "COMMUNITY PARTNER"
+    },
+    {
+      "name": "OPENINFRA MM",
+      "kind": "community-partner",
+      "image": "assets/sponsors/partner-openinfra-mm.png",
+      "source": "owner-supplied master varcamp2026_assets/brand/community-3.webp (sha256 8c7d151047372e67408a7bd0f93ca53d2aa7e0ec9df77ec4a655f0158c3bd143), not stored in this repository",
+      "size": {
+        "width": 128,
+        "height": 64,
+        "tileWidth": 4,
+        "tileHeight": 2
+      },
+      "owner": "OpenInfra User Group Myanmar",
+      "permission": "Supplied by the VarCamp organiser for the 2026 event; owner-provided mark, rights retained by its owner. Not covered by the CC0 dedication of the original placeholder marks. Replaceable per docs/operating/sponsors.md at the identical path; record any replacement owner and terms here.",
+      "license": "Owner mark; supplied by the VarCamp organiser for the 2026 event; not CC0",
+      "changes": "Webp (transparent outside the lockup's own black rounded plate) fitted into the 120x56 content box (Lanczos3), centred, no recolouring",
+      "eyebrow": "COMMUNITY PARTNER"
+    },
+    {
+      "name": "VARCAMP",
+      "kind": "event-identity",
+      "image": "assets/sponsors/varcamp-horizontal.png",
+      "source": "owner-supplied master varcamp2026_assets/logos+icons/varcamp-horizontal.svg (sha256 05f5ea29e8635156bf4ed74f9e39a6067bb2121ac266db514d7918703924250f), not stored in this repository",
+      "size": {
+        "width": 128,
+        "height": 64,
+        "tileWidth": 4,
+        "tileHeight": 2
+      },
+      "owner": "VarCamp organizers",
+      "permission": "Supplied by the VarCamp organiser for the 2026 event; official event identity, brand rights retained; see art/source/plaza-original/NOTICE.txt and eventIdentity below. Not covered by the CC0 dedication.",
+      "license": "VarCamp brand; event-use permission; not CC0",
+      "changes": "Horizontal lockup rendered from the supplied SVG with the flame in the brand orange of masters/varcamp_logo_square_dark.svg (#f96216) and the wordmark white, fitted to 120px wide (Lanczos3) and centred in the 128x64 panel",
+      "stall": "expo n6 INFO DESK"
     }
   ],
   "replacement": {
@@ -236,5 +304,8 @@
     "tileWidth": 4,
     "tileHeight": 2,
     "note": "Expo-plaza booth marks: compact sponsor variants, DEMO VECTOR, DEMO LUMEN and the five community hub marks are native 128\u00d764 transparent PNGs drawn as a 4\u00d72 tile footprint."
+  },
+  "ownerProvided": {
+    "note": "The community-partner records and the VARCAMP event-identity panel are owner-provided 2026 marks placed on expo stalls s1-s3 and n6 (tools/maps/expo-plaza.ts). They are not fictional placeholders and the CC0 dedication above does not apply to them; each record carries its own owner and permission."
   }
 }
