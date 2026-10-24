@@ -199,11 +199,11 @@
       },
       {
         "path": "art/source/expo-captions.json",
-        "sha256": "31c5a25cf044072dff57ad3562ceaf724dcca095fc032aaac52dce384c13832e"
+        "sha256": "19175cdd2c22811b19b0d4b744b6d3cccb47a82753ef340a831024416a1e5e14"
       },
       {
         "path": "art/source/expo-captions.svg",
-        "sha256": "c2cdb3b3bf9436ceab4e1000183d835ab2a0109039722546fef8958f00a286d0"
+        "sha256": "4c554f8984df07b5465b1bf157f207c6234f2c11a8da66206813116f05df58fe"
       },
       {
         "path": "art/source/naval-details.svg",
@@ -335,7 +335,7 @@
       },
       {
         "path": "assets/tilesets/original/expo-captions.png",
-        "sha256": "7ed997c529eb793d81384202be3da289e899ebfa256cdd8b0c3b0bd3cb65ce5f"
+        "sha256": "10348e48197c6b2248c0e7ad1093ad47beaebffae97803f7cbbc75c6f83aab70"
       },
       {
         "path": "assets/tilesets/original/exterior-gates.png",

@@ -2,6 +2,7 @@ import {isDeepStrictEqual} from 'node:util';
 import routes from '../../src/bots/lyra-routes.json';
 import {buildMap} from './builder';
 import {EXPO_STICKERS,expoCaption,expoLogoImage,expoSticker,withExpoCaption} from './expo-fixtures';
+import {EXPO_MARKS} from './native-ownership-context';
 import {reconcileNativeProjection} from './native-projection';
 import type {ExpoCaption,ExpoMarkId,ExpoSticker} from './expo-fixtures';
 import type {TileCatalog} from '../art/catalog';
@@ -9,12 +10,14 @@ import type {LayoutImage,MapLayout,Placement,TileRect,TiledMap,TileLayer} from '
 /** Expo hall: one closed forward source operation applied after the welcome-sign
  * retirement. The band under the welcome reception (rows 74-89, x40-87) becomes one
  * rectangular exhibition hall on a single floor-charcoal floor: two mirrored blocks
- * (west x40-58, east x69-87) either side of the central road (x60-67, the main aisle),
- * each block holding two rows of three identical 5x4 stalls facing a shared two-row
+ * (west x40-61, east x66-87) either side of the central road, which narrows to x62-65
+ * inside the hall band (the main aisle; the two audited guide columns x63-64 stay on it),
+ * each block holding two rows of three identical 6x4 stalls facing a shared two-row
  * aisle (rows 80-81). Row 89 is the clear south walkway. The audited guide graph runs on
  * the road, the aisle and the walkway only. Every stall carries its fixtures from the expo
- * epoch (tools/maps/expo-fixtures.ts): the registered 4x2 booth mark as a floor inlay on
- * the carpet reserve, three sticker decals along the back wall and a nameplate caption on
+ * epoch (tools/maps/expo-fixtures.ts): the registered booth mark as a floor inlay centred
+ * on the carpet reserve (6x2 where admitted, else 4x2 with one carpet tile each side),
+ * three sticker decals along the back wall and a nameplate caption on
  * the back-wall cap row (fascia over blocking posts), rendered by the overworld's own
  * standing-captions atlas. The remaining walls, poster, chair, counter and balloons use
  * atlases the overworld native context already reserves. */
@@ -33,62 +36,68 @@ export const EXPO_PLAZA=Object.freeze({
  ] as readonly string[],
  /** Hall floor rectangle (terrain); the reception rows <=73 and the pavilion rows >=90 keep their terrain. */
  hall:{x:40,y:74,width:48,height:16} as TileRect,
- /** Central road columns (path-stone) left untouched inside the hall rectangle. */
- road:{x:60,width:8},
+ /** Central road columns (path-stone) left untouched inside the hall rectangle; the avenue's
+  * outer columns x60-61 and x66-67 become hall floor between rows 74 and 89 only. */
+ road:{x:62,width:4},
  /** Stall fronts open onto this two-row aisle; the south walkway is one clear row. */
  aisle:{y:80,height:2},walkway:{y:89},
  /** Wall caps of the north back walls rise one row above the hall floor; nothing else leaves it. */
  capRow:73,
  floor:'floor-charcoal',carpet:{sponsor:'floor-cosmic',hub:'floor-wood'} as Record<'sponsor'|'hub',string>,
- /** Registered 4x2 booth mark per stall (tools/maps/native-ownership-context.ts EXPO_MARKS). The expo
-  * family admits every mark at most once and registers no 4x2 VarCamp mark, so the INFO DESK (n6) and
-  * the YOUR LOGO HERE (s6) stalls carry a nameplate over an empty carpet reserve. */
- marks:{n1:'demo-01-compact',n2:'demo-02-compact',n3:'demo-03-compact',n4:'demo-04',n5:'demo-05',s1:'hub-01',s2:'hub-02',s3:'hub-03',s4:'hub-04',s5:'hub-05'} as Readonly<Record<string,ExpoMarkId|undefined>>,
- /** Nameplate fit policy: the narrowest width whose 18px glyphs fit. Three tiles sit centred on the
-  * five-column back wall, four tiles take the columns beside the poster, five tiles the whole wall
-  * (that stall hangs no poster). */
- nameplateWidths:[3,4,5] as readonly number[],
+ /** Registered booth mark per stall (tools/maps/native-ownership-context.ts EXPO_MARKS): the two admitted
+  * 6x2 marks fill the six-wide reserve of DEMO ORBIT and DEMO ATLAS, every other stall takes its 4x2 mark.
+  * The expo family admits every mark at most once and registers no 4x2 VarCamp mark, so the INFO DESK (n6)
+  * and the YOUR LOGO HERE (s6) stalls carry a nameplate over an empty carpet reserve. */
+ marks:{n1:'demo-01',n2:'demo-02-compact',n3:'demo-03',n4:'demo-04',n5:'demo-05',s1:'hub-01',s2:'hub-02',s3:'hub-03',s4:'hub-04',s5:'hub-05'} as Readonly<Record<string,ExpoMarkId|undefined>>,
+ /** Nameplate fit policy: the narrowest even width whose 18px glyphs fit, so the plate stays centred on
+  * the six-column back wall: four tiles between the end columns, or the whole wall (that stall hangs
+  * no poster). */
+ nameplateWidths:[4,6] as readonly number[],
  /** Three sticker decals per stall, rotating through the six sticker sprites by stall index. */
  stickers:EXPO_STICKERS as readonly ExpoSticker[],
 });
 export interface ExpoBooth{
  id:string;block:'west'|'east';row:'north'|'south';kind:'sponsor'|'hub';name:string;
  /** Position in EXPO_BOOTHS: n1-n6 are 0-5, s1-s6 are 6-11. */index:number;
- /** Registered 4x2 mark inlaid on the logo reserve, if the stall has one. */mark?:ExpoMarkId;
- /** 5x4 carpeted interior. */interior:TileRect;
- /** Carpet-only 4x2 rectangle just inside the sticker row, carrying the logo inlay. */logo:TileRect;
- /** 2x2 desk-cream counter; its blocking front row is the counter line. */counter:TileRect;
- /** 1x2 chair-presentation behind the counter on the interior side. */chair:TileRect;
+ /** Registered mark inlaid on the logo reserve, if the stall has one. */mark?:ExpoMarkId;
+ /** 6x4 carpeted interior. */interior:TileRect;
+ /** Carpet-only rectangle just inside the sticker row, carrying the logo inlay: 6x2 across the stall for
+  * a six-column mark, else 4x2 centred with one carpet tile on each side. */logo:TileRect;
+ /** 2x2 desk-cream counter centred on the stall; its blocking front row is the counter line. */counter:TileRect;
+ /** 1x2 chair-presentation on the outer column behind the counter; a six-column mark leaves no interior
+  * column beside it, so that stall's chair stands against the back wall instead. */chair:TileRect;
  /** Three sticker decals on the interior row next to the back wall, and their sprites. */stickers:[number,number][];stickerSprites:[ExpoSticker,ExpoSticker,ExpoSticker];
  /** Two balloon bunches on the front corners of the counter line. */balloons:TileRect[];
- /** Framed poster on the back-wall column over the presenter's chair (omitted when the nameplate needs the whole wall). */poster:TileRect;
+ /** Framed poster on the back-wall end column opposite the chair (omitted when the nameplate needs the whole wall). */poster:TileRect;
  /** Back-wall cells (cap row + face row) and the x of both side-wall columns. */backWall:TileRect;sides:[number,number];
 }
 const r=(x:number,y:number,width:number,height:number):TileRect=>({x,y,width,height});
 const NAMES={north:['DEMO ORBIT','DEMO NOVA','DEMO ATLAS','DEMO VECTOR','DEMO LUMEN','INFO DESK'],south:['CODE CIRCLE','DESIGN GUILD','DATA CLUB','GAME JAM','OPEN SOURCE','YOUR LOGO HERE']};
-/** Geometry of one stall. West stalls put the logo on the left and the chair on the right;
- * east stalls are their mirror image about the road centre (x63.5), so a visitor walking
- * either aisle sees six identical fronts per block. North stalls: cap row 73, wall face 74,
- * interior 75-78, counter line 79. South stalls: counter line 82, interior 83-86, cap 87,
- * wall face 88 (the wall-navy sprite is cap-over-face, so the south back wall ends on 88). */
+/** Geometry of one stall. West stalls put the poster on the left end column and the chair on
+ * the right; east stalls are their mirror image about the road centre (x63.5), so a visitor
+ * walking either aisle sees six identical fronts per block. North stalls: cap row 73, wall
+ * face 74, interior 75-78, counter line 79. South stalls: counter line 82, interior 83-86,
+ * cap 87, wall face 88 (the wall-navy sprite is cap-over-face, so the south back wall ends
+ * on 88). Columns: side walls at x0-1 and x0+6, interior x0..x0+5, counter on x0+2..x0+3. */
 function booth(block:'west'|'east',row:'north'|'south',i:number):ExpoBooth{
- const x0=block==='west'?41+6*i:70+6*i,m=block==='west'?(c:number)=>x0+c:(c:number)=>x0+4-c;
+ const x0=block==='west'?41+7*i:67+7*i,m=block==='west'?(c:number)=>x0+c:(c:number)=>x0+5-c;
  const north=row==='north',y=north?75:83,slot=block==='west'?i:i+3,id=`${north?'n':'s'}${slot+1}`,kind=north?'sponsor':'hub',index=(north?0:6)+slot;
+ const mark=EXPO_PLAZA.marks[id],wide=mark!==undefined&&EXPO_MARKS[mark].columns===6,logoY=north?76:84;
  return {
-  id,block,row,kind,name:NAMES[row][slot],index,mark:EXPO_PLAZA.marks[id],interior:r(x0,y,5,4),
-  logo:r(Math.min(m(0),m(3)),north?76:84,4,2),counter:r(Math.min(m(2),m(3)),north?78:82,2,2),chair:r(m(4),north?76:84,1,2),
-  stickers:[[x0,north?75:86],[x0+2,north?75:86],[x0+4,north?75:86]],stickerSprites:[0,1,2].map(j=>EXPO_PLAZA.stickers[(index+j)%EXPO_PLAZA.stickers.length]) as [ExpoSticker,ExpoSticker,ExpoSticker],
-  balloons:[r(x0,north?78:82,1,2),r(x0+4,north?78:82,1,2)],
-  poster:r(m(4),north?73:87,1,2),backWall:r(x0,north?73:87,5,2),sides:[x0-1,x0+5],
+  id,block,row,kind,name:NAMES[row][slot],index,mark,interior:r(x0,y,6,4),
+  logo:r(wide?x0:x0+1,logoY,wide?6:4,2),counter:r(x0+2,north?78:82,2,2),chair:r(m(5),wide?(north?74:86):logoY,1,2),
+  stickers:[[m(0),north?75:86],[m(2),north?75:86],[m(4),north?75:86]],stickerSprites:[0,1,2].map(j=>EXPO_PLAZA.stickers[(index+j)%EXPO_PLAZA.stickers.length]) as [ExpoSticker,ExpoSticker,ExpoSticker],
+  balloons:[r(x0,north?78:82,1,2),r(x0+5,north?78:82,1,2)],
+  poster:r(m(0),north?73:87,1,2),backWall:r(x0,north?73:87,6,2),sides:[x0-1,x0+6],
  };
 }
 export const EXPO_BOOTHS:readonly ExpoBooth[]=Object.freeze((['north','south'] as const).flatMap(row=>(['west','east'] as const).flatMap(block=>[0,1,2].map(i=>booth(block,row,i)))));
 /** Nameplate of one stall on its back-wall cap row, at the narrowest fitting width of the fit
- * policy: three tiles centred, four tiles on the columns beside the poster, five tiles across. */
+ * policy: four tiles centred between the end columns, or six tiles across the whole wall. */
 export function boothNameplate(b:ExpoBooth):ExpoCaption{
- const {x,y}=b.backWall,posterLeft=b.poster.x===x;
+ const {x,y,width:wall}=b.backWall;
  for(const width of EXPO_PLAZA.nameplateWidths){
-  const nx=width===5?x:width===4?(posterLeft?x+1:x):x+1;
+  const nx=x+(wall-width)/2;
   try{return expoCaption(`expo-${b.id}-nameplate`,b.name,nx,y,width);}catch(error){if(!/does not fit/.test(String(error)))throw error;}
  }
  throw Error(`Expo nameplate does not fit the back wall: ${b.name}`);
@@ -115,12 +124,15 @@ export function expoFixtures():ExpoFixtures{
   }
   for(const b of stalls){
    const p=`expo-${b.id}`,w=b.backWall,caption=boothNameplate(b),poster=caption.sign.width<w.width;
-   if(!north)add(`${p}-seal-cap`,'wall-charcoal',r(w.x,w.y,5,1),{layer:'terrain'});
+   if(!north)add(`${p}-seal-cap`,'wall-charcoal',r(w.x,w.y,w.width,1),{layer:'terrain'});
    // Back wall: the nameplate fascia and posts stand on their columns; the others are wall-navy. The poster
-   // column is a grounded wall segment so the framed poster can hang on it without a second raised plane.
+   // column is a grounded wall segment so the framed poster can hang on it without a second raised plane,
+   // and so is the chair column when a six-column mark pushes the chair against the back wall (its top
+   // cell, which carries the seat graphic, then draws in front of the wall face).
+   const against=b.chair.y===w.y+1;
    for(let x=w.x;x<w.x+w.width;x++){
     if(x>=caption.face.x&&x<caption.face.x+caption.face.width)continue;
-    add(`${p}-wall-${x-w.x}`,'wall-navy',r(x,w.y,1,2),poster&&x===b.poster.x?{renderRole:'grounded'}:{});
+    add(`${p}-wall-${x-w.x}`,'wall-navy',r(x,w.y,1,2),(poster&&x===b.poster.x)||(against&&x===b.chair.x)?{renderRole:'grounded'}:{});
    }
    if(poster)add(`${p}-poster`,'poster-night-city',b.poster);
    b.stickers.forEach(([x,y],n)=>out.push(expoSticker(`${p}-sticker-${n}`,b.stickerSprites[n],x,y)));

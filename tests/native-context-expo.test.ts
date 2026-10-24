@@ -26,7 +26,7 @@ beforeAll(()=>{
  // pre-expo native keeps), so the source carries the real overworld caption atlas as its last tileset.
  expoLayout=structuredClone(layout);expoLayout.images=layout.images!.filter(i=>!markNames.includes(i.name));expoLayout.placements=layout.placements.filter(p=>!p.sprite.startsWith('sticker-'));
  expoLayout.images.push(...EXPO_MARK_IDS.map((id,i)=>expoLogoImage(id,2+(i%6)*7,100+Math.floor(i/6)*3)));expoLayout.placements.push(expoSticker('expo-test-sticker','sticker-star',3,110));
- expoSource=buildMap(expoLayout,catalog).tmj;expect(expoSource.tilesets.at(-1)).toMatchObject({name:'standing-captions',image:EXPO_CAPTION_ATLAS.image,tilecount:48,imageheight:96});
+ expoSource=buildMap(expoLayout,catalog).tmj;expect(expoSource.tilesets.at(-1)).toMatchObject({name:'standing-captions',image:EXPO_CAPTION_ATLAS.image,tilecount:64,imageheight:128});
  expoNative=structuredClone(pre);let next=11602;
  for(const t of expoSource.tilesets.filter(member)){expoNative.tilesets.push({...structuredClone(t),firstgid:next,name:/^art-\d+$/.test(t.name!)?EXPO_STICKER_ATLAS.name:t.name});next+=t.tilecount!;}
 });
@@ -47,7 +47,7 @@ it('admits exactly the registered expo family after the fleet, in source order, 
  expect(added.map(t=>t.firstgid)).toEqual([11602,11608,11620,11632,11640,11648,11656,11664,11672,11680,11688,11696,11704,11712]);
  expect(added[0]).toMatchObject({image:EXPO_STICKER_ATLAS.image,columns:6,tilecount:6,imagewidth:192,imageheight:32});
  for(const id of EXPO_MARK_IDS)expect(added.find(t=>t.name===EXPO_MARKS[id].name)).toMatchObject({image:`../assets/sponsors/${id}.png`,columns:EXPO_MARKS[id].columns,tilecount:EXPO_MARKS[id].columns*2,imagewidth:EXPO_MARKS[id].columns*32,imageheight:64,properties:[{name:'sponsorPanel',type:'bool',value:true},expect.anything()]});
- expect(added.at(-1)).toMatchObject({image:EXPO_CAPTION_ATLAS.image,columns:16,tilecount:48,imageheight:96});
+ expect(added.at(-1)).toMatchObject({image:EXPO_CAPTION_ATLAS.image,columns:16,tilecount:64,imageheight:128});
 });
 it('the production author transaction admits the expo marks and sticker sheet from the exact pre-expo current plaza',()=>{
  const sourceWithoutCaptions=structuredClone(expoSource);sourceWithoutCaptions.tilesets.pop();sourceWithoutCaptions.layers=sourceWithoutCaptions.layers.filter(l=>!l.name.startsWith('standing-caption-'));

@@ -95,8 +95,8 @@ export const retireWelcomePlazaProps=(layout:MapLayout,native:TiledMap,catalog:T
  * projection of the source delta: every pre-expo atlas and layer stays in place and the
  * expo reservation family (sticker sheet, booth marks, caption atlas) is admitted after
  * the fleet with one panel per logo and one caption layer per nameplate. */
-export const EXPO_PLAZA_PRODUCER_SHA256='2a9171789878605788c2554524fc5415d07807bc5f4a9069a5750d1afe302879';
-export const EXPO_PLAZA_COUNTS=Object.freeze({placements:243,images:10,captions:12});
+export const EXPO_PLAZA_PRODUCER_SHA256='9073ccb9abd0b3cbb54d55f069d6805ec814df418be693536873b5e5fb957a59';
+export const EXPO_PLAZA_COUNTS=Object.freeze({placements:255,images:10,captions:12});
 export function applyExpoPlazaSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
  assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),EXPO_PLAZA_PRODUCER_SHA256,'Expo plaza producer changed');
  const fixtures=expoFixtures(),{placements,images,captions}=EXPO_PLAZA_COUNTS;

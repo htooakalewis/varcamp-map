@@ -12579,16 +12579,16 @@
       "layer": "terrain",
       "x": 40,
       "y": 74,
-      "width": 20,
+      "width": 22,
       "height": 16
     },
     {
       "id": "expo-hall-floor-east",
       "sprite": "floor-charcoal",
       "layer": "terrain",
-      "x": 68,
+      "x": 66,
       "y": 74,
-      "width": 20,
+      "width": 22,
       "height": 16
     },
     {
@@ -12597,52 +12597,52 @@
       "layer": "terrain",
       "x": 41,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-n2-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
-      "x": 47,
+      "x": 48,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-n3-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
-      "x": 53,
+      "x": 55,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-n4-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
-      "x": 70,
+      "x": 67,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-n5-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
-      "x": 76,
+      "x": 74,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-n6-carpet",
       "sprite": "floor-cosmic",
       "layer": "terrain",
-      "x": 82,
+      "x": 81,
       "y": 75,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
@@ -12651,52 +12651,52 @@
       "layer": "terrain",
       "x": 41,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-s2-carpet",
       "sprite": "floor-wood",
       "layer": "terrain",
-      "x": 47,
+      "x": 48,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-s3-carpet",
       "sprite": "floor-wood",
       "layer": "terrain",
-      "x": 53,
+      "x": 55,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-s4-carpet",
       "sprite": "floor-wood",
       "layer": "terrain",
-      "x": 70,
+      "x": 67,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-s5-carpet",
       "sprite": "floor-wood",
       "layer": "terrain",
-      "x": 76,
+      "x": 74,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
       "id": "expo-s6-carpet",
       "sprite": "floor-wood",
       "layer": "terrain",
-      "x": 82,
+      "x": 81,
       "y": 83,
-      "width": 5,
+      "width": 6,
       "height": 4
     },
     {
@@ -12727,91 +12727,101 @@
       "height": 1
     },
     {
-      "id": "expo-west-north-side-46",
+      "id": "expo-west-north-side-47",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 46,
+      "x": 47,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-north-seal-46-75",
+      "id": "expo-west-north-seal-47-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
+      "x": 47,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-46-77",
+      "id": "expo-west-north-seal-47-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
+      "x": 47,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-north-side-52",
+      "id": "expo-west-north-side-54",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 52,
+      "x": 54,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-north-seal-52-75",
+      "id": "expo-west-north-seal-54-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 52,
+      "x": 54,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-52-77",
+      "id": "expo-west-north-seal-54-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 52,
+      "x": 54,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-north-side-58",
+      "id": "expo-west-north-side-61",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 58,
+      "x": 61,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-north-seal-58-75",
+      "id": "expo-west-north-seal-61-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 58,
+      "x": 61,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-58-77",
+      "id": "expo-west-north-seal-61-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 58,
+      "x": 61,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-n1-wall-4",
+      "id": "expo-n1-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 45,
+      "x": 41,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n1-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
       "y": 73,
       "width": 1,
       "height": 2,
@@ -12821,7 +12831,7 @@
       "id": "expo-n1-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 45,
+      "x": 41,
       "y": 73,
       "width": 1,
       "height": 2
@@ -12857,8 +12867,8 @@
       "id": "expo-n1-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 45,
-      "y": 76,
+      "x": 46,
+      "y": 74,
       "width": 1,
       "height": 2
     },
@@ -12884,7 +12894,7 @@
       "id": "expo-n1-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 45,
+      "x": 46,
       "y": 78,
       "width": 1,
       "height": 2
@@ -12893,26 +12903,26 @@
       "id": "expo-n2-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 47,
-      "y": 73,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-n2-wall-4",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 51,
+      "x": 48,
       "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
+      "id": "expo-n2-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 53,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "expo-n2-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 51,
+      "x": 48,
       "y": 73,
       "width": 1,
       "height": 2
@@ -12921,7 +12931,7 @@
       "id": "expo-n2-sticker-0",
       "sprite": "sticker-heart",
       "layer": "props",
-      "x": 47,
+      "x": 48,
       "y": 75,
       "width": 1,
       "height": 1
@@ -12930,7 +12940,7 @@
       "id": "expo-n2-sticker-1",
       "sprite": "sticker-bolt",
       "layer": "props",
-      "x": 49,
+      "x": 50,
       "y": 75,
       "width": 1,
       "height": 1
@@ -12939,7 +12949,7 @@
       "id": "expo-n2-sticker-2",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 51,
+      "x": 52,
       "y": 75,
       "width": 1,
       "height": 1
@@ -12948,7 +12958,7 @@
       "id": "expo-n2-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 51,
+      "x": 53,
       "y": 76,
       "width": 1,
       "height": 2
@@ -12957,7 +12967,7 @@
       "id": "expo-n2-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 49,
+      "x": 50,
       "y": 78,
       "width": 2,
       "height": 2
@@ -12966,7 +12976,7 @@
       "id": "expo-n2-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 47,
+      "x": 48,
       "y": 78,
       "width": 1,
       "height": 2
@@ -12975,16 +12985,26 @@
       "id": "expo-n2-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 51,
+      "x": 53,
       "y": 78,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-n3-wall-4",
+      "id": "expo-n3-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 57,
+      "x": 55,
+      "y": 73,
+      "width": 1,
+      "height": 2,
+      "renderRole": "grounded"
+    },
+    {
+      "id": "expo-n3-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 60,
       "y": 73,
       "width": 1,
       "height": 2,
@@ -12994,7 +13014,7 @@
       "id": "expo-n3-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 57,
+      "x": 55,
       "y": 73,
       "width": 1,
       "height": 2
@@ -13003,7 +13023,7 @@
       "id": "expo-n3-sticker-0",
       "sprite": "sticker-bolt",
       "layer": "props",
-      "x": 53,
+      "x": 55,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13012,7 +13032,7 @@
       "id": "expo-n3-sticker-1",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13021,7 +13041,7 @@
       "id": "expo-n3-sticker-2",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 57,
+      "x": 59,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13030,8 +13050,8 @@
       "id": "expo-n3-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 57,
-      "y": 76,
+      "x": 60,
+      "y": 74,
       "width": 1,
       "height": 2
     },
@@ -13039,7 +13059,7 @@
       "id": "expo-n3-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 78,
       "width": 2,
       "height": 2
@@ -13048,7 +13068,7 @@
       "id": "expo-n3-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 53,
+      "x": 55,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13057,88 +13077,88 @@
       "id": "expo-n3-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 57,
+      "x": 60,
       "y": 78,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-east-north-side-69",
+      "id": "expo-east-north-side-66",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 69,
+      "x": 66,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-north-seal-69-75",
+      "id": "expo-east-north-seal-66-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 69,
+      "x": 66,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-69-77",
+      "id": "expo-east-north-seal-66-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 69,
+      "x": 66,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-north-side-75",
+      "id": "expo-east-north-side-73",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 75,
+      "x": 73,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-north-seal-75-75",
+      "id": "expo-east-north-seal-73-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 75,
+      "x": 73,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-75-77",
+      "id": "expo-east-north-seal-73-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 75,
+      "x": 73,
       "y": 77,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-north-side-81",
+      "id": "expo-east-north-side-80",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 81,
+      "x": 80,
       "y": 73,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-north-seal-81-75",
+      "id": "expo-east-north-seal-80-75",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 81,
+      "x": 80,
       "y": 75,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-81-77",
+      "id": "expo-east-north-seal-80-77",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 81,
+      "x": 80,
       "y": 77,
       "width": 1,
       "height": 1
@@ -13174,7 +13194,16 @@
       "id": "expo-n4-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 70,
+      "x": 67,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n4-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 72,
       "y": 73,
       "width": 1,
       "height": 2,
@@ -13184,7 +13213,7 @@
       "id": "expo-n4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 70,
+      "x": 72,
       "y": 73,
       "width": 1,
       "height": 2
@@ -13193,7 +13222,7 @@
       "id": "expo-n4-sticker-0",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 70,
+      "x": 72,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13202,7 +13231,7 @@
       "id": "expo-n4-sticker-1",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 72,
+      "x": 70,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13211,7 +13240,7 @@
       "id": "expo-n4-sticker-2",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 74,
+      "x": 68,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13220,7 +13249,7 @@
       "id": "expo-n4-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 70,
+      "x": 67,
       "y": 76,
       "width": 1,
       "height": 2
@@ -13229,7 +13258,7 @@
       "id": "expo-n4-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 71,
+      "x": 69,
       "y": 78,
       "width": 2,
       "height": 2
@@ -13238,7 +13267,7 @@
       "id": "expo-n4-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 70,
+      "x": 67,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13247,7 +13276,7 @@
       "id": "expo-n4-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 74,
+      "x": 72,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13256,7 +13285,16 @@
       "id": "expo-n5-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 76,
+      "x": 74,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n5-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 79,
       "y": 73,
       "width": 1,
       "height": 2,
@@ -13266,7 +13304,7 @@
       "id": "expo-n5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 76,
+      "x": 79,
       "y": 73,
       "width": 1,
       "height": 2
@@ -13275,7 +13313,7 @@
       "id": "expo-n5-sticker-0",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 76,
+      "x": 79,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13284,7 +13322,7 @@
       "id": "expo-n5-sticker-1",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 78,
+      "x": 77,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13293,7 +13331,7 @@
       "id": "expo-n5-sticker-2",
       "sprite": "sticker-star",
       "layer": "props",
-      "x": 80,
+      "x": 75,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13302,7 +13340,7 @@
       "id": "expo-n5-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 76,
+      "x": 74,
       "y": 76,
       "width": 1,
       "height": 2
@@ -13311,7 +13349,7 @@
       "id": "expo-n5-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 77,
+      "x": 76,
       "y": 78,
       "width": 2,
       "height": 2
@@ -13320,7 +13358,7 @@
       "id": "expo-n5-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 76,
+      "x": 74,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13329,7 +13367,7 @@
       "id": "expo-n5-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 80,
+      "x": 79,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13338,26 +13376,26 @@
       "id": "expo-n6-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 82,
+      "x": 81,
+      "y": 73,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-n6-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 86,
       "y": 73,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-n6-wall-4",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 86,
-      "y": 73,
-      "width": 1,
-      "height": 2
-    },
-    {
       "id": "expo-n6-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 82,
+      "x": 86,
       "y": 73,
       "width": 1,
       "height": 2
@@ -13366,7 +13404,7 @@
       "id": "expo-n6-sticker-0",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 82,
+      "x": 86,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13384,7 +13422,7 @@
       "id": "expo-n6-sticker-2",
       "sprite": "sticker-heart",
       "layer": "props",
-      "x": 86,
+      "x": 82,
       "y": 75,
       "width": 1,
       "height": 1
@@ -13393,7 +13431,7 @@
       "id": "expo-n6-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 76,
       "width": 1,
       "height": 2
@@ -13411,7 +13449,7 @@
       "id": "expo-n6-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 78,
       "width": 1,
       "height": 2
@@ -13462,109 +13500,109 @@
       "height": 1
     },
     {
-      "id": "expo-west-south-side-46",
+      "id": "expo-west-south-side-47",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 46,
+      "x": 47,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-south-seal-46-83",
+      "id": "expo-west-south-seal-47-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
+      "x": 47,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-46-85",
+      "id": "expo-west-south-seal-47-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
+      "x": 47,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-46-87",
+      "id": "expo-west-south-seal-47-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 46,
+      "x": 47,
       "y": 87,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-side-52",
+      "id": "expo-west-south-side-54",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 52,
+      "x": 54,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-south-seal-52-83",
+      "id": "expo-west-south-seal-54-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 52,
+      "x": 54,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-52-85",
+      "id": "expo-west-south-seal-54-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 52,
+      "x": 54,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-52-87",
+      "id": "expo-west-south-seal-54-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 52,
+      "x": 54,
       "y": 87,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-side-58",
+      "id": "expo-west-south-side-61",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 58,
+      "x": 61,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-west-south-seal-58-83",
+      "id": "expo-west-south-seal-61-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 58,
+      "x": 61,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-58-85",
+      "id": "expo-west-south-seal-61-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 58,
+      "x": 61,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-west-south-seal-58-87",
+      "id": "expo-west-south-seal-61-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 58,
+      "x": 61,
       "y": 87,
       "width": 1,
       "height": 1
@@ -13575,24 +13613,33 @@
       "layer": "terrain",
       "x": 41,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
-      "id": "expo-s1-wall-4",
+      "id": "expo-s1-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 45,
+      "x": 41,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
+      "id": "expo-s1-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 46,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "expo-s1-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 45,
+      "x": 41,
       "y": 87,
       "width": 1,
       "height": 2
@@ -13628,7 +13675,7 @@
       "id": "expo-s1-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 45,
+      "x": 46,
       "y": 84,
       "width": 1,
       "height": 2
@@ -13655,7 +13702,7 @@
       "id": "expo-s1-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 45,
+      "x": 46,
       "y": 82,
       "width": 1,
       "height": 2
@@ -13664,26 +13711,35 @@
       "id": "expo-s2-seal-cap",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 47,
+      "x": 48,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
-      "id": "expo-s2-wall-4",
+      "id": "expo-s2-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 51,
+      "x": 48,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
+      "id": "expo-s2-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 53,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "expo-s2-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 51,
+      "x": 48,
       "y": 87,
       "width": 1,
       "height": 2
@@ -13692,7 +13748,7 @@
       "id": "expo-s2-sticker-0",
       "sprite": "sticker-heart",
       "layer": "props",
-      "x": 47,
+      "x": 48,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13701,7 +13757,7 @@
       "id": "expo-s2-sticker-1",
       "sprite": "sticker-bolt",
       "layer": "props",
-      "x": 49,
+      "x": 50,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13710,7 +13766,7 @@
       "id": "expo-s2-sticker-2",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 51,
+      "x": 52,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13719,7 +13775,7 @@
       "id": "expo-s2-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 51,
+      "x": 53,
       "y": 84,
       "width": 1,
       "height": 2
@@ -13728,7 +13784,7 @@
       "id": "expo-s2-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 49,
+      "x": 50,
       "y": 82,
       "width": 2,
       "height": 2
@@ -13737,7 +13793,7 @@
       "id": "expo-s2-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 47,
+      "x": 48,
       "y": 82,
       "width": 1,
       "height": 2
@@ -13746,7 +13802,7 @@
       "id": "expo-s2-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 51,
+      "x": 53,
       "y": 82,
       "width": 1,
       "height": 2
@@ -13755,35 +13811,35 @@
       "id": "expo-s3-seal-cap",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 53,
+      "x": 55,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s3-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 53,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "expo-s3-wall-4",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 57,
+      "x": 55,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
+      "id": "expo-s3-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 60,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
       "id": "expo-s3-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 57,
+      "x": 55,
       "y": 87,
       "width": 1,
       "height": 2
@@ -13792,7 +13848,7 @@
       "id": "expo-s3-sticker-0",
       "sprite": "sticker-bolt",
       "layer": "props",
-      "x": 53,
+      "x": 55,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13801,7 +13857,7 @@
       "id": "expo-s3-sticker-1",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13810,7 +13866,7 @@
       "id": "expo-s3-sticker-2",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 57,
+      "x": 59,
       "y": 86,
       "width": 1,
       "height": 1
@@ -13819,7 +13875,7 @@
       "id": "expo-s3-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 57,
+      "x": 60,
       "y": 84,
       "width": 1,
       "height": 2
@@ -13828,7 +13884,7 @@
       "id": "expo-s3-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 55,
+      "x": 57,
       "y": 82,
       "width": 2,
       "height": 2
@@ -13837,7 +13893,7 @@
       "id": "expo-s3-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 53,
+      "x": 55,
       "y": 82,
       "width": 1,
       "height": 2
@@ -13846,115 +13902,115 @@
       "id": "expo-s3-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 57,
+      "x": 60,
       "y": 82,
       "width": 1,
       "height": 2
     },
     {
-      "id": "expo-east-south-side-69",
+      "id": "expo-east-south-side-66",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 69,
+      "x": 66,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-south-seal-69-83",
+      "id": "expo-east-south-seal-66-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 69,
+      "x": 66,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-69-85",
+      "id": "expo-east-south-seal-66-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 69,
+      "x": 66,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-69-87",
+      "id": "expo-east-south-seal-66-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 69,
+      "x": 66,
       "y": 87,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-side-75",
+      "id": "expo-east-south-side-73",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 75,
+      "x": 73,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-south-seal-75-83",
+      "id": "expo-east-south-seal-73-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 75,
+      "x": 73,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-75-85",
+      "id": "expo-east-south-seal-73-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 75,
+      "x": 73,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-75-87",
+      "id": "expo-east-south-seal-73-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 75,
+      "x": 73,
       "y": 87,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-side-81",
+      "id": "expo-east-south-side-80",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 81,
+      "x": 80,
       "y": 83,
       "width": 1,
       "height": 6
     },
     {
-      "id": "expo-east-south-seal-81-83",
+      "id": "expo-east-south-seal-80-83",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 81,
+      "x": 80,
       "y": 83,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-81-85",
+      "id": "expo-east-south-seal-80-85",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 81,
+      "x": 80,
       "y": 85,
       "width": 1,
       "height": 1
     },
     {
-      "id": "expo-east-south-seal-81-87",
+      "id": "expo-east-south-seal-80-87",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 81,
+      "x": 80,
       "y": 87,
       "width": 1,
       "height": 1
@@ -13999,35 +14055,35 @@
       "id": "expo-s4-seal-cap",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 70,
+      "x": 67,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s4-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 70,
+      "x": 67,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s4-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 72,
       "y": 87,
       "width": 1,
       "height": 2,
       "renderRole": "grounded"
     },
     {
-      "id": "expo-s4-wall-4",
-      "sprite": "wall-navy",
-      "layer": "props",
-      "x": 74,
-      "y": 87,
-      "width": 1,
-      "height": 2
-    },
-    {
       "id": "expo-s4-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 70,
+      "x": 72,
       "y": 87,
       "width": 1,
       "height": 2
@@ -14036,7 +14092,7 @@
       "id": "expo-s4-sticker-0",
       "sprite": "sticker-pin",
       "layer": "props",
-      "x": 70,
+      "x": 72,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14045,7 +14101,7 @@
       "id": "expo-s4-sticker-1",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 72,
+      "x": 70,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14054,7 +14110,7 @@
       "id": "expo-s4-sticker-2",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 74,
+      "x": 68,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14063,7 +14119,7 @@
       "id": "expo-s4-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 70,
+      "x": 67,
       "y": 84,
       "width": 1,
       "height": 2
@@ -14072,7 +14128,7 @@
       "id": "expo-s4-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 71,
+      "x": 69,
       "y": 82,
       "width": 2,
       "height": 2
@@ -14081,7 +14137,7 @@
       "id": "expo-s4-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 70,
+      "x": 67,
       "y": 82,
       "width": 1,
       "height": 2
@@ -14090,7 +14146,7 @@
       "id": "expo-s4-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 74,
+      "x": 72,
       "y": 82,
       "width": 1,
       "height": 2
@@ -14099,16 +14155,25 @@
       "id": "expo-s5-seal-cap",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 76,
+      "x": 74,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s5-wall-0",
       "sprite": "wall-navy",
       "layer": "props",
-      "x": 76,
+      "x": 74,
+      "y": 87,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "id": "expo-s5-wall-5",
+      "sprite": "wall-navy",
+      "layer": "props",
+      "x": 79,
       "y": 87,
       "width": 1,
       "height": 2,
@@ -14118,7 +14183,7 @@
       "id": "expo-s5-poster",
       "sprite": "poster-night-city",
       "layer": "props",
-      "x": 76,
+      "x": 79,
       "y": 87,
       "width": 1,
       "height": 2
@@ -14127,7 +14192,7 @@
       "id": "expo-s5-sticker-0",
       "sprite": "sticker-smile",
       "layer": "props",
-      "x": 76,
+      "x": 79,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14136,7 +14201,7 @@
       "id": "expo-s5-sticker-1",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 78,
+      "x": 77,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14145,7 +14210,7 @@
       "id": "expo-s5-sticker-2",
       "sprite": "sticker-star",
       "layer": "props",
-      "x": 80,
+      "x": 75,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14154,7 +14219,7 @@
       "id": "expo-s5-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 76,
+      "x": 74,
       "y": 84,
       "width": 1,
       "height": 2
@@ -14163,7 +14228,7 @@
       "id": "expo-s5-counter",
       "sprite": "desk-cream",
       "layer": "props",
-      "x": 77,
+      "x": 76,
       "y": 82,
       "width": 2,
       "height": 2
@@ -14172,7 +14237,7 @@
       "id": "expo-s5-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 76,
+      "x": 74,
       "y": 82,
       "width": 1,
       "height": 2
@@ -14181,7 +14246,7 @@
       "id": "expo-s5-balloons-1",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 80,
+      "x": 79,
       "y": 82,
       "width": 1,
       "height": 2
@@ -14190,16 +14255,16 @@
       "id": "expo-s6-seal-cap",
       "sprite": "wall-charcoal",
       "layer": "terrain",
-      "x": 82,
+      "x": 81,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s6-sticker-0",
       "sprite": "sticker-leaf",
       "layer": "props",
-      "x": 82,
+      "x": 86,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14217,7 +14282,7 @@
       "id": "expo-s6-sticker-2",
       "sprite": "sticker-heart",
       "layer": "props",
-      "x": 86,
+      "x": 82,
       "y": 86,
       "width": 1,
       "height": 1
@@ -14226,7 +14291,7 @@
       "id": "expo-s6-chair",
       "sprite": "chair-presentation",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 84,
       "width": 1,
       "height": 2
@@ -14244,7 +14309,7 @@
       "id": "expo-s6-balloons-0",
       "sprite": "balloons-party",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 82,
       "width": 1,
       "height": 2
@@ -14262,7 +14327,7 @@
       "id": "expo-n1-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 41,
+      "x": 42,
       "y": 73,
       "width": 4,
       "height": 1
@@ -14271,7 +14336,7 @@
       "id": "expo-n1-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 41,
+      "x": 42,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14280,7 +14345,7 @@
       "id": "expo-n1-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 42,
+      "x": 43,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14289,7 +14354,7 @@
       "id": "expo-n1-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 43,
+      "x": 44,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14298,7 +14363,7 @@
       "id": "expo-n1-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 44,
+      "x": 45,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14307,22 +14372,13 @@
       "id": "expo-n2-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 48,
+      "x": 49,
       "y": 73,
-      "width": 3,
+      "width": 4,
       "height": 1
     },
     {
       "id": "expo-n2-nameplate-fascia-post-0",
-      "sprite": "expo-fascia-post",
-      "layer": "props",
-      "x": 48,
-      "y": 74,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n2-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
       "x": 49,
@@ -14331,7 +14387,7 @@
       "height": 1
     },
     {
-      "id": "expo-n2-nameplate-fascia-post-2",
+      "id": "expo-n2-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
       "x": 50,
@@ -14340,10 +14396,28 @@
       "height": 1
     },
     {
+      "id": "expo-n2-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 51,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n2-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 52,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "expo-n3-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 53,
+      "x": 56,
       "y": 73,
       "width": 4,
       "height": 1
@@ -14352,7 +14426,7 @@
       "id": "expo-n3-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 53,
+      "x": 56,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14361,7 +14435,7 @@
       "id": "expo-n3-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 54,
+      "x": 57,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14370,7 +14444,7 @@
       "id": "expo-n3-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 55,
+      "x": 58,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14379,7 +14453,7 @@
       "id": "expo-n3-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 56,
+      "x": 59,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14388,7 +14462,7 @@
       "id": "expo-n4-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 71,
+      "x": 68,
       "y": 73,
       "width": 4,
       "height": 1
@@ -14397,7 +14471,7 @@
       "id": "expo-n4-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 71,
+      "x": 68,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14406,7 +14480,7 @@
       "id": "expo-n4-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 72,
+      "x": 69,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14415,7 +14489,7 @@
       "id": "expo-n4-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 73,
+      "x": 70,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14424,7 +14498,7 @@
       "id": "expo-n4-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 74,
+      "x": 71,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14433,7 +14507,7 @@
       "id": "expo-n5-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 77,
+      "x": 75,
       "y": 73,
       "width": 4,
       "height": 1
@@ -14442,7 +14516,7 @@
       "id": "expo-n5-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 77,
+      "x": 75,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14451,7 +14525,7 @@
       "id": "expo-n5-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 78,
+      "x": 76,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14460,7 +14534,7 @@
       "id": "expo-n5-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 79,
+      "x": 77,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14469,7 +14543,7 @@
       "id": "expo-n5-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 80,
+      "x": 78,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14478,16 +14552,16 @@
       "id": "expo-n6-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 83,
+      "x": 82,
       "y": 73,
-      "width": 3,
+      "width": 4,
       "height": 1
     },
     {
       "id": "expo-n6-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 83,
+      "x": 82,
       "y": 74,
       "width": 1,
       "height": 1
@@ -14496,13 +14570,22 @@
       "id": "expo-n6-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 84,
+      "x": 83,
       "y": 74,
       "width": 1,
       "height": 1
     },
     {
       "id": "expo-n6-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 84,
+      "y": 74,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-n6-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
       "x": 85,
@@ -14514,7 +14597,7 @@
       "id": "expo-s1-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 41,
+      "x": 42,
       "y": 87,
       "width": 4,
       "height": 1
@@ -14523,7 +14606,7 @@
       "id": "expo-s1-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 41,
+      "x": 42,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14532,7 +14615,7 @@
       "id": "expo-s1-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 42,
+      "x": 43,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14541,7 +14624,7 @@
       "id": "expo-s1-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 43,
+      "x": 44,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14550,7 +14633,7 @@
       "id": "expo-s1-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 44,
+      "x": 45,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14559,7 +14642,7 @@
       "id": "expo-s2-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 47,
+      "x": 49,
       "y": 87,
       "width": 4,
       "height": 1
@@ -14568,7 +14651,7 @@
       "id": "expo-s2-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 47,
+      "x": 49,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14577,7 +14660,7 @@
       "id": "expo-s2-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 48,
+      "x": 50,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14586,7 +14669,7 @@
       "id": "expo-s2-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 49,
+      "x": 51,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14595,7 +14678,7 @@
       "id": "expo-s2-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 50,
+      "x": 52,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14604,31 +14687,13 @@
       "id": "expo-s3-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 54,
+      "x": 56,
       "y": 87,
-      "width": 3,
+      "width": 4,
       "height": 1
     },
     {
       "id": "expo-s3-nameplate-fascia-post-0",
-      "sprite": "expo-fascia-post",
-      "layer": "props",
-      "x": 54,
-      "y": 88,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s3-nameplate-fascia-post-1",
-      "sprite": "expo-fascia-post",
-      "layer": "props",
-      "x": 55,
-      "y": 88,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s3-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
       "x": 56,
@@ -14637,19 +14702,46 @@
       "height": 1
     },
     {
+      "id": "expo-s3-nameplate-fascia-post-1",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 57,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia-post-2",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 58,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s3-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 59,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "expo-s4-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 71,
+      "x": 68,
       "y": 87,
-      "width": 3,
+      "width": 4,
       "height": 1
     },
     {
       "id": "expo-s4-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 71,
+      "x": 68,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14658,7 +14750,7 @@
       "id": "expo-s4-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 72,
+      "x": 69,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14667,7 +14759,16 @@
       "id": "expo-s4-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 73,
+      "x": 70,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s4-nameplate-fascia-post-3",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 71,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14676,7 +14777,7 @@
       "id": "expo-s5-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 77,
+      "x": 75,
       "y": 87,
       "width": 4,
       "height": 1
@@ -14685,7 +14786,7 @@
       "id": "expo-s5-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 77,
+      "x": 75,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14694,7 +14795,7 @@
       "id": "expo-s5-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 78,
+      "x": 76,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14703,7 +14804,7 @@
       "id": "expo-s5-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 79,
+      "x": 77,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14712,7 +14813,7 @@
       "id": "expo-s5-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 80,
+      "x": 78,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14721,16 +14822,16 @@
       "id": "expo-s6-nameplate-fascia",
       "sprite": "expo-fascia",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1
     },
     {
       "id": "expo-s6-nameplate-fascia-post-0",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 82,
+      "x": 81,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14739,7 +14840,7 @@
       "id": "expo-s6-nameplate-fascia-post-1",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 83,
+      "x": 82,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14748,7 +14849,7 @@
       "id": "expo-s6-nameplate-fascia-post-2",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 84,
+      "x": 83,
       "y": 88,
       "width": 1,
       "height": 1
@@ -14757,13 +14858,22 @@
       "id": "expo-s6-nameplate-fascia-post-3",
       "sprite": "expo-fascia-post",
       "layer": "props",
-      "x": 85,
+      "x": 84,
       "y": 88,
       "width": 1,
       "height": 1
     },
     {
       "id": "expo-s6-nameplate-fascia-post-4",
+      "sprite": "expo-fascia-post",
+      "layer": "props",
+      "x": 85,
+      "y": 88,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "expo-s6-nameplate-fascia-post-5",
       "sprite": "expo-fascia-post",
       "layer": "props",
       "x": 86,
@@ -16602,7 +16712,7 @@
     {
       "name": "expo-n1-nameplate",
       "text": "DEMO ORBIT",
-      "x": 41,
+      "x": 42,
       "y": 73,
       "width": 4,
       "height": 1,
@@ -16614,9 +16724,9 @@
     {
       "name": "expo-n2-nameplate",
       "text": "DEMO NOVA",
-      "x": 48,
+      "x": 49,
       "y": 73,
-      "width": 3,
+      "width": 4,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16626,7 +16736,7 @@
     {
       "name": "expo-n3-nameplate",
       "text": "DEMO ATLAS",
-      "x": 53,
+      "x": 56,
       "y": 73,
       "width": 4,
       "height": 1,
@@ -16638,7 +16748,7 @@
     {
       "name": "expo-n4-nameplate",
       "text": "DEMO VECTOR",
-      "x": 71,
+      "x": 68,
       "y": 73,
       "width": 4,
       "height": 1,
@@ -16650,7 +16760,7 @@
     {
       "name": "expo-n5-nameplate",
       "text": "DEMO LUMEN",
-      "x": 77,
+      "x": 75,
       "y": 73,
       "width": 4,
       "height": 1,
@@ -16662,9 +16772,9 @@
     {
       "name": "expo-n6-nameplate",
       "text": "INFO DESK",
-      "x": 83,
+      "x": 82,
       "y": 73,
-      "width": 3,
+      "width": 4,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16674,7 +16784,7 @@
     {
       "name": "expo-s1-nameplate",
       "text": "CODE CIRCLE",
-      "x": 41,
+      "x": 42,
       "y": 87,
       "width": 4,
       "height": 1,
@@ -16686,7 +16796,7 @@
     {
       "name": "expo-s2-nameplate",
       "text": "DESIGN GUILD",
-      "x": 47,
+      "x": 49,
       "y": 87,
       "width": 4,
       "height": 1,
@@ -16698,9 +16808,9 @@
     {
       "name": "expo-s3-nameplate",
       "text": "DATA CLUB",
-      "x": 54,
+      "x": 56,
       "y": 87,
-      "width": 3,
+      "width": 4,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16710,9 +16820,9 @@
     {
       "name": "expo-s4-nameplate",
       "text": "GAME JAM",
-      "x": 71,
+      "x": 68,
       "y": 87,
-      "width": 3,
+      "width": 4,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16722,7 +16832,7 @@
     {
       "name": "expo-s5-nameplate",
       "text": "OPEN SOURCE",
-      "x": 77,
+      "x": 75,
       "y": 87,
       "width": 4,
       "height": 1,
@@ -16734,9 +16844,9 @@
     {
       "name": "expo-s6-nameplate",
       "text": "YOUR LOGO HERE",
-      "x": 82,
+      "x": 81,
       "y": 87,
-      "width": 5,
+      "width": 6,
       "height": 1,
       "fontSize": 18,
       "color": "#f1d9a0",
@@ -16773,36 +16883,36 @@
       "standing": false
     },
     {
-      "name": "Expo / Demo Orbit Compact",
-      "image": "assets/sponsors/demo-01-compact.png",
+      "name": "Expo / Demo Orbit",
+      "image": "assets/sponsors/demo-01.png",
       "x": 41,
       "y": 76,
-      "width": 4,
+      "width": 6,
       "height": 2,
       "standing": false
     },
     {
       "name": "Expo / Demo Nova Compact",
       "image": "assets/sponsors/demo-02-compact.png",
-      "x": 47,
+      "x": 49,
       "y": 76,
       "width": 4,
       "height": 2,
       "standing": false
     },
     {
-      "name": "Expo / Demo Atlas Compact",
-      "image": "assets/sponsors/demo-03-compact.png",
-      "x": 53,
+      "name": "Expo / Demo Atlas",
+      "image": "assets/sponsors/demo-03.png",
+      "x": 55,
       "y": 76,
-      "width": 4,
+      "width": 6,
       "height": 2,
       "standing": false
     },
     {
       "name": "Expo / Demo Vector",
       "image": "assets/sponsors/demo-04.png",
-      "x": 71,
+      "x": 68,
       "y": 76,
       "width": 4,
       "height": 2,
@@ -16811,7 +16921,7 @@
     {
       "name": "Expo / Demo Lumen",
       "image": "assets/sponsors/demo-05.png",
-      "x": 77,
+      "x": 75,
       "y": 76,
       "width": 4,
       "height": 2,
@@ -16820,7 +16930,7 @@
     {
       "name": "Expo / Code Circle",
       "image": "assets/sponsors/hub-01.png",
-      "x": 41,
+      "x": 42,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -16829,7 +16939,7 @@
     {
       "name": "Expo / Design Guild",
       "image": "assets/sponsors/hub-02.png",
-      "x": 47,
+      "x": 49,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -16838,7 +16948,7 @@
     {
       "name": "Expo / Data Club",
       "image": "assets/sponsors/hub-03.png",
-      "x": 53,
+      "x": 56,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -16847,7 +16957,7 @@
     {
       "name": "Expo / Game Jam",
       "image": "assets/sponsors/hub-04.png",
-      "x": 71,
+      "x": 68,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -16856,7 +16966,7 @@
     {
       "name": "Expo / Open Source",
       "image": "assets/sponsors/hub-05.png",
-      "x": 77,
+      "x": 75,
       "y": 84,
       "width": 4,
       "height": 2,
@@ -64516,7 +64626,8 @@
       "supports": [
         "expo-n2-nameplate-fascia-post-0",
         "expo-n2-nameplate-fascia-post-1",
-        "expo-n2-nameplate-fascia-post-2"
+        "expo-n2-nameplate-fascia-post-2",
+        "expo-n2-nameplate-fascia-post-3"
       ],
       "text": "expo-n2-nameplate"
     },
@@ -64555,7 +64666,8 @@
       "supports": [
         "expo-n6-nameplate-fascia-post-0",
         "expo-n6-nameplate-fascia-post-1",
-        "expo-n6-nameplate-fascia-post-2"
+        "expo-n6-nameplate-fascia-post-2",
+        "expo-n6-nameplate-fascia-post-3"
       ],
       "text": "expo-n6-nameplate"
     },
@@ -64584,7 +64696,8 @@
       "supports": [
         "expo-s3-nameplate-fascia-post-0",
         "expo-s3-nameplate-fascia-post-1",
-        "expo-s3-nameplate-fascia-post-2"
+        "expo-s3-nameplate-fascia-post-2",
+        "expo-s3-nameplate-fascia-post-3"
       ],
       "text": "expo-s3-nameplate"
     },
@@ -64593,7 +64706,8 @@
       "supports": [
         "expo-s4-nameplate-fascia-post-0",
         "expo-s4-nameplate-fascia-post-1",
-        "expo-s4-nameplate-fascia-post-2"
+        "expo-s4-nameplate-fascia-post-2",
+        "expo-s4-nameplate-fascia-post-3"
       ],
       "text": "expo-s4-nameplate"
     },
@@ -64614,7 +64728,8 @@
         "expo-s6-nameplate-fascia-post-1",
         "expo-s6-nameplate-fascia-post-2",
         "expo-s6-nameplate-fascia-post-3",
-        "expo-s6-nameplate-fascia-post-4"
+        "expo-s6-nameplate-fascia-post-4",
+        "expo-s6-nameplate-fascia-post-5"
       ],
       "text": "expo-s6-nameplate"
     }

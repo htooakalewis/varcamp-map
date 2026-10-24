@@ -52,12 +52,13 @@ export function sponsorSupportIds(layout:MapLayout,catalog:TileCatalog):Set<stri
  assert.ok(!layout.placements.some(p=>/^standing-sponsor-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id)),'Retired logo posts/brand board remain');
  return new Set();
 }
-/** The ten expo booth logos: registered 4x2 marks on the carpet reserve of the stalls n1-n5 and
- * s1-s6 minus s6 (tools/maps/expo-plaza.ts); the INFO DESK and YOUR LOGO HERE stalls have none. */
+/** The ten expo booth logos on the six-wide carpet reserves of the stalls n1-n5 and s1-s5
+ * (tools/maps/expo-plaza.ts): the two admitted 6x2 marks fill DEMO ORBIT and DEMO ATLAS, every
+ * other stall centres its 4x2 mark; the INFO DESK and YOUR LOGO HERE stalls have none. */
 export const expoBoothLogos=[
- ['Expo / Demo Orbit Compact','demo-01-compact',41,76],['Expo / Demo Nova Compact','demo-02-compact',47,76],['Expo / Demo Atlas Compact','demo-03-compact',53,76],['Expo / Demo Vector','demo-04',71,76],['Expo / Demo Lumen','demo-05',77,76],
- ['Expo / Code Circle','hub-01',41,84],['Expo / Design Guild','hub-02',47,84],['Expo / Data Club','hub-03',53,84],['Expo / Game Jam','hub-04',71,84],['Expo / Open Source','hub-05',77,84],
-].map(([name,file,x,y])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:4,height:2,standing:false}));
+ ['Expo / Demo Orbit','demo-01',41,76,6],['Expo / Demo Nova Compact','demo-02-compact',49,76,4],['Expo / Demo Atlas','demo-03',55,76,6],['Expo / Demo Vector','demo-04',68,76,4],['Expo / Demo Lumen','demo-05',75,76,4],
+ ['Expo / Code Circle','hub-01',42,84,4],['Expo / Design Guild','hub-02',49,84,4],['Expo / Data Club','hub-03',56,84,4],['Expo / Game Jam','hub-04',68,84,4],['Expo / Open Source','hub-05',75,84,4],
+].map(([name,file,x,y,width])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:Number(width),height:2,standing:false}));
 /** Current floor representation has no physical posts; every actual cell must remain visible and connected. */
 export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map:TiledMap):void{
  sponsorSupportIds(layout,catalog);
@@ -73,7 +74,8 @@ export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map
  const floor=map.layers.findIndex(l=>l.name==='floorLayer');assert.ok(floor>=0);
  for(const image of images){
   for(const p of layout.placements.filter(p=>!['terrain','atmosphere'].includes(p.layer)))assert.ok(!(p.x<image.x+image.width&&p.x+p.width>image.x&&p.y<image.y+image.height&&p.y+p.height>image.y),`${image.name} unrelated prop overlap ${p.id}`);
-  const layers=map.layers.filter(l=>l.name===image.name),atlases=map.tilesets.filter(t=>t.image==='../'+image.image);assert.equal(layers.length,1);assert.equal(atlases.length,1);
+  // A mark PNG may back both an arrival inlay and a booth inlay; each image owns the atlas and layer carrying its registered name.
+  const layers=map.layers.filter(l=>l.name===image.name),atlases=map.tilesets.filter(t=>t.name===image.name&&t.image==='../'+image.image);assert.equal(layers.length,1);assert.equal(atlases.length,1);
   const l=layers[0] as TileLayer,t=atlases[0];assert.equal(l.type,'tilelayer');assert.ok(map.layers.indexOf(l)<floor,'Floor logo must be below avatar');assert.equal(l.visible,true);assert.equal(l.opacity,1);assert.equal(l.data.filter(Boolean).length,image.width*2);
   for(let y=0;y<2;y++)for(let x=0;x<image.width;x++)assert.equal(l.data[(image.y+y)*map.width+image.x+x],t.firstgid+y*image.width+x,'Floor logo actual native cell changed');
  }

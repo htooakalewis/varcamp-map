@@ -46,7 +46,7 @@ describe('medium authored event world',()=>{
   }
  });
  it('shows the three independently replaceable sponsor images beside the distinct VarCamp floor identity',()=>{
-  const hub=scenes().find(l=>l.id==='overworld')!;const allImages=(hub as MapLayout & {images?:({image:string}&TileRect)[]}).images??[];expect(allImages).toHaveLength(14);expect(allImages.filter(i=>/^assets\/sponsors\/(demo-0[1-5](-compact)?|hub-0[1-5])\.png$/.test(i.image)&&i.width===4)).toHaveLength(10);expect(allImages.filter(i=>i.image==='assets/sponsors/varcamp-2026.png')).toHaveLength(1);const images=allImages.filter(i=>/^assets\/sponsors\/demo-0[123]\.png$/.test(i.image));
+  const hub=scenes().find(l=>l.id==='overworld')!;const allImages=(hub as MapLayout & {images?:({image:string}&TileRect)[]}).images??[];expect(allImages).toHaveLength(14);const named=allImages as ({name:string;image:string}&TileRect)[],booth=named.filter(i=>i.name.startsWith('Expo / '));expect(booth.every(i=>/^assets\/sponsors\/(demo-0[1-5](-compact)?|hub-0[1-5])\.png$/.test(i.image))).toBe(true);expect(booth.map(i=>i.width)).toEqual([6,4,6,4,4,4,4,4,4,4]);expect(allImages.filter(i=>i.image==='assets/sponsors/varcamp-2026.png')).toHaveLength(1);const images=named.filter(i=>/^assets\/sponsors\/demo-0[123]\.png$/.test(i.image)&&!i.name.startsWith('Expo / '));
   expect(images).toHaveLength(3);
   expect(new Set(images.map(i=>i.image)).size).toBe(3);
   const spawn=hub.entries.find(e=>e.isDefault)!;
