@@ -6,7 +6,7 @@ import sharp from 'sharp';
 import { build } from 'vite';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { WORLD_CATALOG } from '../src/world/catalog';
-import { buildMap } from '../tools/maps/builder';
+import { buildMap, readSponsorTileset } from '../tools/maps/builder';
 import { renderMap } from '../tools/maps/render';
 import type { MapLayout, TiledMap, TiledLayer } from '../tools/maps/types';
 import type { TileCatalog } from '../tools/art/catalog';
@@ -91,8 +91,29 @@ describe('replaceable WorkAdventure sponsor tile layers', () => {
     symlinkSync(resolve('assets/tilesets/original/floor.png'), 'assets/sponsors/escape.png');
     expect(() => buildMap(layout({ image: 'assets/sponsors/escape.png' }), tiles)).toThrow(/sponsor.*outside/i);
   });
-  it.each([{ width: 5 }, { height: 3 }, { x: 8 }, { x: 1.5 }])('rejects scaling or invalid image bounds %j', value => {
+  it.each([{ width: 5 }, { height: 3 }, { x: 8 }, { x: 1.5 }, { width: 4, height: 1 }, { width: 3, height: 2 }, { width: 8, height: 2 }])('rejects scaling or invalid image bounds %j', value => {
     expect(() => buildMap(layout(value), tiles)).toThrow(/sponsor.*(native|bounds)/i);
+  });
+  it('accepts the 4×2 compact expo footprint only with a native 128×64 PNG, exactly per entry', async () => {
+    const compact = 'assets/sponsors/compact-01.png';
+    await png(compact, 128, 64, '#2f6fde');
+    const authored = layout({ name: 'compact-mark', image: compact, width: 4, height: 2 });
+    authored.images!.push({ ...image, y: 6 });
+    const map = buildMap(authored, tiles).tmj;
+    expect(map.tilesets.find(t => t.name === 'compact-mark')).toMatchObject({ firstgid: 5, columns: 4, tilecount: 8, imagewidth: 128, imageheight: 64, image: '../assets/sponsors/compact-01.png', properties: [{ name: 'sponsorPanel', type: 'bool', value: true }, expect.anything()] });
+    expect(map.tilesets.find(t => t.name === image.name)).toMatchObject({ firstgid: 13, columns: 6, tilecount: 12, imagewidth: 192, imageheight: 64 });
+    const panel = map.layers.find(l => l.name === 'compact-mark');
+    if (panel?.type !== 'tilelayer') throw new Error('Compact mark must be a tilelayer');
+    expect(panel.data.map((gid, i) => gid ? [i, gid] : null).filter(Boolean)).toEqual([[38,5],[39,6],[40,7],[41,8],[50,9],[51,10],[52,11],[53,12]]);
+    expect(() => buildMap(layout({ name: 'compact-mark', image: compact }), tiles)).toThrow(/sponsor.*192.*64/i);
+    expect(() => buildMap(layout({ width: 4, height: 2 }), tiles)).toThrow(/sponsor.*128.*64/i);
+    expect(() => readSponsorTileset({ ...map.tilesets.find(t => t.name === 'compact-mark')!, columns: 6, tilecount: 12, imagewidth: 192 })).toThrow(/sponsor.*192.*64/i);
+    expect(() => readSponsorTileset({ ...map.tilesets.find(t => t.name === 'compact-mark')!, columns: 2, tilecount: 8, imagewidth: 64 })).toThrow(/6×2 or 4×2/);
+    expect(readSponsorTileset(map.tilesets.find(t => t.name === 'compact-mark')!).bytes).toEqual(readFileSync(compact));
+    const root = await release(map);
+    expect(readFileSync(resolve(root, fingerprint(compact)))).toEqual(readFileSync(compact));
+    await png(compact, 192, 64);
+    await expect(release(map)).rejects.toThrow(/sponsor.*128.*64/i);
   });
   it('rejects non-PNG bytes and wrong native PNG dimensions', async () => {
     writeFileSync(logo, 'not a PNG');

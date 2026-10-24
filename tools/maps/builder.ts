@@ -23,8 +23,14 @@ const decodeSponsor = `
   });
 `;
 
+/** The two admitted native panel footprints: the 6×2 arrival/wide panel (192×64) and the
+ * 4×2 compact expo mark (128×64). Each layout entry names one of them exactly. */
+export interface SponsorFootprint { width: 6 | 4; height: 2; }
+export const SPONSOR_FOOTPRINTS: readonly SponsorFootprint[] = Object.freeze([{ width: 6, height: 2 }, { width: 4, height: 2 }]);
+export const sponsorFootprint = (width: number, height: number): SponsorFootprint | undefined => SPONSOR_FOOTPRINTS.find(f => f.width === width && f.height === height);
+
 /** Shared author/release guard. Logos are editable assets, never atlas inputs or frozen hashes. */
-export function readSponsorImage(image: string): Buffer {
+export function readSponsorImage(image: string, footprint: SponsorFootprint = SPONSOR_FOOTPRINTS[0]): Buffer {
   if (typeof image !== 'string' || !/^assets\/sponsors\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.png$/.test(image)) throw new Error(`Sponsor image path must be assets/sponsors/<name>.png: ${image}`);
   let source: string;
   try { source = realpathSync(image); } catch { throw new Error(`Sponsor image missing: ${image}`); }
@@ -32,7 +38,8 @@ export function readSponsorImage(image: string): Buffer {
   if (statSync(source).size > 2 * 1024 * 1024) throw new Error(`Sponsor PNG exceeds the 2 MiB native-image limit: ${image}`);
   const bytes = readFileSync(source);
   if (bytes.length < 24 || !bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])) || bytes.subarray(12, 16).toString() !== 'IHDR') throw new Error(`Sponsor image must be a PNG: ${image}`);
-  if (bytes.readUInt32BE(16) !== 192 || bytes.readUInt32BE(20) !== 64) throw new Error(`Sponsor image must be native 192×64 pixels: ${image}`);
+  if (!sponsorFootprint(footprint.width, footprint.height)) throw new Error(`Sponsor image footprint must be 6×2 or 4×2 tiles: ${image}`);
+  if (bytes.readUInt32BE(16) !== footprint.width * 32 || bytes.readUInt32BE(20) !== footprint.height * 32) throw new Error(`Sponsor image must be native ${footprint.width * 32}×${footprint.height * 32} pixels: ${image}`);
   if (!bytes.subarray(-12).equals(Buffer.from([0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130]))) throw new Error(`Sponsor PNG is incomplete (missing IEND): ${image}`);
   if (!decodedSponsors.get(source)?.equals(bytes)) {
     const result = spawnSync(process.execPath, ['-e', decodeSponsor, sharpEntry], { input: bytes, timeout: 5000, maxBuffer: 64 * 1024 });
@@ -51,9 +58,10 @@ export function isSponsorTileset(tileset: TiledTileset): boolean {
 /** Native authored maps must keep the same engine-consumable 32px sheet geometry. */
 export function readSponsorTileset(tileset: TiledTileset): { path: string; bytes: Buffer } {
   if (!tileset.image || !/^\.\.\/assets\/sponsors\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.png$/.test(tileset.image)) throw new Error(`Sponsor tileset image path must be ../assets/sponsors/<name>.png: ${tileset.image}`);
-  if (tileset.source || tileset.tilewidth !== 32 || tileset.tileheight !== 32 || tileset.columns !== 6 || tileset.tilecount !== 12 || tileset.imagewidth !== 192 || tileset.imageheight !== 64 || (tileset.spacing ?? 0) !== 0 || (tileset.margin ?? 0) !== 0) throw new Error(`Sponsor tileset must embed a native 6×2 grid of 32px tiles: ${tileset.name}`);
+  const footprint = SPONSOR_FOOTPRINTS.find(f => tileset.columns === f.width && tileset.tilecount === f.width * f.height && tileset.imagewidth === f.width * 32 && tileset.imageheight === f.height * 32);
+  if (tileset.source || tileset.tilewidth !== 32 || tileset.tileheight !== 32 || !footprint || (tileset.spacing ?? 0) !== 0 || (tileset.margin ?? 0) !== 0) throw new Error(`Sponsor tileset must embed a native 6×2 or 4×2 grid of 32px tiles: ${tileset.name}`);
   const path = tileset.image.slice(3);
-  return { path, bytes: readSponsorImage(path) };
+  return { path, bytes: readSponsorImage(path, footprint) };
 }
 
 /** Deterministic, finite export. Ground is replace-painted; transparent scenery is stacked.
@@ -163,13 +171,14 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   const collision=layer('physical-collisions',0);collision.data=Array.from(groundMask,(v,i)=>v||propMask[i]?wall:0);layers.push(collision);
   for (const image of layout.images ?? []) {
     bounds(image, `Sponsor ${image.name}`);
-    if (image.width !== 6 || image.height !== 2) throw new Error(`Sponsor ${image.name}: native image footprint must be 6×2 tiles (192×64 pixels)`);
-    readSponsorImage(image.image);
-    const firstgid = nextgid;
-    tilesets.push({ firstgid, name: image.name, tilewidth: 32, tileheight: 32, columns: 6, tilecount: 12, image: relative('maps', image.image), imagewidth: 192, imageheight: 64, properties: [{ name: 'sponsorPanel', type: 'bool', value: true }, { name: 'tilesetCopyright', type: 'string', value: 'Sponsor artwork: see credits/sponsors.json for original attribution and replacement terms.' }] });
-    nextgid += 12;
+    const footprint = sponsorFootprint(image.width, image.height);
+    if (!footprint) throw new Error(`Sponsor ${image.name}: native image footprint must be 6×2 tiles (192×64 pixels) or 4×2 tiles (128×64 pixels)`);
+    readSponsorImage(image.image, footprint);
+    const firstgid = nextgid, columns = footprint.width, tilecount = footprint.width * footprint.height;
+    tilesets.push({ firstgid, name: image.name, tilewidth: 32, tileheight: 32, columns, tilecount, image: relative('maps', image.image), imagewidth: columns * 32, imageheight: footprint.height * 32, properties: [{ name: 'sponsorPanel', type: 'bool', value: true }, { name: 'tilesetCopyright', type: 'string', value: 'Sponsor artwork: see credits/sponsors.json for original attribution and replacement terms.' }] });
+    nextgid += tilecount;
     const panel = layer(image.name);
-    for (let y = 0; y < 2; y++) for (let x = 0; x < 6; x++) panel.data[(image.y + y) * layout.width + image.x + x] = firstgid + y * 6 + x;
+    for (let y = 0; y < footprint.height; y++) for (let x = 0; x < columns; x++) panel.data[(image.y + y) * layout.width + image.x + x] = firstgid + y * columns + x;
     if(image.standing===true)layers.push(panel);
     else layers.splice(layers.findIndex(l=>l.name==='floorLayer'),0,panel);
   }

@@ -9,7 +9,7 @@ export interface Placement extends TileRect {
  renderRole?: 'grounded' | 'canopy' | 'cutaway';
 }
 export interface LayoutSign extends TileRect { name: string; text: string; fontSize?: number; color?: string; align?: 'left' | 'center'; padding?: number; }
-/** Separate native 192×64 PNG, exported as a 6×2 sheet and tile layer for WorkAdventure. */
+/** Separate native PNG, exported as its own 6×2 (192×64) or 4×2 (128×64) sheet and tile layer for WorkAdventure. */
 export interface LayoutImage extends TileRect { name: string; image: string; standing?: boolean; }
 export interface TileAnimationFrame { tileid: number; duration: number; }
 /** One bounded native atlas/clock, kept separate from scenery stacking and collision masks. */
