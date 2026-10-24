@@ -15,6 +15,8 @@ beforeAll(()=>{
  // The brand assets (the court fountain and the road lamps, admitted after the expo family) are left out too.
  layout.images=layout.images.filter((i:{name:string})=>!i.name.startsWith('Expo / '));layout.placements=layout.placements.filter((p:{id:string;sprite:string})=>!p.sprite.startsWith('sticker-')&&!nameplate(p.id)&&!['plaza-fountain','plaza-lamp'].includes(p.sprite));
  layout.signs=layout.signs.filter((s:{name:string})=>!nameplate(s.name));layout.standingSigns=layout.standingSigns.filter((s:{face:string})=>!nameplate(s.face));
+ // ...and on the pre-roadster-v2 closure: the frozen sixteen-pose v1 roadster descriptor keeps the registered reservation in place.
+ layout.animatedOverlays=layout.animatedOverlays.map((o:{name:string})=>o.name==='roadster'?read('art/source/roadster.json').overlay:o);
  source=buildMap(layout,read('art/tile-catalog.json')).tmj;
  native=read('maps/overworld.tmj');native.tilesets=structuredClone(registered.maps.overworld.atlases);
  current=structuredClone(native);let next=registered.maps.overworld.nextAtlasGid;

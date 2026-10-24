@@ -5,6 +5,7 @@ import{resolve}from'node:path';
 import{expect,it}from'vitest';
 import{worldRelease}from'../tools/release';
 import{stageCurrentWorldInputs}from'./helpers/current-interior-fixture';
+import registered from'../art/source/native-ownership-context.json';
 it('actual normal build and direct current release reject coherent Roadster omission before writing or emitting anything',async()=>{
  const project=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-aerial-entry-'));
  try{
@@ -12,7 +13,9 @@ it('actual normal build and direct current release reject coherent Roadster omis
   const normal=()=>spawnSync(process.execPath,['--import','tsx',resolve(project,'tools/maps/build.ts')],{cwd:fixture,encoding:'utf8',timeout:20000,maxBuffer:1024*1024});
   const release=async()=>{const rows:unknown[]=[];let error:unknown;const hook=worldRelease().generateBundle;if(typeof hook!=='function')throw Error('Missing actual current release entry');try{await hook.call({emitFile:(row:unknown)=>{rows.push(row);return String(rows.length);}}as never,{}as never,{runtime:{type:'chunk',isEntry:true,name:'src-main',fileName:'assets/src-main-fixture.js'}}as never,false);}catch(e){error=e;}return{rows,error};};
   const control=normal();expect(control.status,control.stderr).toBe(0);const previous=readFileSync('maps/preview/air-district.tmj');const releaseControl=await release();expect(releaseControl.error).toBeUndefined();expect(releaseControl.rows.length).toBeGreaterThan(68);
-  const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),map=JSON.parse(readFileSync('maps/overworld.tmj','utf8'));layout.animatedOverlays=layout.animatedOverlays.filter((o:{name:string})=>o.name!=='roadster');map.layers=map.layers.filter((l:{name:string})=>l.name!=='roadster');writeFileSync('world/layouts/overworld.json',JSON.stringify(layout));writeFileSync('maps/overworld.tmj',JSON.stringify(map));
+  const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),map=JSON.parse(readFileSync('maps/overworld.tmj','utf8'));layout.animatedOverlays=layout.animatedOverlays.filter((o:{name:string})=>o.name!=='roadster');map.layers=map.layers.filter((l:{name:string})=>l.name!=='roadster');
+  // Roadster-v2 epoch: a coherent omission also drops the source-owned v2 atlas and leaves the registered v1 reservation unused in place.
+  const at=registered.maps.overworld.atlases.findIndex(t=>t.name==='roadster');map.tilesets=map.tilesets.filter((s:{image:string})=>s.image!=='../assets/tilesets/original/roadster-v2.png');map.tilesets.splice(at,0,structuredClone(registered.maps.overworld.atlases[at]));writeFileSync('world/layouts/overworld.json',JSON.stringify(layout));writeFileSync('maps/overworld.tmj',JSON.stringify(map));
   const rejected=normal();expect(rejected.status).not.toBe(0);expect(rejected.stderr).toMatch(/animation safety/i);expect(rejected.stdout).toBe('');expect(readFileSync('maps/preview/air-district.tmj').equals(previous)).toBe(true);
   const rejectedRelease=await release();expect(rejectedRelease.error).toBeInstanceOf(Error);expect(String(rejectedRelease.error)).toMatch(/animation safety/i);expect(rejectedRelease.rows).toEqual([]);
  }finally{process.chdir(project);rmSync(fixture,{recursive:true,force:true});}

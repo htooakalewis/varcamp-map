@@ -3071,11 +3071,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48"
+            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "7b284b0ef575f0b28d922baa72a77494378d1198ab5e345b75cb5da9c36dbfea"
+            "sha256": "ee34e0f903bd0a3e546d57d1163a5e15226315c6ff4ff82286123c7a4971dbe4"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -3495,11 +3495,11 @@
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48"
+            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "7b284b0ef575f0b28d922baa72a77494378d1198ab5e345b75cb5da9c36dbfea"
+            "sha256": "ee34e0f903bd0a3e546d57d1163a5e15226315c6ff4ff82286123c7a4971dbe4"
           },
           {
             "path": "art/source/native-ownership-context.json",

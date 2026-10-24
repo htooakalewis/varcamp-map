@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "d5c8067903fd6ef1f28a2320c8e301978813da7374b974a77f4a49843d859745",
-      "maps/overworld.tmj": "621073334271a2d11a0d9ac10666e89dfa0e5e74ed90991f6e9c89dc9ab998f9",
+      "world/layouts/overworld.json": "6a83112241cab142fa7dede9b334ded7e17603b53688baa7c70e7e35a8f99ef1",
+      "maps/overworld.tmj": "47bd830a7872bf472601c2b3e06741e83e3e38e5c3a4af2558db3aaaa8d02a8f",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
@@ -17,7 +17,7 @@
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15"
     },
     "allowedCellsSha256": "04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9",
-    "geometrySha256": "a054bab1b9457db744bc7785122264b68d3093bfccdfd16156fdca414a68b440",
+    "geometrySha256": "3fbb3c5a117704ab1c00b5667908305f33062da84a9268fc017a958f230bd921",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

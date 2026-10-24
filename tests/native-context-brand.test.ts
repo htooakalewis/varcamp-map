@@ -7,6 +7,7 @@ import{reconcileNativeProjection}from'../tools/maps/native-projection';
 import{assertNativeOwnershipContext,assertNativeAuthoringContext,BRAND_ATLASES,EXPO_MARKS}from'../tools/maps/native-ownership-context';
 import{BRAND_ASSETS,brandAssetPlacements,isBrandAssets}from'../tools/maps/brand-assets';
 import registered from'../art/source/native-ownership-context.json';
+import{preRoadsterV2Layout,preRoadsterV2Native}from'./helpers/roadster-epoch';
 import type{MapLayout,TiledMap,TiledTileset}from'../tools/maps/types';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const brandNames=Object.keys(BRAND_ATLASES),brandSprites=['plaza-fountain','plaza-lamp'];
@@ -14,7 +15,9 @@ const member=(t:TiledTileset)=>brandNames.includes(t.name??'')||Object.values(BR
 const expoMark=(t:TiledTileset)=>Object.values(EXPO_MARKS).some(m=>m.name===t.name);
 let catalog:ReturnType<typeof loadTileCatalog>,layout:MapLayout,current:TiledMap,source:TiledMap,preBrand:TiledMap,expoLayout:MapLayout,expoSource:TiledMap,brandNative:TiledMap;
 beforeAll(()=>{
- catalog=loadTileCatalog();layout=read('world/layouts/overworld.json');current=read('maps/overworld.tmj');source=buildMap(layout,catalog).tmj;
+ // Pinned on the pre-roadster-v2 closure (the frozen v1 roadster descriptor and its registered reservation);
+ // the later v2 epoch has its own policy in native-context-roadster-v2.test.ts.
+ catalog=loadTileCatalog();layout=preRoadsterV2Layout(read('world/layouts/overworld.json'));current=preRoadsterV2Native(read('maps/overworld.tmj'));source=buildMap(layout,catalog).tmj;
  // The brand operation placed the court fountain and six road lamps. The policy scenario starts from the exact
  // pre-brand context (the complete expo-epoch native without the two brand atlases) and a source without the
  // brand placements, then admits both atlases synthetically after the caption atlas.

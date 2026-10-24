@@ -67,6 +67,22 @@ function brandAtlases(source:TiledMap,start:number):TiledTileset[]{
 }
 export const EXPO_STICKER_ATLAS=Object.freeze({name:'booth-stickers',image:'../assets/tilesets/original/booth-stickers.png',imagewidth:192,imageheight:32,columns:6,tilecount:6});
 export const EXPO_CAPTION_ATLAS=Object.freeze({name:'standing-captions',image:'../assets/tilesets/original/expo-captions.png',imagewidth:512,columns:16,maxImageHeight:192});
+/** The fourth reviewed reservation family: the roadster-v2 epoch, admitted after BRAND_ATLASES. The
+ * plaza's `roadster` role outgrew its registered 240-tile reservation (GID 4330, v1 image) when the
+ * display gained compiler-synthesised motion. The v2 body is identified by its own image; when the
+ * current overworld source carries it, the registered v1 interval is vacated (never reused, like a
+ * retired plant epoch) and the v2 body is appended after the brand family as one 16-column atlas of
+ * at most 64 rows (the 4 MiB native bound) with its 25 synchronized carriers. */
+export const ROADSTER_V2_ATLAS=Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster-v2.png',imagewidth:512,columns:16,maxImageHeight:2048,carriers:25,vacates:Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster.png',firstgid:4330,tilecount:240})});
+export const isRoadsterV2=(set:TiledTileset):boolean=>set.name===ROADSTER_V2_ATLAS.name&&set.image===ROADSTER_V2_ATLAS.image;
+function roadsterV2Atlas(source:TiledMap,expected:TiledTileset[],start:number):TiledTileset|undefined{
+ const sets=source.tilesets.filter(isRoadsterV2);need(sets.length<=1,'roadster-v2 source atlas duplicated');if(!sets.length)return undefined;
+ const set=sets[0],r=ROADSTER_V2_ATLAS;
+ need(set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&set.imageheight!<=r.maxImageHeight&&set.tilecount===set.imageheight!/32*r.columns&&Array.isArray(set.tiles)&&set.tiles.length===r.carriers&&set.tiles.every(t=>Array.isArray(t.animation)&&t.animation.length>=2),'roadster-v2 atlas identity/geometry leaves its registered reservation');
+ const index=expected.findIndex(t=>t.name===r.vacates.name&&t.image===r.vacates.image&&t.firstgid===r.vacates.firstgid&&t.tilecount===r.vacates.tilecount);
+ need(index>=0,'roadster-v2 requires the registered roadster reservation to vacate');
+ expected.splice(index,1);return{...structuredClone(set),firstgid:start};
+}
 const expoMarkByName=new Map(Object.entries(EXPO_MARKS).map(([file,mark])=>[mark.name,{...mark,image:`../assets/sponsors/${file}.png`}]));
 const expoMarkImages=new Set([...expoMarkByName.values()].map(mark=>mark.image));
 /** Expo family membership is decided by registered name/image identity only: a mark by its
@@ -124,8 +140,8 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
 }
 /** Reviewed epochs on the overworld, each admitted only after every earlier one: the fleet is
  * mandatory, the expo family may be absent only together with the brand family. */
-interface Epoch{expo:boolean;brand:boolean}
-const CURRENT:Epoch={expo:true,brand:true},PRE_BRAND:Epoch={expo:true,brand:false},PRE_EXPO:Epoch={expo:false,brand:false};
+interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
+const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
 function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
@@ -136,6 +152,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):Tile
   const index=expected.findIndex(t=>t.name===name);if(index<0)continue;
   const sets=source.tilesets.filter(t=>t.name===name);need(sets.length<=1,'source role atlas ambiguous: '+name);if(!sets.length)continue;// an omitted role keeps its registered body; the roster guards report it
   const set=sets[0],old=expected[index];
+  if(isRoadsterV2(set))continue;// the roadster-v2 epoch below owns this role's placement
   need(set.image===old.image&&set.image!.startsWith('../assets/tilesets/original/')&&set.tilewidth===32&&set.tileheight===32&&set.imagewidth===512&&set.columns===16&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&Number.isSafeInteger(set.tilecount)&&set.tilecount===set.imageheight!/32*16&&set.tilecount!<=old.tilecount!,'role source atlas identity/geometry leaves its registered reservation: '+name);
   expected[index]={...structuredClone(set),firstgid:old.firstgid};
  }
@@ -158,7 +175,9 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):Tile
   // Expo epoch: admitted only here, only after every fleet reservation; the brand assets only after it.
   const expo=expoAtlases(source,row,next);if(epoch.expo)expected.push(...expo);
   const brand=brandAtlases(source,next+expo.reduce((n,set)=>n+set.tilecount!,0));if(epoch.brand)expected.push(...brand);
- }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');}
+  // Roadster-v2 epoch: admitted only here, only after every brand reservation; it vacates the v1 interval.
+  const v2=roadsterV2Atlas(source,epoch.roadsterV2?expected:structuredClone(expected),next+[...expo,...brand].reduce((n,set)=>n+set.tilecount!,0));if(v2&&epoch.roadsterV2)expected.push(v2);
+ }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -180,7 +199,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
  // Epoch entry: the exact pre-expo current context (every registered and fleet reservation,
- // no expo or brand member) and the exact pre-brand context (the complete expo family, no
- // brand member) are the only other admitted author inputs.
- need(isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,PRE_BRAND))||isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,PRE_EXPO)),'author input atlas ownership is neither exact registered nor current');
+ // no expo or brand member), the exact pre-brand context (the complete expo family, no
+ // brand member) and the exact pre-roadster-v2 context (every brand reservation, the v1 roadster
+ // interval still in place) are the only other admitted author inputs.
+ need([PRE_ROADSTER_V2,PRE_BRAND,PRE_EXPO].some(epoch=>isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,epoch))),'author input atlas ownership is neither exact registered nor current');
 }

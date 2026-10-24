@@ -1,5 +1,5 @@
 import {isDeepStrictEqual} from 'node:util';
-import{assertNativeOwnershipContext,assertNativeAuthoringContext}from'./native-ownership-context';
+import{assertNativeOwnershipContext,assertNativeAuthoringContext,isRoadsterV2}from'./native-ownership-context';
 import contract from'./animated-decoration-contract.json';
 import ocean from '../../world/beach-ship-native.json';
 import type {TiledMap,TiledTileset,TiledLayer,TileLayer,TiledProperty} from './types';
@@ -82,6 +82,9 @@ export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):Ti
  const named=new Set(source.tilesets.filter(t=>!ordinary(t)).map(t=>t.name));
  const references=(layers:TiledLayer[],from:number,to:number):string[]=>layers.flatMap(l=>l.type==='tilelayer'?l.data.some(g=>g&&plain(g)>=from&&plain(g)<to)?[l.name]:[]:l.type==='objectgroup'?l.objects.some(o=>o.gid&&plain(o.gid)>=from&&plain(o.gid)<to)?[l.name]:[]:l.type==='group'?references(l.layers,from,to):[]);
  for(const set of source.tilesets){
+  // Roadster-v2 epoch: the registered v1 reservation (same role name, v1 image) is vacated before
+  // the v2 body is appended; its only references belong to the rebuilt roadster paint layer.
+  if(isRoadsterV2(set)){const v1=result.tilesets.filter(t=>t.name===set.name&&t.image!==set.image);need(v1.length<=1,'ambiguous roadster epoch');if(v1.length){need(references(result.layers,v1[0].firstgid,v1[0].firstgid+v1[0].tilecount!).every(name=>owned.has(name)),'retired owned atlas has protected references');result.tilesets=result.tilesets.filter(t=>t!==v1[0]);}}
   const matches=result.tilesets.filter(t=>ordinary(set)?!named.has(t.name)&&t.image===set.image:t.name===set.name&&t.image===set.image);need(matches.length<=1,'ambiguous author atlas role');
   const prior=matches[0];if(prior&&isDeepStrictEqual(body(prior,ordinary(set)),body(set,ordinary(set))))continue;
   if(prior){

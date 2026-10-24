@@ -2,7 +2,7 @@
   "workadventure": {
     "attribution": "WorkAdventure / The Coding Machine; preserve all authors and terms in LICENSE.assets",
     "url": "https://github.com/workadventure/map-starter-kit/tree/1143646a9c02c3928eac4acbb123642c62a48a85/tilesets",
-    "license": "WorkAdventure assets license \u2014 redistribution only with a WorkAdventure map; not a standalone asset pack",
+    "license": "WorkAdventure assets license — redistribution only with a WorkAdventure map; not a standalone asset pack",
     "licenseFile": "assets/tilesets/workadventure/LICENSE.assets",
     "changes": "None. Six complete source sheets copied byte-for-byte. Catalog only selects tile rectangles.",
     "files": [
@@ -66,7 +66,7 @@
     ]
   },
   "lpc-space": {
-    "attribution": "Ba\u015dto/Basxto, Hyptosis, FunwithPixels and Skorpio",
+    "attribution": "Baŝto/Basxto, Hyptosis, FunwithPixels and Skorpio",
     "url": "https://opengameart.org/content/lpc-goes-to-space",
     "license": "CC-BY-SA 4.0",
     "licenseFile": "assets/tilesets/lpc-space/LICENSE-CC-BY-SA-4.0.txt",
@@ -83,7 +83,7 @@
     "url": "https://creativecommons.org/publicdomain/zero/1.0/",
     "license": "CC0 1.0",
     "licenseFile": "assets/tilesets/original/LICENSE.txt",
-    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained. Beach refinement: beach-lounge.svg/png and beach-surf.svg/png add integer-grid native pixel palms, striped parasols/recliners, slatted tables, woven towels, timber cabana/bar and gentle 2080ms four-frame surf. A separate translucent original tile calms the existing licensed LPC water; imported source sheets are unchanged. Original standing caption glyph atlas added: semantic source linked to existing original pixel alphabet plus original arrows; no imported pixels. Approved original generated coastal wildlife, props and aircraft technical native PNG exports, plus eleven bounded native wildlife animations. Masters, crop recipes, phase tracks and pure export checks retained. Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied.",
+    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained. Beach refinement: beach-lounge.svg/png and beach-surf.svg/png add integer-grid native pixel palms, striped parasols/recliners, slatted tables, woven towels, timber cabana/bar and gentle 2080ms four-frame surf. A separate translucent original tile calms the existing licensed LPC water; imported source sheets are unchanged. Original standing caption glyph atlas added: semantic source linked to existing original pixel alphabet plus original arrows; no imported pixels. Approved original generated coastal wildlife, props and aircraft technical native PNG exports, plus eleven bounded native wildlife animations. Masters, crop recipes, phase tracks and pure export checks retained. Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied. Roadster-v2 addition: the plaza display is recompiled from the same sixteen generated poses with compiler-synthesised 100 ms tweens, hover bob, landing settle, thruster bloom, pad shadow/light chases, dust puffs, light pulses and roll ghosting into roadster-v2.png; the v1 atlas stays frozen as the registered reservation body and no new car pixels were drawn.",
     "files": [
       {
         "path": "art/source/booth-stickers.svg",
@@ -219,7 +219,7 @@
       },
       {
         "path": "art/source/roadster.json",
-        "sha256": "61fe3cc6e78482a92e5671265e7c885c58de75f6a401914b0c443096643faedc"
+        "sha256": "868388fd92a26a745f8f698dc903a3e7b1ecfc8f8e097fbdee62673c276d54a0"
       },
       {
         "path": "art/source/rolling-breaker-east.json",
@@ -391,7 +391,7 @@
       },
       {
         "path": "art/source/world-ambient-air-district-device-1.json",
-        "sha256": "f5eabf154fea02fde8e7d970283e640180bf89424ffe0efbd2e419eefae19ed6"
+        "sha256": "30e56726a1307604b57d61d5e077a6bfdb6e3346b59b5f129d81b2df0ec50b75"
       },
       {
         "path": "art/source/world-ambient-air-district-lamp-2-poses.png",
@@ -399,7 +399,7 @@
       },
       {
         "path": "art/source/world-ambient-air-district-lamp-2.json",
-        "sha256": "135f173bb2e65768046dbbc0ba5e8fdf6d10f6312f214113f61e15bebd5d5077"
+        "sha256": "cac60d3a96bd208ab1e100b4953da0ba5b67cfbb01ff8597bdb71061dbeb195b"
       },
       {
         "path": "art/source/world-ambient-approved-fish-strip.png",
@@ -419,7 +419,7 @@
       },
       {
         "path": "art/source/world-ambient-campus-exploration-device-1.json",
-        "sha256": "8e891b46519ead12a6d1d7aad422ed94c91da5ffc4e447afa6523b5386c43300"
+        "sha256": "c72a362703ac09b4ca5d0817a926c38ac3212d8dcbb4ec659f8c9f3963ff1964"
       },
       {
         "path": "art/source/world-ambient-campus-exploration-leaves-2-poses.png",
@@ -427,7 +427,7 @@
       },
       {
         "path": "art/source/world-ambient-campus-exploration-leaves-2.json",
-        "sha256": "e5f678d2b7d82d5aaa2e9536fa0a754ff7e9549cbc8267f082e882c5715dc93f"
+        "sha256": "e186585fed6c1c1bc9d2c2e7de020e0b6ccd0ccee6c0df5a7b120af8f15bda35"
       },
       {
         "path": "art/source/world-ambient-cascade-poses.png",
@@ -439,7 +439,7 @@
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-1.json",
-        "sha256": "9d4f913d2d6f79bde6de298fb0282c8371857642b0ee2308374e23ee05625d55"
+        "sha256": "3ec4aae2039e1c3e9313acfc16a983168a7f5fb0ca1ff529ba091a313d5670be"
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-2-poses.png",
@@ -447,7 +447,7 @@
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-2.json",
-        "sha256": "904f36fa0b9bc71e974f16d023f3f9a0a5b275a0a4a40e36c88782442d93a9e1"
+        "sha256": "e67cf33872e43d10c17ae37b2c638fa45fac81ba5bbcc719fdcee31945a0ff5d"
       },
       {
         "path": "art/source/world-ambient-device-poses.png",
@@ -459,7 +459,7 @@
       },
       {
         "path": "art/source/world-ambient-earth-district-device-1.json",
-        "sha256": "d9350eff0705c1b57ed26b8e29bd9aad9aa57e65028edab701bd3518659bce43"
+        "sha256": "25467962e4da597f93662026ad40f7612f1aba46271de96acf86cf71d56d7fff"
       },
       {
         "path": "art/source/world-ambient-earth-district-lamp-2-poses.png",
@@ -467,7 +467,7 @@
       },
       {
         "path": "art/source/world-ambient-earth-district-lamp-2.json",
-        "sha256": "0342b57ccd8b3dab335cb20ba744d89d8d4377106e77ab2c212fc77207099c63"
+        "sha256": "a4e6c771de057f0f90f1f82d7e60df46aefca46bd7160a9fd67bcc90dab2ef7f"
       },
       {
         "path": "art/source/world-ambient-fa-ship-fish-2-poses.png",
@@ -475,7 +475,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-fish-2.json",
-        "sha256": "e1b7d7a5c979462909a296c71663fa2d339f5c9072841443ad96001ed976c5fa"
+        "sha256": "3b70ec11732361b60dfcd7031c4daaae44f0cfeb69a357c1d20d7be971d30289"
       },
       {
         "path": "art/source/world-ambient-fa-ship-gull-1-poses.png",
@@ -483,7 +483,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-gull-1.json",
-        "sha256": "bb24a184dac34e53d6520ae5857db5fe31b4dde05beb4e2dc80ca60c5029f561"
+        "sha256": "8c8d98d1ff216a51003a6b88bd0619fbece995eefae25b77af7ec5b0b97706c8"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-lamp-2-poses.png",
@@ -491,7 +491,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-lamp-2.json",
-        "sha256": "69bb29dbe51e5aa01da9999cc5e83f9cf542580b31ced41e7865c843fbeb2089"
+        "sha256": "d37acba87e48b2fcacee77c21d58a2174a2f85e33919f8a42dedff8bbee69674"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1-lower-poses.png",
@@ -507,11 +507,11 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1-upper.json",
-        "sha256": "2c3bf1c3291ec9f413e93b12374cae1765f5b50d7dab9e5243aa3a57f2e673b4"
+        "sha256": "34a8df65ddd7911067abeacb2a18a12448c391efa35fed2a08f1865e1d2ae679"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1.json",
-        "sha256": "17eae0e39bade146068d93b00f1bcaf4b8aac20f044a9fd6e60d6ee189ae5165"
+        "sha256": "0867f23ff641f77a6e6f5d81c27892959124ef05ec1c579a49d52e8a05c1b6fd"
       },
       {
         "path": "art/source/world-ambient-fire-district-heat-1-poses.png",
@@ -519,7 +519,7 @@
       },
       {
         "path": "art/source/world-ambient-fire-district-heat-1.json",
-        "sha256": "e2db70afc38ce9b932fb8de9ac9dd5dd15d0bf6220eb9c47d128662b0ac27ba1"
+        "sha256": "91450bc5019c0bcbe179bde629f455c342acd7d03f1b43d83a2baec242ac15cf"
       },
       {
         "path": "art/source/world-ambient-fire-district-steam-2-poses.png",
@@ -527,7 +527,7 @@
       },
       {
         "path": "art/source/world-ambient-fire-district-steam-2.json",
-        "sha256": "b700787e665d2ab7cfb6de4a1ef9997b9b3249e9689d74819212187b4bded3dd"
+        "sha256": "17bbc55248c3d5fa6ad77dedb6572b3d3e61a3710227b9b8dc0b4cc7360bb476"
       },
       {
         "path": "art/source/world-ambient-fish-poses.png",
@@ -555,7 +555,7 @@
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-device-2.json",
-        "sha256": "dbc60024388bca74ca89f6064ce00016750ab0a28676405337e5c1b35ebe46fd"
+        "sha256": "3fa8c174a186f51b1f24df1f01682fde938eda8c0880a6259c0319283d5aaa75"
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-instrument-1-poses.png",
@@ -563,7 +563,7 @@
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-instrument-1.json",
-        "sha256": "5032ae9a0c851f66fb4b3b6accfbb372a020c25f5d86e94ea2752af8e9fdbc72"
+        "sha256": "8fdb10e494eaeb5b3ea7ceae937ee911b04f528295af263676573b8e7fa86c48"
       },
       {
         "path": "art/source/world-ambient-lamp-poses.png",
@@ -579,7 +579,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-cafe-bubbles-2.json",
-        "sha256": "3e96c00f7660838224c7f177091db334a288d2aa26c5f5755bb29dc30021b811"
+        "sha256": "06c10b294df3af30a7b874132d133b6a2dbdc4a191884e76a9cd910ff104a549"
       },
       {
         "path": "art/source/world-ambient-moon-cafe-steam-1-poses.png",
@@ -587,7 +587,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-cafe-steam-1.json",
-        "sha256": "a5055e395ab5d8ae4c5ab6aabb08277b023d02f680b3b935648474629c0e352d"
+        "sha256": "cfa1c9e23dc77c26d71dccb422e042c6e362d560fede537d9b4fcd44f3a9dbdf"
       },
       {
         "path": "art/source/world-ambient-moon-grotto-crystal-2-poses.png",
@@ -595,7 +595,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-grotto-crystal-2.json",
-        "sha256": "970b56bf9398fa93c3044f3341d7b85a530e8382924634296b8efd37b0e3072f"
+        "sha256": "26ff232587ab8d77f8652102476f73a485dd6886f4c1e1cc092c71a81d96398d"
       },
       {
         "path": "art/source/world-ambient-moon-grotto-ripples-1-poses.png",
@@ -603,7 +603,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-grotto-ripples-1.json",
-        "sha256": "e6518c893673e31ac9d6094de7c0cb7fcc7a95fe602a0811a798b0f4bfa470fa"
+        "sha256": "52c465dff5113d1e435c69109d9807003aa450cfa984477490d07b2392369f4c"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-1-poses.png",
@@ -611,7 +611,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-1.json",
-        "sha256": "e6d7ee2cd795c379dbf1f0166f030c2251c2cc2971a7d92b9161111613002277"
+        "sha256": "1956412d2733889bc06725f8791a5f2645da66fd11c01924ee948eed36441945"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-2-poses.png",
@@ -619,7 +619,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-2.json",
-        "sha256": "2d561fbc2b2d95b07ccbf3e41ae99813bea4f626b9a38f290c5caeee1fac7883"
+        "sha256": "ec10ca598824ddd1aea74d5a247c090682df131748ce65874d734664b7137e05"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-3-poses.png",
@@ -627,7 +627,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-3.json",
-        "sha256": "a4c71755b41ea5856bb1c0db4a8dd0902ef10f26254cac9082eb41e40381e6ec"
+        "sha256": "0d7af818ea427d40d589e35806d8cf5915efa72bbbab323734ae833efdeec2fe"
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-1-poses.png",
@@ -635,7 +635,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-1.json",
-        "sha256": "89a1ca02225308e42c3d7ea8d577dace695428e77cc70dea403a09c8cc301555"
+        "sha256": "113085d9f5271f8a0a76c4c7b864e0e03cbb1de9540c3e02d425b3694d7ffe22"
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-2-poses.png",
@@ -643,7 +643,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-2.json",
-        "sha256": "5671a37937a1247ea003b9e57e1d5bcbd04ce2d8792395b8cdb828d44818bd76"
+        "sha256": "ed96209f7ceb989728c4c0be8d2c58f7d2d661bca11e727d89fcf87b6212d2f9"
       },
       {
         "path": "art/source/world-ambient-orbit-playground-device-1-poses.png",
@@ -651,7 +651,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-playground-device-1.json",
-        "sha256": "e48a68eec3cc0237f2356dfe96aeff2d59cb82d6b1152adb440141c906583d98"
+        "sha256": "780522a2903b36d416b459fc7a0128ff55568fc003c484969b19c8b666fbc79b"
       },
       {
         "path": "art/source/world-ambient-orbit-playground-leaves-2-poses.png",
@@ -659,7 +659,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-playground-leaves-2.json",
-        "sha256": "311e85efc32327e2e56de5c624ea2406c9e4308e8fb47e402e636ae020800c5e"
+        "sha256": "3f01f7364bd5813ef7bace1ccae146282d235129d0c5abfc7da1d5f32278a684"
       },
       {
         "path": "art/source/world-ambient-planter-approved-atlas.png",
@@ -675,7 +675,7 @@
       },
       {
         "path": "art/source/world-ambient-star-garden-leaves-2.json",
-        "sha256": "fdf75700ac245bcb61238b7d0802e27a262f3ddb91827f8a5cb8d42310400448"
+        "sha256": "bd5e98d444b3ddd6f7b4bda59ebc5056f715df504c0afb5c18a70698583fef25"
       },
       {
         "path": "art/source/world-ambient-star-garden-ripples-1-poses.png",
@@ -683,7 +683,7 @@
       },
       {
         "path": "art/source/world-ambient-star-garden-ripples-1.json",
-        "sha256": "2a63462aa5080dc9159a2a6f9e1aad6502aca6215afbb1b46c1555500210feae"
+        "sha256": "0c1ba496fb1fca84c08731703b64c7ce9072436c7d4017eb780a2d05266ce1fe"
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-instrument-1-poses.png",
@@ -691,7 +691,7 @@
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-instrument-1.json",
-        "sha256": "6f4b773fce0303ac94037cec8eec7b4a7fbf1b58a2bdf3597d77771c7e0cfdc9"
+        "sha256": "010d08c4c4ce4a5fdc3402feaf806461461d9c8ae1ef5cc134b9e7a0bc9fce5a"
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-leaves-2-poses.png",
@@ -699,7 +699,7 @@
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-leaves-2.json",
-        "sha256": "1342ca9b7cd96fe925089ae7a69a0ee0eb02a619c9de795a73755fc81ca945e2"
+        "sha256": "34fcff8971ceed91da388c89818e7cb011c4cb90dabfff504a1854ac69c7827b"
       },
       {
         "path": "art/source/world-ambient-steam-poses.png",
@@ -711,7 +711,7 @@
       },
       {
         "path": "art/source/world-ambient-water-district-cascade-2.json",
-        "sha256": "6e637da12b659522b15b66c35a8c8fc12ed3e3b7f5d9f2afb2058796a6b3e8f0"
+        "sha256": "7d976e60fdb013a67d8c480b61f6556ab45c526908c9234407302499e69b7cae"
       },
       {
         "path": "art/source/world-ambient-water-district-ripples-1-poses.png",
@@ -719,7 +719,7 @@
       },
       {
         "path": "art/source/world-ambient-water-district-ripples-1.json",
-        "sha256": "92783930a7d7326d39af51a909632bd05005df62e3fba95d33cb97eb990cb87c"
+        "sha256": "c48a14d47a6faa4948c2d2593a065799db917cde317533cfac475be3a0374301"
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-leaves-2-poses.png",
@@ -727,7 +727,7 @@
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-leaves-2.json",
-        "sha256": "bf21932c9aeebacd3d89c4d0eb98651e6c694365ce06a00a7c9ccd0b8441bc59"
+        "sha256": "93d1de4aafd7507957edb8bac093823be493f998d9576ae2cf7f4ba7cbb24402"
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-ripples-1-poses.png",
@@ -735,7 +735,7 @@
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-ripples-1.json",
-        "sha256": "1b4c3c64339954a22c76062899526148113ac3ffda4595993857fec8d93d3484"
+        "sha256": "ce6bb3a52bdb592d39311ed30859d8ee35929be48c7c30368f06f32508317769"
       },
       {
         "path": "art/source/world-ambient.json",
@@ -888,6 +888,18 @@
       {
         "path": "assets/tilesets/original/world-ambient-zodiac-festival-park-ripples-1.png",
         "sha256": "e91ea82ffc34e7c9faa343ecef108d3b1d1e5d56f3d3d70925ace5d9ac9dff13"
+      },
+      {
+        "path": "art/source/roadster-v2-authoring.json",
+        "sha256": "590b8c0e05d245c10d0d0329f8745045183d7f1950af2a8cedd36d6e118fc579"
+      },
+      {
+        "path": "art/source/roadster-v2.json",
+        "sha256": "3c992ef451bb899264d87058015175ce98f4d542b4afd17c5dcd90c6a7897734"
+      },
+      {
+        "path": "assets/tilesets/original/roadster-v2.png",
+        "sha256": "3857592f6c7bf7d0978fa00215bcf832d0491e1b9c21326da43a224b84bdfd94"
       }
     ]
   },

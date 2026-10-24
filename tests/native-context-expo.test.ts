@@ -7,6 +7,7 @@ import{reconcileNativeProjection}from'../tools/maps/native-projection';
 import{assertNativeOwnershipContext,assertNativeAuthoringContext,EXPO_MARKS,EXPO_STICKER_ATLAS,EXPO_CAPTION_ATLAS,BRAND_ATLASES}from'../tools/maps/native-ownership-context';
 import{expoLogoImage,expoSticker,EXPO_MARK_IDS}from'../tools/maps/expo-fixtures';
 import registered from'../art/source/native-ownership-context.json';
+import{preRoadsterV2Layout,preRoadsterV2Native}from'./helpers/roadster-epoch';
 import type{MapLayout,TiledMap,TiledTileset,TileLayer}from'../tools/maps/types';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const fleetNames=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
@@ -17,7 +18,9 @@ const nameplate=(id:string)=>/^expo-[ns]\d-nameplate/.test(id);
 const brand=(t:TiledTileset)=>Object.values(BRAND_ATLASES).some(a=>a.image===t.image),brandSprites=['plaza-fountain','plaza-lamp'];
 let catalog:ReturnType<typeof loadTileCatalog>,layout:MapLayout,current:TiledMap,historical:TiledMap,source:TiledMap,pre:TiledMap,expoLayout:MapLayout,expoSource:TiledMap,expoNative:TiledMap;
 beforeAll(()=>{
- catalog=loadTileCatalog();layout=read('world/layouts/overworld.json');current=read('maps/overworld.tmj');source=buildMap(layout,catalog).tmj;
+ // Pinned on the pre-roadster-v2 closure (the frozen v1 roadster descriptor and its registered reservation);
+ // the later v2 epoch has its own policy in native-context-roadster-v2.test.ts.
+ catalog=loadTileCatalog();layout=preRoadsterV2Layout(read('world/layouts/overworld.json'));current=preRoadsterV2Native(read('maps/overworld.tmj'));source=buildMap(layout,catalog).tmj;
  historical=structuredClone(current);historical.tilesets=structuredClone(registered.maps.overworld.atlases);
  // The expo hall placed eleven marks, the sticker sheet and the caption atlas. The policy scenario below
  // starts from the exact pre-expo context (registered + fleet, no member, no brand atlas, no hall panel/caption

@@ -2166,7 +2166,7 @@
         },
         {
           "path": "tools/art/roadster.ts",
-          "sha256": "dde0e2746566c2f4d9426dea3d053f2529efd15a7b2b437c37afac1d24c5b6e8"
+          "sha256": "6462a1629fedead2df62f95590f7ebb18251d5e23fcb2312da31b623a702f3fd"
         },
         {
           "path": "tools/maps/builder.ts",

@@ -1,7 +1,7 @@
 import{readFileSync,writeFileSync}from'node:fs';
 import{pathToFileURL}from'node:url';
 import{isDeepStrictEqual}from'node:util';
-import{renderRoadster}from'../art/roadster';
+import{renderRoadster,renderRoadsterV1,ROADSTER_V2_METADATA_PATH}from'../art/roadster';
 import{renderCoastalFlight}from'../art/coastal-flight';
 import{renderPlazaDrones}from'../art/plaza-drones';
 import{renderPlazaFleet}from'../art/plaza-fleet';
@@ -23,7 +23,9 @@ export async function writeAirborneBirdMaps():Promise<void>{
  const json=(p:string,a:unknown)=>metadata.set(p,Buffer.from(JSON.stringify(a,null,2)+'\n'));
  const exact=(p:string,body:Buffer)=>{if(!readFileSync(p).equals(body))throw Error('Airborne migration changed approved original PNG/pose: '+p);};
  const add=(o:LayoutAnimatedOverlay)=>{const key=o.provenance!.metadataPath;if(overlays.has(key))throw Error('Duplicate current effect producer');overlays.set(key,o);};
- const roadster=await renderRoadster();exact(roadster.metadata.overlay.image,roadster.png);json('art/source/roadster.json',roadster.metadata);add(roadster.metadata.overlay);
+ // The frozen v1 roadster epoch keeps its atlas and receipts; the v2 epoch is the current role producer.
+ const roadsterV1=await renderRoadsterV1();exact(roadsterV1.metadata.overlay.image,roadsterV1.png);json('art/source/roadster.json',roadsterV1.metadata);
+ const roadster=await renderRoadster();exact(roadster.metadata.overlay.image,roadster.png);json(ROADSTER_V2_METADATA_PATH,roadster.metadata);add(roadster.metadata.overlay);
  const flight=await renderCoastalFlight();exact(flight.metadata.overlay.image,flight.png);json('art/source/coastal-flight.json',flight.metadata);add(flight.metadata.overlay);
  const drones=await renderPlazaDrones();exact('art/source/plaza-drone-poses.png',drones.posePng);json('art/source/plaza-drones.json',drones.metadata);
  for(const r of drones.resources){exact(r.overlay.image,r.png);json(r.metadataPath,{version:1,source:drones.metadata.source,overlay:r.overlay,diagnostics:r.diagnostics});add(r.overlay);}
@@ -41,7 +43,8 @@ export async function writeAirborneBirdMaps():Promise<void>{
  for(const id of Object.keys(WORLD_CATALOG)){
   const path=`world/layouts/${id}.json`,layout:MapLayout=read(path);
   if(id==='overworld')for(const r of fleet.aircraft)if(!layout.animatedOverlays?.some(o=>o.name===r.overlay.name))(layout.animatedOverlays??=[]).push(r.overlay);
-  layout.animatedOverlays=layout.animatedOverlays?.map(o=>{const refreshed=overlays.get(o.provenance!.metadataPath);if(!refreshed)throw Error('Unowned animation during source migration: '+o.name);return refreshed;});layouts.set(id,layout);
+  // A layout still carrying the v1 roadster descriptor migrates to the v2 epoch here.
+  layout.animatedOverlays=layout.animatedOverlays?.map(o=>{const refreshed=overlays.get(o.provenance!.metadataPath)??(o.name==='roadster'&&o.provenance!.metadataPath==='art/source/roadster.json'?roadster.metadata.overlay:undefined);if(!refreshed)throw Error('Unowned animation during source migration: '+o.name);return refreshed;});layouts.set(id,layout);
  }
  // All original pixel comparisons finish before the first source write.
  for(const[p,body]of metadata)writeFileSync(p,body);

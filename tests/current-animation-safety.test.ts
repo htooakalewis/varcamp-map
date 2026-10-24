@@ -7,6 +7,7 @@ import{expect,it}from'vitest';
 import{assertCurrentNativeMap}from'../tools/maps/current-native';
 import{stageCurrentWorldInputs}from'./helpers/current-interior-fixture';
 import{WORLD_CATALOG}from'../src/world/catalog';
+import registered from'../art/source/native-ownership-context.json';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 it('every current decoration is lower, an actual owned-upper projection, one of five safe airborne birds, or the aircraft',()=>{
@@ -16,7 +17,14 @@ it('every current decoration is lower, an actual owned-upper projection, one of 
 });
 it('current plaza entry rejects coherent omission of the required Roadster',()=>{
  const id='overworld',map=read(`maps/${id}.tmj`),layout=read(`world/layouts/${id}.json`);map.layers=map.layers.filter((l:any)=>l.name!=='roadster');layout.animatedOverlays=layout.animatedOverlays.filter((o:any)=>o.name!=='roadster');
+ // Roadster-v2 epoch: the v2 atlas is owned by the source descriptor, so a coherent omission also drops it,
+ // leaving the registered v1 reservation unused in place. Only the roster guard can then report the role.
+ const orphan=structuredClone(map),at=registered.maps.overworld.atlases.findIndex(t=>t.name==='roadster');
+ expect(registered.maps.overworld.atlases[at]).toMatchObject({name:'roadster',firstgid:4330,tilecount:240});
+ map.tilesets=map.tilesets.filter((s:any)=>s.image!=='../assets/tilesets/original/roadster-v2.png');map.tilesets.splice(at,0,structuredClone(registered.maps.overworld.atlases[at]));
  expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/animation safety/i);
+ // Leaving the v2 atlas behind without its source owner is refused even earlier, by the native ownership context.
+ expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/native context/i);
 });
 it('current boundary rejects native upper pixels outside actual owning alpha255 art even when all output hashes are coherently rebound',async()=>{
  const project=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-upper-alpha-'));

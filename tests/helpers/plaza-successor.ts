@@ -9,7 +9,7 @@ import {refineNativePlaza} from '../../tools/maps/plaza-native';
 import {EXPO_PLAZA,applyExpoPlaza,expoFixtures,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
 import {applyBrandAssets,brandAssetPlacements,brandAssetsNative} from '../../tools/maps/brand-assets';
 import {plazaGardenSprites} from '../../tools/art/plaza-garden';
-import {renderRoadster} from '../../tools/art/roadster';
+import {renderRoadster,renderRoadsterV1,ROADSTER_V2_ATLAS_PATH} from '../../tools/art/roadster';
 import {renderPlazaDrones} from '../../tools/art/plaza-drones';
 import {renderPlazaFleet} from '../../tools/art/plaza-fleet';
 import {approvedHistoricalPlaza,approvedHistoricalRaw} from './approved-world-successor';
@@ -125,7 +125,7 @@ export async function expectedPreExpoSuccessor(catalog:TileCatalog):Promise<{lay
  return (async()=>{
   assert.equal(createHash('sha256').update(readFileSync('tools/art/plaza-fleet.ts')).digest('hex'),'3ffa9d3b2da3aba95251226725d56516ecfc5e0688944a73d41e178cb3ba6960');
   assert.equal(createHash('sha256').update(readFileSync('art/source/plaza-fleet-recipe.json')).digest('hex'),'343db1ef1f79eaf111759651092ae82efeaa61ae152fe971c5f30ce4d41f78f3');
-  const l=refinePlazaFloorGarden(historicalFloorPlaza('layout') as MapLayout),roadster=await renderRoadster(),drones=await renderPlazaDrones(),fleet=await renderPlazaFleet();
+  const l=refinePlazaFloorGarden(historicalFloorPlaza('layout') as MapLayout),roadster=await renderRoadsterV1(),drones=await renderPlazaDrones(),fleet=await renderPlazaFleet();// the pre-v2 chain carries the frozen v1 roadster epoch
   l.animatedOverlays=l.animatedOverlays!.filter(o=>o.name!=='roadster'&&!o.name.startsWith('plaza-drone-'));
   l.animatedOverlays.push(roadster.metadata.overlay,...drones.metadata.resources.map(r=>r.overlay));
   // Refine the genuine old65 epoch BEFORE adding fleet source. Passing the
@@ -166,10 +166,34 @@ export async function expectedExpoSuccessor(catalog:TileCatalog):Promise<{layout
  const signs=await expectedPreExpoSuccessor(catalog);
  return applyExpoPlazaSuccessor(signs.layout,signs.native,catalog);
 }
-/** One shared actual forward producer transaction for groves/redraw tests. */
-export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+/** Approved roadster-v2 epoch, applied after the brand assets: the plaza's `roadster` role moves from
+ * the frozen sixteen-pose v1 atlas (registered GID 4330, 240 tiles) to the compiled v2 motion atlas.
+ * The source delta is one descriptor; the native delta is exactly its projection: the v1 reservation
+ * is vacated, the v2 body is appended after the brand family, the roadster layer keeps its id, position
+ * and footprint, and every other atlas and layer stays in place. */
+export async function applyRoadsterV2Successor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+ const v2=await renderRoadster(),l=structuredClone(layout),i=l.animatedOverlays!.findIndex(o=>o.name==='roadster');assert.ok(i>=0,'Roadster role missing');
+ assert.equal(l.animatedOverlays![i].image,'assets/tilesets/original/roadster.png','Roadster v2 applies to the v1 epoch');assert.equal(v2.metadata.overlay.image,ROADSTER_V2_ATLAS_PATH);
+ assert.ok(v2.png.equals(readFileSync(v2.metadata.overlay.image)),'Saved roadster-v2 PNG differs from reviewed pure producer');l.animatedOverlays![i]=v2.metadata.overlay;
+ const old=native.tilesets.filter(t=>t.name==='roadster');assert.equal(old.length,1);assert.deepEqual([old[0].firstgid,old[0].tilecount,old[0].image],[4330,240,'../assets/tilesets/original/roadster.png']);
+ const map=reconcileNativeProjection(native,buildMap(l,catalog).tmj);
+ assert.deepEqual(map.tilesets.slice(0,-1),native.tilesets.filter(t=>t!==old[0]),'Roadster v2 must keep every other atlas reservation in place');
+ const added=map.tilesets.at(-1)!;assert.equal(added.firstgid,Math.max(...native.tilesets.map(t=>t.firstgid+t.tilecount!)));assert.equal(added.name,'roadster');assert.equal(added.image,'../'+ROADSTER_V2_ATLAS_PATH);assert.equal(added.tilecount,v2.metadata.atlas.tilecount);
+ assert.deepEqual(map.layers.map(x=>[x.id,x.name]),native.layers.map(x=>[x.id,x.name]),'Roadster v2 must keep every native layer and id in order');assert.equal(map.nextlayerid,native.nextlayerid);
+ const cells=(m:TiledMap)=>(m.layers.find(x=>x.name==='roadster') as TileLayer).data.flatMap((g,n)=>g?[n]:[]);assert.deepEqual(cells(map),cells(native),'Roadster footprint unchanged');
+ assert.deepEqual((map.layers.find(x=>x.name==='roadster') as TileLayer).data.filter(Boolean),v2.metadata.overlay.carrierTileIds.map(id=>added.firstgid+id));
+ assertNativeSourceProjection(map,buildMap(l,catalog).tmj);
+ return{layout:l,native:map};
+}
+/** The approved chain up to (excluding) the roadster-v2 epoch: the input of applyRoadsterV2Successor. */
+export async function expectedBrandSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  const expo=await expectedExpoSuccessor(catalog);
  return applyBrandAssetsSuccessor(expo.layout,expo.native,catalog);
+}
+/** One shared actual forward producer transaction for groves/redraw tests. */
+export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+ const brand=await expectedBrandSuccessor(catalog);
+ return applyRoadsterV2Successor(brand.layout,brand.native,catalog);
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

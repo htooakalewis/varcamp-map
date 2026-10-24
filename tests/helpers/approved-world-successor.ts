@@ -47,6 +47,15 @@ export const approvedBrandAssetRegistry={
   ],
  },
 };
+/** The roadster-v2 epoch: the motion authoring spec is a static reviewed input; the v2 descriptor and
+ * atlas are verified by their pure producer (tools/art/roadster.ts). Appended after every earlier row so
+ * no registered row position moves. */
+export const approvedRoadsterV2StaticPins:Record<string,string>={
+ 'art/source/roadster-v2-authoring.json':'590b8c0e05d245c10d0d0329f8745045183d7f1950af2a8cedd36d6e118fc579',
+};
+export const approvedRoadsterV2Rows:Record<string,number>={'art/source/roadster-v2-authoring.json':201,'art/source/roadster-v2.json':202,'assets/tilesets/original/roadster-v2.png':203};
+/** The one sentence the roadster-v2 epoch appended to the `original` registry's change log. */
+export const approvedRoadsterV2RegistryNote=' Roadster-v2 addition: the plaza display is recompiled from the same sixteen generated poses with compiler-synthesised 100 ms tweens, hover bob, landing settle, thruster bloom, pad shadow/light chases, dust puffs, light pulses and roll ghosting into roadster-v2.png; the v1 atlas stays frozen as the registered reservation body and no new car pixels were drawn.';
 export const approvedBirdRecipePins:Record<string,string>={
  'art/source/coast-life-tracks.json':'bd0dbb1202ccd1e84a89f0e796ab839371f102ebec1de4cb67053c84a190e7f6',
  'art/source/world-ambient.json':'a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7',
@@ -56,8 +65,8 @@ const changes:Record<string,readonly[string,string]>={
  'tools/art/world-ambient.ts':['0d1e1c1e2b9625c48e48a975ceea79375f2b58b6ddf77169d693ffecfe03efd1','46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac'],
  'tools/maps/animated-decoration-contract.json':['0be7d46784d2038890168d22e4dbf0c84d745d100e367a2f99fc592aa39ed189','fd6a605e785551d6709e60cd1c2ae5c477e5152169b9ae7e8b78ac4d14f4a4e0'],
  'tools/maps/animated-decoration.ts':['b775031225c80a635de80d0e99a3791938e1d809998a9d880abc7e00e52b78cf','b4e0788debcb53cbbac97488d88f6da2a3bdf0f0b2d6effe251f8552b4590621'],
- 'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','adbdae3a54b2787d969d15d57a0933a114c0c9a8823a5a699f2525219343de48'],
- 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','7b284b0ef575f0b28d922baa72a77494378d1198ab5e345b75cb5da9c36dbfea'],
+ 'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0'],
+ 'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','ee34e0f903bd0a3e546d57d1163a5e15226315c6ff4ff82286123c7a4971dbe4'],
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],
  'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19'],
  'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb'],
