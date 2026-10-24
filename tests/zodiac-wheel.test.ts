@@ -1,4 +1,3 @@
-import {standingFace} from './helpers/physical-prop-contracts';
 import { readFileSync, readdirSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { SIGN_IDS } from '../src/world/catalog';
@@ -48,13 +47,12 @@ describe('medium authored zodiac arrival',()=>{
   for(let h=0;h<queue.length;h++){const[x,y]=queue[h];for(const[nx,ny]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const k=`${nx},${ny}`;if(cells.has(k)&&!seen.has(k)){seen.add(k);queue.push([nx,ny]);}}}
   expect(seen.size).toBe(cells.size);
  });
- it('keeps movement instructions readable beside the welcome and directory',()=>{
-  const board=standingFace(l,loadTileCatalog(),'welcome-control-sign','hub-nav-welcome');
+ it('keeps the welcome directory area clear after retiring the welcome and directory boards',()=>{
   const copy=JSON.parse(readFileSync('art/source/hub-nameplates.json','utf8'));
   expect(copy.navigation.find((p:{id:string})=>p.id==='welcome').lines).toContain('MOVE: ARROWS / WASD');
-  expect(copy.labels).toHaveLength(12);expect(l.placements.some(p=>p.id==='directory-prompt')).toBe(false);
-  expect(overlaps(board,l.entries.find(e=>e.isDefault)!)).toBe(false);
-  const area=l.areas.find(a=>a.name==='welcome-directory')!;expect(area.properties).toEqual([]);expect(overlaps(area,board)).toBe(false);
+  expect(copy.labels).toHaveLength(12);expect(l.placements.some(p=>p.id==='directory-prompt'||p.id==='welcome-control-sign')).toBe(false);
+  expect(l.standingSigns!.some(s=>s.face==='welcome-control-sign')).toBe(false);
+  const area=l.areas.find(a=>a.name==='welcome-directory')!;expect(area.properties).toEqual([]);
   expect(l.exits.some(e=>overlaps(area,e))).toBe(false);
   const {tmj,wam}=buildMap(l,loadTileCatalog());
   expect(wam.areas.find(a=>a.name===area.name)).toMatchObject({id:'welcome-directory',x:area.x*32,y:area.y*32,width:area.width*32,height:area.height*32,properties:[]});

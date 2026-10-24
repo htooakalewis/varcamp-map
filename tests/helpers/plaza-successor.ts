@@ -57,19 +57,34 @@ export const WELCOME_PLAZA_RETIREMENT=Object.freeze({
   'scenery-belowAvatar-2':[[76,65],[77,65],[78,65],[76,66],[77,66],[78,66]],
   'physical-collisions':[[62,71],[62,74],[75,67],[76,67],[77,67],[78,67],[75,68],[78,68],[75,69],[78,69]],
  } as Record<string,number[][]>,
+ cells:45,
 });
-export function retireWelcomePlazaProps(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
- const l=structuredClone(layout),map=structuredClone(native),r=WELCOME_PLAZA_RETIREMENT;
+/** Approved welcome-board retirement, applied after the plaza retirement: the raster welcome
+ * board with its two posts and the blue sofa beside the arrival court. */
+export const WELCOME_SIGN_RETIREMENT=Object.freeze({
+ placements:['welcome-control-sign','reception-post-welcome-left','reception-post-welcome-right','welcome-seat'],
+ standingSigns:['welcome-control-sign'],
+ nativeCells:{
+  'scenery-aboveAvatar-0':[[55,63],[56,63],[57,63],[58,63],[59,63]],
+  'scenery-belowAvatar-1':[[52,61],[53,61],[54,61],[52,62],[53,62],[54,62],[56,64],[59,64]],
+  'physical-collisions':[[52,62],[53,62],[54,62],[56,64],[59,64]],
+ } as Record<string,number[][]>,
+ cells:18,
+});
+type Retirement=typeof WELCOME_PLAZA_RETIREMENT|typeof WELCOME_SIGN_RETIREMENT;
+export function retirePlazaProps(layout:MapLayout,native:TiledMap,catalog:TileCatalog,r:Retirement):{layout:MapLayout;native:TiledMap}{
+ const l=structuredClone(layout),map=structuredClone(native);
  for(const id of r.placements)assert.equal(l.placements.filter(p=>p.id===id).length,1,`Retired placement ${id} must exist exactly once`);
  for(const face of r.standingSigns)assert.equal(l.standingSigns!.filter(s=>s.face===face).length,1,`Retired standing sign ${face} must exist exactly once`);
  l.placements=l.placements.filter(p=>!r.placements.includes(p.id));l.standingSigns=l.standingSigns!.filter(s=>!r.standingSigns.includes(s.face));
  let cleared=0;
  for(const[name,cells]of Object.entries(r.nativeCells)){const layer=map.layers.find(l=>l.name===name);assert.ok(layer?.type==='tilelayer',`Retired native layer ${name}`);
   for(const[x,y]of cells){const i=y*128+x;assert.notEqual(layer.data[i],0,`Retired native cell ${name} ${x},${y} already empty`);layer.data[i]=0;cleared++;}}
- assert.equal(cleared,45);
+ assert.equal(cleared,r.cells);
  assertNativeSourceProjection(map,buildMap(l,catalog).tmj);
  return{layout:l,native:map};
 }
+export const retireWelcomePlazaProps=(layout:MapLayout,native:TiledMap,catalog:TileCatalog)=>retirePlazaProps(layout,native,catalog,WELCOME_PLAZA_RETIREMENT);
 /** One shared actual forward producer transaction for groves/redraw tests. */
 export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  for(const [id,s] of Object.entries(plazaGardenSprites()))assert.deepEqual(catalog[id],s,`Original grounded tree/canopy contract ${id}`);
@@ -87,7 +102,8 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
   const manual=appendReviewedFleetNative(base,fleet.aircraft);
   assert.deepEqual(reconcileNativeProjection(legacy,buildMap(l,catalog).tmj),manual,'Production current forward transaction differs from independent three-append native oracle');
   assert.ok(readFileSync('maps/overworld.wam').equals(approvedHistoricalRaw('maps/overworld.wam')),'Fleet must retain all organizer controls');
-  return retireWelcomePlazaProps(l,manual,catalog);
+  const plaza=retireWelcomePlazaProps(l,manual,catalog);
+  return retirePlazaProps(plaza.layout,plaza.native,catalog,WELCOME_SIGN_RETIREMENT);
  })();
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{

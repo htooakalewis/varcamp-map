@@ -30,7 +30,7 @@ describe('medium authored arrival',()=>{
   for(let n=0;n<actual.length;n++){const r=data[n*4],g=data[n*4+1],b=data[n*4+2];if(r===255&&g===228&&b===160)actual[n]=1;else if(r===201&&g===237&&b===242)actual[n]=2;}
   expect(actual.equals(expected),'native PNG glyph positions/weight differ from exact original room copy').toBe(true);
  });
- it('uses short raster welcome and four pointer boards instead of a paragraph',()=>{
+ it('uses four pointer boards instead of a welcome paragraph',()=>{
   const l=source();expect(l.signs?.some(s=>s.name==='arrival-instructions'&&s.text.split('\n').length>3)).toBe(false);
   expect(arrivalPlaques(l,loadTileCatalog()).map(p=>p.id).sort()).toEqual(Object.keys(arrivalFaces).sort());
  });
@@ -74,7 +74,7 @@ describe('medium authored arrival',()=>{
   }
  });
  it('uses compact native arrival boards while retaining full bold speaker nameplates',()=>{
-  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3],'welcome-control-sign':[5,1]})){
+  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3]})){
    const p=l.placements.find(p=>p.id===id)!;expect([p.width,p.height],id).toEqual(size);
   }
  });
@@ -93,7 +93,7 @@ describe('medium authored arrival',()=>{
  });
  it('keeps every raster nameplate and pointer apart from controls and other plaques',()=>{
   const l=source(),plaques=[...SIGN_IDS.map(sign=>{const p=l.placements.find(p=>p.id===`${sign}-bold-nameplate`)!;expect(p).toBeDefined();assertVisual(loadTileCatalog()[p.sprite],loadTileCatalog()[`hub-label-${sign}`]);return p;}),...arrivalPlaques(l,loadTileCatalog())];
-  expect(new Set(plaques.map(p=>p.id)).size).toBe(18);
+  expect(new Set(plaques.map(p=>p.id)).size).toBe(17);
   for(const[i,p]of plaques.entries()){
    for(const r of [...l.entries,...l.exits,...l.areas])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
    for(const other of plaques.slice(i+1))expect(overlap(p,other),`${p.id} overlaps ${other.id}`).toBe(false);

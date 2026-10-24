@@ -84,7 +84,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
    const p=standingFace(l,`exterior-road-sign-${id}`);expect(p).toBeDefined();
    expect(EXTERIOR_ROAD_COPY[id]).toBe(copy);
   }
-  expect(standingFace(l,'welcome-control-sign')).toBeDefined();
+  expect(l.placements.some(p=>p.id==='welcome-control-sign')).toBe(false);
   expect(l.signs?.some(s=>s.text.split('\n').length>3)).toBe(false);
  });
  it.each(layouts.map(l=>[l.id,l] as const))('%s labels every physical destination with a nearby readable direction',(_id,l)=>{
@@ -109,7 +109,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
  });
  it.each(layouts.map(l=>[l.id,l] as const))('%s explains the route to new arrivals without covering the spawn',(_id,l)=>{
   const e=l.entries.find(e=>e.isDefault)!;
-  if(l.id==='overworld'){const welcome=standingFace(l,'welcome-control-sign');expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(false);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
+  if(l.id==='overworld')expect(l.placements.some(p=>p.id==='welcome-control-sign'||p.sprite==='sign-compass')).toBe(false);else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
  });
  it('points first-time visitors north toward the Festival and Exploration pavilion doors',()=>{
   for(const id of ['zodiac-festival-park','campus-exploration']){

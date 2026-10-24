@@ -10279,33 +10279,6 @@
       "layer": "terrain"
     },
     {
-      "id": "welcome-control-sign",
-      "sprite": "standing-hub-nav-welcome",
-      "x": 55,
-      "y": 63,
-      "width": 5,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "reception-post-welcome-left",
-      "sprite": "solid-sign-post",
-      "x": 56,
-      "y": 64,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "reception-post-welcome-right",
-      "sprite": "solid-sign-post",
-      "x": 59,
-      "y": 64,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "arrival-direction-crosspost",
       "sprite": "standing-hub-nav-arrival-crosspost",
       "x": 66,
@@ -10321,15 +10294,6 @@
       "y": 64,
       "width": 1,
       "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "welcome-seat",
-      "sprite": "sofa-blue",
-      "x": 52,
-      "y": 61,
-      "width": 3,
-      "height": 2,
       "layer": "props"
     },
     {
@@ -62335,13 +62299,6 @@
     }
   ],
   "standingSigns": [
-    {
-      "face": "welcome-control-sign",
-      "supports": [
-        "reception-post-welcome-left",
-        "reception-post-welcome-right"
-      ]
-    },
     {
       "face": "arrival-direction-crosspost",
       "supports": [
