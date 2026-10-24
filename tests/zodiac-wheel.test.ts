@@ -52,7 +52,7 @@ describe('medium authored zodiac arrival',()=>{
   const board=standingFace(l,loadTileCatalog(),'welcome-control-sign','hub-nav-welcome');
   const copy=JSON.parse(readFileSync('art/source/hub-nameplates.json','utf8'));
   expect(copy.navigation.find((p:{id:string})=>p.id==='welcome').lines).toContain('MOVE: ARROWS / WASD');
-  expect(copy.labels).toHaveLength(12);expect(standingFace(l,loadTileCatalog(),'directory-prompt','hub-nav-directory')).toBeDefined();
+  expect(copy.labels).toHaveLength(12);expect(l.placements.some(p=>p.id==='directory-prompt')).toBe(false);
   expect(overlaps(board,l.entries.find(e=>e.isDefault)!)).toBe(false);
   const area=l.areas.find(a=>a.name==='welcome-directory')!;expect(area.properties).toEqual([]);expect(overlaps(area,board)).toBe(false);
   expect(l.exits.some(e=>overlaps(area,e))).toBe(false);

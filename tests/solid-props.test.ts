@@ -53,7 +53,7 @@ describe('independent solid support and visual depth',()=>{
   expect(()=>validateStandingSigns(l,catalog)).toThrow(/support/);
  });
  it('requires all current physical sign families to declare standing assemblies',()=>{
-  for(const [id,count]of [['overworld',14],['constellation-shore',6],['shipyard-beach',6]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
+  for(const [id,count]of [['overworld',12],['constellation-shore',6],['shipyard-beach',6]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
  });
 });
 

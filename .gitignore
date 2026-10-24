@@ -50,3 +50,6 @@ __pycache__/
 # Live acceptance smoke test (opt-in, separate install)
 ops/acceptance/node_modules/
 ops/acceptance/output/
+
+# Orca workspace drops (screenshots pasted into agent chats)
+.orca/

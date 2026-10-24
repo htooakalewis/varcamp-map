@@ -13,7 +13,7 @@ export function standingFace(layout:MapLayout,catalog:TileCatalog,id:string,orig
  assert.equal(catalog[rows[0].sprite]?.standingRole,'face');assertVisual(catalog[rows[0].sprite],catalog[originalVisual]);return rows[0];
 }
 export const arrivalFaces={
- 'welcome-control-sign':'hub-nav-welcome','arrival-direction-crosspost':'hub-nav-arrival-crosspost','directory-prompt':'hub-nav-directory','arrival-position-label':'hub-nav-you-are-here',
+ 'welcome-control-sign':'hub-nav-welcome','arrival-direction-crosspost':'hub-nav-arrival-crosspost',
  'exterior-road-sign-north':'exterior-road-north','exterior-road-sign-west':'exterior-road-west','exterior-road-sign-east':'exterior-road-east','exterior-road-sign-south':'exterior-road-south',
 } as const;
 export function arrivalPlaques(layout:MapLayout,catalog:TileCatalog):Placement[] {

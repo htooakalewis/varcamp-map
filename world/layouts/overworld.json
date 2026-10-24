@@ -10288,33 +10288,6 @@
       "layer": "props"
     },
     {
-      "id": "directory-prompt",
-      "sprite": "standing-hub-nav-directory",
-      "x": 61,
-      "y": 70,
-      "width": 4,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "arrival-position-label",
-      "sprite": "standing-hub-nav-you-are-here",
-      "x": 61,
-      "y": 73,
-      "width": 4,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "arrival-compass",
-      "sprite": "sign-compass",
-      "x": 59,
-      "y": 73,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "reception-post-welcome-left",
       "sprite": "solid-sign-post",
       "x": 56,
@@ -10331,53 +10304,6 @@
       "width": 1,
       "height": 1,
       "layer": "props"
-    },
-    {
-      "id": "reception-post-directory",
-      "sprite": "solid-sign-post",
-      "x": 62,
-      "y": 71,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "reception-post-position",
-      "sprite": "solid-sign-post",
-      "x": 62,
-      "y": 74,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "reception-desk",
-      "sprite": "desk-curved",
-      "x": 75,
-      "y": 67,
-      "width": 4,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "reception-screen",
-      "sprite": "screen-wide",
-      "x": 76,
-      "y": 65,
-      "width": 3,
-      "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
-    },
-    {
-      "id": "reception-screen-content",
-      "sprite": "screen-content",
-      "x": 76,
-      "y": 65,
-      "width": 3,
-      "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
     },
     {
       "id": "arrival-direction-crosspost",
@@ -62414,18 +62340,6 @@
       "supports": [
         "reception-post-welcome-left",
         "reception-post-welcome-right"
-      ]
-    },
-    {
-      "face": "directory-prompt",
-      "supports": [
-        "reception-post-directory"
-      ]
-    },
-    {
-      "face": "arrival-position-label",
-      "supports": [
-        "reception-post-position"
       ]
     },
     {

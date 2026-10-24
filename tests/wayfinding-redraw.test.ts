@@ -109,7 +109,7 @@ describe('audience wayfinding in exported Tiled maps',()=>{
  });
  it.each(layouts.map(l=>[l.id,l] as const))('%s explains the route to new arrivals without covering the spawn',(_id,l)=>{
   const e=l.entries.find(e=>e.isDefault)!;
-  if(l.id==='overworld'){const welcome=standingFace(l,'welcome-control-sign');expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(true);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
+  if(l.id==='overworld'){const welcome=standingFace(l,'welcome-control-sign');expect(gap(welcome,e)).toBeLessThanOrEqual(7);expect(l.placements.some(p=>p.sprite==='sign-compass')).toBe(false);}else expect(l.signs?.some(s=>gap(s,e)<=7&&arrow.test(s.text)&&(s.fontSize??18)>=14),`${l.id} has no arrival direction within seven tiles`).toBe(true);
  });
  it('points first-time visitors north toward the Festival and Exploration pavilion doors',()=>{
   for(const id of ['zodiac-festival-park','campus-exploration']){

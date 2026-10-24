@@ -4,7 +4,7 @@ import {SIGN_IDS} from '../src/world/catalog';
 import {loadTileCatalog} from '../tools/art/catalog';
 import type {MapLayout} from '../tools/maps/types';
 import {refinePlazaFloorGarden} from '../tools/maps/plaza-floor-garden';
-import {expectedPlazaSuccessor} from './helpers/plaza-successor';
+import {expectedPlazaSuccessor,WELCOME_PLAZA_RETIREMENT} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
 import type {TiledMap,TileLayer} from '../tools/maps/types';
 import {validateMap} from '../tools/maps/validate';
@@ -22,7 +22,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
  expect(l.images!.find(p=>p.name==='VarCamp 2026 Floor')).toMatchObject({image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false});
  expect(l.placements.filter(p=>/^standing-sponsor-|^sponsor-frame-|^sponsor-trim-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id))).toEqual([]);
  expect(l.standingSigns!.filter(s=>s.face==='varcamp-nameplate'||s.faceKind==='image')).toEqual([]);
- expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate')).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'));
+ expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate')).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)));
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
@@ -37,7 +37,7 @@ it('is idempotent and retains every real native semantic layer and reachable gui
  const floor=native.layers.findIndex(p=>p.name==='floorLayer');
  for(const image of l.images!)expect(native.layers.findIndex(p=>p.name===image.name),image.name).toBeLessThan(floor);
  expect(l.placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(144);
-});
+},20000); // first successor call renders roadster/drone/fleet art and runs the projection gate
 
 it('retains all twelve doorway footprints while consuming original generated pavilion and grass artwork',()=>{
  const l=source(),old=before(),catalog=loadTileCatalog();

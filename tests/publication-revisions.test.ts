@@ -20,6 +20,7 @@ const campusPath='publication/revisions/2026-10-18-campus-refinement.json';
 const combinedPath='publication/revisions/2026-10-18-beach-groves-guide-identity.json';
 const currentReleasePath='publication/revisions/2026-10-19-shared-world-service.json';
 const verificationReleasePath='publication/revisions/2026-10-19-canonical-verification.json';
+const retirementPath='publication/revisions/2026-10-24-welcome-plaza-retirement.json';
 const catalogSource=readFileSync('src/world/catalog.ts','utf8');
 const catalogIds=Object.keys(JSON.parse(catalogSource.match(/export const WORLD_CATALOG\s*=\s*(\{[\s\S]*?\})\s+as const/)![1]));
 const currentNative=readFileSync('maps/overworld.tmj','utf8');
@@ -73,6 +74,7 @@ describe('publication exact reviewed replacements', () => {
   function pinCampus(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(campusPath,bytes);manifest.extensionInventory[campusPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCurrentRelease(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(currentReleasePath,bytes);manifest.extensionInventory[currentReleasePath]=createHash('sha256').update(bytes).digest('hex');}
   function pinVerificationRelease(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(verificationReleasePath,bytes);manifest.extensionInventory[verificationReleasePath]=createHash('sha256').update(bytes).digest('hex');}
+  function pinRetirement(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(retirementPath,bytes);manifest.extensionInventory[retirementPath]=createHash('sha256').update(bytes).digest('hex');}
   function verify() {
     write('publication/source-manifest.json', JSON.stringify(manifest));
     const result = spawnSync(process.execPath, [checker, root], { encoding: 'utf8' });
@@ -99,6 +101,8 @@ describe('publication exact reviewed replacements', () => {
   it('requires thirteenth shared-world receipt pin and physical presence',()=>{delete manifest.extensionInventory[currentReleasePath];rejects('Reviewed revision file must be pinned');pinCurrentRelease();remove(currentReleasePath);rejects('Missing extension source: '+currentReleasePath);});
   it('accepts the fourteenth receipt only from the exact thirteenth predecessor',()=>{pinCurrentRelease({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'verification';const row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinVerificationRelease({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const result=verify();expect(result.status,result.output).toBe(0);pinVerificationRelease({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('requires the fourteenth receipt pin and actual file',()=>{delete manifest.extensionInventory[verificationReleasePath];rejects('Reviewed revision file must be pinned');pinVerificationRelease();remove(verificationReleasePath);rejects('Missing extension source: '+verificationReleasePath);});
+  it('accepts the fifteenth welcome-plaza receipt only from the exact fourteenth predecessor',()=>{pinVerificationRelease({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'retirement';const row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinRetirement({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const result=verify();expect(result.status,result.output).toBe(0);pinRetirement({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
+  it('requires the fifteenth receipt pin and actual file',()=>{delete manifest.extensionInventory[retirementPath];rejects('Reviewed revision file must be pinned');pinRetirement();remove(retirementPath);rejects('Missing extension source: '+retirementPath);});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -125,6 +129,7 @@ describe('publication exact reviewed replacements', () => {
     pinCampus();
     pinCurrentRelease();
     pinVerificationRelease();
+    pinRetirement();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

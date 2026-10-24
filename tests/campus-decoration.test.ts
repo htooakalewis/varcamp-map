@@ -32,9 +32,9 @@ describe('landscaped zodiac campus', () => {
     const l=campus(),landscape=l.placements.filter(p=>p.sprite==='plaza-grass-01'&&!p.id.startsWith('exterior-verge-')||p.sprite==='water-blue'&&p.width<l.width);
     for(const p of landscape){expect([...l.entries,...l.exits,...l.areas].some(r=>intersects(p,r)),`${p.id} covers a public approach`).toBe(false);expect(p.x>0&&p.y>0&&p.x+p.width<l.width&&p.y+p.height<l.height).toBe(true);}
   });
-  it('keeps the reception desk and screen beside the former guide station',()=>{
-    const l=campus(),guide={x:76,y:71,width:3,height:3};expect(l.areas.some(a=>a.name==='npc-guide')).toBe(false);
-    for(const sprite of ['desk-curved','screen-wide'])expect(l.placements.some(p=>p.sprite===sprite&&Math.hypot(p.x+p.width/2-guide.x-guide.width/2,p.y+p.height/2-guide.y-guide.height/2)<10),sprite).toBe(true);
+  it('retires the reception desk and screen along with the former guide station',()=>{
+    const l=campus();expect(l.areas.some(a=>a.name==='npc-guide')).toBe(false);
+    for(const sprite of ['desk-curved','screen-wide','screen-content'])expect(l.placements.filter(p=>p.sprite===sprite),sprite).toEqual([]);
   });
 
   it('retains complete walkability of the loop, all twelve rooms and every map gate after landscaping', () => {

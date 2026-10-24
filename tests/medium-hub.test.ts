@@ -30,7 +30,7 @@ describe('medium authored arrival',()=>{
   for(let n=0;n<actual.length;n++){const r=data[n*4],g=data[n*4+1],b=data[n*4+2];if(r===255&&g===228&&b===160)actual[n]=1;else if(r===201&&g===237&&b===242)actual[n]=2;}
   expect(actual.equals(expected),'native PNG glyph positions/weight differ from exact original room copy').toBe(true);
  });
- it('uses short raster welcome, four pointer boards and a directory prompt instead of a paragraph',()=>{
+ it('uses short raster welcome and four pointer boards instead of a paragraph',()=>{
   const l=source();expect(l.signs?.some(s=>s.name==='arrival-instructions'&&s.text.split('\n').length>3)).toBe(false);
   expect(arrivalPlaques(l,loadTileCatalog()).map(p=>p.id).sort()).toEqual(Object.keys(arrivalFaces).sort());
  });
@@ -59,22 +59,22 @@ describe('medium authored arrival',()=>{
   }
   expect(glyphPixels).toBeGreaterThan(0);expect(failures).toEqual([]);
  });
- it('keeps three logos, all four arrow arms and directory inside every default first viewport with HUD clearance',()=>{
+ it('keeps three logos and all four arrow arms inside every default first viewport with HUD clearance',()=>{
   // Pinned HdpiManager:640×480 recommended game pixels; this2880px-wide screen defaults to3×.
   // Conservatively use30×16 tiles and reserve1tile above/sides plus2tiles below for normal HUD.
-  const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!,directory=l.placements.find(p=>p.id==='directory-prompt')!;
+  const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!;
   const arrows=[{name:'north',x:post.x+1.5,y:post.y,width:3,height:1},{name:'west',x:post.x,y:post.y+1,width:3,height:1},{name:'east',x:post.x+3,y:post.y+1,width:3,height:1},{name:'south',x:post.x+1.5,y:post.y+2,width:3,height:1}];
-  const required=[...(l.images??[]),directory,...arrows];expect(l.images).toHaveLength(4);
+  const required=[...(l.images??[]),...arrows];expect(l.images).toHaveLength(4);
   const supportIds=sponsorSupportIds(l,loadTileCatalog());
   assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);
   for(const c of cells(spawn,l.width)){
    const cx=c%l.width+.5,cy=Math.floor(c/l.width)+.5,safe={x:cx-14,y:cy-7,width:28,height:13};
-   for(const r of required)expect(r.x>=safe.x&&r.y>=safe.y&&r.x+r.width<=safe.x+safe.width&&r.y+r.height<=safe.y+safe.height,`${'name'in r?r.name:r.id} misses first-view HUD-safe rectangle from ${c%l.width},${Math.floor(c/l.width)}`).toBe(true);
+   for(const r of required)expect(r.x>=safe.x&&r.y>=safe.y&&r.x+r.width<=safe.x+safe.width&&r.y+r.height<=safe.y+safe.height,`${r.name} misses first-view HUD-safe rectangle from ${c%l.width},${Math.floor(c/l.width)}`).toBe(true);
   }
  });
  it('uses compact native arrival boards while retaining full bold speaker nameplates',()=>{
-  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3],'welcome-control-sign':[5,1],'directory-prompt':[4,1],'arrival-position-label':[4,1]})){
+  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3],'welcome-control-sign':[5,1]})){
    const p=l.placements.find(p=>p.id===id)!;expect([p.width,p.height],id).toEqual(size);
   }
  });
@@ -93,7 +93,7 @@ describe('medium authored arrival',()=>{
  });
  it('keeps every raster nameplate and pointer apart from controls and other plaques',()=>{
   const l=source(),plaques=[...SIGN_IDS.map(sign=>{const p=l.placements.find(p=>p.id===`${sign}-bold-nameplate`)!;expect(p).toBeDefined();assertVisual(loadTileCatalog()[p.sprite],loadTileCatalog()[`hub-label-${sign}`]);return p;}),...arrivalPlaques(l,loadTileCatalog())];
-  expect(new Set(plaques.map(p=>p.id)).size).toBe(20);
+  expect(new Set(plaques.map(p=>p.id)).size).toBe(18);
   for(const[i,p]of plaques.entries()){
    for(const r of [...l.entries,...l.exits,...l.areas])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
    for(const other of plaques.slice(i+1))expect(overlap(p,other),`${p.id} overlaps ${other.id}`).toBe(false);
