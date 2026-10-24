@@ -1,6 +1,8 @@
 import type{TiledMap,ObjectLayer}from'../../tools/maps/types';
-const birds=['coast-life-harbor-gull-north','coast-life-harbor-gull-south','coast-life-shore-gull-north','coast-life-shore-gull-south','world-ambient-fa-ship-gull-1'];
-function insertBeforeAirborneTail(map:TiledMap,group:ObjectLayer){const first=map.layers.findIndex(l=>birds.includes(l.name));map.layers.splice(first<0?map.layers.length:first,0,group);}
+import{AIRBORNE_BIRDS,AIRCRAFT}from'../../tools/maps/airborne';
+// The complete native stack ends with the closed aboveScenery class: the registered aircraft directly before the birds. Unknown content has to land before that whole tail, not between the aircraft and the gulls.
+const airborne:readonly string[]=[...AIRCRAFT.map(r=>r.name),...AIRBORNE_BIRDS.map(r=>r.name)];
+function insertBeforeAirborneTail(map:TiledMap,group:ObjectLayer){const first=map.layers.findIndex(l=>airborne.includes(l.name));map.layers.splice(first<0?map.layers.length:first,0,group);}
 const text={id:99990,name:'unowned-audience-text',type:'',x:640,y:640,width:320,height:48,rotation:0,visible:true,text:{text:'UNDECLARED NATIVE CONTENT',pixelsize:32,color:'#ff00ff',wrap:true}};
 export function mutateNativeContext(map:TiledMap,kind:string):void{
  const group=map.layers.find(l=>l.name==='wayfinding-text')as ObjectLayer;

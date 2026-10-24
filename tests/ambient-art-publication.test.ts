@@ -21,6 +21,11 @@ import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
 import{approvedFleetStaticPins,approvedBirdRecipePins,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
+/** Original expo-plaza booth sticker art (acbae60, 2026-10-24): the only rows added to the closed original
+ * registry since the frozen pre-aerial snapshot, registered at their sorted indices with an appended changes note. */
+const approvedBoothStickerPins:Record<string,string>={'art/source/booth-stickers.svg':'839720ee00ad4c94b1358698d89f59ddd867065a55031004c3d7c874908c9c72','assets/tilesets/original/booth-stickers.png':'b319354b5e5b8dbd1b549fa98af6d77280361fff907aee5dc03d4b0c84535241'};
+const approvedBoothStickerRows:readonly[number,string][]=[[0,'art/source/booth-stickers.svg'],[44,'assets/tilesets/original/booth-stickers.png']];
+const approvedBoothStickerChangesNote=' Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied.';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
 const digest=(v:unknown)=>sha(JSON.stringify(stable(v))),read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -62,10 +67,15 @@ it('binds every current registry path and preserves static artwork while validat
  const before=JSON.parse(beforeRaw.toString()),current=read('art/sources.json');
  assertApprovedLayoutSuccessor('speaker-aries',read('world/layouts/speaker-aries.json'));
  const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
- expect(Object.keys(current)).toEqual(Object.keys(before));expect(current.original.files).toHaveLength(196);
+ expect(Object.keys(current)).toEqual(Object.keys(before));expect(current.original.files).toHaveLength(198);
  const generated=await generatedDescriptors();
  for(const id of Object.keys(before)){
-  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(oldMetadata);
+  const{files:oldFiles,...oldMetadata}=before[id],{files:registeredFiles,...currentMetadata}=current[id];
+  expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedBoothStickerChangesNote}:oldMetadata);
+  const stickerRows=registeredFiles.flatMap((r:any,i:number)=>Object.hasOwn(approvedBoothStickerPins,r.path)?[[i,r] as const]:[]);
+  expect(stickerRows.map(([i,r]:any)=>[i,r.path]),id+' exact approved booth sticker rows').toEqual(id==='original'?approvedBoothStickerRows:[]);
+  for(const[,row]of stickerRows){expect(Object.keys(row).sort()).toEqual(['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(readFileSync(row.path)));expect(row.sha256,row.path+' exact independently reviewed booth sticker art').toBe(approvedBoothStickerPins[row.path]);}
+  const currentFiles=registeredFiles.filter((r:any)=>!Object.hasOwn(approvedBoothStickerPins,r.path));
   expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
   for(let i=0;i<currentFiles.length;i++){
    const row=currentFiles[i],old=oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));

@@ -43,7 +43,7 @@ describe('fixed persona and name-first contract', () => {
     for (const persona of ['aster', '', null, undefined, 7, {}, ['nova']]) expect(() => profiles.personaFromMetadata({ persona })).toThrow(/persona/i);
   });
   it('independently confines distinct homes and cyclic patrols to every existing audited cell and unchanged startup escape', () => {
-    expect(ROUTES.allowedCells).toHaveLength(743); expect(ROUTES.startupReservedCells).toHaveLength(4);
+    expect(ROUTES.allowedCells).toHaveLength(792); expect(ROUTES.startupReservedCells).toHaveLength(4);
     const allowed = new Set(ROUTES.allowedCells.map(p => p.join(',')));
     expect(new Set(Object.values(profiles.PERSONAS).map(p => p.home.join(','))).size).toBe(3);
     for (const p of Object.values(profiles.PERSONAS)) {
@@ -78,10 +78,13 @@ describe('three-guide public bubble simulations', () => {
     hs.forEach(h => h.chat('nOvA [bot]: Cancer')); hs.forEach(h => h.chat('Orion, Libra'));
     expect(hs[1].replies.at(-1)).toContain('Cancer'); expect(hs[2].replies.at(-1)).toContain('Libra');
     const targets = [[82, 104], [63, 109], [25, 71]];
-    for (let i = 0; i < hs.length; i++) {
-      for (let n = 0; n < 250 && !hs[i].moves.some(p => p.x === center(targets[i]).x && p.y === center(targets[i]).y); n++) await hs[i].step();
-      expect(hs[i].moves).toContainEqual(center(targets[i]));
-    }
+    // The three controllers share one fake clock and each keeps exactly one awaited native move open, so the
+    // guides are stepped in rotation: walking one guide to its gate before touching the next would leave the
+    // others' pending moves open for longer than OPERATION_BUDGET_MS (10 s) once the audited road/aisle routes
+    // (58, 61 and 44 steps at 100 ms each) are walked, and the controller rightly quarantines such a move.
+    const arrived = (i: number) => hs[i].moves.some(p => p.x === center(targets[i]).x && p.y === center(targets[i]).y);
+    for (let n = 0; n < 250 && !targets.every((_, i) => arrived(i)); n++) for (let i = 0; i < hs.length; i++) if (!arrived(i)) await hs[i].step();
+    for (let i = 0; i < hs.length; i++) expect(hs[i].moves, `${['Lyra', 'Nova', 'Orion'][i]} reaches its escort gate`).toContainEqual(center(targets[i]));
     await Promise.all(hs.map(h => h.stop()));
   });
   it('uses truthful per-persona greetings, ignores bot chat via member name and event fallback, and keeps bot-only patrol moving', async () => {

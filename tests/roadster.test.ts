@@ -52,12 +52,12 @@ it('preserves the original sole-addition Roadster receipt against its immutable 
 // Current whole-world byte authority belongs to publication/verify-source.mjs,
 // whose real CLI tests establish a positive baseline before artifact mutations.
 // Roadster's sole-addition history above uses independent immutable 17d4 inputs.
-it('fits the arrival view without touching any743 guide cell, spawn, entrance, scenery or sponsor panel', () => {
+it('fits the arrival view without touching any792 guide cell, spawn, entrance, scenery or sponsor panel', () => {
  const overlay = json('art/source/roadster.json').overlay;
  expect(overlay).toMatchObject({x:73,y:60,width:5,height:5});
  const inside = (x:number,y:number) => x>=73&&x<78&&y>=60&&y<65;
- expect(ROUTES.allowedCells).toHaveLength(743);
- expect(sha(JSON.stringify(ROUTES.allowedCells))).toBe('9cb8feee067d6e436f1255396c8fa26246dd2fc52f2749ce5765e46e30c9514f');
+ expect(ROUTES.allowedCells).toHaveLength(792);
+ expect(sha(JSON.stringify(ROUTES.allowedCells))).toBe('04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9');
  expect(ROUTES.allowedCells.filter(([x,y])=>inside(x,y))).toEqual([]);
  const layout = json('world/layouts/overworld.json') as MapLayout;
  for(const r of [...layout.entries,...layout.exits,...layout.areas,...layout.placements.filter(p=>p.layer==='props'),...(layout.images??[])]) expect(r.x<78&&r.x+r.width>73&&r.y<65&&r.y+r.height>60,'name' in r?r.name:r.id).toBe(false);
