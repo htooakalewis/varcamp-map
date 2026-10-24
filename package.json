@@ -15,7 +15,8 @@
     "maps:validate": "tsx tools/maps/validate-cli.ts",
     "maps:build": "node tools/run-tool.mjs tools/maps/build.ts",
     "art:check": "node tools/run-tool.mjs tools/art/check.ts",
-    "maps:author": "node tools/run-tool.mjs tools/maps/author.ts"
+    "maps:author": "node tools/run-tool.mjs tools/maps/author.ts",
+    "acceptance:smoke": "node ops/acceptance/smoke.mjs"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

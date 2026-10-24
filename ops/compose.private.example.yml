@@ -1,0 +1,20 @@
+# Private override template for the devbox demo stack. Placeholders only.
+#
+# ops/compose.yml is the public base. The two private bindings below are
+# deliberately absent from the repository (see ops/bots/README.md and
+# ops/preflight_checks.py); fill them in from the private records.
+#
+# Apply on the devbox:
+#   cp ops/compose.private.example.yml /srv/varcamp/compose.private.yml
+#   # edit the two placeholders
+#   cd /srv/varcamp && docker compose --env-file private/environment \
+#     -f compose.yml -f compose.private.yml up -d
+services:
+  play:
+    # Privately qualified Play runtime candidate. The real reference (tag or
+    # digest) comes from the private qualification receipt. pull_policy stays
+    # "never" from the base file, so the image must already be loaded locally.
+    image: varcamp-private/<qualified-candidate>:<id>
+    volumes:
+      # Private zodiac WOKA catalog, mounted read-only over the bundled file.
+      - ./private/zodiac-catalogs/<catalog-sha256>/woka.json:/usr/src/play/src/pusher/data/woka.json:ro

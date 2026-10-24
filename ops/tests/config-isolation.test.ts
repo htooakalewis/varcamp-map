@@ -23,8 +23,8 @@ function providerViolations(c:any):string[] {
  const p=c.providers?.docker;
  return p?.exposedByDefault===false && p?.constraints==='Label(`com.docker.compose.project`, `varcamp`)' && p?.network==='varcamp_core' && p?.useBindPortIP===false ? [] : ['discovery'];
 }
-function rendered() {
- return JSON.parse(execFileSync('docker',['compose','--env-file','ops/.env.example','-f','ops/compose.yml','config','--format','json'],{encoding:'utf8'}));
+function rendered(env:Record<string,string>={}) {
+ return JSON.parse(execFileSync('docker',['compose','--env-file','ops/.env.example','-f','ops/compose.yml','config','--format','json'],{encoding:'utf8',env:{...process.env,...env}}));
 }
 describe('production isolation',()=> {
  it('has a deployable configuration',()=>expect(existsSync('ops/compose.yml')).toBe(true));
@@ -53,6 +53,12 @@ it('refuses full readiness before media acceptance exists',()=> {
 });
 
 it('supplies the required empty uploader URL when chat uploads are disabled',()=>expect(rendered().services.play.environment.UPLOADER_URL).toBe(''));
+
+it('defaults map editor access to the organiser and accepts an explicit allowed-users list',()=> {
+ expect(rendered().services.play.environment.MAP_EDITOR_ALLOWED_USERS).toBe('organiser@example.invalid');
+ expect(rendered({MAP_EDITOR_ALLOWED_USERS:'a@x.invalid,b@x.invalid'}).services.play.environment.MAP_EDITOR_ALLOWED_USERS).toBe('a@x.invalid,b@x.invalid');
+ expect(rendered({MAP_EDITOR_ALLOWED_USERS:''}).services.play.environment.MAP_EDITOR_ALLOWED_USERS).toBe('organiser@example.invalid');
+});
 
 it('keeps realm self registration off and publishes administrator tags in userinfo',()=> {
  const r=JSON.parse(readFileSync('ops/keycloak/realm.template.json','utf8'));

@@ -1,0 +1,13 @@
+{
+  "name": "varcamp-live-acceptance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Opt-in Playwright smoke test against the live VarCamp WorkAdventure demo; independent of the map application and of npm test",
+  "scripts": {
+    "smoke": "node smoke.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.64.1"
+  }
+}

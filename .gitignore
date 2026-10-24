@@ -46,3 +46,7 @@ __pycache__/
 
 # Also ignore a local tool-directory symlink used for native renderer QA
 .tools
+
+# Live acceptance smoke test (opt-in, separate install)
+ops/acceptance/node_modules/
+ops/acceptance/output/

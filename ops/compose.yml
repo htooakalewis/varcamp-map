@@ -52,7 +52,7 @@
         "START_ROOM_URL": "/~/varcamp/maps/core-rehearsal.wam",
         "DISABLE_ANONYMOUS": "false",
         "MAP_EDITOR_ALLOW_ALL_USERS": "false",
-        "MAP_EDITOR_ALLOWED_USERS": "${ORGANISER_EMAIL:?required}",
+        "MAP_EDITOR_ALLOWED_USERS": "${MAP_EDITOR_ALLOWED_USERS:-${ORGANISER_EMAIL}}",
         "OPENID_CLIENT_ISSUER": "https://${ID_HOST}/realms/varcamp",
         "OPENID_CLIENT_ID": "workadventure",
         "OPENID_CLIENT_SECRET": "${OPENID_CLIENT_SECRET:?required}",
