@@ -93,8 +93,10 @@ describe('audience wayfinding in exported Tiled maps',()=>{
    const master=JSON.parse(readFileSync('art/source/hub-nameplates.json','utf8'));
    for(const e of l.exits){
     const speaker=e.destination.startsWith('speaker-'),key=speaker?e.destination.replace('speaker-',''):e.name;
-    const label=l.placements.find(p=>p.sprite===(speaker?`hub-label-${key}`:`exterior-gate-${key}`))!;
-    const copy=speaker?master.labels.find((r:{id:string})=>r.id===key).text:EXTERIOR_GATE_COPY[key];
+    const hall=!speaker&&(key==='solar'||key==='lunar');
+    const label=l.placements.find(p=>p.sprite===(speaker?`hub-label-${key}`:hall?`hall-exterior-${key}`:`exterior-gate-${key}`))!;
+    const copy=speaker?master.labels.find((r:{id:string})=>r.id===key).text:hall?JSON.parse(readFileSync('art/source/hall-exteriors.json','utf8')).subjects.find((r:{id:string})=>r.id===key).title:EXTERIOR_GATE_COPY[key];
+    if(hall)expect(copy).toBe(EXTERIOR_GATE_COPY[key]);
     expect(label,`${e.name}: raster plaque missing`).toBeDefined();expect(gap(label,e)).toBeLessThanOrEqual(6);
     const name=speaker?new RegExp(key.toUpperCase()):names[e.destination]!;expect(copy).toMatch(name);
     const roadArrow=l.placements.find(p=>p.id===(speaker?`approach-arrow-${key}`:`gate-approach-arrow-${key}`))!;

@@ -32,3 +32,5 @@ Finish: fast-forward local main, prepare and inspect a unique guarded release pl
 - Removing every new marker cannot bypass production art/layout gates; old contexts are author inputs only.
 - Historical proofs use independently frozen genuine predecessors, not stripped candidates or changed old fixtures.
 - Public guide graph/collision audit unchanged; all private guides remain stopped. Upload preserves organizer edits and old assets, with two complete readbacks and media-off door acceptance.
+
+Validation follow-up: the first stable full run found three old integration assertions still naming the earlier gate sprites or expecting zodiac-exteriors to be the final atlas. Extend those exact assertions through the two named hall replacements, including the retained native title copy; keep the original receipt immutable and append a validation-only receipt. Runtime maps/art stay byte-exact. Rerun the affected checks and full failure-name comparison before release.

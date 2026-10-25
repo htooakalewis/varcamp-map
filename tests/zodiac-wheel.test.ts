@@ -35,7 +35,9 @@ describe('medium authored zodiac arrival',()=>{
    expect(l.placements.find(p=>p.id===`approach-arrow-${sign}`)?.sprite).toBe('arrow-north');
   }
   for(const name of ['solar','lunar','maze','festival','shipyard','campus']){
-   expect(l.placements.some(p=>p.sprite===`exterior-gate-${name}`)).toBe(true);
+   const hall=name==='solar'||name==='lunar';
+   expect(l.placements.find(p=>p.id===`exterior-gate-${name}`)?.sprite).toBe(hall?`hall-exterior-${name}`:`exterior-gate-${name}`);
+   if(hall){const meta=JSON.parse(readFileSync('art/source/hall-exteriors.json','utf8'));expect(meta.subjects.find((r:{id:string})=>r.id===name).title).toBe(name.toUpperCase()+' HALL');}
    expect(l.exits.some(e=>e.name===name)).toBe(true);
   }
  });

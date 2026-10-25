@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "c18301f35bf796c6547e9ff1d6122599d2994caf917aa75d0ba921da3d66d4e0",
+      "toSha256": "855d7c8cb303a9970625c22f5d77fdeff324997fe437aa74bbd99d24851edee2",
+      "reason": "Extend exact Roadster atlas ordering and hall wayfinding assertions through the two named exterior replacements. Preserve all runtime map/art bytes and every earlier publication receipt."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "4408b06327b5161d9f78fbeb02a005131da4de864aabf2b186f3f543ea7104f6",
+      "toSha256": "24a0c840055dc2c3af0416e16d7bf9331b5b62ee31021b7483b63b959719f337",
+      "reason": "Extend exact Roadster atlas ordering and hall wayfinding assertions through the two named exterior replacements. Preserve all runtime map/art bytes and every earlier publication receipt."
+    },
+    {
+      "path": "tests/zodiac-wheel.test.ts",
+      "fromSha256": "471da47bd0d6b367b596fd755f4d2b009e5297604382f7c90b5ce788a6fba324",
+      "toSha256": "4013420ee210edc29b83c513dacfd64d11b5f311b0af811a7a29e197b41b742b",
+      "reason": "Extend exact Roadster atlas ordering and hall wayfinding assertions through the two named exterior replacements. Preserve all runtime map/art bytes and every earlier publication receipt."
+    }
+  ]
+}
