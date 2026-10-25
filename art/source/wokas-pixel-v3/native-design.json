@@ -10,11 +10,12 @@
     "frontTarget": { "minimumWidth": 17, "maximumWidth": 30, "minimumHeight": 28, "maximumHeight": 30 },
     "feetBaseline": 30
   },
-  "badge": { "x": 11, "y": 18, "size": 9, "glyphX": 12, "glyphY": 19, "fill": "#fff3d4" },
-  "style": "Chibi RPG proportions (head about 16px wide, 16 rows; body 14 rows), selective hue-shifted dark outlines per material, four-tone ramps lit from the top left, two-pixel eyes with a highlight, belted coat in the sign colour, trousers and boots, legs that alternate in stride frames, real side profiles and back-of-head views.",
+  "badge": { "x": 11, "y": 18, "size": 9, "glyphX": 12, "glyphY": 19, "glyph": "#fff4d8", "fieldLightness": 0.11 },
+  "style": "Chibi RPG proportions (head about 16px wide, 16 rows; body 14 rows), selective hue-shifted dark outlines per material, four-tone ramps lit from the top left, two-pixel eyes with a highlight. Outfits: sign-coloured coat or vest over shirt sleeves (men), A-line dress or tunic over leggings with a sash (women); accent-coloured scarf, cuffs and hem trim; belt with buckle. Every one of the 24 characters has its own hairstyle.",
   "requirements": [
-    "24 human characters: 12 signs, male and female",
-    "Sign glyph on a 9x9 parchment chest badge in every DOWN frame, 7x7 one-pixel glyph",
+    "24 human characters: 12 signs, male and female, each with a distinct hairstyle",
+    "Sign glyph as a light 7x7 one-pixel drawing on a tight dark chest crest (1px margin) in every DOWN frame",
+    "Glyph shapes follow the Unicode zodiac symbols; pairwise distances checked by test",
     "Sign accessory recognisable in DOWN, LEFT, RIGHT and UP",
     "Three distinct poses per direction; feet on row 30; transparent one-pixel border",
     "Same 96x128 sheet contract as v2; texture IDs unchanged"
@@ -31,110 +32,110 @@
     {
       "id": "aries", "title": "Scarlet ram",
       "palette": { "primary": "#d8333f", "shade": "#8e1c3a", "light": "#ff7a6e" },
-      "trim": "#f4e2bc", "pants": "#4a3a46",
+      "trim": "#f4e2bc", "pants": "#4a3a46", "accent": "#e8b84a",
       "accessory": { "description": "Curled ivory ram horns at both temples, spiral visible from front, side and back.", "ramp": "#e9dcc0" },
-      "male": { "hair": "tousled", "hairColor": "#6b3f2c", "skin": 1, "eyes": "brown" },
-      "female": { "hair": "long", "hairColor": "#b8492e", "skin": 0, "eyes": "green" },
+      "male": { "hair": "tousled", "hairColor": "#6b3f2c", "skin": 1, "eyes": "brown", "garment": "coat" },
+      "female": { "hair": "long", "hairColor": "#b8492e", "skin": 0, "eyes": "green", "garment": "dress" },
       "glyph": [".#...#.", "#.#.#.#", "#..#..#", "...#...", "...#...", "...#...", "...#..."]
     },
     {
       "id": "taurus", "title": "Emerald bull",
       "palette": { "primary": "#1f9a5a", "shade": "#0e5a44", "light": "#6ed98e" },
-      "trim": "#f2e6c4", "pants": "#4a4234",
+      "trim": "#f2e6c4", "pants": "#4a4234", "accent": "#d0883a",
       "accessory": { "description": "Short upturned ivory bull horns above the hairline with a gold ring band.", "ramp": "#efe4c8" },
-      "male": { "hair": "crop", "hairColor": "#2e2a33", "skin": 3, "eyes": "brown" },
-      "female": { "hair": "bob", "hairColor": "#4a2e24", "skin": 2, "eyes": "amber" },
-      "glyph": ["#.....#", ".#...#.", "..###..", ".#...#.", ".#...#.", ".#...#.", "..###.."]
+      "male": { "hair": "crop", "hairColor": "#2e2a33", "skin": 3, "eyes": "brown", "garment": "coat" },
+      "female": { "hair": "bob", "hairColor": "#4a2e24", "skin": 2, "eyes": "amber", "garment": "tunic" },
+      "glyph": ["##...##", "..###..", ".#...#.", "#.....#", "#.....#", ".#...#.", "..###.."]
     },
     {
       "id": "gemini", "title": "Lemon twins",
       "palette": { "primary": "#e8b62c", "shade": "#a8741a", "light": "#ffe680" },
-      "trim": "#fff4d8", "pants": "#3e4660",
+      "trim": "#fff4d8", "pants": "#3e4660", "accent": "#4a78c8",
       "accessory": { "description": "Twin star hair ornaments, one at each side of the head, mirrored.", "ramp": "#fff08a" },
-      "male": { "hair": "tousled", "hairColor": "#d8a850", "skin": 0, "eyes": "blue" },
-      "female": { "hair": "twintail", "hairColor": "#e0b45a", "skin": 1, "eyes": "blue" },
+      "male": { "hair": "spiky", "hairColor": "#d8a850", "skin": 0, "eyes": "blue", "garment": "vest" },
+      "female": { "hair": "twintail", "hairColor": "#e0b45a", "skin": 1, "eyes": "blue", "garment": "dress" },
       "glyph": ["#######", ".#...#.", ".#...#.", ".#...#.", ".#...#.", ".#...#.", "#######"]
     },
     {
       "id": "cancer", "title": "Coral crab",
       "palette": { "primary": "#ee6a8c", "shade": "#a8325c", "light": "#ffb4c2" },
-      "trim": "#fff0e6", "pants": "#46385a",
+      "trim": "#fff0e6", "pants": "#46385a", "accent": "#3aa8a0",
       "accessory": { "description": "Two small coral crab-claw hair clips with open pincers, one each side.", "ramp": "#f05a50" },
-      "male": { "hair": "crop", "hairColor": "#3a2a2e", "skin": 2, "eyes": "brown" },
-      "female": { "hair": "bob", "hairColor": "#2e2630", "skin": 3, "eyes": "brown" },
-      "glyph": ["..####.", ".#....#", "##.....", "##...##", ".....##", "#....#.", ".####.."]
+      "male": { "hair": "curly", "hairColor": "#3a2a2e", "skin": 2, "eyes": "brown", "garment": "vest" },
+      "female": { "hair": "hightail", "hairColor": "#2e2630", "skin": 3, "eyes": "brown", "garment": "dress" },
+      "glyph": ["..####.", ".#....#", "##.....", "##.....", ".....##", "#....##", ".####.."]
     },
     {
       "id": "leo", "title": "Amber lion",
       "palette": { "primary": "#e8822a", "shade": "#a8481c", "light": "#ffc46a" },
-      "trim": "#fff0d0", "pants": "#4e3a30",
-      "accessory": { "description": "Mane-like golden hair with a gold circlet and a red gem on the brow.", "ramp": "#f2c440" },
-      "male": { "hair": "mane", "hairColor": "#a8542a", "skin": 2, "eyes": "amber" },
-      "female": { "hair": "lionmane", "hairColor": "#b8642e", "skin": 1, "eyes": "amber" },
-      "glyph": ["...###.", "..#...#", "..#...#", ".##...#", "#..#..#", "#..#..#", ".##...#"]
+      "trim": "#fff0d0", "pants": "#4e3a30", "accent": "#b8302e",
+      "accessory": { "description": "Mane-like hair with a gold circlet and a red gem on the brow.", "ramp": "#f2c440" },
+      "male": { "hair": "mane", "hairColor": "#a8542a", "skin": 2, "eyes": "amber", "garment": "coat" },
+      "female": { "hair": "lionmane", "hairColor": "#b8642e", "skin": 1, "eyes": "amber", "garment": "dress" },
+      "glyph": ["..###..", ".#...#.", ".#...#.", "###..#.", "#.#..#.", "###..#.", "......#"]
     },
     {
       "id": "virgo", "title": "Lime blossom",
       "palette": { "primary": "#8cb83a", "shade": "#4e7424", "light": "#d4ee8a" },
-      "trim": "#fbf6e0", "pants": "#4c4a38",
+      "trim": "#fbf6e0", "pants": "#4c4a38", "accent": "#e0c060",
       "accessory": { "description": "Wheat-and-flower crown: white blossoms with gold centres between green leaves.", "ramp": "#f6f4ea" },
-      "male": { "hair": "tousled", "hairColor": "#8a5a34", "skin": 0, "eyes": "green" },
-      "female": { "hair": "long", "hairColor": "#e4c47a", "skin": 0, "eyes": "green" },
-      "glyph": ["##.#...", "#.#.#..", "#.#.#..", "#.#.#.#", "#.#.#.#", "#.#.##.", "..##..."]
+      "male": { "hair": "swept", "hairColor": "#8a5a34", "skin": 0, "eyes": "green", "garment": "vest" },
+      "female": { "hair": "buns", "hairColor": "#c8944a", "skin": 0, "eyes": "green", "garment": "dress" },
+      "glyph": [".#.#...", "#.#.##.", "#.#.#.#", "#.#.#.#", "#.#.##.", "#.#.#..", "...#..."]
     },
     {
       "id": "libra", "title": "Cyan scales",
       "palette": { "primary": "#2aa6c8", "shade": "#15607e", "light": "#8ae8f8" },
-      "trim": "#eef8fa", "pants": "#3a4258",
-      "accessory": { "description": "Silver headband carrying a small gold balance: centre post, beam and two hanging pans.", "ramp": "#f2c440" },
-      "male": { "hair": "crop", "hairColor": "#dcd6cc", "skin": 3, "eyes": "grey" },
-      "female": { "hair": "long", "hairColor": "#ece2c8", "skin": 4, "eyes": "brown" },
+      "trim": "#eef8fa", "pants": "#3a4258", "accent": "#e8c050",
+      "accessory": { "description": "Gold balance over the head: centre post, beam and two hanging pans.", "ramp": "#f2c440" },
+      "male": { "hair": "slick", "hairColor": "#dcd6cc", "skin": 3, "eyes": "grey", "garment": "coat" },
+      "female": { "hair": "hime", "hairColor": "#ece2c8", "skin": 4, "eyes": "brown", "garment": "dress" },
       "glyph": [".......", "..###..", ".#...#.", "##...##", ".......", "#######", "......."]
     },
     {
       "id": "scorpio", "title": "Violet scorpion",
       "palette": { "primary": "#a64ac8", "shade": "#5e2478", "light": "#e09cf4" },
-      "trim": "#f6eafa", "pants": "#2e2a3a",
-      "accessory": { "description": "Tail-like braid curling up behind the head ending in a violet stinger hairpin.", "ramp": "#c860e8" },
-      "male": { "hair": "tousled", "hairColor": "#2a2236", "skin": 4, "eyes": "violet" },
-      "female": { "hair": "braid", "hairColor": "#3a2440", "skin": 2, "eyes": "violet" },
-      "glyph": ["##.#...", "#.#.#..", "#.#.#..", "#.#.#..", "#.#.#.#", "#.#..##", "....###"]
+      "trim": "#f6eafa", "pants": "#2e2a3a", "accent": "#d83a5a",
+      "accessory": { "description": "Curled violet scorpion-tail hairpin with a stinger.", "ramp": "#c860e8" },
+      "male": { "hair": "topknot", "hairColor": "#2a2236", "skin": 4, "eyes": "violet", "garment": "vest" },
+      "female": { "hair": "braid", "hairColor": "#3a2440", "skin": 2, "eyes": "violet", "garment": "tunic" },
+      "glyph": [".#.#...", "#.#.#..", "#.#.#..", "#.#.#..", "#.#.#..", "#.#.#.#", "....###"]
     },
     {
       "id": "sagittarius", "title": "Cobalt archer",
       "palette": { "primary": "#3a66d4", "shade": "#22388a", "light": "#9cc0ff" },
-      "trim": "#f0f2fa", "pants": "#4a3a2e",
+      "trim": "#f0f2fa", "pants": "#4a3a2e", "accent": "#c89a5a",
       "accessory": { "description": "Cobalt feathered cap with a white feather and an arrow quiver on the back.", "ramp": "#f4f4f0" },
-      "male": { "hair": "crop", "hairColor": "#5a3624", "skin": 1, "eyes": "blue" },
-      "female": { "hair": "braid", "hairColor": "#8a4a2a", "skin": 3, "eyes": "brown" },
-      "glyph": ["...####", ".....##", "....#.#", "#..#...", ".##....", ".##....", "#..#..."]
+      "male": { "hair": "shaggy", "hairColor": "#5a3624", "skin": 1, "eyes": "blue", "garment": "coat" },
+      "female": { "hair": "pixie", "hairColor": "#8a4a2a", "skin": 3, "eyes": "brown", "garment": "tunic" },
+      "glyph": ["...####", ".....##", "....#.#", ".#.#...", "..#....", ".#.#...", "#......"]
     },
     {
       "id": "capricorn", "title": "Rust mountain goat",
       "palette": { "primary": "#b06a3e", "shade": "#683a26", "light": "#e0aa7c" },
-      "trim": "#f4ead8", "pants": "#3e3a36",
+      "trim": "#f4ead8", "pants": "#3e3a36", "accent": "#5a8a9a",
       "accessory": { "description": "Tall ridged goat horns sweeping back from the crown.", "ramp": "#ddd0b4" },
-      "male": { "hair": "tousled", "hairColor": "#3a2a24", "skin": 3, "eyes": "brown" },
-      "female": { "hair": "bob", "hairColor": "#6a4030", "skin": 4, "eyes": "amber" },
-      "glyph": ["#.#....", "##.#...", "#..#.#.", "...#..#", "...#.##", "....##.", "..##..."]
+      "male": { "hair": "buzz", "hairColor": "#3a2a24", "skin": 3, "eyes": "brown", "garment": "vest" },
+      "female": { "hair": "curlylong", "hairColor": "#6a4030", "skin": 4, "eyes": "amber", "garment": "tunic" },
+      "glyph": ["#...#..", ".#.#...", ".#.#.##", "..#.#.#", "..#.#.#", "....##.", "...#..."]
     },
     {
       "id": "aquarius", "title": "Sky water bearer",
       "palette": { "primary": "#4aa8e6", "shade": "#245e9e", "light": "#b4e4ff" },
-      "trim": "#f2fbff", "pants": "#36405a",
+      "trim": "#f2fbff", "pants": "#36405a", "accent": "#f2f2f6",
       "accessory": { "description": "Wave hairband: a blue band with white wave crests across the head.", "ramp": "#5ab4f0" },
-      "male": { "hair": "crop", "hairColor": "#7a5a3a", "skin": 0, "eyes": "blue" },
-      "female": { "hair": "twintail", "hairColor": "#34446a", "skin": 1, "eyes": "blue" },
+      "male": { "hair": "wavy", "hairColor": "#7a5a3a", "skin": 0, "eyes": "blue", "garment": "coat" },
+      "female": { "hair": "waves", "hairColor": "#34446a", "skin": 1, "eyes": "blue", "garment": "tunic" },
       "glyph": [".......", ".#..#..", "#.##.##", ".......", ".#..#..", "#.##.##", "......."]
     },
     {
       "id": "pisces", "title": "Sea jade fish",
       "palette": { "primary": "#2fae96", "shade": "#16604e", "light": "#94ecd0" },
-      "trim": "#effbf6", "pants": "#3a3e52",
+      "trim": "#effbf6", "pants": "#3a3e52", "accent": "#e8786a",
       "accessory": { "description": "Fish-fin ear ornaments: striped jade fins swept back from both ears.", "ramp": "#4ac8b0" },
-      "male": { "hair": "tousled", "hairColor": "#2e4a4a", "skin": 4, "eyes": "green" },
-      "female": { "hair": "long", "hairColor": "#2a3a4e", "skin": 2, "eyes": "green" },
-      "glyph": ["#.....#", ".#...#.", ".#...#.", "#######", ".#...#.", ".#...#.", "#.....#"]
+      "male": { "hair": "lowtail", "hairColor": "#2e4a4a", "skin": 4, "eyes": "green", "garment": "vest" },
+      "female": { "hair": "sidetail", "hairColor": "#2a3a4e", "skin": 2, "eyes": "green", "garment": "dress" },
+      "glyph": [".#...#.", "..#.#..", "..#.#..", "#######", "..#.#..", "..#.#..", ".#...#."]
     }
   ]
 }

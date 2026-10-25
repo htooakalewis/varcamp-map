@@ -6,10 +6,12 @@ Each 96x128 PNG uses DOWN/LEFT/RIGHT/UP rows and stride-a/idle/stride-b columns,
 
 v3 replaces v2's flat block style with layered hand-authored pixel templates:
 hue-shifted material outlines, four-tone ramps lit from the top left, two-pixel
-eyes with highlights, hair with strands, coat/belt/trousers/boots, alternating
-legs and swinging arms, real side profiles and back-of-head views. Every DOWN
-frame carries a 9x9 parchment chest badge with the sign's 7x7 glyph, and each
-sign keeps a small identifying accessory in every direction.
+eyes with highlights, 24 distinct hairstyles, alternating legs and swinging
+arms, real side profiles and back-of-head views. Outfits: coat or vest (men),
+A-line dress or tunic with sash (women), with accent scarf, cuffs and hem trim,
+belt and boots. Every DOWN frame carries a round dark chest crest with the
+sign's light 7x7 glyph drawn after the Unicode zodiac symbol, and each sign
+keeps a small identifying accessory in every direction.
 
 Existing varcamp-zodiac-v1-* texture IDs are intentionally preserved; only the
 resource folder moves to v3. The unbound template is not a live catalog;

@@ -21,12 +21,14 @@ export type View = 'down' | 'right' | 'up';
 export type Gender = 'male' | 'female';
 export type Pose = 0 | 1 | 2;
 export type RGBA = readonly [number, number, number, number];
-type HairStyle = 'tousled' | 'crop' | 'mane' | 'lionmane' | 'long' | 'bob' | 'twintail' | 'braid';
-interface Look { hair: HairStyle; hairColor: string; skin: number; eyes: string }
+export const HAIR_STYLES = ['tousled', 'crop', 'spiky', 'curly', 'mane', 'swept', 'slick', 'topknot', 'shaggy', 'buzz', 'wavy', 'lowtail',
+  'long', 'bob', 'twintail', 'hightail', 'lionmane', 'buns', 'hime', 'braid', 'pixie', 'curlylong', 'waves', 'sidetail'] as const;
+type HairStyle = typeof HAIR_STYLES[number];
+interface Look { hair: HairStyle; hairColor: string; skin: number; eyes: string; garment: string }
 export interface SignDesign {
   id: string; title: string;
   palette: { primary: string; shade: string; light: string };
-  trim: string; pants: string;
+  trim: string; pants: string; accent: string;
   accessory: { description: string; ramp: string };
   male: Look; female: Look;
   glyph: string[];
@@ -34,7 +36,7 @@ export interface SignDesign {
 export interface NativeDesign {
   schema: string;
   frame: { width: number; height: number; rows: string[]; poseOrder: string[]; sheet: { width: number; height: number }; frontTarget: { minimumWidth: number; maximumWidth: number; minimumHeight: number; maximumHeight: number }; feetBaseline: number };
-  badge: { x: number; y: number; size: number; glyphX: number; glyphY: number; fill: string };
+  badge: { x: number; y: number; size: number; glyphX: number; glyphY: number; glyph: string; fieldLightness: number };
   skins: { id: string; ramp: [string, string, string, string]; mouth: string; blush: string }[];
   eyes: Record<string, string>;
   signs: SignDesign[];
@@ -44,6 +46,10 @@ export const SIGNS = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'li
 export const DESIGN = JSON.parse(await readFile(path.join(ROOT, DESIGN_PATH), 'utf8')) as NativeDesign;
 if (DESIGN.schema !== 'varcamp-native-pixel-woka-design-v3' || DESIGN.frame.width !== 32 || DESIGN.frame.height !== 32 || JSON.stringify(DESIGN.signs.map(x => x.id)) !== JSON.stringify(SIGNS)) throw new Error('Exact reviewed v3 design required');
 for (const sign of DESIGN.signs) if (sign.glyph.length !== 7 || sign.glyph.some(row => !/^[.#]{7}$/.test(row))) throw new Error(`Exact 7x7 glyph required for ${sign.id}`);
+{ // Every one of the 24 characters wears its own hairstyle.
+  const styles = DESIGN.signs.flatMap(sign => [sign.male.hair, sign.female.hair]);
+  if (new Set(styles).size !== 24 || styles.some(style => !(HAIR_STYLES as readonly string[]).includes(style))) throw new Error('24 distinct known hairstyles required');
+}
 
 // ---------------------------------------------------------------- colour --
 export function color(hex: string): RGBA {
@@ -172,7 +178,9 @@ function shift(template: Template, dx: number, dy = 0): Template {
 //  gold      z shade  y base  Y light
 //  accessory 1 outline 2 shade 3 base 4 light   (sign accessory ramp)
 //  gem       7 red  8 highlight
-//  badge     X rim  x parchment  (glyph ink painted separately)
+//  sleeves   F light  f base  G shade   (coat colours, or shirt for vest/tunic)
+//  accent    5 shade  6 base  9 light   (scarf, cuffs, hem trim, sash)
+//  crest     X near-black field  (light glyph painted separately)
 
 // ----- heads -----
 const HEAD: Record<View, Template> = {
@@ -282,203 +290,453 @@ const BRAID = (y: number, x: number, length: number): Template => {
   return T(y, ...rows);
 };
 
+// Shared hair parts. Each of the 24 characters gets its own style id (see
+// native-design.json); styles are assembled from tops, sides and tails.
+const BANGS_TOP = T(1,
+  '12:O*7',
+  '10:O O h H H h h h h O O',
+  '8:O O h H H H h*7 O O',
+  '7:O h H H H h*10 g O',
+  '6:O h H H h*12 g g O',
+  '6:O h H h*13 g g O',
+  '6:O h H h*13 g g O',
+  '6:O h h g*13 h g O',
+);
+const BANGS_SIDE = T(1,
+  '10:O*6',
+  '9:O h H H h h h O O',
+  '8:O h H H H h*5 O O',
+  '7:O h H H h*9 O',
+  '7:O h H h*11 O',
+  '6:O h H h*12 g O',
+  '6:O h*14 g O',
+  '6:O h*11 g g g g O',
+);
+const SHORT_SIDES = T(9, '6:Ohhg...........ghhO', '7:Ohg...........ghO', '7:Og.............gO');
+const SHORT_BACK = T(9,
+  '6:O h h h g h h h h h h g h h h g g g O',
+  '7:O h h g h h h h h h h g h h g g O',
+  '8:O g h g h h h h h g h g g g O',
+  '9:O g*11 O',
+  '10:O*11',
+);
+const LONG_SIDES = T(9,
+  '6:Ohhg...........ghhO',
+  '6:OhHg...........ghhO',
+  '6:Ohhg...........ghhO',
+  '6:OhHg...........gghO',
+  '6:Ohhg...........ghhO',
+  '6:Ohhg...........ghhO',
+  '6:OhhgO.........OghhO',
+  '6:OhHhO.........OhhhO',
+  '6:OhhgO.........OghhO',
+  '6:OghgO.........OghgO',
+  '7:OgO...........OgO',
+  '8:O.............O',
+);
+const LONG_SIDE_VIEW = T(9,
+  '6:O h*7 g O',
+  '6:O h H h*5 g O',
+  '6:O h*7 g O',
+  '6:O h H h*4 g O',
+  '6:O h*6 g O',
+  '7:O h*5 g O',
+  '7:O h*4 g O',
+  '8:O g g g O',
+);
+const LONG_BACK_LAYER = T(9,
+  '5:O h*6 g O',
+  '5:O h H h h h g g O',
+  '5:O h*5 g g O',
+  '5:O h H h h h g g O',
+  '5:O h h g h g g g O',
+  '5:O h H h g g g O',
+  '5:O h h g h g O',
+  '5:O h h g g g O',
+  '5:O h g h g O',
+  '5:O h g g O',
+  '6:O g O',
+  '6:O.O',
+);
+// Back view of long hair: strand clusters separated by shade lines, a sheen
+// band of highlights, and a jagged tip line.
+const LONG_BACK = T(9,
+  '6:O h H h g h h H h g h h H h g h h g O',
+  '6:O h h h g h h h h g h h h h g h g g O',
+  '6:O h h g h h h h g h h h h g h h g g O',
+  '6:O h h g h h h g h h h h g h h h g g O',
+  '6:O h H g h h h g h h H h g h h g g g O',
+  '6:O h h g h H h g h h h h g h h g g g O',
+  '6:O h h g h h h g h h h g h h h g g g O',
+  '6:O g h g h h g h h h g h h h g g g g O',
+  '6:O g h g h h g h h h g h h g g g g g O',
+  '7:O g h g h g h h g h h g h g g g O',
+  '7:O g g O g h g O g h g O g g g g O',
+  '8:O..OgO.OgO..O',
+);
+const WAVY_SIDES = T(9,
+  '6:Ohhg...........ghhO',
+  '6:Oghh...........hhgO',
+  '6:Ohhg...........ghhO',
+  '6:OghhO.........OhhgO',
+  '7:OhgO.........OghO',
+  '7:OgO...........OgO',
+);
+// Long waves: the silhouette swings out and back every three rows.
+const WAVE_LONG_SIDES = T(9,
+  '6:Ohhg...........ghhO',
+  '5:OhHhg...........ghHhO',
+  '5:Ohhgg...........gghhO',
+  '6:Ohhg...........ghhO',
+  '6:OhhgO.........OghhO',
+  '5:OhHhgO.........OghHhO',
+  '5:OhhggO.........OgghhO',
+  '6:OhhgO.........OghhO',
+  '6:OhhgO.........OghhO',
+  '5:OhHgg...........ggHhO',
+  '6:OggO...........OggO',
+  '7:OO.............OO',
+);
+const WAVE_BACK = T(9,
+  '6:O h H h g h h H h g h h H h g h h g O',
+  '5:O h h h g h h h h g h h h h g h h g g O',
+  '5:O h h g h h h h g h h h h g h h h g g O',
+  '6:O h g h h h g h h h h g h h h g g O O',
+  '6:O h g h h h g h h h h g h h h g g g O',
+  '5:O h H g h h h g h h H h g h h h g g g O',
+  '5:O h h g h H h g h h h h g h h h g g g O',
+  '6:O h g h h h g h h h g h h h g g g g O',
+  '6:O g g h h g h h h g h h h g g g g g O',
+  '5:O g h g h h g h h h g h h h g h g g g O',
+  '6:O g O g g O g g O g g O g g O g g g O',
+  '7:O...O...O...O...O',
+);
+const CURLY_DOWN = T(1,
+  '10:O O . O O . O O . O O',
+  '8:O O h H O h h O h h O h g O O',
+  '7:O h H h g h H h g h h h g h h g O',
+  '7:O H h g h H h g h H h g h h g g O',
+  '6:O h g h H h g h H h g h h h g h g g O',
+  '6:O H h g h H h g h H h g h h g h g g O',
+  '6:O h g h g h g h g h g h g h g h g g O',
+  '6:O g O g d O g d O g d O g d O g O g O',
+  '6:Ohg.............ghO',
+  '7:Og.............gO',
+);
+const CURLY_SIDE = T(1,
+  '10:O O . O O . O O',
+  '8:O O h H O h h O h O O',
+  '7:O h H h g h H h g h h O',
+  '6:O h H h g h H h g h H h g h O',
+  '5:O h g h H h g h H h g h h h g h O',
+  '5:O H h g h H h g h H h g h h g h O',
+  '5:O h g h g h g h g h g h g h g h g O',
+  '5:O g h g h g h g h g h g h g g d d o',
+  '5:O h g h g h g O d d o',
+  '5:O g h g h g h O d s o',
+  '5:O h g h g h g O o o',
+  '6:O g h g h g O',
+  '7:O g O g O',
+);
+const CURLY_UP = T(1,
+  '10:O O . O O . O O . O O',
+  '8:O O h H O h h O h h O h g O O',
+  '7:O h H h g h H h g h h h g h h g O',
+  '7:O H h g h H h g h H h g h h g g O',
+  '6:O h g h H h g h H h g h h h g h g g O',
+  '6:O H h g h H h g h H h g h h g h g g O',
+  '6:O h g h H h g h H h g h H h g h g g O',
+  '6:O H h g h H h g h H h g h h g h g g O',
+  '6:O h g h g h g h g h g h g h g h g g O',
+  '7:O g h g h g h g h g h g h g g g O',
+  '8:O g g h g g h g g h g g g g O',
+  '9:O g O g g O g g O g g O O',
+);
+const BUN_TOP = T(1, '13:O*5', '12:O h H h h g O', '12:O g h h g g O');
+const BUN_SIDE = T(4, '4:O O O', '3:O h H h O', '3:O H h g 3', '3:O h g g 3', '4:O O O');
+const SIDE_TAIL = T(7,
+  '5:O 3 3 O',
+  '4:O h H h O',
+  '4:O h h g O',
+  '4:O h H g O',
+  '4:O h h g O',
+  '4:O h g g O',
+  '5:O h g O',
+  '5:O h g O',
+  '5:O g g O',
+  '5:O g O',
+  '6:O',
+);
+const TOUSLED_DOWN = T(1,
+  '11:O.OO.O',
+  '9:OOhOhhOhOO',
+  '8:OhhHhhHhhhhOO',
+  '7:OhHHhHHhhhghhgO',
+  '7:OhHHhHhhhghhhhgO',
+  '7:OhHhhhhhghhhhhggO',
+  '7:OhhhhhghhhhhghhgO',
+  '7:OhhghgdhhgdhgdhgO',
+  '7:OgO....Og.....OgO',
+);
+const TOUSLED_SIDE = T(1,
+  '11:OO.OO',
+  '9:OOhhOhhOO',
+  '8:OhhHHhhhhhOO',
+  '7:OhhHHHhhhhhhhO',
+  '7:OhHHhhhhhghhhhO',
+  '6:OhhHhhhhghhhhhhgO',
+  '6:O h h h g h*10 g O',
+  '6:O h*11 g h g d o',
+);
+const TOUSLED_UP = T(1,
+  '11:O.OO.O',
+  '9:OOhOhhOhOO',
+  '8:OhhHhhHhhhhOO',
+  '7:OhHHhHHhhhghhgO',
+  '7:OhHHhHhhhghhhhgO',
+  '7:OhHhhhhhghhhhhggO',
+  '7:OhHhhhghhhhghhhgO',
+  '7:OhhhhghhhhhghhhgO',
+  '7:OhhhghhhhhhghhggO',
+  '7:OghhhhhghhhhhgggO',
+  '8:OgghhhhhhhhhggO',
+  '8:OggghhghhghgggO',
+  '9:OgggggggggggO',
+  '10:OOgOgOgOgOO',
+);
+const CROP_DOWN = T(2,
+  '10:O*9',
+  '8:O O h H H H h*5 O O',
+  '7:O h H H H h*8 g O',
+  '7:O h H H h*10 g O',
+  '7:O h H h*11 g g O',
+  '7:O h*14 g O',
+);
+const CROP_SIDE = T(2,
+  '9:O*8',
+  '8:O h H H H h*4 O O',
+  '7:O h H H H h*7 O',
+  '7:O h H H h*9 O',
+  '6:O h h H h*11 g O',
+  '6:O h*14 g O',
+  '6:O h*12 g d d o',
+);
+const CROP_UP = T(2,
+  '10:O*9',
+  '8:O O h H H H h*5 O O',
+  '7:O h H H H h*8 g O',
+  '7:O h H H h*10 g O',
+  '7:O h H h*11 g g O',
+  '7:O h H h*10 g g g O',
+  '7:O h h h h g h h h h h h g h g g O',
+  '7:O h h h g h h h h h h g h h g g O',
+  '7:O g h h g h h h h h g h h g g g O',
+  '8:O g g h*9 g g O',
+  '8:O g*13 O',
+  '9:O*13',
+);
+const MANE_DOWN = T(1,
+  '9:O..O..O..O..O',
+  '8:OHOOhOOhOOhOOgO',
+  '7:O h H h h H h*9 g O',
+  '5:O O h H H h h H H h*9 g O O',
+  '5:O h H H h h H h*11 g g O',
+  '4:O O h H h*15 g g O O',
+  '5:O h H h h h g h h h h g h h h h g h h g O',
+  '5:O h h g h g d h h g d h g d h g d h g h O',
+  '5:O h h g O...........O g h h O',
+  '4:O h h h g O...........O g h h h O',
+  '5:O h h g O...........O g h h O',
+  '4:O h H h g O...........O g h h h O',
+  '5:O h h g O...........O g h h O',
+  '5:O h g g O...........O g g h O',
+  '6:O g O.............O g O',
+  '7:O...............O',
+);
+const MANE_SIDE = T(1,
+  '8:O..O..O..O',
+  '7:O H O O h O O h O O h O O',
+  '6:O h H h h H h*9 O',
+  '4:O O h H H h h H H h*8 O',
+  '4:O h H H h h H h*11 O',
+  '3:O O h H h*14 g O',
+  '4:O h H h*11 g h g h O',
+  '4:O h*13 g h d d o',
+  '3:O h*8 g O',
+  '4:O h*7 g O',
+  '3:O h*8 g O',
+  '4:O h*6 g g O',
+  '4:O h*5 g g O',
+  '5:O h g h g g O',
+  '5:O g O g O',
+  '6:O.O',
+);
+const MANE_UP = T(1,
+  '9:O..O..O..O..O',
+  '8:OHOOhOOhOOhOOgO',
+  '7:O h H h h H h*9 g O',
+  '5:O O h H H h h H H h*9 g O O',
+  '5:O h H H h h H h*11 g g O',
+  '4:O O h H h*15 g g O O',
+  '5:O h H h h h g h h h h g h h h h g h h g O',
+  '4:O h h H h h g h h h h h g h h h h h g h g g O',
+  '5:O h h g h h h h g h h h h g h h h g h g O',
+  '4:O h h h g h h h h g h h h h g h h h g h g g O',
+  '5:O h h g h h h h g h h h h g h h h g g g O',
+  '4:O h h h g h h h g h h h h h g h h h g g g g O',
+  '5:O h g g h h h g h h h h h g h h h g g g O',
+  '5:O g g g h h g g h h h h g g h h g g g g O',
+  '6:O g g O g g g O g g g O g g g O g g O',
+  '7:O...O...O...O...O',
+);
+const MANE_LOCKS = sym(T(15, '5:O h h g O', '5:O h H g O', '5:O h g g O', '5:O h g O', '6:O g O', '7:O'));
+
 const HAIR: Record<HairStyle, HairSet> = {
-  tousled: { front: {
+  // ---- masculine styles ----
+  tousled: { front: { down: TOUSLED_DOWN, right: [TOUSLED_SIDE, EAR_SIDE], up: TOUSLED_UP } },
+  crop: { front: {
+    down: [CROP_DOWN, T(8, '7:O h g O d d d h*8 g O', '7:Og.............gO')],
+    right: [CROP_SIDE, EAR_SIDE],
+    up: CROP_UP,
+  } },
+  spiky: { front: {
     down: T(1,
-      '11:O.OO.O',
-      '9:OOhOhhOhOO',
-      '8:OhhHhhHhhhhOO',
-      '7:OhHHhHHhhhghhgO',
-      '7:OhHHhHhhhghhhhgO',
-      '7:OhHhhhhhghhhhhggO',
-      '7:OhhhhhghhhhhghhgO',
-      '7:OhhghgdhhgdhgdhgO',
-      '7:OgO....Og.....OgO',
+      '9:O...O...O...O',
+      '8:OHO.OhO.OhO.OgO',
+      '7:OhHhOhhhOhhhOhggO',
+      '7:O h H H h h h h h h h h h h h g O',
+      '7:O h H h h h h h h h h h h h g g O',
+      '7:O h h h h g h h h h g h h h g g O',
+      '7:O h h g h g d h g d h g d h g g O',
+      '7:O g O . . O g . . . O g . . . g O',
     ),
     right: [T(1,
-      '11:OO.OO',
-      '9:OOhhOhhOO',
-      '8:OhhHHhhhhhOO',
-      '7:OhhHHHhhhhhhhO',
-      '7:OhHHhhhhhghhhhO',
-      '6:OhhHhhhhghhhhhhgO',
-      '6:O h h h g h*10 g O',
+      '9:O...O...O',
+      '8:OhO.OhO.OhO',
+      '7:OhHhOhhhOhhO',
+      '6:O h H H h h h h h h h h h h O',
+      '6:O h H h h h h h h h h h h h h O',
+      '6:O h h h h h g h h h h h h h g O',
+      '6:O h*14 g O',
       '6:O h*11 g h g d o',
     ), EAR_SIDE],
-    up: T(1,
-      '11:O.OO.O',
-      '9:OOhOhhOhOO',
-      '8:OhhHhhHhhhhOO',
-      '7:OhHHhHHhhhghhgO',
-      '7:OhHHhHhhhghhhhgO',
-      '7:OhHhhhhhghhhhhggO',
-      '7:OhHhhhghhhhghhhgO',
-      '7:OhhhhghhhhhghhhgO',
-      '7:OhhhghhhhhhghhggO',
-      '7:OghhhhhghhhhhgggO',
-      '8:OgghhhhhhhhhggO',
-      '8:OggghhghhghgggO',
-      '9:OgggggggggggO',
-      '10:OOgOgOgOgOO',
-    ),
+    up: [TOUSLED_UP, T(1,
+      '9:O...O...O...O',
+      '8:OHO.OhO.OhO.OgO',
+      '7:OhHhOhhhOhhhOhggO',
+    )],
   } },
-  crop: { front: {
+  curly: { front: { down: CURLY_DOWN, right: CURLY_SIDE, up: CURLY_UP } },
+  mane: { front: { down: MANE_DOWN, right: MANE_SIDE, up: MANE_UP } },
+  swept: { front: {
+    down: [CROP_DOWN, T(8, '7:O h h h h h h g O d d d d d d g O', '7:O h h g O..........gO', '7:O h g O', '7:O g O')],
+    right: [CROP_SIDE, T(9, '6:O h*5 O d d o', '6:O h*5 O d s o', '6:O h*5 O o o', '6:O h*5 g O', '6:O h h h g g O', '7:O g g O')],
+    up: [CROP_UP, T(13, '9:O g*11 O', '10:O g O g O g O g O g O')],
+  } },
+  slick: { front: {
     down: T(2,
       '10:O*9',
       '8:O O h H H H h*5 O O',
       '7:O h H H H h*8 g O',
-      '7:O h H H h*10 g O',
-      '7:O h H h*11 g g O',
-      '7:O h*14 g O',
-      '7:O h g O d d d h*8 g O',
+      '7:O h H h h g h h g h h g h h g g O',
+      '7:O h g O d*10 O g O',
+      '7:OhO...........OgO',
       '7:Og.............gO',
     ),
     right: [T(2,
       '9:O*8',
       '8:O h H H H h*4 O O',
       '7:O h H H H h*7 O',
-      '7:O h H H h*9 O',
-      '6:O h h H h*11 g O',
-      '6:O h*14 g O',
-      '6:O h*12 g d d o',
+      '7:O h H h g h h g h g O O',
+      '6:O h h h g h h g h O d o',
+      '6:O h h g h h h h g O',
+      '6:O h*7 g O',
     ), EAR_SIDE],
-    up: T(2,
-      '10:O*9',
-      '8:O O h H H H h*5 O O',
-      '7:O h H H H h*8 g O',
-      '7:O h H H h*10 g O',
-      '7:O h H h*11 g g O',
-      '7:O h H h*10 g g g O',
-      '7:O h h h h g h h h h h h g h g g O',
-      '7:O h h h g h h h h h h g h h g g O',
-      '7:O g h h g h h h h h g h h g g g O',
-      '8:O g g h*9 g g O',
-      '8:O g*13 O',
-      '9:O*13',
-    ),
+    up: CROP_UP,
   } },
-  mane: { front: {
+  // Hair pulled back into a knot on the crown, widow's peak hairline.
+  topknot: { front: {
     down: T(1,
-      '9:O..O..O..O..O',
-      '8:OHOOhOOhOOhOOgO',
-      '7:O h H h h H h*9 g O',
-      '5:O O h H H h h H H h*9 g O O',
-      '5:O h H H h h H h*11 g g O',
-      '4:O O h H h*15 g g O O',
-      '5:O h H h h h g h h h h g h h h h g h h g O',
-      '5:O h h g h g d h h g d h g d h g d h g h O',
-      '5:O h h g O...........O g h h O',
-      '4:O h h h g O...........O g h h h O',
-      '5:O h h g O...........O g h h O',
-      '4:O h H h g O...........O g h h h O',
-      '5:O h h g O...........O g h h O',
-      '5:O h g g O...........O g g h O',
-      '6:O g O.............O g O',
-      '7:O...............O',
+      '13:O*5',
+      '12:O h H h h g O',
+      '10:O O g h h g g O O',
+      '8:O O h H H h h h h h h O O',
+      '7:O h H h h g h h h g h h h g g g O',
+      '7:O h g O d d d d g d d d d O g g O',
+      '7:OhO...........OgO',
+      '7:Og.............gO',
     ),
-    right: T(1,
-      '8:O..O..O..O',
-      '7:O H O O h O O h O O h O O',
-      '6:O h H h h H h*9 O',
-      '4:O O h H H h h H H h*8 O',
-      '4:O h H H h h H h*11 O',
-      '3:O O h H h*14 g O',
-      '4:O h H h*11 g h g h O',
-      '4:O h*13 g h d d o',
-      '3:O h*8 g O',
-      '4:O h*7 g O',
-      '3:O h*8 g O',
-      '4:O h*6 g g O',
-      '4:O h*5 g g O',
-      '5:O h g h g g O',
-      '5:O g O g O',
-      '6:O.O',
+    right: [T(1, '8:O*4', '7:O h H h O', '7:O g h g O O O O', '7:O O h H H h h h O', '7:O h H h g h h g h O O', '6:O h h h g h h g h O d o', '6:O h h g h h h h g O', '6:O h*7 g O'), EAR_SIDE],
+    up: [CROP_UP, BUN_TOP],
+  } },
+  shaggy: { front: {
+    down: [TOUSLED_DOWN, T(9, '7:Ohg...........ghO', '7:Ohg...........ghO', '7:Ogh...........hgO', '7:Ohg...........ghO', '7:OgO...........OgO', '8:O.............O')],
+    right: [TOUSLED_SIDE, T(9, '6:O h*6 g O', '6:O h H h h h g O', '6:O h*6 g O', '6:O h h h h g g O', '6:O g h g g O', '7:O g O')],
+    up: [TOUSLED_UP, T(13, '8:O g g h g g h g g h g g g g O', '8:O g h g g h g g h g g h g g O', '9:O g O g g O g g O g O g O', '10:O.O..O..O.O')],
+  } },
+  buzz: { front: {
+    down: T(3,
+      '10:O*11',
+      '9:O h g h g h g h g h g h O',
+      '8:O g h g h g h g h g h g h g O',
+      '8:O h g h g h g h g h g h g g O',
+      '8:O g O d d d d d d d d d O g O',
+      '8:OO...........OO',
     ),
-    up: T(1,
-      '9:O..O..O..O..O',
-      '8:OHOOhOOhOOhOOgO',
-      '7:O h H h h H h*9 g O',
-      '5:O O h H H h h H H h*9 g O O',
-      '5:O h H H h h H h*11 g g O',
-      '4:O O h H h*15 g g O O',
-      '5:O h H h h h g h h h h g h h h h g h h g O',
-      '4:O h h H h h g h h h h h g h h h h h g h g g O',
-      '5:O h h g h h h h g h h h h g h h h g h g O',
-      '4:O h h h g h h h h g h h h h g h h h g h g g O',
-      '5:O h h g h h h h g h h h h g h h h g g g O',
-      '4:O h h h g h h h g h h h h h g h h h g g g g O',
-      '5:O h g g h h h g h h h h h g h h h g g g O',
-      '5:O g g g h h g g h h h h g g h h g g g g O',
-      '6:O g g O g g g O g g g O g g g O g g O',
-      '7:O...O...O...O...O',
+    right: T(3,
+      '10:O*8',
+      '8:O O g h g h g h g O O',
+      '7:O g h g h g h g h g h O',
+      '7:O h g h g h g h g h g h O',
+      '7:O g h g h g h g h g O',
+      '7:O h g h g h g h O',
+      '7:O g h g h O d d o',
+      '7:O h g h g O d s o',
+      '7:O g h g h O o o',
+      '8:O g h g O',
+      '9:O O O',
+    ),
+    up: T(3,
+      '10:O*11',
+      '9:O h g h g h g h g h g h O',
+      '8:O g h g h g h g h g h g h g O',
+      '8:O h g h g h g h g h g h g g O',
+      '8:O g h g h g h g h g h g h g O',
+      '8:O h g h g h g h g h g h g g O',
+      '8:O g h g h g h g h g h g h g O',
+      '8:O h g h g h g h g h g h g g O',
+      '9:O g h g h g h g h g h g O',
+      '10:O g h g h g h g h g O',
+      '11:O*9',
     ),
   } },
-  long: {
+  wavy: { front: {
+    down: [PARTED_TOP, WAVY_SIDES],
+    right: [SMOOTH_SIDE, T(9, '6:O h g h h g O', '6:O g h h g h O', '6:O h h g h g O', '6:O g h g h h g O', '7:O g h g g O', '7:O g O g O')],
+    up: [SMOOTH_BACK_TOP, T(9,
+      '6:O h h g h h g h h h g h h g h h g g O',
+      '6:O g h h g h h g h h h g h h g h g g O',
+      '6:O h h g h h g h h h g h h g h h g g O',
+      '6:O g h h g h h g h g h h g h g h g g O',
+      '7:O g h g g h g g h g g h g g g O',
+      '7:O g O g O g O g O g O g O g O',
+    )],
+  } },
+  lowtail: {
     front: {
-      down: [PARTED_TOP, T(9,
-        '6:Ohhg...........ghhO',
-        '6:OhHg...........ghhO',
-        '6:Ohhg...........ghhO',
-        '6:OhHg...........gghO',
-        '6:Ohhg...........ghhO',
-        '6:Ohhg...........ghhO',
-        '6:OhhgO.........OghhO',
-        '6:OhHhO.........OhhhO',
-        '6:OhhgO.........OghhO',
-        '6:OghgO.........OghgO',
-        '7:OgO...........OgO',
-        '8:O.............O',
-      )],
-      right: [SMOOTH_SIDE, T(9,
-        '6:O h*7 g O',
-        '6:O h H h*5 g O',
-        '6:O h*7 g O',
-        '6:O h H h*4 g O',
-        '6:O h*6 g O',
-        '7:O h*5 g O',
-        '7:O h*4 g O',
-        '8:O g g g O',
-      )],
-      up: [SMOOTH_BACK_TOP, T(9,
-        '6:O h h h g h h h h h h g h h h g g g O',
-        '6:O h h h h g h h h h h h h g h h g g O',
-        '6:O h h h g h h h h h h h h h g h g g O',
-        '6:O h h h g h h h h h h h h h g h g g O',
-        '6:O h H h g h h h h h h h h h h g g g O',
-        '6:O h h g h h h h h h h h h h h g g g O',
-        '6:O h H g h h h h h h h h h h h g g g O',
-        '6:O h h g h h h h h g h h h h h g g g O',
-        '6:O g h g h h h h h g h h h h g g g g O',
-        '7:O g g h h g g h h h g g h h g g O',
-        '8:O g O g g O O g g O g O g g O',
-        '9:O..O.OO..O.O',
-      )],
+      down: [PARTED_TOP, SHORT_SIDES],
+      right: [SMOOTH_SIDE, EAR_SIDE],
+      up: [SMOOTH_BACK_TOP, SHORT_BACK, T(12, '13:O 3 3 3 O', '13:O h H g O', '13:O h h g O', '14:O h g O', '14:O h g O', '14:O g O', '15:O')],
     },
-    back: { right: T(9,
-      '5:O h*6 g O',
-      '5:O h*6 g O',
-      '5:O h*5 g g O',
-      '5:O h H h h h g g O',
-      '5:O h h h h g g g O',
-      '5:O h H h g g g O',
-      '5:O h h h g g O',
-      '5:O h h g g g O',
-      '5:O h g g g O',
-      '5:O h g g O',
-      '6:O g O',
-      '6:O.O',
-    ) },
+    back: { right: T(10, '5:O 3 O', '4:O h h O', '3:O h H g O', '3:O h h g O', '3:O h g O', '3:O g g O', '4:O g O', '4:O O') },
+  },
+  // ---- feminine styles ----
+  long: {
+    front: { down: [PARTED_TOP, LONG_SIDES], right: [SMOOTH_SIDE, LONG_SIDE_VIEW], up: [SMOOTH_BACK_TOP, LONG_BACK] },
+    back: { right: LONG_BACK_LAYER },
   },
   bob: { front: {
-    down: T(1,
-      '12:O*7',
-      '10:O O h H H h h h h O O',
-      '8:O O h H H H h*7 O O',
-      '7:O h H H H h*10 g O',
-      '6:O h H H h*12 g g O',
-      '6:O h H h*13 g g O',
-      '6:O h H h*13 g g O',
-      '6:O h h g*13 h g O',
+    down: [BANGS_TOP, T(9,
       '6:Ohhg...........ghhO',
       '6:OhHg...........ghhO',
       '6:Ohhg...........ghhO',
@@ -487,16 +745,8 @@ const HAIR: Record<HairStyle, HairSet> = {
       '6:OhhhgO.......OghhhO',
       '7:OgggO.......OgggO',
       '8:OOO.........OOO',
-    ),
-    right: T(1,
-      '10:O*6',
-      '9:O h H H h h h O O',
-      '8:O h H H H h*5 O O',
-      '7:O h H H h*9 O',
-      '7:O h H h*11 O',
-      '6:O h H h*12 g O',
-      '6:O h*14 g O',
-      '6:O h*11 g g g g O',
+    )],
+    right: [BANGS_SIDE, T(9,
       '6:O h*7 g O',
       '6:O h*7 g O',
       '6:O h H h*5 g O',
@@ -505,10 +755,10 @@ const HAIR: Record<HairStyle, HairSet> = {
       '6:O g h h h h h g g O',
       '7:O g*6 O',
       '8:O*6',
-    ),
+    )],
     up: [SMOOTH_BACK_TOP, T(9,
       '6:O h h h g h h h h h h g h h h g g g O',
-      '6:O h h h g h h h h h h g h h h g g g O',
+      '6:O h H h g h h H h h h g h H h g g g O',
       '6:O h h g h h h h h h h h g h h g g g O',
       '6:O h h g h h h h h h h h g h h g g g O',
       '6:O g h g h h h h h h h h g h g g g g O',
@@ -518,90 +768,121 @@ const HAIR: Record<HairStyle, HairSet> = {
     )],
   } },
   twintail: {
+    front: { down: [PARTED_TOP, SHORT_SIDES, sym(TWIN_TAIL)], right: [SMOOTH_SIDE, EAR_SIDE], up: [SMOOTH_BACK_TOP, SHORT_BACK, sym(TWIN_TAIL)] },
+    back: { right: T(5, '5:O 3 3', '4:O h 3 3', '3:O h H h O', '2:O h H h g O', '2:O h h h g O', '2:O h H g g O', '2:O h h g O', '2:O h g g O', '2:O h g O', '3:O h g O', '3:O g g O', '4:O g O', '4:O O') },
+  },
+  hightail: {
     front: {
-      down: [PARTED_TOP, T(9,
-        '6:Ohhg...........ghhO',
-        '7:Ohg...........ghO',
-        '7:Og.............gO',
-      ), sym(TWIN_TAIL)],
+      down: [PARTED_TOP, SHORT_SIDES],
       right: [SMOOTH_SIDE, EAR_SIDE],
-      up: [SMOOTH_BACK_TOP, T(9,
-        '6:O h h h g h h h h h h g h h h g g g O',
-        '7:O h h g h h h h h h h g h h g g O',
-        '8:O g h g h h h h h g h g g g O',
-        '9:O g*11 O',
-        '10:O*11',
-      ), sym(TWIN_TAIL)],
+      up: [SMOOTH_BACK_TOP, SHORT_BACK, T(3, '13:O 3 3 3 O', '13:O h H g O', '13:O h h g O', '13:O h H g O', '13:O h h g O', '13:O g h g O', '13:O h g g O', '14:O h g O', '14:O h g O', '14:O g O', '14:O g O', '15:O')],
     },
-    back: { right: T(5,
-      '5:O 3 3',
-      '4:O h 3 3',
-      '3:O h H h O',
-      '2:O h H h g O',
-      '2:O h h h g O',
-      '2:O h H g g O',
-      '2:O h h g O',
-      '2:O h g g O',
-      '2:O h g O',
-      '3:O h g O',
-      '3:O g g O',
-      '4:O g O',
-      '4:O O',
-    ) },
+    back: {
+      down: T(5, '23:O O', '23:O h O', '23:O h g O', '23:O h h O', '23:O h g O', '24:O h O', '24:O g O', '24:O g O', '25:O'),
+      right: T(2, '5:O O 3', '4:O h h 3', '3:O h H h O', '2:O h h g O', '2:O h H g O', '2:O h g O', '2:O h g O', '3:O h g O', '3:O g O', '3:O g O', '4:O'),
+    },
+  },
+  lionmane: {
+    front: { down: [MANE_DOWN, MANE_LOCKS], right: MANE_SIDE, up: [MANE_UP, MANE_LOCKS] },
+    back: { right: T(13, '4:O h h g O', '4:O h H g O', '4:O h h g O', '4:O h g g O', '4:O h g O', '5:O g O', '5:O g O', '6:O') },
+  },
+  buns: {
+    front: { down: [PARTED_TOP, SHORT_SIDES, sym(BUN_SIDE)], right: [SMOOTH_SIDE, EAR_SIDE], up: [SMOOTH_BACK_TOP, SHORT_BACK, sym(BUN_SIDE)] },
+    back: { right: T(3, '5:O O O', '4:O h H h O', '4:O h h g O', '4:O h g g O', '5:O O O') },
+  },
+  // Hime cut: blunt bangs, side locks cut square at the chin, long hair over
+  // the shoulders and a straight-cut hem at the back.
+  hime: {
+    front: {
+      down: [BANGS_TOP, T(9,
+        '6:Ohhg...........ghhO',
+        '6:OhHg...........gHhO',
+        '6:Ohhg...........ghhO',
+        '6:OhHg...........gHhO',
+        '6:Ohhg...........ghhO',
+        '6:Ohhg...........ghhO',
+        '6:OgggO.........OgggO',
+        '5:OhhgO...........OghhO',
+        '5:OhHgO...........OgHhO',
+        '5:OhhgO...........OghhO',
+        '5:OhhgO...........OghhO',
+        '5:OgggO...........OgggO',
+        '5:OOOOO...........OOOOO',
+      )],
+      right: [BANGS_SIDE, LONG_SIDE_VIEW],
+      up: [SMOOTH_BACK_TOP, T(9,
+        '6:O h H h g h h H h g h h H h g h h g O',
+        '6:O h h h g h h h h g h h h h g h g g O',
+        '6:O h h g h h h h g h h h h g h h g g O',
+        '6:O h h g h h h g h h h h g h h h g g O',
+        '6:O h H g h h h g h h H h g h h g g g O',
+        '6:O h h g h H h g h h h h g h h g g g O',
+        '6:O h h g h h h g h h h g h h h g g g O',
+        '6:O g h g h h g h h h g h h h g g g g O',
+        '6:O g h g h h g h h h g h h g g g g g O',
+        '6:O g g g g g g g g g g g g g g g g g O',
+        '6:O*19',
+      )],
+    },
+    back: { right: T(9, '5:O h*6 g O', '5:O h H h h h g g O', '5:O h*5 g g O', '5:O h H h h h g g O', '5:O h h g h g g g O', '5:O h H h g g g O', '5:O h h g h g g O', '5:O h h g g g g O', '5:O h g h g g O', '5:O g g g g g O', '5:O*7') },
   },
   braid: {
     front: {
-      down: [PARTED_TOP, T(9,
-        '6:Ohhg...........ghhO',
-        '6:OhHg...........ghO',
-        '6:Ohhg...........gO',
-        '6:OhhgO',
-      ), BRAID(13, 5, 6)],
+      down: [PARTED_TOP, T(9, '6:Ohhg...........ghhO', '6:OhHg...........ghO', '6:Ohhg...........gO', '6:OhhgO'), BRAID(13, 5, 6)],
       right: [SMOOTH_SIDE, EAR_SIDE],
-      up: [SMOOTH_BACK_TOP, T(9,
-        '6:O h h h g h h h h h h g h h h g g g O',
-        '7:O h h g h h h h h h h g h h g g O',
-        '8:O g h g h h h h h g h g g g O',
-        '9:O g*11 O',
-        '10:O*11',
-      ), BRAID(14, 13, 8)],
+      up: [SMOOTH_BACK_TOP, SHORT_BACK, BRAID(14, 13, 8)],
     },
     back: { right: BRAID(9, 5, 10) },
   },
-  lionmane: { front: {} },
-};
-// Feminine lion mane: the mane plus long locks falling over the shoulders.
-const MANE_LOCKS = sym(T(15, '5:O h h g O', '5:O h H g O', '5:O h g g O', '5:O h g O', '6:O g O', '7:O'));
-HAIR.lionmane = {
-  front: { down: [HAIR.mane.front.down as Template, MANE_LOCKS], right: HAIR.mane.front.right, up: [HAIR.mane.front.up as Template, MANE_LOCKS] },
-  back: { right: T(13, '4:O h h g O', '4:O h H g O', '4:O h h g O', '4:O h g g O', '4:O h g O', '5:O g O', '5:O g O', '6:O') },
+  pixie: { front: {
+    down: [TOUSLED_DOWN, T(9, '7:OhgO.........OghO', '7:OgO...........OgO', '8:O.............O')],
+    right: [TOUSLED_SIDE, EAR_SIDE, T(9, '17:O', '16:O g', '16:O')],
+    up: TOUSLED_UP,
+  } },
+  curlylong: { front: {
+    down: [CURLY_DOWN, T(10, '6:Ohgh...........hghO', '6:Oghg...........ghgO', '6:Ohgh...........hghO', '6:Oghg...........ghgO', '6:OhghO.........OhghO', '7:OghO.........OhgO', '8:OO...........OO')],
+    right: [CURLY_SIDE, T(12, '5:O h g h g h O', '5:O g h g h O', '5:O h g h g O', '5:O g h g O', '6:O g O g O')],
+    up: [CURLY_UP, T(13, '7:O h g h g h g h g h g h g h g h O', '7:O g h g h g h g h g h g h g g O', '8:O g h g h g h g h g h g g O', '9:O g O g g O g g O g O')],
+  } },
+  waves: {
+    front: { down: [PARTED_TOP, WAVE_LONG_SIDES], right: [SMOOTH_SIDE, LONG_SIDE_VIEW], up: [SMOOTH_BACK_TOP, WAVE_BACK] },
+    back: { right: LONG_BACK_LAYER },
+  },
+  sidetail: { front: {
+    down: [PARTED_TOP, SHORT_SIDES, SIDE_TAIL],
+    right: [SMOOTH_SIDE, EAR_SIDE, T(9, '13:O 3 O', '12:O h H O', '12:O h g O', '12:O h h O', '12:O h g O', '12:O g g O', '13:O g O', '13:O g O', '14:O')],
+    up: [SMOOTH_BACK_TOP, SHORT_BACK, flip(SIDE_TAIL)],
+  } },
 };
 
 // ----- bodies -----
-// FRONT torso: rows 17..26. Arms x6..8 and x22..24, torso x9..21, belt row 24.
+// Keys: coat K c a A, sleeves F f G (coat or shirt colours per garment),
+// accent 5 6 9 (scarf, cuffs, hem trim, sash), shirt T t, belt L l.
+// FRONT torso rows 17..26: scarf 17, chest 18..23, accent cuffs 23, belt 24,
+// coat skirt 25, accent hem trim 26. Arms x6..8 and x22..24.
 const TORSO_DOWN_IDLE = T(17,
-  '7:K K A a a T t d d d t T a a c K K',
-  '6:K A a c A a*9 a c a c K',
-  '6:K A a c A a*9 a c a c K',
-  '6:K A a c A a*9 a c a c K',
-  '6:K a a c A a*9 a c c c K',
-  '6:K a a c A a*9 a c c c K',
-  '6:K T t c A a*9 a c T t K',
+  '7:K F 5 9 6*9 5 5 G K',
+  '6:K F f c 6 a*9 a c f G K',
+  '6:K F f c 5 a*9 a c f G K',
+  '6:K F f c A a*9 a c f G K',
+  '6:K f G c A a*9 a c f G K',
+  '6:K F f c A a*9 c c f G K',
+  '6:K 9 6 c A a*9 c c 6 5 K',
   '6:o S s K L*5 l L*5 K s d o',
-  '7:o o K c*11 K o o',
-  '9:K*13',
+  '7:o o K A a*8 c c K o o',
+  '9:5 9 6*9 6 5',
 );
 const TORSO_UP_IDLE = T(17,
-  '7:K K A a a a K d d d K a a a c K K',
-  '6:K A a c A a*4 c a*4 a c a c K',
-  '6:K A a c A a*4 c a*4 a c a c K',
-  '6:K A a c A a*4 c a*4 a c a c K',
-  '6:K a a c A a*4 c a*4 a c c c K',
-  '6:K a a c A a*4 c a*4 a c c c K',
-  '6:K T t c A a*4 c a*4 a c T t K',
+  '7:K F 5 6*5 9 6*4 5 5 G K',
+  '6:K F f c A a*4 c a*4 a c f G K',
+  '6:K F f c A a*4 c a*4 a c f G K',
+  '6:K F f c A a*4 c a*4 a c f G K',
+  '6:K f G c A a*4 c a*4 a c f G K',
+  '6:K F f c A a*4 c a*4 c c f G K',
+  '6:K 9 6 c A a*4 c a*4 c c 6 5 K',
   '6:o S s K L*11 K s d o',
-  '7:o o K c*11 K o o',
-  '9:K*13',
+  '7:o o K A a*3 c a*4 c c K o o',
+  '9:5 9 6*9 6 5',
 );
 /** Arm swing for front/back strides: the swinging arm's cuff and hand rise one
  * row (the arm foreshortens as it moves in depth), so walk frames are distinct
@@ -618,45 +899,66 @@ const TORSO: Record<View, [Template, Template, Template]> = {
   up: [swing(TORSO_UP_IDLE, 'right'), TORSO_UP_IDLE, swing(TORSO_UP_IDLE, 'left')],
   right: [
     T(17,
-      '12:K a T d d T K',
-      '11:K A a K A a c K a K',
-      '11:K A K A a c K a a K',
-      '11:K K A a c K a a a K',
-      '10:K A a c K a a a a c K',
-      '10:K T t K a a a a a c K',
+      '12:K 6 6 9 6 6 K',
+      '11:K A a K F f G K a K',
+      '11:K A K F f G K a a K',
+      '11:K K F f G K a a a K',
+      '10:K F f G K a a a a c K',
+      '10:K 9 6 K a a a a a c K',
       '9:o s d o K a a a a a c K',
-      '10:o o K L*7 K',
-      '11:K c*8 K',
-      '12:K*8',
+      '10:o o K L*6 l K',
+      '11:K A a a a a c c c K',
+      '11:5 6*7 9 5',
     ),
     T(17,
-      '12:K a T d d T K',
-      '11:K A a K A a c K a K',
-      '11:K A a K A a c K a K',
-      '11:K A a K A a c K a K',
-      '11:K a a K a a c K c K',
-      '11:K a c K a c c K c K',
-      '11:K a c K T t T K c K',
-      '11:K L L o s d o L L K',
-      '11:K c c c o o c c c K',
-      '12:K*8',
+      '12:K 6 6 9 6 6 K',
+      '11:K A a K F f G K a K',
+      '11:K A a K F f G K a K',
+      '11:K A a K F f G K a K',
+      '11:K a a K f f G K c K',
+      '11:K a c K f G G K c K',
+      '11:K a c K 9 6 5 K c K',
+      '11:K L L o s d o L l K',
+      '11:K A a c o o c c c K',
+      '11:5 6*7 9 5',
     ),
     T(17,
-      '12:K a T d d T K',
-      '11:K A a K A a c K a K',
-      '11:K A a a K A a c K K',
-      '11:K a a a a K A a c K',
-      '11:K a a a a a K A a c K',
-      '11:K a a c c a K T t T K',
+      '12:K 6 6 9 6 6 K',
+      '11:K A a K F f G K a K',
+      '11:K A a a K F f G K K',
+      '11:K a a a a K F f G K',
+      '11:K a a a a a K F f G K',
+      '11:K a a c c a K 9 6 5 K',
       '11:K a a c c c a o s d o',
-      '11:K L*7 o o',
-      '11:K c*8 K',
-      '12:K*8',
+      '11:K L*6 l o o',
+      '11:K A a a a a c c c K',
+      '11:5 6*7 9 5',
     ),
   ],
 };
-const LEGS: Record<Gender, Record<View, [Template, Template, Template]>> = {
-  male: {
+type Garment = 'coat' | 'vest' | 'dress' | 'tunic';
+// Female garments: a sash replaces the belt; the dress flares into an A-line
+// skirt to row 27, the tunic stops at row 26 over leggings.
+const SASH: Record<View, Template> = {
+  down: T(24, '9:5 9 6*9 6 5'),
+  up: T(24, '9:5 6*9 9 6 5'),
+  right: T(24, '12:5 6 6 6 9 6 5'),
+};
+const SASH_BOW = T(25, '20:9 5', '21:5');
+const SKIRTS: Record<'dress' | 'tunic', Record<View, Template>> = {
+  dress: {
+    down: T(25, '7:o o K a*11 K o o', '7:K A a*13 c K', '6:5 9 6*15 9 5'),
+    up: T(25, '7:o o K a*11 K o o', '7:K A a*13 c K', '6:5 9 6*15 9 5'),
+    right: T(25, '11:K A a a a a a c K', '10:K A a*8 c K', '9:5 9 6*9 6 5'),
+  },
+  tunic: {
+    down: T(25, '7:o o K a*11 K o o', '8:5 9 6*11 9 5'),
+    up: T(25, '7:o o K a*11 K o o', '8:5 9 6*11 9 5'),
+    right: T(25, '11:K A a*6 c K', '10:5 9 6*7 9 5'),
+  },
+};
+const LEGS: Record<'trousers' | 'skirt', Record<View, [Template, Template, Template]>> = {
+  trousers: {
     down: [
       T(28, '10:q P P p q . j n b k j', '10:j n b k j . j*5', '10:j*5'),
       T(27, '10:q P P p q . q P P p q', '10:q P P p q . q P p p q', '10:j n b k j . j n b k j', '10:j*5 . j*5'),
@@ -673,7 +975,7 @@ const LEGS: Record<Gender, Record<View, [Template, Template, Template]>> = {
       T(28, '12:q P q . q p p q', '10:j n b b j . j k k k k j', '10:j*4 . . j*6'),
     ],
   },
-  female: {
+  skirt: {
     down: [
       T(29, '11:j n b j . j*4', '11:j*4'),
       T(28, '11:q P p q . q P p q', '11:j n b j . j n b j', '11:j*4 . j*4'),
@@ -690,12 +992,6 @@ const LEGS: Record<Gender, Record<View, [Template, Template, Template]>> = {
       T(29, '11:j n b j . . j k k k j', '11:j*3 . . . j*5'),
     ],
   },
-};
-// Female outfit: the coat continues into a flared skirt over shorter legs.
-const SKIRT: Record<View, Template> = {
-  down: T(25, '7:o o K a*11 K o o', '8:K A a*11 c K', '8:K c*13 K'),
-  up: T(25, '7:o o K a*11 K o o', '8:K A a*11 c K', '8:K c*13 K'),
-  right: T(25, '11:K c c a a a a a c K', '10:K A a*8 c K', '10:K c*9 K'),
 };
 
 // ----- sign accessories -----
@@ -844,7 +1140,12 @@ export function characterFor(signId: string, gender: Gender): Character {
   const [j, k, b, n] = ramp('#7a5236');
   const [z, y, , Y] = ramp('#e2b03c');
   const [a1, a2, a3, a4] = ramp(sign.accessory.ramp);
+  const [, accentShade, accent, accentLight] = ramp(sign.accent);
   const [eyeDark, , iris, irisLight] = ramp(eye);
+  const garment = look.garment as Garment;
+  if (!(gender === 'male' ? ['coat', 'vest'] : ['dress', 'tunic']).includes(garment)) throw new Error(`Unknown garment for ${signId}/${gender}`);
+  const shirtSleeves = garment === 'vest' || garment === 'tunic';
+  const crestHue = toHsl(color(sign.palette.primary))[0];
   const palette: Record<string, RGBA> = {
     O, g, h, H, o, d, s, S,
     r: gender === 'female' ? color(skin.blush) : s, m: mix(color(skin.mouth), s),
@@ -856,11 +1157,15 @@ export function characterFor(signId: string, gender: Gender): Character {
     z, y, Y,
     '1': a1, '2': a2, '3': a3, '4': a4,
     '7': color('#d8404a'), '8': color('#ffb0a0'),
-    // Badge rim in the sign shade, glyph in the darkest coat ink: strokes that
-    // touch the rim stay separable by tone.
-    X: color(sign.palette.shade), x: color(DESIGN.badge.fill),
+    '5': accentShade, '6': accent, '9': accentLight,
+    // Sleeves: coat colours, or shirt colours for the vest and tunic garments.
+    F: shirtSleeves ? color(sign.trim) : color(sign.palette.light),
+    f: shirtSleeves ? mix(color(sign.trim), t) : color(sign.palette.primary),
+    G: shirtSleeves ? t : color(sign.palette.shade),
+    // Crest: a near-black field tinted with the sign hue under a light glyph.
+    X: fromHsl(crestHue, 0.38, DESIGN.badge.fieldLightness),
   };
-  return { sign, gender, look, palette, glyphInk: coat[0] };
+  return { sign, gender, look, palette, glyphInk: color(DESIGN.badge.glyph) };
 }
 
 function viewOf(direction: Direction): View { return direction === 'left' ? 'right' : direction; }
@@ -875,9 +1180,14 @@ export function renderFrame(signId: string, gender: Gender, direction: Direction
   const frame = new Pixels();
   stamp(frame, hair.back?.[view], pal, bob);
   stamp(frame, accessory.back?.[view], pal, bob);
-  stamp(frame, LEGS[gender][view][pose], pal);
+  const garment = ch.look.garment as Garment;
+  stamp(frame, LEGS[garment === 'dress' ? 'skirt' : 'trousers'][view][pose], pal);
   stamp(frame, TORSO[view][pose], pal, bob);
-  if (gender === 'female') stamp(frame, SKIRT[view], pal, bob);
+  if (garment === 'dress' || garment === 'tunic') {
+    stamp(frame, SASH[view], pal, bob);
+    stamp(frame, SKIRTS[garment][view], pal, bob);
+    if (view === 'down') stamp(frame, SASH_BOW, pal, bob);
+  }
   stamp(frame, HEAD[view], pal, bob);
   if (gender === 'female' && view === 'down') stamp(frame, FEMALE_LASH, pal, bob);
   stamp(frame, hair.front[view], pal, bob);
@@ -886,7 +1196,9 @@ export function renderFrame(signId: string, gender: Gender, direction: Direction
   return direction === 'left' ? frame.mirrored() : frame;
 }
 
-const BADGE_SHAPE = ['.XXXXXXX.', 'XxxxxxxxX', 'XxxxxxxxX', 'XxxxxxxxX', 'XxxxxxxxX', 'XxxxxxxxX', 'XxxxxxxxX', 'XxxxxxxxX', '.XXXXXXX.'];
+/** Chest crest: a round dark brooch with a one-pixel margin around the 7x7
+ * glyph and rounded corners, so the coat stays visible around it. */
+const BADGE_SHAPE = ['..XXXXX..', '.XXXXXXX.', 'XXXXXXXXX', 'XXXXXXXXX', 'XXXXXXXXX', 'XXXXXXXXX', 'XXXXXXXXX', '.XXXXXXX.', '..XXXXX..'];
 function paintBadge(frame: Pixels, ch: Character, bob: number): void {
   const { x, y, glyphX, glyphY } = DESIGN.badge;
   BADGE_SHAPE.forEach((line, yy) => { for (let xx = 0; xx < line.length; xx++) if (line[xx] !== '.') frame.px(x + xx, y + yy + bob, ch.palette[line[xx]]); });
@@ -934,10 +1246,12 @@ Each 96x128 PNG uses DOWN/LEFT/RIGHT/UP rows and stride-a/idle/stride-b columns,
 
 v3 replaces v2's flat block style with layered hand-authored pixel templates:
 hue-shifted material outlines, four-tone ramps lit from the top left, two-pixel
-eyes with highlights, hair with strands, coat/belt/trousers/boots, alternating
-legs and swinging arms, real side profiles and back-of-head views. Every DOWN
-frame carries a 9x9 parchment chest badge with the sign's 7x7 glyph, and each
-sign keeps a small identifying accessory in every direction.
+eyes with highlights, 24 distinct hairstyles, alternating legs and swinging
+arms, real side profiles and back-of-head views. Outfits: coat or vest (men),
+A-line dress or tunic with sash (women), with accent scarf, cuffs and hem trim,
+belt and boots. Every DOWN frame carries a round dark chest crest with the
+sign's light 7x7 glyph drawn after the Unicode zodiac symbol, and each sign
+keeps a small identifying accessory in every direction.
 
 Existing varcamp-zodiac-v1-* texture IDs are intentionally preserved; only the
 resource folder moves to v3. The unbound template is not a live catalog;

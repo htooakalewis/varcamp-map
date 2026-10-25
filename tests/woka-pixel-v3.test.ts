@@ -31,7 +31,7 @@ describe('pixel v3 zodiac WOKA sheet contract', () => {
       const receipt = manifest.assets.find((row: { file: string }) => row.file === file);
       expect(receipt).toMatchObject({ id: `varcamp-zodiac-v1-${sign.id}-${gender}`, sign: sign.id, gender, bytes: raw.length, sha256: sha(raw), rgbaSha256: sha(source.rgba) });
     }
-  });
+  }, 30_000);
 
   it('all 288 frames have binary alpha, a clear 1px border, feet on row 30 and three distinct poses', () => {
     for (const sign of DESIGN.signs) for (const gender of GENDERS) for (const direction of DIRECTIONS) {
@@ -44,18 +44,21 @@ describe('pixel v3 zodiac WOKA sheet contract', () => {
       }
       expect(same(poses[0], poses[2]), `${sign.id}/${gender}/${direction} stride-a vs stride-b`).toBeGreaterThan(6);
       for (const [pose, frame] of poses.entries()) {
+        // Collect violations and assert once per frame (keeps the 295k-pixel scan fast).
         let bottom = -1;
+        const problems: string[] = [];
         for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) {
           const offset = (y * 32 + x) * 4, alpha = frame.rgba[offset + 3];
-          expect(alpha === 0 || alpha === 255).toBe(true);
+          if (alpha !== 0 && alpha !== 255) problems.push(`soft alpha ${x},${y}`);
           if (alpha) bottom = Math.max(bottom, y);
-          else expect([...frame.rgba.subarray(offset, offset + 4)]).toEqual([0, 0, 0, 0]);
-          if (x === 0 || x === 31 || y === 0 || y === 31) expect(alpha, `${sign.id}/${gender}/${direction}/${pose} border ${x},${y}`).toBe(0);
+          else if (frame.rgba.readUInt32BE(offset) !== 0) problems.push(`dirty transparent ${x},${y}`);
+          if ((x === 0 || x === 31 || y === 0 || y === 31) && alpha) problems.push(`border ${x},${y}`);
         }
+        expect(problems, `${sign.id}/${gender}/${direction}/${pose}`).toEqual([]);
         expect(bottom, `${sign.id}/${gender}/${direction}/${pose} feet`).toBe(DESIGN.frame.feetBaseline);
       }
     }
-  });
+  }, 30_000);
 
   it('front idle silhouettes sit inside the written size target', async () => {
     const target = DESIGN.frame.frontTarget;
@@ -75,33 +78,51 @@ describe('pixel v3 zodiac WOKA sheet contract', () => {
 });
 
 describe('pixel v3 zodiac readability', () => {
-  it('every DOWN frame shows the complete 7x7 glyph on a parchment badge with a separate rim', () => {
-    const { x: bx, y: by, glyphX, glyphY } = DESIGN.badge, fill = color(DESIGN.badge.fill);
+  it('every DOWN frame shows the complete 7x7 light glyph on a tight dark crest', () => {
+    const { x: bx, y: by, glyphX, glyphY } = DESIGN.badge;
     for (const sign of DESIGN.signs) for (const gender of GENDERS) for (const pose of [0, 1, 2] as const) {
       const frame = renderFrame(sign.id, gender, 'down', pose), ch = characterFor(sign.id, gender), dy = pose === 1 ? 0 : 1;
-      const rim = pixel(frame, bx + 4, by + dy);
-      expect(rim).not.toEqual([...ch.glyphInk]);
-      expect(rim).not.toEqual([...fill]);
+      const field = [...ch.palette.X];
+      // One-pixel crest margin on all four sides of the glyph cell.
+      for (const [x, y] of [[bx + 4, by], [bx + 4, by + 8], [bx, by + 4], [bx + 8, by + 4]]) expect(pixel(frame, x, y + dy), `${sign.id}/${gender}/${pose} margin`).toEqual(field);
       for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) {
-        expect(pixel(frame, glyphX + x, glyphY + y + dy), `${sign.id}/${gender}/${pose} glyph ${x},${y}`).toEqual(sign.glyph[y][x] === '#' ? [...ch.glyphInk] : [...fill]);
+        expect(pixel(frame, glyphX + x, glyphY + y + dy), `${sign.id}/${gender}/${pose} glyph ${x},${y}`).toEqual(sign.glyph[y][x] === '#' ? [...ch.glyphInk] : field);
       }
     }
   });
 
-  it('glyph ink contrasts strongly with the parchment for every sign', () => {
+  it('the crest has no mid-tones: light glyph on a near-black field for every sign', () => {
     const luminance = ([r, g, b]: readonly number[]): number => (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
     for (const sign of DESIGN.signs) {
-      const ink = characterFor(sign.id, 'male').glyphInk;
-      expect(luminance(color(DESIGN.badge.fill)) - luminance(ink), sign.id).toBeGreaterThan(0.6);
+      const ch = characterFor(sign.id, 'male');
+      expect(luminance(ch.palette.X), sign.id).toBeLessThan(0.15);
+      expect(luminance(ch.glyphInk) - luminance(ch.palette.X), sign.id).toBeGreaterThan(0.75);
     }
   });
 
-  it('all 12 glyphs are pairwise distinguishable (at least 6 differing pixels)', () => {
+  it('rendered glyphs are pairwise distinct: Hamming >= 8 and >= 5 under any 1px misalignment', () => {
+    const { glyphX, glyphY } = DESIGN.badge;
+    // Read each glyph back from the actual rendered DOWN idle frame.
+    const bits = DESIGN.signs.map(sign => {
+      const frame = renderFrame(sign.id, 'male', 'down', 1), ink = [...characterFor(sign.id, 'male').glyphInk];
+      return Array.from({ length: 7 }, (_, y) => Array.from({ length: 7 }, (_, x) => pixel(frame, glyphX + x, glyphY + y).join() === ink.join()));
+    });
+    DESIGN.signs.forEach((sign, i) => expect(bits[i].map(r => r.map(v => (v ? '#' : '.')).join('')), sign.id).toEqual(sign.glyph));
+    const distance = (a: boolean[][], b: boolean[][], dx: number, dy: number): number => {
+      let d = 0;
+      for (let y = -1; y < 8; y++) for (let x = -1; x < 8; x++) if ((a[y]?.[x] ?? false) !== (b[y + dy]?.[x + dx] ?? false)) d++;
+      return d;
+    };
+    const facts: string[] = [];
     for (let a = 0; a < 12; a++) for (let b = a + 1; b < 12; b++) {
-      const ga = DESIGN.signs[a].glyph.join(''), gb = DESIGN.signs[b].glyph.join('');
-      let diff = 0; for (let i = 0; i < ga.length; i++) if (ga[i] !== gb[i]) diff++;
-      expect(diff, `${DESIGN.signs[a].id} vs ${DESIGN.signs[b].id}`).toBeGreaterThanOrEqual(6);
+      const pair = `${DESIGN.signs[a].id}/${DESIGN.signs[b].id}`;
+      let shifted = Infinity;
+      for (const dx of [-1, 0, 1]) for (const dy of [-1, 0, 1]) shifted = Math.min(shifted, distance(bits[a], bits[b], dx, dy));
+      facts.push(`${pair}:${distance(bits[a], bits[b], 0, 0)}/${shifted}`);
+      expect(distance(bits[a], bits[b], 0, 0), pair).toBeGreaterThanOrEqual(8);
+      expect(shifted, `${pair} shifted`).toBeGreaterThanOrEqual(5);
     }
+    expect(facts.find(f => f.startsWith('virgo/scorpio'))).toBeDefined();
   });
 
   it('each sign accessory is painted in every direction for both genders', () => {
@@ -118,7 +139,38 @@ describe('pixel v3 zodiac readability', () => {
       const right = renderFrame(sign.id, gender, 'right', pose), left = renderFrame(sign.id, gender, 'left', pose), up = renderFrame(sign.id, gender, 'up', pose);
       expect(pixel(right, 18, 10 + dy), `${sign.id}/${gender} right eye`).toEqual(highlight);
       expect(pixel(left, 13, 10 + dy), `${sign.id}/${gender} left eye`).toEqual(highlight);
-      for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) expect(pixel(up, x, y), `${sign.id}/${gender} UP has no eye`).not.toEqual(highlight);
+      let eyes = 0;
+      for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) if (pixel(up, x, y).join() === highlight.join()) eyes++;
+      expect(eyes, `${sign.id}/${gender} UP has no eye`).toBe(0);
+    }
+  });
+
+  it('all 24 characters wear distinct hairstyles (hair-pixel masks differ by at least 12 pixels)', () => {
+    expect(new Set(DESIGN.signs.flatMap(sign => [sign.male.hair, sign.female.hair])).size).toBe(24);
+    const masks: { id: string; mask: boolean[] }[] = [];
+    for (const sign of DESIGN.signs) for (const gender of GENDERS) {
+      const pal = characterFor(sign.id, gender).palette, hairColours = new Set(['O', 'g', 'h', 'H'].map(key => pal[key].join()));
+      const mask: boolean[] = [];
+      for (const direction of ['down', 'right', 'up'] as const) {
+        const frame = renderFrame(sign.id, gender, direction, 1, { accessory: false });
+        for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) mask.push(hairColours.has(pixel(frame, x, y).join()));
+      }
+      masks.push({ id: `${sign.id}/${gender}`, mask });
+    }
+    for (let a = 0; a < masks.length; a++) for (let b = a + 1; b < masks.length; b++) {
+      let diff = 0; for (let i = 0; i < masks[a].mask.length; i++) if (masks[a].mask[i] !== masks[b].mask[i]) diff++;
+      expect(diff, `${masks[a].id} vs ${masks[b].id}`).toBeGreaterThanOrEqual(12);
+    }
+  });
+
+  it('outfits vary: men wear coats or vests, women dresses or tunics, each with accent trim', () => {
+    const garments = DESIGN.signs.flatMap(sign => [sign.male.garment, sign.female.garment]);
+    for (const garment of ['coat', 'vest', 'dress', 'tunic']) expect(garments.filter(g => g === garment).length, garment).toBeGreaterThanOrEqual(4);
+    for (const sign of DESIGN.signs) for (const gender of GENDERS) for (const direction of DIRECTIONS) {
+      const frame = renderFrame(sign.id, gender, direction, 1), accent = characterFor(sign.id, gender).palette['6'].join();
+      let accentPixels = 0;
+      for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) if (pixel(frame, x, y).join() === accent) accentPixels++;
+      expect(accentPixels, `${sign.id}/${gender}/${direction} accent trim`).toBeGreaterThanOrEqual(8);
     }
   });
 
@@ -137,7 +189,9 @@ describe('pixel v3 zodiac readability', () => {
   it('outlines are hue-shifted material darks: no pure #000000 pixel anywhere', () => {
     for (const file of readdirSync(candidate).filter(name => name.endsWith('.png'))) {
       const sheet = renderSheet(file.split('-')[0], file.includes('female') ? 'female' : 'male');
-      for (let i = 0; i < sheet.rgba.length; i += 4) if (sheet.rgba[i + 3]) expect(sheet.rgba.readUInt32BE(i) >>> 8, file).not.toBe(0);
+      let black = 0;
+      for (let i = 0; i < sheet.rgba.length; i += 4) if (sheet.rgba[i + 3] && sheet.rgba.readUInt32BE(i) >>> 8 === 0) black++;
+      expect(black, file).toBe(0);
     }
   });
 });
