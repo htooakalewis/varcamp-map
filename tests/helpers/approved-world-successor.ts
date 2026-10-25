@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import {WORLD_CATALOG} from '../../src/world/catalog';
 import type {MapLayout,TiledMap} from '../../tools/maps/types';
 import {applyAriesPresentation} from '../../tools/maps/aries-presentation';
+import {applyHallPresentation} from '../../tools/maps/hall-presentation';
 
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 /** Pins from the separately reviewed original18-file fleet source epoch. The
@@ -113,5 +114,6 @@ export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
  const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));
- assert.deepEqual(current,applyAriesPresentation(baseline),'Only finite reviewed producer/presentation successors may advance '+id);
+ const speaker=applyAriesPresentation(baseline),next=['solar-hall','lunar-hall'].includes(id)?applyHallPresentation(speaker):speaker;
+ assert.deepEqual(current,next,'Only finite reviewed producer/presentation successors may advance '+id);
 }

@@ -86,6 +86,33 @@
       "renderRole": "grounded"
     },
     {
+      "id": "solar-hall-style-north-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 1,
+      "y": 0,
+      "width": 62,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-header-rule",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 1,
+      "y": 1,
+      "width": 62,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-partner-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 20,
+      "y": 3,
+      "width": 24,
+      "height": 2,
+      "layer": "props"
+    },
+    {
       "id": "west-wall",
       "sprite": "wall-navy",
       "x": 0,
@@ -190,7 +217,7 @@
       "x": 16,
       "y": 5,
       "width": 32,
-      "height": 12,
+      "height": 13,
       "layer": "terrain"
     },
     {
@@ -199,16 +226,16 @@
       "x": 17,
       "y": 6,
       "width": 30,
-      "height": 10,
+      "height": 11,
       "layer": "terrain"
     },
     {
       "id": "audience-floor",
       "sprite": "floor-blue",
       "x": 16,
-      "y": 21,
+      "y": 22,
       "width": 32,
-      "height": 23,
+      "height": 20,
       "layer": "terrain"
     },
     {
@@ -331,6 +358,42 @@
       "y": 6,
       "width": 2,
       "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-stage-top",
+      "sprite": "speaker-style-edge-top",
+      "x": 16,
+      "y": 5,
+      "width": 32,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-stage-front",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 16,
+      "y": 17,
+      "width": 32,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-stage-west",
+      "sprite": "speaker-style-edge-left",
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 11,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-stage-east",
+      "sprite": "speaker-style-edge-right",
+      "x": 47,
+      "y": 6,
+      "width": 1,
+      "height": 11,
       "layer": "props"
     },
     {
@@ -1261,6 +1324,87 @@
       "width": 2,
       "height": 3,
       "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-listener-caption",
+      "sprite": "speaker-style-caption-floor",
+      "x": 16,
+      "y": 21,
+      "width": 32,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "solar-hall-style-listener-top",
+      "sprite": "speaker-style-edge-top",
+      "x": 16,
+      "y": 22,
+      "width": 32,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-listener-bottom",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 16,
+      "y": 41,
+      "width": 32,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-listener-west",
+      "sprite": "speaker-style-edge-left",
+      "x": 16,
+      "y": 23,
+      "width": 1,
+      "height": 18,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-listener-east",
+      "sprite": "speaker-style-edge-right",
+      "x": 47,
+      "y": 23,
+      "width": 1,
+      "height": 18,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-foyer-rule",
+      "sprite": "speaker-style-edge-top",
+      "x": 2,
+      "y": 44,
+      "width": 60,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-partner-card-aws",
+      "sprite": "speaker-style-logo-card",
+      "x": 22,
+      "y": 3,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-partner-card-bsides",
+      "sprite": "speaker-style-logo-card",
+      "x": 30,
+      "y": 3,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "solar-hall-style-partner-card-openinfra",
+      "sprite": "speaker-style-logo-card",
+      "x": 38,
+      "y": 3,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -1415,7 +1559,7 @@
       "text": "SOLAR HALL  /  ASSEMBLY",
       "x": 6,
       "y": 2,
-      "width": 52,
+      "width": 17,
       "height": 1,
       "fontSize": 20,
       "color": "#f1d9a0",
@@ -1497,6 +1641,30 @@
       "fontSize": 13,
       "color": "#f1d9a0",
       "align": "left"
+    },
+    {
+      "name": "solar-hall-style-partners",
+      "text": "COMMUNITY PARTNERS",
+      "x": 25,
+      "y": 2,
+      "width": 16,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "center",
+      "padding": 0
+    },
+    {
+      "name": "solar-hall-style-listeners",
+      "text": "LISTENING AREA  ·  RAISE HAND TO SPEAK",
+      "x": 16,
+      "y": 21,
+      "width": 32,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#ffe6d4",
+      "align": "center",
+      "padding": 6
     }
   ],
   "animatedOverlays": [
@@ -2173,6 +2341,40 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Solar / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 29,
+      "y": 0,
+      "width": 6,
+      "height": 2
+    },
+    {
+      "name": "Solar / AWS UG Myanmar",
+      "image": "assets/sponsors/partner-aws-ug-mm.png",
+      "x": 22,
+      "y": 3,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Solar / BSides Myanmar",
+      "image": "assets/sponsors/partner-bsides-mm.png",
+      "x": 30,
+      "y": 3,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Solar / OpenInfra Myanmar",
+      "image": "assets/sponsors/partner-openinfra-mm.png",
+      "x": 38,
+      "y": 3,
+      "width": 4,
+      "height": 2
     }
   ]
 }

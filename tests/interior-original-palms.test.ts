@@ -12,6 +12,7 @@ import {approvedHistoricalLayout,assertApprovedLayoutSuccessor,advanceReviewedPr
 import ariesPresentation from '../world/aries-presentation.json';
 import {speakerPresentation} from '../tools/maps/speaker-presentation';
 import {beforeSpeakerWam} from './helpers/speaker-presentation-history';
+import {beforeHallJson,beforeHallRaw} from './helpers/hall-presentation-history';
 
 const alias='world-ambient-plant-palm';
 const read=<T>(path:string):T=>JSON.parse(readFileSync(path,'utf8')) as T;
@@ -42,7 +43,8 @@ describe('original same-footprint interior palms',()=>{
    expect(digest(rest)).toBe(before.layoutExceptPlacementsSha256);
    assertApprovedLayoutSuccessor(id,a.layout);
    const addedIds=(id==='speaker-aries'?ariesPresentation:speakerPresentation(id))?.placements.map(p=>p.id)??[];
-   expect(digest(placements.filter(p=>!targets(id).some(t=>t.id===p.id)&&!addedIds.includes(p.id)))).toBe(before.nonTargetPlacementsSha256);
+   const hall=['solar-hall','lunar-hall'].includes(id),palmEpochPlacements=hall?beforeHallJson<MapLayout>(`world/layouts/${id}.json`).placements:placements;
+   expect(digest(palmEpochPlacements.filter(p=>!targets(id).some(t=>t.id===p.id)&&!addedIds.includes(p.id)))).toBe(before.nonTargetPlacementsSha256);
    expect(digest(historical.animatedOverlays)).toBe(before.motionSha256);expect(a.layout.animatedOverlays).toHaveLength(before.motionCount);
    if(id.startsWith('speaker-')){
     const actualBeforeWam=beforeSpeakerWam(id);
@@ -51,7 +53,7 @@ describe('original same-footprint interior palms',()=>{
     if(!targets(id).length)expect(sha(JSON.stringify(actualBefore)+'\n')).toBe(before.nativeSha256);
    }else{
     expect(sha(readFileSync(`maps/${id}.wam`))).toBe(before.wamSha256);
-    if(!targets(id).length)expect(sha(readFileSync(`maps/${id}.tmj`))).toBe(before.nativeSha256);
+    if(!targets(id).length)expect(sha(hall?beforeHallRaw(`maps/${id}.tmj`):readFileSync(`maps/${id}.tmj`))).toBe(before.nativeSha256);
    }
    expect(validateMap(a.map,WORLD_CATALOG)).toEqual([]);expect(validateWam(a.wam)).toEqual([]);expect(()=>check(a)).not.toThrow();
   });

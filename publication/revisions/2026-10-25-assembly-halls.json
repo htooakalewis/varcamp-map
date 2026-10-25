@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "4cd398d7364f06b89b6a878315e293e6d3645359ee08b0c08605ac547008e9a8",
+      "toSha256": "dc64fd43914c0107cd5d14206b2c4fdf6a71133037f0ea85ce37549d429b542a",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    },
+    {
+      "path": "maps/preview/lunar-hall.tmj",
+      "fromSha256": "ed38602b31de744791eaa0fa891fbc9760c093744436c8f660fcb9d7bcaa5b88",
+      "toSha256": "3c4bc0a433f60e027b26c212933218e77681bd61058514c8091503d945f396aa",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    },
+    {
+      "path": "maps/preview/solar-hall.tmj",
+      "fromSha256": "723bd6ba1fed626d916469e6d9c381d35ba5f895ee33f2f35cfa6c9574b6292d",
+      "toSha256": "56d95e610f76c65c30411cdb4172624930117c31d8a9f29e259f3f09e2b7a9ca",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "fromSha256": "73c745c1c9082fb14ec870eff01745c157c2f81e1440bfef2da5178d64f972f5",
+      "toSha256": "c4aa5c8899d8e40ac63da8d5d493b4df1b574f1e5b3077572cef6bebf9685c68",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "854ca3c2be2a15a07a757780d964d335aa07269de65b04006b91a4b9483ebad7",
+      "toSha256": "42e380347321ab454bf40efd86fb5e0337dfe56d92465593447a1513bef7c8de",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "3c8088d28df99db5e5f4c2eb1bc6e581b867dfc0e5247b5f4fe91b06a0c4db7f",
+      "toSha256": "146786e769d3b74dd17c89812442168dace180b7bf52a4660b463fb71a4ad41c",
+      "reason": "Apply the approved native VarCamp speaker-room treatment to Solar and Lunar and align visible stage/listener floors with unchanged WAM controls, retaining every original seat, themed prop, collision cell and portal."
+    }
+  ]
+}

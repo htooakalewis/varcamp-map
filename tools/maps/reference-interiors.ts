@@ -4,6 +4,7 @@ import contractData from'../../world/interior-reference-contract.json';
 import{buildMap}from'./builder';
 import{validateWam}from'./validate';
 import{ariesPresentationFunctional,assertAriesPresentation}from'./aries-presentation';
+import{assertHallPresentation}from'./hall-presentation';
 import type{MapLayout,TiledMap,WamFile,TileRect,WamArea}from'./types';
 import type{TileCatalog,Sprite}from'../art/catalog';
 const IDS:readonly string[]=[...SIGN_IDS.map(s=>`speaker-${s}`),'solar-hall','lunar-hall'];
@@ -30,6 +31,7 @@ export function assertNativeReferenceInterior(map:TiledMap,layout:MapLayout,cata
  for(const expected of [...row.requiredPlacements,...row.requiredSeats]){
   const found=layout.placements.filter(p=>p.id===expected.id);need(found.length===1&&Object.entries(expected).every(([key,value])=>isDeepStrictEqual(found[0][key as keyof typeof found[0]],value)),`${layout.id}: required furnishing/crest/seat ${expected.id} missing or changed`);
  }
+ assertHallPresentation(layout,catalog);
  const titles=layout.signs?.filter(s=>s.name==='scene-title')??[];need(titles.length===1&&titles[0].text===row.title,`${layout.id}: bold English title source changed`);
  const configs=[{kind:'plant',placement:layout.placements.find(p=>p.sprite==='interior-ref-plant-motion-base'),width:3,height:2,step:750,phases:4},{kind:'steam',placement:layout.placements.find(p=>p.id==='interior-ref-tea-console'||p.id==='interior-ref-refreshments'),width:1,height:1,step:400,phases:6},{kind:'server',placement:layout.placements.find(p=>p.sprite==='interior-ref-server'),width:2,height:3,step:750,phases:4},...(row.water?[{kind:'water',placement:layout.placements.find(p=>p.sprite==='interior-ref-aquarium'),width:4,height:3,step:600,phases:4}]:[])];
  const overlays=layout.animatedOverlays??[];need(overlays.length===configs.length,`${layout.id}: required motion roster changed`);

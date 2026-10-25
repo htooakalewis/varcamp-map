@@ -1,0 +1,87 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "lunar-hall.tmj",
+  "entities": {},
+  "areas": [
+    {
+      "id": "lunar-stage",
+      "name": "Lunar stage",
+      "visible": true,
+      "x": 512,
+      "y": 160,
+      "width": 1024,
+      "height": 416,
+      "properties": [
+        {
+          "id": "lunar-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-lunar-main",
+          "chatEnabled": false,
+          "seeAttendees": false
+        },
+        {
+          "id": "lunar-stage-rights",
+          "type": "restrictedRightsPropertyData",
+          "readTags": [
+            "organizer",
+            "speaker"
+          ],
+          "writeTags": []
+        }
+      ]
+    },
+    {
+      "id": "lunar-audience",
+      "name": "Lunar audience",
+      "visible": true,
+      "x": 512,
+      "y": 704,
+      "width": 1024,
+      "height": 640,
+      "properties": [
+        {
+          "id": "lunar-listen",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "lunar-stage",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "lunar-prep",
+      "name": "Lunar preparation",
+      "visible": true,
+      "x": 1632,
+      "y": 192,
+      "width": 320,
+      "height": 320,
+      "properties": [
+        {
+          "id": "lunar-meeting",
+          "type": "livekitRoomProperty",
+          "roomName": "varcamp-lunar-prep",
+          "livekitRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": true,
+            "disableChat": true
+          }
+        },
+        {
+          "id": "lunar-prep-rights",
+          "type": "restrictedRightsPropertyData",
+          "readTags": [
+            "organizer",
+            "speaker"
+          ],
+          "writeTags": []
+        }
+      ]
+    }
+  ],
+  "entityCollections": [{"url":"https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json","type":"file"},{"url":"https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json","type":"file"}],
+  "metadata": {
+    "name": "VarCamp · Lunar Hall"
+  }
+}

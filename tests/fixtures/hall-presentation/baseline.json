@@ -1,0 +1,29 @@
+{
+  "head": "6f7f5d6cd72e3ee87414a1fc2722b4b209596b0d",
+  "files": {
+    "world/layouts/solar-hall.json": {
+      "fixture": "tests/fixtures/hall-presentation/before-world--layouts--solar-hall.json",
+      "sha256": "3c8088d28df99db5e5f4c2eb1bc6e581b867dfc0e5247b5f4fe91b06a0c4db7f"
+    },
+    "maps/solar-hall.tmj": {
+      "fixture": "tests/fixtures/hall-presentation/before-maps--solar-hall.tmj",
+      "sha256": "73c745c1c9082fb14ec870eff01745c157c2f81e1440bfef2da5178d64f972f5"
+    },
+    "maps/solar-hall.wam": {
+      "fixture": "tests/fixtures/hall-presentation/before-maps--solar-hall.wam",
+      "sha256": "e9f71bb8f9ead7a93234ddac27df181efd051144783592f9f58e2b099da90813"
+    },
+    "world/layouts/lunar-hall.json": {
+      "fixture": "tests/fixtures/hall-presentation/before-world--layouts--lunar-hall.json",
+      "sha256": "854ca3c2be2a15a07a757780d964d335aa07269de65b04006b91a4b9483ebad7"
+    },
+    "maps/lunar-hall.tmj": {
+      "fixture": "tests/fixtures/hall-presentation/before-maps--lunar-hall.tmj",
+      "sha256": "4cd398d7364f06b89b6a878315e293e6d3645359ee08b0c08605ac547008e9a8"
+    },
+    "maps/lunar-hall.wam": {
+      "fixture": "tests/fixtures/hall-presentation/before-maps--lunar-hall.wam",
+      "sha256": "1cc27f7c67c0124369ea6ac6443e6542106cfb98bc1a6f2aebd8f473abe46ebc"
+    }
+  }
+}

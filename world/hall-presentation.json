@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "rooms": {
+    "solar-hall": {
+      "beforePlacementsSha256": "9881fa89de3be9cf26442502cc6a876640c7c6ddf01a2a836680dd02035223de",
+      "beforeSignsSha256": "4b922ce0cf65d23cd7073ea80e8166a5f6f9fe724b70e64ed9bed949f511a61c",
+      "basePlacementsSha256": "991745b77ee4e2469c6306bef0ba686124e1328cb1b49304d2ce03a7f0540fc9",
+      "baseSignsSha256": "ba05158762fe24c3edc32b6c4d5d2b95821b0167fc68c95f6e9bfe04fe1ab3b6",
+      "placementChanges": [
+        {
+          "id": "audience-floor",
+          "before": {
+            "id": "audience-floor",
+            "sprite": "floor-blue",
+            "x": 16,
+            "y": 21,
+            "width": 32,
+            "height": 23,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "audience-floor",
+            "sprite": "floor-blue",
+            "x": 16,
+            "y": 22,
+            "width": 32,
+            "height": 20,
+            "layer": "terrain"
+          }
+        },
+        {
+          "id": "stage-gold-border",
+          "before": {
+            "id": "stage-gold-border",
+            "sprite": "floor-wood-long",
+            "x": 16,
+            "y": 5,
+            "width": 32,
+            "height": 12,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "stage-gold-border",
+            "sprite": "floor-wood-long",
+            "x": 16,
+            "y": 5,
+            "width": 32,
+            "height": 13,
+            "layer": "terrain"
+          }
+        },
+        {
+          "id": "stage-deck",
+          "before": {
+            "id": "stage-deck",
+            "sprite": "floor-charcoal",
+            "x": 17,
+            "y": 6,
+            "width": 30,
+            "height": 10,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "stage-deck",
+            "sprite": "floor-charcoal",
+            "x": 17,
+            "y": 6,
+            "width": 30,
+            "height": 11,
+            "layer": "terrain"
+          }
+        }
+      ],
+      "titleWidth": 17,
+      "placements": [
+        {
+          "id": "solar-hall-style-north-wallpaper",
+          "sprite": "speaker-style-wall",
+          "x": 1,
+          "y": 0,
+          "width": 62,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-header-rule",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 1,
+          "y": 1,
+          "width": 62,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-partner-wallpaper",
+          "sprite": "speaker-style-wall",
+          "x": 20,
+          "y": 3,
+          "width": 24,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-stage-top",
+          "sprite": "speaker-style-edge-top",
+          "x": 16,
+          "y": 5,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-stage-front",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 16,
+          "y": 17,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-stage-west",
+          "sprite": "speaker-style-edge-left",
+          "x": 16,
+          "y": 6,
+          "width": 1,
+          "height": 11,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-stage-east",
+          "sprite": "speaker-style-edge-right",
+          "x": 47,
+          "y": 6,
+          "width": 1,
+          "height": 11,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-listener-caption",
+          "sprite": "speaker-style-caption-floor",
+          "x": 16,
+          "y": 21,
+          "width": 32,
+          "height": 1,
+          "layer": "terrain"
+        },
+        {
+          "id": "solar-hall-style-listener-top",
+          "sprite": "speaker-style-edge-top",
+          "x": 16,
+          "y": 22,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-listener-bottom",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 16,
+          "y": 41,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-listener-west",
+          "sprite": "speaker-style-edge-left",
+          "x": 16,
+          "y": 23,
+          "width": 1,
+          "height": 18,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-listener-east",
+          "sprite": "speaker-style-edge-right",
+          "x": 47,
+          "y": 23,
+          "width": 1,
+          "height": 18,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-foyer-rule",
+          "sprite": "speaker-style-edge-top",
+          "x": 2,
+          "y": 44,
+          "width": 60,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-partner-card-aws",
+          "sprite": "speaker-style-logo-card",
+          "x": 22,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-partner-card-bsides",
+          "sprite": "speaker-style-logo-card",
+          "x": 30,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "solar-hall-style-partner-card-openinfra",
+          "sprite": "speaker-style-logo-card",
+          "x": 38,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        }
+      ],
+      "images": [
+        {
+          "name": "Solar / VarCamp",
+          "image": "assets/sponsors/varcamp-2026.png",
+          "x": 29,
+          "y": 0,
+          "width": 6,
+          "height": 2
+        },
+        {
+          "name": "Solar / AWS UG Myanmar",
+          "image": "assets/sponsors/partner-aws-ug-mm.png",
+          "x": 22,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        },
+        {
+          "name": "Solar / BSides Myanmar",
+          "image": "assets/sponsors/partner-bsides-mm.png",
+          "x": 30,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        },
+        {
+          "name": "Solar / OpenInfra Myanmar",
+          "image": "assets/sponsors/partner-openinfra-mm.png",
+          "x": 38,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        }
+      ],
+      "signs": [
+        {
+          "name": "solar-hall-style-partners",
+          "text": "COMMUNITY PARTNERS",
+          "x": 25,
+          "y": 2,
+          "width": 16,
+          "height": 1,
+          "fontSize": 12,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 0
+        },
+        {
+          "name": "solar-hall-style-listeners",
+          "text": "LISTENING AREA  ·  RAISE HAND TO SPEAK",
+          "x": 16,
+          "y": 21,
+          "width": 32,
+          "height": 1,
+          "fontSize": 14,
+          "color": "#ffe6d4",
+          "align": "center",
+          "padding": 6
+        }
+      ]
+    },
+    "lunar-hall": {
+      "beforePlacementsSha256": "b8d9759d8c038f60a54306f5ff0a1191c40e7a4c74ef90664df4429e09706c49",
+      "beforeSignsSha256": "eb1fd51f26dd8561f977997594dcc95c2b51227c30ddea2361fbb346257a46d1",
+      "basePlacementsSha256": "9e9bb934a5ea36d003b36e284b5d4050c7aa1d75eb5655d4616858d4c7409624",
+      "baseSignsSha256": "5dab99ee62e05f88be31daa2944c98a0c8743f264965b02bd9045f84980ad7dc",
+      "placementChanges": [
+        {
+          "id": "audience-floor",
+          "before": {
+            "id": "audience-floor",
+            "sprite": "floor-charcoal",
+            "x": 16,
+            "y": 21,
+            "width": 32,
+            "height": 23,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "audience-floor",
+            "sprite": "floor-charcoal",
+            "x": 16,
+            "y": 22,
+            "width": 32,
+            "height": 20,
+            "layer": "terrain"
+          }
+        },
+        {
+          "id": "stage-gold-border",
+          "before": {
+            "id": "stage-gold-border",
+            "sprite": "floor-blue",
+            "x": 16,
+            "y": 5,
+            "width": 32,
+            "height": 12,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "stage-gold-border",
+            "sprite": "floor-blue",
+            "x": 16,
+            "y": 5,
+            "width": 32,
+            "height": 13,
+            "layer": "terrain"
+          }
+        },
+        {
+          "id": "stage-deck",
+          "before": {
+            "id": "stage-deck",
+            "sprite": "floor-charcoal",
+            "x": 17,
+            "y": 6,
+            "width": 30,
+            "height": 10,
+            "layer": "terrain"
+          },
+          "after": {
+            "id": "stage-deck",
+            "sprite": "floor-charcoal",
+            "x": 17,
+            "y": 6,
+            "width": 30,
+            "height": 11,
+            "layer": "terrain"
+          }
+        }
+      ],
+      "titleWidth": 17,
+      "placements": [
+        {
+          "id": "lunar-hall-style-north-wallpaper",
+          "sprite": "speaker-style-wall",
+          "x": 1,
+          "y": 0,
+          "width": 62,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-header-rule",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 1,
+          "y": 1,
+          "width": 62,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-partner-wallpaper",
+          "sprite": "speaker-style-wall",
+          "x": 20,
+          "y": 3,
+          "width": 24,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-stage-top",
+          "sprite": "speaker-style-edge-top",
+          "x": 16,
+          "y": 5,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-stage-front",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 16,
+          "y": 17,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-stage-west",
+          "sprite": "speaker-style-edge-left",
+          "x": 16,
+          "y": 6,
+          "width": 1,
+          "height": 11,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-stage-east",
+          "sprite": "speaker-style-edge-right",
+          "x": 47,
+          "y": 6,
+          "width": 1,
+          "height": 11,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-listener-caption",
+          "sprite": "speaker-style-caption-floor",
+          "x": 16,
+          "y": 21,
+          "width": 32,
+          "height": 1,
+          "layer": "terrain"
+        },
+        {
+          "id": "lunar-hall-style-listener-top",
+          "sprite": "speaker-style-edge-top",
+          "x": 16,
+          "y": 22,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-listener-bottom",
+          "sprite": "speaker-style-edge-bottom",
+          "x": 16,
+          "y": 41,
+          "width": 32,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-listener-west",
+          "sprite": "speaker-style-edge-left",
+          "x": 16,
+          "y": 23,
+          "width": 1,
+          "height": 18,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-listener-east",
+          "sprite": "speaker-style-edge-right",
+          "x": 47,
+          "y": 23,
+          "width": 1,
+          "height": 18,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-foyer-rule",
+          "sprite": "speaker-style-edge-top",
+          "x": 2,
+          "y": 44,
+          "width": 60,
+          "height": 1,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-partner-card-aws",
+          "sprite": "speaker-style-logo-card",
+          "x": 22,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-partner-card-bsides",
+          "sprite": "speaker-style-logo-card",
+          "x": 30,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        },
+        {
+          "id": "lunar-hall-style-partner-card-openinfra",
+          "sprite": "speaker-style-logo-card",
+          "x": 38,
+          "y": 3,
+          "width": 4,
+          "height": 2,
+          "layer": "props"
+        }
+      ],
+      "images": [
+        {
+          "name": "Lunar / VarCamp",
+          "image": "assets/sponsors/varcamp-2026.png",
+          "x": 29,
+          "y": 0,
+          "width": 6,
+          "height": 2
+        },
+        {
+          "name": "Lunar / AWS UG Myanmar",
+          "image": "assets/sponsors/partner-aws-ug-mm.png",
+          "x": 22,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        },
+        {
+          "name": "Lunar / BSides Myanmar",
+          "image": "assets/sponsors/partner-bsides-mm.png",
+          "x": 30,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        },
+        {
+          "name": "Lunar / OpenInfra Myanmar",
+          "image": "assets/sponsors/partner-openinfra-mm.png",
+          "x": 38,
+          "y": 3,
+          "width": 4,
+          "height": 2
+        }
+      ],
+      "signs": [
+        {
+          "name": "lunar-hall-style-partners",
+          "text": "COMMUNITY PARTNERS",
+          "x": 25,
+          "y": 2,
+          "width": 16,
+          "height": 1,
+          "fontSize": 12,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 0
+        },
+        {
+          "name": "lunar-hall-style-listeners",
+          "text": "LISTENING AREA  ·  RAISE HAND TO SPEAK",
+          "x": 16,
+          "y": 21,
+          "width": 32,
+          "height": 1,
+          "fontSize": 14,
+          "color": "#ffe6d4",
+          "align": "center",
+          "padding": 6
+        }
+      ]
+    }
+  }
+}
