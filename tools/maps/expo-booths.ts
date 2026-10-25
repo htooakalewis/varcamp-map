@@ -16,7 +16,7 @@ export function refineExpoBooths(original:MapLayout):MapLayout {
   if(side)return[{...p,y:side[2]==='north'?73:85,height:4}];
   if(/^expo-(west|east)-north-seal-\d+-77$|^expo-(west|east)-south-seal-\d+-83$/.test(p.id))return[];
   const b=EXPO_BOOTHS.find(b=>p.id===`expo-${b.id}-counter`||p.id===`expo-${b.id}-chair`);
-  if(b&&p.id.endsWith('-counter'))return[{...p,sprite:'desk-curved',x:b.interior.x+1,y:b.row==='north'?77:82,width:4,height:3}];
+  if(b&&p.id.endsWith('-counter'))return[{...p,sprite:'desk-curved',x:b.interior.x+1,y:b.row==='north'?77:82,width:4,height:3,...(b.row==='north'?{flipY:true}:{})}];
   if(b)return[{...p,y:b.row==='north'?77:84}];
   return[p];
  });

@@ -68,8 +68,8 @@ const changes:Record<string,readonly[string,string]>={
  'tools/maps/native-projection.ts':['ddd3886d4549044efb7e82455c283e12e26089859b4a8aa05c9a222798c27554','8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0'],
  'tools/maps/native-ownership-context.ts':['3ded4e618c1e53e73a0afc3813bceae75a71460af6b3e06cd2b6ed3aa7571e50','ee34e0f903bd0a3e546d57d1163a5e15226315c6ff4ff82286123c7a4971dbe4'],
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],
- 'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c'],
- 'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb'],
+ 'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','d5825e67c9a3ab86dd1b9c3f922e6f8fb126e652ee9ff149e8d2ead8d249ce3d'],
+ 'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff'],
 };
 export const approvedUnchangedLayoutIds=Object.keys(WORLD_CATALOG).filter(id=>!['overworld','shipyard-beach','constellation-shore','fa-ship'].includes(id)).sort();
 interface Component {path:string;bytes:number;sha256:string;raw:string}

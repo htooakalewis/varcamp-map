@@ -2127,11 +2127,11 @@
         },
         {
           "path": "tools/maps/builder.ts",
-          "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
+          "sha256": "d5825e67c9a3ab86dd1b9c3f922e6f8fb126e652ee9ff149e8d2ead8d249ce3d"
         },
         {
           "path": "tools/maps/types.ts",
-          "sha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb"
+          "sha256": "fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff"
         }
       ]
     }

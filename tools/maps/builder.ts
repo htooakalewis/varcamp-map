@@ -98,6 +98,8 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
     if(ids.has(p.id))throw new Error(`Duplicate placement ID: ${p.id}`);ids.add(p.id);bounds(p,p.id);
     const s=tiles[p.sprite];if(!s)throw new Error(`Unknown sprite: ${p.sprite}`);
     validateSpriteDepth(p.sprite,s);
+    if(p.flipY!==undefined&&typeof p.flipY!=='boolean')throw new Error(`${p.id}: flipY must be boolean`);
+    if(p.flipY&&(p.layer==='terrain'||p.renderRole||s.upperCells!==undefined||s.standingRole))throw new Error(`${p.id}: flipY requires unpartitioned scenery without a render override`);
     if(s.upperCells!==undefined&&(p.layer==='terrain'||p.renderRole))throw Error(`${p.id}: explicit upper partition cannot be overridden`);
     if(p.renderRole && !['grounded','canopy','cutaway'].includes(p.renderRole))throw new Error(`${p.id}: invalid render role`);
     if(p.layer==='terrain'&&p.renderRole)throw new Error(`${p.id}: render roles apply to scenery only`);
@@ -118,9 +120,9 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
       targets[which]=stack.layers[depth];for(const i of cells)stack.depth[i]=depth;
     }
     for(let y=0;y<p.height;y++)for(let x=0;x<p.width;x++) {
-      const i=(p.y+y)*layout.width+p.x+x,dx=x%s.rect.width,dy=y%s.rect.height;
+      const i=(p.y+y)*layout.width+p.x+x,dx=x%s.rect.width,dy=p.flipY?s.rect.height-1-y%s.rect.height:y%s.rect.height;
       // A cutaway keeps a thin floor-level sill, never a tall opaque wall/door plane.
-      if(p.renderRole!=='cutaway'||y===p.height-1)targets[side(x,y)].data[i]=ref.firstgid+(visual.rect.y+y%visual.rect.height)*ref.columns+visual.rect.x+x%visual.rect.width;
+      if(p.renderRole!=='cutaway'||y===p.height-1)targets[side(x,y)].data[i]=((ref.firstgid+(visual.rect.y+(p.flipY?dy:y%visual.rect.height))*ref.columns+visual.rect.x+x%visual.rect.width)|(p.flipY?0x40000000:0))>>>0;
       const collides=mask.has(dy*s.rect.width+dx)?1:0;
       if(p.layer==='terrain')groundMask[i]=collides;else if(collides)propMask[i]=1;
     }

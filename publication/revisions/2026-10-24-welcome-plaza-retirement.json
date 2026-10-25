@@ -4,14 +4,14 @@
     {
       "path": "art/source/coastal-flight.json",
       "fromSha256": "1052d5ff14143f3ccf2beb8b27415b9a5d5f84b7b7557606b3276adcf38904bf",
-      "toSha256": "86c1b074e3da7c25cad7794fb11b24fa54c5e636f81f54aae4e1e2129f4d6725",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "70664b5c61e53b4463d68edf82e2cd9eaa969284f25f437c24127c42d2939a51",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "art/sources.json",
       "fromSha256": "75fad7f999fede7cd497900ba83e3e5b0ef0c930f39324350868114207e7aa7a",
-      "toSha256": "b0c462fcf561a40f857138821e19a3cca7118326d5525ef64266c202b46ca872",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "a451d94adc6e44fb2c02012a21615ba39fa68cf0e7690a422177d8efc2b2de52",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "art/sponsors.json",
@@ -52,8 +52,8 @@
     {
       "path": "maps/overworld.tmj",
       "fromSha256": "9c141a299bbd1f6dcb8bbf29466f1fa0b73441d259be9c65f53371ffdefe4be6",
-      "toSha256": "76a287dea815a1e8f5878c503b7831e1b2757783c40cf193ca85a4bedb9bece8",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "d9f088343b106ef0fef8541319cd12c142621d514cc276d28097894c1b81e7d4",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "maps/preview/constellation-shore.tmj",
@@ -70,8 +70,8 @@
     {
       "path": "maps/preview/overworld.tmj",
       "fromSha256": "84540122405757614b9b9e5c55593cbc2c2915b138c9d1ecef4727247c07c5a5",
-      "toSha256": "5649752aae6f49ac179923083cac8ce8b94f2e54fece04a3a76d985d549d88f9",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "9162e90bd74fec4099c5da7ce4628d0693a1d367493df58f78e31ff97fd23f14",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "maps/preview/shipyard-beach.tmj",
@@ -160,14 +160,14 @@
     {
       "path": "tools/maps/builder.ts",
       "fromSha256": "91e5fd1c349b601b023d2e57785168926e1a8477a2c24291b2507fc129bb202a",
-      "toSha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "d5825e67c9a3ab86dd1b9c3f922e6f8fb126e652ee9ff149e8d2ead8d249ce3d",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "tools/maps/types.ts",
       "fromSha256": "afc332ba77f445bb8658f9eecc87fb6bc49ea53bec0ad2e7f014bb9c6730e034",
-      "toSha256": "ab85fec8339f4df6a9051ca300a7cc2256af153de88471ff6fa1d4fafadf76bb",
-      "reason": "Zodiac WOKAs v3: pixel-art redraw added to the release"
+      "toSha256": "fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "tools/release.ts",
@@ -178,200 +178,200 @@
     {
       "path": "world/layouts/air-district.json",
       "fromSha256": "7a7ca416ed5d4176a7953cb19c9c935b48038806dd23e1229ba1e6f74a761775",
-      "toSha256": "8bf29164011ffbe91b1c0ae28d2ab272b49cedf43c74b1fc56206c83169ee9f0",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "3f17ad03334d78809418051e699c58c07a736646fb9e0315366fa4afa41fa842",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/campus-exploration.json",
       "fromSha256": "73a1bf7b04ad9e6e7339df0a14ff009281e0bb1868ecbd114c93b1cf5bbf9f56",
-      "toSha256": "ce35c73ec91ff41e26fd48c983990d4e6ac980bafc36b938389dd8f5922882df",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "01c9afefa5175217ecb544abd72718e1bfa72b5ceeb0267cbc7449c307ea1ee6",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/comet-maze.json",
       "fromSha256": "21b594ea309547344783ba6f391fba5aeeb330f112802883a1f8e27f4e2e3a0e",
-      "toSha256": "31622a86f62da54ab158e62617a7cc359a2a3241edf64024c61abf6781e0e6a4",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "f723d60096a25e5df852fdadca1d9d376beb0b50568f58d4a1e511f6b6e47010",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/constellation-shore.json",
       "fromSha256": "987127171bf795e08ff91666da5f8b7eb54f8c10968642517546465bb5c8e721",
-      "toSha256": "03e0c7adb30648edb0f0640df03094d31f46d2ec98d773db73b801c0e614efdb",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "7a258d11c462a2bf97b6e4357890d9f7a428398d6e5f50e0d66d305d94fcaf62",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/earth-district.json",
       "fromSha256": "8dcdd25bbafcb9bd4c9cd5bca9c7ab762c4dbdcff473fd4c32f64ec304eb938c",
-      "toSha256": "c58d4a83582cfac8532c59071e04faceb962918afaef84e8a8abcfb4652bb103",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "9d2214b8eb7681bb4039a3a51d2285bda5246802427330a4ab5720cb6580160a",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/fa-ship.json",
       "fromSha256": "3fd8d801647d20e16b3110e6c33d90ab0cc250bbff7cf81c41f58850b7953963",
-      "toSha256": "1d011dadb09bb486e820f7a1fd609114157ee3e0993e7be62a1d85450a3cce86",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "dcfcd848241894886ea2adba7b4d816c7d7ccda4b7187e71e220bac2c405e2c3",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/fire-district.json",
       "fromSha256": "d5209c0a9e05892d3cde41e72914aa78c067a50f531589d7ed372e7f9a56b8d9",
-      "toSha256": "c3db6ce0f1b78b4c8b4c58936094ed20d7922a7f2af0ece777a7d5b923624b23",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "83c9928610b3fa605f59d2ced2a6ee0097c2748bce6d0c5f28f4e12e4553dba0",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/hidden-observatory.json",
       "fromSha256": "098340933b7b104e5fdbd3aac947ce878cb0b256019d6859af96afdd72334d16",
-      "toSha256": "4bf2d8913b3f806ecbee428026db3ad3ffc1ddd6b91b781136b619fb684d4db7",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "97134beb5838b3c95ccf77487ad2c93dfbb9f143ebd80775f105cc052e69f222",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/lunar-hall.json",
       "fromSha256": "23fcf451cb7d87a98f8c867c948030ffb0534fbb1337e97df7cac91a9ab3f0b2",
-      "toSha256": "3e82871f8e24c5650825c1d3d4dfa58fae082b9cf054ecdc93ad14c81ed793ad",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "fdf6223ffc7bc59d327bc6ab6de9e686f8669d93bd2c5a6338d0738853031c05",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/moon-cafe.json",
       "fromSha256": "66c80aa6bb28c68ea3539142190ba7d86e87395a904a504d0a1a37be8a060c3c",
-      "toSha256": "024e1f503c19bcb262791e326b98569007c979a832107b6edd19aeaa046424a6",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "185f59439ca4e1b7dc4fb689e2c6bbc8896747e470ea516f891cb8d744dddf2a",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/moon-grotto.json",
       "fromSha256": "c0882561b4e6099375cd7f242a153ece947b462945489224f1989a279b81543f",
-      "toSha256": "689f0425909b81fcd76adcbd074128916bcd8956bb26cdeb4486962e3f744115",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "f9b3d536d5f871774ce740fe6de60b62cbb49fe926f13dd9139e5c69b24cb1de",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/nebula-arcade.json",
       "fromSha256": "379415d9812c9c5392f32933a3076651e30a8886796a50cb473ca465df0b6985",
-      "toSha256": "9a5ed2b249e32389ce181947c89a628d4ce7472d63b71a68179d4789e11b3b18",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "ac9b19861c8b7233df87e29fee17e84edd79dffbd51b5a0bcd0dcc399d0e14a7",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/orbit-maze.json",
       "fromSha256": "77b8b8ba9b74b86d56aba055ea1b2e32a73f4b869f23aa98d99b44f9727f60f4",
-      "toSha256": "1efc407bc8effd67a71b7c81948e2487e2cc26a79f9541ef7747d11525f544af",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "dc8e477a322fec724b6d7a9643d8dbaddfcc93b2dee63d3046a505658ec9470f",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/orbit-playground.json",
       "fromSha256": "079bea0b325157de854ca0e037f71f45bb1373b1a58b2b361c767cbd87df273a",
-      "toSha256": "c1731aabe55152a50dcf369be17f3a5be1f4d214a6838ee7dd842b4f94adc9e8",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "1e9414695e59ffbe3f17c88776e3609fc3867dd4998a95e9a722c041dbb8f992",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "768728e52acc2bfbd5a881e81087bab36affb1e57a9743f04eb3bef2fca83f73",
-      "toSha256": "7d4a460a273529f5fb182ad094f1018873a7a1cc82c25692b2342801359b0c4a",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "dbe6a323383b989c56a8a48ff176ef7a2d77cdd64200a7599f638f5ca90275ad",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "d2e92a92fa6ee16e4e5403eef6a3a4f421c1ccc0a148381df372300bbb3f1932",
-      "toSha256": "815ba06c4787007fd745cbe5494db47ae731e01981b26736b06821072c2d8a45",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "e1ff03c3a23c8ce13baec8e00f5c80fb1e28f18c16be2b25a737e5ac1df2a4df",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/solar-hall.json",
       "fromSha256": "4e3ccda80bcedf3698d5bde01af277f6f9ef20025cddfbc77a90f6f15ae4a86b",
-      "toSha256": "c34d3c42844fcbe233a0dde0238c40f6e7691948de2ea50ffdbcf5e9066cf9c0",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "aeaba7efaa229b88fd320c1234ee6e2a0981f7e78b01183aa4013e8fa0dd3f59",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-aquarius.json",
       "fromSha256": "9b21645df7e66520a42831b12bd63ff45102cca47928cb32146e944b5d7db9af",
-      "toSha256": "a62f95e53fa0b6b53f9e0daf7819ac7d8f1833d7e83d875bbab9a486f31f8b24",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "5000222d40f3cc5a5ebdd32da9bcc2357eb091e2cd402484c11e34a2f592f0c0",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-aries.json",
       "fromSha256": "85d5e638e3304c098c725f3a305aaad66913d4c76bf91850cba0ee8d96914092",
-      "toSha256": "b67ff46b5ef693369b0d5e284621049bf1a5a108077cad72dc7e0b1ec330722e",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "9a88ba8f4dc6d09366fb585af144f08d08f691c1c6b126d188ecb1329f3120c2",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-cancer.json",
       "fromSha256": "43a2ab26311ddf40f114abb7f1cc2dde7e7dce27794140d4af569cd9927ae875",
-      "toSha256": "b7895ac8e58bbb22e5084a31646ccd357b258d8c4755c8151f4d26900daf9549",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "56d94c39b1d880c769c73e5c9c0fb0b3f5601e832d13ff8a2ced36c841203cb3",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-capricorn.json",
       "fromSha256": "7d190360df4c0d96bcc58a96a77bde9a95d3ae63bf83ff17e7aace20781b4168",
-      "toSha256": "66c342fe492084cc9f499fb3de1dd44e57fca58bad63c3e9831014d01547e715",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "2243d67b5c77836e52cbbc4b1b8722f358a760083587e9296499d582870f227c",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-gemini.json",
       "fromSha256": "fca5e7516825a2ffd81318867ae0ce42d5214afde2a93ae9014b3ea5b1520950",
-      "toSha256": "483f2f3a2da4daa652debf9f56801935eabda5e3f68cf4c1103b89f413478e86",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "8fb18c29f38bcc89e6774e4ef73fe34fcb531e0b83f0164c9e139496e708c936",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-leo.json",
       "fromSha256": "fe7154a70afe00c05805443b52b153ed1f4f90fc2442c2e162c04fe496afaf7b",
-      "toSha256": "9d03dbb4546469a6b95d7a1d43662b1cc4fab3e1e4cd2d0168a3fde4e47ae7b8",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "10efd380e2e7df5fe4819e1c2714dc7b660293cdad25614e53ec9c56f8d8d064",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-libra.json",
       "fromSha256": "1dce7a8032cee257f194be4d9aa786fbf7787c7d567db8cbe9d762f8de94e69c",
-      "toSha256": "d5a1844dcbe7e9fa2a93f83870771908c0f3e088e71056aee81b884756a7d338",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "e9a8af79aca0826b2289172cd7c1607415f53a4bce7c5001ea97937ed684166c",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-pisces.json",
       "fromSha256": "df1b87ec72d8c7ae2a878b03afd04a7dd755a93d4fcde0dabbb94e876cbab132",
-      "toSha256": "6812276869bb898f5e0832cd69f747da102f76834ca3a6c9aae1258cc6953e04",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "de529313fdf9a783491b3dee3639acfe5c29078fac644e3f0c98ddfe2fafd655",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-sagittarius.json",
       "fromSha256": "0e13362c4fc9fa4dba4ccbf2b919e2420049afcaa4d254796ade2e2e3318e341",
-      "toSha256": "7b827d447f71fd4071112475d316cb5f4bbb5c5acd615e45ea0f48ced76515a0",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "5a968f09daff55611edf49718ba11e46dd650381ba7c7155adadc257711154c0",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-scorpio.json",
       "fromSha256": "308dc6edc5be4160ae8a6f6d64a5bb68c2f13b74517a76de6be57572f7d86189",
-      "toSha256": "63c9a19a8df4fc7921392c63fadab4f718533f99d0e208a4d2459903936391c9",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "fa137e623e30e1f0937510d827505e18fcfa009da54c1f866ca7e0e97cceacc9",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-taurus.json",
       "fromSha256": "1a6e32e68ccee249072cf564ebfbc8f5e047bb5f9242e895a049902bc0763652",
-      "toSha256": "9b5385d10aaf65777f7b53dd9941cac1e8dcfe0e449bfe5c68ef05778606383b",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "16794c228f14eea7e3040293e6f86fd1cadcc65919164c86694b5880b63b63d2",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/speaker-virgo.json",
       "fromSha256": "2128b8fb77eba3d9c2e25059bdd26b3022591afeabfa318f48f8e54f93f6d80b",
-      "toSha256": "668f4059277ef79fcca23d72541e24247dccd50b83903d4e83e2325548a37633",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "c3457bc1a6c8217297c526cc2cfd62886dd53e2f44a62fcfe970f173ab1ca977",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/star-garden.json",
       "fromSha256": "972dbe545431209b1fc0090cc148a4982ccf4f2254fe00cfcd54216548267740",
-      "toSha256": "c5fc0d4ccd3dd35ae56680de5cc3d156eedbbd51436fc261aca16ed720050588",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "5e97004cf838e0f29780f219db95a708e47137757a3951e4b31462eb8ea8e73f",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/stargazer-terrace.json",
       "fromSha256": "6b1dc355944a7d106d9e031a1647ec886ad107fad7f292aafb65c8adfb286551",
-      "toSha256": "ba7be20026dd7b3b8def749713f24361843c51932858558311a94a19ac537908",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "d49ffacf42a64a72dfca4a71fe9a71a398a42642538a5b707cf88be8fa87f318",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/water-district.json",
       "fromSha256": "2417a090be892d01d17f105351ba6ab928dc81c6a9eeb25d85b5862ccc285727",
-      "toSha256": "ea7a185421056c9887e39ac33284e7fb31bea652fa7229a0d9dd493981d9a056",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "ba2265546486714aefd47d997289f19d118bca50ce160f948e9d6c7c4f13da2e",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     },
     {
       "path": "world/layouts/zodiac-festival-park.json",
       "fromSha256": "49f0ee262f80400f99a308de38bf92ed8159ae1cf4722c214102344011f6caeb",
-      "toSha256": "026a8a7e1a59483d18a953101282fc82a1b42fe770439854d03e857d68a34e73",
-      "reason": "Native booth refinement: remove decals, open dividers and native reception counters; refresh exact builder provenance"
+      "toSha256": "888520d96213068c667963e5979b5b90e1373d311c26435a8a4a94b081e0e2b1",
+      "reason": "Mirror the six upper counters toward the aisle using native tile flips; refresh exact input receipts"
     }
   ]
 }

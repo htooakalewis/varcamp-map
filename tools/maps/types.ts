@@ -7,6 +7,8 @@ export interface Placement extends TileRect {
  id: string; sprite: string; layer: string;
  /** Grounded decor is below avatars; cutaways show low trim while retaining the original physical footprint. */
  renderRole?: 'grounded' | 'canopy' | 'cutaway';
+ /** Mirror unpartitioned scenery vertically using native Tiled flags and the same collision transform. */
+ flipY?: boolean;
 }
 export interface LayoutSign extends TileRect { name: string; text: string; fontSize?: number; color?: string; align?: 'left' | 'center'; padding?: number; }
 /** Separate native PNG, exported as its own 6×2 (192×64) or 4×2 (128×64) sheet and tile layer for WorkAdventure. */

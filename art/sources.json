@@ -115,23 +115,23 @@
       },
       {
         "path": "art/source/coast-life-harbor-dolphin.json",
-        "sha256": "3e4090a117fd5d55b0fadfc69e5b4b4262e4aef5f0a6f11f2f1bc83e73c0a561"
+        "sha256": "1b9f15c8e747a4de72e2b7144a057d45b012cffc530eb8902042752b65f600f1"
       },
       {
         "path": "art/source/coast-life-harbor-fish-east.json",
-        "sha256": "de5eb439cd200a8628072ee1c42f494c5baae68409c78fe9d24308ff6adcb69b"
+        "sha256": "67823d629744fdb4e695a0823730ea3ed21a71b869e755eca789dc318b7234c0"
       },
       {
         "path": "art/source/coast-life-harbor-fish-west.json",
-        "sha256": "45ee5de505c3b5f9b63743842dea9d9f6cbe210e3cf6c4329c86c6dbf20d762a"
+        "sha256": "059265a5511056faea2592d5741bfd0babce0d1cd728cf8cec7e673a49fddacb"
       },
       {
         "path": "art/source/coast-life-harbor-gull-north.json",
-        "sha256": "085bfa2531d9ec0d640c891be50ca4887ee24a7ea2cfbfb084cfc02bf36ce2a6"
+        "sha256": "c9c2e6a41a9b77afe1e0401ccd2b6cfd0659cb7843841ee8eb69fc975a2ab2a3"
       },
       {
         "path": "art/source/coast-life-harbor-gull-south.json",
-        "sha256": "68d6a490ac695ab7df6a8ab6a742770f0f1c33e08ef3c5c792d16086b887175d"
+        "sha256": "b8061d64fd48c354bd068b9b1d9506b6e1253d98e1c29a5fea2f3da8705574ab"
       },
       {
         "path": "art/source/coast-life-marine-master.png",
@@ -155,27 +155,27 @@
       },
       {
         "path": "art/source/coast-life-shore-dolphin.json",
-        "sha256": "76b9f75cd40f79e257b13ccfdba0b2def9b1901d69efa95b0140b91d3e88decf"
+        "sha256": "8934d4e6f08c116eecdd46dc5ec60280d457d2082c2197a25793de1d070bd857"
       },
       {
         "path": "art/source/coast-life-shore-fish-bay.json",
-        "sha256": "99bba60c5d2dd4227d060c472aba68cdfd96c518231b7a2ab7ae3c69db1af7e6"
+        "sha256": "a3f25206b8fb2416a0b7997a9536c556c7ff34a618379c406b9f171b430f937e"
       },
       {
         "path": "art/source/coast-life-shore-fish-west.json",
-        "sha256": "4bad863eb2c2cb61f73cce6819301cc3085d8e31b6b8f31016303370e8cf7301"
+        "sha256": "521609f9b428ae7f366a45fa00cde080829a7bedf2d1fa906dd89a8ccf29ef9e"
       },
       {
         "path": "art/source/coast-life-shore-gull-north.json",
-        "sha256": "3733f7c55f25d888474d3a2c43203865b049584d9c7749a06f70c95dd34c49c5"
+        "sha256": "727da51ef9847f774dda8ccb5f8289bda61a05549af7289ef555ee367fd56333"
       },
       {
         "path": "art/source/coast-life-shore-gull-south.json",
-        "sha256": "540e84d4c634323b61b89d7a180da305a80338b1d7859dea908c9effe37754fa"
+        "sha256": "bd5a543b9b0f6ba0203c40bec3c23d4350343d87a299c39f761ab620c90b5d12"
       },
       {
         "path": "art/source/coast-life-shore-seal.json",
-        "sha256": "eef7b26bb58ffc5a37a210a771bdc1197acb7d5a58cc558e277ce211cd7d1427"
+        "sha256": "1a640630c60a469cc5b500d4ddbca784323fa58d4642f8944bb87c3c02a9efe8"
       },
       {
         "path": "art/source/coast-life-small-props-master.png",
@@ -195,7 +195,7 @@
       },
       {
         "path": "art/source/coastal-flight.json",
-        "sha256": "86c1b074e3da7c25cad7794fb11b24fa54c5e636f81f54aae4e1e2129f4d6725"
+        "sha256": "70664b5c61e53b4463d68edf82e2cd9eaa969284f25f437c24127c42d2939a51"
       },
       {
         "path": "art/source/expo-captions.json",
@@ -219,7 +219,7 @@
       },
       {
         "path": "art/source/roadster.json",
-        "sha256": "ecb61112a2acfa71f47c69ef15b0e812c45748d5228074d366474e910fcb0303"
+        "sha256": "9ddc6e2942da74ce9aab197f4afe701b70d33bfd5323678872f12320679844cf"
       },
       {
         "path": "art/source/rolling-breaker-east.json",
@@ -391,7 +391,7 @@
       },
       {
         "path": "art/source/world-ambient-air-district-device-1.json",
-        "sha256": "3cb2100034e0068567f55b8ed56b08e8af5e7c2b459584cd09b0fdf91f848358"
+        "sha256": "4892e8220ad9b63e13796e6424a9bae9a15900a96c9008769b4faddf86726cc5"
       },
       {
         "path": "art/source/world-ambient-air-district-lamp-2-poses.png",
@@ -399,7 +399,7 @@
       },
       {
         "path": "art/source/world-ambient-air-district-lamp-2.json",
-        "sha256": "eae0eccb057aace071158cbd43bb449d83ccff6458586d5718d4c7c9d225c881"
+        "sha256": "cf093ffa286954bea40080c86eedfd6ddeb00fd8c56a3c7c0219c600f222d7ac"
       },
       {
         "path": "art/source/world-ambient-approved-fish-strip.png",
@@ -419,7 +419,7 @@
       },
       {
         "path": "art/source/world-ambient-campus-exploration-device-1.json",
-        "sha256": "5822b3fa6ef7222aceea9a8d763fd6c95415c240f2d39f5a88e49ab578d77368"
+        "sha256": "bd29c90b089c86ba3c161a8e61e8e22355b848668eec5ebd0c17af2a473c5cc9"
       },
       {
         "path": "art/source/world-ambient-campus-exploration-leaves-2-poses.png",
@@ -427,7 +427,7 @@
       },
       {
         "path": "art/source/world-ambient-campus-exploration-leaves-2.json",
-        "sha256": "db283409195b14291fefd66d2138e4a790135f3376aadfdad6f7cab9b019c319"
+        "sha256": "d6b55fe3752d605bb198ef19a73583d4d1c96fbf5c27c9a2e79dd46ec2de4ff3"
       },
       {
         "path": "art/source/world-ambient-cascade-poses.png",
@@ -439,7 +439,7 @@
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-1.json",
-        "sha256": "edcc80a90aab611eceb4eb23dd7b4f90a11023f64e863bf9a521db22a193d0a3"
+        "sha256": "fa61fb99ae40fd98f7308f4962a5f936a751c4e4241874635889076f6df176b3"
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-2-poses.png",
@@ -447,7 +447,7 @@
       },
       {
         "path": "art/source/world-ambient-comet-maze-lamp-2.json",
-        "sha256": "7664230d1343e6970f6571904091d306112155dafc0892b5c320acd9f468a97d"
+        "sha256": "39cf0f3ba8dd2c1bf1b2c4db7284522d03ed847ed59bada12c9241238000a898"
       },
       {
         "path": "art/source/world-ambient-device-poses.png",
@@ -459,7 +459,7 @@
       },
       {
         "path": "art/source/world-ambient-earth-district-device-1.json",
-        "sha256": "43b86dd1483f7ff85a7cec4f8eafc87379e5a524b3eff047995b1ad00f187661"
+        "sha256": "1599f5e3d6c905a2128ae9096b36ef23bc0db9e7b946489bec029e857f8b8e91"
       },
       {
         "path": "art/source/world-ambient-earth-district-lamp-2-poses.png",
@@ -467,7 +467,7 @@
       },
       {
         "path": "art/source/world-ambient-earth-district-lamp-2.json",
-        "sha256": "76427ccd37a84e0857ab713a7541bb8330dcd4417edcf3569bb9dd2a74c2b992"
+        "sha256": "61501c1b4fa09e9e26a55b86c053d6e365dcf2255b91e2a860785929a0fcc355"
       },
       {
         "path": "art/source/world-ambient-fa-ship-fish-2-poses.png",
@@ -475,7 +475,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-fish-2.json",
-        "sha256": "2ebf1c3001d93c757f69f18f3e60dba1ad55a7774ac4aa05d004469611599066"
+        "sha256": "c40e3e1d16e9f687e8f4b5d448fca2b5c99425afc58efa3de2a65e258aaddf9c"
       },
       {
         "path": "art/source/world-ambient-fa-ship-gull-1-poses.png",
@@ -483,7 +483,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-gull-1.json",
-        "sha256": "ced9b706358e779cb0320884beccf016e03136fbd1c4b5654cd0283e6305d31f"
+        "sha256": "7aba9ec124ac428af8017f9a38bc687768d5d8d5211260d46e2c41d814b3feaa"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-lamp-2-poses.png",
@@ -491,7 +491,7 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-lamp-2.json",
-        "sha256": "e7162e918e1133f3f1d602cbb1d7758392021ea066485121944fe48b9f95ed9b"
+        "sha256": "369938516e43db4907a399a034672febb312680aca26648654356c42f6ad0e71"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1-lower-poses.png",
@@ -507,11 +507,11 @@
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1-upper.json",
-        "sha256": "9fd7a7df9082a80ddafd168cfc816244112ac88d49eef67b0aaf973a174eaf73"
+        "sha256": "f3e500b33451eb9114c468b7a7645a55fb41dacec8708bb84487b6e293451d23"
       },
       {
         "path": "art/source/world-ambient-fa-ship-interior-steam-1.json",
-        "sha256": "5dfd7f56dfc9cec5f7cde1edab4abe940b0c779a43c231bb258c6a6ae6192569"
+        "sha256": "f51212cbbfd0a0f7f9fbf0611cf1498fb7e542156badd427d5e033af356a4b28"
       },
       {
         "path": "art/source/world-ambient-fire-district-heat-1-poses.png",
@@ -519,7 +519,7 @@
       },
       {
         "path": "art/source/world-ambient-fire-district-heat-1.json",
-        "sha256": "4d0196f3706a657d0edcee5e7c0631847e636f6b05b0692bc828d48f2137e376"
+        "sha256": "5ea009f27484f39864e4ab3aef4efe0d8caa145be55e6285fd42f15814aa277b"
       },
       {
         "path": "art/source/world-ambient-fire-district-steam-2-poses.png",
@@ -527,7 +527,7 @@
       },
       {
         "path": "art/source/world-ambient-fire-district-steam-2.json",
-        "sha256": "f6343fb4f6c8d6b5a41da1826f280a7d6eb3b8d82d04f23b4cf52fa7bf529e28"
+        "sha256": "1f7aaf3ae94ced8f1753914c04114f727a6efcbf94070c5beaa6222bcf87c0c3"
       },
       {
         "path": "art/source/world-ambient-fish-poses.png",
@@ -555,7 +555,7 @@
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-device-2.json",
-        "sha256": "4e4f4b564fa5e01960d1138e969187f794f2092c7ce4904237bb8bb2b0a8a660"
+        "sha256": "16b5de284de2b8657e2a6a455f4e3ad9b9af68d4ebf858b6b1ecc34656fa17c3"
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-instrument-1-poses.png",
@@ -563,7 +563,7 @@
       },
       {
         "path": "art/source/world-ambient-hidden-observatory-instrument-1.json",
-        "sha256": "0eabe49c2e3f4272f2299b616341b83c07f4cc766aeb586cd85b6f07921ec244"
+        "sha256": "e08a77bc70ba8a33517cb182b65ba5cb5db33395cd63407a5ac30f432632c136"
       },
       {
         "path": "art/source/world-ambient-lamp-poses.png",
@@ -579,7 +579,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-cafe-bubbles-2.json",
-        "sha256": "428b3240e2ccf2ef7b0dea0db29f08a474afff9af353075c8f15abccfbdf61f4"
+        "sha256": "7b5f935089243b7d61f6dc652ef44983777f395695363a60b50a0f710539be59"
       },
       {
         "path": "art/source/world-ambient-moon-cafe-steam-1-poses.png",
@@ -587,7 +587,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-cafe-steam-1.json",
-        "sha256": "9e9a6a989c9f1aad560aef04805e5c53d3cd6d08ee7dc7fb5584d39941c02c16"
+        "sha256": "95d4733f8b2fd9d6988ceeefa39fef93591d29bb5a33f7784be51c6edd4c3ca7"
       },
       {
         "path": "art/source/world-ambient-moon-grotto-crystal-2-poses.png",
@@ -595,7 +595,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-grotto-crystal-2.json",
-        "sha256": "fd7d24eb5871a9ed902825e22436dc8ca4077f5ff9096de1398a7a40abeab34a"
+        "sha256": "bdff7192f1670d58949927284b46bc2c848528fc6221ae3c77751230bcfe20f7"
       },
       {
         "path": "art/source/world-ambient-moon-grotto-ripples-1-poses.png",
@@ -603,7 +603,7 @@
       },
       {
         "path": "art/source/world-ambient-moon-grotto-ripples-1.json",
-        "sha256": "0609ec6acafa540be968bd7f0dfaacff8ee096f25dbf9f11b7d0c403652c2c76"
+        "sha256": "3bce845298200bc7bfaf97642091e6721a3ab315f0e301d97429fdc4eaa4e833"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-1-poses.png",
@@ -611,7 +611,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-1.json",
-        "sha256": "688962c42d7479387629a00aaccd08188eb02e54f86a1665c3a32767882078d0"
+        "sha256": "4e647d22e7b81a7d905a9a2a89f83ec73929a871d54c6fdeb00481f9502a333e"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-2-poses.png",
@@ -619,7 +619,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-2.json",
-        "sha256": "9c3f0963fa8b7b3f987f68e19879a2cc5eb7e7108c95ca5cfd8cc64dbb1020b1"
+        "sha256": "95b4140dab0c2591d0e69442ac8282fd08bea86a833c33c3173e308a42a58b21"
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-3-poses.png",
@@ -627,7 +627,7 @@
       },
       {
         "path": "art/source/world-ambient-nebula-arcade-device-3.json",
-        "sha256": "a3d1b2337c5297537bb93ee85e33c0f29f7fe28ce22cdeae70c82616c2ee6069"
+        "sha256": "e4e285cd91c2a3ff2f2fb9cb1b930eea0e883d69b8290374c89da42b9cce5dd5"
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-1-poses.png",
@@ -635,7 +635,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-1.json",
-        "sha256": "a012134de6a563476a0f6a271b02b609e0cb635c4125dec74ef59fece19bd86f"
+        "sha256": "1f47e746d687db5726cf01ca4381c8913081ea98c35c5762823d6d332d555c41"
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-2-poses.png",
@@ -643,7 +643,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-maze-lamp-2.json",
-        "sha256": "ad69733dd296fb32e4a3621b5e30b77097d5d9c0ef9a2d8bc2fb732489afe40d"
+        "sha256": "fc9f2cde8983ee52b08d51981c01b2e8394c3c9a92454aa20117268af19cd05e"
       },
       {
         "path": "art/source/world-ambient-orbit-playground-device-1-poses.png",
@@ -651,7 +651,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-playground-device-1.json",
-        "sha256": "781fb2eed563d10b8f7c0dc14a5717a17e8fa3d5b2061e013e6a590284335cdc"
+        "sha256": "a15f47732eb86d470f0ee776667be718e70dc38314e187bfc8428a062e3860af"
       },
       {
         "path": "art/source/world-ambient-orbit-playground-leaves-2-poses.png",
@@ -659,7 +659,7 @@
       },
       {
         "path": "art/source/world-ambient-orbit-playground-leaves-2.json",
-        "sha256": "65637a8126924863e964ef3361152ecec365c38678d9fe8ec9013754d0b18144"
+        "sha256": "439dfacfa020ecc64711476e86abd230005a9c61793a915c1ee4968e19a8e2a6"
       },
       {
         "path": "art/source/world-ambient-planter-approved-atlas.png",
@@ -675,7 +675,7 @@
       },
       {
         "path": "art/source/world-ambient-star-garden-leaves-2.json",
-        "sha256": "7d0d1869de047d49033808ff80d6022ba722e9d6e5edcddc998afa8cc7fed6ee"
+        "sha256": "43fc5100e947e45c524616553fb6774b6643a7bc836b2c1ebd15f95a8258eabf"
       },
       {
         "path": "art/source/world-ambient-star-garden-ripples-1-poses.png",
@@ -683,7 +683,7 @@
       },
       {
         "path": "art/source/world-ambient-star-garden-ripples-1.json",
-        "sha256": "8d6846915ba6595ccaef1fc7f61ea675f1e7c1064cb7ff744d5dfdaa12afcfd2"
+        "sha256": "36f4f1395c263c6a97040859b83ca14f47d013e286d4af5c0fe9969f1447ffce"
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-instrument-1-poses.png",
@@ -691,7 +691,7 @@
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-instrument-1.json",
-        "sha256": "a10536844cd6980fba1320e8a190ff5b92bb05a18df4ba6d52b9bed53f4b68bc"
+        "sha256": "6ded703e4a48b91450c9a3bb67d8c79d8ee4d40c2a529fcd60d3999dfb7288f3"
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-leaves-2-poses.png",
@@ -699,7 +699,7 @@
       },
       {
         "path": "art/source/world-ambient-stargazer-terrace-leaves-2.json",
-        "sha256": "1a77b83d1cf1cd679e5bc8c1411f36b4b185a8cc837d60a2f50cc4ba97632efc"
+        "sha256": "01fcb1d24e8b0075c92d411fde13bab2794078de371b91a7bf6b2b1e3ccdf1a8"
       },
       {
         "path": "art/source/world-ambient-steam-poses.png",
@@ -711,7 +711,7 @@
       },
       {
         "path": "art/source/world-ambient-water-district-cascade-2.json",
-        "sha256": "6ac1eb782d5016e100a08b3045f74a974c3f2ff3c85eed341ddb0b426f212c8e"
+        "sha256": "e4e85b63436bbad6c9038be8f463308841b1b91b3d3210843ffb33d3448a9be1"
       },
       {
         "path": "art/source/world-ambient-water-district-ripples-1-poses.png",
@@ -719,7 +719,7 @@
       },
       {
         "path": "art/source/world-ambient-water-district-ripples-1.json",
-        "sha256": "ef501f67f4a9019e0c838dd51c5ba8afb524488f85996d36fb7adedd653d19fa"
+        "sha256": "c29606c100e0030ddc1c07a01f13c810d6c5e3eb05be884ec9aa6d9b909277c2"
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-leaves-2-poses.png",
@@ -727,7 +727,7 @@
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-leaves-2.json",
-        "sha256": "11b18cd0ebfe2fc29eac88e4b1ec3f32d0fe28affc8e137720c1757db150c6b7"
+        "sha256": "9b8cc8a2c936f762c49f394ed30245a0dcf00b45c3811635df4867115e6439a8"
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-ripples-1-poses.png",
@@ -735,7 +735,7 @@
       },
       {
         "path": "art/source/world-ambient-zodiac-festival-park-ripples-1.json",
-        "sha256": "c108736d9ae87139033f6f5f215e0707658c23b4eeaffe99b4992e244705e512"
+        "sha256": "221d27b56e7f896465821e48c41a73631f84928977c870c9781e4b252bf7589b"
       },
       {
         "path": "art/source/world-ambient.json",
@@ -895,7 +895,7 @@
       },
       {
         "path": "art/source/roadster-v2.json",
-        "sha256": "21029759f98fb59439d164f06da59ce75b84bd44ee82ee10b8e5930dec288f72"
+        "sha256": "34f8bc52d078b36b023eb7d8774e90101a1d923ae7e81afae08676c8f14b481e"
       },
       {
         "path": "assets/tilesets/original/roadster-v2.png",
@@ -1336,7 +1336,7 @@
       },
       {
         "path": "art/source/plaza-fleet-camera.json",
-        "sha256": "cac9e7e116801641ded7f877a08482f3fb220bce4845b0b314950c2c04b505b2"
+        "sha256": "ac834453094765d2741c4c68a47c7bbfd6400feb9ef0add676e51fb68acb0abd"
       },
       {
         "path": "art/source/plaza-fleet-delivery-poses.png",
@@ -1344,7 +1344,7 @@
       },
       {
         "path": "art/source/plaza-fleet-delivery.json",
-        "sha256": "a79cac1c60dcb6127429eeedc9a2a40da45130b6f9340553e5ff11801be7f8e7"
+        "sha256": "3dd77ecdf8354d04404b4ec7bb4821170352e1398a89d9cb2d215a82c29d2042"
       },
       {
         "path": "art/source/plaza-fleet-original/NOTICE.txt",
@@ -1376,11 +1376,11 @@
       },
       {
         "path": "art/source/plaza-fleet-survey.json",
-        "sha256": "02e51598af6a571c6fc4db98669f7e6f3ddaeb6e8b8d7c9233732a2cba2ca3ed"
+        "sha256": "d33d1ae1bc4249ad7022480b99605689ada08a24dffc8779e696dc93a0578669"
       },
       {
         "path": "art/source/plaza-fleet.json",
-        "sha256": "4e38ae6d33d57a6d0524b45e8c0bd3c8dadb7772b3a95bdbaa25abec27efcdc1"
+        "sha256": "907f8bad1060455f7d462289d406e6d16903de039e0b1cf2535b949223f54753"
       },
       {
         "path": "assets/tilesets/original/plaza-fleet-camera.png",
@@ -1405,191 +1405,191 @@
     "files": [
       {
         "path": "art/source/interior-motion-lunar-hall-plant.json",
-        "sha256": "a30a2162823554c7bfa347491585074eb6c619f1f7b9dee6697d264401567eee"
+        "sha256": "23b9970e7b0fa9e3e3290d0063b0d77a165bfa26b5a5d3aefd1acbe2dc391daf"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-server.json",
-        "sha256": "b165be4e180564d514076cf3609865228de40cc4ee3a8a332dfccaa1358576ae"
+        "sha256": "4865db80a1629b8378efd37040616eed981c411950226255ccab4cfdb41d6eaf"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-steam.json",
-        "sha256": "e02e6a7465e0d75a3d7b76e2d7cd70cd2464469b962eae6b8cf738f12d4f3617"
+        "sha256": "fac291bc64b648032f9c0dc88026d8035155fa0cf1f50a763dc65d16bc4558de"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-water.json",
-        "sha256": "a8e979344d4f0a3db452cde0ca7994c86dba7f54794a9911e646a560dce1c083"
+        "sha256": "2d9b36e2ec3eeaa912818eafa0d594eb79e27cb885d3c4e2d58fa62ed6a4cb1f"
       },
       {
         "path": "art/source/interior-motion-solar-hall-plant.json",
-        "sha256": "fad78c698dbf6f68779831ff76157bfdb2542abcec59fbfda72c6230f49a0fb5"
+        "sha256": "db29ea736750f24a5b6e0f78c03cf5eb250ed9eadbf17c82b287d16655a48f4d"
       },
       {
         "path": "art/source/interior-motion-solar-hall-server.json",
-        "sha256": "c48cbc51e55ea50b8efde9667703b67630005d72f11c8ad61d5be383693b8730"
+        "sha256": "eb4820ae6c8db664ba8e9677eb57f8b2b657cbb6f6efb92b01a0dd0d0ab56416"
       },
       {
         "path": "art/source/interior-motion-solar-hall-steam.json",
-        "sha256": "c66d8bd1605be9be958d0849711fbd48a5c34616992b5c03fd74a61949ffed58"
+        "sha256": "9ab1e50e3c2d3099d31af63529d243f3bb75f805a56315a168ba87baff6deacc"
       },
       {
         "path": "art/source/interior-motion-solar-hall-water.json",
-        "sha256": "d2c4dd6f70e870859a7525ac4d17424c55d048e682bca5f819b92dcd1b04169c"
+        "sha256": "8cb5485938ea09ec25b92e9f9c6bf45ab8a758b11bb1563264f02e3f09c83b22"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-plant.json",
-        "sha256": "9813a97ebf993340cf37ef0faa1157e21f92b2b14f61198f5a8b78b441ea0318"
+        "sha256": "d10821b8695e6386b26c73ed3a0040fa1d540d2234412dd31103563928c3e94d"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-server.json",
-        "sha256": "ccaf2b91574c01037a4a1cce51584beecce1633e7fb4b3bb16b3c7ea53f05933"
+        "sha256": "0a93afa098e814015a0cc5cd1ad2a852bb1f68e6d8679310a474e54c967cc00b"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-steam.json",
-        "sha256": "65e3a5504bed4027ff4b6800a3f05021eceb678a2510a79fbbd8a9f18a97de60"
+        "sha256": "2ed4bc7dbd45e9ff4a39935ede0d2ff8ec9f3f310a0d98b0810a4e877729543d"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-plant.json",
-        "sha256": "0efe3755b16b83464c68863b52392b6ac6d617942d08e58ae651ed455f687b6c"
+        "sha256": "3699e7716573ea79a136c15ec2877eca92baaa2beb83763891b15cef554d5b51"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-server.json",
-        "sha256": "6c5724bb9dda7f7f282c9cf67e32b77744f486910ff343528f11d10ca83a438c"
+        "sha256": "9b3f93439f52bbfe77ae26bb020e6ffbfe19776eef5ed387b3827d12d3617412"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-steam.json",
-        "sha256": "4b498285b2db6b71f7bc41240eef77fe2c95613ee24037c12ea4852e0bcc0890"
+        "sha256": "b13f11d0c44befa6b0c6759dd08acde3215496335a7cc8d0b107a331752f724d"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-plant.json",
-        "sha256": "dc5a45cc8b107ef64c08e61c613217da69ec9f8d0d4398b1f44fdc449d7f3feb"
+        "sha256": "0733bae01c4a9a0727d152de3d75d0201047d2c2d13f4073cf13185ea290b46e"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-server.json",
-        "sha256": "46064b98c50b716bc008841c414b00287212e1c8c2ac3a6e20a35d528d62b03e"
+        "sha256": "e49a80979a28da9950310e8d656d6df3235d9f7b2834408ba9af3a4b6ba86ac6"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-steam.json",
-        "sha256": "27d87ec1b675b27c6ec2c6815d85433a9347768a43abeff0ad4e7bf32e5997d5"
+        "sha256": "7953b409c656c4ad5c403b11c6051278f4f792120fe14578b10e1a4de35c6f32"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-water.json",
-        "sha256": "2a430644b6673cf1a9ea829207861a2e92a2b13a38c17eb90a8b99cd96ccefde"
+        "sha256": "70db91ebe8649398cfdb3e1230f31558fd3e68f364207afc941e804a37b91775"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-plant.json",
-        "sha256": "1535b1dd510336729079c4ac96a86172b5eb62821ec7a32a3ac73d86aa38c8ae"
+        "sha256": "5c5ea9ee03d6005aee680f300d91b5a4fa1e4470219c8720a714335587d5f9c4"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-server.json",
-        "sha256": "99d7e8762e4c4e25cad4e7f785bcd62ed683620baf7842d51a6162ca9c49cdae"
+        "sha256": "800383938cc9dbd17ba2365ab362c0c0fc61f1276ecedc692c768e7dc2ec4af0"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-steam.json",
-        "sha256": "41ee5e9e8ffd2b0d7a83398168b7f69bacf4404231bccbe6eb186ab5bdfa80ae"
+        "sha256": "602dfe1df4aae093ee06f2ff4117b73da68dfa2371f57c2ee4972a5cbef15a83"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-plant.json",
-        "sha256": "c21831528872f8ed5db80a38e2e046fa5ca2cdbc9645dc5fae476daa6eadfbd6"
+        "sha256": "9dd2f6ed420b21477418fe5219b49d43995caebbb13e4fc6a5df4d3bbcf02c02"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-server.json",
-        "sha256": "2fb36df1eb123d557a2b450b2b5f2b9d339e474b10fb03a103732c2c30deb651"
+        "sha256": "30f3c5422af96015136f5568348d1e93659d94fc1c3b44b8bf2a63d1ddead452"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-steam.json",
-        "sha256": "cbb16d547f41508da0f59dc08f4057530c599b90ad2c9c10bc2301d48c3771ed"
+        "sha256": "5c4031ff5b51825e039df3ae5e0d05d52ab2cc9a10eae0cd88e0263a4451feb7"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-plant.json",
-        "sha256": "d621456014b938a78f711693a439300171697e75e67edf7bffa9950f2ffb513c"
+        "sha256": "c201732a8d2773d42a69248b69119e7283b231aff4e2962a3cf9ac5107ad1c5e"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-server.json",
-        "sha256": "e1b1e04b555cf27bf4de15b2ac8ace6d3855239674177d434a42bf078217db61"
+        "sha256": "53432301cbd38a2080a59cf45769710027377ace9b50627ce140f6a3bf8a0732"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-steam.json",
-        "sha256": "bd696d312f46c2d0cbc612d787d3cbd93dee3fba46cf33430a4c9b6e1f21739f"
+        "sha256": "cedef8d0d502d857fd84e7c6ab210439b9fe15bf045c6219506ef7dae680eacd"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-plant.json",
-        "sha256": "fddf7fb64e548b8526632af7aa744b614e1a3bf84e01423023e1bb28e27c6817"
+        "sha256": "ba3673b2d1698ed4fbe3fc3aebb7a6c4e875a780fc2d6a7a3a818a88ee984f45"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-server.json",
-        "sha256": "4ac825f781ebb3c4195ee088aabeeeb5b20c17b8a3681b0b29d276dbd39fe242"
+        "sha256": "2decd979da94a4ce506ebf15c9500d6a51eeb1b10e3a7b15fd28b2782b60c24e"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-steam.json",
-        "sha256": "7861a1f7598f205f7a19c5c0611aceb701f11e9f1a68ccb690f78882aceab724"
+        "sha256": "aa72fcb6361a9e8d22f7e99814c3a2af17e94bc3c78a8bae5966702986c4e7ad"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-plant.json",
-        "sha256": "759ddffdfe17381cf27d6f2752ffc397c96ec8bf0afc38e3fc95ee061baa72cc"
+        "sha256": "cd04acadda723d5ca45b57cd650c5c535e3ede0aed1bfd7e4a9af9821953c42a"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-server.json",
-        "sha256": "6a25aee870e7f73e25d2e636d64b1fa93f1a6359009c803321f8755b2c4a0433"
+        "sha256": "02f5bceae0fb8306a5afc0156989f56e2f6a77ff9243d5ec6c455bf6721d79d1"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-steam.json",
-        "sha256": "82591579d140cc0ff415f7892a543620eec91b9017b2f549510553474221bb90"
+        "sha256": "1b29aeb065eb270d6cb54e5d4184b208269d6b9e8a14108b7c71010316af14cb"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-water.json",
-        "sha256": "c2ef2573255f8cc843f010d4b4a8f9503aeb7df00eb899a9844a0d424d457bb1"
+        "sha256": "6d93506af409df38546abe051e1162ef82feb978cab2726c14088bc747156f95"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-plant.json",
-        "sha256": "c536e72efd06353a0fa31b9eefee6db9e04182f531eaaec1eb9e5c1086f651e7"
+        "sha256": "a8757a342a45eeab811f08889f8486ff1d1e7a592d029d392a129f3477e0167f"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-server.json",
-        "sha256": "02ded3ad277b49298f3e7c367bf5ff2e1373f5c677b5ddd5e22954afec498b2a"
+        "sha256": "de5e86831b19182293f4e2f386a85aeca798b6e06d6e9b216fc6ae043cbf2862"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-steam.json",
-        "sha256": "e95392807f6d196872b11f9e3c46d8b6eafde6d255a17b9e1e203300413de433"
+        "sha256": "02a056634e447bb6853de79e1aa31b504bb897d046e3c3414a13b135f0e91001"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-plant.json",
-        "sha256": "51ce50d59b8fd7e495b36082c3c672fc7da7a6a7127c588d61244774529e7be9"
+        "sha256": "48ea2f30c2648876e3ab6b395da8e7ab46fdc5985e6e1983bf5b8f2afc71e625"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-server.json",
-        "sha256": "31ea4dd17f6856a043f7c5c50b8702c4af38181022a4de44b92beafb6f19909d"
+        "sha256": "0affe054afbfa10b16429202e58bbc47105388c14f4b7fa530f7e4ff7f35488b"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-steam.json",
-        "sha256": "ada59a750ff633ee019f7bb3a1050ecdcfa1b4d99838c273f58eb71f90b2f6b1"
+        "sha256": "3a2becd7995bd986283f2e388eba0b4779ad97aecba47a9ace50614b2f36b000"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-plant.json",
-        "sha256": "1cd731ed1f8d0c4d7eb88cf67ebf6694739f10d0a1877d266ce7967ec75e7cc7"
+        "sha256": "91dcc958cfb30f92594db51f68b0c9e2b4372c23f421ce5191d35d8a2e7e6c98"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-server.json",
-        "sha256": "9ab7015ded96b311f2614601b70c8c1c153b833c28902dd50856797173c894a5"
+        "sha256": "0abf550950b009c5a1da41ef730cc48707c0b374d1e6ccc0132e7d25b1010921"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-steam.json",
-        "sha256": "44fdbb6f5fd43614177fc8433e3184a84e68ad58e9f288464fe20ef33558e228"
+        "sha256": "f4af0693176856da1dfee279fd67176eaaf0267edc84048f9b758a78e3b323e0"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-plant.json",
-        "sha256": "ea709400ca9e6d305ed106965349bce251a40447b0e6bcde150ca5d466099e2b"
+        "sha256": "c19c5b020f453c6cdff38d01bbe2a2f363fd977f0e7085f51d505700312530a8"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-server.json",
-        "sha256": "4ff568003cae91adb9c5cf06386bc740cab215107c6bf51b71840170c44dd0cf"
+        "sha256": "ce8158bd14c6a88a9cc87acbdd946e26d6d61f2de734f0a86b8a2ef1949bf4ab"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-steam.json",
-        "sha256": "f09df107115b091ddb4b43b7c409711ce240a4c2785f44ef6b9ab20ec65fcd39"
+        "sha256": "43d7a6ddfacd5ad88a552eb662ecd260e255f980290faa1a979aec2a9a280328"
       },
       {
         "path": "art/source/interior-motion.json",
-        "sha256": "1838c4a2f081060722e89cebf8d2495ed3faf31111569438ac6bdc9211535b58"
+        "sha256": "5e54d4539eb09d06f8a62e450207df486e7a585aa0ac5634b44dc5359a25addd"
       },
       {
         "path": "art/source/interior-reference-native.png",

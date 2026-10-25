@@ -71,7 +71,7 @@ export function auditGuideRoutes({map,layout,catalog,wam,routes}:Input){
   need(!p.renderRole||['grounded','canopy','cutaway'].includes(p.renderRole),'invalid source render role');
   need(!(upper!==undefined&&(p.renderRole||p.layer==='terrain')),'source upper partition override');
   const cells:number[][]=[];
-  each(p,(i,x,y)=>{const uv=(y%s.rect.height)*s.rect.width+x%s.rect.width,b=blocked.has(uv);
+  each(p,(i,x,y)=>{const dy=p.flipY?s.rect.height-1-y%s.rect.height:y%s.rect.height,uv=dy*s.rect.width+x%s.rect.width,b=blocked.has(uv);
    if(p.layer==='terrain'){ground[i]=b?1:0;terrain.set(i,p.sprite);}else{
     if(b)props.add(i);
     const raised=upper!==undefined?upper.has(uv):(p.renderRole?p.renderRole==='canopy':s.level==='aboveAvatar');

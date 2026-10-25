@@ -1,11 +1,19 @@
 import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
 import {expect,it} from 'vitest';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {EXPO_BOOTHS} from '../tools/maps/expo-plaza';
 import {buildMap} from '../tools/maps/builder';
+import {auditGuideRoutes} from '../tools/bots/route-audit';
 import type {MapLayout,TileLayer,TiledMap} from '../tools/maps/types';
 const layout=()=>JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout;
 const native=()=>JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap;
+it('audits the mirrored counter collision shape against the native tile mask',()=>{
+ const l=layout(),catalog=loadTileCatalog();
+ for(const p of l.placements.filter(p=>/^expo-n[1-6]-counter$/.test(p.id)))p.flipY=true;
+ const result=()=>auditGuideRoutes({layout:l,map:buildMap(l,catalog).tmj,catalog,wam:JSON.parse(readFileSync('maps/overworld.wam','utf8')),routes:JSON.parse(readFileSync('src/bots/lyra-routes.json','utf8'))});
+ expect(result).not.toThrow();
+});
 it('retains the dormant expo sticker reservation after every decal is removed, without painting it',()=>{
  const l=layout();l.placements=l.placements.filter(p=>!p.sprite.startsWith('sticker-'));
  const m=buildMap(l,loadTileCatalog()).tmj,s=m.tilesets.find(s=>s.image==='../assets/tilesets/original/booth-stickers.png');
@@ -43,4 +51,19 @@ it('keeps each logo at exact32px tile scale and every guide cell free in the nat
  }
  const routes=JSON.parse(readFileSync('src/bots/lyra-routes.json','utf8'));
  for(const [x,y] of [...routes.allowedCells,...routes.startupReservedCells])expect(mask.data[y*128+x],`guide ${x},${y}`).toBe(0);
+});
+it('mirrors only the north counters so both rows have their closed fronts and collision masks toward the aisle',()=>{
+ const parse=createRequire(import.meta.url)('../docs/qa/coastal-flight-2026-10-16/prototype/upstream/phaser/src/tilemaps/parsers/tiled/ParseGID.js');
+ const m=native(),c=loadTileCatalog()['desk-curved'],sheet=m.tilesets.find(s=>s.image==='../'+c.sheet)!,mask=m.layers.find(l=>l.name==='physical-collisions') as TileLayer;
+ const art=m.layers.filter((l):l is TileLayer=>l.type==='tilelayer'&&l.visible!==false&&l.name.startsWith('scenery-'));
+ for(const b of EXPO_BOOTHS){
+  const north=b.row==='north',left=b.interior.x+1,top=north?77:82;
+  for(let y=0;y<3;y++)for(let x=0;x<4;x++){
+   const i=(top+y)*128+left+x,sy=north?2-y:y,expected=((sheet.firstgid+(c.rect.y+sy)*sheet.columns!+c.rect.x+x)|(north?0x40000000:0))>>>0;
+   expect(art.some(l=>l.data[i]===expected),`${b.id} actual tile ${x},${y}`).toBe(true);
+   expect(parse(expected)).toMatchObject({flippedVertical:north,flippedHorizontal:false,flippedAntiDiagonal:false,rotation:north?Math.PI:0,flipped:north});
+   const closed=north?y===2:y===0,blocked=closed||x===0||x===3;
+   expect(Boolean(mask.data[i]),`${b.id} collision ${x},${y}`).toBe(blocked);
+  }
+ }
 });
