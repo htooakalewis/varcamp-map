@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "category": "woka",
+  "assetBaseUrl": null,
+  "collection": {
+    "name": "VarCamp Zodiac 2026",
+    "textures": [
+      {
+        "id": "varcamp-zodiac-v1-aries-male",
+        "name": "Aries · Male",
+        "file": "aries-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-aries-female",
+        "name": "Aries · Female",
+        "file": "aries-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-taurus-male",
+        "name": "Taurus · Male",
+        "file": "taurus-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-taurus-female",
+        "name": "Taurus · Female",
+        "file": "taurus-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-gemini-male",
+        "name": "Gemini · Male",
+        "file": "gemini-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-gemini-female",
+        "name": "Gemini · Female",
+        "file": "gemini-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-cancer-male",
+        "name": "Cancer · Male",
+        "file": "cancer-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-cancer-female",
+        "name": "Cancer · Female",
+        "file": "cancer-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-leo-male",
+        "name": "Leo · Male",
+        "file": "leo-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-leo-female",
+        "name": "Leo · Female",
+        "file": "leo-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-virgo-male",
+        "name": "Virgo · Male",
+        "file": "virgo-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-virgo-female",
+        "name": "Virgo · Female",
+        "file": "virgo-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-libra-male",
+        "name": "Libra · Male",
+        "file": "libra-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-libra-female",
+        "name": "Libra · Female",
+        "file": "libra-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-scorpio-male",
+        "name": "Scorpio · Male",
+        "file": "scorpio-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-scorpio-female",
+        "name": "Scorpio · Female",
+        "file": "scorpio-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-sagittarius-male",
+        "name": "Sagittarius · Male",
+        "file": "sagittarius-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-sagittarius-female",
+        "name": "Sagittarius · Female",
+        "file": "sagittarius-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-capricorn-male",
+        "name": "Capricorn · Male",
+        "file": "capricorn-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-capricorn-female",
+        "name": "Capricorn · Female",
+        "file": "capricorn-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-aquarius-male",
+        "name": "Aquarius · Male",
+        "file": "aquarius-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-aquarius-female",
+        "name": "Aquarius · Female",
+        "file": "aquarius-female.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-pisces-male",
+        "name": "Pisces · Male",
+        "file": "pisces-male.png"
+      },
+      {
+        "id": "varcamp-zodiac-v1-pisces-female",
+        "name": "Pisces · Female",
+        "file": "pisces-female.png"
+      }
+    ]
+  }
+}

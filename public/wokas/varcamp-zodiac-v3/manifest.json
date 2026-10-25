@@ -1,0 +1,261 @@
+{
+  "version": 3,
+  "status": "SOURCE_PACKAGE_NOT_LIVE_SELECTION",
+  "format": {
+    "sheet": [
+      96,
+      128
+    ],
+    "frame": [
+      32,
+      32
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "poseOrder": [
+      "stride-a",
+      "idle",
+      "stride-b"
+    ],
+    "footBaseline": 30,
+    "walk": {
+      "rate": 10,
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  "source": {
+    "renderer": "tools/wokas/pixel-v3.ts",
+    "sha256": "fe4a3e2861881231cca486e8e9f59a2ab90806819f5bea703c0e472ca10ce3df",
+    "design": "art/source/wokas-pixel-v3/native-design.json",
+    "designSha256": "db70a45126666a05302372f62e72d9b0c4e12c4bb5affbeee39b8673d02d5689",
+    "method": "original hand-authored native RGBA pixel templates; no stock, generated or rescaled sprite pixels",
+    "license": "MIT"
+  },
+  "assets": [
+    {
+      "id": "varcamp-zodiac-v1-aries-male",
+      "file": "aries-male.png",
+      "sign": "aries",
+      "gender": "male",
+      "bytes": 1972,
+      "sha256": "5524d86d02ff71602ff097b11068407cb27947167b4a43bb538667a0e93b264e",
+      "rgbaSha256": "6873f2f1eeb6538ae7d8e417dcd2c20f7a976a077ee1e9b0520161bc411673f7"
+    },
+    {
+      "id": "varcamp-zodiac-v1-aries-female",
+      "file": "aries-female.png",
+      "sign": "aries",
+      "gender": "female",
+      "bytes": 2038,
+      "sha256": "dcdcf13d3fb28ed9b5437258761ba3653cd77e67b4fd5f559a573ca9820dd384",
+      "rgbaSha256": "14ede97e0ebac38de3afaa54a3b89745b3231d921c4c7905b72c7878de58f54b"
+    },
+    {
+      "id": "varcamp-zodiac-v1-taurus-male",
+      "file": "taurus-male.png",
+      "sign": "taurus",
+      "gender": "male",
+      "bytes": 1918,
+      "sha256": "e85e0085f758ea444b2d7c67a6f46f2fb9d224d0efbf3413aa128fb249cf7013",
+      "rgbaSha256": "319eb16a255fcaf92554287120295e3c0bc3dc7d96bc8f88e04bce25f5ee7956"
+    },
+    {
+      "id": "varcamp-zodiac-v1-taurus-female",
+      "file": "taurus-female.png",
+      "sign": "taurus",
+      "gender": "female",
+      "bytes": 1946,
+      "sha256": "67aac5b1deb838155fc27bdc895b7a35ac0fd744366d6bcf8438c8a8d28bfa5b",
+      "rgbaSha256": "0108b2e8ea0d1b06635f751eb44dc5e09cc13b8e061150aeba9a8f13feb9895c"
+    },
+    {
+      "id": "varcamp-zodiac-v1-gemini-male",
+      "file": "gemini-male.png",
+      "sign": "gemini",
+      "gender": "male",
+      "bytes": 1919,
+      "sha256": "6c332f57477e460e0cf065ed3945c9702104e305178e3f63806c57b9c5c736b2",
+      "rgbaSha256": "a825d3cb9c55dd90b988e3c539bbf8bce18c297d56fa0e1cf6ff4f13a15234c3"
+    },
+    {
+      "id": "varcamp-zodiac-v1-gemini-female",
+      "file": "gemini-female.png",
+      "sign": "gemini",
+      "gender": "female",
+      "bytes": 2055,
+      "sha256": "35a6c3df955b7084b757f886df356bd9498435553100b7bf74128afac5bd6f9e",
+      "rgbaSha256": "519a036e3bc466fbb73dc81c9858cee9535010f498d86b45192eac523eb0020d"
+    },
+    {
+      "id": "varcamp-zodiac-v1-cancer-male",
+      "file": "cancer-male.png",
+      "sign": "cancer",
+      "gender": "male",
+      "bytes": 1920,
+      "sha256": "354d7a5f4d84e5166899bf4370ba1d08e142b706911f3c17bbf709274ce1b8db",
+      "rgbaSha256": "fd83da30fd7ec390747f748d14a3a99ba2c1bd10449f1eb8d471149db1f3df27"
+    },
+    {
+      "id": "varcamp-zodiac-v1-cancer-female",
+      "file": "cancer-female.png",
+      "sign": "cancer",
+      "gender": "female",
+      "bytes": 1942,
+      "sha256": "ebb10c51eb59544d52fd334c3fb34ce549784a012f0a7db7e32a6427f8facd2b",
+      "rgbaSha256": "ded8902348980c2fe4124c6ac969b8095155e4a1630834395dc453c6b8dde80b"
+    },
+    {
+      "id": "varcamp-zodiac-v1-leo-male",
+      "file": "leo-male.png",
+      "sign": "leo",
+      "gender": "male",
+      "bytes": 1920,
+      "sha256": "8a4a093bf9a5c5061193f26b1040ca7d192bca7c0b5ab8fcda3c6bbe55b36508",
+      "rgbaSha256": "a42b5645f46f00199182cf4210d8dfac64d86d28be6ad39216830c9b8ff5e4d0"
+    },
+    {
+      "id": "varcamp-zodiac-v1-leo-female",
+      "file": "leo-female.png",
+      "sign": "leo",
+      "gender": "female",
+      "bytes": 1983,
+      "sha256": "893169c8db3988bfc5152086784364c250fbcfe5788a70d6a679d56fb8d363ea",
+      "rgbaSha256": "64e402772a14d9217d81bc8a541cb0d3d834d7d250cbdfba5cbe98fcefff38de"
+    },
+    {
+      "id": "varcamp-zodiac-v1-virgo-male",
+      "file": "virgo-male.png",
+      "sign": "virgo",
+      "gender": "male",
+      "bytes": 1896,
+      "sha256": "f55cd3ea495484ce85f60bb797b03445cf11d0b9812de528fd01a03b54af8a39",
+      "rgbaSha256": "cb07728be1781c329db6be81a9799e271cdb1f1c2df6fd189049c28f2e970822"
+    },
+    {
+      "id": "varcamp-zodiac-v1-virgo-female",
+      "file": "virgo-female.png",
+      "sign": "virgo",
+      "gender": "female",
+      "bytes": 1932,
+      "sha256": "72d6761a10907e1463a5a37f2cbb6d960235ca291e06869b07470c97f8fc1907",
+      "rgbaSha256": "5bc0dcafb642c7ebf099ab85a8741daf1d3012bddb1d214818921cd1725560f1"
+    },
+    {
+      "id": "varcamp-zodiac-v1-libra-male",
+      "file": "libra-male.png",
+      "sign": "libra",
+      "gender": "male",
+      "bytes": 1868,
+      "sha256": "d86b75f87a39c5ca5a229d240553da8a4d51ffb888dbebd3d9fb9ce5bf3465db",
+      "rgbaSha256": "08f1b5eb3f5148a9ebb508be48178f5d5b1ad5452e02b2b5ce17a8b1100444d0"
+    },
+    {
+      "id": "varcamp-zodiac-v1-libra-female",
+      "file": "libra-female.png",
+      "sign": "libra",
+      "gender": "female",
+      "bytes": 1964,
+      "sha256": "63ed021d62a9428d60da19be318b54c2f1ea28dcdcd5016671eb39ff5ff18c3e",
+      "rgbaSha256": "f230b5b110c88ccd5da6cecc083996ffa941e6fe6f09856e9296a8bf9e93b2bb"
+    },
+    {
+      "id": "varcamp-zodiac-v1-scorpio-male",
+      "file": "scorpio-male.png",
+      "sign": "scorpio",
+      "gender": "male",
+      "bytes": 1910,
+      "sha256": "249f918c745353f4c1f9ee2cfb587149d8d8cb98672a4b3bd8c4c2d66ff5b154",
+      "rgbaSha256": "4bc2a55c4e27232705d383b8f98e09e89b201abf0686483469286db1eb690457"
+    },
+    {
+      "id": "varcamp-zodiac-v1-scorpio-female",
+      "file": "scorpio-female.png",
+      "sign": "scorpio",
+      "gender": "female",
+      "bytes": 1981,
+      "sha256": "c8a919c84f839815dbc5db546b9de23dca0410de80981f5b0cd6252821f9d552",
+      "rgbaSha256": "043987da362795774bd4da7bec08c20d5fc6dd4eeb664f634489e8aa27de8321"
+    },
+    {
+      "id": "varcamp-zodiac-v1-sagittarius-male",
+      "file": "sagittarius-male.png",
+      "sign": "sagittarius",
+      "gender": "male",
+      "bytes": 1930,
+      "sha256": "5dc25e3e3e8cf7e10e69189d21c3ce13f1c34bef790024c435d344c3f30acf38",
+      "rgbaSha256": "c62fe883fa4bec9b4ecb13cf07f4a8be01c7fd59f149439d955f4dc358f9f3a0"
+    },
+    {
+      "id": "varcamp-zodiac-v1-sagittarius-female",
+      "file": "sagittarius-female.png",
+      "sign": "sagittarius",
+      "gender": "female",
+      "bytes": 2028,
+      "sha256": "3c7f1cd14493f28fe64eaab43dfe43f915f55e3bdf49e8fa4ad4111613e865e1",
+      "rgbaSha256": "1ce7a500dd3ece8bab9ba45866993f93ac171dcf44e8258e03c9d63928de4ea9"
+    },
+    {
+      "id": "varcamp-zodiac-v1-capricorn-male",
+      "file": "capricorn-male.png",
+      "sign": "capricorn",
+      "gender": "male",
+      "bytes": 1978,
+      "sha256": "7f441f316901f903cf2f2ff7479604e94e03f84c8f3287642b841e481e5a019d",
+      "rgbaSha256": "d81574dbb414ad3c78eb11e6b2d7595e41615da50f53fc01c92aa31bba23b827"
+    },
+    {
+      "id": "varcamp-zodiac-v1-capricorn-female",
+      "file": "capricorn-female.png",
+      "sign": "capricorn",
+      "gender": "female",
+      "bytes": 1947,
+      "sha256": "15c9151792dc2f7263544811f4541ea666a9b7710a33b630a44d401bbf54635b",
+      "rgbaSha256": "449720b7efc19631b8f4e04cb7ba3baf3e0684566e0fde57c2a3e999da28cbe0"
+    },
+    {
+      "id": "varcamp-zodiac-v1-aquarius-male",
+      "file": "aquarius-male.png",
+      "sign": "aquarius",
+      "gender": "male",
+      "bytes": 1784,
+      "sha256": "1ee8c9614194f4cc56107ac9336e73cf764d4fb106d74d50387c6f2284e341aa",
+      "rgbaSha256": "8e1315c731138e2db89e34f079f8624ae3ec56fa5ace8a62b151c5d7075eec02"
+    },
+    {
+      "id": "varcamp-zodiac-v1-aquarius-female",
+      "file": "aquarius-female.png",
+      "sign": "aquarius",
+      "gender": "female",
+      "bytes": 2044,
+      "sha256": "f67b0f7f5872525175aebb196ec99b569ac07e1a80560233977b913aed2ac0bb",
+      "rgbaSha256": "3d84a8a822377dac83848dc3ae401ccb7b152310e245d59635a2e574aeb51f34"
+    },
+    {
+      "id": "varcamp-zodiac-v1-pisces-male",
+      "file": "pisces-male.png",
+      "sign": "pisces",
+      "gender": "male",
+      "bytes": 1941,
+      "sha256": "7fb5cdb21b3eb53e72f8fe9e87377d3ca44eb0ca6bb1a78ba6a63380f4c900be",
+      "rgbaSha256": "659afb0f58287609e7969634717944bd1825f8145067fd84d465f33926e4d3ea"
+    },
+    {
+      "id": "varcamp-zodiac-v1-pisces-female",
+      "file": "pisces-female.png",
+      "sign": "pisces",
+      "gender": "female",
+      "bytes": 2021,
+      "sha256": "51f606dc8d1759a9dc311e62b63270185ea86080d9ba2bd8fd2a2f4e8f590869",
+      "rgbaSha256": "0e8f3795e69f12a323fc37f2fc69ae54ce36f031574eb0bcd74fbe00b9557508"
+    }
+  ]
+}
