@@ -12,7 +12,7 @@ Execution: inline under the existing owner-approved workflow. Use executing-plan
 - [x] Generate twelve separate transparent masters; inspect silhouettes and normalize complete subjects deterministically into one native atlas. Retain all old bytes.
 - [x] Add the pure art producer, exact source registry and twelve same-footprint catalog definitions. Require the family through art checks.
 - [x] Add a named, bounded twelve-sprite layout operation; append one ownership reservation and author only overworld through the existing projection transaction.
-- [ ] Extend historical forward proofs without rewriting old fixtures. Test missing, extra, duplicate, wrong-identity, collision, entrance and depth mutations. Inspect all twelve native roof/nameplate/entrance crops.
+- [x] Extend historical forward proofs without rewriting old fixtures. Test missing, extra, duplicate, wrong-identity, collision, entrance and depth mutations. Inspect all twelve native roof/nameplate/entrance crops.
 
 ### Task2: Qualification and publication
 
@@ -29,3 +29,5 @@ Review focus:
 - Missing all source markers cannot bypass current atlas/art/layout gates. Do not bless candidate native bodies as historical authority.
 - Every pre-existing atlas reservation, asset, WAM control and unrelated map is preserved; public guide graph/collision audit unchanged and private guides stopped.
 - Upload preserves independent organiser edits and provides two complete readbacks; media-off browser proof establishes visible/UI/path behavior, not authenticated A/V broadcast.
+
+Final validation note: the first full run reproduced five new failures. Four were predecessor/ordering assertions now bound to the named exterior/final receipt successors; the Roadster roster denial is also tested directly. The new hall captions now use explicit left anchors, matching the existing native/Phaser label contract. All five checks and their surrounding suites pass before the final full rerun.

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "dc64fd43914c0107cd5d14206b2c4fdf6a71133037f0ea85ce37549d429b542a",
+      "toSha256": "e78676b6e010e66caffa8f5e5eef74fdf1fbc7695e3bc073d20772cae7155fe2",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "maps/preview/lunar-hall.tmj",
+      "fromSha256": "3c4bc0a433f60e027b26c212933218e77681bd61058514c8091503d945f396aa",
+      "toSha256": "599549c7b5895636623cf8ee1a262e05ecd3197d3297f42bdf95974eb73237ce",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "maps/preview/solar-hall.tmj",
+      "fromSha256": "56d95e610f76c65c30411cdb4172624930117c31d8a9f29e259f3f09e2b7a9ca",
+      "toSha256": "45cf247bbd6503c577ef7987085aebde0c6b93c8fcf69e084906c32bf07a5f53",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "fromSha256": "c4aa5c8899d8e40ac63da8d5d493b4df1b574f1e5b3077572cef6bebf9685c68",
+      "toSha256": "6578ecafc0fe634a9f931a4a7bc83b7884527d7a253741732fff8ae76a03d7b3",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "772e619fd75e24763d8800e50ed8f1d402b6f3abfcfe056303735eb1df362dae",
+      "toSha256": "cf2d7a3da0d35e7ceb959cf6971c850f8d961e418aa4c13203dc4faec5635690",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "42e380347321ab454bf40efd86fb5e0337dfe56d92465593447a1513bef7c8de",
+      "toSha256": "10cd50ff24a6cc29c41bd37cc1222e4f74573a468e2ccf315e7c4a3c8b7060d0",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "146786e769d3b74dd17c89812442168dace180b7bf52a4660b463fb71a4ad41c",
+      "toSha256": "29f533abf8e2d29080202f9ebe4dbead0ce90bd29a1ba7b47084ecc03630d652",
+      "reason": "Anchor the new hall captions at explicit native top-left coordinates for consistent WorkAdventure text rendering; retain floors, artwork, WAMs, collisions and all exterior geometry."
+    }
+  ]
+}

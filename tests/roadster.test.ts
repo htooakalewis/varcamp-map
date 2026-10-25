@@ -21,7 +21,8 @@ describe('stationary native Roadster display', () => {
   expect(new Set(set.tiles!.map(t => t.animation!.reduce((n,f) => n+f.duration,0)))).toEqual(new Set([12800]));
   // The v2 epoch: the role atlas is the compiled motion atlas, appended after the brand family.
   expect(set).toMatchObject({ image: '../assets/tilesets/original/roadster-v2.png', firstgid: 11783, columns: 16, imagewidth: 512 });
-  expect(map.tilesets.at(-1)).toBe(set);
+  expect(map.tilesets[82]).toBe(set); // every prior reservation stays fixed; zodiac exteriors append afterward
+  expect(map.tilesets.slice(83).map(t=>t.name)).toEqual(['zodiac-exteriors']);
   expect(map.tilesets.filter(s => s.name === 'roadster')).toHaveLength(1);
  });
 });

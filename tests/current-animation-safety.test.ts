@@ -8,6 +8,7 @@ import{assertCurrentNativeMap}from'../tools/maps/current-native';
 import{stageCurrentWorldInputs}from'./helpers/current-interior-fixture';
 import{WORLD_CATALOG}from'../src/world/catalog';
 import registered from'../art/source/native-ownership-context.json';
+import {assertNativeAnimationSafety} from '../tools/maps/animated-decoration';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 it('every current decoration is lower, an actual owned-upper projection, one of five safe airborne birds, or the aircraft',()=>{
@@ -22,7 +23,11 @@ it('current plaza entry rejects coherent omission of the required Roadster',()=>
  const orphan=structuredClone(map),at=registered.maps.overworld.atlases.findIndex(t=>t.name==='roadster');
  expect(registered.maps.overworld.atlases[at]).toMatchObject({name:'roadster',firstgid:4330,tilecount:240});
  map.tilesets=map.tilesets.filter((s:any)=>s.image!=='../assets/tilesets/original/roadster-v2.png');map.tilesets.splice(at,0,structuredClone(registered.maps.overworld.atlases[at]));
- expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/animation safety/i);
+ // The appended exterior reservation cannot move when the v2 role disappears,
+ // so the complete current gate now refuses this omission at ownership first.
+ // Independently retain the unconditional role-roster denial as well.
+ expect(()=>assertNativeAnimationSafety(map,layout,read('art/tile-catalog.json'))).toThrow(/animation safety/i);
+ expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/native context/i);
  // Leaving the v2 atlas behind without its source owner is refused even earlier, by the native ownership context.
  expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/native context/i);
 });
