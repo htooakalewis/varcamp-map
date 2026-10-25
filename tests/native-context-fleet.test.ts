@@ -4,6 +4,7 @@ import{isDeepStrictEqual}from'node:util';
 import{buildMap}from'../tools/maps/builder';
 import{assertNativeOwnershipContext,assertNativeAuthoringContext}from'../tools/maps/native-ownership-context';
 import registered from'../art/source/native-ownership-context.json';
+import {preZodiacLayout,preZodiacNative} from './helpers/pre-zodiac-epoch';
 import type{TiledMap}from'../tools/maps/types';
 const names=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -11,14 +12,14 @@ let source:TiledMap,native:TiledMap,current:TiledMap;
 beforeAll(()=>{
  // The fleet policy is pinned on the pre-expo closure: the hall's logo inlays, sticker decals and nameplate captions
  // (the expo reservation family admitted after the fleet) are left out of this source.
- const layout=read('world/layouts/overworld.json'),nameplate=(id:string)=>/^expo-[ns]\d-nameplate/.test(id);
+ const layout=preZodiacLayout(read('world/layouts/overworld.json')),nameplate=(id:string)=>/^expo-[ns]\d-nameplate/.test(id);
  // The brand assets (the court fountain and the road lamps, admitted after the expo family) are left out too.
- layout.images=layout.images.filter((i:{name:string})=>!i.name.startsWith('Expo / '));layout.placements=layout.placements.filter((p:{id:string;sprite:string})=>!p.sprite.startsWith('sticker-')&&!nameplate(p.id)&&!['plaza-fountain','plaza-lamp'].includes(p.sprite));
- layout.signs=layout.signs.filter((s:{name:string})=>!nameplate(s.name));layout.standingSigns=layout.standingSigns.filter((s:{face:string})=>!nameplate(s.face));
+ layout.images=layout.images!.filter((i:{name:string})=>!i.name.startsWith('Expo / '));layout.placements=layout.placements.filter((p:{id:string;sprite:string})=>!p.sprite.startsWith('sticker-')&&!nameplate(p.id)&&!['plaza-fountain','plaza-lamp'].includes(p.sprite));
+ layout.signs=layout.signs!.filter((s:{name:string})=>!nameplate(s.name));layout.standingSigns=layout.standingSigns!.filter((s:{face:string})=>!nameplate(s.face));
  // ...and on the pre-roadster-v2 closure: the frozen sixteen-pose v1 roadster descriptor keeps the registered reservation in place.
- layout.animatedOverlays=layout.animatedOverlays.map((o:{name:string})=>o.name==='roadster'?read('art/source/roadster.json').overlay:o);
+ layout.animatedOverlays=layout.animatedOverlays!.map((o:{name:string})=>o.name==='roadster'?read('art/source/roadster.json').overlay:o);
  source=buildMap(layout,read('art/tile-catalog.json')).tmj;
- native=read('maps/overworld.tmj');native.tilesets=structuredClone(registered.maps.overworld.atlases);
+ native=preZodiacNative(read('maps/overworld.tmj'));native.tilesets=structuredClone(registered.maps.overworld.atlases);
  current=structuredClone(native);let next=registered.maps.overworld.nextAtlasGid;
  for(const name of names){const set=source.tilesets.find(s=>s.name===name)!;current.tilesets.push({...structuredClone(set),firstgid:next});next+=set.tilecount!;}
 });

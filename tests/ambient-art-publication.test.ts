@@ -23,6 +23,7 @@ import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
 import{approvedFleetStaticPins,approvedBirdRecipePins,approvedExpoStaticPins,approvedExpoStaticRows,approvedExpoCaptionRows,approvedExpoRegistryNote,approvedBrandAssetRegistry,approvedRoadsterV2StaticPins,approvedRoadsterV2Rows,approvedRoadsterV2RegistryNote,approvedAriesStyleStaticPins,approvedAriesStyleRows,approvedAriesStyleRegistryNote,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
+import {approvedZodiacRegistry} from './helpers/zodiac-exterior-history';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
 const digest=(v:unknown)=>sha(JSON.stringify(stable(v))),read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -70,7 +71,8 @@ it('binds every current registry path and preserves static artwork while validat
  assertApprovedLayoutSuccessor('speaker-aries',read('world/layouts/speaker-aries.json'));
  const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
  // The brand epoch added exactly one reviewed registry id after the closed roster (owner-provided, not CC0); its complete record is pinned.
- expect(Object.keys(current)).toEqual([...Object.keys(before),...Object.keys(approvedBrandAssetRegistry)]);for(const[id,record]of Object.entries(approvedBrandAssetRegistry)){expect(current[id],id+' exact reviewed owner-provided registry').toEqual(record);for(const row of record.files)expect(sha(readFileSync(row.path)),row.path+' actual registered bytes').toBe(row.sha256);expect(existsSync(record.licenseFile)).toBe(true);}
+ const additions={...approvedBrandAssetRegistry,'zodiac-exteriors':approvedZodiacRegistry()};
+ expect(Object.keys(current)).toEqual([...Object.keys(before),...Object.keys(additions)]);for(const[id,record]of Object.entries(additions)){expect(current[id],id+' exact reviewed registry').toEqual(record);for(const row of record.files)expect(sha(readFileSync(row.path)),row.path+' actual registered bytes').toBe(row.sha256);expect(existsSync(record.licenseFile)).toBe(true);}
  expect(current.original.files).toHaveLength(207);const expoPaths=[...Object.keys(approvedExpoStaticPins),...Object.keys(approvedExpoCaptionRows),...Object.keys(approvedRoadsterV2Rows),...Object.keys(approvedAriesStyleRows)].sort();expect(expoPaths).toHaveLength(11);
  const generated=await generatedDescriptors();const covePaths=['world/tropical-cove.json','tools/art/tropical-cove.ts','assets/tilesets/original/tropical-cove-coast.png','art/source/tropical-cove-coast.json'];const coveStatic:Record<string,string>={'world/tropical-cove.json':'a72cf832da463bff1f150bec1c545084560d30a54927c60c640f506d807076bc','tools/art/tropical-cove.ts':'f707595c40540800922b90fd4839f4a7fcd696d61323f4cbcfd6e5848f059812'};
  for(const id of Object.keys(before)){

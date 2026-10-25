@@ -1,0 +1,77 @@
+{
+  "attribution": "Original zodiac pavilion artwork generated for VarCamp using OpenAI image generation, 2026-10-25; native sprite compilation by the VarCamp map team",
+  "url": "https://var.camp/",
+  "license": "Original project artwork; permitted project distribution",
+  "licenseFile": "assets/tilesets/zodiac-exteriors/LICENSE.txt",
+  "changes": "Twelve separate retained transparent masters. Complete alpha-tight subjects are uniformly fitted by nearest neighbor into native384px cells and packed4x3. Existing building masters, atlas, labels and floor emblems remain unchanged.",
+  "files": [
+    {
+      "path": "world/zodiac-exteriors.json",
+      "sha256": "121d69129772ddb8078bdf261eb1991be6a43d1d16bfd7ad8de1cd0ac9e90a9b"
+    },
+    {
+      "path": "tools/art/zodiac-exteriors.ts",
+      "sha256": "834779cc1a036ff758d7a57c2d6d12abc5c2ef933cfc85ee16644da515d8df31"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/prompts.json",
+      "sha256": "7da5538e4d7d2e165b410300d2e7a4665658fcebd58953f791d39f291f29509d"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/aries-generated-master.png",
+      "sha256": "d70b7cb4618b378084400f8062e5a342ac5e93abae20b69e1250885a0a0bae94"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/taurus-generated-master.png",
+      "sha256": "948fff088e8c13ece2a32486f361888757dfb83e3cc690444b6083682e208c3c"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/gemini-generated-master.png",
+      "sha256": "f492de555a94708054557874de0ea50f9952047de8e70b27661dfa35e6077227"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/cancer-generated-master.png",
+      "sha256": "cd4d3a83c2d439ab92174d423207951b6e8412670c8a0fdeee8c031c1952bc67"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/leo-generated-master.png",
+      "sha256": "e2509e2948b14e3c54f95d5860e6e47876ea645dde998387f8fbc2f3615cda4e"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/virgo-generated-master.png",
+      "sha256": "090e344ac1a3193799e7e6edd298829996f92f8ca0d5c209544d7be5457151b4"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/libra-generated-master.png",
+      "sha256": "748bd4c3463557855f5e2c8cc06dcc0ecd148065de35ef7bdc4d5b8040d154f3"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/scorpio-generated-master.png",
+      "sha256": "fce3b465c0ca808cb7e39e2b9ed168bc3c25cc793f0edeb9c637220007f2d8dd"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/sagittarius-generated-master.png",
+      "sha256": "54e16b49b3020c7b293d590894de0b90f2e94ed18be87eaf68a7aa97079e802b"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/capricorn-generated-master.png",
+      "sha256": "f10ede74db3195e9076f145cab6e1ec97621f8e94b7eedb7404062e0a026556e"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/aquarius-generated-master.png",
+      "sha256": "edd546456b47c41b764ff5e06087969e1bd280be042530308e66118d9a935e06"
+    },
+    {
+      "path": "art/source/zodiac-exteriors/pisces-generated-master.png",
+      "sha256": "ff900870f82b68c83f109eb15cf355d3c8543c474acb07d81bcb27293145ef76"
+    },
+    {
+      "path": "art/source/zodiac-exteriors.json",
+      "sha256": "48dd59ac5986f71620357df54780d636693a64576b515a6b17dd60970b0a4624"
+    },
+    {
+      "path": "assets/tilesets/original/zodiac-exteriors.png",
+      "sha256": "fa54c55447d267b205bab262cf3eb5066e5827cbcd904d6c354fd684de056e8e"
+    }
+  ]
+}

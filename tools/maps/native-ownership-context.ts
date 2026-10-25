@@ -75,6 +75,16 @@ export const EXPO_CAPTION_ATLAS=Object.freeze({name:'standing-captions',image:'.
  * at most 64 rows (the 4 MiB native bound) with its 25 synchronized carriers. */
 export const ROADSTER_V2_ATLAS=Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster-v2.png',imagewidth:512,columns:16,maxImageHeight:2048,carriers:25,vacates:Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster.png',firstgid:4330,tilecount:240})});
 export const isRoadsterV2=(set:TiledTileset):boolean=>set.name===ROADSTER_V2_ATLAS.name&&set.image===ROADSTER_V2_ATLAS.image;
+/** One additive zodiac exterior reservation after all83 prior overworld bodies.
+ * The current plaza gate requires the twelve-member source family unconditionally. */
+export const ZODIAC_EXTERIOR_ATLAS=Object.freeze({name:'zodiac-exteriors',image:'../assets/tilesets/original/zodiac-exteriors.png',columns:48,imagewidth:1536,imageheight:1152,tilecount:1728});
+function zodiacExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefined{
+ const r=ZODIAC_EXTERIOR_ATLAS,sets=source.tilesets.filter(t=>t.image===r.image||t.name===r.name);
+ need(sets.length<=1,'zodiac exterior atlas duplicated');if(!sets.length)return;
+ need(identities(source)[0]==='overworld','zodiac exterior atlas requires overworld identity');
+ const set=sets[0];need(/^art-\d+$/.test(set.name??'')&&set.image===r.image&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&set.imageheight===r.imageheight&&set.tilecount===r.tilecount&&!set.tiles,'zodiac exterior source atlas identity/geometry changed');
+ return{...structuredClone(set),firstgid:start,name:r.name};
+}
 /** Beach-only cove successor. The former coast reservation remains untouched;
  * one bounded native32px atlas is appended after the frozen beach context. */
 export const TROPICAL_COVE_ATLAS=Object.freeze({name:'tropical-cove-coast',image:'../assets/tilesets/original/tropical-cove-coast.png',columns:64,imagewidth:2048,maxImageHeight:1024});
@@ -152,7 +162,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -186,7 +196,8 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   const expo=expoAtlases(source,row,next);if(epoch.expo)expected.push(...expo);
   const brand=brandAtlases(source,next+expo.reduce((n,set)=>n+set.tilecount!,0));if(epoch.brand)expected.push(...brand);
   // Roadster-v2 epoch: admitted only here, only after every brand reservation; it vacates the v1 interval.
-  const v2=roadsterV2Atlas(source,epoch.roadsterV2?expected:structuredClone(expected),next+[...expo,...brand].reduce((n,set)=>n+set.tilecount!,0));if(v2&&epoch.roadsterV2)expected.push(v2);
+  const v2Start=next+[...expo,...brand].reduce((n,set)=>n+set.tilecount!,0),v2=roadsterV2Atlas(source,epoch.roadsterV2?expected:structuredClone(expected),v2Start);if(v2&&epoch.roadsterV2)expected.push(v2);
+  const zodiac=zodiacExteriorAtlas(source,v2Start+(v2?.tilecount??0));if(zodiac&&includeZodiac&&epoch.roadsterV2)expected.push(zodiac);
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
@@ -209,6 +220,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact immediately preceding overworld context: all83 old reservations/bodies.
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,false)))return;
  // The exact immediately preceding beach context is a finite authoring input;
  // the final current gate above always requires the new cove reservation.
  if(identities(source)[0]==='shipyard-beach'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,false)))return;

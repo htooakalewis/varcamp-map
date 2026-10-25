@@ -4,6 +4,7 @@ import {SIGN_IDS} from '../src/world/catalog';
 import {loadTileCatalog} from '../tools/art/catalog';
 import type {MapLayout} from '../tools/maps/types';
 import {refinePlazaFloorGarden} from '../tools/maps/plaza-floor-garden';
+import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
 import {expectedPlazaSuccessor,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
 import type {TiledMap,TileLayer} from '../tools/maps/types';
@@ -29,7 +30,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(refinePlazaFloorGarden(l)).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyZodiacExteriors(refinePlazaFloorGarden(l))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;
@@ -47,8 +48,8 @@ it('retains all twelve doorway footprints while consuming original generated pav
  for(const sign of SIGN_IDS){
   const p=l.placements.find(p=>p.id===`${sign}-building`)!,b=old.placements.find(row=>row.id===p.id)!;
   expect({...p,sprite:b.sprite}).toEqual(b);
-  expect(p.sprite).toMatch(/^plaza-building-0[1-4]$/);
-  expect(catalog[p.sprite].sourceId).toBe('plaza-original-buildings');
+  expect(p.sprite).toBe('zodiac-building-'+sign);
+  expect(catalog[p.sprite].sourceId).toBe('zodiac-exteriors');
   expect(catalog[p.sprite].blockingCells).toEqual(catalog[b.sprite].blockingCells);
   expect(catalog[p.sprite].level).toBe(catalog[b.sprite].level);
   expect(l.placements.find(p=>p.id===`${sign}-zodiac-threshold`)).toMatchObject({sprite:`zodiac-emblem-${sign}`,x:p.x+4,y:p.y+12,width:4,height:4});

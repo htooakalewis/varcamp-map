@@ -9698,7 +9698,7 @@
     },
     {
       "id": "aries-building",
-      "sprite": "plaza-building-01",
+      "sprite": "zodiac-building-aries",
       "x": 96,
       "y": 58,
       "width": 12,
@@ -9754,7 +9754,7 @@
     },
     {
       "id": "taurus-building",
-      "sprite": "plaza-building-02",
+      "sprite": "zodiac-building-taurus",
       "x": 91,
       "y": 77,
       "width": 12,
@@ -9810,7 +9810,7 @@
     },
     {
       "id": "gemini-building",
-      "sprite": "plaza-building-03",
+      "sprite": "zodiac-building-gemini",
       "x": 77,
       "y": 91,
       "width": 12,
@@ -9866,7 +9866,7 @@
     },
     {
       "id": "cancer-building",
-      "sprite": "plaza-building-04",
+      "sprite": "zodiac-building-cancer",
       "x": 58,
       "y": 96,
       "width": 12,
@@ -9922,7 +9922,7 @@
     },
     {
       "id": "leo-building",
-      "sprite": "plaza-building-01",
+      "sprite": "zodiac-building-leo",
       "x": 39,
       "y": 91,
       "width": 12,
@@ -9978,7 +9978,7 @@
     },
     {
       "id": "virgo-building",
-      "sprite": "plaza-building-02",
+      "sprite": "zodiac-building-virgo",
       "x": 25,
       "y": 77,
       "width": 12,
@@ -10034,7 +10034,7 @@
     },
     {
       "id": "libra-building",
-      "sprite": "plaza-building-03",
+      "sprite": "zodiac-building-libra",
       "x": 20,
       "y": 58,
       "width": 12,
@@ -10072,7 +10072,7 @@
     },
     {
       "id": "scorpio-building",
-      "sprite": "plaza-building-04",
+      "sprite": "zodiac-building-scorpio",
       "x": 25,
       "y": 39,
       "width": 12,
@@ -10110,7 +10110,7 @@
     },
     {
       "id": "sagittarius-building",
-      "sprite": "plaza-building-01",
+      "sprite": "zodiac-building-sagittarius",
       "x": 39,
       "y": 25,
       "width": 12,
@@ -10148,7 +10148,7 @@
     },
     {
       "id": "capricorn-building",
-      "sprite": "plaza-building-02",
+      "sprite": "zodiac-building-capricorn",
       "x": 58,
       "y": 20,
       "width": 12,
@@ -10186,7 +10186,7 @@
     },
     {
       "id": "aquarius-building",
-      "sprite": "plaza-building-03",
+      "sprite": "zodiac-building-aquarius",
       "x": 77,
       "y": 25,
       "width": 12,
@@ -10242,7 +10242,7 @@
     },
     {
       "id": "pisces-building",
-      "sprite": "plaza-building-04",
+      "sprite": "zodiac-building-pisces",
       "x": 91,
       "y": 39,
       "width": 12,

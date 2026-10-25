@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "atlas": {
+    "path": "assets/tilesets/original/zodiac-exteriors.png",
+    "width": 1536,
+    "height": 1152,
+    "columns": 48,
+    "cellSize": 384
+  },
+  "alphaThreshold": 192,
+  "buildings": [
+    {
+      "sign": "aries",
+      "before": {
+        "id": "aries-building",
+        "sprite": "plaza-building-01",
+        "x": 96,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "aries-building",
+        "sprite": "zodiac-building-aries",
+        "x": 96,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/aries-generated-master.png",
+        "sha256": "d70b7cb4618b378084400f8062e5a342ac5e93abae20b69e1250885a0a0bae94"
+      }
+    },
+    {
+      "sign": "taurus",
+      "before": {
+        "id": "taurus-building",
+        "sprite": "plaza-building-02",
+        "x": 91,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "taurus-building",
+        "sprite": "zodiac-building-taurus",
+        "x": 91,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/taurus-generated-master.png",
+        "sha256": "948fff088e8c13ece2a32486f361888757dfb83e3cc690444b6083682e208c3c"
+      }
+    },
+    {
+      "sign": "gemini",
+      "before": {
+        "id": "gemini-building",
+        "sprite": "plaza-building-03",
+        "x": 77,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "gemini-building",
+        "sprite": "zodiac-building-gemini",
+        "x": 77,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/gemini-generated-master.png",
+        "sha256": "f492de555a94708054557874de0ea50f9952047de8e70b27661dfa35e6077227"
+      }
+    },
+    {
+      "sign": "cancer",
+      "before": {
+        "id": "cancer-building",
+        "sprite": "plaza-building-04",
+        "x": 58,
+        "y": 96,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "cancer-building",
+        "sprite": "zodiac-building-cancer",
+        "x": 58,
+        "y": 96,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/cancer-generated-master.png",
+        "sha256": "cd4d3a83c2d439ab92174d423207951b6e8412670c8a0fdeee8c031c1952bc67"
+      }
+    },
+    {
+      "sign": "leo",
+      "before": {
+        "id": "leo-building",
+        "sprite": "plaza-building-01",
+        "x": 39,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "leo-building",
+        "sprite": "zodiac-building-leo",
+        "x": 39,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/leo-generated-master.png",
+        "sha256": "e2509e2948b14e3c54f95d5860e6e47876ea645dde998387f8fbc2f3615cda4e"
+      }
+    },
+    {
+      "sign": "virgo",
+      "before": {
+        "id": "virgo-building",
+        "sprite": "plaza-building-02",
+        "x": 25,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "virgo-building",
+        "sprite": "zodiac-building-virgo",
+        "x": 25,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/virgo-generated-master.png",
+        "sha256": "090e344ac1a3193799e7e6edd298829996f92f8ca0d5c209544d7be5457151b4"
+      }
+    },
+    {
+      "sign": "libra",
+      "before": {
+        "id": "libra-building",
+        "sprite": "plaza-building-03",
+        "x": 20,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "libra-building",
+        "sprite": "zodiac-building-libra",
+        "x": 20,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/libra-generated-master.png",
+        "sha256": "748bd4c3463557855f5e2c8cc06dcc0ecd148065de35ef7bdc4d5b8040d154f3"
+      }
+    },
+    {
+      "sign": "scorpio",
+      "before": {
+        "id": "scorpio-building",
+        "sprite": "plaza-building-04",
+        "x": 25,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "scorpio-building",
+        "sprite": "zodiac-building-scorpio",
+        "x": 25,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/scorpio-generated-master.png",
+        "sha256": "fce3b465c0ca808cb7e39e2b9ed168bc3c25cc793f0edeb9c637220007f2d8dd"
+      }
+    },
+    {
+      "sign": "sagittarius",
+      "before": {
+        "id": "sagittarius-building",
+        "sprite": "plaza-building-01",
+        "x": 39,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "sagittarius-building",
+        "sprite": "zodiac-building-sagittarius",
+        "x": 39,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/sagittarius-generated-master.png",
+        "sha256": "54e16b49b3020c7b293d590894de0b90f2e94ed18be87eaf68a7aa97079e802b"
+      }
+    },
+    {
+      "sign": "capricorn",
+      "before": {
+        "id": "capricorn-building",
+        "sprite": "plaza-building-02",
+        "x": 58,
+        "y": 20,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "capricorn-building",
+        "sprite": "zodiac-building-capricorn",
+        "x": 58,
+        "y": 20,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/capricorn-generated-master.png",
+        "sha256": "f10ede74db3195e9076f145cab6e1ec97621f8e94b7eedb7404062e0a026556e"
+      }
+    },
+    {
+      "sign": "aquarius",
+      "before": {
+        "id": "aquarius-building",
+        "sprite": "plaza-building-03",
+        "x": 77,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "aquarius-building",
+        "sprite": "zodiac-building-aquarius",
+        "x": 77,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/aquarius-generated-master.png",
+        "sha256": "edd546456b47c41b764ff5e06087969e1bd280be042530308e66118d9a935e06"
+      }
+    },
+    {
+      "sign": "pisces",
+      "before": {
+        "id": "pisces-building",
+        "sprite": "plaza-building-04",
+        "x": 91,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "after": {
+        "id": "pisces-building",
+        "sprite": "zodiac-building-pisces",
+        "x": 91,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "master": {
+        "path": "art/source/zodiac-exteriors/pisces-generated-master.png",
+        "sha256": "ff900870f82b68c83f109eb15cf355d3c8543c474acb07d81bcb27293145ef76"
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import{reconcileNativeProjection,assertNativeSourceProjection}from'../tools/maps
 import{assertNativeOwnershipContext,assertNativeAuthoringContext,ROADSTER_V2_ATLAS,BRAND_ATLASES,isRoadsterV2}from'../tools/maps/native-ownership-context';
 import{PRE_ROADSTER_V2_NATIVE_SHA256,preRoadsterV2Layout,preRoadsterV2Native,registeredRoadster}from'./helpers/roadster-epoch';
 import registered from'../art/source/native-ownership-context.json';
+import {preZodiacLayout,preZodiacNative} from './helpers/pre-zodiac-epoch';
 import type{MapLayout,TiledMap,TileLayer}from'../tools/maps/types';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:string)=>createHash('sha256').update(b).digest('hex');
@@ -18,7 +19,7 @@ const V1={firstgid:4330,tilecount:240,image:'../assets/tilesets/original/roadste
 const V2_GID=11783;// after the brand family (plaza-lamp 11780+3)
 let catalog:ReturnType<typeof loadTileCatalog>,layout:MapLayout,current:TiledMap,historical:TiledMap,source:TiledMap,v1Source:TiledMap,preExpo:TiledMap,preBrand:TiledMap,preV2:TiledMap;
 beforeAll(()=>{
- catalog=loadTileCatalog();layout=read('world/layouts/overworld.json');current=read('maps/overworld.tmj');source=buildMap(layout,catalog).tmj;
+ catalog=loadTileCatalog();layout=preZodiacLayout(read('world/layouts/overworld.json'));current=preZodiacNative(read('maps/overworld.tmj'));source=buildMap(layout,catalog).tmj;
  // The frozen v1 epoch is still a maintained producer output, so a source carrying the sixteen-pose
  // descriptor remains buildable; it is the pre-v2 closure every earlier context test pins on.
  v1Source=buildMap(preRoadsterV2Layout(layout),catalog).tmj;

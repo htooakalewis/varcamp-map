@@ -278,7 +278,7 @@
         },
         {
           "path": "tools/maps/native-ownership-context.ts",
-          "sha256": "e740a0984f2ebb75115abd1ec0a4666d886abd0840d36cdccf615b87f0cc2be7"
+          "sha256": "e2aa6ada9d1b8242682dc5680d62f3e8c4684287530ac0514e5e3556eaf74c53"
         },
         {
           "path": "art/source/native-ownership-context.json",

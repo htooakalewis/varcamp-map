@@ -4,6 +4,7 @@ import{checkWorldAmbientArt}from'./world-ambient-check';
 import {renderPlazaIdentity} from './plaza-generated';
 import {renderPlazaGarden} from './plaza-garden';
 import {renderPlazaBuildings,renderPlazaGrass} from './plaza-buildings';
+import {checkZodiacExteriorArt} from './zodiac-exteriors';
 import {renderPlazaDrones} from './plaza-drones';
 import {checkPlazaFleetArt} from './plaza-fleet-check';
 import {renderPlazaPots} from './plaza-pots';
@@ -33,6 +34,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   // This remains unconditional even when all fleet registry rows are removed.
   const fleetErrors=await checkPlazaFleetArt(sources);
   if(fleetErrors.length)return fleetErrors;
+  const zodiacErrors=await checkZodiacExteriorArt(catalog,sources);if(zodiacErrors.length)return zodiacErrors;
   errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
   try{await checkTropicalCoveArt();}catch(error){errors.push(String(error));}

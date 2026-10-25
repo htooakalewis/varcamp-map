@@ -5,6 +5,8 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {refinePlazaFloorGarden} from '../../tools/maps/plaza-floor-garden';
+import {applyZodiacExteriors} from '../../tools/maps/zodiac-exteriors';
+import {beforeZodiacJson} from './zodiac-exterior-history';
 import {refineNativePlaza} from '../../tools/maps/plaza-native';
 import {EXPO_PLAZA,applyExpoPlaza,expoFixtures,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
 import {refineExpoBooths} from '../../tools/maps/expo-booths';
@@ -196,7 +198,11 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const brand=await expectedBrandSuccessor(catalog);
  const roadster=await applyRoadsterV2Successor(brand.layout,brand.native,catalog);
  const layout=refineExpoBooths(roadster.layout);
- return {layout,native:expoPlazaNative(roadster.native,layout,catalog)};
+ const native=expoPlazaNative(roadster.native,layout,catalog);
+ assert.deepEqual(layout,beforeZodiacJson('world/layouts/overworld.json'),'Genuine pre-exterior source must match the complete preceding forward chain');
+ assert.deepEqual(native,beforeZodiacJson('maps/overworld.tmj'),'Genuine pre-exterior native must match the complete preceding forward chain');
+ const next=applyZodiacExteriors(layout);
+ return {layout:next,native:reconcileNativeProjection(native,buildMap(next,catalog).tmj)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

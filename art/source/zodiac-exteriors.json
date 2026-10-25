@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "recipe": {
+    "path": "world/zodiac-exteriors.json",
+    "sha256": "121d69129772ddb8078bdf261eb1991be6a43d1d16bfd7ad8de1cd0ac9e90a9b"
+  },
+  "operation": "alpha-tight complete subjects; uniform nearest-neighbor fit to384px; centered at south edge; alpha below192 cleared; no original asset overwritten",
+  "subjects": [
+    {
+      "sign": "aries",
+      "master": {
+        "path": "art/source/zodiac-exteriors/aries-generated-master.png",
+        "sha256": "d70b7cb4618b378084400f8062e5a342ac5e93abae20b69e1250885a0a0bae94"
+      },
+      "crop": {
+        "left": 24,
+        "top": 93,
+        "width": 1206,
+        "height": 1003
+      },
+      "target": {
+        "x": 0,
+        "y": 65,
+        "width": 384,
+        "height": 319
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "taurus",
+      "master": {
+        "path": "art/source/zodiac-exteriors/taurus-generated-master.png",
+        "sha256": "948fff088e8c13ece2a32486f361888757dfb83e3cc690444b6083682e208c3c"
+      },
+      "crop": {
+        "left": 24,
+        "top": 88,
+        "width": 1206,
+        "height": 1044
+      },
+      "target": {
+        "x": 384,
+        "y": 52,
+        "width": 384,
+        "height": 332
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "gemini",
+      "master": {
+        "path": "art/source/zodiac-exteriors/gemini-generated-master.png",
+        "sha256": "f492de555a94708054557874de0ea50f9952047de8e70b27661dfa35e6077227"
+      },
+      "crop": {
+        "left": 32,
+        "top": 84,
+        "width": 1191,
+        "height": 1047
+      },
+      "target": {
+        "x": 768,
+        "y": 46,
+        "width": 384,
+        "height": 338
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "cancer",
+      "master": {
+        "path": "art/source/zodiac-exteriors/cancer-generated-master.png",
+        "sha256": "cd4d3a83c2d439ab92174d423207951b6e8412670c8a0fdeee8c031c1952bc67"
+      },
+      "crop": {
+        "left": 16,
+        "top": 63,
+        "width": 1223,
+        "height": 1061
+      },
+      "target": {
+        "x": 1152,
+        "y": 51,
+        "width": 384,
+        "height": 333
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "leo",
+      "master": {
+        "path": "art/source/zodiac-exteriors/leo-generated-master.png",
+        "sha256": "e2509e2948b14e3c54f95d5860e6e47876ea645dde998387f8fbc2f3615cda4e"
+      },
+      "crop": {
+        "left": 17,
+        "top": 23,
+        "width": 1220,
+        "height": 1078
+      },
+      "target": {
+        "x": 0,
+        "y": 429,
+        "width": 384,
+        "height": 339
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "virgo",
+      "master": {
+        "path": "art/source/zodiac-exteriors/virgo-generated-master.png",
+        "sha256": "090e344ac1a3193799e7e6edd298829996f92f8ca0d5c209544d7be5457151b4"
+      },
+      "crop": {
+        "left": 13,
+        "top": 101,
+        "width": 1228,
+        "height": 1018
+      },
+      "target": {
+        "x": 384,
+        "y": 450,
+        "width": 384,
+        "height": 318
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "libra",
+      "master": {
+        "path": "art/source/zodiac-exteriors/libra-generated-master.png",
+        "sha256": "748bd4c3463557855f5e2c8cc06dcc0ecd148065de35ef7bdc4d5b8040d154f3"
+      },
+      "crop": {
+        "left": 26,
+        "top": 81,
+        "width": 1203,
+        "height": 1024
+      },
+      "target": {
+        "x": 768,
+        "y": 441,
+        "width": 384,
+        "height": 327
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "scorpio",
+      "master": {
+        "path": "art/source/zodiac-exteriors/scorpio-generated-master.png",
+        "sha256": "fce3b465c0ca808cb7e39e2b9ed168bc3c25cc793f0edeb9c637220007f2d8dd"
+      },
+      "crop": {
+        "left": 19,
+        "top": 19,
+        "width": 1218,
+        "height": 1128
+      },
+      "target": {
+        "x": 1152,
+        "y": 412,
+        "width": 384,
+        "height": 356
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "sagittarius",
+      "master": {
+        "path": "art/source/zodiac-exteriors/sagittarius-generated-master.png",
+        "sha256": "54e16b49b3020c7b293d590894de0b90f2e94ed18be87eaf68a7aa97079e802b"
+      },
+      "crop": {
+        "left": 19,
+        "top": 30,
+        "width": 1216,
+        "height": 1111
+      },
+      "target": {
+        "x": 0,
+        "y": 801,
+        "width": 384,
+        "height": 351
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "capricorn",
+      "master": {
+        "path": "art/source/zodiac-exteriors/capricorn-generated-master.png",
+        "sha256": "f10ede74db3195e9076f145cab6e1ec97621f8e94b7eedb7404062e0a026556e"
+      },
+      "crop": {
+        "left": 23,
+        "top": 97,
+        "width": 1209,
+        "height": 1007
+      },
+      "target": {
+        "x": 384,
+        "y": 832,
+        "width": 384,
+        "height": 320
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "aquarius",
+      "master": {
+        "path": "art/source/zodiac-exteriors/aquarius-generated-master.png",
+        "sha256": "edd546456b47c41b764ff5e06087969e1bd280be042530308e66118d9a935e06"
+      },
+      "crop": {
+        "left": 12,
+        "top": 86,
+        "width": 1229,
+        "height": 1018
+      },
+      "target": {
+        "x": 768,
+        "y": 834,
+        "width": 384,
+        "height": 318
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    },
+    {
+      "sign": "pisces",
+      "master": {
+        "path": "art/source/zodiac-exteriors/pisces-generated-master.png",
+        "sha256": "ff900870f82b68c83f109eb15cf355d3c8543c474acb07d81bcb27293145ef76"
+      },
+      "crop": {
+        "left": 22,
+        "top": 67,
+        "width": 1210,
+        "height": 1039
+      },
+      "target": {
+        "x": 1152,
+        "y": 822,
+        "width": 384,
+        "height": 330
+      },
+      "doorCells": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "blockingCells": 96
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/zodiac-exteriors.png",
+    "width": 1536,
+    "height": 1152,
+    "columns": 48,
+    "tilecount": 1728,
+    "sha256": "fa54c55447d267b205bab262cf3eb5066e5827cbcd904d6c354fd684de056e8e"
+  }
+}

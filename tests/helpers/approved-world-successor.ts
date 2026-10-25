@@ -83,7 +83,8 @@ const changes:Record<string,readonly[string,string]>={
  'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff'],
  'tools/art/interior-reference-motion.ts':['ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc','7e3a076865d3e52177585f6eac406b508e7f98d595104bb0ce4a04e76a83c4ec'],
 };
-// The cove adds one closed atlas family without changing any older reservation.
+// The cove and zodiac exteriors append named atlas families without changing any older reservation.
+const exteriorContext='e2aa6ada9d1b8242682dc5680d62f3e8c4684287530ac0514e5e3556eaf74c53';
 const coveChanges:Record<string,readonly[string,string]>={'tools/maps/native-ownership-context.ts':['ee34e0f903bd0a3e546d57d1163a5e15226315c6ff4ff82286123c7a4971dbe4','e740a0984f2ebb75115abd1ec0a4666d886abd0840d36cdccf615b87f0cc2be7']};
 export const approvedUnchangedLayoutIds=Object.keys(WORLD_CATALOG).filter(id=>!['overworld','shipyard-beach','constellation-shore','fa-ship'].includes(id)).sort();
 interface Component {path:string;bytes:number;sha256:string;raw:string}
@@ -107,9 +108,9 @@ export function approvedHistoricalPlaza():TiledMap{return JSON.parse(approvedHis
  * The expo epoch advanced three of them (builder footprints, image type note,
  * expo reservation family); every other row is the fleet epoch value. */
 export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
- for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),coveChanges[path]?.[1]??after,'Reviewed producer epoch changed '+path);
+ for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),path==='tools/maps/native-ownership-context.ts'?exteriorContext:coveChanges[path]?.[1]??after,'Reviewed producer epoch changed '+path);
  const result=structuredClone(layout);
- for(const overlay of result.animatedOverlays??[])for(const input of overlay.provenance?.inputs??[]){const pair=changes[input.path];if(pair){assert.equal(input.sha256,pair[0],'Unreviewed old provenance '+input.path);input.sha256=pair[1];const cove=coveChanges[input.path];if(cove){assert.equal(input.sha256,cove[0],'Unreviewed pre-cove provenance '+input.path);input.sha256=cove[1];}}}
+ for(const overlay of result.animatedOverlays??[])for(const input of overlay.provenance?.inputs??[]){const pair=changes[input.path];if(pair){assert.equal(input.sha256,pair[0],'Unreviewed old provenance '+input.path);input.sha256=pair[1];const cove=coveChanges[input.path];if(cove){assert.equal(input.sha256,cove[0],'Unreviewed pre-cove provenance '+input.path);input.sha256=cove[1];if(input.path==='tools/maps/native-ownership-context.ts'){assert.equal(input.sha256,coveChanges[input.path][1]);input.sha256=exteriorContext;}}}}
  return result;
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{

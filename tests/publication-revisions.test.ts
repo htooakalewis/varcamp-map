@@ -20,6 +20,7 @@ const campusPath='publication/revisions/2026-10-18-campus-refinement.json';
 const combinedPath='publication/revisions/2026-10-18-beach-groves-guide-identity.json';
 const currentReleasePath='publication/revisions/2026-10-19-shared-world-service.json';
 const verificationReleasePath='publication/revisions/2026-10-19-canonical-verification.json';
+const zodiacPath='publication/revisions/2026-10-25-zodiac-exteriors.json';
 const hallsPath='publication/revisions/2026-10-25-assembly-halls.json';
 const covePath='publication/revisions/2026-10-25-tropical-cove.json';
 const speakerPath='publication/revisions/2026-10-25-speaker-presentation.json';
@@ -78,6 +79,7 @@ describe('publication exact reviewed replacements', () => {
   function pinCampus(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(campusPath,bytes);manifest.extensionInventory[campusPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCurrentRelease(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(currentReleasePath,bytes);manifest.extensionInventory[currentReleasePath]=createHash('sha256').update(bytes).digest('hex');}
   function pinVerificationRelease(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(verificationReleasePath,bytes);manifest.extensionInventory[verificationReleasePath]=createHash('sha256').update(bytes).digest('hex');}
+  function pinZodiac(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(zodiacPath,bytes);manifest.extensionInventory[zodiacPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinHalls(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(hallsPath,bytes);manifest.extensionInventory[hallsPath]=createHash('sha256').update(bytes).digest('hex');}
   function pinCove(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(covePath,bytes);manifest.extensionInventory[covePath]=createHash('sha256').update(bytes).digest('hex');}
   function pinSpeaker(value:unknown={schemaVersion:1,revisions:[]}) {const bytes=JSON.stringify(value);write(speakerPath,bytes);manifest.extensionInventory[speakerPath]=createHash('sha256').update(bytes).digest('hex');}
@@ -109,11 +111,12 @@ describe('publication exact reviewed replacements', () => {
   it('requires thirteenth shared-world receipt pin and physical presence',()=>{delete manifest.extensionInventory[currentReleasePath];rejects('Reviewed revision file must be pinned');pinCurrentRelease();remove(currentReleasePath);rejects('Missing extension source: '+currentReleasePath);});
   it('accepts the fourteenth receipt only from the exact thirteenth predecessor',()=>{pinCurrentRelease({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'verification';const row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinVerificationRelease({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const result=verify();expect(result.status,result.output).toBe(0);pinVerificationRelease({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('requires the fourteenth receipt pin and actual file',()=>{delete manifest.extensionInventory[verificationReleasePath];rejects('Reviewed revision file must be pinned');pinVerificationRelease();remove(verificationReleasePath);rejects('Missing extension source: '+verificationReleasePath);});
+  it('accepts zodiac exteriors only from the exact hall predecessor',()=>{pinHalls({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'zodiac',row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinZodiac({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const positive=verify();expect(positive.status,positive.output).toBe(0);pinZodiac({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the halls only from the exact tropical-cove predecessor',()=>{pinCove({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'halls',row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinHalls({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const positive=verify();expect(positive.status,positive.output).toBe(0);pinHalls({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the speaker rollout only from its exact Aries predecessor',()=>{pinAries({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'speaker-rollout',row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinSpeaker({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const positive=verify();expect(positive.status,positive.output).toBe(0);pinSpeaker({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the Aries receipt only from its exact prior and rejects a wrong predecessor',()=>{pinRetirement({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'aries',row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinAries({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const positive=verify();expect(positive.status,positive.output).toBe(0);pinAries({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
   it('accepts the fifteenth welcome-plaza receipt only from the exact fourteenth predecessor',()=>{pinVerificationRelease({schemaVersion:1,revisions:[reviewed()]});const bytes=replacement+'retirement';const row={...reviewed(),fromSha256:replacementHash,toSha256:createHash('sha256').update(bytes).digest('hex')};pinRetirement({schemaVersion:1,revisions:[row]});write('src/main.ts',bytes);const result=verify();expect(result.status,result.output).toBe(0);pinRetirement({schemaVersion:1,revisions:[{...row,fromSha256:baselineHash}]});rejects('prior');});
-  it('requires the fifteenth receipt pin and actual file',()=>{delete manifest.extensionInventory[retirementPath];rejects('Reviewed revision file must be pinned');pinRetirement();pinAries();pinSpeaker();pinCove();pinHalls();remove(retirementPath);rejects('Missing extension source: '+retirementPath);});
+  it('requires the fifteenth receipt pin and actual file',()=>{delete manifest.extensionInventory[retirementPath];rejects('Reviewed revision file must be pinned');pinRetirement();pinAries();pinSpeaker();pinCove();pinHalls();pinZodiac();remove(retirementPath);rejects('Missing extension source: '+retirementPath);});
   beforeAll(() => {
     // One immutable physical baseline; cases mutate and restore only touched files.
     root = mkdtempSync(join(tmpdir(), 'varcamp-revisions-'));
@@ -140,7 +143,7 @@ describe('publication exact reviewed replacements', () => {
     pinCampus();
     pinCurrentRelease();
     pinVerificationRelease();
-    pinRetirement();pinAries();pinSpeaker();pinCove();pinHalls();
+    pinRetirement();pinAries();pinSpeaker();pinCove();pinHalls();pinZodiac();
     baselineManifest=structuredClone(manifest);track=true;
   });
   beforeEach(()=>{expect(touched.size).toBe(0);manifest=structuredClone(baselineManifest);});

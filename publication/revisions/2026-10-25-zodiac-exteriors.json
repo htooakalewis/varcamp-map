@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "45f455ad5c7d399d958a809d9a651b230d99001ea6ac3a371ff905e40c308389",
+      "toSha256": "40e3e516e24b17de76c35653853a1b44657b359720b19cd95d4dd1f830775d9e",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "2352045ecc5a2389061d3769d853a1884e871568419a763fb5ad2b465ea2d769",
+      "toSha256": "db1fc054e6684e28da0e05ab4c54a11f8ae84902279c59fcae7a479c557fe825",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "d9f088343b106ef0fef8541319cd12c142621d514cc276d28097894c1b81e7d4",
+      "toSha256": "abee2e8ba39113a929f3b196d553cd212b577bf64f0203c29a3345cb4f0fc8b7",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "9162e90bd74fec4099c5da7ce4628d0693a1d367493df58f78e31ff97fd23f14",
+      "toSha256": "870dc75d7298cbdd52b1dccf12ac276634850637b1d33dcec416e89978832e1c",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "tests/medium-hub.test.ts",
+      "fromSha256": "5bb78249ef9eca1dc437a4ac4e21593ce7b7a044789ed3db167d6f20483f7c8f",
+      "toSha256": "1ca2c9cf24ddc7aa14d3de5779cee10e3a87e502291c34cb2fca89c0acbdf5eb",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "9059fd62add29d94d44c1bbead206f59762f1d7944080e9a6b81e1d0174f1fa2",
+      "toSha256": "2368c810d131e1c47099de52b1476d7aeb92e5ce7a9395860f51eb20f96fd7b7",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "3bbc30e3c604fd0a35499a0b1fe9b5f8b20777d9617dc41e61383d4aa742b80c",
+      "toSha256": "bc551704ebe5129a4f9cb6bd5e40459e6355c563bfc8d3e45c67f9a11bcc78c1",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "1f3d48cdb76147570deb597c604c2ad780201637c6992ac490a721209b7e3f68",
+      "toSha256": "8ba0b089052edb07000a808b9774c7b4f6fecdd81e4b342e59b2a44bc9b14c34",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "471e412ac1ec5bff9a0537b230628d73f1306d2148114b0e75bbb0a2d7a71e7e",
+      "toSha256": "3f22d0f5fe38c1e477eaba2d706082f0d96c0a6944eae0a022008323d413e0d8",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "c8a09976c6827913b7fb409d5d180f9a8d26cfaa1690d8189e1e87cb00ba5eaa",
+      "toSha256": "d736e97ecd799c01767f9ec87b644255209dbc95a7409990cb704d16d53c8a78",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "87e36343e83015a3c1272c90605438aff2af23dd801cc34f3b0a6f580462b6ab",
+      "toSha256": "16f33a9ec5ad9452e94bc59088c0288d48d0ebdf16ce6b4f33f31477d739d2bb",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "bb067aa02f8c4ea465d62f9d8f67db240433296e2a7a66d84be5370360628edd",
+      "toSha256": "6e924fb7973edf05a6491574a00632f42051a287415e68c060122423643f8e69",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "b9ba97ca63d9995a1cf170389e5d4f044eb88688b06db247df020e1b0321a964",
+      "toSha256": "9a28ac201fe4d7e2256882ee56356a5c457967b3cb77c3ed816791f23fa6fd58",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "50c110e65a20d24d66350808a0fb6bd7ba008e9164e59262a6298d621d39206b",
+      "toSha256": "712ff266a7c62e5df5b68c37d3fdc4707337c958e20f6f2134252f4525fed586",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "4c10a813ac8ebe85562ca08f572236fe4788104f39587d2064e6a9d7ab2887bd",
+      "toSha256": "7fb7945d7f25bfa0915c84766c0c387c708216532f8ec62f65c324f844bc8d69",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "eb270c263c585d11f214cc9088754b163b6e08034a93e8d827ff370ebc34b3ab",
+      "toSha256": "bf45fe557aa7162f512406e3d85446b5d1f2cd50ee4ac14fbfce0f123abd7f5e",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "63570ed40967a8223cd74afc2b161cebf488f213d24726b26c7945d8e6730980",
+      "toSha256": "2e94ec311883a65e1ec13d2810b44a95611d6d8120661d98eac19b420e4b2f10",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "c99ffb03b6a37fdd4c94db2906304cedd99e12f1855f6e407da596f3dd5bdf32",
+      "toSha256": "7f46098c1e8e8a257ebeac6e86c089a99438f86c0e43b2fc3a3164dfdd0f75fe",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "e89e0a66ad5f79770ad80311db29a46ffa69116de798a64746d80d0b741a5011",
+      "toSha256": "8df74546e500d2d2b9233717c8ed356f0d189039e9d50a67ad44eca480bced50",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "dbe6a323383b989c56a8a48ff176ef7a2d77cdd64200a7599f638f5ca90275ad",
+      "toSha256": "4cc7b5ceed82f59eb07a91bcbcab7a9405de89d3bbb4fde77128ad157890fb83",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "b261fe03b7142c606043c2d77ddd2d09215fb7f4752bff79fe1fdcc8d9b0f471",
+      "toSha256": "9143212088fe9081599ffb4f2fcc044b0fbbc81e62a4d32e12f20aa18dbb132c",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "e949512c95ef13b12e13276eec25540fc067d485501003015adbaac5e4b26ebc",
+      "toSha256": "ffca47c1d08be780f68094ac1b6be0f72a36cc0ac402fe27b93f284471e03096",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "34961abfc45606238a84fc04eeee90619c692bb653147b364e2052d0efbdadff",
+      "toSha256": "da584937e96b4c53738e00c52d1defed333926b106ace35ea942dc7b2876a441",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "17553efabd354b4047edb0b0b4eb3e384982aebbb9c2ec5a11c3397919d8a0ea",
+      "toSha256": "247608c5e567715122bf3cd52a8d270e5e79055edbe433740d59e626378e5366",
+      "reason": "Give all twelve zodiac buildings distinct architectural silhouettes with one appended native atlas, preserving original assets, all WAMs, collision cells, portal geometry and guide route graph; re-qualify public provenance only."
+    }
+  ]
+}
