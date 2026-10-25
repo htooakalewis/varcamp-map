@@ -1,6 +1,6 @@
 # Assembly Halls Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Apply the approved speaker-room treatment to Solar/Lunar and align visible floor boundaries with their current presentation controls.
 
@@ -30,7 +30,7 @@
 
 - [x] Add behavior/preservation/negative tests; run against old halls and confirm missing branding and floor-boundary mismatches fail.
 - [x] Implement the bounded successor; retain all original seats/props except the three stated nonblocking floor dimensions. Add native four-logo panels and trim, then render both source/native maps.
-- [ ] Run hall, speaker/interior, map/art/publication tests and inspect native/live output; resolve failures at their source. Commit locally with Codex co-author.
+- [x] Run hall, speaker/interior, map/art/publication tests and inspect native/live output; resolve failures at their source. Commit locally with Codex co-author.
 
 ### Task2: Publication and acceptance
 
@@ -38,9 +38,11 @@
 
 **Interfaces:** Guarded prepare/review/apply, existing smoke, hall-specific physical walkthrough and public hash comparison.
 
-- [ ] Run maps/art/build/source/facts checks and full regression comparison against the current130known failures (Node17pass/1known failure).
-- [ ] Obtain one fresh review, reproduce/fix Important findings and verify scope:32other native maps,34WAMs and every existing asset byte retained.
-- [ ] Refresh receipts/facts, commit/FFmain; prepare and inspect a fresh guarded plan, apply it and verify two complete readbacks with token-only WAM changes.
-- [ ] Verify fresh/reload, listener approaches/staff rights/return routes with media off. Close browsers, verify guides stopped, retain a concise verification record.
+- [x] Run maps/art/build/source/facts checks and full regression comparison against the current130known failures (Node17pass/1known failure).
+- [x] Obtain one fresh review, reproduce/fix Important findings and verify scope:32other native maps,34WAMs and every existing asset byte retained.
+- [x] Refresh receipts/facts, commit/FFmain; prepare and inspect a fresh guarded plan, apply it and verify two complete readbacks with token-only WAM changes.
+- [x] Verify fresh/reload, listener approaches/staff rights/return routes with media off. Close browsers, verify guides stopped, retain a concise verification record.
 
 Execution note: Lewis added twelve zodiac exteriors during hall implementation. The final whole-change review and guarded publication will cover both additive requests together. Hall-specific native/source scope was captured before exterior changes; its336 focused/broad tests pass.
+
+Completed at runtime79234f5: final full comparison2328pass/130unchanged known failures; final validation275/275; live7smoke/42walkthrough checks and two645-file readbacks pass. Detailed bounded evidence is retained under.orca/zodiac-exteriors/VERIFICATION.md.

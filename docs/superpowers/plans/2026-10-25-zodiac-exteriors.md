@@ -17,10 +17,10 @@ Execution: inline under the existing owner-approved workflow. Use executing-plan
 ### Task2: Qualification and publication
 
 - [x] Re-qualify public guide provenance only after identical route graph, collision mask and portal audit. Keep private guide pins/services untouched.
-- [ ] Run maps/art/build checks and appropriate focused suites, then one stable full-suite comparison against the known130 baseline failures and Node17pass/1known failure.
-- [ ] Obtain the one fresh whole-change review covering base6f7f5d6 through final hall/exterior head; resolve Important findings via RED→GREEN.
-- [ ] Append a named publication revision, refresh facts and exact extension receipts; commit locally/fast-forward main, prepare/review/apply one guarded release.
-- [ ] Read back the complete release twice, preserve independent organiser data, tour both halls and all twelve exterior doors with media off, close browsers and record verification.
+- [x] Run maps/art/build checks and appropriate focused suites, then one stable full-suite comparison against the known130 baseline failures and Node17pass/1known failure.
+- [x] Obtain the one fresh whole-change review covering base6f7f5d6 through final hall/exterior head; resolve Important findings via RED→GREEN.
+- [x] Append a named publication revision, refresh facts and exact extension receipts; commit locally/fast-forward main, prepare/review/apply one guarded release.
+- [x] Read back the complete release twice, preserve independent organiser data, tour both halls and all twelve exterior doors with media off, close browsers and record verification.
 
 Review focus:
 
@@ -31,3 +31,5 @@ Review focus:
 - Upload preserves independent organiser edits and provides two complete readbacks; media-off browser proof establishes visible/UI/path behavior, not authenticated A/V broadcast.
 
 Final validation note: the first full run reproduced five new failures. Four were predecessor/ordering assertions now bound to the named exterior/final receipt successors; the Roadster roster denial is also tested directly. The new hall captions now use explicit left anchors, matching the existing native/Phaser label contract. All five checks and their surrounding suites pass before the final full rerun.
+
+Completed at runtime79234f5: final full comparison2328pass/130unchanged known failures; final validation275/275; live7smoke/42walkthrough checks and two645-file readbacks pass. Detailed bounded evidence is retained under.orca/zodiac-exteriors/VERIFICATION.md.
