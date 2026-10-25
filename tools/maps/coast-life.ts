@@ -8,6 +8,7 @@ import {assertNativeSourceProjection} from './native-projection';
 import {attachOrganicCoast} from './organic-coast';
 import {assertCoastLifeHabitat} from './coast-life-habitat';
 import {assertNativeCoastAerial}from'./coast-aerial';
+import cove from '../../world/tropical-cove.json';
 const ids=['shipyard-beach','constellation-shore'];
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
@@ -19,7 +20,7 @@ export function assertNativeCoastLife(map:TiledMap,layout:MapLayout,catalog:Tile
  const matched=ids.filter(id=>layout.id===id||identities.some(p=>p.value===id));
  if(!matched.length){if(map.tilesets.some(t=>t.name?.startsWith('coast-life-'))||layout.animatedOverlays?.some(o=>o.name.startsWith('coast-life-')))fail('current map identity is missing');return;}
  const id=matched[0];if(matched.length!==1||layout.id!==id||identities.length!==1||identities[0].value!==id||identities[0].type!=='string')fail('current map/layout identity changed');
- const props=read('art/source/coast-life-placements.json').maps[id];
+ const props=id==='shipyard-beach'?cove.props:read('art/source/coast-life-placements.json').maps[id];
  if(!props?.length)fail('declared prop recipe is missing');
  const art=read('art/source/coast-life-assets.json');if(sha(readFileSync(art.atlas.path))!==art.atlas.sha256||art.masters.some((m:any)=>sha(readFileSync(m.path))!==m.sha256)||art.poseStrips.some((m:any)=>sha(readFileSync(m.path))!==m.sha256))fail('original master/native PNG source changed');
  for(const p of props){const source=layout.placements.find(q=>q.id===p.id);if(!source||source.sprite!==p.sprite||['x','y','width','height','layer'].some(k=>(source as any)[k]!==p[k]))fail('declared prop source changed: '+p.id);

@@ -48,7 +48,7 @@ import{captionSpecs,renderCaptionMaster,readStandingCaptions,captionFamily,CAPTI
 import{refineStandingCaptions,assertNativeStandingCaptions}from'../tools/maps/standing-captions';
 import sharp from'sharp';
 it('renders exact twelve caption strings with original pixel glyphs and safe transparent padding',async()=>{
- const specs=['constellation-shore','shipyard-beach'].flatMap(id=>captionSpecs(json(`world/layouts/${id}.json`)));expect(specs).toHaveLength(12);const master=renderCaptionMaster(specs);expect([master.width,master.height]).toEqual([512,192]);
+ const specs=json('art/source/standing-captions.json').specs;expect(specs).toHaveLength(12);expect(['constellation-shore','shipyard-beach'].flatMap(id=>captionSpecs(json(`world/layouts/${id}.json`)))).toHaveLength(9);const master=renderCaptionMaster(specs);expect([master.width,master.height]).toEqual([512,192]);
  const pixels=await sharp(CAPTION_IMAGE).ensureAlpha().raw().toBuffer(),expected=await sharp(Buffer.from(master.svg)).ensureAlpha().raw().toBuffer();expect(pixels.equals(expected)).toBe(true);
  for(const row of master.rows){let ink=0;for(let y=0;y<32;y++)for(let x=0;x<row.sign.width*32;x++){const a=pixels[((row.atlasY*32+y)*512+row.atlasX*32+x)*4+3];if(a){ink++;expect(x).toBeGreaterThanOrEqual(row.sign.padding??0);expect(x).toBeLessThan(row.sign.width*32-(row.sign.padding??0));expect(y).toBeGreaterThanOrEqual(row.sign.padding??0);expect(y).toBeLessThan(32-(row.sign.padding??0));}}expect(ink,row.sign.text).toBeGreaterThan(0);}
 });

@@ -8600,7 +8600,7 @@
     },
     {
       "id": "organic-ground-43-19",
-      "sprite": "organic-coast-land-692",
+      "sprite": "beach-sand-14",
       "x": 43,
       "y": 19,
       "width": 1,
@@ -8609,7 +8609,7 @@
     },
     {
       "id": "organic-ground-44-19",
-      "sprite": "organic-coast-land-696",
+      "sprite": "organic-coast-land-692",
       "x": 44,
       "y": 19,
       "width": 1,
@@ -8618,7 +8618,7 @@
     },
     {
       "id": "organic-ground-45-19",
-      "sprite": "organic-coast-water-700",
+      "sprite": "organic-coast-water-696",
       "x": 45,
       "y": 19,
       "width": 1,
@@ -8663,7 +8663,7 @@
     },
     {
       "id": "organic-ground-2-20",
-      "sprite": "organic-coast-water-704",
+      "sprite": "organic-coast-water-700",
       "x": 2,
       "y": 20,
       "width": 1,
@@ -8672,7 +8672,7 @@
     },
     {
       "id": "organic-ground-3-20",
-      "sprite": "organic-coast-land-708",
+      "sprite": "organic-coast-land-704",
       "x": 3,
       "y": 20,
       "width": 1,
@@ -8825,7 +8825,7 @@
     },
     {
       "id": "organic-ground-20-20",
-      "sprite": "beach-sand-8",
+      "sprite": "organic-coast-land-708",
       "x": 20,
       "y": 20,
       "width": 1,
@@ -8834,7 +8834,7 @@
     },
     {
       "id": "organic-ground-21-20",
-      "sprite": "beach-sand-15",
+      "sprite": "organic-coast-land-712",
       "x": 21,
       "y": 20,
       "width": 1,
@@ -8843,7 +8843,7 @@
     },
     {
       "id": "organic-ground-22-20",
-      "sprite": "beach-sand-6",
+      "sprite": "organic-coast-land-716",
       "x": 22,
       "y": 20,
       "width": 1,
@@ -8852,7 +8852,7 @@
     },
     {
       "id": "organic-ground-23-20",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-land-720",
       "x": 23,
       "y": 20,
       "width": 1,
@@ -8861,7 +8861,7 @@
     },
     {
       "id": "organic-ground-24-20",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-land-724",
       "x": 24,
       "y": 20,
       "width": 1,
@@ -8870,7 +8870,7 @@
     },
     {
       "id": "organic-ground-25-20",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-land-728",
       "x": 25,
       "y": 20,
       "width": 1,
@@ -8879,7 +8879,7 @@
     },
     {
       "id": "organic-ground-26-20",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-land-732",
       "x": 26,
       "y": 20,
       "width": 1,
@@ -8888,7 +8888,7 @@
     },
     {
       "id": "organic-ground-27-20",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-land-736",
       "x": 27,
       "y": 20,
       "width": 1,
@@ -8897,7 +8897,7 @@
     },
     {
       "id": "organic-ground-28-20",
-      "sprite": "beach-sand-0",
+      "sprite": "organic-coast-land-740",
       "x": 28,
       "y": 20,
       "width": 1,
@@ -8906,7 +8906,7 @@
     },
     {
       "id": "organic-ground-29-20",
-      "sprite": "beach-sand-7",
+      "sprite": "organic-coast-land-744",
       "x": 29,
       "y": 20,
       "width": 1,
@@ -8915,7 +8915,7 @@
     },
     {
       "id": "organic-ground-30-20",
-      "sprite": "beach-sand-14",
+      "sprite": "organic-coast-land-748",
       "x": 30,
       "y": 20,
       "width": 1,
@@ -8924,7 +8924,7 @@
     },
     {
       "id": "organic-ground-31-20",
-      "sprite": "beach-sand-5",
+      "sprite": "organic-coast-land-752",
       "x": 31,
       "y": 20,
       "width": 1,
@@ -9032,7 +9032,7 @@
     },
     {
       "id": "organic-ground-43-20",
-      "sprite": "organic-coast-land-712",
+      "sprite": "beach-sand-9",
       "x": 43,
       "y": 20,
       "width": 1,
@@ -9041,7 +9041,7 @@
     },
     {
       "id": "organic-ground-44-20",
-      "sprite": "organic-coast-water-716",
+      "sprite": "organic-coast-land-756",
       "x": 44,
       "y": 20,
       "width": 1,
@@ -9050,7 +9050,7 @@
     },
     {
       "id": "organic-ground-45-20",
-      "sprite": "organic-coast-water-720",
+      "sprite": "organic-coast-water-760",
       "x": 45,
       "y": 20,
       "width": 1,
@@ -9095,7 +9095,7 @@
     },
     {
       "id": "organic-ground-2-21",
-      "sprite": "organic-coast-water-724",
+      "sprite": "organic-coast-water-764",
       "x": 2,
       "y": 21,
       "width": 1,
@@ -9104,7 +9104,7 @@
     },
     {
       "id": "organic-ground-3-21",
-      "sprite": "organic-coast-land-728",
+      "sprite": "organic-coast-land-768",
       "x": 3,
       "y": 21,
       "width": 1,
@@ -9239,7 +9239,7 @@
     },
     {
       "id": "organic-ground-18-21",
-      "sprite": "beach-sand-5",
+      "sprite": "organic-coast-land-772",
       "x": 18,
       "y": 21,
       "width": 1,
@@ -9248,7 +9248,7 @@
     },
     {
       "id": "organic-ground-19-21",
-      "sprite": "beach-sand-12",
+      "sprite": "organic-coast-land-776",
       "x": 19,
       "y": 21,
       "width": 1,
@@ -9257,7 +9257,7 @@
     },
     {
       "id": "organic-ground-20-21",
-      "sprite": "beach-sand-3",
+      "sprite": "organic-coast-land-780",
       "x": 20,
       "y": 21,
       "width": 1,
@@ -9266,7 +9266,7 @@
     },
     {
       "id": "organic-ground-21-21",
-      "sprite": "beach-sand-10",
+      "sprite": "organic-coast-water-784",
       "x": 21,
       "y": 21,
       "width": 1,
@@ -9275,7 +9275,7 @@
     },
     {
       "id": "organic-ground-22-21",
-      "sprite": "beach-sand-1",
+      "sprite": "organic-coast-water-788",
       "x": 22,
       "y": 21,
       "width": 1,
@@ -9284,7 +9284,7 @@
     },
     {
       "id": "organic-ground-23-21",
-      "sprite": "beach-sand-8",
+      "sprite": "organic-coast-water-792",
       "x": 23,
       "y": 21,
       "width": 1,
@@ -9293,7 +9293,7 @@
     },
     {
       "id": "organic-ground-24-21",
-      "sprite": "beach-sand-15",
+      "sprite": "organic-coast-water-796",
       "x": 24,
       "y": 21,
       "width": 1,
@@ -9302,7 +9302,7 @@
     },
     {
       "id": "organic-ground-25-21",
-      "sprite": "beach-sand-6",
+      "sprite": "organic-coast-water-800",
       "x": 25,
       "y": 21,
       "width": 1,
@@ -9311,7 +9311,7 @@
     },
     {
       "id": "organic-ground-26-21",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-water-804",
       "x": 26,
       "y": 21,
       "width": 1,
@@ -9320,7 +9320,7 @@
     },
     {
       "id": "organic-ground-27-21",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-water-808",
       "x": 27,
       "y": 21,
       "width": 1,
@@ -9329,7 +9329,7 @@
     },
     {
       "id": "organic-ground-28-21",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-water-812",
       "x": 28,
       "y": 21,
       "width": 1,
@@ -9338,7 +9338,7 @@
     },
     {
       "id": "organic-ground-29-21",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-water-816",
       "x": 29,
       "y": 21,
       "width": 1,
@@ -9347,7 +9347,7 @@
     },
     {
       "id": "organic-ground-30-21",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-water-820",
       "x": 30,
       "y": 21,
       "width": 1,
@@ -9356,7 +9356,7 @@
     },
     {
       "id": "organic-ground-31-21",
-      "sprite": "beach-sand-0",
+      "sprite": "organic-coast-land-824",
       "x": 31,
       "y": 21,
       "width": 1,
@@ -9365,7 +9365,7 @@
     },
     {
       "id": "organic-ground-32-21",
-      "sprite": "beach-sand-7",
+      "sprite": "organic-coast-land-828",
       "x": 32,
       "y": 21,
       "width": 1,
@@ -9374,7 +9374,7 @@
     },
     {
       "id": "organic-ground-33-21",
-      "sprite": "beach-sand-14",
+      "sprite": "organic-coast-land-832",
       "x": 33,
       "y": 21,
       "width": 1,
@@ -9464,7 +9464,7 @@
     },
     {
       "id": "organic-ground-43-21",
-      "sprite": "organic-coast-land-732",
+      "sprite": "beach-sand-4",
       "x": 43,
       "y": 21,
       "width": 1,
@@ -9473,7 +9473,7 @@
     },
     {
       "id": "organic-ground-44-21",
-      "sprite": "organic-coast-water-736",
+      "sprite": "organic-coast-land-836",
       "x": 44,
       "y": 21,
       "width": 1,
@@ -9482,7 +9482,7 @@
     },
     {
       "id": "organic-ground-45-21",
-      "sprite": "organic-coast-water-740",
+      "sprite": "organic-coast-water-840",
       "x": 45,
       "y": 21,
       "width": 1,
@@ -9527,7 +9527,7 @@
     },
     {
       "id": "organic-ground-2-22",
-      "sprite": "organic-coast-water-744",
+      "sprite": "organic-coast-water-844",
       "x": 2,
       "y": 22,
       "width": 1,
@@ -9536,7 +9536,7 @@
     },
     {
       "id": "organic-ground-3-22",
-      "sprite": "organic-coast-land-748",
+      "sprite": "organic-coast-land-848",
       "x": 3,
       "y": 22,
       "width": 1,
@@ -9662,7 +9662,7 @@
     },
     {
       "id": "organic-ground-17-22",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-land-852",
       "x": 17,
       "y": 22,
       "width": 1,
@@ -9671,7 +9671,7 @@
     },
     {
       "id": "organic-ground-18-22",
-      "sprite": "beach-sand-0",
+      "sprite": "organic-coast-land-856",
       "x": 18,
       "y": 22,
       "width": 1,
@@ -9680,7 +9680,7 @@
     },
     {
       "id": "organic-ground-19-22",
-      "sprite": "beach-sand-7",
+      "sprite": "organic-coast-water-860",
       "x": 19,
       "y": 22,
       "width": 1,
@@ -9689,7 +9689,7 @@
     },
     {
       "id": "organic-ground-20-22",
-      "sprite": "beach-sand-14",
+      "sprite": "organic-coast-water-864",
       "x": 20,
       "y": 22,
       "width": 1,
@@ -9698,7 +9698,7 @@
     },
     {
       "id": "organic-ground-21-22",
-      "sprite": "beach-sand-5",
+      "sprite": "organic-coast-water-868",
       "x": 21,
       "y": 22,
       "width": 1,
@@ -9707,7 +9707,7 @@
     },
     {
       "id": "organic-ground-22-22",
-      "sprite": "beach-sand-12",
+      "sprite": "naval-water-2",
       "x": 22,
       "y": 22,
       "width": 1,
@@ -9716,7 +9716,7 @@
     },
     {
       "id": "organic-ground-23-22",
-      "sprite": "beach-sand-3",
+      "sprite": "naval-water-0",
       "x": 23,
       "y": 22,
       "width": 1,
@@ -9725,7 +9725,7 @@
     },
     {
       "id": "organic-ground-24-22",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-1",
       "x": 24,
       "y": 22,
       "width": 1,
@@ -9734,7 +9734,7 @@
     },
     {
       "id": "organic-ground-25-22",
-      "sprite": "beach-sand-1",
+      "sprite": "naval-water-2",
       "x": 25,
       "y": 22,
       "width": 1,
@@ -9743,7 +9743,7 @@
     },
     {
       "id": "organic-ground-26-22",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-0",
       "x": 26,
       "y": 22,
       "width": 1,
@@ -9752,7 +9752,7 @@
     },
     {
       "id": "organic-ground-27-22",
-      "sprite": "beach-sand-15",
+      "sprite": "naval-water-1",
       "x": 27,
       "y": 22,
       "width": 1,
@@ -9761,7 +9761,7 @@
     },
     {
       "id": "organic-ground-28-22",
-      "sprite": "beach-sand-6",
+      "sprite": "naval-water-2",
       "x": 28,
       "y": 22,
       "width": 1,
@@ -9770,7 +9770,7 @@
     },
     {
       "id": "organic-ground-29-22",
-      "sprite": "beach-sand-13",
+      "sprite": "naval-water-0",
       "x": 29,
       "y": 22,
       "width": 1,
@@ -9779,7 +9779,7 @@
     },
     {
       "id": "organic-ground-30-22",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-water-872",
       "x": 30,
       "y": 22,
       "width": 1,
@@ -9788,7 +9788,7 @@
     },
     {
       "id": "organic-ground-31-22",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-water-876",
       "x": 31,
       "y": 22,
       "width": 1,
@@ -9797,7 +9797,7 @@
     },
     {
       "id": "organic-ground-32-22",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-water-880",
       "x": 32,
       "y": 22,
       "width": 1,
@@ -9806,7 +9806,7 @@
     },
     {
       "id": "organic-ground-33-22",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-land-884",
       "x": 33,
       "y": 22,
       "width": 1,
@@ -9815,7 +9815,7 @@
     },
     {
       "id": "organic-ground-34-22",
-      "sprite": "beach-sand-0",
+      "sprite": "organic-coast-land-888",
       "x": 34,
       "y": 22,
       "width": 1,
@@ -9824,7 +9824,7 @@
     },
     {
       "id": "organic-ground-35-22",
-      "sprite": "beach-sand-7",
+      "sprite": "organic-coast-land-892",
       "x": 35,
       "y": 22,
       "width": 1,
@@ -9896,7 +9896,7 @@
     },
     {
       "id": "organic-ground-43-22",
-      "sprite": "organic-coast-land-752",
+      "sprite": "beach-sand-15",
       "x": 43,
       "y": 22,
       "width": 1,
@@ -9905,7 +9905,7 @@
     },
     {
       "id": "organic-ground-44-22",
-      "sprite": "organic-coast-land-756",
+      "sprite": "organic-coast-land-896",
       "x": 44,
       "y": 22,
       "width": 1,
@@ -9914,7 +9914,7 @@
     },
     {
       "id": "organic-ground-45-22",
-      "sprite": "organic-coast-water-760",
+      "sprite": "organic-coast-water-900",
       "x": 45,
       "y": 22,
       "width": 1,
@@ -9959,7 +9959,7 @@
     },
     {
       "id": "organic-ground-2-23",
-      "sprite": "organic-coast-water-764",
+      "sprite": "organic-coast-water-904",
       "x": 2,
       "y": 23,
       "width": 1,
@@ -9968,7 +9968,7 @@
     },
     {
       "id": "organic-ground-3-23",
-      "sprite": "organic-coast-land-768",
+      "sprite": "organic-coast-water-908",
       "x": 3,
       "y": 23,
       "width": 1,
@@ -9977,7 +9977,7 @@
     },
     {
       "id": "organic-ground-4-23",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-land-912",
       "x": 4,
       "y": 23,
       "width": 1,
@@ -10076,7 +10076,7 @@
     },
     {
       "id": "organic-ground-15-23",
-      "sprite": "beach-sand-6",
+      "sprite": "organic-coast-land-916",
       "x": 15,
       "y": 23,
       "width": 1,
@@ -10085,7 +10085,7 @@
     },
     {
       "id": "organic-ground-16-23",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-land-920",
       "x": 16,
       "y": 23,
       "width": 1,
@@ -10094,7 +10094,7 @@
     },
     {
       "id": "organic-ground-17-23",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-water-924",
       "x": 17,
       "y": 23,
       "width": 1,
@@ -10103,7 +10103,7 @@
     },
     {
       "id": "organic-ground-18-23",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-water-928",
       "x": 18,
       "y": 23,
       "width": 1,
@@ -10112,7 +10112,7 @@
     },
     {
       "id": "organic-ground-19-23",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-water-932",
       "x": 19,
       "y": 23,
       "width": 1,
@@ -10121,7 +10121,7 @@
     },
     {
       "id": "organic-ground-20-23",
-      "sprite": "beach-sand-9",
+      "sprite": "naval-water-1",
       "x": 20,
       "y": 23,
       "width": 1,
@@ -10130,7 +10130,7 @@
     },
     {
       "id": "organic-ground-21-23",
-      "sprite": "beach-sand-0",
+      "sprite": "naval-water-2",
       "x": 21,
       "y": 23,
       "width": 1,
@@ -10139,7 +10139,7 @@
     },
     {
       "id": "organic-ground-22-23",
-      "sprite": "beach-sand-7",
+      "sprite": "naval-water-0",
       "x": 22,
       "y": 23,
       "width": 1,
@@ -10148,7 +10148,7 @@
     },
     {
       "id": "organic-ground-23-23",
-      "sprite": "beach-sand-14",
+      "sprite": "naval-water-1",
       "x": 23,
       "y": 23,
       "width": 1,
@@ -10157,7 +10157,7 @@
     },
     {
       "id": "organic-ground-24-23",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-2",
       "x": 24,
       "y": 23,
       "width": 1,
@@ -10166,7 +10166,7 @@
     },
     {
       "id": "organic-ground-25-23",
-      "sprite": "beach-sand-12",
+      "sprite": "naval-water-0",
       "x": 25,
       "y": 23,
       "width": 1,
@@ -10175,7 +10175,7 @@
     },
     {
       "id": "organic-ground-26-23",
-      "sprite": "beach-sand-3",
+      "sprite": "naval-water-1",
       "x": 26,
       "y": 23,
       "width": 1,
@@ -10184,7 +10184,7 @@
     },
     {
       "id": "organic-ground-27-23",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-2",
       "x": 27,
       "y": 23,
       "width": 1,
@@ -10193,7 +10193,7 @@
     },
     {
       "id": "organic-ground-28-23",
-      "sprite": "beach-sand-1",
+      "sprite": "naval-water-0",
       "x": 28,
       "y": 23,
       "width": 1,
@@ -10202,7 +10202,7 @@
     },
     {
       "id": "organic-ground-29-23",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-1",
       "x": 29,
       "y": 23,
       "width": 1,
@@ -10211,7 +10211,7 @@
     },
     {
       "id": "organic-ground-30-23",
-      "sprite": "beach-sand-15",
+      "sprite": "naval-water-2",
       "x": 30,
       "y": 23,
       "width": 1,
@@ -10220,7 +10220,7 @@
     },
     {
       "id": "organic-ground-31-23",
-      "sprite": "beach-sand-6",
+      "sprite": "naval-water-0",
       "x": 31,
       "y": 23,
       "width": 1,
@@ -10229,7 +10229,7 @@
     },
     {
       "id": "organic-ground-32-23",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-water-936",
       "x": 32,
       "y": 23,
       "width": 1,
@@ -10238,7 +10238,7 @@
     },
     {
       "id": "organic-ground-33-23",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-water-940",
       "x": 33,
       "y": 23,
       "width": 1,
@@ -10247,7 +10247,7 @@
     },
     {
       "id": "organic-ground-34-23",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-water-944",
       "x": 34,
       "y": 23,
       "width": 1,
@@ -10256,7 +10256,7 @@
     },
     {
       "id": "organic-ground-35-23",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-land-948",
       "x": 35,
       "y": 23,
       "width": 1,
@@ -10265,7 +10265,7 @@
     },
     {
       "id": "organic-ground-36-23",
-      "sprite": "beach-sand-9",
+      "sprite": "organic-coast-land-952",
       "x": 36,
       "y": 23,
       "width": 1,
@@ -10328,7 +10328,7 @@
     },
     {
       "id": "organic-ground-43-23",
-      "sprite": "beach-sand-10",
+      "sprite": "organic-coast-land-956",
       "x": 43,
       "y": 23,
       "width": 1,
@@ -10337,7 +10337,7 @@
     },
     {
       "id": "organic-ground-44-23",
-      "sprite": "organic-coast-land-772",
+      "sprite": "organic-coast-land-960",
       "x": 44,
       "y": 23,
       "width": 1,
@@ -10346,7 +10346,7 @@
     },
     {
       "id": "organic-ground-45-23",
-      "sprite": "organic-coast-water-776",
+      "sprite": "organic-coast-water-964",
       "x": 45,
       "y": 23,
       "width": 1,
@@ -10355,7 +10355,7 @@
     },
     {
       "id": "organic-ground-46-23",
-      "sprite": "organic-coast-water-780",
+      "sprite": "naval-water-0",
       "x": 46,
       "y": 23,
       "width": 1,
@@ -10391,7 +10391,7 @@
     },
     {
       "id": "organic-ground-2-24",
-      "sprite": "organic-coast-water-784",
+      "sprite": "naval-water-2",
       "x": 2,
       "y": 24,
       "width": 1,
@@ -10400,7 +10400,7 @@
     },
     {
       "id": "organic-ground-3-24",
-      "sprite": "organic-coast-land-788",
+      "sprite": "organic-coast-water-968",
       "x": 3,
       "y": 24,
       "width": 1,
@@ -10409,7 +10409,7 @@
     },
     {
       "id": "organic-ground-4-24",
-      "sprite": "organic-coast-land-792",
+      "sprite": "organic-coast-land-972",
       "x": 4,
       "y": 24,
       "width": 1,
@@ -10418,7 +10418,7 @@
     },
     {
       "id": "organic-ground-5-24",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-land-976",
       "x": 5,
       "y": 24,
       "width": 1,
@@ -10490,7 +10490,7 @@
     },
     {
       "id": "organic-ground-13-24",
-      "sprite": "organic-coast-land-796",
+      "sprite": "beach-sand-3",
       "x": 13,
       "y": 24,
       "width": 1,
@@ -10499,7 +10499,7 @@
     },
     {
       "id": "organic-ground-14-24",
-      "sprite": "beach-sand-10",
+      "sprite": "organic-coast-land-980",
       "x": 14,
       "y": 24,
       "width": 1,
@@ -10508,7 +10508,7 @@
     },
     {
       "id": "organic-ground-15-24",
-      "sprite": "beach-sand-1",
+      "sprite": "organic-coast-land-984",
       "x": 15,
       "y": 24,
       "width": 1,
@@ -10517,7 +10517,7 @@
     },
     {
       "id": "organic-ground-16-24",
-      "sprite": "beach-sand-8",
+      "sprite": "organic-coast-water-988",
       "x": 16,
       "y": 24,
       "width": 1,
@@ -10526,7 +10526,7 @@
     },
     {
       "id": "organic-ground-17-24",
-      "sprite": "beach-sand-15",
+      "sprite": "organic-coast-water-992",
       "x": 17,
       "y": 24,
       "width": 1,
@@ -10535,7 +10535,7 @@
     },
     {
       "id": "organic-ground-18-24",
-      "sprite": "beach-sand-6",
+      "sprite": "naval-water-0",
       "x": 18,
       "y": 24,
       "width": 1,
@@ -10544,7 +10544,7 @@
     },
     {
       "id": "organic-ground-19-24",
-      "sprite": "beach-sand-13",
+      "sprite": "naval-water-1",
       "x": 19,
       "y": 24,
       "width": 1,
@@ -10553,7 +10553,7 @@
     },
     {
       "id": "organic-ground-20-24",
-      "sprite": "beach-sand-4",
+      "sprite": "naval-water-2",
       "x": 20,
       "y": 24,
       "width": 1,
@@ -10562,7 +10562,7 @@
     },
     {
       "id": "organic-ground-21-24",
-      "sprite": "beach-sand-11",
+      "sprite": "naval-water-0",
       "x": 21,
       "y": 24,
       "width": 1,
@@ -10571,7 +10571,7 @@
     },
     {
       "id": "organic-ground-22-24",
-      "sprite": "beach-sand-2",
+      "sprite": "naval-water-1",
       "x": 22,
       "y": 24,
       "width": 1,
@@ -10580,7 +10580,7 @@
     },
     {
       "id": "organic-ground-23-24",
-      "sprite": "beach-sand-9",
+      "sprite": "naval-water-2",
       "x": 23,
       "y": 24,
       "width": 1,
@@ -10589,7 +10589,7 @@
     },
     {
       "id": "organic-ground-24-24",
-      "sprite": "beach-sand-0",
+      "sprite": "naval-water-0",
       "x": 24,
       "y": 24,
       "width": 1,
@@ -10598,7 +10598,7 @@
     },
     {
       "id": "organic-ground-25-24",
-      "sprite": "beach-sand-7",
+      "sprite": "naval-water-1",
       "x": 25,
       "y": 24,
       "width": 1,
@@ -10607,7 +10607,7 @@
     },
     {
       "id": "organic-ground-26-24",
-      "sprite": "organic-coast-land-800",
+      "sprite": "naval-water-2",
       "x": 26,
       "y": 24,
       "width": 1,
@@ -10616,7 +10616,7 @@
     },
     {
       "id": "organic-ground-27-24",
-      "sprite": "organic-coast-land-804",
+      "sprite": "naval-water-0",
       "x": 27,
       "y": 24,
       "width": 1,
@@ -10625,7 +10625,7 @@
     },
     {
       "id": "organic-ground-28-24",
-      "sprite": "organic-coast-land-808",
+      "sprite": "naval-water-1",
       "x": 28,
       "y": 24,
       "width": 1,
@@ -10634,7 +10634,7 @@
     },
     {
       "id": "organic-ground-29-24",
-      "sprite": "organic-coast-land-812",
+      "sprite": "naval-water-2",
       "x": 29,
       "y": 24,
       "width": 1,
@@ -10643,7 +10643,7 @@
     },
     {
       "id": "organic-ground-30-24",
-      "sprite": "organic-coast-land-816",
+      "sprite": "naval-water-0",
       "x": 30,
       "y": 24,
       "width": 1,
@@ -10652,7 +10652,7 @@
     },
     {
       "id": "organic-ground-31-24",
-      "sprite": "organic-coast-land-820",
+      "sprite": "naval-water-1",
       "x": 31,
       "y": 24,
       "width": 1,
@@ -10661,7 +10661,7 @@
     },
     {
       "id": "organic-ground-32-24",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-2",
       "x": 32,
       "y": 24,
       "width": 1,
@@ -10670,7 +10670,7 @@
     },
     {
       "id": "organic-ground-33-24",
-      "sprite": "beach-sand-15",
+      "sprite": "naval-water-0",
       "x": 33,
       "y": 24,
       "width": 1,
@@ -10679,7 +10679,7 @@
     },
     {
       "id": "organic-ground-34-24",
-      "sprite": "beach-sand-6",
+      "sprite": "organic-coast-water-996",
       "x": 34,
       "y": 24,
       "width": 1,
@@ -10688,7 +10688,7 @@
     },
     {
       "id": "organic-ground-35-24",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-water-1000",
       "x": 35,
       "y": 24,
       "width": 1,
@@ -10697,7 +10697,7 @@
     },
     {
       "id": "organic-ground-36-24",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-land-1004",
       "x": 36,
       "y": 24,
       "width": 1,
@@ -10706,7 +10706,7 @@
     },
     {
       "id": "organic-ground-37-24",
-      "sprite": "beach-sand-11",
+      "sprite": "organic-coast-land-1008",
       "x": 37,
       "y": 24,
       "width": 1,
@@ -10715,7 +10715,7 @@
     },
     {
       "id": "organic-ground-38-24",
-      "sprite": "beach-sand-2",
+      "sprite": "organic-coast-land-1012",
       "x": 38,
       "y": 24,
       "width": 1,
@@ -10760,7 +10760,7 @@
     },
     {
       "id": "organic-ground-43-24",
-      "sprite": "organic-coast-land-824",
+      "sprite": "organic-coast-land-1016",
       "x": 43,
       "y": 24,
       "width": 1,
@@ -10769,7 +10769,7 @@
     },
     {
       "id": "organic-ground-44-24",
-      "sprite": "organic-coast-land-828",
+      "sprite": "organic-coast-water-1020",
       "x": 44,
       "y": 24,
       "width": 1,
@@ -10778,7 +10778,7 @@
     },
     {
       "id": "organic-ground-45-24",
-      "sprite": "organic-coast-water-832",
+      "sprite": "organic-coast-water-1024",
       "x": 45,
       "y": 24,
       "width": 1,
@@ -10832,7 +10832,7 @@
     },
     {
       "id": "organic-ground-3-25",
-      "sprite": "organic-coast-water-836",
+      "sprite": "organic-coast-water-1028",
       "x": 3,
       "y": 25,
       "width": 1,
@@ -10841,7 +10841,7 @@
     },
     {
       "id": "organic-ground-4-25",
-      "sprite": "organic-coast-water-840",
+      "sprite": "organic-coast-water-1032",
       "x": 4,
       "y": 25,
       "width": 1,
@@ -10850,7 +10850,7 @@
     },
     {
       "id": "organic-ground-5-25",
-      "sprite": "organic-coast-land-844",
+      "sprite": "organic-coast-land-1036",
       "x": 5,
       "y": 25,
       "width": 1,
@@ -10859,7 +10859,7 @@
     },
     {
       "id": "organic-ground-6-25",
-      "sprite": "organic-coast-land-848",
+      "sprite": "organic-coast-land-1040",
       "x": 6,
       "y": 25,
       "width": 1,
@@ -10904,7 +10904,7 @@
     },
     {
       "id": "organic-ground-11-25",
-      "sprite": "organic-coast-land-852",
+      "sprite": "beach-sand-0",
       "x": 11,
       "y": 25,
       "width": 1,
@@ -10913,7 +10913,7 @@
     },
     {
       "id": "organic-ground-12-25",
-      "sprite": "organic-coast-land-856",
+      "sprite": "beach-sand-7",
       "x": 12,
       "y": 25,
       "width": 1,
@@ -10922,7 +10922,7 @@
     },
     {
       "id": "organic-ground-13-25",
-      "sprite": "organic-coast-land-860",
+      "sprite": "organic-coast-land-1044",
       "x": 13,
       "y": 25,
       "width": 1,
@@ -10931,7 +10931,7 @@
     },
     {
       "id": "organic-ground-14-25",
-      "sprite": "organic-coast-land-864",
+      "sprite": "organic-coast-land-1048",
       "x": 14,
       "y": 25,
       "width": 1,
@@ -10940,7 +10940,7 @@
     },
     {
       "id": "organic-ground-15-25",
-      "sprite": "organic-coast-land-868",
+      "sprite": "organic-coast-water-1052",
       "x": 15,
       "y": 25,
       "width": 1,
@@ -10949,7 +10949,7 @@
     },
     {
       "id": "organic-ground-16-25",
-      "sprite": "beach-sand-3",
+      "sprite": "organic-coast-water-1056",
       "x": 16,
       "y": 25,
       "width": 1,
@@ -10958,7 +10958,7 @@
     },
     {
       "id": "organic-ground-17-25",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-0",
       "x": 17,
       "y": 25,
       "width": 1,
@@ -10967,7 +10967,7 @@
     },
     {
       "id": "organic-ground-18-25",
-      "sprite": "beach-sand-1",
+      "sprite": "naval-water-1",
       "x": 18,
       "y": 25,
       "width": 1,
@@ -10976,7 +10976,7 @@
     },
     {
       "id": "organic-ground-19-25",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-2",
       "x": 19,
       "y": 25,
       "width": 1,
@@ -10985,7 +10985,7 @@
     },
     {
       "id": "organic-ground-20-25",
-      "sprite": "beach-sand-15",
+      "sprite": "naval-water-0",
       "x": 20,
       "y": 25,
       "width": 1,
@@ -10994,7 +10994,7 @@
     },
     {
       "id": "organic-ground-21-25",
-      "sprite": "beach-sand-6",
+      "sprite": "naval-water-1",
       "x": 21,
       "y": 25,
       "width": 1,
@@ -11003,7 +11003,7 @@
     },
     {
       "id": "organic-ground-22-25",
-      "sprite": "beach-sand-13",
+      "sprite": "naval-water-2",
       "x": 22,
       "y": 25,
       "width": 1,
@@ -11012,7 +11012,7 @@
     },
     {
       "id": "organic-ground-23-25",
-      "sprite": "beach-sand-4",
+      "sprite": "naval-water-0",
       "x": 23,
       "y": 25,
       "width": 1,
@@ -11021,7 +11021,7 @@
     },
     {
       "id": "organic-ground-24-25",
-      "sprite": "beach-sand-11",
+      "sprite": "naval-water-1",
       "x": 24,
       "y": 25,
       "width": 1,
@@ -11030,7 +11030,7 @@
     },
     {
       "id": "organic-ground-25-25",
-      "sprite": "organic-coast-land-872",
+      "sprite": "naval-water-2",
       "x": 25,
       "y": 25,
       "width": 1,
@@ -11039,7 +11039,7 @@
     },
     {
       "id": "organic-ground-26-25",
-      "sprite": "organic-coast-land-876",
+      "sprite": "naval-water-0",
       "x": 26,
       "y": 25,
       "width": 1,
@@ -11048,7 +11048,7 @@
     },
     {
       "id": "organic-ground-27-25",
-      "sprite": "organic-coast-water-880",
+      "sprite": "naval-water-1",
       "x": 27,
       "y": 25,
       "width": 1,
@@ -11057,7 +11057,7 @@
     },
     {
       "id": "organic-ground-28-25",
-      "sprite": "organic-coast-water-884",
+      "sprite": "naval-water-2",
       "x": 28,
       "y": 25,
       "width": 1,
@@ -11066,7 +11066,7 @@
     },
     {
       "id": "organic-ground-29-25",
-      "sprite": "organic-coast-water-888",
+      "sprite": "naval-water-0",
       "x": 29,
       "y": 25,
       "width": 1,
@@ -11075,7 +11075,7 @@
     },
     {
       "id": "organic-ground-30-25",
-      "sprite": "organic-coast-water-892",
+      "sprite": "naval-water-1",
       "x": 30,
       "y": 25,
       "width": 1,
@@ -11084,7 +11084,7 @@
     },
     {
       "id": "organic-ground-31-25",
-      "sprite": "organic-coast-land-896",
+      "sprite": "naval-water-2",
       "x": 31,
       "y": 25,
       "width": 1,
@@ -11093,7 +11093,7 @@
     },
     {
       "id": "organic-ground-32-25",
-      "sprite": "organic-coast-land-900",
+      "sprite": "naval-water-0",
       "x": 32,
       "y": 25,
       "width": 1,
@@ -11102,7 +11102,7 @@
     },
     {
       "id": "organic-ground-33-25",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-1",
       "x": 33,
       "y": 25,
       "width": 1,
@@ -11111,7 +11111,7 @@
     },
     {
       "id": "organic-ground-34-25",
-      "sprite": "beach-sand-1",
+      "sprite": "naval-water-2",
       "x": 34,
       "y": 25,
       "width": 1,
@@ -11120,7 +11120,7 @@
     },
     {
       "id": "organic-ground-35-25",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-0",
       "x": 35,
       "y": 25,
       "width": 1,
@@ -11129,7 +11129,7 @@
     },
     {
       "id": "organic-ground-36-25",
-      "sprite": "beach-sand-15",
+      "sprite": "organic-coast-water-1060",
       "x": 36,
       "y": 25,
       "width": 1,
@@ -11138,7 +11138,7 @@
     },
     {
       "id": "organic-ground-37-25",
-      "sprite": "beach-sand-6",
+      "sprite": "organic-coast-water-1064",
       "x": 37,
       "y": 25,
       "width": 1,
@@ -11147,7 +11147,7 @@
     },
     {
       "id": "organic-ground-38-25",
-      "sprite": "beach-sand-13",
+      "sprite": "organic-coast-land-1068",
       "x": 38,
       "y": 25,
       "width": 1,
@@ -11156,7 +11156,7 @@
     },
     {
       "id": "organic-ground-39-25",
-      "sprite": "beach-sand-4",
+      "sprite": "organic-coast-land-1072",
       "x": 39,
       "y": 25,
       "width": 1,
@@ -11174,7 +11174,7 @@
     },
     {
       "id": "organic-ground-41-25",
-      "sprite": "organic-coast-land-904",
+      "sprite": "beach-sand-2",
       "x": 41,
       "y": 25,
       "width": 1,
@@ -11183,7 +11183,7 @@
     },
     {
       "id": "organic-ground-42-25",
-      "sprite": "organic-coast-land-908",
+      "sprite": "beach-sand-9",
       "x": 42,
       "y": 25,
       "width": 1,
@@ -11192,7 +11192,7 @@
     },
     {
       "id": "organic-ground-43-25",
-      "sprite": "organic-coast-land-912",
+      "sprite": "organic-coast-land-1076",
       "x": 43,
       "y": 25,
       "width": 1,
@@ -11201,7 +11201,7 @@
     },
     {
       "id": "organic-ground-44-25",
-      "sprite": "organic-coast-water-916",
+      "sprite": "organic-coast-water-1080",
       "x": 44,
       "y": 25,
       "width": 1,
@@ -11210,7 +11210,7 @@
     },
     {
       "id": "organic-ground-45-25",
-      "sprite": "organic-coast-water-920",
+      "sprite": "naval-water-1",
       "x": 45,
       "y": 25,
       "width": 1,
@@ -11273,7 +11273,7 @@
     },
     {
       "id": "organic-ground-4-26",
-      "sprite": "organic-coast-water-924",
+      "sprite": "organic-coast-water-1084",
       "x": 4,
       "y": 26,
       "width": 1,
@@ -11282,7 +11282,7 @@
     },
     {
       "id": "organic-ground-5-26",
-      "sprite": "organic-coast-water-928",
+      "sprite": "organic-coast-water-1088",
       "x": 5,
       "y": 26,
       "width": 1,
@@ -11291,7 +11291,7 @@
     },
     {
       "id": "organic-ground-6-26",
-      "sprite": "organic-coast-land-932",
+      "sprite": "organic-coast-land-1092",
       "x": 6,
       "y": 26,
       "width": 1,
@@ -11300,7 +11300,7 @@
     },
     {
       "id": "organic-ground-7-26",
-      "sprite": "organic-coast-land-936",
+      "sprite": "organic-coast-land-1096",
       "x": 7,
       "y": 26,
       "width": 1,
@@ -11309,7 +11309,7 @@
     },
     {
       "id": "organic-ground-8-26",
-      "sprite": "organic-coast-land-940",
+      "sprite": "organic-coast-land-1100",
       "x": 8,
       "y": 26,
       "width": 1,
@@ -11318,7 +11318,7 @@
     },
     {
       "id": "organic-ground-9-26",
-      "sprite": "organic-coast-land-944",
+      "sprite": "beach-sand-13",
       "x": 9,
       "y": 26,
       "width": 1,
@@ -11327,7 +11327,7 @@
     },
     {
       "id": "organic-ground-10-26",
-      "sprite": "organic-coast-land-948",
+      "sprite": "beach-sand-4",
       "x": 10,
       "y": 26,
       "width": 1,
@@ -11336,7 +11336,7 @@
     },
     {
       "id": "organic-ground-11-26",
-      "sprite": "organic-coast-water-952",
+      "sprite": "organic-coast-land-1104",
       "x": 11,
       "y": 26,
       "width": 1,
@@ -11345,7 +11345,7 @@
     },
     {
       "id": "organic-ground-12-26",
-      "sprite": "organic-coast-water-956",
+      "sprite": "organic-coast-land-1108",
       "x": 12,
       "y": 26,
       "width": 1,
@@ -11354,7 +11354,7 @@
     },
     {
       "id": "organic-ground-13-26",
-      "sprite": "organic-coast-water-960",
+      "sprite": "organic-coast-land-1112",
       "x": 13,
       "y": 26,
       "width": 1,
@@ -11363,7 +11363,7 @@
     },
     {
       "id": "organic-ground-14-26",
-      "sprite": "organic-coast-water-964",
+      "sprite": "organic-coast-water-1116",
       "x": 14,
       "y": 26,
       "width": 1,
@@ -11372,7 +11372,7 @@
     },
     {
       "id": "organic-ground-15-26",
-      "sprite": "organic-coast-water-968",
+      "sprite": "organic-coast-water-1120",
       "x": 15,
       "y": 26,
       "width": 1,
@@ -11381,7 +11381,7 @@
     },
     {
       "id": "organic-ground-16-26",
-      "sprite": "organic-coast-land-972",
+      "sprite": "naval-water-0",
       "x": 16,
       "y": 26,
       "width": 1,
@@ -11390,7 +11390,7 @@
     },
     {
       "id": "organic-ground-17-26",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-1",
       "x": 17,
       "y": 26,
       "width": 1,
@@ -11399,7 +11399,7 @@
     },
     {
       "id": "organic-ground-18-26",
-      "sprite": "beach-sand-12",
+      "sprite": "naval-water-2",
       "x": 18,
       "y": 26,
       "width": 1,
@@ -11408,7 +11408,7 @@
     },
     {
       "id": "organic-ground-19-26",
-      "sprite": "beach-sand-3",
+      "sprite": "naval-water-0",
       "x": 19,
       "y": 26,
       "width": 1,
@@ -11417,7 +11417,7 @@
     },
     {
       "id": "organic-ground-20-26",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-1",
       "x": 20,
       "y": 26,
       "width": 1,
@@ -11426,7 +11426,7 @@
     },
     {
       "id": "organic-ground-21-26",
-      "sprite": "beach-sand-1",
+      "sprite": "naval-water-2",
       "x": 21,
       "y": 26,
       "width": 1,
@@ -11435,7 +11435,7 @@
     },
     {
       "id": "organic-ground-22-26",
-      "sprite": "beach-sand-8",
+      "sprite": "naval-water-0",
       "x": 22,
       "y": 26,
       "width": 1,
@@ -11444,7 +11444,7 @@
     },
     {
       "id": "organic-ground-23-26",
-      "sprite": "beach-sand-15",
+      "sprite": "naval-water-1",
       "x": 23,
       "y": 26,
       "width": 1,
@@ -11453,7 +11453,7 @@
     },
     {
       "id": "organic-ground-24-26",
-      "sprite": "beach-sand-6",
+      "sprite": "naval-water-2",
       "x": 24,
       "y": 26,
       "width": 1,
@@ -11462,7 +11462,7 @@
     },
     {
       "id": "organic-ground-25-26",
-      "sprite": "organic-coast-land-976",
+      "sprite": "naval-water-0",
       "x": 25,
       "y": 26,
       "width": 1,
@@ -11471,7 +11471,7 @@
     },
     {
       "id": "organic-ground-26-26",
-      "sprite": "organic-coast-water-980",
+      "sprite": "naval-water-1",
       "x": 26,
       "y": 26,
       "width": 1,
@@ -11480,7 +11480,7 @@
     },
     {
       "id": "organic-ground-27-26",
-      "sprite": "organic-coast-water-984",
+      "sprite": "naval-water-2",
       "x": 27,
       "y": 26,
       "width": 1,
@@ -11507,7 +11507,7 @@
     },
     {
       "id": "organic-ground-30-26",
-      "sprite": "organic-coast-water-988",
+      "sprite": "naval-water-2",
       "x": 30,
       "y": 26,
       "width": 1,
@@ -11516,7 +11516,7 @@
     },
     {
       "id": "organic-ground-31-26",
-      "sprite": "organic-coast-water-992",
+      "sprite": "naval-water-0",
       "x": 31,
       "y": 26,
       "width": 1,
@@ -11525,7 +11525,7 @@
     },
     {
       "id": "organic-ground-32-26",
-      "sprite": "organic-coast-land-996",
+      "sprite": "naval-water-1",
       "x": 32,
       "y": 26,
       "width": 1,
@@ -11534,7 +11534,7 @@
     },
     {
       "id": "organic-ground-33-26",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-2",
       "x": 33,
       "y": 26,
       "width": 1,
@@ -11543,7 +11543,7 @@
     },
     {
       "id": "organic-ground-34-26",
-      "sprite": "beach-sand-12",
+      "sprite": "naval-water-0",
       "x": 34,
       "y": 26,
       "width": 1,
@@ -11552,7 +11552,7 @@
     },
     {
       "id": "organic-ground-35-26",
-      "sprite": "beach-sand-3",
+      "sprite": "naval-water-1",
       "x": 35,
       "y": 26,
       "width": 1,
@@ -11561,7 +11561,7 @@
     },
     {
       "id": "organic-ground-36-26",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-2",
       "x": 36,
       "y": 26,
       "width": 1,
@@ -11570,7 +11570,7 @@
     },
     {
       "id": "organic-ground-37-26",
-      "sprite": "beach-sand-1",
+      "sprite": "organic-coast-water-1124",
       "x": 37,
       "y": 26,
       "width": 1,
@@ -11579,7 +11579,7 @@
     },
     {
       "id": "organic-ground-38-26",
-      "sprite": "beach-sand-8",
+      "sprite": "organic-coast-water-1128",
       "x": 38,
       "y": 26,
       "width": 1,
@@ -11588,7 +11588,7 @@
     },
     {
       "id": "organic-ground-39-26",
-      "sprite": "organic-coast-land-1000",
+      "sprite": "organic-coast-land-1132",
       "x": 39,
       "y": 26,
       "width": 1,
@@ -11597,7 +11597,7 @@
     },
     {
       "id": "organic-ground-40-26",
-      "sprite": "organic-coast-land-1004",
+      "sprite": "organic-coast-land-1136",
       "x": 40,
       "y": 26,
       "width": 1,
@@ -11606,7 +11606,7 @@
     },
     {
       "id": "organic-ground-41-26",
-      "sprite": "organic-coast-land-1008",
+      "sprite": "organic-coast-land-1140",
       "x": 41,
       "y": 26,
       "width": 1,
@@ -11615,7 +11615,7 @@
     },
     {
       "id": "organic-ground-42-26",
-      "sprite": "organic-coast-water-1012",
+      "sprite": "organic-coast-land-1144",
       "x": 42,
       "y": 26,
       "width": 1,
@@ -11624,7 +11624,7 @@
     },
     {
       "id": "organic-ground-43-26",
-      "sprite": "organic-coast-water-1016",
+      "sprite": "organic-coast-water-1148",
       "x": 43,
       "y": 26,
       "width": 1,
@@ -11633,7 +11633,7 @@
     },
     {
       "id": "organic-ground-44-26",
-      "sprite": "organic-coast-water-1020",
+      "sprite": "organic-coast-water-1152",
       "x": 44,
       "y": 26,
       "width": 1,
@@ -11714,7 +11714,7 @@
     },
     {
       "id": "organic-ground-5-27",
-      "sprite": "organic-coast-water-1024",
+      "sprite": "organic-coast-water-1156",
       "x": 5,
       "y": 27,
       "width": 1,
@@ -11723,7 +11723,7 @@
     },
     {
       "id": "organic-ground-6-27",
-      "sprite": "organic-coast-water-1028",
+      "sprite": "organic-coast-water-1160",
       "x": 6,
       "y": 27,
       "width": 1,
@@ -11732,7 +11732,7 @@
     },
     {
       "id": "organic-ground-7-27",
-      "sprite": "organic-coast-water-1032",
+      "sprite": "organic-coast-water-1164",
       "x": 7,
       "y": 27,
       "width": 1,
@@ -11741,7 +11741,7 @@
     },
     {
       "id": "organic-ground-8-27",
-      "sprite": "organic-coast-water-1036",
+      "sprite": "organic-coast-land-1168",
       "x": 8,
       "y": 27,
       "width": 1,
@@ -11750,7 +11750,7 @@
     },
     {
       "id": "organic-ground-9-27",
-      "sprite": "organic-coast-water-1040",
+      "sprite": "organic-coast-land-1172",
       "x": 9,
       "y": 27,
       "width": 1,
@@ -11759,7 +11759,7 @@
     },
     {
       "id": "organic-ground-10-27",
-      "sprite": "organic-coast-water-1044",
+      "sprite": "organic-coast-land-1176",
       "x": 10,
       "y": 27,
       "width": 1,
@@ -11768,7 +11768,7 @@
     },
     {
       "id": "organic-ground-11-27",
-      "sprite": "organic-coast-water-1048",
+      "sprite": "organic-coast-land-1180",
       "x": 11,
       "y": 27,
       "width": 1,
@@ -11777,7 +11777,7 @@
     },
     {
       "id": "organic-ground-12-27",
-      "sprite": "naval-water-0",
+      "sprite": "organic-coast-water-1184",
       "x": 12,
       "y": 27,
       "width": 1,
@@ -11786,7 +11786,7 @@
     },
     {
       "id": "organic-ground-13-27",
-      "sprite": "naval-water-1",
+      "sprite": "organic-coast-water-1188",
       "x": 13,
       "y": 27,
       "width": 1,
@@ -11795,7 +11795,7 @@
     },
     {
       "id": "organic-ground-14-27",
-      "sprite": "naval-water-2",
+      "sprite": "organic-coast-water-1192",
       "x": 14,
       "y": 27,
       "width": 1,
@@ -11804,7 +11804,7 @@
     },
     {
       "id": "organic-ground-15-27",
-      "sprite": "organic-coast-water-1052",
+      "sprite": "naval-water-0",
       "x": 15,
       "y": 27,
       "width": 1,
@@ -11813,7 +11813,7 @@
     },
     {
       "id": "organic-ground-16-27",
-      "sprite": "organic-coast-land-1056",
+      "sprite": "naval-water-1",
       "x": 16,
       "y": 27,
       "width": 1,
@@ -11822,7 +11822,7 @@
     },
     {
       "id": "organic-ground-17-27",
-      "sprite": "organic-coast-land-1060",
+      "sprite": "naval-water-2",
       "x": 17,
       "y": 27,
       "width": 1,
@@ -11831,7 +11831,7 @@
     },
     {
       "id": "organic-ground-18-27",
-      "sprite": "beach-sand-7",
+      "sprite": "naval-water-0",
       "x": 18,
       "y": 27,
       "width": 1,
@@ -11840,7 +11840,7 @@
     },
     {
       "id": "organic-ground-19-27",
-      "sprite": "beach-sand-14",
+      "sprite": "naval-water-1",
       "x": 19,
       "y": 27,
       "width": 1,
@@ -11849,7 +11849,7 @@
     },
     {
       "id": "organic-ground-20-27",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-2",
       "x": 20,
       "y": 27,
       "width": 1,
@@ -11858,7 +11858,7 @@
     },
     {
       "id": "organic-ground-21-27",
-      "sprite": "beach-sand-12",
+      "sprite": "naval-water-0",
       "x": 21,
       "y": 27,
       "width": 1,
@@ -11867,7 +11867,7 @@
     },
     {
       "id": "organic-ground-22-27",
-      "sprite": "beach-sand-3",
+      "sprite": "naval-water-1",
       "x": 22,
       "y": 27,
       "width": 1,
@@ -11876,7 +11876,7 @@
     },
     {
       "id": "organic-ground-23-27",
-      "sprite": "beach-sand-10",
+      "sprite": "naval-water-2",
       "x": 23,
       "y": 27,
       "width": 1,
@@ -11885,7 +11885,7 @@
     },
     {
       "id": "organic-ground-24-27",
-      "sprite": "organic-coast-land-1064",
+      "sprite": "naval-water-0",
       "x": 24,
       "y": 27,
       "width": 1,
@@ -11894,7 +11894,7 @@
     },
     {
       "id": "organic-ground-25-27",
-      "sprite": "organic-coast-land-1068",
+      "sprite": "naval-water-1",
       "x": 25,
       "y": 27,
       "width": 1,
@@ -11903,7 +11903,7 @@
     },
     {
       "id": "organic-ground-26-27",
-      "sprite": "organic-coast-water-1072",
+      "sprite": "naval-water-2",
       "x": 26,
       "y": 27,
       "width": 1,
@@ -11948,7 +11948,7 @@
     },
     {
       "id": "organic-ground-31-27",
-      "sprite": "organic-coast-water-1076",
+      "sprite": "naval-water-1",
       "x": 31,
       "y": 27,
       "width": 1,
@@ -11957,7 +11957,7 @@
     },
     {
       "id": "organic-ground-32-27",
-      "sprite": "organic-coast-land-1080",
+      "sprite": "naval-water-2",
       "x": 32,
       "y": 27,
       "width": 1,
@@ -11966,7 +11966,7 @@
     },
     {
       "id": "organic-ground-33-27",
-      "sprite": "organic-coast-land-1084",
+      "sprite": "naval-water-0",
       "x": 33,
       "y": 27,
       "width": 1,
@@ -11975,7 +11975,7 @@
     },
     {
       "id": "organic-ground-34-27",
-      "sprite": "beach-sand-7",
+      "sprite": "naval-water-1",
       "x": 34,
       "y": 27,
       "width": 1,
@@ -11984,7 +11984,7 @@
     },
     {
       "id": "organic-ground-35-27",
-      "sprite": "beach-sand-14",
+      "sprite": "naval-water-2",
       "x": 35,
       "y": 27,
       "width": 1,
@@ -11993,7 +11993,7 @@
     },
     {
       "id": "organic-ground-36-27",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-0",
       "x": 36,
       "y": 27,
       "width": 1,
@@ -12002,7 +12002,7 @@
     },
     {
       "id": "organic-ground-37-27",
-      "sprite": "organic-coast-land-1088",
+      "sprite": "naval-water-1",
       "x": 37,
       "y": 27,
       "width": 1,
@@ -12011,7 +12011,7 @@
     },
     {
       "id": "organic-ground-38-27",
-      "sprite": "organic-coast-land-1092",
+      "sprite": "organic-coast-water-1196",
       "x": 38,
       "y": 27,
       "width": 1,
@@ -12020,7 +12020,7 @@
     },
     {
       "id": "organic-ground-39-27",
-      "sprite": "organic-coast-water-1096",
+      "sprite": "organic-coast-water-1200",
       "x": 39,
       "y": 27,
       "width": 1,
@@ -12029,7 +12029,7 @@
     },
     {
       "id": "organic-ground-40-27",
-      "sprite": "organic-coast-water-1100",
+      "sprite": "organic-coast-water-1204",
       "x": 40,
       "y": 27,
       "width": 1,
@@ -12038,7 +12038,7 @@
     },
     {
       "id": "organic-ground-41-27",
-      "sprite": "organic-coast-water-1104",
+      "sprite": "organic-coast-water-1208",
       "x": 41,
       "y": 27,
       "width": 1,
@@ -12047,7 +12047,7 @@
     },
     {
       "id": "organic-ground-42-27",
-      "sprite": "organic-coast-water-1108",
+      "sprite": "organic-coast-water-1212",
       "x": 42,
       "y": 27,
       "width": 1,
@@ -12056,7 +12056,7 @@
     },
     {
       "id": "organic-ground-43-27",
-      "sprite": "naval-water-1",
+      "sprite": "organic-coast-water-1216",
       "x": 43,
       "y": 27,
       "width": 1,
@@ -12164,7 +12164,7 @@
     },
     {
       "id": "organic-ground-7-28",
-      "sprite": "organic-coast-water-1112",
+      "sprite": "organic-coast-water-1220",
       "x": 7,
       "y": 28,
       "width": 1,
@@ -12173,7 +12173,7 @@
     },
     {
       "id": "organic-ground-8-28",
-      "sprite": "organic-coast-water-1116",
+      "sprite": "organic-coast-water-1224",
       "x": 8,
       "y": 28,
       "width": 1,
@@ -12182,7 +12182,7 @@
     },
     {
       "id": "organic-ground-9-28",
-      "sprite": "organic-coast-water-1120",
+      "sprite": "organic-coast-water-1228",
       "x": 9,
       "y": 28,
       "width": 1,
@@ -12191,7 +12191,7 @@
     },
     {
       "id": "organic-ground-10-28",
-      "sprite": "naval-water-2",
+      "sprite": "organic-coast-water-1232",
       "x": 10,
       "y": 28,
       "width": 1,
@@ -12200,7 +12200,7 @@
     },
     {
       "id": "organic-ground-11-28",
-      "sprite": "naval-water-0",
+      "sprite": "organic-coast-water-1236",
       "x": 11,
       "y": 28,
       "width": 1,
@@ -12209,7 +12209,7 @@
     },
     {
       "id": "organic-ground-12-28",
-      "sprite": "naval-water-1",
+      "sprite": "organic-coast-water-1240",
       "x": 12,
       "y": 28,
       "width": 1,
@@ -12236,7 +12236,7 @@
     },
     {
       "id": "organic-ground-15-28",
-      "sprite": "organic-coast-water-1124",
+      "sprite": "naval-water-1",
       "x": 15,
       "y": 28,
       "width": 1,
@@ -12245,7 +12245,7 @@
     },
     {
       "id": "organic-ground-16-28",
-      "sprite": "organic-coast-water-1128",
+      "sprite": "naval-water-2",
       "x": 16,
       "y": 28,
       "width": 1,
@@ -12254,7 +12254,7 @@
     },
     {
       "id": "organic-ground-17-28",
-      "sprite": "organic-coast-land-1132",
+      "sprite": "naval-water-0",
       "x": 17,
       "y": 28,
       "width": 1,
@@ -12263,7 +12263,7 @@
     },
     {
       "id": "organic-ground-18-28",
-      "sprite": "organic-coast-land-1136",
+      "sprite": "naval-water-1",
       "x": 18,
       "y": 28,
       "width": 1,
@@ -12272,7 +12272,7 @@
     },
     {
       "id": "organic-ground-19-28",
-      "sprite": "beach-sand-9",
+      "sprite": "naval-water-2",
       "x": 19,
       "y": 28,
       "width": 1,
@@ -12281,7 +12281,7 @@
     },
     {
       "id": "organic-ground-20-28",
-      "sprite": "beach-sand-0",
+      "sprite": "naval-water-0",
       "x": 20,
       "y": 28,
       "width": 1,
@@ -12290,7 +12290,7 @@
     },
     {
       "id": "organic-ground-21-28",
-      "sprite": "beach-sand-7",
+      "sprite": "naval-water-1",
       "x": 21,
       "y": 28,
       "width": 1,
@@ -12299,7 +12299,7 @@
     },
     {
       "id": "organic-ground-22-28",
-      "sprite": "beach-sand-14",
+      "sprite": "naval-water-2",
       "x": 22,
       "y": 28,
       "width": 1,
@@ -12308,7 +12308,7 @@
     },
     {
       "id": "organic-ground-23-28",
-      "sprite": "beach-sand-5",
+      "sprite": "naval-water-0",
       "x": 23,
       "y": 28,
       "width": 1,
@@ -12317,7 +12317,7 @@
     },
     {
       "id": "organic-ground-24-28",
-      "sprite": "organic-coast-land-1140",
+      "sprite": "naval-water-1",
       "x": 24,
       "y": 28,
       "width": 1,
@@ -12326,7 +12326,7 @@
     },
     {
       "id": "organic-ground-25-28",
-      "sprite": "organic-coast-water-1144",
+      "sprite": "naval-water-2",
       "x": 25,
       "y": 28,
       "width": 1,
@@ -12335,7 +12335,7 @@
     },
     {
       "id": "organic-ground-26-28",
-      "sprite": "organic-coast-water-1148",
+      "sprite": "naval-water-0",
       "x": 26,
       "y": 28,
       "width": 1,
@@ -12380,7 +12380,7 @@
     },
     {
       "id": "organic-ground-31-28",
-      "sprite": "organic-coast-water-1152",
+      "sprite": "naval-water-2",
       "x": 31,
       "y": 28,
       "width": 1,
@@ -12389,7 +12389,7 @@
     },
     {
       "id": "organic-ground-32-28",
-      "sprite": "organic-coast-water-1156",
+      "sprite": "naval-water-0",
       "x": 32,
       "y": 28,
       "width": 1,
@@ -12398,7 +12398,7 @@
     },
     {
       "id": "organic-ground-33-28",
-      "sprite": "organic-coast-land-1160",
+      "sprite": "naval-water-1",
       "x": 33,
       "y": 28,
       "width": 1,
@@ -12407,7 +12407,7 @@
     },
     {
       "id": "organic-ground-34-28",
-      "sprite": "organic-coast-land-1164",
+      "sprite": "naval-water-2",
       "x": 34,
       "y": 28,
       "width": 1,
@@ -12416,7 +12416,7 @@
     },
     {
       "id": "organic-ground-35-28",
-      "sprite": "organic-coast-land-1168",
+      "sprite": "naval-water-0",
       "x": 35,
       "y": 28,
       "width": 1,
@@ -12425,7 +12425,7 @@
     },
     {
       "id": "organic-ground-36-28",
-      "sprite": "organic-coast-land-1172",
+      "sprite": "naval-water-1",
       "x": 36,
       "y": 28,
       "width": 1,
@@ -12434,7 +12434,7 @@
     },
     {
       "id": "organic-ground-37-28",
-      "sprite": "organic-coast-land-1176",
+      "sprite": "naval-water-2",
       "x": 37,
       "y": 28,
       "width": 1,
@@ -12443,7 +12443,7 @@
     },
     {
       "id": "organic-ground-38-28",
-      "sprite": "organic-coast-water-1180",
+      "sprite": "naval-water-0",
       "x": 38,
       "y": 28,
       "width": 1,
@@ -12452,7 +12452,7 @@
     },
     {
       "id": "organic-ground-39-28",
-      "sprite": "organic-coast-water-1184",
+      "sprite": "naval-water-1",
       "x": 39,
       "y": 28,
       "width": 1,
@@ -12461,7 +12461,7 @@
     },
     {
       "id": "organic-ground-40-28",
-      "sprite": "naval-water-2",
+      "sprite": "organic-coast-water-1244",
       "x": 40,
       "y": 28,
       "width": 1,
@@ -12470,7 +12470,7 @@
     },
     {
       "id": "organic-ground-41-28",
-      "sprite": "naval-water-0",
+      "sprite": "organic-coast-water-1248",
       "x": 41,
       "y": 28,
       "width": 1,
@@ -12479,7 +12479,7 @@
     },
     {
       "id": "organic-ground-42-28",
-      "sprite": "naval-water-1",
+      "sprite": "organic-coast-water-1252",
       "x": 42,
       "y": 28,
       "width": 1,
@@ -12677,7 +12677,7 @@
     },
     {
       "id": "organic-ground-16-29",
-      "sprite": "organic-coast-water-1188",
+      "sprite": "naval-water-0",
       "x": 16,
       "y": 29,
       "width": 1,
@@ -12686,7 +12686,7 @@
     },
     {
       "id": "organic-ground-17-29",
-      "sprite": "organic-coast-water-1192",
+      "sprite": "naval-water-1",
       "x": 17,
       "y": 29,
       "width": 1,
@@ -12695,7 +12695,7 @@
     },
     {
       "id": "organic-ground-18-29",
-      "sprite": "organic-coast-land-1196",
+      "sprite": "naval-water-2",
       "x": 18,
       "y": 29,
       "width": 1,
@@ -12704,7 +12704,7 @@
     },
     {
       "id": "organic-ground-19-29",
-      "sprite": "organic-coast-land-1200",
+      "sprite": "naval-water-0",
       "x": 19,
       "y": 29,
       "width": 1,
@@ -12713,7 +12713,7 @@
     },
     {
       "id": "organic-ground-20-29",
-      "sprite": "beach-sand-11",
+      "sprite": "naval-water-1",
       "x": 20,
       "y": 29,
       "width": 1,
@@ -12722,7 +12722,7 @@
     },
     {
       "id": "organic-ground-21-29",
-      "sprite": "beach-sand-2",
+      "sprite": "naval-water-2",
       "x": 21,
       "y": 29,
       "width": 1,
@@ -12731,7 +12731,7 @@
     },
     {
       "id": "organic-ground-22-29",
-      "sprite": "beach-sand-9",
+      "sprite": "naval-water-0",
       "x": 22,
       "y": 29,
       "width": 1,
@@ -12740,7 +12740,7 @@
     },
     {
       "id": "organic-ground-23-29",
-      "sprite": "organic-coast-land-1204",
+      "sprite": "naval-water-1",
       "x": 23,
       "y": 29,
       "width": 1,
@@ -12749,7 +12749,7 @@
     },
     {
       "id": "organic-ground-24-29",
-      "sprite": "organic-coast-land-1208",
+      "sprite": "naval-water-2",
       "x": 24,
       "y": 29,
       "width": 1,
@@ -12758,7 +12758,7 @@
     },
     {
       "id": "organic-ground-25-29",
-      "sprite": "organic-coast-water-1212",
+      "sprite": "naval-water-0",
       "x": 25,
       "y": 29,
       "width": 1,
@@ -12821,7 +12821,7 @@
     },
     {
       "id": "organic-ground-32-29",
-      "sprite": "organic-coast-water-1216",
+      "sprite": "naval-water-1",
       "x": 32,
       "y": 29,
       "width": 1,
@@ -12830,7 +12830,7 @@
     },
     {
       "id": "organic-ground-33-29",
-      "sprite": "organic-coast-water-1220",
+      "sprite": "naval-water-2",
       "x": 33,
       "y": 29,
       "width": 1,
@@ -12839,7 +12839,7 @@
     },
     {
       "id": "organic-ground-34-29",
-      "sprite": "organic-coast-water-1224",
+      "sprite": "naval-water-0",
       "x": 34,
       "y": 29,
       "width": 1,
@@ -12848,7 +12848,7 @@
     },
     {
       "id": "organic-ground-35-29",
-      "sprite": "organic-coast-water-1228",
+      "sprite": "naval-water-1",
       "x": 35,
       "y": 29,
       "width": 1,
@@ -12857,7 +12857,7 @@
     },
     {
       "id": "organic-ground-36-29",
-      "sprite": "organic-coast-water-1232",
+      "sprite": "naval-water-2",
       "x": 36,
       "y": 29,
       "width": 1,
@@ -12866,7 +12866,7 @@
     },
     {
       "id": "organic-ground-37-29",
-      "sprite": "organic-coast-water-1236",
+      "sprite": "naval-water-0",
       "x": 37,
       "y": 29,
       "width": 1,
@@ -12875,7 +12875,7 @@
     },
     {
       "id": "organic-ground-38-29",
-      "sprite": "organic-coast-water-1240",
+      "sprite": "naval-water-1",
       "x": 38,
       "y": 29,
       "width": 1,
@@ -13118,7 +13118,7 @@
     },
     {
       "id": "organic-ground-17-30",
-      "sprite": "organic-coast-water-1244",
+      "sprite": "naval-water-2",
       "x": 17,
       "y": 30,
       "width": 1,
@@ -13127,7 +13127,7 @@
     },
     {
       "id": "organic-ground-18-30",
-      "sprite": "organic-coast-water-1248",
+      "sprite": "naval-water-0",
       "x": 18,
       "y": 30,
       "width": 1,
@@ -13136,7 +13136,7 @@
     },
     {
       "id": "organic-ground-19-30",
-      "sprite": "organic-coast-land-1252",
+      "sprite": "naval-water-1",
       "x": 19,
       "y": 30,
       "width": 1,
@@ -13145,7 +13145,7 @@
     },
     {
       "id": "organic-ground-20-30",
-      "sprite": "organic-coast-land-1256",
+      "sprite": "naval-water-2",
       "x": 20,
       "y": 30,
       "width": 1,
@@ -13154,7 +13154,7 @@
     },
     {
       "id": "organic-ground-21-30",
-      "sprite": "beach-sand-13",
+      "sprite": "naval-water-0",
       "x": 21,
       "y": 30,
       "width": 1,
@@ -13163,7 +13163,7 @@
     },
     {
       "id": "organic-ground-22-30",
-      "sprite": "beach-sand-4",
+      "sprite": "naval-water-1",
       "x": 22,
       "y": 30,
       "width": 1,
@@ -13172,7 +13172,7 @@
     },
     {
       "id": "organic-ground-23-30",
-      "sprite": "organic-coast-land-1260",
+      "sprite": "naval-water-2",
       "x": 23,
       "y": 30,
       "width": 1,
@@ -13181,7 +13181,7 @@
     },
     {
       "id": "organic-ground-24-30",
-      "sprite": "organic-coast-water-1264",
+      "sprite": "naval-water-0",
       "x": 24,
       "y": 30,
       "width": 1,
@@ -13559,7 +13559,7 @@
     },
     {
       "id": "organic-ground-18-31",
-      "sprite": "organic-coast-water-1268",
+      "sprite": "naval-water-1",
       "x": 18,
       "y": 31,
       "width": 1,
@@ -13568,7 +13568,7 @@
     },
     {
       "id": "organic-ground-19-31",
-      "sprite": "organic-coast-water-1272",
+      "sprite": "naval-water-2",
       "x": 19,
       "y": 31,
       "width": 1,
@@ -13577,7 +13577,7 @@
     },
     {
       "id": "organic-ground-20-31",
-      "sprite": "organic-coast-land-1276",
+      "sprite": "naval-water-0",
       "x": 20,
       "y": 31,
       "width": 1,
@@ -13586,7 +13586,7 @@
     },
     {
       "id": "organic-ground-21-31",
-      "sprite": "organic-coast-land-1280",
+      "sprite": "naval-water-1",
       "x": 21,
       "y": 31,
       "width": 1,
@@ -13595,7 +13595,7 @@
     },
     {
       "id": "organic-ground-22-31",
-      "sprite": "organic-coast-land-1284",
+      "sprite": "naval-water-2",
       "x": 22,
       "y": 31,
       "width": 1,
@@ -13604,7 +13604,7 @@
     },
     {
       "id": "organic-ground-23-31",
-      "sprite": "organic-coast-water-1288",
+      "sprite": "naval-water-0",
       "x": 23,
       "y": 31,
       "width": 1,
@@ -13613,7 +13613,7 @@
     },
     {
       "id": "organic-ground-24-31",
-      "sprite": "organic-coast-water-1292",
+      "sprite": "naval-water-1",
       "x": 24,
       "y": 31,
       "width": 1,
@@ -14000,7 +14000,7 @@
     },
     {
       "id": "organic-ground-19-32",
-      "sprite": "organic-coast-water-1296",
+      "sprite": "naval-water-0",
       "x": 19,
       "y": 32,
       "width": 1,
@@ -14009,7 +14009,7 @@
     },
     {
       "id": "organic-ground-20-32",
-      "sprite": "organic-coast-water-1300",
+      "sprite": "naval-water-1",
       "x": 20,
       "y": 32,
       "width": 1,
@@ -14018,7 +14018,7 @@
     },
     {
       "id": "organic-ground-21-32",
-      "sprite": "organic-coast-water-1304",
+      "sprite": "naval-water-2",
       "x": 21,
       "y": 32,
       "width": 1,
@@ -14027,7 +14027,7 @@
     },
     {
       "id": "organic-ground-22-32",
-      "sprite": "organic-coast-water-1308",
+      "sprite": "naval-water-0",
       "x": 22,
       "y": 32,
       "width": 1,
@@ -14036,7 +14036,7 @@
     },
     {
       "id": "organic-ground-23-32",
-      "sprite": "organic-coast-water-1312",
+      "sprite": "naval-water-1",
       "x": 23,
       "y": 32,
       "width": 1,
@@ -14450,7 +14450,7 @@
     },
     {
       "id": "organic-ground-21-33",
-      "sprite": "organic-coast-water-1316",
+      "sprite": "naval-water-0",
       "x": 21,
       "y": 33,
       "width": 1,
@@ -14459,7 +14459,7 @@
     },
     {
       "id": "organic-ground-22-33",
-      "sprite": "organic-coast-water-1320",
+      "sprite": "naval-water-1",
       "x": 22,
       "y": 33,
       "width": 1,
@@ -20740,6 +20740,15 @@
       "layer": "terrain"
     },
     {
+      "id": "cove-boarding-jetty",
+      "sprite": "naval-dock",
+      "x": 18,
+      "y": 21,
+      "width": 4,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
       "id": "organic-lookout-platform",
       "sprite": "naval-dock",
       "x": 21,
@@ -20749,48 +20758,12 @@
       "layer": "terrain"
     },
     {
-      "id": "quay-promenade",
-      "sprite": "naval-dock",
-      "x": 7,
-      "y": 26,
-      "width": 11,
-      "height": 3,
-      "layer": "terrain"
-    },
-    {
-      "id": "lookout-quay",
-      "sprite": "naval-dock",
-      "x": 18,
-      "y": 27,
-      "width": 12,
-      "height": 3,
-      "layer": "terrain"
-    },
-    {
-      "id": "organic-east-boardwalk",
-      "sprite": "naval-dock",
-      "x": 30,
-      "y": 26,
-      "width": 14,
-      "height": 3,
-      "layer": "terrain"
-    },
-    {
-      "id": "boarding-gangway",
-      "sprite": "naval-dock",
-      "x": 18,
-      "y": 29,
-      "width": 4,
-      "height": 9,
-      "layer": "terrain"
-    },
-    {
       "id": "east-shore-jetty",
       "sprite": "naval-dock",
       "x": 44,
-      "y": 25,
+      "y": 23,
       "width": 3,
-      "height": 13,
+      "height": 15,
       "layer": "terrain"
     },
     {
@@ -23467,6 +23440,78 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-22-22",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-22",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-22",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-22",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-22",
+      "sprite": "beach-sea-veil",
+      "x": 26,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-27-22",
+      "sprite": "beach-sea-veil",
+      "x": 27,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-28-22",
+      "sprite": "beach-sea-veil",
+      "x": 28,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-29-22",
+      "sprite": "beach-sea-veil",
+      "x": 29,
+      "y": 22,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-46-22",
       "sprite": "beach-sea-veil",
       "x": 46,
@@ -23503,6 +23548,123 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-20-23",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-23",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-23",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-23",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-23",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-23",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-23",
+      "sprite": "beach-sea-veil",
+      "x": 26,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-27-23",
+      "sprite": "beach-sea-veil",
+      "x": 27,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-28-23",
+      "sprite": "beach-sea-veil",
+      "x": 28,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-29-23",
+      "sprite": "beach-sea-veil",
+      "x": 29,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-30-23",
+      "sprite": "beach-sea-veil",
+      "x": 30,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-31-23",
+      "sprite": "beach-sea-veil",
+      "x": 31,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-46-23",
+      "sprite": "beach-sea-veil",
+      "x": 46,
+      "y": 23,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-47-23",
       "sprite": "beach-sea-veil",
       "x": 47,
@@ -23524,6 +23686,159 @@
       "id": "organic-veil-1-24",
       "sprite": "beach-sea-veil",
       "x": 1,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-2-24",
+      "sprite": "beach-sea-veil",
+      "x": 2,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-24",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-24",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-24",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-24",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-24",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-24",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-24",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-24",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-24",
+      "sprite": "beach-sea-veil",
+      "x": 26,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-27-24",
+      "sprite": "beach-sea-veil",
+      "x": 27,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-28-24",
+      "sprite": "beach-sea-veil",
+      "x": 28,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-29-24",
+      "sprite": "beach-sea-veil",
+      "x": 29,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-30-24",
+      "sprite": "beach-sea-veil",
+      "x": 30,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-31-24",
+      "sprite": "beach-sea-veil",
+      "x": 31,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-32-24",
+      "sprite": "beach-sea-veil",
+      "x": 32,
+      "y": 24,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-33-24",
+      "sprite": "beach-sea-veil",
+      "x": 33,
       "y": 24,
       "width": 1,
       "height": 1,
@@ -23569,6 +23884,186 @@
       "id": "organic-veil-2-25",
       "sprite": "beach-sea-veil",
       "x": 2,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-17-25",
+      "sprite": "beach-sea-veil",
+      "x": 17,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-25",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-25",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-25",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-25",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-25",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-25",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-25",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-25",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-25",
+      "sprite": "beach-sea-veil",
+      "x": 26,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-27-25",
+      "sprite": "beach-sea-veil",
+      "x": 27,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-28-25",
+      "sprite": "beach-sea-veil",
+      "x": 28,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-29-25",
+      "sprite": "beach-sea-veil",
+      "x": 29,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-30-25",
+      "sprite": "beach-sea-veil",
+      "x": 30,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-31-25",
+      "sprite": "beach-sea-veil",
+      "x": 31,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-32-25",
+      "sprite": "beach-sea-veil",
+      "x": 32,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-33-25",
+      "sprite": "beach-sea-veil",
+      "x": 33,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-34-25",
+      "sprite": "beach-sea-veil",
+      "x": 34,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-35-25",
+      "sprite": "beach-sea-veil",
+      "x": 35,
+      "y": 25,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-45-25",
+      "sprite": "beach-sea-veil",
+      "x": 45,
       "y": 25,
       "width": 1,
       "height": 1,
@@ -23629,6 +24124,114 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-16-26",
+      "sprite": "beach-sea-veil",
+      "x": 16,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-17-26",
+      "sprite": "beach-sea-veil",
+      "x": 17,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-26",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-26",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-26",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-26",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-26",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-26",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-26",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-26",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-26",
+      "sprite": "beach-sea-veil",
+      "x": 26,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-27-26",
+      "sprite": "beach-sea-veil",
+      "x": 27,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-28-26",
       "sprite": "beach-sea-veil",
       "x": 28,
@@ -23641,6 +24244,69 @@
       "id": "organic-veil-29-26",
       "sprite": "beach-sea-veil",
       "x": 29,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-30-26",
+      "sprite": "beach-sea-veil",
+      "x": 30,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-31-26",
+      "sprite": "beach-sea-veil",
+      "x": 31,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-32-26",
+      "sprite": "beach-sea-veil",
+      "x": 32,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-33-26",
+      "sprite": "beach-sea-veil",
+      "x": 33,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-34-26",
+      "sprite": "beach-sea-veil",
+      "x": 34,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-35-26",
+      "sprite": "beach-sea-veil",
+      "x": 35,
+      "y": 26,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-36-26",
+      "sprite": "beach-sea-veil",
+      "x": 36,
       "y": 26,
       "width": 1,
       "height": 1,
@@ -23719,27 +24385,108 @@
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-12-27",
+      "id": "organic-veil-15-27",
       "sprite": "beach-sea-veil",
-      "x": 12,
+      "x": 15,
       "y": 27,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-13-27",
+      "id": "organic-veil-16-27",
       "sprite": "beach-sea-veil",
-      "x": 13,
+      "x": 16,
       "y": 27,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-14-27",
+      "id": "organic-veil-17-27",
       "sprite": "beach-sea-veil",
-      "x": 14,
+      "x": 17,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-27",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-27",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-27",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-27",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-27",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-27",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-27",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-27",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-27",
+      "sprite": "beach-sea-veil",
+      "x": 26,
       "y": 27,
       "width": 1,
       "height": 1,
@@ -23782,9 +24529,63 @@
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-43-27",
+      "id": "organic-veil-31-27",
       "sprite": "beach-sea-veil",
-      "x": 43,
+      "x": 31,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-32-27",
+      "sprite": "beach-sea-veil",
+      "x": 32,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-33-27",
+      "sprite": "beach-sea-veil",
+      "x": 33,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-34-27",
+      "sprite": "beach-sea-veil",
+      "x": 34,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-35-27",
+      "sprite": "beach-sea-veil",
+      "x": 35,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-36-27",
+      "sprite": "beach-sea-veil",
+      "x": 36,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-37-27",
+      "sprite": "beach-sea-veil",
+      "x": 37,
       "y": 27,
       "width": 1,
       "height": 1,
@@ -23890,33 +24691,6 @@
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-10-28",
-      "sprite": "beach-sea-veil",
-      "x": 10,
-      "y": 28,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "organic-veil-11-28",
-      "sprite": "beach-sea-veil",
-      "x": 11,
-      "y": 28,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "organic-veil-12-28",
-      "sprite": "beach-sea-veil",
-      "x": 12,
-      "y": 28,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
       "id": "organic-veil-13-28",
       "sprite": "beach-sea-veil",
       "x": 13,
@@ -23929,6 +24703,114 @@
       "id": "organic-veil-14-28",
       "sprite": "beach-sea-veil",
       "x": 14,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-15-28",
+      "sprite": "beach-sea-veil",
+      "x": 15,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-16-28",
+      "sprite": "beach-sea-veil",
+      "x": 16,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-17-28",
+      "sprite": "beach-sea-veil",
+      "x": 17,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-28",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-28",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-28",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-28",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-28",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-28",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-28",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-28",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-26-28",
+      "sprite": "beach-sea-veil",
+      "x": 26,
       "y": 28,
       "width": 1,
       "height": 1,
@@ -23971,27 +24853,81 @@
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-40-28",
+      "id": "organic-veil-31-28",
       "sprite": "beach-sea-veil",
-      "x": 40,
+      "x": 31,
       "y": 28,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-41-28",
+      "id": "organic-veil-32-28",
       "sprite": "beach-sea-veil",
-      "x": 41,
+      "x": 32,
       "y": 28,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "organic-veil-42-28",
+      "id": "organic-veil-33-28",
       "sprite": "beach-sea-veil",
-      "x": 42,
+      "x": 33,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-34-28",
+      "sprite": "beach-sea-veil",
+      "x": 34,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-35-28",
+      "sprite": "beach-sea-veil",
+      "x": 35,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-36-28",
+      "sprite": "beach-sea-veil",
+      "x": 36,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-37-28",
+      "sprite": "beach-sea-veil",
+      "x": 37,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-38-28",
+      "sprite": "beach-sea-veil",
+      "x": 38,
+      "y": 28,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-39-28",
+      "sprite": "beach-sea-veil",
+      "x": 39,
       "y": 28,
       "width": 1,
       "height": 1,
@@ -24187,6 +25123,96 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-16-29",
+      "sprite": "beach-sea-veil",
+      "x": 16,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-17-29",
+      "sprite": "beach-sea-veil",
+      "x": 17,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-29",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-29",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-29",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-29",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-29",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-29",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-29",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-25-29",
+      "sprite": "beach-sea-veil",
+      "x": 25,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-26-29",
       "sprite": "beach-sea-veil",
       "x": 26,
@@ -24235,6 +25261,69 @@
       "id": "organic-veil-31-29",
       "sprite": "beach-sea-veil",
       "x": 31,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-32-29",
+      "sprite": "beach-sea-veil",
+      "x": 32,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-33-29",
+      "sprite": "beach-sea-veil",
+      "x": 33,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-34-29",
+      "sprite": "beach-sea-veil",
+      "x": 34,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-35-29",
+      "sprite": "beach-sea-veil",
+      "x": 35,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-36-29",
+      "sprite": "beach-sea-veil",
+      "x": 36,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-37-29",
+      "sprite": "beach-sea-veil",
+      "x": 37,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-38-29",
+      "sprite": "beach-sea-veil",
+      "x": 38,
       "y": 29,
       "width": 1,
       "height": 1,
@@ -24475,6 +25564,78 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-17-30",
+      "sprite": "beach-sea-veil",
+      "x": 17,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-30",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-30",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-30",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-30",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-30",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-30",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-30",
+      "sprite": "beach-sea-veil",
+      "x": 24,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-25-30",
       "sprite": "beach-sea-veil",
       "x": 25,
@@ -24646,6 +25807,33 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-44-30",
+      "sprite": "beach-sea-veil",
+      "x": 44,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-45-30",
+      "sprite": "beach-sea-veil",
+      "x": 45,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-46-30",
+      "sprite": "beach-sea-veil",
+      "x": 46,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-47-30",
       "sprite": "beach-sea-veil",
       "x": 47,
@@ -24811,6 +25999,69 @@
       "id": "organic-veil-17-31",
       "sprite": "beach-sea-veil",
       "x": 17,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-18-31",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-31",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-31",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-31",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-31",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-31",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-24-31",
+      "sprite": "beach-sea-veil",
+      "x": 24,
       "y": 31,
       "width": 1,
       "height": 1,
@@ -25186,6 +26437,60 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-18-32",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-32",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-32",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-32",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-32",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-23-32",
+      "sprite": "beach-sea-veil",
+      "x": 23,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-24-32",
       "sprite": "beach-sea-veil",
       "x": 24,
@@ -25369,6 +26674,24 @@
       "id": "organic-veil-44-32",
       "sprite": "beach-sea-veil",
       "x": 44,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-45-32",
+      "sprite": "beach-sea-veil",
+      "x": 45,
+      "y": 32,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-46-32",
+      "sprite": "beach-sea-veil",
+      "x": 46,
       "y": 32,
       "width": 1,
       "height": 1,
@@ -25573,6 +26896,24 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-21-33",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-22-33",
+      "sprite": "beach-sea-veil",
+      "x": 22,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-23-33",
       "sprite": "beach-sea-veil",
       "x": 23,
@@ -25765,6 +27106,24 @@
       "id": "organic-veil-44-33",
       "sprite": "beach-sea-veil",
       "x": 44,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-45-33",
+      "sprite": "beach-sea-veil",
+      "x": 45,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-46-33",
+      "sprite": "beach-sea-veil",
+      "x": 46,
       "y": 33,
       "width": 1,
       "height": 1,
@@ -26806,6 +28165,42 @@
       "layer": "architecture"
     },
     {
+      "id": "organic-veil-18-36",
+      "sprite": "beach-sea-veil",
+      "x": 18,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-19-36",
+      "sprite": "beach-sea-veil",
+      "x": 19,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-20-36",
+      "sprite": "beach-sea-veil",
+      "x": 20,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-21-36",
+      "sprite": "beach-sea-veil",
+      "x": 21,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
       "id": "organic-veil-22-36",
       "sprite": "beach-sea-veil",
       "x": 22,
@@ -27007,6 +28402,24 @@
       "id": "organic-veil-44-36",
       "sprite": "beach-sea-veil",
       "x": 44,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-45-36",
+      "sprite": "beach-sea-veil",
+      "x": 45,
+      "y": 36,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "organic-veil-46-36",
+      "sprite": "beach-sea-veil",
+      "x": 46,
       "y": 36,
       "width": 1,
       "height": 1,
@@ -31776,56 +33189,11 @@
     {
       "id": "workshop-tools",
       "sprite": "table-workshop",
-      "x": 13,
-      "y": 14,
+      "x": 12,
+      "y": 16,
       "width": 2,
       "height": 2,
       "layer": "props"
-    },
-    {
-      "id": "workshop-boat-plan",
-      "sprite": "coast-wheel",
-      "x": 15,
-      "y": 15,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "shell-1",
-      "sprite": "coast-life-coast-shell",
-      "x": 14,
-      "y": 22,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "shell-2",
-      "sprite": "coast-life-coast-shell",
-      "x": 30,
-      "y": 23,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "shell-3",
-      "sprite": "coast-life-coast-shell",
-      "x": 42,
-      "y": 21,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "shell-4",
-      "sprite": "coast-life-coast-shell",
-      "x": 16,
-      "y": 9,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
     },
     {
       "id": "lpc-deck-32-32",
@@ -41917,47 +43285,11 @@
       "layer": "lettering"
     },
     {
-      "id": "barrel-7-25",
-      "sprite": "naval-barrel",
-      "x": 7,
-      "y": 25,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "barrel-41-25",
-      "sprite": "naval-barrel",
-      "x": 41,
-      "y": 25,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "wood-sign-plaza-return-label",
       "sprite": "solid-coast-sign-board",
       "x": 22,
       "y": 2,
       "width": 5,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wood-sign-workshop-label",
-      "sprite": "solid-coast-sign-board",
-      "x": 7,
-      "y": 10,
-      "width": 8,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wood-sign-dockmaster-station",
-      "sprite": "solid-coast-sign-board",
-      "x": 33,
-      "y": 10,
-      "width": 7,
       "height": 1,
       "layer": "architecture"
     },
@@ -41976,15 +43308,6 @@
       "x": 44,
       "y": 30,
       "width": 3,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wood-sign-arrival-routes",
-      "sprite": "solid-coast-sign-board",
-      "x": 19,
-      "y": 15,
-      "width": 10,
       "height": 1,
       "layer": "architecture"
     },
@@ -42079,15 +43402,6 @@
       "layer": "props"
     },
     {
-      "id": "beach-shade-west",
-      "sprite": "coast-life-beach-parasol-coral",
-      "x": 4,
-      "y": 14,
-      "width": 3,
-      "height": 4,
-      "layer": "props"
-    },
-    {
       "id": "beach-shade-arrival",
       "sprite": "coast-life-beach-parasol-teal",
       "x": 17,
@@ -42103,24 +43417,6 @@
       "y": 17,
       "width": 3,
       "height": 4,
-      "layer": "props"
-    },
-    {
-      "id": "beach-seat-west-a",
-      "sprite": "coast-life-solid-beach-recliner",
-      "x": 4,
-      "y": 18,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "beach-seat-west-b",
-      "sprite": "coast-life-solid-beach-recliner",
-      "x": 7,
-      "y": 20,
-      "width": 2,
-      "height": 3,
       "layer": "props"
     },
     {
@@ -42145,7 +43441,7 @@
       "id": "beach-seat-bar-a",
       "sprite": "coast-life-solid-beach-recliner",
       "x": 35,
-      "y": 20,
+      "y": 18,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -42153,19 +43449,10 @@
     {
       "id": "beach-seat-bar-b",
       "sprite": "coast-life-solid-beach-recliner",
-      "x": 40,
-      "y": 20,
+      "x": 38,
+      "y": 18,
       "width": 2,
       "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "beach-towel-west",
-      "sprite": "coast-life-beach-woven-towel",
-      "x": 9,
-      "y": 22,
-      "width": 2,
-      "height": 2,
       "layer": "props"
     },
     {
@@ -42180,8 +43467,8 @@
     {
       "id": "beach-towel-bar",
       "sprite": "coast-life-beach-woven-towel",
-      "x": 38,
-      "y": 21,
+      "x": 40,
+      "y": 19,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -42216,17 +43503,8 @@
     {
       "id": "beach-plant-bar",
       "sprite": "coast-life-beach-shrub",
-      "x": 32,
-      "y": 19,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "beach-plant-southwest",
-      "sprite": "coast-life-beach-shrub",
-      "x": 10,
-      "y": 24,
+      "x": 41,
+      "y": 18,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -42250,172 +43528,10 @@
       "layer": "architecture"
     },
     {
-      "id": "strand-grass-2",
-      "sprite": "coast-life-beach-grass",
-      "x": 4,
-      "y": 12,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-3",
-      "sprite": "coast-life-beach-grass",
-      "x": 4,
-      "y": 16,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-4",
-      "sprite": "coast-life-beach-grass",
-      "x": 5,
-      "y": 22,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-5",
-      "sprite": "coast-life-beach-grass",
-      "x": 8,
-      "y": 26,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-6",
-      "sprite": "coast-life-beach-grass",
-      "x": 12,
-      "y": 26,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
       "id": "strand-grass-7",
       "sprite": "coast-life-beach-grass",
       "x": 39,
       "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-8",
-      "sprite": "coast-life-beach-grass",
-      "x": 42,
-      "y": 10,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-9",
-      "sprite": "coast-life-beach-grass",
-      "x": 43,
-      "y": 14,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-10",
-      "sprite": "coast-life-beach-grass",
-      "x": 43,
-      "y": 21,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-11",
-      "sprite": "coast-life-beach-grass",
-      "x": 40,
-      "y": 26,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-grass-12",
-      "sprite": "coast-life-beach-grass",
-      "x": 34,
-      "y": 26,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-0",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 8,
-      "y": 8,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-1",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 5,
-      "y": 13,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-2",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 6,
-      "y": 23,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-3",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 9,
-      "y": 25,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-4",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 41,
-      "y": 8,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-5",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 42,
-      "y": 13,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-6",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 42,
-      "y": 23,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "strand-pebble-7",
-      "sprite": "coast-life-beach-pebbles",
-      "x": 36,
-      "y": 26,
       "width": 1,
       "height": 1,
       "layer": "architecture"
@@ -42457,64 +43573,10 @@
       "layer": "props"
     },
     {
-      "id": "beach-west-side-table",
-      "sprite": "coast-life-solid-beach-low-table",
-      "x": 8,
-      "y": 17,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "beach-bar-side-table",
-      "sprite": "coast-life-solid-beach-low-table",
-      "x": 38,
-      "y": 19,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
       "id": "wood-sign-plaza-return-label-support-0",
       "sprite": "solid-coast-sign-post",
       "x": 26,
       "y": 3,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-workshop-label-support-0",
-      "sprite": "solid-coast-sign-post",
-      "x": 7,
-      "y": 11,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-workshop-label-support-1",
-      "sprite": "solid-coast-sign-post",
-      "x": 14,
-      "y": 11,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-dockmaster-station-support-0",
-      "sprite": "solid-coast-sign-post",
-      "x": 33,
-      "y": 11,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-dockmaster-station-support-1",
-      "sprite": "solid-coast-sign-post",
-      "x": 39,
-      "y": 11,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -42533,24 +43595,6 @@
       "sprite": "solid-coast-sign-post",
       "x": 44,
       "y": 31,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-arrival-routes-support-0",
-      "sprite": "solid-coast-sign-post",
-      "x": 19,
-      "y": 16,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "wood-sign-arrival-routes-support-1",
-      "sprite": "solid-coast-sign-post",
-      "x": 28,
-      "y": 16,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -42677,30 +43721,6 @@
       "padding": 4
     },
     {
-      "name": "workshop-label",
-      "text": "BOAT WORKSHOP",
-      "x": 7,
-      "y": 10,
-      "width": 8,
-      "height": 1,
-      "fontSize": 16,
-      "color": "#fff2c7",
-      "align": "left",
-      "padding": 4
-    },
-    {
-      "name": "dockmaster-station",
-      "text": "BEACH BAR",
-      "x": 33,
-      "y": 10,
-      "width": 7,
-      "height": 1,
-      "fontSize": 16,
-      "color": "#fff2c7",
-      "align": "left",
-      "padding": 4
-    },
-    {
       "name": "boarding-label",
       "text": "↓ FA SHIP",
       "x": 18,
@@ -42720,18 +43740,6 @@
       "width": 3,
       "height": 1,
       "fontSize": 14,
-      "color": "#fff2c7",
-      "align": "left",
-      "padding": 4
-    },
-    {
-      "name": "arrival-routes",
-      "text": "FA SHIP ↓   SHORE →",
-      "x": 19,
-      "y": 15,
-      "width": 10,
-      "height": 1,
-      "fontSize": 16,
       "color": "#fff2c7",
       "align": "left",
       "padding": 4
@@ -90389,22 +91397,6 @@
       "text": "plaza-return-label"
     },
     {
-      "face": "wood-sign-workshop-label",
-      "supports": [
-        "wood-sign-workshop-label-support-0",
-        "wood-sign-workshop-label-support-1"
-      ],
-      "text": "workshop-label"
-    },
-    {
-      "face": "wood-sign-dockmaster-station",
-      "supports": [
-        "wood-sign-dockmaster-station-support-0",
-        "wood-sign-dockmaster-station-support-1"
-      ],
-      "text": "dockmaster-station"
-    },
-    {
       "face": "wood-sign-boarding-label",
       "supports": [
         "wood-sign-boarding-label-support-0"
@@ -90417,14 +91409,6 @@
         "wood-sign-shore-label-support-0"
       ],
       "text": "shore-label"
-    },
-    {
-      "face": "wood-sign-arrival-routes",
-      "supports": [
-        "wood-sign-arrival-routes-support-0",
-        "wood-sign-arrival-routes-support-1"
-      ],
-      "text": "arrival-routes"
     }
   ]
 }

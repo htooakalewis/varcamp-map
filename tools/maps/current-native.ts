@@ -4,6 +4,7 @@ import {assertNativeStandingCaptions} from './standing-captions';
 import {assertNativeOceanMap,readShipFloorLabels} from './beach-ship';
 import {assertNativeOrganicCoast} from './organic-coast';
 import {assertNativeCoastLife} from './coast-life';
+import {assertTropicalCove} from './tropical-cove';
 import {assertNativePlaza} from './plaza-native';
 import {assertNativeWorldAmbient} from './world-ambient';
 import{assertNativeAnimationSafety}from'./animated-decoration';
@@ -18,6 +19,7 @@ export function assertCurrentNativeMap(id:string,map:TiledMap,layout:MapLayout,w
  assertNativeOceanMap(map,layout);
  assertNativeOrganicCoast(map,layout);
  assertNativeCoastLife(map,layout,catalog);
+ assertTropicalCove(map,layout,catalog);
  assertNativePlaza(map,layout,catalog);
  assertNativeWorldAmbient(map,layout,catalog);
  readShipFloorLabels(map,layout,catalog);

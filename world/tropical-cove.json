@@ -1,0 +1,656 @@
+{
+  "version": 1,
+  "map": "shipyard-beach",
+  "coast": {
+    "schemaVersion": 1,
+    "map": "shipyard-beach",
+    "gridPixels": 2,
+    "points": [
+      [
+        690,
+        100
+      ],
+      [
+        760,
+        76
+      ],
+      [
+        842,
+        100
+      ],
+      [
+        920,
+        144
+      ],
+      [
+        1000,
+        194
+      ],
+      [
+        1080,
+        215
+      ],
+      [
+        1165,
+        198
+      ],
+      [
+        1255,
+        224
+      ],
+      [
+        1330,
+        275
+      ],
+      [
+        1380,
+        345
+      ],
+      [
+        1368,
+        416
+      ],
+      [
+        1420,
+        492
+      ],
+      [
+        1445,
+        580
+      ],
+      [
+        1440,
+        710
+      ],
+      [
+        1405,
+        825
+      ],
+      [
+        1344,
+        878
+      ],
+      [
+        1270,
+        860
+      ],
+      [
+        1190,
+        800
+      ],
+      [
+        1090,
+        735
+      ],
+      [
+        975,
+        685
+      ],
+      [
+        855,
+        665
+      ],
+      [
+        735,
+        675
+      ],
+      [
+        620,
+        710
+      ],
+      [
+        520,
+        785
+      ],
+      [
+        430,
+        855
+      ],
+      [
+        330,
+        895
+      ],
+      [
+        240,
+        870
+      ],
+      [
+        160,
+        815
+      ],
+      [
+        113,
+        750
+      ],
+      [
+        91,
+        715
+      ],
+      [
+        103,
+        634
+      ],
+      [
+        145,
+        564
+      ],
+      [
+        126,
+        492
+      ],
+      [
+        107,
+        426
+      ],
+      [
+        83,
+        356
+      ],
+      [
+        107,
+        285
+      ],
+      [
+        176,
+        249
+      ],
+      [
+        228,
+        180
+      ],
+      [
+        310,
+        142
+      ],
+      [
+        385,
+        152
+      ],
+      [
+        465,
+        207
+      ],
+      [
+        530,
+        184
+      ],
+      [
+        599,
+        142
+      ]
+    ],
+    "wetSandPixels": 18,
+    "shallowWaterPixels": 18,
+    "frameMs": 520,
+    "tidePixels": [
+      -4,
+      2,
+      7,
+      0
+    ],
+    "license": "CC0-1.0",
+    "description": "Sheltered tropical cove with a broad recessed southern bay and two sandy headlands. Original northern arrival and aircraft band retained."
+  },
+  "retiredSigns": [
+    "workshop-label",
+    "dockmaster-station",
+    "arrival-routes"
+  ],
+  "removePlacementIds": [
+    "shell-1",
+    "shell-2",
+    "shell-3",
+    "shell-4",
+    "barrel-7-25",
+    "barrel-41-25",
+    "workshop-boat-plan",
+    "beach-shade-west",
+    "beach-seat-west-a",
+    "beach-seat-west-b",
+    "beach-towel-west",
+    "beach-west-side-table",
+    "beach-bar-side-table",
+    "beach-plant-southwest",
+    "wood-sign-workshop-label",
+    "wood-sign-dockmaster-station",
+    "wood-sign-arrival-routes",
+    "wood-sign-workshop-label-support-0",
+    "wood-sign-workshop-label-support-1",
+    "wood-sign-dockmaster-station-support-0",
+    "wood-sign-dockmaster-station-support-1",
+    "wood-sign-arrival-routes-support-0",
+    "wood-sign-arrival-routes-support-1",
+    "strand-grass-2",
+    "strand-grass-3",
+    "strand-grass-4",
+    "strand-grass-5",
+    "strand-grass-6",
+    "strand-grass-8",
+    "strand-grass-9",
+    "strand-grass-10",
+    "strand-grass-11",
+    "strand-grass-12",
+    "strand-pebble-0",
+    "strand-pebble-1",
+    "strand-pebble-2",
+    "strand-pebble-3",
+    "strand-pebble-4",
+    "strand-pebble-5",
+    "strand-pebble-6",
+    "strand-pebble-7"
+  ],
+  "movePlacements": {
+    "workshop-tools": {
+      "x": 12,
+      "y": 16
+    },
+    "beach-seat-bar-a": {
+      "x": 35,
+      "y": 18
+    },
+    "beach-seat-bar-b": {
+      "x": 38,
+      "y": 18
+    },
+    "beach-towel-bar": {
+      "x": 40,
+      "y": 19
+    },
+    "beach-plant-bar": {
+      "x": 41,
+      "y": 18
+    }
+  },
+  "props": [
+    {
+      "id": "tender-west",
+      "originalSprite": "boat-wood",
+      "sprite": "coast-life-boat-wood",
+      "x": 3,
+      "y": 29,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "repair-hut",
+      "originalSprite": "beach-cabana",
+      "sprite": "coast-life-beach-cabana",
+      "x": 8,
+      "y": 12,
+      "width": 5,
+      "height": 5,
+      "layer": "props"
+    },
+    {
+      "id": "beach-bar",
+      "originalSprite": "beach-tiki-bar",
+      "sprite": "coast-life-beach-tiki-bar",
+      "x": 34,
+      "y": 12,
+      "width": 6,
+      "height": 5,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-west",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 3,
+      "y": 7,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-northwest",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 11,
+      "y": 4,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-north",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 15,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-east",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 38,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-bar",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 31,
+      "y": 11,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-southeast",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 41,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-palm-southwest",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 3,
+      "y": 20,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-shade-arrival",
+      "originalSprite": "beach-parasol-teal",
+      "sprite": "coast-life-beach-parasol-teal",
+      "x": 17,
+      "y": 6,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-shade-bar",
+      "originalSprite": "beach-parasol-coral",
+      "sprite": "coast-life-beach-parasol-coral",
+      "x": 37,
+      "y": 17,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-seat-arrival-a",
+      "originalSprite": "solid-beach-recliner",
+      "sprite": "coast-life-solid-beach-recliner",
+      "x": 17,
+      "y": 10,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "beach-seat-arrival-b",
+      "originalSprite": "solid-beach-recliner",
+      "sprite": "coast-life-solid-beach-recliner",
+      "x": 20,
+      "y": 10,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "beach-seat-bar-a",
+      "originalSprite": "solid-beach-recliner",
+      "sprite": "coast-life-solid-beach-recliner",
+      "x": 35,
+      "y": 18,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "beach-seat-bar-b",
+      "originalSprite": "solid-beach-recliner",
+      "sprite": "coast-life-solid-beach-recliner",
+      "x": 38,
+      "y": 18,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "beach-towel-arrival",
+      "originalSprite": "beach-woven-towel",
+      "sprite": "coast-life-beach-woven-towel",
+      "x": 19,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-towel-bar",
+      "originalSprite": "beach-woven-towel",
+      "sprite": "coast-life-beach-woven-towel",
+      "x": 40,
+      "y": 19,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-plant-west",
+      "originalSprite": "beach-shrub",
+      "sprite": "coast-life-beach-shrub",
+      "x": 5,
+      "y": 8,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-plant-hut",
+      "originalSprite": "beach-shrub",
+      "sprite": "coast-life-beach-shrub",
+      "x": 11,
+      "y": 7,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-plant-east",
+      "originalSprite": "beach-shrub",
+      "sprite": "coast-life-beach-shrub",
+      "x": 40,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-plant-bar",
+      "originalSprite": "beach-shrub",
+      "sprite": "coast-life-beach-shrub",
+      "x": 41,
+      "y": 18,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-cafe-shade",
+      "originalSprite": "beach-parasol-teal",
+      "sprite": "coast-life-beach-parasol-teal",
+      "x": 29,
+      "y": 5,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    },
+    {
+      "id": "beach-cafe-table",
+      "originalSprite": "solid-beach-low-table",
+      "sprite": "coast-life-solid-beach-low-table",
+      "x": 29,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "beach-cafe-palm",
+      "originalSprite": "beach-palm",
+      "sprite": "coast-life-beach-palm",
+      "x": 33,
+      "y": 4,
+      "width": 3,
+      "height": 4,
+      "layer": "props"
+    }
+  ],
+  "docks": [
+    {
+      "id": "cove-boarding-jetty",
+      "sprite": "naval-dock",
+      "x": 18,
+      "y": 21,
+      "width": 4,
+      "height": 17,
+      "layer": "terrain"
+    },
+    {
+      "id": "organic-lookout-platform",
+      "sprite": "naval-dock",
+      "x": 21,
+      "y": 25,
+      "width": 5,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "east-shore-jetty",
+      "sprite": "naval-dock",
+      "x": 44,
+      "y": 23,
+      "width": 3,
+      "height": 15,
+      "layer": "terrain"
+    }
+  ],
+  "entries": [
+    {
+      "name": "shipyard-entry",
+      "x": 22,
+      "y": 6,
+      "width": 4,
+      "height": 2,
+      "isDefault": true
+    },
+    {
+      "name": "from-fa-ship",
+      "x": 18,
+      "y": 30,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "name": "from-constellation-shore",
+      "x": 45,
+      "y": 32,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "exits": [
+    {
+      "name": "plaza-return",
+      "destination": "overworld",
+      "entry": "from-shipyard",
+      "x": 22,
+      "y": 4,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "name": "board-fa-ship",
+      "destination": "fa-ship",
+      "entry": "arrival",
+      "x": 18,
+      "y": 36,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "name": "shore-gate",
+      "destination": "constellation-shore",
+      "entry": "arrival",
+      "x": 45,
+      "y": 36,
+      "width": 2,
+      "height": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "harbor-workshop",
+      "name": "harbor-workshop",
+      "properties": [],
+      "x": 13,
+      "y": 18,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "id": "pier-lookout",
+      "name": "pier-lookout",
+      "properties": [],
+      "x": 21,
+      "y": 25,
+      "width": 5,
+      "height": 4
+    }
+  ],
+  "signs": [
+    {
+      "name": "plaza-return-label",
+      "text": "\u2191 PLAZA",
+      "x": 22,
+      "y": 2,
+      "width": 5,
+      "height": 1,
+      "fontSize": 16,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "boarding-label",
+      "text": "\u2193 FA SHIP",
+      "x": 18,
+      "y": 32,
+      "width": 3,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    },
+    {
+      "name": "shore-label",
+      "text": "\u2193 SHORE",
+      "x": 44,
+      "y": 30,
+      "width": 3,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#fff2c7",
+      "align": "left",
+      "padding": 4
+    }
+  ]
+}

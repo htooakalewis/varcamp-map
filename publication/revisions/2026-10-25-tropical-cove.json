@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "9b8b53c9a7dcc64b8a5844fe64e8d4dbccd786ed22d57d5fac2e7af003ecd128",
+      "toSha256": "b621e7fd768d7af5b3791b931fb909725a62acf30f883ef57986b41acda48d31",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "e39c7dfdaa3575c83e4605e69b278a676a62e10a9030cf1b029ea47390501b52",
+      "toSha256": "4e2c36d843573fb41627d96b1e1c76703a14da19330dff750fc6b15f0f848bda",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "maps/preview/shipyard-beach.tmj",
+      "fromSha256": "b68842152baab5f4c7c85946c310725da437c5592951d69efaa5d8e90ce07f72",
+      "toSha256": "8aee69192eccdd835fafcae37756c086571f64902b6514a224664a87cca53173",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "fromSha256": "b01a352aa6531563beddb67094165b5fc3793971614b5d61ff094a99344956d8",
+      "toSha256": "041dd740ff75e1242817329aaf0b5b9c0e6553724583d63e154c662d71da7d1b",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "tests/coastal-character.test.ts",
+      "fromSha256": "0cb31256155a1e9c20f358b6214b31286f73e5dd1e34b3327b112fdbb3d2f7ff",
+      "toSha256": "a4701b62e7247ceb1be9214526f7af66639255a64538a7d61fcd10230849001f",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "a1a546bc4c1d31c3816002a1726358fdb9c1acbc0b96bb034b9b4e3b317f9ce2",
+      "toSha256": "9059fd62add29d94d44c1bbead206f59762f1d7944080e9a6b81e1d0174f1fa2",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "3f17ad03334d78809418051e699c58c07a736646fb9e0315366fa4afa41fa842",
+      "toSha256": "1f3d48cdb76147570deb597c604c2ad780201637c6992ac490a721209b7e3f68",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "01c9afefa5175217ecb544abd72718e1bfa72b5ceeb0267cbc7449c307ea1ee6",
+      "toSha256": "471e412ac1ec5bff9a0537b230628d73f1306d2148114b0e75bbb0a2d7a71e7e",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "f723d60096a25e5df852fdadca1d9d376beb0b50568f58d4a1e511f6b6e47010",
+      "toSha256": "c8a09976c6827913b7fb409d5d180f9a8d26cfaa1690d8189e1e87cb00ba5eaa",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "9d2214b8eb7681bb4039a3a51d2285bda5246802427330a4ab5720cb6580160a",
+      "toSha256": "87e36343e83015a3c1272c90605438aff2af23dd801cc34f3b0a6f580462b6ab",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "dcfcd848241894886ea2adba7b4d816c7d7ccda4b7187e71e220bac2c405e2c3",
+      "toSha256": "bb067aa02f8c4ea465d62f9d8f67db240433296e2a7a66d84be5370360628edd",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "83c9928610b3fa605f59d2ced2a6ee0097c2748bce6d0c5f28f4e12e4553dba0",
+      "toSha256": "b9ba97ca63d9995a1cf170389e5d4f044eb88688b06db247df020e1b0321a964",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "97134beb5838b3c95ccf77487ad2c93dfbb9f143ebd80775f105cc052e69f222",
+      "toSha256": "50c110e65a20d24d66350808a0fb6bd7ba008e9164e59262a6298d621d39206b",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "185f59439ca4e1b7dc4fb689e2c6bbc8896747e470ea516f891cb8d744dddf2a",
+      "toSha256": "4c10a813ac8ebe85562ca08f572236fe4788104f39587d2064e6a9d7ab2887bd",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "f9b3d536d5f871774ce740fe6de60b62cbb49fe926f13dd9139e5c69b24cb1de",
+      "toSha256": "eb270c263c585d11f214cc9088754b163b6e08034a93e8d827ff370ebc34b3ab",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "ac9b19861c8b7233df87e29fee17e84edd79dffbd51b5a0bcd0dcc399d0e14a7",
+      "toSha256": "63570ed40967a8223cd74afc2b161cebf488f213d24726b26c7945d8e6730980",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "dc8e477a322fec724b6d7a9643d8dbaddfcc93b2dee63d3046a505658ec9470f",
+      "toSha256": "c99ffb03b6a37fdd4c94db2906304cedd99e12f1855f6e407da596f3dd5bdf32",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "1e9414695e59ffbe3f17c88776e3609fc3867dd4998a95e9a722c041dbb8f992",
+      "toSha256": "e89e0a66ad5f79770ad80311db29a46ffa69116de798a64746d80d0b741a5011",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "e1ff03c3a23c8ce13baec8e00f5c80fb1e28f18c16be2b25a737e5ac1df2a4df",
+      "toSha256": "d3e2472d752867b45a388ec77688fb7f1d103810b8291efce41225bc91ec8299",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "5e97004cf838e0f29780f219db95a708e47137757a3951e4b31462eb8ea8e73f",
+      "toSha256": "b261fe03b7142c606043c2d77ddd2d09215fb7f4752bff79fe1fdcc8d9b0f471",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "d49ffacf42a64a72dfca4a71fe9a71a398a42642538a5b707cf88be8fa87f318",
+      "toSha256": "e949512c95ef13b12e13276eec25540fc067d485501003015adbaac5e4b26ebc",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "ba2265546486714aefd47d997289f19d118bca50ce160f948e9d6c7c4f13da2e",
+      "toSha256": "34961abfc45606238a84fc04eeee90619c692bb653147b364e2052d0efbdadff",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "888520d96213068c667963e5979b5b90e1373d311c26435a8a4a94b081e0e2b1",
+      "toSha256": "17553efabd354b4047edb0b0b4eb3e384982aebbb9c2ec5a11c3397919d8a0ea",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    }
+  ]
+}

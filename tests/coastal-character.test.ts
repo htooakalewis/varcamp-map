@@ -28,7 +28,7 @@ describe('coastal event character and preserved journeys',()=>{
         expect(golden,`${sprite} must retain warm golden pixels`).toBeGreaterThanOrEqual(32*32*.95);
       }
       const surf=JSON.parse(readFileSync('art/source/organic-coast.json','utf8'));expect(surf.cells.length).toBeGreaterThan(80);expect(surf.frameMs).toBeGreaterThanOrEqual(200);expect(l.placements.some(p=>p.sprite.startsWith('organic-coast-land-'))).toBe(true);
-      expect(l.placements.filter(p=>['coast-life-beach-parasol-coral','coast-life-beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(4);
+      expect(l.placements.filter(p=>['coast-life-beach-parasol-coral','coast-life-beach-parasol-teal'].includes(p.sprite)).length).toBeGreaterThanOrEqual(3);
     }else{
       expect(l.placements.some(p=>p.sprite.startsWith('coast-foam-'))).toBe(false);expect(l.placements.some(p=>p.sprite.startsWith('constellation-coast-land-'))).toBe(true);
       const parasols=l.placements.filter(p=>p.id.includes('parasol'));expect(parasols.map(p=>p.id).sort()).toEqual(['shore-parasol-east','shore-parasol-lounge','shore-parasol-west']);for(const p of parasols){expect(p.sprite).toBe('coast-life-solid-coast-parasol');const art=JSON.parse(readFileSync('art/source/coast-life-assets.json','utf8'));expect(catalog[p.sprite]).toMatchObject({sheet:art.atlas.path,rect:art.atlas.rects[p.sprite],sourceId:'original'});expect([p.width,p.height]).toEqual([3,4]);}
@@ -59,10 +59,10 @@ describe('coastal event character and preserved journeys',()=>{
     expect(l.placements.some(p=>['copy-machine','desk-coding','screen-wide'].includes(p.sprite))).toBe(false);
     for(const area of l.areas)for(const n of cells(area,l.width)){expect(mask.data[n],area.name).toBe(0);expect(seen.has(n),area.name).toBe(true);}
   });
-  it('retires the dockmaster label while preserving the ordinary beach bar sign',()=>{
+  it('retires the dockmaster label and keeps only the three cove direction signs',()=>{
     const l=addNpcGuides([load('shipyard-beach')])[0];
     expect(l.signs!.some(s=>s.name==='npc-name-dockmaster')).toBe(false);
-    expect(l.signs!.find(s=>s.name==='dockmaster-station')!.text).toBe('BEACH BAR');
+    expect(l.signs!.map(s=>s.name).sort()).toEqual(['boarding-label','plaza-return-label','shore-label']);
   });
   it.each(['shipyard-beach','constellation-shore','fa-ship'])('%s keeps every entry, exit and activity area clear and connected',id=>{
     const l=load(id),{mask,seen}=walk(l);

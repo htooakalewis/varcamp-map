@@ -1,4 +1,5 @@
 import{checkStandingCaptionArt}from'./standing-captions';
+import {checkTropicalCoveArt} from './tropical-cove';
 import{checkWorldAmbientArt}from'./world-ambient-check';
 import {renderPlazaIdentity} from './plaza-generated';
 import {renderPlazaGarden} from './plaza-garden';
@@ -34,6 +35,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   if(fleetErrors.length)return fleetErrors;
   errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
+  try{await checkTropicalCoveArt();}catch(error){errors.push(String(error));}
   for (const id of [...SIGN_IDS.flatMap(sign=>[`glyph-${sign}`,`constellation-${sign}`]), ...ELEMENT_IDS.map(el=>`sigil-${el}`), 'telescope','quest-shrine','door-open','npc-guide','npc-maze-keeper','npc-dockmaster']) {
     if(!catalog[id]) errors.push(`${id}: missing required sprite`);
   }

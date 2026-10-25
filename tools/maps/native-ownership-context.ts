@@ -75,6 +75,16 @@ export const EXPO_CAPTION_ATLAS=Object.freeze({name:'standing-captions',image:'.
  * at most 64 rows (the 4 MiB native bound) with its 25 synchronized carriers. */
 export const ROADSTER_V2_ATLAS=Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster-v2.png',imagewidth:512,columns:16,maxImageHeight:2048,carriers:25,vacates:Object.freeze({name:'roadster',image:'../assets/tilesets/original/roadster.png',firstgid:4330,tilecount:240})});
 export const isRoadsterV2=(set:TiledTileset):boolean=>set.name===ROADSTER_V2_ATLAS.name&&set.image===ROADSTER_V2_ATLAS.image;
+/** Beach-only cove successor. The former coast reservation remains untouched;
+ * one bounded native32px atlas is appended after the frozen beach context. */
+export const TROPICAL_COVE_ATLAS=Object.freeze({name:'tropical-cove-coast',image:'../assets/tilesets/original/tropical-cove-coast.png',columns:64,imagewidth:2048,maxImageHeight:1024});
+function tropicalCoveAtlas(source:TiledMap,start:number):TiledTileset|undefined{
+ const r=TROPICAL_COVE_ATLAS,sets=source.tilesets.filter(t=>t.image===r.image||t.name===r.name),beach=identities(source)[0]==='shipyard-beach';
+ need(beach?sets.length===1:sets.length===0,'cove source atlas missing, duplicated or on another map');if(!beach)return;
+ const set=sets[0];
+ need(/^art-\d+$/.test(set.name??'')&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&set.imageheight!<=r.maxImageHeight&&set.tilecount===set.imageheight!/32*r.columns&&Array.isArray(set.tiles)&&set.tiles.length>80&&set.tiles.every(t=>t.id%4===0&&t.animation?.length===4&&t.animation.every((f,i)=>f.tileid===t.id+i&&f.duration===520)),'cove source atlas identity/geometry leaves its registered reservation');
+ return{...structuredClone(set),firstgid:start,name:r.name};
+}
 function roadsterV2Atlas(source:TiledMap,expected:TiledTileset[],start:number):TiledTileset|undefined{
  const sets=source.tilesets.filter(isRoadsterV2);need(sets.length<=1,'roadster-v2 source atlas duplicated');if(!sets.length)return undefined;
  const set=sets[0],r=ROADSTER_V2_ATLAS;
@@ -142,7 +152,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -178,6 +188,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT):Tile
   // Roadster-v2 epoch: admitted only here, only after every brand reservation; it vacates the v1 interval.
   const v2=roadsterV2Atlas(source,epoch.roadsterV2?expected:structuredClone(expected),next+[...expo,...brand].reduce((n,set)=>n+set.tilecount!,0));if(v2&&epoch.roadsterV2)expected.push(v2);
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
+ const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -198,6 +209,9 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // The exact immediately preceding beach context is a finite authoring input;
+ // the final current gate above always requires the new cove reservation.
+ if(identities(source)[0]==='shipyard-beach'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,false)))return;
  // Epoch entry: the exact pre-expo current context (every registered and fleet reservation,
  // no expo or brand member), the exact pre-brand context (the complete expo family, no
  // brand member) and the exact pre-roadster-v2 context (every brand reservation, the v1 roadster
