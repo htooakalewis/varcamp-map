@@ -9,6 +9,7 @@ import { isSponsorTileset, readSponsorTileset } from './maps/builder';
 import {assertCurrentMapRoster} from './maps/current-package';
 import {assertCurrentNativeMap} from './maps/current-native';
 import {readZodiacWokaPublication,readReadableZodiacWokaPublication} from './wokas/publication';
+import {readPixelZodiacWokaPublication} from './wokas/publication-v3';
 import {loadTileCatalog} from './art/catalog';
 
 const digest = (bytes: string | Buffer) => createHash('sha256').update(bytes).digest('hex');
@@ -174,7 +175,7 @@ export function worldRelease(): Plugin {
       });
       const runtime = Object.values(bundle).find(entry => entry.type === 'chunk' && entry.isEntry && entry.name === 'src-main');
       if (!runtime) throw new Error('Missing bundled world runtime');
-      const wokaFiles=[...readZodiacWokaPublication(),...readReadableZodiacWokaPublication()];
+      const wokaFiles=[...readZodiacWokaPublication(),...readReadableZodiacWokaPublication(),...readPixelZodiacWokaPublication()];
       // Keep every existing identity/native/Woka preflight synchronous and before
       // compilation or emission. Only this independent single-entry build is async.
       return buildDedicatedController().then(controllerFiles=>{

@@ -11,7 +11,7 @@ const project=process.cwd();let fixture:string;
 beforeEach(()=>{
  fixture=mkdtempSync(resolve(tmpdir(),'varcamp-direct-release-roster-'));
  for(const p of ['maps','world/layouts','art','docs/dependencies','public/wokas'])mkdirSync(resolve(fixture,p),{recursive:true});
- for(const version of ['v1','v2'])cpSync(resolve(project,`public/wokas/varcamp-zodiac-${version}`),resolve(fixture,`public/wokas/varcamp-zodiac-${version}`),{recursive:true});
+ for(const version of ['v1','v2','v3'])cpSync(resolve(project,`public/wokas/varcamp-zodiac-${version}`),resolve(fixture,`public/wokas/varcamp-zodiac-${version}`),{recursive:true});
  writeFileSync(resolve(fixture,'art/sources.json'),'{}');writeFileSync(resolve(fixture,'art/sponsors.json'),'{}');writeFileSync(resolve(fixture,'docs/dependencies/LICENSE.starter'),'MIT controlled release fixture');
  for(const [id,definition] of Object.entries(WORLD_CATALOG)){
   const map={type:'map',version:'1.10',orientation:'orthogonal',renderorder:'right-down',infinite:false,width:definition.width,height:definition.height,tilewidth:32,tileheight:32,properties:[{name:'worldMapId',type:'string',value:id},{name:'script',type:'string',value:'../src/main.ts'}],layers:[],tilesets:[]};
@@ -20,6 +20,7 @@ beforeEach(()=>{
  }
  stageCurrentWorldInputs(project,fixture);
  mkdirSync(resolve(fixture,'art/source/wokas-readable-v2'),{recursive:true});cpSync(resolve(project,'art/source/wokas-readable-v2/native-design.json'),resolve(fixture,'art/source/wokas-readable-v2/native-design.json'));
+ mkdirSync(resolve(fixture,'art/source/wokas-pixel-v3'),{recursive:true});cpSync(resolve(project,'art/source/wokas-pixel-v3/native-design.json'),resolve(fixture,'art/source/wokas-pixel-v3/native-design.json'));
  mkdirSync(resolve(fixture,'src'),{recursive:true});cpSync(resolve(project,'src/bots'),resolve(fixture,'src/bots'),{recursive:true});mkdirSync(resolve(fixture,'ops/bots'),{recursive:true});cpSync(resolve(project,'ops/bots/evidence.mjs'),resolve(fixture,'ops/bots/evidence.mjs'));
  process.chdir(fixture);
 });
@@ -41,12 +42,12 @@ it('direct release rejects a missing later WAM before emitting any earlier map',
 it('direct release rejects an invalid later source WAM identity before emitting any earlier map',async()=>{
  const wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));wam.mapUrl='overworld.tmj?v=stale';writeFileSync('maps/overworld.wam',JSON.stringify(wam));const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);expect(String(error)).toMatch(/WAM/);
 });
-it('direct release includes all54 exact v1 and v2 portable bodies despite publicDir:false',async()=>{
- const {rows,error}=await directRelease();expect(error).toBeUndefined();const assets=rows.filter(row=>row.fileName.startsWith('wokas/varcamp-zodiac-'));expect(assets).toHaveLength(54);
- expect(assets.map(row=>row.fileName).sort()).toEqual(['v1','v2'].flatMap(version=>readdirSync(`public/wokas/varcamp-zodiac-${version}`).map(name=>`wokas/varcamp-zodiac-${version}/${name}`)).sort());
+it('direct release includes all81 exact v1, v2 and v3 portable bodies despite publicDir:false',async()=>{
+ const {rows,error}=await directRelease();expect(error).toBeUndefined();const assets=rows.filter(row=>row.fileName.startsWith('wokas/varcamp-zodiac-'));expect(assets).toHaveLength(81);
+ expect(assets.map(row=>row.fileName).sort()).toEqual(['v1','v2','v3'].flatMap(version=>readdirSync(`public/wokas/varcamp-zodiac-${version}`).map(name=>`wokas/varcamp-zodiac-${version}/${name}`)).sort());
  for(const row of assets){expect(Buffer.isBuffer(row.source),row.fileName).toBe(true);expect((row.source as Buffer).equals(readFileSync(`public/${row.fileName}`)),row.fileName).toBe(true);}
 });
-it.each(['v1','v2'].flatMap(version=>['missing','stale'].map(mode=>({version,mode}))))('direct release refuses $version $mode Woka assets before emitting any artifact',async({version,mode})=>{
+it.each(['v1','v2','v3'].flatMap(version=>['missing','stale'].map(mode=>({version,mode}))))('direct release refuses $version $mode Woka assets before emitting any artifact',async({version,mode})=>{
  const path=`public/wokas/varcamp-zodiac-${version}/aries-male.png`;if(mode==='missing')unlinkSync(path);else writeFileSync(path,'stale');const {rows,error}=await directRelease();expect(error).toBeInstanceOf(Error);expect(rows).toEqual([]);
 });
 it('real current release refuses matching regenerated native input with omitted required furnishings before any emission',async()=>{
