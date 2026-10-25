@@ -7,6 +7,7 @@ import {isDeepStrictEqual} from 'node:util';
 import {refinePlazaFloorGarden} from '../../tools/maps/plaza-floor-garden';
 import {refineNativePlaza} from '../../tools/maps/plaza-native';
 import {EXPO_PLAZA,applyExpoPlaza,expoFixtures,expoPlacements,expoPlazaNative} from '../../tools/maps/expo-plaza';
+import {refineExpoBooths} from '../../tools/maps/expo-booths';
 import {applyBrandAssets,brandAssetPlacements,brandAssetsNative} from '../../tools/maps/brand-assets';
 import {plazaGardenSprites} from '../../tools/art/plaza-garden';
 import {renderRoadster,renderRoadsterV1,ROADSTER_V2_ATLAS_PATH} from '../../tools/art/roadster';
@@ -193,7 +194,9 @@ export async function expectedBrandSuccessor(catalog:TileCatalog):Promise<{layou
 /** One shared actual forward producer transaction for groves/redraw tests. */
 export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
  const brand=await expectedBrandSuccessor(catalog);
- return applyRoadsterV2Successor(brand.layout,brand.native,catalog);
+ const roadster=await applyRoadsterV2Successor(brand.layout,brand.native,catalog);
+ const layout=refineExpoBooths(roadster.layout);
+ return {layout,native:expoPlazaNative(roadster.native,layout,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

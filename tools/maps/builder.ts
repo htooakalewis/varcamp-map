@@ -92,6 +92,9 @@ export function buildMap(layout: MapLayout, tiles: TileCatalog): { tmj: TiledMap
   const terrain=layer('terrain'),groundMask=new Uint8Array(size),propMask=new Uint8Array(size);
   const stacks:{layers:TileLayer[];depth:Int16Array}[]=[{layers:[],depth:new Int16Array(size).fill(-1)},{layers:[],depth:new Int16Array(size).fill(-1)}];
   for(const p of layout.placements) {
+    // The expo keeps its admitted sticker-sheet reservation when its decals are retired.
+    // Allocating the sheet paints nothing and prevents reuse of the closed family's GIDs.
+    if(layout.id==='overworld'&&p.id==='expo-hall-floor-west'&&layout.images?.some(i=>i.name.startsWith('Expo / ')))sheet('sticker-star');
     if(ids.has(p.id))throw new Error(`Duplicate placement ID: ${p.id}`);ids.add(p.id);bounds(p,p.id);
     const s=tiles[p.sprite];if(!s)throw new Error(`Unknown sprite: ${p.sprite}`);
     validateSpriteDepth(p.sprite,s);

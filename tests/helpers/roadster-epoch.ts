@@ -1,7 +1,8 @@
 /** The exact pre-roadster-v2 closure, derived from current state for the earlier epoch policy tests
  * (fleet, expo, brand, groves), which are pinned on the plaza as it stood before the roadster role
- * moved to its v2 motion atlas. tests/native-context-roadster-v2.test.ts proves the native inverse is
- * byte-identical to the genuine pre-v2 native, so this is a receipt-checked inverse, not a guess. */
+ * moved to its v2 motion atlas. Later booth geometry stays in these policy scenarios.
+ * tests/native-context-roadster-v2.test.ts proves the same inverse against the immutable
+ * pre-booth snapshot, byte-identical to the genuine brand-epoch native. */
 import{readFileSync}from'node:fs';
 import registered from'../../art/source/native-ownership-context.json';
 import type{LayoutAnimatedOverlay,MapLayout,TiledMap,TiledTileset,TileLayer}from'../../tools/maps/types';

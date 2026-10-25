@@ -36,7 +36,11 @@ describe('landscaped zodiac campus', () => {
   });
   it('retires the reception desk and screen along with the former guide station',()=>{
     const l=campus();expect(l.areas.some(a=>a.name==='npc-guide')).toBe(false);
-    for(const sprite of ['desk-curved','screen-wide','screen-content'])expect(l.placements.filter(p=>p.sprite===sprite),sprite).toEqual([]);
+    for(const id of ['reception-desk','reception-screen','reception-screen-content'])expect(l.placements.some(p=>p.id===id),id).toBe(false);
+    // The native curved counter is also used by the new expo booths. The old
+    // station's actual rectangle must stay retired, regardless of placement IDs.
+    const retired={x:75,y:65,width:4,height:5};
+    for(const sprite of ['desk-curved','screen-wide','screen-content'])expect(l.placements.filter(p=>p.sprite===sprite&&intersects(p,retired)),sprite).toEqual([]);
   });
 
   it('retains complete walkability of the loop, all twelve rooms and every map gate after landscaping', () => {

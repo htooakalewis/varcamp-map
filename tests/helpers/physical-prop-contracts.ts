@@ -57,8 +57,8 @@ export function sponsorSupportIds(layout:MapLayout,catalog:TileCatalog):Set<stri
  * other stall centres its 4x2 mark; the INFO DESK carries the owner-provided VarCamp lockup, s1-s3
  * the three owner-provided community partner marks; only the YOUR LOGO HERE stall has none. */
 export const expoBoothLogos=[
- ['Expo / Demo Orbit','demo-01',41,76,6],['Expo / Demo Nova Compact','demo-02-compact',49,76,4],['Expo / Demo Atlas','demo-03',55,76,6],['Expo / Demo Vector','demo-04',68,76,4],['Expo / Demo Lumen','demo-05',75,76,4],['Expo / VarCamp','varcamp-horizontal',82,76,4],
- ['Expo / AWS User Group Myanmar','partner-aws-ug-mm',42,84,4],['Expo / BSides Myanmar','partner-bsides-mm',49,84,4],['Expo / OpenInfra User Group Myanmar','partner-openinfra-mm',56,84,4],['Expo / Code Circle','hub-01',68,84,4],['Expo / Design Guild','hub-02',75,84,4],
+ ['Expo / Demo Orbit','demo-01',41,75,6],['Expo / Demo Nova Compact','demo-02-compact',49,75,4],['Expo / Demo Atlas','demo-03',55,75,6],['Expo / Demo Vector','demo-04',68,75,4],['Expo / Demo Lumen','demo-05',75,75,4],['Expo / VarCamp','varcamp-horizontal',82,75,4],
+ ['Expo / AWS User Group Myanmar','partner-aws-ug-mm',42,85,4],['Expo / BSides Myanmar','partner-bsides-mm',49,85,4],['Expo / OpenInfra User Group Myanmar','partner-openinfra-mm',56,85,4],['Expo / Code Circle','hub-01',68,85,4],['Expo / Design Guild','hub-02',75,85,4],
 ].map(([name,file,x,y,width])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:Number(width),height:2,standing:false}));
 /** Current floor representation has no physical posts; every actual cell must remain visible and connected. */
 export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map:TiledMap):void{

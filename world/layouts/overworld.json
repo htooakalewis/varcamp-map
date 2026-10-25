@@ -12706,7 +12706,7 @@
       "x": 40,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-west-north-seal-40-75",
@@ -12718,22 +12718,13 @@
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-40-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 40,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-west-north-side-47",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 47,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-west-north-seal-47-75",
@@ -12745,22 +12736,13 @@
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-47-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 47,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-west-north-side-54",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 54,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-west-north-seal-54-75",
@@ -12772,22 +12754,13 @@
       "height": 1
     },
     {
-      "id": "expo-west-north-seal-54-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 54,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-west-north-side-61",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 61,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-west-north-seal-61-75",
@@ -12795,15 +12768,6 @@
       "layer": "terrain",
       "x": 61,
       "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-west-north-seal-61-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 61,
-      "y": 77,
       "width": 1,
       "height": 1
     },
@@ -12835,69 +12799,22 @@
       "height": 1
     },
     {
-      "id": "expo-n1-sticker-0",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 41,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n1-sticker-1",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 43,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n1-sticker-2",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 45,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n1-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 46,
-      "y": 74,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n1-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 43,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n1-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 41,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n1-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 46,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 42,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-n2-wall-0",
@@ -12927,69 +12844,22 @@
       "height": 1
     },
     {
-      "id": "expo-n2-sticker-0",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 48,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n2-sticker-1",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 50,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n2-sticker-2",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 52,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n2-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 53,
-      "y": 76,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n2-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 50,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n2-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 48,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n2-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 53,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 49,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-n3-wall-0",
@@ -13019,69 +12889,22 @@
       "height": 1
     },
     {
-      "id": "expo-n3-sticker-0",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 55,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n3-sticker-1",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 57,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n3-sticker-2",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 59,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n3-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 60,
-      "y": 74,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n3-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 57,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n3-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 55,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n3-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 60,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 56,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-east-north-side-66",
@@ -13090,7 +12913,7 @@
       "x": 66,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-east-north-seal-66-75",
@@ -13102,22 +12925,13 @@
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-66-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 66,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-east-north-side-73",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 73,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-east-north-seal-73-75",
@@ -13129,22 +12943,13 @@
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-73-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 73,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-east-north-side-80",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 80,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-east-north-seal-80-75",
@@ -13156,22 +12961,13 @@
       "height": 1
     },
     {
-      "id": "expo-east-north-seal-80-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 80,
-      "y": 77,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-east-north-side-87",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 87,
       "y": 73,
       "width": 1,
-      "height": 6
+      "height": 4
     },
     {
       "id": "expo-east-north-seal-87-75",
@@ -13179,15 +12975,6 @@
       "layer": "terrain",
       "x": 87,
       "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-east-north-seal-87-77",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 87,
-      "y": 77,
       "width": 1,
       "height": 1
     },
@@ -13219,69 +13006,22 @@
       "height": 1
     },
     {
-      "id": "expo-n4-sticker-0",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 72,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n4-sticker-1",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 70,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n4-sticker-2",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 68,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n4-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 67,
-      "y": 76,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n4-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 69,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n4-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 67,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n4-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 72,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 68,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-n5-wall-0",
@@ -13311,69 +13051,22 @@
       "height": 1
     },
     {
-      "id": "expo-n5-sticker-0",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 79,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n5-sticker-1",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 77,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n5-sticker-2",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 75,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n5-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 74,
-      "y": 76,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n5-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 76,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n5-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 74,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n5-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 79,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 75,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-n6-wall-0",
@@ -13403,87 +13096,31 @@
       "height": 1
     },
     {
-      "id": "expo-n6-sticker-0",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 86,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n6-sticker-1",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 84,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-n6-sticker-2",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 82,
-      "y": 75,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-n6-chair",
       "sprite": "chair-presentation",
       "layer": "props",
       "x": 81,
-      "y": 76,
+      "y": 77,
       "width": 1,
       "height": 2
     },
     {
       "id": "expo-n6-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 83,
-      "y": 78,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-n6-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 81,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-n6-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 86,
-      "y": 78,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "x": 82,
+      "y": 77,
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-west-south-side-40",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 40,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-west-south-seal-40-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 40,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-west-south-seal-40-85",
@@ -13508,18 +13145,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 47,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-west-south-seal-47-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 47,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-west-south-seal-47-85",
@@ -13544,18 +13172,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 54,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-west-south-seal-54-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 54,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-west-south-seal-54-85",
@@ -13580,18 +13199,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 61,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-west-south-seal-61-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 61,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-west-south-seal-61-85",
@@ -13621,33 +13231,6 @@
       "height": 1
     },
     {
-      "id": "expo-s1-sticker-0",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 41,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s1-sticker-1",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 43,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s1-sticker-2",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 45,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-s1-chair",
       "sprite": "chair-presentation",
       "layer": "props",
@@ -13658,32 +13241,12 @@
     },
     {
       "id": "expo-s1-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 43,
+      "x": 42,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s1-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 41,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s1-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 46,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-s2-seal-cap",
@@ -13692,33 +13255,6 @@
       "x": 48,
       "y": 87,
       "width": 6,
-      "height": 1
-    },
-    {
-      "id": "expo-s2-sticker-0",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 48,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s2-sticker-1",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 50,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s2-sticker-2",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 52,
-      "y": 86,
-      "width": 1,
       "height": 1
     },
     {
@@ -13732,32 +13268,12 @@
     },
     {
       "id": "expo-s2-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 50,
+      "x": 49,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s2-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 48,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s2-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 53,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-s3-seal-cap",
@@ -13796,33 +13312,6 @@
       "height": 1
     },
     {
-      "id": "expo-s3-sticker-0",
-      "sprite": "sticker-bolt",
-      "layer": "props",
-      "x": 55,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s3-sticker-1",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 57,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s3-sticker-2",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 59,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-s3-chair",
       "sprite": "chair-presentation",
       "layer": "props",
@@ -13833,50 +13322,21 @@
     },
     {
       "id": "expo-s3-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 57,
+      "x": 56,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s3-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 55,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s3-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 60,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-east-south-side-66",
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 66,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-east-south-seal-66-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 66,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-east-south-seal-66-85",
@@ -13901,18 +13361,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 73,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-east-south-seal-73-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 73,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-east-south-seal-73-85",
@@ -13937,18 +13388,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 80,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-east-south-seal-80-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 80,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-east-south-seal-80-85",
@@ -13973,18 +13415,9 @@
       "sprite": "expo-wall-navy",
       "layer": "props",
       "x": 87,
-      "y": 83,
+      "y": 85,
       "width": 1,
-      "height": 6
-    },
-    {
-      "id": "expo-east-south-seal-87-83",
-      "sprite": "wall-charcoal",
-      "layer": "terrain",
-      "x": 87,
-      "y": 83,
-      "width": 1,
-      "height": 1
+      "height": 4
     },
     {
       "id": "expo-east-south-seal-87-85",
@@ -14041,33 +13474,6 @@
       "height": 1
     },
     {
-      "id": "expo-s4-sticker-0",
-      "sprite": "sticker-pin",
-      "layer": "props",
-      "x": 72,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s4-sticker-1",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 70,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s4-sticker-2",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 68,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-s4-chair",
       "sprite": "chair-presentation",
       "layer": "props",
@@ -14078,32 +13484,12 @@
     },
     {
       "id": "expo-s4-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 69,
+      "x": 68,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s4-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 67,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s4-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 72,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-s5-seal-cap",
@@ -14142,33 +13528,6 @@
       "height": 1
     },
     {
-      "id": "expo-s5-sticker-0",
-      "sprite": "sticker-smile",
-      "layer": "props",
-      "x": 79,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s5-sticker-1",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 77,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s5-sticker-2",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 75,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
       "id": "expo-s5-chair",
       "sprite": "chair-presentation",
       "layer": "props",
@@ -14179,32 +13538,12 @@
     },
     {
       "id": "expo-s5-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 76,
+      "x": 75,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s5-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 74,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s5-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 79,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-s6-seal-cap",
@@ -14213,33 +13552,6 @@
       "x": 81,
       "y": 87,
       "width": 6,
-      "height": 1
-    },
-    {
-      "id": "expo-s6-sticker-0",
-      "sprite": "sticker-leaf",
-      "layer": "props",
-      "x": 86,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s6-sticker-1",
-      "sprite": "sticker-star",
-      "layer": "props",
-      "x": 84,
-      "y": 86,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "expo-s6-sticker-2",
-      "sprite": "sticker-heart",
-      "layer": "props",
-      "x": 82,
-      "y": 86,
-      "width": 1,
       "height": 1
     },
     {
@@ -14253,32 +13565,12 @@
     },
     {
       "id": "expo-s6-counter",
-      "sprite": "desk-cream",
+      "sprite": "desk-curved",
       "layer": "props",
-      "x": 83,
+      "x": 82,
       "y": 82,
-      "width": 2,
-      "height": 2
-    },
-    {
-      "id": "expo-s6-balloons-0",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 81,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "expo-s6-balloons-1",
-      "sprite": "balloons-party",
-      "layer": "props",
-      "x": 86,
-      "y": 82,
-      "width": 1,
-      "height": 2,
-      "renderRole": "grounded"
+      "width": 4,
+      "height": 3
     },
     {
       "id": "expo-n1-nameplate-fascia",
@@ -16942,7 +16234,7 @@
       "name": "Expo / Demo Orbit",
       "image": "assets/sponsors/demo-01.png",
       "x": 41,
-      "y": 76,
+      "y": 75,
       "width": 6,
       "height": 2,
       "standing": false
@@ -16951,7 +16243,7 @@
       "name": "Expo / Demo Nova Compact",
       "image": "assets/sponsors/demo-02-compact.png",
       "x": 49,
-      "y": 76,
+      "y": 75,
       "width": 4,
       "height": 2,
       "standing": false
@@ -16960,7 +16252,7 @@
       "name": "Expo / Demo Atlas",
       "image": "assets/sponsors/demo-03.png",
       "x": 55,
-      "y": 76,
+      "y": 75,
       "width": 6,
       "height": 2,
       "standing": false
@@ -16969,7 +16261,7 @@
       "name": "Expo / Demo Vector",
       "image": "assets/sponsors/demo-04.png",
       "x": 68,
-      "y": 76,
+      "y": 75,
       "width": 4,
       "height": 2,
       "standing": false
@@ -16978,7 +16270,7 @@
       "name": "Expo / Demo Lumen",
       "image": "assets/sponsors/demo-05.png",
       "x": 75,
-      "y": 76,
+      "y": 75,
       "width": 4,
       "height": 2,
       "standing": false
@@ -16987,7 +16279,7 @@
       "name": "Expo / VarCamp",
       "image": "assets/sponsors/varcamp-horizontal.png",
       "x": 82,
-      "y": 76,
+      "y": 75,
       "width": 4,
       "height": 2,
       "standing": false
@@ -16996,7 +16288,7 @@
       "name": "Expo / AWS User Group Myanmar",
       "image": "assets/sponsors/partner-aws-ug-mm.png",
       "x": 42,
-      "y": 84,
+      "y": 85,
       "width": 4,
       "height": 2,
       "standing": false
@@ -17005,7 +16297,7 @@
       "name": "Expo / BSides Myanmar",
       "image": "assets/sponsors/partner-bsides-mm.png",
       "x": 49,
-      "y": 84,
+      "y": 85,
       "width": 4,
       "height": 2,
       "standing": false
@@ -17014,7 +16306,7 @@
       "name": "Expo / OpenInfra User Group Myanmar",
       "image": "assets/sponsors/partner-openinfra-mm.png",
       "x": 56,
-      "y": 84,
+      "y": 85,
       "width": 4,
       "height": 2,
       "standing": false
@@ -17023,7 +16315,7 @@
       "name": "Expo / Code Circle",
       "image": "assets/sponsors/hub-01.png",
       "x": 68,
-      "y": 84,
+      "y": 85,
       "width": 4,
       "height": 2,
       "standing": false
@@ -17032,7 +16324,7 @@
       "name": "Expo / Design Guild",
       "image": "assets/sponsors/hub-02.png",
       "x": 75,
-      "y": 84,
+      "y": 85,
       "width": 4,
       "height": 2,
       "standing": false
@@ -25833,7 +25125,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -26433,7 +25725,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -27247,7 +26539,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -27451,7 +26743,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -27857,7 +27149,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -29927,7 +29219,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -30183,7 +29475,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -31267,7 +30559,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -33073,7 +32365,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -35127,7 +34419,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -36541,7 +35833,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -37765,7 +37057,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -38265,7 +37557,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -38609,7 +37901,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -39745,7 +39037,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -40345,7 +39637,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -40597,7 +39889,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -42027,7 +41319,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -42359,7 +41651,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -44665,7 +43957,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -45751,7 +45043,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -46569,7 +45861,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -47943,7 +47235,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -49317,7 +48609,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -50111,7 +49403,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -50311,7 +49603,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -51395,7 +50687,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -51887,7 +51179,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -54043,7 +53335,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -55389,7 +54681,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -57453,7 +56745,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -59021,7 +58313,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -60851,7 +60143,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -61199,7 +60491,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -63039,7 +62331,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -63387,7 +62679,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -64535,7 +63827,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -65593,7 +64885,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -66399,7 +65691,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -67801,7 +67093,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -68149,7 +67441,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -69097,7 +68389,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -70289,7 +69581,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",
@@ -71603,7 +70895,7 @@
           },
           {
             "path": "tools/maps/builder.ts",
-            "sha256": "7a9f2f5ed184e242f5b00d73051573038270a399c9ba64ee84621ed3a4e13d19"
+            "sha256": "d7730489c9e147877861ca27b55407de98dcbb6c5a70152ac3c0ee1b04f8769c"
           },
           {
             "path": "tools/maps/types.ts",

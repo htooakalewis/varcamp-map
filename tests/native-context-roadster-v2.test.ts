@@ -1,5 +1,6 @@
 import{beforeAll,expect,it}from'vitest';
 import{readFileSync}from'node:fs';
+import{gunzipSync}from'node:zlib';
 import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
 import{buildMap}from'../tools/maps/builder';
@@ -26,8 +27,10 @@ beforeAll(()=>{
  preBrand=structuredClone(preV2);preBrand.tilesets=preV2.tilesets.filter(t=>!brand(t));
  preExpo=structuredClone(preV2);preExpo.tilesets=preV2.tilesets.slice(0,registered.maps.overworld.atlases.length+fleetNames.length);
 });
-it('derives the exact genuine pre-v2 native: the inverse of the v2 transaction is byte-identical to the brand-epoch plaza',()=>{
- expect(sha(JSON.stringify(preV2)+'\n')).toBe(PRE_ROADSTER_V2_NATIVE_SHA256);
+it('inverts the genuine pre-booth v2 transaction to the byte-identical brand-epoch plaza',()=>{
+ const raw=gunzipSync(readFileSync('tests/fixtures/expo-booths/before-native.tmj.gz'));
+ expect(sha(raw.toString())).toBe('f7db4ebeb3ea0afc1f99764e365bc4719552204345d3c72d8c32dd568072089c');
+ expect(sha(JSON.stringify(preRoadsterV2Native(JSON.parse(raw.toString())))+'\n')).toBe(PRE_ROADSTER_V2_NATIVE_SHA256);
  expect(registeredRoadster()).toMatchObject({index:17,body:{name:'roadster',...V1}});
 });
 it('the current plaza vacates the registered v1 roadster interval and carries the v2 body after the brand family from GID 11783',()=>{
