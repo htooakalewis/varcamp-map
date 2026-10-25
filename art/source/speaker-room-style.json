@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "source": "art/source/speaker-room-style.svg",
+  "sourceSha256": "552235adcbae421da41edbed7488a12e3ea58d52023b48e4841eb51b482289fa",
+  "atlas": "assets/tilesets/original/speaker-room-style.png",
+  "atlasSha256": "b7dab480865258feb6d296febc4fbf70daabe4a56dd3f07f348bbce637189a9e",
+  "width": 32,
+  "height": 224,
+  "tileSize": 32,
+  "description": "Original geometric charcoal wallpaper, orange trim and cream logo plates for the Aries owner-review preview. Existing logos remain separate native PNGs. Rasterized without resizing using Sharp0.34.5.",
+  "license": "CC0-1.0",
+  "sprites": {
+    "speaker-style-wall": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-edge-bottom": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-edge-top": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-edge-left": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-edge-right": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 4,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-logo-card": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 5,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    },
+    "speaker-style-caption-floor": {
+      "sheet": "assets/tilesets/original/speaker-room-style.png",
+      "rect": {
+        "x": 0,
+        "y": 6,
+        "width": 1,
+        "height": 1
+      },
+      "blockingCells": [],
+      "level": "belowAvatar",
+      "sourceId": "original"
+    }
+  }
+}

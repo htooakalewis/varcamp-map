@@ -73,6 +73,20 @@ A successful build or a passing plan is not publication. Only the completed `app
 
 Keep the plan directory after a successful release; it is the only record of what the live tree looked like before the upload.
 
+## Aries presentation successor
+
+The one-room owner preview uses `aries-presentation-v1` for
+`maps/speaker-aries.wam`. The upload guard compares the existing meeting area
+against the frozen fourteen-room contract, replaces only its owned stage fields,
+and appends the named listener area from `world/aries-presentation.json`.
+Independent settings, entities, areas, vendor fields and unknown stage fields
+must remain type-for-type identical. Customized owned controls, colliding area
+IDs or names, missing revision files and changes to any other WAM fail closed.
+The dependency receipt names this migration. Ordinary WAM updates retain the
+byte-preserving token-only rule. A reviewed candidate must be derived from the
+same fresh live inventory as the prepared plan; quiet-window and complete
+readback checks still apply.
+
 ## Quiet editor window
 
 Coordinate the window at the concrete prepared-plan checkpoint. Stop changes in the target map editor, allow autosave to settle beyond the 15-second save interval, and confirm the planned baseline still matches before `apply`. The tool compares the live inventory twice, 16 seconds apart, and aborts on any change; it never silently restores stale WAMs. A changed baseline means an organiser saved something: reconcile with the organiser and prepare a new plan. There is no upload/editor lock, revision check or atomic rollback.

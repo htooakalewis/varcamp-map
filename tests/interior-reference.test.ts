@@ -14,7 +14,12 @@ describe('reference-furnished zodiac interiors',()=>{
  });
  for(const name of names){
   it(`${name}: keeps exact footprint, entries, returns, meeting roles and inspection routes`,()=>{
-   const layout=load(name);for(const[key,value]of Object.entries(before[name]))expect(layout[key as keyof MapLayout],`${name}: ${key}`).toEqual(value);
+   const layout=load(name);for(const[key,value]of Object.entries(before[name])){
+    if(name==='speaker-aries'&&key==='areas'){
+     expect(layout.areas.map(a=>a.id)).toEqual(['meeting-aries','beacon-aries','aries-audience']);
+     expect(layout.areas.find(a=>a.id==='beacon-aries')).toEqual((value as MapLayout['areas']).find(a=>a.id==='beacon-aries'));
+    }else expect(layout[key as keyof MapLayout],`${name}: ${key}`).toEqual(value);
+   }
   });
   it(`${name}: has a furnished lounge with original PNG props and natural plant/cabinet clusters`,()=>{
    const layout=load(name),props=layout.placements.filter(p=>p.sprite.startsWith('interior-ref-'));

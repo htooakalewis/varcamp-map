@@ -36,7 +36,7 @@ describe('closed current14 interior source/native/WAM contract',()=>{
   if(kind==='saved-wam-missing')a.wam.areas.shift();
   if(kind==='extra-duplicate-id')a.wam.areas.push(structuredClone(a.wam.areas[0]));
   if(kind==='extra-duplicate-name')a.wam.areas.push({...structuredClone(a.wam.areas[0]),id:'extra-area',properties:[]});
-  if(kind==='extra-duplicate-control')a.wam.areas.push({...structuredClone(a.wam.areas[0]),id:'extra-area',name:'Extra area',properties:[{id:'new-owner',type:'livekitRoomProperty',roomName:'varcamp-aries'}]});
+  if(kind==='extra-duplicate-control')a.wam.areas.push({...structuredClone(a.wam.areas[0]),id:'extra-area',name:'Extra area',properties:[{...structuredClone(a.wam.areas[0].properties[0]),id:'new-owner'}]});
   if(kind==='extra-duplicate-property')a.wam.areas.push({...structuredClone(a.wam.areas[0]),id:'extra-area',name:'Extra area',properties:[{...structuredClone(a.wam.areas[0].properties[0]),roomName:'extra-unique-room'}]});
   expect(()=>check(a)).toThrow(/Interior/);
  });

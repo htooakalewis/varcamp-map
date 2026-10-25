@@ -7,21 +7,17 @@
       "id": "meeting-aries",
       "name": "meeting-aries",
       "visible": true,
-      "x": 64,
-      "y": 160,
-      "width": 1024,
-      "height": 640,
+      "x": 96,
+      "y": 192,
+      "width": 960,
+      "height": 256,
       "properties": [
         {
-          "id": "aries-livekit",
-          "type": "livekitRoomProperty",
-          "roomName": "varcamp-aries",
-          "livekitRoomConfig": {
-            "startWithAudioMuted": true,
-            "startWithVideoMuted": true,
-            "disableChat": true,
-            "raiseHandEnabled": true
-          }
+          "id": "aries-stage-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-aries-talk",
+          "chatEnabled": false,
+          "seeAttendees": false
         }
       ]
     },
@@ -34,9 +30,37 @@
       "width": 96,
       "height": 64,
       "properties": []
+    },
+    {
+      "id": "aries-audience",
+      "name": "Aries listening area",
+      "visible": true,
+      "x": 64,
+      "y": 448,
+      "width": 1024,
+      "height": 352,
+      "properties": [
+        {
+          "id": "aries-listener",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "meeting-aries",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
     }
   ],
-  "entityCollections": [{"url":"https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json","type":"file"},{"url":"https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json","type":"file"}],
+  "entityCollections": [
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
   "metadata": {
     "name": "VarCamp · Speaker Aries"
   }

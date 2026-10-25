@@ -2,7 +2,7 @@
   "workadventure": {
     "attribution": "WorkAdventure / The Coding Machine; preserve all authors and terms in LICENSE.assets",
     "url": "https://github.com/workadventure/map-starter-kit/tree/1143646a9c02c3928eac4acbb123642c62a48a85/tilesets",
-    "license": "WorkAdventure assets license — redistribution only with a WorkAdventure map; not a standalone asset pack",
+    "license": "WorkAdventure assets license \u2014 redistribution only with a WorkAdventure map; not a standalone asset pack",
     "licenseFile": "assets/tilesets/workadventure/LICENSE.assets",
     "changes": "None. Six complete source sheets copied byte-for-byte. Catalog only selects tile rectangles.",
     "files": [
@@ -66,7 +66,7 @@
     ]
   },
   "lpc-space": {
-    "attribution": "Baŝto/Basxto, Hyptosis, FunwithPixels and Skorpio",
+    "attribution": "Ba\u015dto/Basxto, Hyptosis, FunwithPixels and Skorpio",
     "url": "https://opengameart.org/content/lpc-goes-to-space",
     "license": "CC-BY-SA 4.0",
     "licenseFile": "assets/tilesets/lpc-space/LICENSE-CC-BY-SA-4.0.txt",
@@ -83,7 +83,7 @@
     "url": "https://creativecommons.org/publicdomain/zero/1.0/",
     "license": "CC0 1.0",
     "licenseFile": "assets/tilesets/original/LICENSE.txt",
-    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained. Beach refinement: beach-lounge.svg/png and beach-surf.svg/png add integer-grid native pixel palms, striped parasols/recliners, slatted tables, woven towels, timber cabana/bar and gentle 2080ms four-frame surf. A separate translucent original tile calms the existing licensed LPC water; imported source sheets are unchanged. Original standing caption glyph atlas added: semantic source linked to existing original pixel alphabet plus original arrows; no imported pixels. Approved original generated coastal wildlife, props and aircraft technical native PNG exports, plus eleven bounded native wildlife animations. Masters, crop recipes, phase tracks and pure export checks retained. Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied. Roadster-v2 addition: the plaza display is recompiled from the same sixteen generated poses with compiler-synthesised 100 ms tweens, hover bob, landing settle, thruster bloom, pad shadow/light chases, dust puffs, light pulses and roll ghosting into roadster-v2.png; the v1 atlas stays frozen as the registered reservation body and no new car pixels were drawn.",
+    "changes": "New integer-grid vector paths and pixel art, exported at 1 unit = 1 pixel. No source-sheet pixels copied. Constellations are illustrative zodiac silhouettes, not sky charts. Speaker-room refinement adds a native large display, lectern, north-facing chairs and slim forge/balance wall reliefs; original social-space assets remain available. Campus addition: original translucent navy 32px atmosphere tile, rendered from campus.svg; imported sheets remain unchanged. Amenities addition: original cosmic arcade cabinet in amenities.svg/amenities.png; existing imported sheets and original artwork unchanged. Guide addition: original blue Lyra, purple Aster and gold Nova transparent robot sprites in guides.svg/guides.png, authored on a native integer grid; no imported pixels copied. Wayfinding addition: original integer-grid navy/wood/brass signboard components, compass and gold cardinal chevrons in wayfinding.svg/wayfinding.png, with no imported pixels copied. Medium-hub addition: original native fixed-camera warm-wall roofed building and deterministic bold block-glyph English nameplate/navigation art, generated from hub-nameplates.json and hub-art.ts into hub-buildings.svg/png and hub-labels.svg/png. No system font or imported pixels used; all existing atlas bytes unchanged. Original coastal sailing vessel, sails, nautical furniture, sand/water/foam, wildlife and sponsor aircraft/balloon frames authored in coastal.svg; reference composition only, no paid image pixels copied. Exterior-road addition: six original upright native masonry/timber gate elevations and compact road/return plaques, generated deterministically by exterior-gates.ts using the original block glyphs. Existing artwork and atlas pixels remain unchanged. Added original native painted FA SHIP block-glyph decals, human-scale cannon and mast base, plus dedicated whole-plane/banner animation atlas. Existing source pixels retained. Roadster: original generated sixteen-pose sheet compiled with uniform nearest-neighbor scale, binary alpha, fixed tech pad and native Tiled animation; source generation/crop receipts retained. Beach refinement: beach-lounge.svg/png and beach-surf.svg/png add integer-grid native pixel palms, striped parasols/recliners, slatted tables, woven towels, timber cabana/bar and gentle 2080ms four-frame surf. A separate translucent original tile calms the existing licensed LPC water; imported source sheets are unchanged. Original standing caption glyph atlas added: semantic source linked to existing original pixel alphabet plus original arrows; no imported pixels. Approved original generated coastal wildlife, props and aircraft technical native PNG exports, plus eleven bounded native wildlife animations. Masters, crop recipes, phase tracks and pure export checks retained. Expo-plaza addition: six original 32px booth sticker badges (star, heart, bolt, pin, smile, leaf) in the cream/teal/peach/lavender/amber palette with a thin cream outline, authored on the integer grid in booth-stickers.svg and exported natively to booth-stickers.png; no imported pixels copied. Roadster-v2 addition: the plaza display is recompiled from the same sixteen generated poses with compiler-synthesised 100 ms tweens, hover bob, landing settle, thruster bloom, pad shadow/light chases, dust puffs, light pulses and roll ghosting into roadster-v2.png; the v1 atlas stays frozen as the registered reservation body and no new car pixels were drawn. Aries owner-review addition: seven original geometric 32px charcoal wallpaper, orange trim and cream logo-plate tiles; SVG master and native PNG preserved in speaker-room-style records. Existing logo pixels remain separate and unchanged.",
     "files": [
       {
         "path": "art/source/booth-stickers.svg",
@@ -900,6 +900,18 @@
       {
         "path": "assets/tilesets/original/roadster-v2.png",
         "sha256": "e7d1e60509d55e2e78bf71eb6108b307716dd25a24f008837df2fc5f6e494802"
+      },
+      {
+        "path": "art/source/speaker-room-style.svg",
+        "sha256": "552235adcbae421da41edbed7488a12e3ea58d52023b48e4841eb51b482289fa"
+      },
+      {
+        "path": "art/source/speaker-room-style.json",
+        "sha256": "dbf49a9a5e3aa33a113986c324668e80184eb343c92a811820abeebcae364a37"
+      },
+      {
+        "path": "assets/tilesets/original/speaker-room-style.png",
+        "sha256": "b7dab480865258feb6d296febc4fbf70daabe4a56dd3f07f348bbce637189a9e"
       }
     ]
   },
@@ -1405,191 +1417,191 @@
     "files": [
       {
         "path": "art/source/interior-motion-lunar-hall-plant.json",
-        "sha256": "23b9970e7b0fa9e3e3290d0063b0d77a165bfa26b5a5d3aefd1acbe2dc391daf"
+        "sha256": "9e36c777b73e28034021c270637a6a8f6991054f50bb39d20525ccf7dd687867"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-server.json",
-        "sha256": "4865db80a1629b8378efd37040616eed981c411950226255ccab4cfdb41d6eaf"
+        "sha256": "9de57b23d026cd487fa912939f0f46c6c9ecc1b80c216b3e2f1980691af398c4"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-steam.json",
-        "sha256": "fac291bc64b648032f9c0dc88026d8035155fa0cf1f50a763dc65d16bc4558de"
+        "sha256": "c52c95cb3ef5c6223af224e2156a472d8e62604d291f135016a0615337f6ce4e"
       },
       {
         "path": "art/source/interior-motion-lunar-hall-water.json",
-        "sha256": "2d9b36e2ec3eeaa912818eafa0d594eb79e27cb885d3c4e2d58fa62ed6a4cb1f"
+        "sha256": "8dad56259487d5ca2e5723da10a23492ac15edff1792bb020c85c29dd77e34b6"
       },
       {
         "path": "art/source/interior-motion-solar-hall-plant.json",
-        "sha256": "db29ea736750f24a5b6e0f78c03cf5eb250ed9eadbf17c82b287d16655a48f4d"
+        "sha256": "cf071b3d65dc894bc4fdeaf200918ddfa85ecec4f70fa57952a093ada8169803"
       },
       {
         "path": "art/source/interior-motion-solar-hall-server.json",
-        "sha256": "eb4820ae6c8db664ba8e9677eb57f8b2b657cbb6f6efb92b01a0dd0d0ab56416"
+        "sha256": "cb02bd12817873e6e0863cf93975c5172b85905ce3941d7f01e9a82f238d1867"
       },
       {
         "path": "art/source/interior-motion-solar-hall-steam.json",
-        "sha256": "9ab1e50e3c2d3099d31af63529d243f3bb75f805a56315a168ba87baff6deacc"
+        "sha256": "87851352536493d84df3e285e62fbe215b79adea1143753f9df70750065e0678"
       },
       {
         "path": "art/source/interior-motion-solar-hall-water.json",
-        "sha256": "8cb5485938ea09ec25b92e9f9c6bf45ab8a758b11bb1563264f02e3f09c83b22"
+        "sha256": "d179f5d7cefbd6aa2d2d2769547d0cc68b00ae8627c94549c3d6c6cb28ce05f6"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-plant.json",
-        "sha256": "d10821b8695e6386b26c73ed3a0040fa1d540d2234412dd31103563928c3e94d"
+        "sha256": "21e2b1210df78021bf74a44e2a75b72ab74f28bfe1637070d12ba8341da29c0f"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-server.json",
-        "sha256": "0a93afa098e814015a0cc5cd1ad2a852bb1f68e6d8679310a474e54c967cc00b"
+        "sha256": "e404b5b2227ab9e12a5b1217abbdf129a3ad362fcc6ae428b94d0d7e3f1f2a17"
       },
       {
         "path": "art/source/interior-motion-speaker-aquarius-steam.json",
-        "sha256": "2ed4bc7dbd45e9ff4a39935ede0d2ff8ec9f3f310a0d98b0810a4e877729543d"
+        "sha256": "38108afff5d9c9a0048e5fde49913ed360893c3a8ac71d01cb509b1e6299bee6"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-plant.json",
-        "sha256": "3699e7716573ea79a136c15ec2877eca92baaa2beb83763891b15cef554d5b51"
+        "sha256": "ad43d40408012fa591488f8bb40b5e61892b712f284958a2148a895ee205dbf5"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-server.json",
-        "sha256": "9b3f93439f52bbfe77ae26bb020e6ffbfe19776eef5ed387b3827d12d3617412"
+        "sha256": "2b73860118269ee0b040b81fd096e50f62cb574498b70487da7e5f7644121d93"
       },
       {
         "path": "art/source/interior-motion-speaker-aries-steam.json",
-        "sha256": "b13f11d0c44befa6b0c6759dd08acde3215496335a7cc8d0b107a331752f724d"
+        "sha256": "56291100467122bb297713d8254ab94f5bc882709fe5e9de926fabdd7b902849"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-plant.json",
-        "sha256": "0733bae01c4a9a0727d152de3d75d0201047d2c2d13f4073cf13185ea290b46e"
+        "sha256": "66953134d1c838a5fbec6f0a23b95f0a17a319b481196d90865c35d3163bd379"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-server.json",
-        "sha256": "e49a80979a28da9950310e8d656d6df3235d9f7b2834408ba9af3a4b6ba86ac6"
+        "sha256": "e2e5ab9aef3ddbebe6d74e291da7ec34a66d217f694085977ad55af59d73ea33"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-steam.json",
-        "sha256": "7953b409c656c4ad5c403b11c6051278f4f792120fe14578b10e1a4de35c6f32"
+        "sha256": "ee66ff231793689011cd95f6e772f9e34866783552b23b3f391d4ac871d70f08"
       },
       {
         "path": "art/source/interior-motion-speaker-cancer-water.json",
-        "sha256": "70db91ebe8649398cfdb3e1230f31558fd3e68f364207afc941e804a37b91775"
+        "sha256": "9d9590b41a91181b1f98ff18c8775e342bed759d853a44a6516745efaebbda3d"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-plant.json",
-        "sha256": "5c5ea9ee03d6005aee680f300d91b5a4fa1e4470219c8720a714335587d5f9c4"
+        "sha256": "c35141965c251c2e4fc3ef45b0c76e4ad7591dbd062783218bdb772fd9c41b35"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-server.json",
-        "sha256": "800383938cc9dbd17ba2365ab362c0c0fc61f1276ecedc692c768e7dc2ec4af0"
+        "sha256": "7c29a944a8d299ed59e4c145a7a86163554352e1dbac957424f8b5ccb39dbb65"
       },
       {
         "path": "art/source/interior-motion-speaker-capricorn-steam.json",
-        "sha256": "602dfe1df4aae093ee06f2ff4117b73da68dfa2371f57c2ee4972a5cbef15a83"
+        "sha256": "01e9e24b364d15ce16364f1875815e0e5ad082f0feb6d0e56a83def6e24221c7"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-plant.json",
-        "sha256": "9dd2f6ed420b21477418fe5219b49d43995caebbb13e4fc6a5df4d3bbcf02c02"
+        "sha256": "d0145677cef6a5f466115fe37442aafbe0b016631995b1505da14d9688f1ae6d"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-server.json",
-        "sha256": "30f3c5422af96015136f5568348d1e93659d94fc1c3b44b8bf2a63d1ddead452"
+        "sha256": "d335ae12a30cd72518a43a20451516327142f22703079d063f69564ebbc262b9"
       },
       {
         "path": "art/source/interior-motion-speaker-gemini-steam.json",
-        "sha256": "5c4031ff5b51825e039df3ae5e0d05d52ab2cc9a10eae0cd88e0263a4451feb7"
+        "sha256": "ac35b0f5dcb1fcf7243d9ff220587f3307280572c603b1ca85c4d5ac42bd9d9d"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-plant.json",
-        "sha256": "c201732a8d2773d42a69248b69119e7283b231aff4e2962a3cf9ac5107ad1c5e"
+        "sha256": "6ba3ef226181493b57ae01685be10c526f1880c37e99d2a86e2c1295a9ebf33d"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-server.json",
-        "sha256": "53432301cbd38a2080a59cf45769710027377ace9b50627ce140f6a3bf8a0732"
+        "sha256": "a1dae644596ed8a634a995aa3d23540c33f79ad37c94294bc8cb6ca4091b25c3"
       },
       {
         "path": "art/source/interior-motion-speaker-leo-steam.json",
-        "sha256": "cedef8d0d502d857fd84e7c6ab210439b9fe15bf045c6219506ef7dae680eacd"
+        "sha256": "d1061baef19cf23bf3e0d93c263a73b92540b18ccb3e0d7ec92b213b0c6957e5"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-plant.json",
-        "sha256": "ba3673b2d1698ed4fbe3fc3aebb7a6c4e875a780fc2d6a7a3a818a88ee984f45"
+        "sha256": "d9d345f55fab85af5b7da8ff63251168a647bb4fb16f212c5c2be7fe36995e08"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-server.json",
-        "sha256": "2decd979da94a4ce506ebf15c9500d6a51eeb1b10e3a7b15fd28b2782b60c24e"
+        "sha256": "257a20171f427977fa409d5835e47266e065a394569085e4f0b22d11cde87009"
       },
       {
         "path": "art/source/interior-motion-speaker-libra-steam.json",
-        "sha256": "aa72fcb6361a9e8d22f7e99814c3a2af17e94bc3c78a8bae5966702986c4e7ad"
+        "sha256": "2f41f4c7309622c504f86597a66802952b5d6f5f50ba0cb18a011afdb5c8f2b1"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-plant.json",
-        "sha256": "cd04acadda723d5ca45b57cd650c5c535e3ede0aed1bfd7e4a9af9821953c42a"
+        "sha256": "26191efd6a987eaef2d7e340cea0fe316456c404a0fd8428af5efc30828da6c2"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-server.json",
-        "sha256": "02f5bceae0fb8306a5afc0156989f56e2f6a77ff9243d5ec6c455bf6721d79d1"
+        "sha256": "f7017ce30f154d2946921801b9ebf51c788b4ece52d18c59b5b9c54054296b47"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-steam.json",
-        "sha256": "1b29aeb065eb270d6cb54e5d4184b208269d6b9e8a14108b7c71010316af14cb"
+        "sha256": "8134251da52b6981e3bc6c15d54319369d75ff9149b10f09861c2d5896096dba"
       },
       {
         "path": "art/source/interior-motion-speaker-pisces-water.json",
-        "sha256": "6d93506af409df38546abe051e1162ef82feb978cab2726c14088bc747156f95"
+        "sha256": "3ba3e3997cc6d0091caab9e67ea526970912ad82c860828338aab045d6c70a7a"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-plant.json",
-        "sha256": "a8757a342a45eeab811f08889f8486ff1d1e7a592d029d392a129f3477e0167f"
+        "sha256": "8782295a129d5c9eb6af6f5fd589c849335af53badb977933220ade8012ec462"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-server.json",
-        "sha256": "de5e86831b19182293f4e2f386a85aeca798b6e06d6e9b216fc6ae043cbf2862"
+        "sha256": "ec65b789249da4602fb29f402ef14e86fc182be66a58c6e5a8c410015d3d7517"
       },
       {
         "path": "art/source/interior-motion-speaker-sagittarius-steam.json",
-        "sha256": "02a056634e447bb6853de79e1aa31b504bb897d046e3c3414a13b135f0e91001"
+        "sha256": "938d01053206c9361204a5048a899df6596f559a2a6784ea2c4ec65b889093b8"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-plant.json",
-        "sha256": "48ea2f30c2648876e3ab6b395da8e7ab46fdc5985e6e1983bf5b8f2afc71e625"
+        "sha256": "9525b6e2cbca5e1ee748f123e947aa704718f6e32ad01b730aa53c6626ef2e12"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-server.json",
-        "sha256": "0affe054afbfa10b16429202e58bbc47105388c14f4b7fa530f7e4ff7f35488b"
+        "sha256": "adc1919733a64cf7140f381dce6f12e1541b458bf596bfa008c5d8a31455ecbb"
       },
       {
         "path": "art/source/interior-motion-speaker-scorpio-steam.json",
-        "sha256": "3a2becd7995bd986283f2e388eba0b4779ad97aecba47a9ace50614b2f36b000"
+        "sha256": "31f7cf254fdc692aebe832594df131abaa4b3c1e6dd6cd97cea5271e367687a3"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-plant.json",
-        "sha256": "91dcc958cfb30f92594db51f68b0c9e2b4372c23f421ce5191d35d8a2e7e6c98"
+        "sha256": "969455aa22916b1c0da367cd33cd6040bb5a49bbfa054ae2f29e443bbcae2e08"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-server.json",
-        "sha256": "0abf550950b009c5a1da41ef730cc48707c0b374d1e6ccc0132e7d25b1010921"
+        "sha256": "11affd6f52247b725022db39b22395c1410232d933a843abec8fc7f517950bc7"
       },
       {
         "path": "art/source/interior-motion-speaker-taurus-steam.json",
-        "sha256": "f4af0693176856da1dfee279fd67176eaaf0267edc84048f9b758a78e3b323e0"
+        "sha256": "65dbbc7cbe773640d7e1991bac656342f4ae92c10e67d39a1fa90c213daf17e8"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-plant.json",
-        "sha256": "c19c5b020f453c6cdff38d01bbe2a2f363fd977f0e7085f51d505700312530a8"
+        "sha256": "83e90d08c0e027e4f89899ed22a734b97beeeb5e8c3258bedff7f902a584e6f5"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-server.json",
-        "sha256": "ce8158bd14c6a88a9cc87acbdd946e26d6d61f2de734f0a86b8a2ef1949bf4ab"
+        "sha256": "c097f6fbea94b97b4910f170936d2cdc44ff9fe538ad9024f744071da9b29b17"
       },
       {
         "path": "art/source/interior-motion-speaker-virgo-steam.json",
-        "sha256": "43d7a6ddfacd5ad88a552eb662ecd260e255f980290faa1a979aec2a9a280328"
+        "sha256": "7f9d8ef0e3e79147067037424c53f6ba3207916a9022d681168548095bc575f6"
       },
       {
         "path": "art/source/interior-motion.json",
-        "sha256": "5e54d4539eb09d06f8a62e450207df486e7a585aa0ac5634b44dc5359a25addd"
+        "sha256": "c43c1cafa425e1d0f30682b100df4a4164a4069d706c7ed32305a3e17fdf572d"
       },
       {
         "path": "art/source/interior-reference-native.png",
@@ -1649,7 +1661,7 @@
       },
       {
         "path": "tools/art/interior-reference-motion.ts",
-        "sha256": "ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc"
+        "sha256": "7e3a076865d3e52177585f6eac406b508e7f98d595104bb0ce4a04e76a83c4ec"
       }
     ]
   },

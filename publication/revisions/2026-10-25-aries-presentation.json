@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "a451d94adc6e44fb2c02012a21615ba39fa68cf0e7690a422177d8efc2b2de52",
+      "toSha256": "9b8b53c9a7dcc64b8a5844fe64e8d4dbccd786ed22d57d5fac2e7af003ecd128",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "43f926df56073fdd6cb9c356d699facc0f101fecf32a91728e0d62afe4f42d80",
+      "toSha256": "e39c7dfdaa3575c83e4605e69b278a676a62e10a9030cf1b029ea47390501b52",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "maps/preview/speaker-aries.tmj",
+      "fromSha256": "6af780a5b3193d28380d58946cf29c7ab76ff868c4f314ef4e11ab28d05f38ed",
+      "toSha256": "98901e30aaaee6f843b135c646c606118ef03ed5f4d13469bb830bafd3b4a957",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "fromSha256": "eb9202e49233e0140af02cbb15c5a7bde77de4966574533f5cdda183bad1caee",
+      "toSha256": "86affaec2c2708b399473628b1c41edf0cecd102ab08cc172d76b41226c28842",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "maps/speaker-aries.wam",
+      "fromSha256": "e9e697714a7ae9eebb0e2c24aec7b5292a5dbfe21ce503396ac29dbb1b840f21",
+      "toSha256": "cd7545b67ab28a062d0102dfd439a86fcfb7989e06660ea1621dcf84617a5edf",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "tests/authored-interiors.test.ts",
+      "fromSha256": "362b5ccbd867de100d7b5ede5f0e6cb59ead3b24bfe2a3725f56777107ebf9c2",
+      "toSha256": "cc323ad5bfa51594af9e145690d0145fb7ceb4a2c6e2cd1a3f950f32e10f1d78",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "5881048a2d081367e5de658fcaa86d189691fcae816e0e9914bf3d3d50b9869a",
+      "toSha256": "38e0c42c130f1c9411c9552d7df98e8faa84db6866d9cfdb58b23a6a714dc1e5",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "tests/speaker-maps.test.ts",
+      "fromSha256": "0bfb3c6b06f5b87f11c93642302464293070a903a5f6f7e2c4216172951b97d8",
+      "toSha256": "44f15dd0417f705307b6672f1119f379ce67832b03c6a30ad06dee02ad68b295",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "fdf6223ffc7bc59d327bc6ab6de9e686f8669d93bd2c5a6338d0738853031c05",
+      "toSha256": "854ca3c2be2a15a07a757780d964d335aa07269de65b04006b91a4b9483ebad7",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "aeaba7efaa229b88fd320c1234ee6e2a0981f7e78b01183aa4013e8fa0dd3f59",
+      "toSha256": "3c8088d28df99db5e5f4c2eb1bc6e581b867dfc0e5247b5f4fe91b06a0c4db7f",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "5000222d40f3cc5a5ebdd32da9bcc2357eb091e2cd402484c11e34a2f592f0c0",
+      "toSha256": "a51cb8be50f591264f63bf4cc68f4140a97379af00d640795a32c22345332c97",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-aries.json",
+      "fromSha256": "9a88ba8f4dc6d09366fb585af144f08d08f691c1c6b126d188ecb1329f3120c2",
+      "toSha256": "b6a0aacc567a86d4a9b1865b6377c2c732b0c817956c6977aa042491f823b938",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "56d94c39b1d880c769c73e5c9c0fb0b3f5601e832d13ff8a2ced36c841203cb3",
+      "toSha256": "97bbe8a829dfd4b444a9a2e44c8471731ec4f833a96613be737a6db04efafa29",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "2243d67b5c77836e52cbbc4b1b8722f358a760083587e9296499d582870f227c",
+      "toSha256": "787d52bff1fb6d928a30c9e6daa2bc429a56ab73868937dc0acb4a16b3753aec",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "8fb18c29f38bcc89e6774e4ef73fe34fcb531e0b83f0164c9e139496e708c936",
+      "toSha256": "f59f7fca304d16a0324bd617704e753de61650ad03ab9e167c123817f25e51d9",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "10efd380e2e7df5fe4819e1c2714dc7b660293cdad25614e53ec9c56f8d8d064",
+      "toSha256": "08dfc3a54b778ba1c826647e00d551112a23aa8c668813e3e49b5e661044a38d",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "e9a8af79aca0826b2289172cd7c1607415f53a4bce7c5001ea97937ed684166c",
+      "toSha256": "562f8968363701131e5b7e7e06777d628b1843f1814bea639d99db29c5791b72",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "de529313fdf9a783491b3dee3639acfe5c29078fac644e3f0c98ddfe2fafd655",
+      "toSha256": "580b83632ee06a5d691dae2d60f43486deef9b11f9f071e0cfeb2b6b5c9bf9e8",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "5a968f09daff55611edf49718ba11e46dd650381ba7c7155adadc257711154c0",
+      "toSha256": "0cac03b592aa1df63155e6917c884de0d7e067b47f7da6049176e1f548b74142",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "fa137e623e30e1f0937510d827505e18fcfa009da54c1f866ca7e0e97cceacc9",
+      "toSha256": "8f6a28f3d1cbfba83675b37c3fbd435461ffd1d5b540d7500ce329609f6278f5",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "16794c228f14eea7e3040293e6f86fd1cadcc65919164c86694b5880b63b63d2",
+      "toSha256": "ef750741c7de0bf481460dc4b02bc81256757a95f1884a6f1fa0966a2aeb3ee6",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "c3457bc1a6c8217297c526cc2cfd62886dd53e2f44a62fcfe970f173ab1ca977",
+      "toSha256": "718fcde7fa4e07b891eb1b39c89a6810e6015c6fbec4cfe6d8172fa9fa951105",
+      "reason": "Single Aries owner preview: native VarCamp and partner wall panels, separate presenter/listener areas, unchanged zodiac furnishings and geometry."
+    }
+  ]
+}

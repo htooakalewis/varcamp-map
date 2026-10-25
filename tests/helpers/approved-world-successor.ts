@@ -6,6 +6,7 @@ import {gunzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
 import {WORLD_CATALOG} from '../../src/world/catalog';
 import type {MapLayout,TiledMap} from '../../tools/maps/types';
+import {applyAriesPresentation} from '../../tools/maps/aries-presentation';
 
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 /** Pins from the separately reviewed original18-file fleet source epoch. The
@@ -56,6 +57,15 @@ export const approvedRoadsterV2StaticPins:Record<string,string>={
 export const approvedRoadsterV2Rows:Record<string,number>={'art/source/roadster-v2-authoring.json':201,'art/source/roadster-v2.json':202,'assets/tilesets/original/roadster-v2.png':203};
 /** The one sentence the roadster-v2 epoch appended to the `original` registry's change log. */
 export const approvedRoadsterV2RegistryNote=' Roadster-v2 addition: the plaza display is recompiled from the same sixteen generated poses with compiler-synthesised 100 ms tweens, hover bob, landing settle, thruster bloom, pad shadow/light chases, dust puffs, light pulses and roll ghosting into roadster-v2.png; the v1 atlas stays frozen as the registered reservation body and no new car pixels were drawn.';
+/** Three geometric wallpaper records and the one motion-producer control update for Aries. */
+export const approvedAriesStyleStaticPins:Record<string,string>={
+ 'art/source/speaker-room-style.svg':'552235adcbae421da41edbed7488a12e3ea58d52023b48e4841eb51b482289fa',
+ 'art/source/speaker-room-style.json':'dbf49a9a5e3aa33a113986c324668e80184eb343c92a811820abeebcae364a37',
+ 'assets/tilesets/original/speaker-room-style.png':'b7dab480865258feb6d296febc4fbf70daabe4a56dd3f07f348bbce637189a9e',
+ 'tools/art/interior-reference-motion.ts':'7e3a076865d3e52177585f6eac406b508e7f98d595104bb0ce4a04e76a83c4ec',
+};
+export const approvedAriesStyleRows:Record<string,number>={'art/source/speaker-room-style.svg':204,'art/source/speaker-room-style.json':205,'assets/tilesets/original/speaker-room-style.png':206};
+export const approvedAriesStyleRegistryNote=' Aries owner-review addition: seven original geometric 32px charcoal wallpaper, orange trim and cream logo-plate tiles; SVG master and native PNG preserved in speaker-room-style records. Existing logo pixels remain separate and unchanged.';
 export const approvedBirdRecipePins:Record<string,string>={
  'art/source/coast-life-tracks.json':'bd0dbb1202ccd1e84a89f0e796ab839371f102ebec1de4cb67053c84a190e7f6',
  'art/source/world-ambient.json':'a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7',
@@ -70,6 +80,7 @@ const changes:Record<string,readonly[string,string]>={
  'tools/art/native-motion.ts':['8746ae341a730748115a051a7b8b6750689f9afac6bd5b59f4900aa2e730b9a6','4e6f0d41813fefc8a40dd5bf211866e5cd51eed882182bd97b93b220e13acf1a'],
  'tools/maps/builder.ts':['f7b58d120c5d97f63a3800bdd1d6c4aa1203402ef7d309da29b6d9c743197a50','d5825e67c9a3ab86dd1b9c3f922e6f8fb126e652ee9ff149e8d2ead8d249ce3d'],
  'tools/maps/types.ts':['cf573467e8a0e086e6c96210881bd568da6e6dc048763ae8cd6e647d11974767','fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff'],
+ 'tools/art/interior-reference-motion.ts':['ebd941d548a992237d197763ed3ce569f8de8d9aaa63777aa8a52bb82b9a79bc','7e3a076865d3e52177585f6eac406b508e7f98d595104bb0ce4a04e76a83c4ec'],
 };
 export const approvedUnchangedLayoutIds=Object.keys(WORLD_CATALOG).filter(id=>!['overworld','shipyard-beach','constellation-shore','fa-ship'].includes(id)).sort();
 interface Component {path:string;bytes:number;sha256:string;raw:string}
@@ -99,5 +110,6 @@ export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
  return result;
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
- assert.deepEqual(current,advanceReviewedProvenance(approvedHistoricalLayout(id)),'Only the finite reviewed producer fingerprints may advance '+id);
+ const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));
+ assert.deepEqual(current,id==='speaker-aries'?applyAriesPresentation(baseline):baseline,'Only finite reviewed producer/presentation successors may advance '+id);
 }

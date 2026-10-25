@@ -8,7 +8,8 @@ import {validateMap,validateWam} from '../tools/maps/validate';
 import {WORLD_CATALOG} from '../src/world/catalog';
 import type {MapLayout,TiledMap,WamFile,TileLayer} from '../tools/maps/types';
 import baseline from './fixtures/interior-original-palms/before.json';
-import {approvedHistoricalLayout,assertApprovedLayoutSuccessor} from './helpers/approved-world-successor';
+import {approvedHistoricalLayout,assertApprovedLayoutSuccessor,advanceReviewedProvenance} from './helpers/approved-world-successor';
+import ariesPresentation from '../world/aries-presentation.json';
 
 const alias='world-ambient-plant-palm';
 const read=<T>(path:string):T=>JSON.parse(readFileSync(path,'utf8')) as T;
@@ -38,10 +39,24 @@ describe('original same-footprint interior palms',()=>{
    expect(mask(a.map)).toEqual(before.blockedIndices);expect([a.map.width,a.map.height]).toEqual([before.width,before.height]);
    expect(digest(rest)).toBe(before.layoutExceptPlacementsSha256);
    assertApprovedLayoutSuccessor(id,a.layout);
-   expect(digest(placements.filter(p=>!targets(id).some(t=>t.id===p.id)))).toBe(before.nonTargetPlacementsSha256);
+   const addedIds=id==='speaker-aries'?ariesPresentation.placements.map(p=>p.id):[];
+   expect(digest(placements.filter(p=>!targets(id).some(t=>t.id===p.id)&&!addedIds.includes(p.id)))).toBe(before.nonTargetPlacementsSha256);
    expect(digest(historical.animatedOverlays)).toBe(before.motionSha256);expect(a.layout.animatedOverlays).toHaveLength(before.motionCount);
-   expect(sha(readFileSync(`maps/${id}.wam`))).toBe(before.wamSha256);
-   if(!targets(id).length)expect(sha(readFileSync(`maps/${id}.tmj`))).toBe(before.nativeSha256);
+   if(id==='speaker-aries'){
+    // Preserve the historical oracle using genuine saved history, then prove
+    // that only the explicit stage/listener successor changed the current WAM.
+    const reverted=structuredClone(a.wam),old=historical.areas.find(a=>a.id==='meeting-aries')!;
+    reverted.areas=reverted.areas.filter(a=>a.id!=='aries-audience');
+    Object.assign(reverted.areas.find(a=>a.id==='meeting-aries')!,{x:old.x*32,y:old.y*32,width:old.width*32,height:old.height*32,properties:old.properties});
+    const actualBeforeWam=readFileSync('tests/fixtures/aries-presentation/before.wam');
+    expect(sha(actualBeforeWam)).toBe(before.wamSha256);
+    expect(reverted).toEqual(JSON.parse(actualBeforeWam.toString()));
+    const actualBefore=renderReferenceInterior(advanceReviewedProvenance(historical),a.catalog).tmj;
+    expect(sha(JSON.stringify(actualBefore)+'\n')).toBe(before.nativeSha256);
+   }else{
+    expect(sha(readFileSync(`maps/${id}.wam`))).toBe(before.wamSha256);
+    if(!targets(id).length)expect(sha(readFileSync(`maps/${id}.tmj`))).toBe(before.nativeSha256);
+   }
    expect(validateMap(a.map,WORLD_CATALOG)).toEqual([]);expect(validateWam(a.wam)).toEqual([]);expect(()=>check(a)).not.toThrow();
   });
  }

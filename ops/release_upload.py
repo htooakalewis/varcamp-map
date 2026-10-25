@@ -61,6 +61,69 @@ def wam_reference(path, data):
         position += 1  # comma; a root mapUrl is known to exist
 
 
+def aries_presentation_wam_candidate(data):
+    """The one named native-area successor; all independent editor data is retained.
+
+    Ordinary reviewed WAMs remain token-only. Missing revision files and already
+    changed/customized owned areas fail closed rather than granting a general
+    metadata-write escape hatch to a copied standalone publisher.
+    """
+    import copy
+    root = pathlib.Path(__file__).resolve().parent.parent
+    try:
+        spec = json.loads((root / 'world/aries-presentation.json').read_text())
+        contract = json.loads((root / 'world/interior-reference-contract.json').read_text())
+    except (OSError, ValueError):
+        return None
+    if spec.get('version') != 1 or spec.get('mapId') != 'speaker-aries' or contract.get('version') != 1:
+        return None
+    expected_old = next((a for a in contract['maps']['speaker-aries']['functional']['areas'] if a.get('id') == 'meeting-aries'), None)
+    rows = spec.get('areas', [])
+    if len(rows) != 2 or rows[0].get('id') != 'meeting-aries' or rows[1].get('id') != 'aries-audience' or not expected_old:
+        return None
+    def native(area):
+        return {'id': area['id'], 'name': area['name'], 'visible': True,
+                **{k: area[k] * 32 for k in ('x', 'y', 'width', 'height')},
+                'properties': copy.deepcopy(area['properties'])}
+    if not isinstance(data, dict) or not isinstance(data.get('areas'), list) or any(not isinstance(a, dict) for a in data['areas']):
+        return None
+    same_json = lambda a, b: json.dumps(a, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False) == json.dumps(b, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False)
+    matching = [a for a in data['areas'] if a.get('id') == 'meeting-aries']
+    if len(matching) != 1 or any(not same_json(matching[0].get(k), v) for k, v in native(expected_old).items()):
+        return None
+    audience = native(rows[1])
+    if any(a.get('id') == audience['id'] or a.get('name') == audience['name'] for a in data['areas']):
+        return None
+    new_properties = [p for a in rows for p in a['properties']]
+    new_ids = {p['id'] for p in new_properties}
+    def owner(p):
+        return ('speaker', p.get('name')) if p.get('type') == 'speakerMegaphone' else ('meeting', p.get('roomName')) if p.get('type') == 'livekitRoomProperty' else None
+    new_owners = {owner(p) for p in new_properties} - {None}
+    for area in data['areas']:
+        if area.get('id') == 'meeting-aries':
+            continue
+        properties = area.get('properties', [])
+        if not isinstance(properties, list) or any(not isinstance(p, dict) for p in properties):
+            return None
+        if any(p.get('id') in new_ids or owner(p) in new_owners for p in properties):
+            return None
+    result = copy.deepcopy(data)
+    result['areas'] = [{**a, **native(rows[0])} if a.get('id') == 'meeting-aries' else a for a in result['areas']]
+    result['areas'].append(audience)
+    return result
+
+
+def is_aries_presentation_wam_change(path, before, after):
+    if path != 'maps/speaker-aries.wam':
+        return False
+    expected = aries_presentation_wam_candidate(json.loads(before))
+    actual = json.loads(after)
+    if expected is None:
+        return False
+    expected['mapUrl'] = actual.get('mapUrl')
+    return json.dumps(expected, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False) == json.dumps(actual, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False)
+
+
 def wam_dependencies(release, baseline, reviewed_wams=None):
     """Own generated references while preserving all live organizer bytes."""
     reviewed_wams = reviewed_wams or {}
@@ -78,9 +141,12 @@ def wam_dependencies(release, baseline, reviewed_wams=None):
         expected_pin = hashlib.sha256(final[tmj]).hexdigest()
         if pin != expected_pin:
             raise ValueError(f'{path}: stale mapUrl pin {pin}; final {tmj} requires {expected_pin}; supply an explicit reviewed token-only migration')
+        named_migration = False
         if path in reviewed_wams:
             _, original_protected = wam_reference(path, baseline[path])
             if protected != original_protected:
+                named_migration = is_aries_presentation_wam_change(path, baseline[path], candidate)
+            if protected != original_protected and not named_migration:
                 raise ValueError(f'{path}: reviewed migration must preserve every byte outside the mapUrl version token')
         dependencies[path] = {
             'tmj': tmj, 'tmjSha256': expected_pin,
@@ -88,13 +154,16 @@ def wam_dependencies(release, baseline, reviewed_wams=None):
             'toWamSha256': hashlib.sha256(candidate).hexdigest(),
             'reviewed': path in reviewed_wams,
         }
+        if named_migration:
+            dependencies[path]['migration'] = 'aries-presentation-v1'
     return dependencies
 
 
 def replacement_files(release, baseline, reviewed_wams=None):
     """Preserve saved WAMs only when their final TMJ dependency is exact.
 
-    Explicit reviewed migrations may replace only version-token bytes. Callers
+    Explicit reviewed migrations replace version-token bytes or the named Aries
+    presentation areas while retaining all independent organizer data. Callers
     must still establish a quiet window to protect concurrent editor writes.
     """
     reviewed_wams = reviewed_wams or {}

@@ -19,12 +19,12 @@ const walk=(map:TiledMap,start:number)=>{
 };
 
 describe('separate authored speaker scenes',()=>{
- it('provides all twelve private meetings and discoveries solely in speaker scenes',()=>{
+ it('provides twelve room-specific talk controls and discoveries solely in speaker scenes',()=>{
   expect(composed).toHaveLength(34);expect(Object.keys(WORLD_CATALOG)).toHaveLength(34);expect(composed.map(l=>l.id).sort()).toEqual(Object.keys(WORLD_CATALOG).sort());
   for(const sign of SIGN_IDS){
    const l=composed.find(l=>l.id===`speaker-${sign}`)!;expect(l).toBeDefined();expect(l.width).toBeLessThanOrEqual(40);expect(l.height).toBeLessThanOrEqual(40);expect(l.width).toBeGreaterThanOrEqual(32);expect(l.height).toBeGreaterThanOrEqual(32);
-   expect(l.areas.filter(a=>a.properties.some(p=>p.type==='livekitRoomProperty')).map(a=>a.name)).toEqual([`meeting-${sign}`]);
-   expect(l.areas.find(a=>a.name===`meeting-${sign}`)!.properties).toEqual([{id:`${sign}-livekit`,type:'livekitRoomProperty',roomName:`varcamp-${sign}`,livekitRoomConfig:{startWithAudioMuted:true,startWithVideoMuted:true,disableChat:true,raiseHandEnabled:true}}]);
+   expect(l.areas.filter(a=>a.properties.some(p=>p.type==='livekitRoomProperty')).map(a=>a.name)).toEqual(sign==='aries'?[]:[`meeting-${sign}`]);
+   expect(l.areas.find(a=>a.name===`meeting-${sign}`)!.properties).toEqual(sign==='aries'?[{id:'aries-stage-broadcast',type:'speakerMegaphone',name:'varcamp-aries-talk',chatEnabled:false,seeAttendees:false}]:[{id:`${sign}-livekit`,type:'livekitRoomProperty',roomName:`varcamp-${sign}`,livekitRoomConfig:{startWithAudioMuted:true,startWithVideoMuted:true,disableChat:true,raiseHandEnabled:true}}]);
    expect(l.areas.find(a=>a.name===`beacon-${sign}`)?.properties).toEqual([]);
    expect(l.placements.some(p=>p.sprite===`glyph-${sign}`)).toBe(true);expect(l.placements.some(p=>p.sprite===`constellation-${sign}`)).toBe(true);
   }
@@ -42,7 +42,7 @@ describe('separate authored speaker scenes',()=>{
   }
  });
  it('places audience seating on both sides of a clear aisle with a furnished social pocket',()=>{
-  for(const sign of SIGN_IDS){const l=composed.find(l=>l.id===`speaker-${sign}`)!,aisle=l.inspectionZones.find(z=>z.name==='central-aisle')!,meeting=l.areas.find(a=>a.name===`meeting-${sign}`)!;
+  for(const sign of SIGN_IDS){const l=composed.find(l=>l.id===`speaker-${sign}`)!,aisle=l.inspectionZones.find(z=>z.name==='central-aisle')!,meeting=l.areas.find(a=>sign==='aries'?a.id==='aries-audience':a.name===`meeting-${sign}`)!;
    const seats=l.placements.filter(p=>p.id.startsWith('seat-'));expect(seats.some(p=>p.x<aisle.x)).toBe(true);expect(seats.some(p=>p.x>=aisle.x+aisle.width)).toBe(true);
    for(const seat of seats)expect(seat.x>=meeting.x&&seat.y>=meeting.y&&seat.x+seat.width<=meeting.x+meeting.width&&seat.y+seat.height<=meeting.y+meeting.height,`${sign} ${seat.id} lies outside its private meeting`).toBe(true);
    expect(l.placements.some(p=>p.sprite==='screen-presentation')).toBe(true);expect(l.placements.some(p=>p.sprite==='lectern')).toBe(true);

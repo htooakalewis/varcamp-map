@@ -80,7 +80,7 @@ describe('native coastal boarding and nautical proportions',()=>{
    }
    expect(createHash('sha256').update(retired).digest('hex'),path+' original independent retirement bytes').toBe(revision.toSha256);
    let effective=revision.toSha256;
-   for(const name of ['2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure','2026-10-18-standing-captions','2026-10-18-standing-captions-ci-closure','2026-10-18-beach-groves-guide-identity','2026-10-18-organic-coast','2026-10-18-constellation-coast','2026-10-18-campus-refinement','2026-10-19-shared-world-service','2026-10-24-welcome-plaza-retirement']){
+   for(const name of ['2026-10-17-return-approaches','2026-10-17-beach-composition','2026-10-17-beach-ci-closure','2026-10-17-solid-props','2026-10-17-solid-props-ci-closure','2026-10-18-standing-captions','2026-10-18-standing-captions-ci-closure','2026-10-18-beach-groves-guide-identity','2026-10-18-organic-coast','2026-10-18-constellation-coast','2026-10-18-campus-refinement','2026-10-19-shared-world-service','2026-10-24-welcome-plaza-retirement','2026-10-25-aries-presentation']){
     if(name==='2026-10-19-shared-world-service'&&path.startsWith('world/layouts/')&&approvedUnchangedLayoutIds.includes(id)){
      expect(createHash('sha256').update(approvedHistoricalRaw(path)).digest('hex'),path+' genuine pre-fleet bytes').toBe(effective);
      assertApprovedLayoutSuccessor(id,source(id));

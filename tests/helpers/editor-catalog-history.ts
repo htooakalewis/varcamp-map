@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
+import {beforeAriesWam} from './aries-presentation-history';
 
 // Independent frozen 8dc37e1239456ca3165f3bbd7f47238735e27169 receipts.
 // No git history or generated publication manifest is consulted at test runtime.
@@ -149,7 +150,7 @@ export const editorCatalogHistoryMaps = Object.keys(receipts);
 
 export function historicalEditorWamBytes(id: string, supplied?: Buffer | string): Buffer {
   if (!Object.hasOwn(receipts, id)) throw new Error('Unknown frozen editor WAM');
-  const current = supplied === undefined ? readFileSync(`maps/${id}.wam`, 'utf8') : supplied.toString();
+  const current = id==='speaker-aries' ? beforeAriesWam(supplied).toString() : supplied === undefined ? readFileSync(`maps/${id}.wam`, 'utf8') : supplied.toString();
   const value = JSON.parse(current);
   requireEqual(value.entityCollections, approvedEditorCollections, 'Unapproved editor collection registration');
   requireEqual(JSON.parse(readFileSync('world/editor-collections.json', 'utf8')), approvedEditorCollections, 'Unapproved editor collection defaults');

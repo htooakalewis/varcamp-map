@@ -21,7 +21,7 @@ import{renderCoastLife}from'../tools/art/coast-life';
 import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion';
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
-import{approvedFleetStaticPins,approvedBirdRecipePins,approvedExpoStaticPins,approvedExpoStaticRows,approvedExpoCaptionRows,approvedExpoRegistryNote,approvedBrandAssetRegistry,approvedRoadsterV2StaticPins,approvedRoadsterV2Rows,approvedRoadsterV2RegistryNote,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
+import{approvedFleetStaticPins,approvedBirdRecipePins,approvedExpoStaticPins,approvedExpoStaticRows,approvedExpoCaptionRows,approvedExpoRegistryNote,approvedBrandAssetRegistry,approvedRoadsterV2StaticPins,approvedRoadsterV2Rows,approvedRoadsterV2RegistryNote,approvedAriesStyleStaticPins,approvedAriesStyleRows,approvedAriesStyleRegistryNote,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const stable=(v:any):any=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
 const digest=(v:unknown)=>sha(JSON.stringify(stable(v))),read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -69,11 +69,11 @@ it('binds every current registry path and preserves static artwork while validat
  const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
  // The brand epoch added exactly one reviewed registry id after the closed roster (owner-provided, not CC0); its complete record is pinned.
  expect(Object.keys(current)).toEqual([...Object.keys(before),...Object.keys(approvedBrandAssetRegistry)]);for(const[id,record]of Object.entries(approvedBrandAssetRegistry)){expect(current[id],id+' exact reviewed owner-provided registry').toEqual(record);for(const row of record.files)expect(sha(readFileSync(row.path)),row.path+' actual registered bytes').toBe(row.sha256);expect(existsSync(record.licenseFile)).toBe(true);}
- expect(current.original.files).toHaveLength(204);const expoPaths=[...Object.keys(approvedExpoStaticPins),...Object.keys(approvedExpoCaptionRows),...Object.keys(approvedRoadsterV2Rows)].sort();expect(expoPaths).toHaveLength(8);
+ expect(current.original.files).toHaveLength(207);const expoPaths=[...Object.keys(approvedExpoStaticPins),...Object.keys(approvedExpoCaptionRows),...Object.keys(approvedRoadsterV2Rows),...Object.keys(approvedAriesStyleRows)].sort();expect(expoPaths).toHaveLength(11);
  const generated=await generatedDescriptors();
  for(const id of Object.keys(before)){
-  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote+approvedRoadsterV2RegistryNote}:oldMetadata);
-  if(id==='original'){expect(currentFiles.map((r:any)=>r.path).filter((p:string)=>!expoPaths.includes(p)),id+' closed path roster/order').toEqual(oldFiles.map((r:any)=>r.path));for(const[path,index]of Object.entries({...approvedExpoStaticRows,...approvedExpoCaptionRows,...approvedRoadsterV2Rows}))expect(currentFiles[index].path,path+' registered expo/roadster-v2 row position').toBe(path);}
+  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote+approvedRoadsterV2RegistryNote+approvedAriesStyleRegistryNote}:oldMetadata);
+  if(id==='original'){expect(currentFiles.map((r:any)=>r.path).filter((p:string)=>!expoPaths.includes(p)),id+' closed path roster/order').toEqual(oldFiles.map((r:any)=>r.path));for(const[path,index]of Object.entries({...approvedExpoStaticRows,...approvedExpoCaptionRows,...approvedRoadsterV2Rows,...approvedAriesStyleRows}))expect(currentFiles[index].path,path+' registered forward row position').toBe(path);}
   else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
   for(let i=0;i<currentFiles.length;i++){
    const row=currentFiles[i],old=id==='original'?oldFiles.find((r:any)=>r.path===row.path):oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
@@ -83,6 +83,7 @@ it('binds every current registry path and preserves static artwork while validat
    else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);
    else if(Object.hasOwn(approvedExpoStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed expo sticker artwork').toBe(approvedExpoStaticPins[row.path]);
    else if(Object.hasOwn(approvedRoadsterV2StaticPins,row.path))expect(row.sha256,row.path+' exact reviewed roadster-v2 motion authoring').toBe(approvedRoadsterV2StaticPins[row.path]);
+   else if(Object.hasOwn(approvedAriesStyleStaticPins,row.path))expect(row.sha256,row.path+' exact reviewed Aries wallpaper source/export').toBe(approvedAriesStyleStaticPins[row.path]);
    else{expect(old,row.path+' no undeclared extension').toBeDefined();expect(row,row.path+' unchanged static/master/source').toEqual(old);}
   }
  }
