@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "40e3e516e24b17de76c35653853a1b44657b359720b19cd95d4dd1f830775d9e",
+      "toSha256": "4f4979461fe713d6139cbaeb4612cc3c007969c3c73ec291d9bfc857dbff740c",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "db1fc054e6684e28da0e05ab4c54a11f8ae84902279c59fcae7a479c557fe825",
+      "toSha256": "9ed3b75ca962fe50f4422381aae4febdf533e36d1cd9f4d986d673a75ef4010e",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "abee2e8ba39113a929f3b196d553cd212b577bf64f0203c29a3345cb4f0fc8b7",
+      "toSha256": "111b6e4bfbe0549e1c1157b4141547393736d3b24ef13709f157dadec84c28fa",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "870dc75d7298cbdd52b1dccf12ac276634850637b1d33dcec416e89978832e1c",
+      "toSha256": "4f94ab6cbac5a339c7a8f03eb45f73f5ebf5e7ef790709931758f84c5636dafc",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "cf2d7a3da0d35e7ceb959cf6971c850f8d961e418aa4c13203dc4faec5635690",
+      "toSha256": "c18301f35bf796c6547e9ff1d6122599d2994caf917aa75d0ba921da3d66d4e0",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "2368c810d131e1c47099de52b1476d7aeb92e5ce7a9395860f51eb20f96fd7b7",
+      "toSha256": "27dbc0916c5d0be8810833e07ff322d008fe27d156e4296d17df8cdee3c7daae",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "tools/release.ts",
+      "fromSha256": "bc551704ebe5129a4f9cb6bd5e40459e6355c563bfc8d3e45c67f9a11bcc78c1",
+      "toSha256": "44c3147d6c42db478eea5e4c8fdc2af4e6451ccf83a20ddd87412009a874b80c",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "8ba0b089052edb07000a808b9774c7b4f6fecdd81e4b342e59b2a44bc9b14c34",
+      "toSha256": "e3f9a77d886bdaaabf1d29cc200f1b6d65e07903212858fb165ae83d6eadeb41",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "3f22d0f5fe38c1e477eaba2d706082f0d96c0a6944eae0a022008323d413e0d8",
+      "toSha256": "36ff4a03d934b7f8565e7770981cea3cc8c196e8d3bb02c7177ad836e13011f1",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "d736e97ecd799c01767f9ec87b644255209dbc95a7409990cb704d16d53c8a78",
+      "toSha256": "ffbfde519b0e92e4f037bc6dc739962f261b07c842281dcad66350c0a63fb0e8",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "16f33a9ec5ad9452e94bc59088c0288d48d0ebdf16ce6b4f33f31477d739d2bb",
+      "toSha256": "022097df30a1e0c068f0eb75f3438f3aafd5e9861a34a7f401ac1eab18603d40",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "6e924fb7973edf05a6491574a00632f42051a287415e68c060122423643f8e69",
+      "toSha256": "3f3a19e6272e60132bf327160c6f3516cd2b16c093736d5808e9a2265271d795",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "9a28ac201fe4d7e2256882ee56356a5c457967b3cb77c3ed816791f23fa6fd58",
+      "toSha256": "fccd33687230695c1fb3b6215bf2440aa8eba81c3c85c4d309714621d54c7092",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "712ff266a7c62e5df5b68c37d3fdc4707337c958e20f6f2134252f4525fed586",
+      "toSha256": "df4aaa3f2763ec9fb7126a798c261144fc6191fe74d3ab0b2b40b36afa916d0b",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "7fb7945d7f25bfa0915c84766c0c387c708216532f8ec62f65c324f844bc8d69",
+      "toSha256": "0dba4f4b5a8f469e98737d729c3c56717c4ae381496aeb60e71314a3352b7856",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "bf45fe557aa7162f512406e3d85446b5d1f2cd50ee4ac14fbfce0f123abd7f5e",
+      "toSha256": "4cd4d0171fc1fb2aee25f64b09bc4de7bb2da185fe96431110137a5a80cd1cca",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "2e94ec311883a65e1ec13d2810b44a95611d6d8120661d98eac19b420e4b2f10",
+      "toSha256": "18e1735a003b13442f12e205f0fd8c92ae33d6696fa192c5996161bde1a1545f",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "7f46098c1e8e8a257ebeac6e86c089a99438f86c0e43b2fc3a3164dfdd0f75fe",
+      "toSha256": "d71047603a6e5088e4feb9c02262f5064095dfb802ef9e3467a874f70626d42b",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "8df74546e500d2d2b9233717c8ed356f0d189039e9d50a67ad44eca480bced50",
+      "toSha256": "cd7806e4437a3a43bc5763fad044f1786ee41adb7dbb67c05647e0b7004bf5dd",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "4cc7b5ceed82f59eb07a91bcbcab7a9405de89d3bbb4fde77128ad157890fb83",
+      "toSha256": "f8a9cf4cd30a1228a9b52ecfaf5e7368169e697f316345e8e7b576072fa8fb91",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "9143212088fe9081599ffb4f2fcc044b0fbbc81e62a4d32e12f20aa18dbb132c",
+      "toSha256": "aa61c77f98561f1c6ac77fe17e1eab4a6a949603d242db3c740a244cb684a11f",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "ffca47c1d08be780f68094ac1b6be0f72a36cc0ac402fe27b93f284471e03096",
+      "toSha256": "a367239febf98fc819666b1fb0e2c9b5499b81b176d6ec1391808a5e08148674",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "da584937e96b4c53738e00c52d1defed333926b106ace35ea942dc7b2876a441",
+      "toSha256": "af77472e7d8dd36ad4adcaf0e1a70adb22d625dadd8420d3f110c740d568429c",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "247608c5e567715122bf3cd52a8d270e5e79055edbe433740d59e626378e5366",
+      "toSha256": "782a56b16c3860156365cb9fad39e780f09025a6de95393c1cbd44fe30ecd11f",
+      "reason": "Give Solar and Lunar their own original sunburst and crescent pavilion facades on the exact8x6 footprints; append one atlas while retaining all previous art, controls, route graph and collisions. Advance only reviewed producer/public guide provenance."
+    }
+  ]
+}

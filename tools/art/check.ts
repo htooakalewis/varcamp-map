@@ -5,6 +5,7 @@ import {renderPlazaIdentity} from './plaza-generated';
 import {renderPlazaGarden} from './plaza-garden';
 import {renderPlazaBuildings,renderPlazaGrass} from './plaza-buildings';
 import {checkZodiacExteriorArt} from './zodiac-exteriors';
+import {checkHallExteriorArt} from './hall-exteriors';
 import {renderPlazaDrones} from './plaza-drones';
 import {checkPlazaFleetArt} from './plaza-fleet-check';
 import {renderPlazaPots} from './plaza-pots';
@@ -35,6 +36,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   const fleetErrors=await checkPlazaFleetArt(sources);
   if(fleetErrors.length)return fleetErrors;
   const zodiacErrors=await checkZodiacExteriorArt(catalog,sources);if(zodiacErrors.length)return zodiacErrors;
+  const hallErrors=await checkHallExteriorArt(catalog,sources);if(hallErrors.length)return hallErrors;
   errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
   try{await checkTropicalCoveArt();}catch(error){errors.push(String(error));}

@@ -85,6 +85,16 @@ function zodiacExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefine
  const set=sets[0];need(/^art-\d+$/.test(set.name??'')&&set.image===r.image&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&set.imageheight===r.imageheight&&set.tilecount===r.tilecount&&!set.tiles,'zodiac exterior source atlas identity/geometry changed');
  return{...structuredClone(set),firstgid:start,name:r.name};
 }
+/** Two assembly-hall facades, one exact reservation after the84 prior bodies.
+ * Current art and plaza gates require this family independently of source markers. */
+export const HALL_EXTERIOR_ATLAS=Object.freeze({name:'hall-exteriors',image:'../assets/tilesets/original/hall-exteriors.png',columns:16,imagewidth:512,imageheight:192,tilecount:96});
+function hallExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefined{
+ const r=HALL_EXTERIOR_ATLAS,sets=source.tilesets.filter(t=>t.image===r.image||t.name===r.name);
+ need(sets.length<=1,'hall exterior atlas duplicated');if(!sets.length)return;
+ need(identities(source)[0]==='overworld','hall exterior atlas requires overworld identity');
+ const set=sets[0];need(/^art-\d+$/.test(set.name??'')&&set.image===r.image&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&set.imageheight===r.imageheight&&set.tilecount===r.tilecount&&!set.tiles,'hall exterior source atlas identity/geometry changed');
+ return{...structuredClone(set),firstgid:start,name:r.name};
+}
 /** Beach-only cove successor. The former coast reservation remains untouched;
  * one bounded native32px atlas is appended after the frozen beach context. */
 export const TROPICAL_COVE_ATLAS=Object.freeze({name:'tropical-cove-coast',image:'../assets/tilesets/original/tropical-cove-coast.png',columns:64,imagewidth:2048,maxImageHeight:1024});
@@ -162,7 +172,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -198,6 +208,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   // Roadster-v2 epoch: admitted only here, only after every brand reservation; it vacates the v1 interval.
   const v2Start=next+[...expo,...brand].reduce((n,set)=>n+set.tilecount!,0),v2=roadsterV2Atlas(source,epoch.roadsterV2?expected:structuredClone(expected),v2Start);if(v2&&epoch.roadsterV2)expected.push(v2);
   const zodiac=zodiacExteriorAtlas(source,v2Start+(v2?.tilecount??0));if(zodiac&&includeZodiac&&epoch.roadsterV2)expected.push(zodiac);
+  const hall=hallExteriorAtlas(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0));if(hall){need(zodiac,'hall exteriors require the preceding zodiac reservation');if(includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(hall);}
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
@@ -220,8 +231,9 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
- // Exact immediately preceding overworld context: all83 old reservations/bodies.
- if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,false)))return;
+ // Exact immediately preceding hall context, then the genuine pre-zodiac context.
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,false)))return;
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,false,false)))return;
  // The exact immediately preceding beach context is a finite authoring input;
  // the final current gate above always requires the new cove reservation.
  if(identities(source)[0]==='shipyard-beach'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,false)))return;

@@ -10964,7 +10964,7 @@
     },
     {
       "id": "exterior-gate-solar",
-      "sprite": "exterior-gate-solar",
+      "sprite": "hall-exterior-solar",
       "x": 17,
       "y": 18,
       "width": 8,
@@ -11000,7 +11000,7 @@
     },
     {
       "id": "exterior-gate-lunar",
-      "sprite": "exterior-gate-lunar",
+      "sprite": "hall-exterior-lunar",
       "x": 103,
       "y": 18,
       "width": 8,

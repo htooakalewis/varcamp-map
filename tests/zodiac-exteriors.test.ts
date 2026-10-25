@@ -10,7 +10,9 @@ import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
 import {emitNativeMapAssets} from '../tools/release';
 import {beforeZodiac,beforeZodiacJson,beforeZodiacRaw} from './helpers/zodiac-exterior-history';
 import type {MapLayout,TiledMap,TileLayer} from '../tools/maps/types';
-const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
+import {preHallLayout,preHallNative} from './helpers/pre-hall-exterior-epoch';
+// Stage the genuine zodiac epoch only after proving the complete current hall successor.
+const read=<T=any>(p:string):T=>{const value=JSON.parse(readFileSync(p,'utf8'));return(p==='world/layouts/overworld.json'?preHallLayout(value):p==='maps/overworld.tmj'?preHallNative(value):value)as T;};
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 describe('twelve zodiac exterior architectures',()=>{
  for(const sign of SIGN_IDS)it(`${sign}: uses its own architecture on the unchanged native doorway and collision footprint`,()=>{

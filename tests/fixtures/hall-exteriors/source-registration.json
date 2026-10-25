@@ -1,0 +1,37 @@
+{
+  "attribution": "Original Solar and Lunar pavilion artwork generated for VarCamp using OpenAI image generation, 2026-10-25; native sprite compilation by the VarCamp map team",
+  "url": "https://var.camp/",
+  "license": "Original project artwork; permitted project distribution",
+  "licenseFile": "assets/tilesets/hall-exteriors/LICENSE.txt",
+  "changes": "Two retained transparent masters fitted uniformly into native256x192 cells. Four-wide lower passages remain transparent, and original bitmap title plaques occupy the left piers. All earlier assets remain unchanged.",
+  "files": [
+    {
+      "path": "world/hall-exteriors.json",
+      "sha256": "5ae31038834e2e3088d15f7a03215d18a4811b704d73e0656f43e894c9012a8a"
+    },
+    {
+      "path": "tools/art/hall-exteriors.ts",
+      "sha256": "1580153081cdcf48cf613392a08af6e67ab94fb0a73b05b6fd7a679709e628f0"
+    },
+    {
+      "path": "art/source/hall-exteriors/prompts.json",
+      "sha256": "be57b092ece7f4db39d508ad87caea2355548ad42c93d3d7bf063b322311b057"
+    },
+    {
+      "path": "art/source/hall-exteriors/solar-generated-master.png",
+      "sha256": "b6b462e8e9763e31c76fcb187edf3825e39685a55357d4d5bfb7d2e90f8574a5"
+    },
+    {
+      "path": "art/source/hall-exteriors/lunar-generated-master.png",
+      "sha256": "0f23cbe810944f4eb3dc91df1b8034f44734c4d70d502f0e1fe58886761787e1"
+    },
+    {
+      "path": "art/source/hall-exteriors.json",
+      "sha256": "9e3bff5507c0b8e26dd8befcff947736cbedea4bb889e87a536a66ad3e254eba"
+    },
+    {
+      "path": "assets/tilesets/original/hall-exteriors.png",
+      "sha256": "2365aedfcaed8d5555d25a14c0eec6c5d5d5093525b3761fe721dd87a4694578"
+    }
+  ]
+}

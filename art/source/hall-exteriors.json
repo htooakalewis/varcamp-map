@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "recipe": {
+    "path": "world/hall-exteriors.json",
+    "sha256": "5ae31038834e2e3088d15f7a03215d18a4811b704d73e0656f43e894c9012a8a"
+  },
+  "glyphs": {
+    "path": "art/source/hub-nameplates.json",
+    "sha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293"
+  },
+  "operation": "alpha-tight complete subjects; uniform nearest-neighbor fit to256x192; centered at south edge; alpha below192 cleared; four-wide lower passage cleared; existing bitmap glyph nameplates; no original asset overwritten",
+  "subjects": [
+    {
+      "id": "solar",
+      "master": {
+        "path": "art/source/hall-exteriors/solar-generated-master.png",
+        "sha256": "b6b462e8e9763e31c76fcb187edf3825e39685a55357d4d5bfb7d2e90f8574a5"
+      },
+      "crop": {
+        "left": 22,
+        "top": 70,
+        "width": 1405,
+        "height": 904
+      },
+      "target": {
+        "x": 0,
+        "y": 27,
+        "width": 256,
+        "height": 165
+      },
+      "passage": {
+        "x": 64,
+        "y": 96,
+        "width": 128,
+        "height": 96
+      },
+      "blockingCells": 24,
+      "title": "SOLAR HALL"
+    },
+    {
+      "id": "lunar",
+      "master": {
+        "path": "art/source/hall-exteriors/lunar-generated-master.png",
+        "sha256": "0f23cbe810944f4eb3dc91df1b8034f44734c4d70d502f0e1fe58886761787e1"
+      },
+      "crop": {
+        "left": 25,
+        "top": 51,
+        "width": 1400,
+        "height": 994
+      },
+      "target": {
+        "x": 256,
+        "y": 10,
+        "width": 256,
+        "height": 182
+      },
+      "passage": {
+        "x": 320,
+        "y": 96,
+        "width": 128,
+        "height": 96
+      },
+      "blockingCells": 24,
+      "title": "LUNAR HALL"
+    }
+  ],
+  "atlas": {
+    "path": "assets/tilesets/original/hall-exteriors.png",
+    "width": 512,
+    "height": 192,
+    "columns": 16,
+    "tilecount": 96,
+    "sha256": "2365aedfcaed8d5555d25a14c0eec6c5d5d5093525b3761fe721dd87a4694578"
+  }
+}

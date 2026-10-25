@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "alphaThreshold": 192,
+  "atlas": {
+    "path": "assets/tilesets/original/hall-exteriors.png",
+    "width": 512,
+    "height": 192,
+    "columns": 16,
+    "cellWidth": 256,
+    "cellHeight": 192
+  },
+  "nameplates": {
+    "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293"
+  },
+  "buildings": [
+    {
+      "id": "solar",
+      "before": {
+        "id": "exterior-gate-solar",
+        "sprite": "exterior-gate-solar",
+        "x": 17,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "after": {
+        "id": "exterior-gate-solar",
+        "sprite": "hall-exterior-solar",
+        "x": 17,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "master": {
+        "path": "art/source/hall-exteriors/solar-generated-master.png",
+        "sha256": "b6b462e8e9763e31c76fcb187edf3825e39685a55357d4d5bfb7d2e90f8574a5"
+      }
+    },
+    {
+      "id": "lunar",
+      "before": {
+        "id": "exterior-gate-lunar",
+        "sprite": "exterior-gate-lunar",
+        "x": 103,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "after": {
+        "id": "exterior-gate-lunar",
+        "sprite": "hall-exterior-lunar",
+        "x": 103,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "master": {
+        "path": "art/source/hall-exteriors/lunar-generated-master.png",
+        "sha256": "0f23cbe810944f4eb3dc91df1b8034f44734c4d70d502f0e1fe58886761787e1"
+      }
+    }
+  ]
+}
