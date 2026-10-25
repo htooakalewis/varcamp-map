@@ -71,7 +71,7 @@ it('applies the actual retirement function to the historical beach layout withou
  expect(digest(retired)).toBe('2be30eb4c14bc7e19b4513e48d8664ed5531471338f1c7d2c63716a9010e3af7');
  expect(retired.areas.some(a=>a.name==='npc-dockmaster')).toBe(false);
 });
-it('has no visible robot tile or name in any native map and keeps the ordinary BEACH BAR sign', () => {
+it('has no visible robot tile or name in any native map and keeps the compact cove direction signs', () => {
  for(const file of readdirSync('maps').filter(f=>f.endsWith('.tmj'))){
   const tmj=JSON.parse(readFileSync(`maps/${file}`,'utf8'));
   for(const s of tmj.tilesets.filter((s:{image:string})=>s.image.endsWith('/guides.png')))
@@ -79,6 +79,6 @@ it('has no visible robot tile or name in any native map and keeps the ordinary B
   for(const l of tmj.layers)expect((l.objects??[]).filter((o:{name:string})=>o.name.startsWith('npc-name-'))).toEqual([]);
  }
  const beach=JSON.parse(readFileSync('maps/shipyard-beach.tmj','utf8'));
- const caption=beach.layers.find((l:{name:string})=>l.name==='standing-caption-dockmaster-station');expect(caption?.properties).toContainEqual({name:'captionText',type:'string',value:'BEACH BAR'});expect(caption.data.filter(Boolean)).toHaveLength(7);
+ expect(beach.layers.some((l:{name:string})=>l.name==='standing-caption-dockmaster-station')).toBe(false);const caption=beach.layers.find((l:{name:string})=>l.name==='standing-caption-boarding-label');expect(caption.properties).toContainEqual({name:'captionText',type:'string',value:'↓ FA SHIP'});expect(caption.data.filter(Boolean)).toHaveLength(3);
  expect(beach.layers.flatMap((l:{objects?:unknown[]})=>l.objects??[]).some((o:{name:string})=>o.name==='dockmaster-station')).toBe(false);
 });

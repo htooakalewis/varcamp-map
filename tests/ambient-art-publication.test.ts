@@ -1,3 +1,4 @@
+import {renderTropicalCove,tropicalCoveMetadata,COVE_IMAGE} from '../tools/art/tropical-cove';
 import{cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,symlinkSync,existsSync,readdirSync}from'node:fs';
 import{CAPTION_FAMILIES,captionFamily,captionSpecs,renderCaptionMaster}from'../tools/art/standing-captions';
 import{resolve}from'node:path';
@@ -57,9 +58,10 @@ async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:B
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
  add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  // Caption family descriptors are rendered by the current caption producer from the linked layouts; the glyph PNGs themselves stay static registry rows.
- for(const family of CAPTION_FAMILIES){const specs=readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>read('world/layouts/'+f)).filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(l));if(!specs.length)continue;const master=renderCaptionMaster(specs);add(family.meta,{schemaVersion:1,specs,glyphsSha256:sha(readFileSync('art/source/hub-nameplates.json')),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(master.svg),pngSha256:sha(readFileSync(family.image))});
+ for(const family of CAPTION_FAMILIES){const specs=family.id==='shared'?read(family.meta).specs:readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>read('world/layouts/'+f)).filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(l));if(!specs.length)continue;const master=renderCaptionMaster(specs);add(family.meta,{schemaVersion:1,specs,glyphsSha256:sha(readFileSync('art/source/hub-nameplates.json')),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(master.svg),pngSha256:sha(readFileSync(family.image))});
   // The expo family (overworld booth nameplates) is fully rendered: its SVG master is the producer's bytes and its glyph PNG the producer's pixels.
   if(family.id==='expo'){outputs.set(family.svg,{bytes:Buffer.from(master.svg)});outputs.set(family.image,{pixels:await sharp(Buffer.from(master.svg)).ensureAlpha().raw().toBuffer()});}}
+ const cove=await renderTropicalCove();add('art/source/tropical-cove-coast.json',tropicalCoveMetadata(cove));outputs.set(COVE_IMAGE,{bytes:cove.png});
  return outputs;
 }
 it('binds every current registry path and preserves static artwork while validating genuine generated descriptors',async()=>{
@@ -70,15 +72,16 @@ it('binds every current registry path and preserves static artwork while validat
  // The brand epoch added exactly one reviewed registry id after the closed roster (owner-provided, not CC0); its complete record is pinned.
  expect(Object.keys(current)).toEqual([...Object.keys(before),...Object.keys(approvedBrandAssetRegistry)]);for(const[id,record]of Object.entries(approvedBrandAssetRegistry)){expect(current[id],id+' exact reviewed owner-provided registry').toEqual(record);for(const row of record.files)expect(sha(readFileSync(row.path)),row.path+' actual registered bytes').toBe(row.sha256);expect(existsSync(record.licenseFile)).toBe(true);}
  expect(current.original.files).toHaveLength(207);const expoPaths=[...Object.keys(approvedExpoStaticPins),...Object.keys(approvedExpoCaptionRows),...Object.keys(approvedRoadsterV2Rows),...Object.keys(approvedAriesStyleRows)].sort();expect(expoPaths).toHaveLength(11);
- const generated=await generatedDescriptors();
+ const generated=await generatedDescriptors();const covePaths=['world/tropical-cove.json','tools/art/tropical-cove.ts','assets/tilesets/original/tropical-cove-coast.png','art/source/tropical-cove-coast.json'];const coveStatic:Record<string,string>={'world/tropical-cove.json':'a72cf832da463bff1f150bec1c545084560d30a54927c60c640f506d807076bc','tools/art/tropical-cove.ts':'f707595c40540800922b90fd4839f4a7fcd696d61323f4cbcfd6e5848f059812'};
  for(const id of Object.keys(before)){
-  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote+approvedRoadsterV2RegistryNote+approvedAriesStyleRegistryNote}:oldMetadata);
+  const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote+approvedRoadsterV2RegistryNote+approvedAriesStyleRegistryNote}:id==='lpc-water'?{...oldMetadata,changes:oldMetadata.changes+' Tropical cove is a separately named32px derivative; original water and organic-coast atlases remain byte-exact.'}:oldMetadata);
   if(id==='original'){expect(currentFiles.map((r:any)=>r.path).filter((p:string)=>!expoPaths.includes(p)),id+' closed path roster/order').toEqual(oldFiles.map((r:any)=>r.path));for(const[path,index]of Object.entries({...approvedExpoStaticRows,...approvedExpoCaptionRows,...approvedRoadsterV2Rows,...approvedAriesStyleRows}))expect(currentFiles[index].path,path+' registered forward row position').toBe(path);}
-  else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:[])]);
+  else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:id==='lpc-water'?covePaths:[])]);
   for(let i=0;i<currentFiles.length;i++){
    const row=currentFiles[i],old=id==='original'?oldFiles.find((r:any)=>r.path===row.path):oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
    const produced=generated.get(row.path);
    if(produced){if('json'in produced)expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(produced.json);else if('pixels'in produced)expect((await sharp(bytes).ensureAlpha().raw().toBuffer()).equals(produced.pixels),row.path+' genuine caption glyph pixels').toBe(true);else expect(bytes.equals(produced.bytes),row.path+' genuine native/pose PNG').toBe(true);}
+   else if(Object.hasOwn(coveStatic,row.path))expect(row.sha256,row.path+' reviewed cove source').toBe(coveStatic[row.path]);
    else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(approvedBirdRecipePins[row.path]);
    else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);
    else if(Object.hasOwn(approvedExpoStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed expo sticker artwork').toBe(approvedExpoStaticPins[row.path]);

@@ -4,31 +4,49 @@
     {
       "path": "art/sources.json",
       "fromSha256": "9b8b53c9a7dcc64b8a5844fe64e8d4dbccd786ed22d57d5fac2e7af003ecd128",
-      "toSha256": "b621e7fd768d7af5b3791b931fb909725a62acf30f883ef57986b41acda48d31",
+      "toSha256": "45f455ad5c7d399d958a809d9a651b230d99001ea6ac3a371ff905e40c308389",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {
       "path": "art/tile-catalog.json",
       "fromSha256": "e39c7dfdaa3575c83e4605e69b278a676a62e10a9030cf1b029ea47390501b52",
-      "toSha256": "4e2c36d843573fb41627d96b1e1c76703a14da19330dff750fc6b15f0f848bda",
+      "toSha256": "2352045ecc5a2389061d3769d853a1884e871568419a763fb5ad2b465ea2d769",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {
       "path": "maps/preview/shipyard-beach.tmj",
       "fromSha256": "b68842152baab5f4c7c85946c310725da437c5592951d69efaa5d8e90ce07f72",
-      "toSha256": "8aee69192eccdd835fafcae37756c086571f64902b6514a224664a87cca53173",
+      "toSha256": "a8c08f915dc228bc1ce3e88d884947e7cdf62d9b7fb096ee76aad91ce5f84d4f",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {
       "path": "maps/shipyard-beach.tmj",
       "fromSha256": "b01a352aa6531563beddb67094165b5fc3793971614b5d61ff094a99344956d8",
-      "toSha256": "041dd740ff75e1242817329aaf0b5b9c0e6553724583d63e154c662d71da7d1b",
+      "toSha256": "de5a059ba8bb4bd053111fd2f597e3314aee235d118390d9bfc5d62eb82f4dcb",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "8985bdba379c1f1ef24de197cd539dfed4c2d80776495496e1a12bb59a250ee1",
+      "toSha256": "772e619fd75e24763d8800e50ed8f1d402b6f3abfcfe056303735eb1df362dae",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {
       "path": "tests/coastal-character.test.ts",
       "fromSha256": "0cb31256155a1e9c20f358b6214b31286f73e5dd1e34b3327b112fdbb3d2f7ff",
       "toSha256": "a4701b62e7247ceb1be9214526f7af66639255a64538a7d61fcd10230849001f",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "tests/npc-maps.test.ts",
+      "fromSha256": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
+      "toSha256": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
+      "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
+    },
+    {
+      "path": "tests/wayfinding-redraw.test.ts",
+      "fromSha256": "324750de5a9836e902198a0e934a9daf41a91a4cc4243c0d497d86053d90f698",
+      "toSha256": "4408b06327b5161d9f78fbeb02a005131da4de864aabf2b186f3f543ea7104f6",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {
@@ -112,7 +130,7 @@
     {
       "path": "world/layouts/shipyard-beach.json",
       "fromSha256": "e1ff03c3a23c8ce13baec8e00f5c80fb1e28f18c16be2b25a737e5ac1df2a4df",
-      "toSha256": "d3e2472d752867b45a388ec77688fb7f1d103810b8291efce41225bc91ec8299",
+      "toSha256": "36d4e7c0b9bb47f6f42d8a95447fd3bc506690414916bc9f44c8fd2c32e83939",
       "reason": "Create the approved tropical cove with native coastline, open sand, compact signage and safe portal routes, preserving all earlier asset bytes and ship art."
     },
     {

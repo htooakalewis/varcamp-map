@@ -31,10 +31,10 @@
 
 **Interfaces:** Consumes renderCoast(recipe,options), buildMap(layout,catalog), attachOrganicCoast(map,layout), reconcileNativeProjection(native,source). Produces the current beach layout/native map and assertTropicalCove(map,layout,catalog).
 
-- [ ] Write behavior tests for a recessed bay, open central sand, safe portals, water collision, prop grounding, caption retirement and preserved original asset/ship bytes. Run them before implementation; expected FAIL against the cluttered beach.
-- [ ] Render the new coast atlas using the unchanged renderer. Author a pure forward layout transform, a beach-only native transaction and a mandatory current validator. Preserve historical receipts; scope tests of retired decisions to hash-pinned snapshots.
-- [ ] Run the cove and affected coastal/caption/native tests; expected all current and historical coastal checks PASS. Render the actual native layers and inspect bay, palms, dock and signs at avatar scale.
-- [ ] Commit the authored redesign and tests locally with the agent co-author trailer.
+- [x] Write behavior tests for a recessed bay, open central sand, safe portals, water collision, prop grounding, caption retirement and preserved original asset/ship bytes. Run them before implementation; expected FAIL against the cluttered beach.
+- [x] Render the new coast atlas using the unchanged renderer. Author a pure forward layout transform, a beach-only native transaction and a mandatory current validator. Preserve historical receipts; scope tests of retired decisions to hash-pinned snapshots.
+- [x] Run the cove and affected coastal/caption/native tests; expected all current and historical coastal checks PASS. Render the actual native layers and inspect bay, palms, dock and signs at avatar scale.
+- [x] Commit the authored redesign and tests locally with the agent co-author trailer.
 
 ### Task2: Verification, publication and live acceptance
 
@@ -43,7 +43,7 @@
 **Interfaces:** Consumes Task1’s verified native beach. Produces a guarded release with baseline retention, two readbacks and live browser evidence.
 
 - [ ] Run maps:validate, art:check, maps:build and buildmap; expected PASS. Run full Vitest/Node suites and compare every failure with the prior baseline; expected no new failures.
-- [ ] Obtain one fresh whole-change review; resolve Important/Critical findings with failing-test-first verification.
+- [x] Obtain one fresh whole-change review; resolve Important/Critical findings with failing-test-first verification.
 - [ ] Append a named publication revision without changing original303 receipts or earlier revisions. Refresh facts, then receipts again; expected verify-source and facts --check PASS.
 - [ ] Commit locally, fast-forward local main, prepare/review/apply the guarded release in tmux. Expected two complete readbacks match; preserve organiser WAM state and all unrelated assets.
 - [ ] Check public TMJ/WAM/atlas bytes, fresh/reloaded game views and physical portal approaches with camera/mic off. Close browsers and verify guide services remain stopped.
@@ -52,4 +52,10 @@
 
 Owner’s “ok go” authorizes executing the chosen design without another design/plan confirmation. Execute natively in the current owner checkout; the skill’s additional review/confirmation prompts are superseded by that instruction and the standing devbox workflow. Preserve private evidence rather than deleting it after completion.
 
-Task1: implemented. Nine cove behavior/export tests and71 focused coastal/caption tests PASS; maps:build, art:check, buildmap, publication source and facts checks PASS. Original206asset files,33other native maps and34source WAMs remain byte-exact.
+Task1: implemented; initial local commit414bb16. The final focused run passes119tests, including16cove tests. Earlier broader affected suites pass497tests; their three remaining failures now pass in the final focused run. Original206asset files,33other native maps,34source WAMs and1540catalog definitions remain byte-exact. The new coast has314separately named sprite definitions; the protected aircraft band keeps its original coast atlas and clock.
+
+Fresh review: noCritical, threeImportant, noMinor, no declined findings. Reproduced all three before fixing: sea tint obscured timber, omitted water cells passed current validation, and the ordinary caption writer repacked the frozen shared reservation. The final119-test run verifies dock tint exclusion, complete2304-cell ground coverage, and immutable shared caption resources including missing-resource rejection. Review evidence is private under.orca/tropical-cove.
+
+Task2: final stable full-suite, guarded publication and live browser acceptance pending. Environmental baseline is130Vitest failures and oneNode-suite failure; final comparison must show no new failures. Do not apply the earlier1937preview plan: it predates the review fixes.
+
+The first stable full run found2272passes and131failures: all130recorded baseline failures plus one expo-only caption writer regression. The existing expo fixture supplied the failing case. The writer now permits a completely absent, unused shared family while rejecting a missing or partial shared reservation when linked/present. The affected caption, cove, publication and solid-prop tests pass; a final full confirmation is required. Node suite remains17passes and its single known image package.json permission failure.

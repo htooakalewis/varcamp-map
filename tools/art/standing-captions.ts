@@ -69,10 +69,18 @@ export async function checkStandingCaptionArt():Promise<void>{
  }
  for(const layout of all)readStandingCaptions(layout);
 }
-/** Writes every family that has linked captions; a family without captions owns no files. */
+/** The shared coastal reservation is immutable, including archived rows. Active
+ * expo authoring must never repack it from the smaller current beach sign roster. */
 export async function writeStandingCaptions():Promise<void>{
  const all=layouts();
  for(const family of CAPTION_FAMILIES){
+  if(family.id==='shared'){
+   const linked=all.filter(l=>captionFamily(l.id)===family),files=[family.meta,family.svg,family.image];
+   if(!linked.some(l=>l.standingSigns?.length)&&!files.some(existsSync))continue;
+   if(!files.every(existsSync))throw Error('Frozen shared caption resource is missing; restore its reviewed bytes');
+   for(const layout of linked)readStandingCaptions(layout);
+   continue;
+  }
   const specs=familySpecs(family,all);if(!specs.length)continue;
   const rendered=renderCaptionMaster(specs),png=await sharp(Buffer.from(rendered.svg)).png().toBuffer();
   writeFileSync(family.svg,rendered.svg);writeFileSync(family.image,png);writeFileSync(family.meta,JSON.stringify({schemaVersion:1,specs,glyphsSha256:sha(readFileSync(FONT)),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(rendered.svg),pngSha256:sha(png)},null,2)+'\n');

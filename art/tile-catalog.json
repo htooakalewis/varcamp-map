@@ -12333,6 +12333,4853 @@
     "level": "belowAvatar",
     "sourceId": "original"
   },
+  "organic-coast-water-0": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-4": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-8": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-12": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-16": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-20": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-24": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-28": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-32": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-36": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-40": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-44": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-48": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-52": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-56": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-60": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-64": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-68": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-72": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-76": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-80": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-84": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-88": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-92": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-96": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-100": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-104": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-108": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-112": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-116": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-120": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-124": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-128": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-132": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-136": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-140": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-144": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-148": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-152": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-156": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-160": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-164": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-168": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-172": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-176": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-180": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-184": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-188": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-192": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-196": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-200": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-204": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-208": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-212": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-216": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-220": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-224": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-228": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-232": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-236": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-240": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-244": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-248": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-252": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-256": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-260": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-264": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-268": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-272": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-276": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-280": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-284": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-288": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-292": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-296": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-300": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-304": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-308": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-312": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-316": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-320": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-324": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-328": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-332": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-336": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-340": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-344": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-348": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-352": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-356": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-360": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-364": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-368": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-372": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-376": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-380": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-384": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-388": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-392": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-396": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-400": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-404": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-408": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-412": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-416": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-420": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-424": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-428": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-432": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-436": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-440": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-444": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-448": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-452": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-456": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-460": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-464": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-468": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-472": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-476": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-480": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-484": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-488": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-492": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-496": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-500": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-504": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-508": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-512": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-516": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-520": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-524": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-528": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-532": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-536": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-540": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-544": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-548": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-552": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-556": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-560": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-564": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-568": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-572": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-576": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-580": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-584": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-588": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-592": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-596": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-600": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-604": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-608": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-612": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-616": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-620": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-624": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-628": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-632": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-636": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-640": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-644": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-648": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-652": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-656": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-660": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-664": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-668": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-672": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-676": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-680": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-684": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-688": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-692": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-696": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-700": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-704": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-708": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-712": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-716": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-720": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-724": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-728": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-732": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-736": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-740": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-744": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-748": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-752": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-756": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-760": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-764": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-768": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-772": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-776": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-780": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-784": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-788": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-792": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-796": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-800": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-804": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-808": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-812": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-816": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-820": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-824": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-828": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-832": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-836": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-840": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-844": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-848": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-852": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-856": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-860": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-864": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-868": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-872": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-876": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-880": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-884": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-888": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-892": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 13,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-896": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-900": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-904": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-908": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-912": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-916": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-920": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-924": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-928": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-932": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-936": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-940": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-944": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-948": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-952": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-956": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-960": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-964": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-968": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-972": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-976": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-980": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-984": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-988": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-992": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-996": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1000": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1004": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1008": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1012": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1016": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1020": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1024": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1028": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1032": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1036": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1040": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1044": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1048": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1052": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1056": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1060": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1064": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1068": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1072": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1076": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1080": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1084": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 16,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1088": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1092": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1096": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1100": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1104": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1108": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1112": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1116": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1120": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1124": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1128": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1132": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1136": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1140": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1144": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1148": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 17,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1152": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1156": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1160": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1164": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1168": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1172": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1176": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1180": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1184": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1188": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1192": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1196": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1200": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1204": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1208": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1212": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 18,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1216": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1220": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1224": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1228": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1232": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1236": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1240": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1244": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1248": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1252": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1256": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1260": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 44,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1264": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 48,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1268": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 52,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1272": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 56,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1276": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 60,
+      "y": 19,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1280": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 0,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-land-1284": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 4,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1288": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 8,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1292": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 12,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1296": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 16,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1300": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 20,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1304": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 24,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1308": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 28,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1312": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 32,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1316": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 36,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "organic-coast-water-1320": {
+    "sheet": "assets/tilesets/original/organic-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 20,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
   "constellation-coast-water-0": {
     "sheet": "assets/tilesets/original/constellation-coast.png",
     "sourceId": "lpc-water",
@@ -20475,7 +25322,7 @@
     "level": "belowAvatar",
     "sourceId": "original"
   },
-  "organic-coast-water-0": {
+  "tropical-cove-water-0": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20492,7 +25339,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-4": {
+  "tropical-cove-water-4": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20509,7 +25356,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-8": {
+  "tropical-cove-water-8": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20526,7 +25373,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-12": {
+  "tropical-cove-water-12": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20543,7 +25390,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-16": {
+  "tropical-cove-water-16": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20560,7 +25407,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-20": {
+  "tropical-cove-water-20": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20577,7 +25424,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-24": {
+  "tropical-cove-water-24": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20594,7 +25441,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-28": {
+  "tropical-cove-land-28": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20606,7 +25453,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-32": {
+  "tropical-cove-land-32": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20618,28 +25465,11 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-36": {
+  "tropical-cove-water-36": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
       "x": 36,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    "blockingCells": [
-      [
-        0,
-        0
-      ]
-    ],
-    "level": "belowAvatar"
-  },
-  "organic-coast-water-40": {
-    "sheet": "assets/tilesets/original/tropical-cove-coast.png",
-    "sourceId": "lpc-water",
-    "rect": {
-      "x": 40,
       "y": 0,
       "width": 1,
       "height": 1
@@ -20652,7 +25482,24 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-44": {
+  "tropical-cove-water-40": {
+    "sheet": "assets/tilesets/original/tropical-cove-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "tropical-cove-water-44": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20669,7 +25516,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-48": {
+  "tropical-cove-water-48": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20686,7 +25533,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-52": {
+  "tropical-cove-water-52": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20703,7 +25550,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-56": {
+  "tropical-cove-water-56": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20720,7 +25567,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-60": {
+  "tropical-cove-water-60": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20737,7 +25584,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-64": {
+  "tropical-cove-water-64": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20754,7 +25601,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-68": {
+  "tropical-cove-water-68": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20771,7 +25618,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-72": {
+  "tropical-cove-water-72": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20788,7 +25635,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-76": {
+  "tropical-cove-land-76": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20800,7 +25647,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-80": {
+  "tropical-cove-land-80": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20812,7 +25659,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-84": {
+  "tropical-cove-land-84": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20824,7 +25671,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-88": {
+  "tropical-cove-land-88": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20836,7 +25683,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-92": {
+  "tropical-cove-land-92": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20848,7 +25695,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-96": {
+  "tropical-cove-land-96": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20860,28 +25707,11 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-100": {
+  "tropical-cove-water-100": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
       "x": 36,
-      "y": 1,
-      "width": 1,
-      "height": 1
-    },
-    "blockingCells": [
-      [
-        0,
-        0
-      ]
-    ],
-    "level": "belowAvatar"
-  },
-  "organic-coast-water-104": {
-    "sheet": "assets/tilesets/original/tropical-cove-coast.png",
-    "sourceId": "lpc-water",
-    "rect": {
-      "x": 40,
       "y": 1,
       "width": 1,
       "height": 1
@@ -20894,7 +25724,24 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-108": {
+  "tropical-cove-water-104": {
+    "sheet": "assets/tilesets/original/tropical-cove-coast.png",
+    "sourceId": "lpc-water",
+    "rect": {
+      "x": 40,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar"
+  },
+  "tropical-cove-water-108": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20911,7 +25758,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-112": {
+  "tropical-cove-water-112": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20928,7 +25775,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-116": {
+  "tropical-cove-water-116": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20945,7 +25792,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-120": {
+  "tropical-cove-water-120": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20962,7 +25809,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-124": {
+  "tropical-cove-land-124": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20974,7 +25821,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-128": {
+  "tropical-cove-land-128": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -20986,7 +25833,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-132": {
+  "tropical-cove-water-132": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21003,7 +25850,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-136": {
+  "tropical-cove-water-136": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21020,7 +25867,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-140": {
+  "tropical-cove-water-140": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21037,7 +25884,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-144": {
+  "tropical-cove-water-144": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21054,7 +25901,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-148": {
+  "tropical-cove-water-148": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21071,7 +25918,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-152": {
+  "tropical-cove-water-152": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21088,7 +25935,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-156": {
+  "tropical-cove-land-156": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21100,7 +25947,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-160": {
+  "tropical-cove-land-160": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21112,7 +25959,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-164": {
+  "tropical-cove-land-164": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21124,7 +25971,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-168": {
+  "tropical-cove-land-168": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21136,7 +25983,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-172": {
+  "tropical-cove-land-172": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21148,7 +25995,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-176": {
+  "tropical-cove-land-176": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21160,7 +26007,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-180": {
+  "tropical-cove-water-180": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21177,7 +26024,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-184": {
+  "tropical-cove-water-184": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21194,7 +26041,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-188": {
+  "tropical-cove-water-188": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21211,7 +26058,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-192": {
+  "tropical-cove-land-192": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21223,7 +26070,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-196": {
+  "tropical-cove-land-196": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21235,7 +26082,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-200": {
+  "tropical-cove-land-200": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21247,7 +26094,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-204": {
+  "tropical-cove-land-204": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21259,7 +26106,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-208": {
+  "tropical-cove-land-208": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21271,7 +26118,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-212": {
+  "tropical-cove-land-212": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21283,7 +26130,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-216": {
+  "tropical-cove-water-216": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21300,7 +26147,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-220": {
+  "tropical-cove-water-220": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21317,7 +26164,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-224": {
+  "tropical-cove-water-224": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21334,7 +26181,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-228": {
+  "tropical-cove-water-228": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21351,7 +26198,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-232": {
+  "tropical-cove-land-232": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21363,7 +26210,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-236": {
+  "tropical-cove-land-236": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21375,7 +26222,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-240": {
+  "tropical-cove-land-240": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21387,7 +26234,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-244": {
+  "tropical-cove-land-244": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21399,7 +26246,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-248": {
+  "tropical-cove-water-248": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21416,7 +26263,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-252": {
+  "tropical-cove-water-252": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21433,7 +26280,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-256": {
+  "tropical-cove-water-256": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21450,7 +26297,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-260": {
+  "tropical-cove-water-260": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21467,7 +26314,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-264": {
+  "tropical-cove-water-264": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21484,7 +26331,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-268": {
+  "tropical-cove-water-268": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21501,7 +26348,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-272": {
+  "tropical-cove-water-272": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21518,7 +26365,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-276": {
+  "tropical-cove-water-276": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21535,7 +26382,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-280": {
+  "tropical-cove-water-280": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21552,7 +26399,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-284": {
+  "tropical-cove-water-284": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21569,7 +26416,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-288": {
+  "tropical-cove-land-288": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21581,7 +26428,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-292": {
+  "tropical-cove-land-292": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21593,7 +26440,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-296": {
+  "tropical-cove-land-296": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21605,7 +26452,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-300": {
+  "tropical-cove-land-300": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21617,7 +26464,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-304": {
+  "tropical-cove-land-304": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21629,7 +26476,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-308": {
+  "tropical-cove-land-308": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21641,7 +26488,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-312": {
+  "tropical-cove-land-312": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21653,7 +26500,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-316": {
+  "tropical-cove-land-316": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21665,7 +26512,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-320": {
+  "tropical-cove-land-320": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21677,7 +26524,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-324": {
+  "tropical-cove-land-324": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21689,7 +26536,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-328": {
+  "tropical-cove-land-328": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21701,7 +26548,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-332": {
+  "tropical-cove-water-332": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21718,7 +26565,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-336": {
+  "tropical-cove-water-336": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21735,7 +26582,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-340": {
+  "tropical-cove-water-340": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21752,7 +26599,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-344": {
+  "tropical-cove-land-344": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21764,7 +26611,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-348": {
+  "tropical-cove-land-348": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21776,7 +26623,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-352": {
+  "tropical-cove-land-352": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21788,7 +26635,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-356": {
+  "tropical-cove-water-356": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21805,7 +26652,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-360": {
+  "tropical-cove-water-360": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21822,7 +26669,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-364": {
+  "tropical-cove-water-364": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21839,7 +26686,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-368": {
+  "tropical-cove-water-368": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21856,7 +26703,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-372": {
+  "tropical-cove-water-372": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21873,7 +26720,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-376": {
+  "tropical-cove-water-376": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21890,7 +26737,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-380": {
+  "tropical-cove-land-380": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21902,7 +26749,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-384": {
+  "tropical-cove-land-384": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21914,7 +26761,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-388": {
+  "tropical-cove-land-388": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21926,7 +26773,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-392": {
+  "tropical-cove-land-392": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21938,7 +26785,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-396": {
+  "tropical-cove-land-396": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21950,7 +26797,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-400": {
+  "tropical-cove-land-400": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21962,7 +26809,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-404": {
+  "tropical-cove-land-404": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21974,7 +26821,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-408": {
+  "tropical-cove-land-408": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21986,7 +26833,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-412": {
+  "tropical-cove-land-412": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -21998,7 +26845,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-416": {
+  "tropical-cove-land-416": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22010,7 +26857,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-420": {
+  "tropical-cove-land-420": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22022,7 +26869,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-424": {
+  "tropical-cove-water-424": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22039,7 +26886,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-428": {
+  "tropical-cove-water-428": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22056,7 +26903,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-432": {
+  "tropical-cove-water-432": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22073,7 +26920,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-436": {
+  "tropical-cove-water-436": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22090,7 +26937,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-440": {
+  "tropical-cove-land-440": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22102,7 +26949,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-444": {
+  "tropical-cove-land-444": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22114,7 +26961,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-448": {
+  "tropical-cove-land-448": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22126,7 +26973,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-452": {
+  "tropical-cove-land-452": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22138,7 +26985,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-456": {
+  "tropical-cove-land-456": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22150,7 +26997,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-460": {
+  "tropical-cove-water-460": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22167,7 +27014,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-464": {
+  "tropical-cove-water-464": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22184,7 +27031,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-468": {
+  "tropical-cove-water-468": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22201,7 +27048,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-472": {
+  "tropical-cove-land-472": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22213,7 +27060,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-476": {
+  "tropical-cove-land-476": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22225,7 +27072,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-480": {
+  "tropical-cove-land-480": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22237,7 +27084,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-484": {
+  "tropical-cove-water-484": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22254,7 +27101,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-488": {
+  "tropical-cove-water-488": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22271,7 +27118,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-492": {
+  "tropical-cove-water-492": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22288,7 +27135,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-496": {
+  "tropical-cove-water-496": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22305,7 +27152,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-500": {
+  "tropical-cove-land-500": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22317,7 +27164,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-504": {
+  "tropical-cove-land-504": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22329,7 +27176,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-508": {
+  "tropical-cove-water-508": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22346,7 +27193,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-512": {
+  "tropical-cove-water-512": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22363,7 +27210,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-516": {
+  "tropical-cove-water-516": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22380,7 +27227,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-520": {
+  "tropical-cove-land-520": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22392,7 +27239,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-524": {
+  "tropical-cove-land-524": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22404,7 +27251,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-528": {
+  "tropical-cove-water-528": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22421,7 +27268,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-532": {
+  "tropical-cove-water-532": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22438,7 +27285,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-536": {
+  "tropical-cove-land-536": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22450,7 +27297,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-540": {
+  "tropical-cove-land-540": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22462,7 +27309,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-544": {
+  "tropical-cove-water-544": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22479,7 +27326,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-548": {
+  "tropical-cove-water-548": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22496,7 +27343,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-552": {
+  "tropical-cove-land-552": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22508,7 +27355,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-556": {
+  "tropical-cove-land-556": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22520,7 +27367,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-560": {
+  "tropical-cove-land-560": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22532,7 +27379,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-564": {
+  "tropical-cove-water-564": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22549,7 +27396,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-568": {
+  "tropical-cove-water-568": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22566,7 +27413,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-572": {
+  "tropical-cove-water-572": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22583,7 +27430,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-576": {
+  "tropical-cove-water-576": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22600,7 +27447,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-580": {
+  "tropical-cove-land-580": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22612,7 +27459,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-584": {
+  "tropical-cove-land-584": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22624,7 +27471,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-588": {
+  "tropical-cove-land-588": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22636,7 +27483,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-592": {
+  "tropical-cove-water-592": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22653,7 +27500,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-596": {
+  "tropical-cove-water-596": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22670,7 +27517,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-600": {
+  "tropical-cove-land-600": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22682,7 +27529,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-604": {
+  "tropical-cove-land-604": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22694,7 +27541,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-608": {
+  "tropical-cove-water-608": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22711,7 +27558,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-612": {
+  "tropical-cove-water-612": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22728,7 +27575,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-616": {
+  "tropical-cove-water-616": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22745,7 +27592,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-620": {
+  "tropical-cove-land-620": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22757,7 +27604,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-624": {
+  "tropical-cove-land-624": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22769,7 +27616,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-628": {
+  "tropical-cove-land-628": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22781,7 +27628,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-632": {
+  "tropical-cove-water-632": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22798,7 +27645,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-636": {
+  "tropical-cove-water-636": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22815,7 +27662,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-640": {
+  "tropical-cove-water-640": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22832,7 +27679,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-644": {
+  "tropical-cove-land-644": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22844,7 +27691,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-648": {
+  "tropical-cove-land-648": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22856,7 +27703,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-652": {
+  "tropical-cove-water-652": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22873,7 +27720,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-656": {
+  "tropical-cove-water-656": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22890,7 +27737,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-660": {
+  "tropical-cove-water-660": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22907,7 +27754,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-664": {
+  "tropical-cove-land-664": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22919,7 +27766,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-668": {
+  "tropical-cove-land-668": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22931,7 +27778,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-672": {
+  "tropical-cove-land-672": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22943,7 +27790,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-676": {
+  "tropical-cove-water-676": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22960,7 +27807,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-680": {
+  "tropical-cove-water-680": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22977,7 +27824,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-684": {
+  "tropical-cove-land-684": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -22989,7 +27836,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-688": {
+  "tropical-cove-land-688": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23001,7 +27848,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-692": {
+  "tropical-cove-land-692": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23013,7 +27860,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-696": {
+  "tropical-cove-water-696": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23030,7 +27877,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-700": {
+  "tropical-cove-water-700": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23047,7 +27894,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-704": {
+  "tropical-cove-land-704": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23059,7 +27906,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-708": {
+  "tropical-cove-land-708": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23071,7 +27918,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-712": {
+  "tropical-cove-land-712": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23083,7 +27930,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-716": {
+  "tropical-cove-land-716": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23095,7 +27942,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-720": {
+  "tropical-cove-land-720": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23107,7 +27954,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-724": {
+  "tropical-cove-land-724": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23119,7 +27966,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-728": {
+  "tropical-cove-land-728": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23131,7 +27978,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-732": {
+  "tropical-cove-land-732": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23143,7 +27990,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-736": {
+  "tropical-cove-land-736": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23155,7 +28002,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-740": {
+  "tropical-cove-land-740": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23167,7 +28014,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-744": {
+  "tropical-cove-land-744": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23179,7 +28026,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-748": {
+  "tropical-cove-land-748": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23191,7 +28038,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-752": {
+  "tropical-cove-land-752": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23203,7 +28050,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-756": {
+  "tropical-cove-land-756": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23215,7 +28062,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-760": {
+  "tropical-cove-water-760": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23232,7 +28079,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-764": {
+  "tropical-cove-water-764": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23249,7 +28096,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-768": {
+  "tropical-cove-land-768": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23261,7 +28108,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-772": {
+  "tropical-cove-land-772": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23273,7 +28120,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-776": {
+  "tropical-cove-land-776": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23285,7 +28132,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-780": {
+  "tropical-cove-land-780": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23297,7 +28144,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-784": {
+  "tropical-cove-water-784": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23314,7 +28161,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-788": {
+  "tropical-cove-water-788": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23331,7 +28178,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-792": {
+  "tropical-cove-water-792": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23348,7 +28195,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-796": {
+  "tropical-cove-water-796": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23365,7 +28212,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-800": {
+  "tropical-cove-water-800": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23382,7 +28229,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-804": {
+  "tropical-cove-water-804": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23399,7 +28246,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-808": {
+  "tropical-cove-water-808": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23416,7 +28263,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-812": {
+  "tropical-cove-water-812": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23433,7 +28280,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-816": {
+  "tropical-cove-water-816": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23450,7 +28297,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-820": {
+  "tropical-cove-water-820": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23467,7 +28314,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-824": {
+  "tropical-cove-land-824": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23479,7 +28326,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-828": {
+  "tropical-cove-land-828": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23491,7 +28338,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-832": {
+  "tropical-cove-land-832": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23503,7 +28350,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-836": {
+  "tropical-cove-land-836": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23515,7 +28362,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-840": {
+  "tropical-cove-water-840": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23532,7 +28379,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-844": {
+  "tropical-cove-water-844": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23549,7 +28396,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-848": {
+  "tropical-cove-land-848": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23561,7 +28408,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-852": {
+  "tropical-cove-land-852": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23573,7 +28420,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-856": {
+  "tropical-cove-land-856": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23585,7 +28432,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-860": {
+  "tropical-cove-water-860": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23602,7 +28449,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-864": {
+  "tropical-cove-water-864": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23619,7 +28466,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-868": {
+  "tropical-cove-water-868": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23636,7 +28483,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-872": {
+  "tropical-cove-water-872": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23653,7 +28500,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-876": {
+  "tropical-cove-water-876": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23670,7 +28517,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-880": {
+  "tropical-cove-water-880": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23687,7 +28534,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-884": {
+  "tropical-cove-land-884": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23699,7 +28546,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-888": {
+  "tropical-cove-land-888": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23711,7 +28558,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-892": {
+  "tropical-cove-land-892": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23723,7 +28570,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-896": {
+  "tropical-cove-land-896": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23735,7 +28582,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-900": {
+  "tropical-cove-water-900": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23752,7 +28599,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-904": {
+  "tropical-cove-water-904": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23769,7 +28616,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-908": {
+  "tropical-cove-water-908": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23786,7 +28633,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-912": {
+  "tropical-cove-land-912": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23798,7 +28645,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-916": {
+  "tropical-cove-land-916": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23810,7 +28657,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-920": {
+  "tropical-cove-land-920": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23822,7 +28669,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-924": {
+  "tropical-cove-water-924": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23839,7 +28686,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-928": {
+  "tropical-cove-water-928": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23856,7 +28703,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-932": {
+  "tropical-cove-water-932": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23873,7 +28720,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-936": {
+  "tropical-cove-water-936": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23890,7 +28737,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-940": {
+  "tropical-cove-water-940": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23907,7 +28754,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-944": {
+  "tropical-cove-water-944": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23924,7 +28771,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-948": {
+  "tropical-cove-land-948": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23936,7 +28783,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-952": {
+  "tropical-cove-land-952": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23948,7 +28795,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-956": {
+  "tropical-cove-land-956": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23960,7 +28807,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-960": {
+  "tropical-cove-land-960": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23972,7 +28819,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-964": {
+  "tropical-cove-water-964": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -23989,7 +28836,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-968": {
+  "tropical-cove-water-968": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24006,7 +28853,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-972": {
+  "tropical-cove-land-972": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24018,7 +28865,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-976": {
+  "tropical-cove-land-976": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24030,7 +28877,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-980": {
+  "tropical-cove-land-980": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24042,7 +28889,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-984": {
+  "tropical-cove-land-984": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24054,7 +28901,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-988": {
+  "tropical-cove-water-988": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24071,7 +28918,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-992": {
+  "tropical-cove-water-992": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24088,7 +28935,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-996": {
+  "tropical-cove-water-996": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24105,7 +28952,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1000": {
+  "tropical-cove-water-1000": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24122,7 +28969,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1004": {
+  "tropical-cove-land-1004": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24134,7 +28981,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1008": {
+  "tropical-cove-land-1008": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24146,7 +28993,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1012": {
+  "tropical-cove-land-1012": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24158,7 +29005,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1016": {
+  "tropical-cove-land-1016": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24170,7 +29017,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1020": {
+  "tropical-cove-water-1020": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24187,7 +29034,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1024": {
+  "tropical-cove-water-1024": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24204,7 +29051,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1028": {
+  "tropical-cove-water-1028": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24221,7 +29068,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1032": {
+  "tropical-cove-water-1032": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24238,7 +29085,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1036": {
+  "tropical-cove-land-1036": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24250,7 +29097,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1040": {
+  "tropical-cove-land-1040": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24262,7 +29109,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1044": {
+  "tropical-cove-land-1044": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24274,7 +29121,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1048": {
+  "tropical-cove-land-1048": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24286,7 +29133,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1052": {
+  "tropical-cove-water-1052": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24303,7 +29150,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1056": {
+  "tropical-cove-water-1056": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24320,7 +29167,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1060": {
+  "tropical-cove-water-1060": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24337,7 +29184,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1064": {
+  "tropical-cove-water-1064": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24354,7 +29201,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1068": {
+  "tropical-cove-land-1068": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24366,7 +29213,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1072": {
+  "tropical-cove-land-1072": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24378,7 +29225,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1076": {
+  "tropical-cove-land-1076": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24390,7 +29237,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1080": {
+  "tropical-cove-water-1080": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24407,7 +29254,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1084": {
+  "tropical-cove-water-1084": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24424,7 +29271,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1088": {
+  "tropical-cove-water-1088": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24441,7 +29288,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1092": {
+  "tropical-cove-land-1092": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24453,7 +29300,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1096": {
+  "tropical-cove-land-1096": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24465,7 +29312,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1100": {
+  "tropical-cove-land-1100": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24477,7 +29324,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1104": {
+  "tropical-cove-land-1104": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24489,7 +29336,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1108": {
+  "tropical-cove-land-1108": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24501,7 +29348,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1112": {
+  "tropical-cove-land-1112": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24513,7 +29360,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1116": {
+  "tropical-cove-water-1116": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24530,7 +29377,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1120": {
+  "tropical-cove-water-1120": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24547,7 +29394,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1124": {
+  "tropical-cove-water-1124": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24564,7 +29411,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1128": {
+  "tropical-cove-water-1128": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24581,7 +29428,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1132": {
+  "tropical-cove-land-1132": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24593,7 +29440,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1136": {
+  "tropical-cove-land-1136": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24605,7 +29452,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1140": {
+  "tropical-cove-land-1140": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24617,7 +29464,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1144": {
+  "tropical-cove-land-1144": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24629,7 +29476,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1148": {
+  "tropical-cove-water-1148": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24646,7 +29493,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1152": {
+  "tropical-cove-water-1152": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24663,7 +29510,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1156": {
+  "tropical-cove-water-1156": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24680,7 +29527,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1160": {
+  "tropical-cove-water-1160": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24697,7 +29544,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1164": {
+  "tropical-cove-water-1164": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24714,7 +29561,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1168": {
+  "tropical-cove-land-1168": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24726,7 +29573,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1172": {
+  "tropical-cove-land-1172": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24738,7 +29585,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1176": {
+  "tropical-cove-land-1176": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24750,7 +29597,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-land-1180": {
+  "tropical-cove-land-1180": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24762,7 +29609,7 @@
     "blockingCells": [],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1184": {
+  "tropical-cove-water-1184": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24779,7 +29626,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1188": {
+  "tropical-cove-water-1188": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24796,7 +29643,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1192": {
+  "tropical-cove-water-1192": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24813,7 +29660,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1196": {
+  "tropical-cove-water-1196": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24830,7 +29677,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1200": {
+  "tropical-cove-water-1200": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24847,7 +29694,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1204": {
+  "tropical-cove-water-1204": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24864,7 +29711,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1208": {
+  "tropical-cove-water-1208": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24881,7 +29728,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1212": {
+  "tropical-cove-water-1212": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24898,7 +29745,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1216": {
+  "tropical-cove-water-1216": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24915,7 +29762,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1220": {
+  "tropical-cove-water-1220": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24932,7 +29779,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1224": {
+  "tropical-cove-water-1224": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24949,7 +29796,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1228": {
+  "tropical-cove-water-1228": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24966,7 +29813,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1232": {
+  "tropical-cove-water-1232": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -24983,7 +29830,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1236": {
+  "tropical-cove-water-1236": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -25000,7 +29847,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1240": {
+  "tropical-cove-water-1240": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -25017,7 +29864,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1244": {
+  "tropical-cove-water-1244": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -25034,7 +29881,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1248": {
+  "tropical-cove-water-1248": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {
@@ -25051,7 +29898,7 @@
     ],
     "level": "belowAvatar"
   },
-  "organic-coast-water-1252": {
+  "tropical-cove-water-1252": {
     "sheet": "assets/tilesets/original/tropical-cove-coast.png",
     "sourceId": "lpc-water",
     "rect": {

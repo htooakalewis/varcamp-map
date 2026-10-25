@@ -1,10 +1,14 @@
-import {readFileSync} from 'node:fs';
+import {readFileSync,mkdtempSync,mkdirSync,copyFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {resolve,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {describe,expect,it} from 'vitest';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {reconcileTropicalCove} from '../tools/maps/tropical-cove';
 import {assertCoastAerialLayout} from '../tools/maps/coast-aerial';
 import {renderTropicalCove,COVE_IMAGE} from '../tools/art/tropical-cove';
+import {assertCurrentNativeMap} from '../tools/maps/current-native';
+import {writeStandingCaptions} from '../tools/art/standing-captions';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 const baseline=()=>read('tests/fixtures/tropical-cove/baseline.json');
@@ -12,9 +16,27 @@ const before=(p:string)=>{const r=baseline().files[p],b=readFileSync(r.fixture);
 const layout=()=>read('world/layouts/shipyard-beach.json');
 const native=()=>read('maps/shipyard-beach.tmj');
 function surface(l:any,docks=true){const cells=Array(l.width*l.height).fill('');for(const p of l.placements.filter((p:any)=>p.layer==='terrain'&&(docks||p.sprite!=='naval-dock')))for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)cells[y*l.width+x]=p.sprite;return cells;}
-const isWater=(s:string)=>s.startsWith('naval-water-')||s.startsWith('organic-coast-water-');
-const isSand=(s:string)=>s.startsWith('beach-sand-')||s.startsWith('organic-coast-land-');
+const isWater=(s:string)=>s.startsWith('naval-water-')||s.startsWith('organic-coast-water-')||s.startsWith('tropical-cove-water-');
+const isSand=(s:string)=>s.startsWith('beach-sand-')||s.startsWith('organic-coast-land-')||s.startsWith('tropical-cove-land-');
 describe('tropical cove visitor experience',()=>{
+ it.each(['organic-ground-17-30','organic-ground-17-31','organic-ground-43-32'])('rejects coherently reauthored walkable sea after losing %s',id=>{
+  const l=layout(),catalog=loadTileCatalog();l.placements=l.placements.filter((p:any)=>p.id!==id);
+  const m=reconcileTropicalCove(native(),l,catalog);
+  expect(()=>assertCurrentNativeMap('shipyard-beach',m,l,read('maps/shipyard-beach.wam'),catalog)).toThrow(/Tropical cove.*terrain/);
+ });
+ it.each(['present','missing'] as const)('preserves frozen shared caption bytes with a %s descriptor when the caption writer runs',async mode=>{
+  const cwd=process.cwd(),temp=mkdtempSync(resolve(tmpdir(),'cove-caption-writer-'));
+  const shared=['art/source/standing-captions.json','art/source/standing-captions.svg','assets/tilesets/original/standing-captions.png'];
+  const files=[...shared,'art/source/expo-captions.json','art/source/expo-captions.svg','assets/tilesets/original/expo-captions.png','art/source/hub-nameplates.json','tools/art/standing-captions.ts',...['shipyard-beach','constellation-shore','overworld'].map(id=>`world/layouts/${id}.json`)];
+  const expected=shared.map(p=>readFileSync(p));
+  try{for(const p of files){mkdirSync(dirname(resolve(temp,p)),{recursive:true});copyFileSync(p,resolve(temp,p));}process.chdir(temp);if(mode==='missing'){rmSync(shared[0]);await expect(writeStandingCaptions()).rejects.toThrow(/Frozen shared caption/);}else await writeStandingCaptions();for(const[p,i]of shared.map((p,i)=>[p,i]as const).filter(([,i])=>mode!=='missing'||i!==0))expect(readFileSync(p).equals(expected[i]),p).toBe(true);}
+  finally{process.chdir(cwd);rmSync(temp,{recursive:true,force:true});}
+ });
+ it('keeps the jetty and lookout wood visible above the sea atmosphere',()=>{
+  const l=layout(),docks=l.placements.filter((p:any)=>p.layer==='terrain'&&p.sprite==='naval-dock');
+  const covered=l.placements.filter((p:any)=>p.sprite==='beach-sea-veil'&&docks.some((d:any)=>p.x<d.x+d.width&&p.x+p.width>d.x&&p.y<d.y+d.height&&p.y+p.height>d.y));
+  expect(covered.map((p:any)=>`${p.x},${p.y}`),'sea tint may not cover walking piers').toEqual([]);
+ });
  it('retains the complete aircraft habitat and prop footprint, including small grass cells',()=>{
   expect(()=>assertCoastAerialLayout(layout())).not.toThrow();
  });
@@ -74,5 +96,9 @@ describe('tropical cove visitor experience',()=>{
   expect(ship(l)).toEqual(ship(old));expect(l.animatedOverlays).toEqual(old.animatedOverlays);
   const band=(l:any)=>surface(l).slice(5*48,8*48);expect(band(l)).toEqual(band(old));
   const mask=(m:any)=>m.layers.find((x:any)=>x.name==='physical-collisions').data.slice(5*48,8*48);expect(mask(native()).map(Boolean)).toEqual(mask(before('maps/shipyard-beach.tmj')).map(Boolean));
+ });
+ it('retains every earlier catalog definition while reserving new cove sprite identities',()=>{
+  const catalog=loadTileCatalog(),old=before('art/tile-catalog.json');
+  for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);
  });
 });

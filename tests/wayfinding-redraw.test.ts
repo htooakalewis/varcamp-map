@@ -47,9 +47,9 @@ function nativeLabels(tmj:TiledMap,layout:MapLayout){
 }
 const captionLayouts=layouts.filter(l=>['constellation-shore','shipyard-beach'].includes(l.id));
 describe('audience wayfinding in exported Tiled maps',()=>{
- it('observes all twelve actual native coastal pixel captions with their readable footprints',()=>{
+ it('observes all nine active native coastal pixel captions with their readable footprints',()=>{
   const actual=captionLayouts.flatMap(l=>nativeLabels(JSON.parse(readFileSync(`maps/${l.id}.tmj`,'utf8')),l));
-  expect(actual).toHaveLength(12);
+  expect(actual).toHaveLength(9);
   for(const l of captionLayouts){const labels=nativeLabels(JSON.parse(readFileSync(`maps/${l.id}.tmj`,'utf8')),l);expect(labels.map(x=>x.text)).toEqual(readStandingCaptions(l)!.rows.map(r=>r.sign.text));for(const label of labels)expect(label.size).toBeGreaterThanOrEqual(14);}
  });
  it.each(['missing-plane','semantic-text','local-tile'])('refuses %s rather than observing unvalidated caption copy',kind=>{

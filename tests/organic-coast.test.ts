@@ -32,7 +32,7 @@ it('keeps every existing portal and protected solid prop base while making actua
  const seen=new Set<number>(),q=[6*48+23];for(let h=0;h<q.length;h++){const i=q[h];if(mask[i]||seen.has(i))continue;seen.add(i);const x=i%48,y=i/48|0;for(const[xx,yy]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]])if(xx>=0&&yy>=0&&xx<48&&yy<48)q.push(yy*48+xx);}
  for(const r of [...l.entries,...l.exits,...l.areas])for(let y=r.y;y<r.y+r.height;y++)for(let x=r.x;x<r.x+r.width;x++)expect(seen.has(y*48+x),r.name).toBe(true);
  for(const p of l.placements.filter((p:any)=>p.layer!=='terrain'))for(const[x,y]of catalog[p.sprite].blockingCells)expect(mask[(p.y+y)*48+p.x+x],p.id).not.toBe(0);
- const a=surface(l);for(let i=0;i<a.length;i++)if(a[i].startsWith('naval-water')||a[i].startsWith('organic-coast-water'))expect(mask[i],`water ${i%48},${i/48|0}`).not.toBe(0);
+ const a=surface(l);for(let i=0;i<a.length;i++)if(a[i].startsWith('naval-water')||(a[i].startsWith('organic-coast-water')||a[i].startsWith('tropical-cove-water')))expect(mask[i],`water ${i%48},${i/48|0}`).not.toBe(0);
 });
 it('moves shoreline pixels along the actual irregular native coast below avatars and retains quiet looping surf audio',async()=>{
  const m=native(),set=m.tilesets.find((t:any)=>t.image==='../'+activeCoast.image);expect(set,'new contour art must be engine-consumable native tiles').toBeDefined();
@@ -72,7 +72,7 @@ it('normal build validation rejects dry-terrain drift and a noncolliding replace
  for(const kind of ['dry-terrain','mask']){const m=native(),l=source();if(kind==='dry-terrain')m.layers.find((a:any)=>a.name==='terrain').data[20*48+24]=0;else m.layers.find((a:any)=>a.name==='physical-collisions').data[0]=m.tilesets.find((t:any)=>t.name==='navigation-mask').firstgid;expect(()=>assertNativeOrganicCoast(m,l),kind).toThrow(/Organic coast/);}
 });
 it('current shipyard validation refuses all missing coast source cells while historical authoring and the other maps stay explicit',()=>{
- const l=source();l.placements=l.placements.filter((p:any)=>!p.sprite.startsWith('organic-coast-'));expect(()=>assertNativeOrganicCoast(native(),l)).toThrow(/Organic coast/);
+ const l=source();l.placements=l.placements.filter((p:any)=>!p.sprite.startsWith(activeCoast.prefix+'-'));expect(()=>assertNativeOrganicCoast(native(),l)).toThrow(/Organic coast/);
  const historical=json('tests/fixtures/organic-coast/before-layout.json'),before=old();expect(()=>attachOrganicCoast(before,historical)).not.toThrow();
  for(const id of Object.keys(WORLD_CATALOG).filter(id=>id!=='shipyard-beach'))expect(()=>assertNativeOrganicCoast(json(`maps/${id}.tmj`),json(`world/layouts/${id}.json`))).not.toThrow();
 });

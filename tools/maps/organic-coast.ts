@@ -8,12 +8,14 @@ import type {MapLayout,TiledMap} from './types';
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 /** Binds a sparse, coast-following native animation to its one real source atlas. */
 export function attachOrganicCoast(map:TiledMap,layout:MapLayout):void{
- const coast=COASTS.find(c=>c.id===layout.id);if(!coast||!layout.placements.some(p=>p.sprite.startsWith(coast.prefix+'-')))return;
+ const families=[...COASTS,{id:'shipyard-beach',prefix:'organic-coast',descriptor:'art/source/organic-coast.json',image:'assets/tilesets/original/organic-coast.png'}];
+ for(const coast of families.filter(c=>c.id===layout.id&&layout.placements.some(p=>p.sprite.startsWith(c.prefix+'-')))){
  const art=JSON.parse(readFileSync(coast.descriptor,'utf8')),atlas=map.tilesets.filter(t=>t.image==='../'+art.image);
  if(atlas.length!==1||sha(readFileSync(art.image))!==art.atlasSha256||art.inputs.some((p:any)=>sha(readFileSync(p.path))!==p.sha256))throw Error('Organic coast source/atlas changed; regenerate the native coast');
  const t=atlas[0];if(t.columns!==art.width/32||t.imagewidth!==art.width||t.imageheight!==art.height||t.tilecount!==art.width*art.height/1024)throw Error('Organic coast atlas geometry changed');
  t.properties=[{name:'tilesetCopyright',type:'string',value:art.attribution+' Combined atlas CC-BY-SA 3.0.'}];
  t.tiles=art.cells.map((c:any)=>({id:c.tile,animation:[0,1,2,3].map(f=>({tileid:c.tile+f,duration:art.frameMs})),properties:[{name:'collides',type:'bool',value:false}]}));
+ }
 }
 export function assertNativeOrganicCoast(map:TiledMap,layout:MapLayout):void{
  const identities=map.properties?.filter(p=>p.name==='worldMapId')??[],matched=COASTS.filter(c=>layout.id===c.id||identities.some(p=>p.value===c.id)||map.tilesets.some(t=>t.image==='../'+c.image));

@@ -199,7 +199,7 @@
       },
       {
         "path": "art/source/expo-captions.json",
-        "sha256": "a3697dbfd713c10794d65dd1a884a34a5b4829e1f362863551c6aa0d8b02c29c"
+        "sha256": "819d049b18d4c72a45750af78b216aee0a82bd616d1249298e379022290b07e2"
       },
       {
         "path": "art/source/expo-captions.svg",
@@ -251,7 +251,7 @@
       },
       {
         "path": "art/source/standing-captions.json",
-        "sha256": "b671e44826403836ea821ee6047a21e400a8af6b20480011f6f4a293822fb455"
+        "sha256": "78dca945faa9ea1f20d269020e1d03b1ad5ae2b5d71e0fd06421830646e2f448"
       },
       {
         "path": "art/source/standing-captions.svg",
@@ -1067,7 +1067,7 @@
       },
       {
         "path": "tools/art/tropical-cove.ts",
-        "sha256": "f986abef8b6cdd587574d685b3cd99bf15db6c8dd9f863e5981479a19f74598d"
+        "sha256": "f707595c40540800922b90fd4839f4a7fcd696d61323f4cbcfd6e5848f059812"
       },
       {
         "path": "assets/tilesets/original/tropical-cove-coast.png",
@@ -1075,7 +1075,7 @@
       },
       {
         "path": "art/source/tropical-cove-coast.json",
-        "sha256": "1239ca36902f85f1dc4d5f6cecb323e47242fbc07935401feb3cea07f3818c99"
+        "sha256": "69a2e25087e73c65e2af9e4f1e8c878324841eeade00867821e695a9a9988b44"
       }
     ]
   },

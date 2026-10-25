@@ -16,7 +16,7 @@ export function stageHistoricalCoastInputs(target:string):void{
  const receipt=JSON.parse(readFileSync(receiptPath,'utf8'));publishedEpochRaw('art/tile-catalog.json');
  if(receipt.cliClosure.length!==42)throw Error('Historical CLI closure changed');
  for(const row of receipt.cliClosure){
-  const stored=row.sourcePath==='tools/art/coast-registry.ts'?'tests/fixtures/tropical-cove/historical-cli--tools--art--coast-registry.ts.txt':row.storedPath;
+  const stored=['tools/art/coast-registry.ts','tools/maps/organic-coast.ts'].includes(row.sourcePath)?'tests/fixtures/tropical-cove/historical-cli--'+row.sourcePath.replaceAll('/','--')+'.txt':row.storedPath;
   const bytes=readFileSync(stored);if(bytes.length!==row.bytes||sha(bytes)!==row.sha256)throw Error('Historical CLI dependency changed: '+row.sourcePath);
   const dest=resolve(target,row.sourcePath);mkdirSync(dirname(dest),{recursive:true});copyFileSync(stored,dest);
  }

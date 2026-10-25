@@ -6,13 +6,14 @@ import type {MapLayout,TiledMap} from './types';
 import {reconcileNativeProjection} from './native-projection';
 import type {TileCatalog} from '../art/catalog';
 import {assertCoastAerialLayout,assertNativeCoastAerial,orderCoastAerialOverlays}from'./coast-aerial';
+import cove from '../../world/tropical-cove.json';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 /** A bounded native authoring migration: all original GIDs, semantic layers and
  * approved physical geometry stay reserved. Only prop/life/plane visuals move. */
 export function refineCoastLife(source:TiledMap,input:MapLayout,catalog:TileCatalog){
  if(!['shipyard-beach','constellation-shore'].includes(input.id))throw Error('Coast life authoring requires a declared coast map');
  const layout=structuredClone(input),base=structuredClone(source);
- const expected=read('art/source/coast-life-placements.json').maps[layout.id];
+ const expected=layout.id==='shipyard-beach'?cove.props:read('art/source/coast-life-placements.json').maps[layout.id];
  if(!expected?.length)throw Error(`Missing declared coast prop recipe: ${layout.id}`);
  for(const old of expected){const p=layout.placements.find(p=>p.id===old.id);if(!p||![old.originalSprite,old.sprite].includes(p.sprite))throw Error(`Missing declared original coast prop: ${old.id}`);for(const field of ['x','y','width','height','layer'])if((p as any)[field]!==old[field])throw Error(`Coast prop geometry drift: ${old.id}/${field}`);p.sprite=old.sprite;}
  layout.placements=layout.placements.filter(p=>!['coast-fish','coast-gull'].includes(p.sprite));

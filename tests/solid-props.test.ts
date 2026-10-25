@@ -54,7 +54,7 @@ describe('independent solid support and visual depth',()=>{
  });
  it('requires all current physical sign families to declare standing assemblies',()=>{
   // The overworld carries its eleven arrival/directory assemblies plus the twelve expo booth nameplates.
-  for(const [id,count]of [['overworld',23],['constellation-shore',6],['shipyard-beach',6]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
+  for(const [id,count]of [['overworld',23],['constellation-shore',6],['shipyard-beach',3]]as const){const l=JSON.parse(readFileSync(`world/layouts/${id}.json`,'utf8'));expect(l.standingSigns,id).toHaveLength(count);}
  });
 });
 

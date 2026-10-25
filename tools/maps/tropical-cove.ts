@@ -1,4 +1,5 @@
 import {isDeepStrictEqual} from 'node:util';
+import {readFileSync} from 'node:fs';
 import cove from '../../world/tropical-cove.json';
 import {buildMap} from './builder';
 import {attachOrganicCoast} from './organic-coast';
@@ -6,12 +7,12 @@ import {reconcileNativeProjection} from './native-projection';
 import type {TileCatalog} from '../art/catalog';
 import type {MapLayout,TiledMap,Placement} from './types';
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Tropical cove '+message);};
-const water=(s:string)=>s.startsWith('naval-water-')||s.startsWith('organic-coast-water-');
+const water=(s:string)=>s.startsWith('naval-water-')||s.startsWith('organic-coast-water-')||s.startsWith('tropical-cove-water-');
 export function createTropicalCoveLayout(original:MapLayout,ground:Placement[]):MapLayout{
  need(original.id==='shipyard-beach'&&original.width===48&&original.height===48,'requires the registered beach');
  const result=structuredClone(original),removed=new Set(cove.removePlacementIds);
  const props=result.placements.filter(p=>p.layer!=='terrain'&&p.sprite!=='beach-sea-veil'&&!removed.has(p.id)).map(p=>({...p,...(cove.movePlacements as Record<string,object>)[p.id]}));
- const veils=ground.filter(p=>p.sprite.startsWith('naval-water-')).map(p=>({...p,id:`organic-veil-${p.x}-${p.y}`,sprite:'beach-sea-veil',layer:'architecture' as const}));
+ const veils=ground.filter(p=>p.sprite.startsWith('naval-water-')&&!cove.docks.some(d=>p.x>=d.x&&p.x<d.x+d.width&&p.y>=d.y&&p.y<d.y+d.height)).map(p=>({...p,id:`organic-veil-${p.x}-${p.y}`,sprite:'beach-sea-veil',layer:'architecture' as const}));
  result.placements=[...ground,...cove.docks as Placement[],...veils,...props];
  result.signs=result.signs?.filter(s=>!cove.retiredSigns.includes(s.name));
  result.standingSigns=result.standingSigns?.filter(s=>!cove.retiredSigns.includes(s.text??''));
@@ -39,6 +40,9 @@ export function assertTropicalCove(map:TiledMap,layout:MapLayout,catalog:TileCat
  need(layout.standingSigns?.length===3&&layout.standingSigns.every(s=>cove.signs.some(x=>x.name===s.text)),'retained captions changed');
  need(!layout.placements.some(p=>cove.removePlacementIds.includes(p.id)),'retired decoration returned');
  need(!map.layers.some(l=>cove.retiredSigns.some(s=>l.name==='standing-caption-'+s)),'retired caption returned');
+ const coast=JSON.parse(readFileSync('art/source/tropical-cove-coast.json','utf8'));
+ need(Array.isArray(coast.ground)&&coast.ground.length===48*48&&isDeepStrictEqual(layout.placements.filter(p=>p.layer==='terrain'),[...coast.ground,...cove.docks]),'terrain source incomplete or changed');
+ need(!layout.placements.some(p=>p.sprite==='beach-sea-veil'&&cove.docks.some(d=>p.x<d.x+d.width&&p.x+p.width>d.x&&p.y<d.y+d.height&&p.y+p.height>d.y)),'sea tint covers a walking pier');
  const surface=Array(48*48).fill('')as string[];
  for(const p of layout.placements.filter(p=>p.layer==='terrain'))for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)surface[y*48+x]=p.sprite;
  const layer=map.layers.find(l=>l.name==='physical-collisions');need(layer?.type==='tilelayer','physical mask missing');if(layer?.type!=='tilelayer')return;
