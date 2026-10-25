@@ -86,6 +86,42 @@
       "renderRole": "grounded"
     },
     {
+      "id": "aquarius-style-north-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 1,
+      "y": 0,
+      "width": 34,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-header-rule",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 1,
+      "y": 1,
+      "width": 34,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-partner-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 6,
+      "y": 3,
+      "width": 24,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-partner-rule",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 6,
+      "y": 5,
+      "width": 24,
+      "height": 1,
+      "layer": "props"
+    },
+    {
       "id": "west-wall",
       "sprite": "wall-navy",
       "x": 0,
@@ -236,6 +272,51 @@
       "y": 27,
       "width": 4,
       "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "aquarius-style-stage-top",
+      "sprite": "speaker-style-edge-top",
+      "x": 3,
+      "y": 6,
+      "width": 30,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-stage-front",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 3,
+      "y": 13,
+      "width": 30,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-stage-west",
+      "sprite": "speaker-style-edge-left",
+      "x": 3,
+      "y": 7,
+      "width": 1,
+      "height": 6,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-stage-east",
+      "sprite": "speaker-style-edge-right",
+      "x": 32,
+      "y": 7,
+      "width": 1,
+      "height": 6,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-listener-caption",
+      "sprite": "speaker-style-caption-floor",
+      "x": 6,
+      "y": 15,
+      "width": 24,
+      "height": 1,
       "layer": "terrain"
     },
     {
@@ -632,6 +713,33 @@
       "width": 4,
       "height": 4,
       "layer": "props"
+    },
+    {
+      "id": "aquarius-style-partner-card-aws",
+      "sprite": "speaker-style-logo-card",
+      "x": 8,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-partner-card-bsides",
+      "sprite": "speaker-style-logo-card",
+      "x": 16,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "aquarius-style-partner-card-openinfra",
+      "sprite": "speaker-style-logo-card",
+      "x": 24,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -659,21 +767,17 @@
     {
       "id": "meeting-aquarius",
       "name": "meeting-aquarius",
-      "x": 2,
-      "y": 5,
-      "width": 32,
-      "height": 20,
+      "x": 3,
+      "y": 6,
+      "width": 30,
+      "height": 8,
       "properties": [
         {
-          "id": "aquarius-livekit",
-          "type": "livekitRoomProperty",
-          "roomName": "varcamp-aquarius",
-          "livekitRoomConfig": {
-            "startWithAudioMuted": true,
-            "startWithVideoMuted": true,
-            "disableChat": true,
-            "raiseHandEnabled": true
-          }
+          "id": "aquarius-stage-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-aquarius-talk",
+          "chatEnabled": false,
+          "seeAttendees": false
         }
       ]
     },
@@ -685,6 +789,24 @@
       "width": 3,
       "height": 2,
       "properties": []
+    },
+    {
+      "id": "aquarius-audience",
+      "name": "Aquarius listening area",
+      "x": 2,
+      "y": 14,
+      "width": 32,
+      "height": 11,
+      "properties": [
+        {
+          "id": "aquarius-listener",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "meeting-aquarius",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
     }
   ],
   "inspectionZones": [
@@ -725,13 +847,14 @@
     {
       "name": "scene-title",
       "text": "AQUARIUS  /  COLLABORATORY",
-      "x": 6,
+      "x": 14,
       "y": 2,
-      "width": 24,
+      "width": 16,
       "height": 1,
       "fontSize": 20,
       "color": "#f1d9a0",
-      "align": "left"
+      "align": "left",
+      "padding": 0
     },
     {
       "name": "plaza-wayfinding",
@@ -765,6 +888,54 @@
       "fontSize": 11,
       "color": "#f1d9a0",
       "align": "left"
+    },
+    {
+      "name": "aquarius-style-partners",
+      "text": "COMMUNITY PARTNERS",
+      "x": 16,
+      "y": 3,
+      "width": 8,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left",
+      "padding": 6
+    },
+    {
+      "name": "aquarius-style-presenters",
+      "text": "PRESENTERS",
+      "x": 17,
+      "y": 12,
+      "width": 4,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#ffd7bd",
+      "align": "left",
+      "padding": 0
+    },
+    {
+      "name": "aquarius-style-listeners",
+      "text": "LISTENING AREA  ·  RAISE HAND TO SPEAK",
+      "x": 13,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#ffe6d4",
+      "align": "left",
+      "padding": 6
+    },
+    {
+      "name": "aquarius-style-social",
+      "text": "SOCIAL LOUNGE",
+      "x": 26,
+      "y": 27,
+      "width": 8,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#ffb586",
+      "align": "left",
+      "padding": 0
     }
   ],
   "animatedOverlays": [
@@ -1177,6 +1348,40 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Aquarius / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 15,
+      "y": 0,
+      "width": 6,
+      "height": 2
+    },
+    {
+      "name": "Aquarius / AWS UG Myanmar",
+      "image": "assets/sponsors/partner-aws-ug-mm.png",
+      "x": 8,
+      "y": 4,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Aquarius / BSides Myanmar",
+      "image": "assets/sponsors/partner-bsides-mm.png",
+      "x": 16,
+      "y": 4,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Aquarius / OpenInfra Myanmar",
+      "image": "assets/sponsors/partner-openinfra-mm.png",
+      "x": 24,
+      "y": 4,
+      "width": 4,
+      "height": 2
     }
   ]
 }

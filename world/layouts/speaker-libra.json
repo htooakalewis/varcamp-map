@@ -86,6 +86,42 @@
       "renderRole": "grounded"
     },
     {
+      "id": "libra-style-north-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 1,
+      "y": 0,
+      "width": 34,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-header-rule",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 1,
+      "y": 1,
+      "width": 34,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-partner-wallpaper",
+      "sprite": "speaker-style-wall",
+      "x": 6,
+      "y": 3,
+      "width": 24,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-partner-rule",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 6,
+      "y": 5,
+      "width": 24,
+      "height": 1,
+      "layer": "props"
+    },
+    {
       "id": "west-wall",
       "sprite": "wall-navy",
       "x": 0,
@@ -236,6 +272,51 @@
       "y": 27,
       "width": 4,
       "height": 7,
+      "layer": "terrain"
+    },
+    {
+      "id": "libra-style-stage-top",
+      "sprite": "speaker-style-edge-top",
+      "x": 4,
+      "y": 6,
+      "width": 28,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-stage-front",
+      "sprite": "speaker-style-edge-bottom",
+      "x": 4,
+      "y": 13,
+      "width": 28,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-stage-west",
+      "sprite": "speaker-style-edge-left",
+      "x": 4,
+      "y": 7,
+      "width": 1,
+      "height": 6,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-stage-east",
+      "sprite": "speaker-style-edge-right",
+      "x": 31,
+      "y": 7,
+      "width": 1,
+      "height": 6,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-listener-caption",
+      "sprite": "speaker-style-caption-floor",
+      "x": 6,
+      "y": 15,
+      "width": 24,
+      "height": 1,
       "layer": "terrain"
     },
     {
@@ -613,6 +694,33 @@
       "width": 4,
       "height": 4,
       "layer": "props"
+    },
+    {
+      "id": "libra-style-partner-card-aws",
+      "sprite": "speaker-style-logo-card",
+      "x": 8,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-partner-card-bsides",
+      "sprite": "speaker-style-logo-card",
+      "x": 16,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "libra-style-partner-card-openinfra",
+      "sprite": "speaker-style-logo-card",
+      "x": 24,
+      "y": 4,
+      "width": 4,
+      "height": 2,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -640,21 +748,17 @@
     {
       "id": "meeting-libra",
       "name": "meeting-libra",
-      "x": 2,
-      "y": 5,
-      "width": 32,
-      "height": 20,
+      "x": 4,
+      "y": 6,
+      "width": 28,
+      "height": 8,
       "properties": [
         {
-          "id": "libra-livekit",
-          "type": "livekitRoomProperty",
-          "roomName": "varcamp-libra",
-          "livekitRoomConfig": {
-            "startWithAudioMuted": true,
-            "startWithVideoMuted": true,
-            "disableChat": true,
-            "raiseHandEnabled": true
-          }
+          "id": "libra-stage-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-libra-talk",
+          "chatEnabled": false,
+          "seeAttendees": false
         }
       ]
     },
@@ -666,6 +770,24 @@
       "width": 3,
       "height": 2,
       "properties": []
+    },
+    {
+      "id": "libra-audience",
+      "name": "Libra listening area",
+      "x": 2,
+      "y": 14,
+      "width": 32,
+      "height": 11,
+      "properties": [
+        {
+          "id": "libra-listener",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "meeting-libra",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
     }
   ],
   "inspectionZones": [
@@ -706,13 +828,14 @@
     {
       "name": "scene-title",
       "text": "LIBRA  /  BALANCE FORUM",
-      "x": 6,
+      "x": 14,
       "y": 2,
-      "width": 24,
+      "width": 16,
       "height": 1,
       "fontSize": 20,
       "color": "#f1d9a0",
-      "align": "left"
+      "align": "left",
+      "padding": 0
     },
     {
       "name": "plaza-wayfinding",
@@ -746,6 +869,54 @@
       "fontSize": 11,
       "color": "#f1d9a0",
       "align": "left"
+    },
+    {
+      "name": "libra-style-partners",
+      "text": "COMMUNITY PARTNERS",
+      "x": 16,
+      "y": 3,
+      "width": 8,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#f1d9a0",
+      "align": "left",
+      "padding": 6
+    },
+    {
+      "name": "libra-style-presenters",
+      "text": "PRESENTERS",
+      "x": 17,
+      "y": 12,
+      "width": 4,
+      "height": 1,
+      "fontSize": 12,
+      "color": "#ffd7bd",
+      "align": "left",
+      "padding": 0
+    },
+    {
+      "name": "libra-style-listeners",
+      "text": "LISTENING AREA  ·  RAISE HAND TO SPEAK",
+      "x": 13,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "fontSize": 14,
+      "color": "#ffe6d4",
+      "align": "left",
+      "padding": 6
+    },
+    {
+      "name": "libra-style-social",
+      "text": "SOCIAL LOUNGE",
+      "x": 26,
+      "y": 27,
+      "width": 8,
+      "height": 1,
+      "fontSize": 13,
+      "color": "#ffb586",
+      "align": "left",
+      "padding": 0
     }
   ],
   "animatedOverlays": [
@@ -1158,6 +1329,40 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Libra / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 15,
+      "y": 0,
+      "width": 6,
+      "height": 2
+    },
+    {
+      "name": "Libra / AWS UG Myanmar",
+      "image": "assets/sponsors/partner-aws-ug-mm.png",
+      "x": 8,
+      "y": 4,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Libra / BSides Myanmar",
+      "image": "assets/sponsors/partner-bsides-mm.png",
+      "x": 16,
+      "y": 4,
+      "width": 4,
+      "height": 2
+    },
+    {
+      "name": "Libra / OpenInfra Myanmar",
+      "image": "assets/sponsors/partner-openinfra-mm.png",
+      "x": 24,
+      "y": 4,
+      "width": 4,
+      "height": 2
     }
   ]
 }

@@ -73,9 +73,9 @@ A successful build or a passing plan is not publication. Only the completed `app
 
 Keep the plan directory after a successful release; it is the only record of what the live tree looked like before the upload.
 
-## Aries presentation successor
+## Speaker presentation successors
 
-The one-room owner preview uses `aries-presentation-v1` for
+The original one-room owner preview uses `aries-presentation-v1` for
 `maps/speaker-aries.wam`. The upload guard compares the existing meeting area
 against the frozen fourteen-room contract, replaces only its owned stage fields,
 and appends the named listener area from `world/aries-presentation.json`.
@@ -86,6 +86,13 @@ The dependency receipt names this migration. Ordinary WAM updates retain the
 byte-preserving token-only rule. A reviewed candidate must be derived from the
 same fresh live inventory as the prepared plan; quiet-window and complete
 readback checks still apply.
+
+The approved eleven-room rollout uses `speaker-presentation-v1` for the exact
+remaining zodiac speaker WAM paths, with room-specific areas in
+`world/speaker-presentation.json`. It reuses the same guarded merge and verifies
+global area IDs/names, property IDs and meeting/broadcast owners are unique in
+the effective candidate. Aries retains its original successor. No other WAM
+path can use these exceptions. All artwork bytes remain unchanged.
 
 ## Quiet editor window
 

@@ -111,5 +111,5 @@ export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
  const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));
- assert.deepEqual(current,id==='speaker-aries'?applyAriesPresentation(baseline):baseline,'Only finite reviewed producer/presentation successors may advance '+id);
+ assert.deepEqual(current,applyAriesPresentation(baseline),'Only finite reviewed producer/presentation successors may advance '+id);
 }

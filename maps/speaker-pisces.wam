@@ -7,21 +7,17 @@
       "id": "meeting-pisces",
       "name": "meeting-pisces",
       "visible": true,
-      "x": 64,
-      "y": 160,
-      "width": 1024,
-      "height": 672,
+      "x": 128,
+      "y": 192,
+      "width": 896,
+      "height": 256,
       "properties": [
         {
-          "id": "pisces-livekit",
-          "type": "livekitRoomProperty",
-          "roomName": "varcamp-pisces",
-          "livekitRoomConfig": {
-            "startWithAudioMuted": true,
-            "startWithVideoMuted": true,
-            "disableChat": true,
-            "raiseHandEnabled": true
-          }
+          "id": "pisces-stage-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-pisces-talk",
+          "chatEnabled": false,
+          "seeAttendees": false
         }
       ]
     },
@@ -34,9 +30,37 @@
       "width": 96,
       "height": 64,
       "properties": []
+    },
+    {
+      "id": "pisces-audience",
+      "name": "Pisces listening area",
+      "visible": true,
+      "x": 64,
+      "y": 448,
+      "width": 1024,
+      "height": 384,
+      "properties": [
+        {
+          "id": "pisces-listener",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "meeting-pisces",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
     }
   ],
-  "entityCollections": [{"url":"https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json","type":"file"},{"url":"https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json","type":"file"}],
+  "entityCollections": [
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
   "metadata": {
     "name": "VarCamp · Speaker Pisces"
   }

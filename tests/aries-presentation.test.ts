@@ -1,6 +1,5 @@
 import {readFileSync} from 'node:fs';
 import {describe,expect,it} from 'vitest';
-import {SIGN_IDS} from '../src/world/catalog';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {buildMap} from '../tools/maps/builder';
 import {assertNativeReferenceInterior,renderReferenceInterior} from '../tools/maps/reference-interiors';
@@ -29,13 +28,6 @@ describe('Aries in-game presentation preview',()=>{
    expect(sheet).toMatchObject({tilewidth:32,tileheight:32,columns:width,tilecount:width*2,imagewidth:width*32,imageheight:64,image:'../'+image});
    const layer=a.map.layers.find(l=>l.name==='Aries / '+name) as TileLayer;
    for(let dy=0;dy<2;dy++)for(let dx=0;dx<width;dx++)expect(layer.data[(y+dy)*36+x+dx]).toBe(sheet.firstgid+dy*width+dx);
-  }
- });
- it('keeps all eleven other speaker rooms on their existing group-call configuration',()=>{
-  for(const sign of SIGN_IDS.filter(s=>s!=='aries')){
-   const l=read(`world/layouts/speaker-${sign}.json`),w=read(`maps/speaker-${sign}.wam`);
-   expect(l.images??[]).toEqual([]);
-   expect(w.areas.flatMap((a:any)=>a.properties).filter((p:any)=>p.type==='livekitRoomProperty')).toEqual([{id:`${sign}-livekit`,type:'livekitRoomProperty',roomName:`varcamp-${sign}`,livekitRoomConfig:{startWithAudioMuted:true,startWithVideoMuted:true,disableChat:true,raiseHandEnabled:true}}]);
   }
  });
  it.each(['missing-audience','wrong-stage-reference','talking-enabled','missing-logo','shifted-logo','missing-trim','blocking-style'])('rejects coherent %s before release',kind=>{

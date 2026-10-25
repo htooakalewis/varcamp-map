@@ -8,7 +8,7 @@
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "838ba25d459d403bbf7bb9ff8a194a65533d89d5c4534c2955c74200a43e3ac5",
       "tests/helpers/visibility-history.ts": "1e049c084a1de2eec245f75193849b6afdc298a626c6039a6a2d25c6695aefdf",
-      "tests/helpers/editor-catalog-history.ts": "219bb7b86ffb6fe47959d35086c4a62e6f9b18b7d9ebe869aec9f2bb1b268c3b",
+      "tests/helpers/editor-catalog-history.ts": "b6668f1d84d6c028c1cba99d2ff3e936c241a030edbddb061a222168711eb7ee",
       "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
       "tests/helpers/physical-prop-contracts.ts": "209edce85a88345cd3026e3fb3273a10f59fa4353ed89bbe7b6b36b84f61f52f",
       "art/tile-catalog.json": "e39c7dfdaa3575c83e4605e69b278a676a62e10a9030cf1b029ea47390501b52",

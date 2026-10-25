@@ -7,21 +7,17 @@
       "id": "meeting-leo",
       "name": "meeting-leo",
       "visible": true,
-      "x": 64,
-      "y": 160,
-      "width": 1024,
-      "height": 640,
+      "x": 96,
+      "y": 192,
+      "width": 960,
+      "height": 256,
       "properties": [
         {
-          "id": "leo-livekit",
-          "type": "livekitRoomProperty",
-          "roomName": "varcamp-leo",
-          "livekitRoomConfig": {
-            "startWithAudioMuted": true,
-            "startWithVideoMuted": true,
-            "disableChat": true,
-            "raiseHandEnabled": true
-          }
+          "id": "leo-stage-broadcast",
+          "type": "speakerMegaphone",
+          "name": "varcamp-leo-talk",
+          "chatEnabled": false,
+          "seeAttendees": false
         }
       ]
     },
@@ -34,9 +30,37 @@
       "width": 96,
       "height": 64,
       "properties": []
+    },
+    {
+      "id": "leo-audience",
+      "name": "Leo listening area",
+      "visible": true,
+      "x": 64,
+      "y": 448,
+      "width": 1024,
+      "height": 352,
+      "properties": [
+        {
+          "id": "leo-listener",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "meeting-leo",
+          "chatEnabled": false,
+          "allowTalking": false,
+          "raiseHandEnabled": true
+        }
+      ]
     }
   ],
-  "entityCollections": [{"url":"https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json","type":"file"},{"url":"https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json","type":"file"}],
+  "entityCollections": [
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "https://varcamp.3-1-133-135.sslip.io/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
   "metadata": {
     "name": "VarCamp · Speaker Leo"
   }

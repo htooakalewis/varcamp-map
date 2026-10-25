@@ -1,0 +1,582 @@
+{
+  "version": 1,
+  "rooms": {
+    "speaker-aquarius": {
+      "baselineFunctionalSha256": "7c22e64ec6334be8eaa99bb8166631ff34cfc979baaf00c518d950147839eb80",
+      "basePlacementsSha256": "5a86e3a2193e838569614d91116c8e5ff5125cc10ae8f71104eca4273c42512c",
+      "baseSignsSha256": "e039fcdb7822dba89ba89af538695f7a286c72d6b4bb32a0b929f463fac8c06c",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-aquarius",
+          "name": "meeting-aquarius",
+          "x": 3,
+          "y": 6,
+          "width": 30,
+          "height": 8,
+          "properties": [
+            {
+              "id": "aquarius-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-aquarius-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "aquarius-audience",
+          "name": "Aquarius listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "aquarius-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-aquarius",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-cancer": {
+      "baselineFunctionalSha256": "d90b089540d5f71aca4f3c8f7e985f46356054c31c0e30b94fc5a027f034b9ba",
+      "basePlacementsSha256": "e731c4684162e346119bb0af64ec8d3b786834844dbd5acd425ce4487d4dee12",
+      "baseSignsSha256": "5a6f3e68a5358d00774a8bae22bfb8ebc0ceb6a826df70e35c56f606f491a899",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-cancer",
+          "name": "meeting-cancer",
+          "x": 5,
+          "y": 6,
+          "width": 26,
+          "height": 8,
+          "properties": [
+            {
+              "id": "cancer-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-cancer-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "cancer-audience",
+          "name": "Cancer listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "cancer-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-cancer",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-capricorn": {
+      "baselineFunctionalSha256": "420533c5b1692e2dc4ca9cee3f4ce943c4c99973bc0e1fe2ed2c96b9c92c31e1",
+      "basePlacementsSha256": "537ea350e022de11a5d5eebfdecdc4b1c7f8656674bdcca6cd9588b69e836dea",
+      "baseSignsSha256": "730e7083630658566732e5ad724f3dd04af186f97332652f44c202cbceed7c4f",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-capricorn",
+          "name": "meeting-capricorn",
+          "x": 5,
+          "y": 6,
+          "width": 26,
+          "height": 8,
+          "properties": [
+            {
+              "id": "capricorn-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-capricorn-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "capricorn-audience",
+          "name": "Capricorn listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "capricorn-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-capricorn",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ],
+      "partnerXs": [
+        12,
+        18,
+        24
+      ]
+    },
+    "speaker-gemini": {
+      "baselineFunctionalSha256": "8c72459709a726fe20876b8fabb2bf2056bc04e620015b3ab784892b8ab30f4c",
+      "basePlacementsSha256": "0046237dd3db8c263ff9f90eb3ce59ae9d680f6ff8925870344fadc81d49f0d4",
+      "baseSignsSha256": "981449d2edf7699c3e60d7cff672e526116127d31bfe5115932f786bbcb8f72e",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-gemini",
+          "name": "meeting-gemini",
+          "x": 5,
+          "y": 6,
+          "width": 26,
+          "height": 8,
+          "properties": [
+            {
+              "id": "gemini-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-gemini-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "gemini-audience",
+          "name": "Gemini listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "gemini-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-gemini",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-leo": {
+      "baselineFunctionalSha256": "1fb0c9619296660ce2210fb818dbf5b4eabb303c7348432d354ce1867119df76",
+      "basePlacementsSha256": "8f5c1c4ab65e5cf61691f5a5565b2a048e0dddca5868b6163bf070c5ab61617f",
+      "baseSignsSha256": "e3a87a091fba18106522a7a23c1b430a74a638b1ea5ebee0f84c440d55d23537",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-leo",
+          "name": "meeting-leo",
+          "x": 3,
+          "y": 6,
+          "width": 30,
+          "height": 8,
+          "properties": [
+            {
+              "id": "leo-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-leo-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "leo-audience",
+          "name": "Leo listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "leo-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-leo",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-libra": {
+      "baselineFunctionalSha256": "105b5a41a0277e8712637a95be811c02910c29be12b5d102cba6a9d82012f35a",
+      "basePlacementsSha256": "7efb189d6937cc1ed0062af670c039ab90ea2b3fc6c8a3ed683be7e78ff740ff",
+      "baseSignsSha256": "9097e60a25b7292ee15aef036402c71bd5ac7801ba8a1a7f139b7062fd098215",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-libra",
+          "name": "meeting-libra",
+          "x": 4,
+          "y": 6,
+          "width": 28,
+          "height": 8,
+          "properties": [
+            {
+              "id": "libra-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-libra-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "libra-audience",
+          "name": "Libra listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "libra-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-libra",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-pisces": {
+      "baselineFunctionalSha256": "9fb1d3639d22999fbd117cf967443201bfc61682cce082442b048a6f88087c74",
+      "basePlacementsSha256": "8c29ff28e83d40f9541ed5535cd103cf25ac074ce2ab435476fb549d89ddc53c",
+      "baseSignsSha256": "0d7a994834bb2de1fc7c005e15295835c6cea4f76cda1930d33ff714fb8d1cac",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-pisces",
+          "name": "meeting-pisces",
+          "x": 4,
+          "y": 6,
+          "width": 28,
+          "height": 8,
+          "properties": [
+            {
+              "id": "pisces-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-pisces-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "pisces-audience",
+          "name": "Pisces listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 12,
+          "properties": [
+            {
+              "id": "pisces-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-pisces",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-sagittarius": {
+      "baselineFunctionalSha256": "1521fab44e6912c64aa1204cd7526cea68204acdf717a421cd3788b5cc9d6f8a",
+      "basePlacementsSha256": "24bddd56bd55734a49be4e8737e4a13e7f97cdb21f987658a6930b852388d048",
+      "baseSignsSha256": "3e94f25b11cfbacd3fdb19535ae8aa5ea5efb6b3bff4a50db780fb96f95f0523",
+      "offsetX": 2,
+      "width": 40,
+      "title": {
+        "x": 16,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-sagittarius",
+          "name": "meeting-sagittarius",
+          "x": 5,
+          "y": 6,
+          "width": 30,
+          "height": 8,
+          "properties": [
+            {
+              "id": "sagittarius-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-sagittarius-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "sagittarius-audience",
+          "name": "Sagittarius listening area",
+          "x": 2,
+          "y": 14,
+          "width": 36,
+          "height": 11,
+          "properties": [
+            {
+              "id": "sagittarius-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-sagittarius",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-scorpio": {
+      "baselineFunctionalSha256": "0cfac295a1aefeccf5572e47ff56534eca604e8ce01246c092119548499ce87b",
+      "basePlacementsSha256": "da47530d30d0888c3947e5312912edfc6d04f349c1a021932f89ccc9006bd4a4",
+      "baseSignsSha256": "676f227d0b61997ff4dc22e2a99a9eb133acd719a181e75dbb014fb45dd468a0",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-scorpio",
+          "name": "meeting-scorpio",
+          "x": 6,
+          "y": 6,
+          "width": 24,
+          "height": 8,
+          "properties": [
+            {
+              "id": "scorpio-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-scorpio-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "scorpio-audience",
+          "name": "Scorpio listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "scorpio-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-scorpio",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-taurus": {
+      "baselineFunctionalSha256": "5c99dd6afac50d173028743ab5db86abaf04a5862a366b4b8758a522bfa1080a",
+      "basePlacementsSha256": "595b03eb64ba90ef793321a70c9183294fd4a7f066f2c07722b466005b872b28",
+      "baseSignsSha256": "a071516c67e5b31a0cf82233b868141fc02ce48eeab2b74c35452ec20fe45c52",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-taurus",
+          "name": "meeting-taurus",
+          "x": 7,
+          "y": 6,
+          "width": 22,
+          "height": 8,
+          "properties": [
+            {
+              "id": "taurus-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-taurus-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "taurus-audience",
+          "name": "Taurus listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "taurus-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-taurus",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "speaker-virgo": {
+      "baselineFunctionalSha256": "0287061012751287273d8d803b51676bca1098edba1bd97fb8b6288d31d47a95",
+      "basePlacementsSha256": "4f785eb2c97d31d28eba8c0080023af1a9476845048abd770fdfea9abbfff7d0",
+      "baseSignsSha256": "71551c01b82b8d5eba28160c066cc289c837c1b1e82ddb156f4873cd0b4228de",
+      "offsetX": 0,
+      "width": 36,
+      "title": {
+        "x": 14,
+        "y": 2,
+        "width": 16,
+        "height": 1,
+        "padding": 0,
+        "align": "left"
+      },
+      "areas": [
+        {
+          "id": "meeting-virgo",
+          "name": "meeting-virgo",
+          "x": 5,
+          "y": 6,
+          "width": 26,
+          "height": 8,
+          "properties": [
+            {
+              "id": "virgo-stage-broadcast",
+              "type": "speakerMegaphone",
+              "name": "varcamp-virgo-talk",
+              "chatEnabled": false,
+              "seeAttendees": false
+            }
+          ]
+        },
+        {
+          "id": "virgo-audience",
+          "name": "Virgo listening area",
+          "x": 2,
+          "y": 14,
+          "width": 32,
+          "height": 11,
+          "properties": [
+            {
+              "id": "virgo-listener",
+              "type": "listenerMegaphone",
+              "speakerZoneName": "meeting-virgo",
+              "chatEnabled": false,
+              "allowTalking": false,
+              "raiseHandEnabled": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

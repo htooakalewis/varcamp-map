@@ -15,9 +15,10 @@ describe('reference-furnished zodiac interiors',()=>{
  for(const name of names){
   it(`${name}: keeps exact footprint, entries, returns, meeting roles and inspection routes`,()=>{
    const layout=load(name);for(const[key,value]of Object.entries(before[name])){
-    if(name==='speaker-aries'&&key==='areas'){
-     expect(layout.areas.map(a=>a.id)).toEqual(['meeting-aries','beacon-aries','aries-audience']);
-     expect(layout.areas.find(a=>a.id==='beacon-aries')).toEqual((value as MapLayout['areas']).find(a=>a.id==='beacon-aries'));
+    if(name.startsWith('speaker-')&&key==='areas'){
+     const sign=name.slice(8);
+     expect(layout.areas.map(a=>a.id)).toEqual([`meeting-${sign}`,`beacon-${sign}`,`${sign}-audience`]);
+     expect(layout.areas.find(a=>a.id===`beacon-${sign}`)).toEqual((value as MapLayout['areas']).find(a=>a.id===`beacon-${sign}`));
     }else expect(layout[key as keyof MapLayout],`${name}: ${key}`).toEqual(value);
    }
   });

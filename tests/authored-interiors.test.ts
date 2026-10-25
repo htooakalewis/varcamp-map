@@ -28,8 +28,8 @@ describe('independently authored interior family',()=>{
  });
  for(const sign of signs)it(`preserves ${sign} meeting settings and moves its discovery into its own room`,()=>{
   const l=load(`speaker-${sign}`),meeting=l.areas.find(a=>a.id===`meeting-${sign}`)!;
-  expect(meeting.properties).toEqual(sign==='aries'?[{id:'aries-stage-broadcast',type:'speakerMegaphone',name:'varcamp-aries-talk',chatEnabled:false,seeAttendees:false}]:baseline[`meeting-${sign}`]);
-  expect(l.areas.filter(a=>a.properties.some(p=>p.type==='livekitRoomProperty'))).toHaveLength(sign==='aries'?0:1);
+  expect(meeting.properties).toEqual([{id:`${sign}-stage-broadcast`,type:'speakerMegaphone',name:`varcamp-${sign}-talk`,chatEnabled:false,seeAttendees:false}]);
+  expect(l.areas.filter(a=>a.properties.some(p=>p.type==='livekitRoomProperty'))).toHaveLength(0);
   expect(l.areas.find(a=>a.id===`beacon-${sign}`)?.properties).toEqual(baseline[`beacon-${sign}`]);
   expect(l.entries).toEqual([expect.objectContaining({name:'speaker-entry',isDefault:true})]);
   expect(l.exits).toEqual([expect.objectContaining({name:'plaza-return',destination:'overworld',entry:`from-speaker-${sign}`})]);
@@ -113,7 +113,7 @@ describe('independently authored interior family',()=>{
  });
 
  it('keeps every speaker audience chair fully inside its active listening or meeting area',()=>{
-  for(const sign of signs){const l=load(`speaker-${sign}`),meeting=l.areas.find(a=>a.id===(sign==='aries'?'aries-audience':`meeting-${sign}`))!;
+  for(const sign of signs){const l=load(`speaker-${sign}`),meeting=l.areas.find(a=>a.id===`${sign}-audience`)!;
    for(const seat of l.placements.filter(p=>p.id.startsWith('seat-')))expect(seat.x>=meeting.x&&seat.y>=meeting.y&&seat.x+seat.width<=meeting.x+meeting.width&&seat.y+seat.height<=meeting.y+meeting.height,`${sign}: ${seat.id} extends outside meeting`).toBe(true);
   }
  });

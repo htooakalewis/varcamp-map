@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/preview/speaker-aquarius.tmj",
+      "fromSha256": "e20ac796353d073c3810b876378aef5671e412689787d1d3d6f7d4b3d91f94c4",
+      "toSha256": "8ce4ff441b5fe30674b7173f513356f6d29fc0536140ad41e9a67eb344c76b7c",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-cancer.tmj",
+      "fromSha256": "c68519bf992d13b2decf901865d712b03e51904e1f2c95c76f440e304dddce22",
+      "toSha256": "46056aa869fdbcd6804095c022a0ece54e1d3df9402dc106cd14f04f39ee8367",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-capricorn.tmj",
+      "fromSha256": "bf5a0c403aba1f22b7eea13eb2e95f0b354b60b1c790328d59190133406415f4",
+      "toSha256": "33bfe2f943ef4ba81cedecced2ba266bf38b1e40f793cf70c5b9163aec2683ae",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-gemini.tmj",
+      "fromSha256": "fa30e87021de1f0c30f1aee862b81717f1b20c65e2f00bab9b97273e25ea34d6",
+      "toSha256": "4338f19fcd17d4810fce5591e7e64e4f47cfda1b9eed476d3c62b72116c52c60",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-leo.tmj",
+      "fromSha256": "077e1c981a77cbe7c6d70d12e437c6e0045c8fae5057181a78d6fde88a88e76a",
+      "toSha256": "e32562b6b632a9a8ced52562764b0e897d014ced411ec6e2f23574faaead6440",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-libra.tmj",
+      "fromSha256": "b92a10b1d66a48b38a782836a3b880127b0b49c985413b9e4b915af707d578e6",
+      "toSha256": "4ca7afce94e7ac27918634e9d0463b2a543feba040edb51b528b39f962760bc5",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-pisces.tmj",
+      "fromSha256": "9937114400c3d773b2da7b4ec59677c6f5daa66c711571f015cf83ea7e3309c5",
+      "toSha256": "533f52a016fa94b724b6a61dcf6a05cb58309f6c627787d86ecb66277487e4d6",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-sagittarius.tmj",
+      "fromSha256": "80798b9d7cd861d34bcc3ac5e25d2da7e3eb11a9bcbf4c2b11fd2aceb2f9d8b7",
+      "toSha256": "d125fc5422e0758ba7070cf04143b2d844f8d5af8ccc32c6d33be9de884943e8",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-scorpio.tmj",
+      "fromSha256": "553fbd0397383998cd2631744d6532be88c3e2f1075a3cb0f1956600ddebd51e",
+      "toSha256": "7fa4643d6163c2ab1f7ff1370c7a5c90d200fff429fab27bbaa93639681b72d3",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-taurus.tmj",
+      "fromSha256": "8cd710ec599fecc74ffaec8eb5c7b1523691c9a3546d8f75ef92760f0d8f61b7",
+      "toSha256": "c45498e9a60d17462437d7aaf70e5c9e3a202c9d4570c2b25d89cc29e1dcb570",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/preview/speaker-virgo.tmj",
+      "fromSha256": "4387ddf9279f06420b0fb8747976db86eb9b8d9b6568896a96d711199d54d49b",
+      "toSha256": "f80892948cd7a9a14c694e84ed8bb1a8d88bd07db5522773922c2374d36125f1",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "fromSha256": "4a5ad0c258830993018b6785bbdcf10438a0c55b063818f3c778db7891df8182",
+      "toSha256": "9e447074980b1f306a61f5a7e14ae8a2760c88022a4d355fd81fd0ba2155ef8e",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-aquarius.wam",
+      "fromSha256": "1f4f2b4fd53e944cb79f9888580b73fdebc49acd386c0327e639399436dae5fc",
+      "toSha256": "8dc36be90411d29e4448cd7ed70dc7db688f3b776df77deebb38daa6e4e81115",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "fromSha256": "433198d772700951e8bb1a17b54f18cdf12b43493d139d1373496a3ac6565cec",
+      "toSha256": "f001366b47202861afe31f382bbeed7dbb82c66e2d20f94eb9272cdd5cdc72e9",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-cancer.wam",
+      "fromSha256": "efe476c8da6bc880aafe95855c4981d8bc1c4fb85890f46dd92ff8d14f9606ea",
+      "toSha256": "feb177e06db96077c19328f5f7cf8d8dd069a8e87b105a3096a3e5cea4be3a84",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "fromSha256": "1227284b3658561237dc9728a35928ccdab866e025c84c80d51a6fe9bbe4c242",
+      "toSha256": "7deba4740589611adfc00a002e5d4b17add8d4c8a154d3f8a2646412d56a9f08",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-capricorn.wam",
+      "fromSha256": "16d30bf98a7d683e5f6cb50a97450c8a10bd8d3bc3f17fb4765cfdf5359c5f45",
+      "toSha256": "55b687f24e00f5d573746187552f33e70f946b1e250d12b7c2e47e231087f978",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "fromSha256": "fc50e25a916e8b4ce427f9fde7dbe1df1934406d8e439d65c37794961e83eb70",
+      "toSha256": "1d876e3663fa26186b5e53d93ff4daf5e4f0b0004f0747b3fa035d433df77816",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-gemini.wam",
+      "fromSha256": "b15451ce09db8358b71813c3da9231d4ec474393281ebd006591f766ce0ae4fc",
+      "toSha256": "d1a1424440fbd80f5d0cca9f31a9f0818a35e8739bc11d81daf7c4a4425f46b0",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "fromSha256": "db688f5eaf186eda563598e994dcc0e21608e21f5b1355d8b9d4c15a1b08b754",
+      "toSha256": "09726db6388049f410168696202fe175ddd432d8528efdeffed9203ce4fb31d5",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-leo.wam",
+      "fromSha256": "4c7f80504c882fd7e0e7c33e8a6e9659ba8ed7f716f8daf8716836a634eae830",
+      "toSha256": "f061eb2524adf746a1a1391c7a744aa7fc72fca195df189d9be7744e5e5a5172",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "fromSha256": "aaa5f56ae2d4176d536d6862dbed514dcbe09f89998e85256c76b7e8dd247573",
+      "toSha256": "ba792a7690a3ff78f46e128b99effd80de5a8065a84ce43b79cde909397387bc",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-libra.wam",
+      "fromSha256": "c304712fcff78621ae9c1369e44f66cf6ca2e50d7822ecdfb3aea0f9decad6c7",
+      "toSha256": "0b3fb8c157ae1cb8578d5f425331ef46d7f28faf162332bd8cb7a439622ce9c4",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "fromSha256": "8e1955717d104f2e92bb97db458a656496df4e2668e21992dc9c25aa3b5e64b3",
+      "toSha256": "5589a9460695662db5dd9163efcac5d122dc22018734db0639e7cfa4092163d1",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-pisces.wam",
+      "fromSha256": "0431794a019888ff185d542dee9884e419244ffa0a53149ea47c64dca2fd2f4e",
+      "toSha256": "9d39856956235e8cc6cc5bbc257c64ce2790546db2233f84a0676ff188342f53",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "fromSha256": "7daa3aebad99751aa1b3f5b8ce3764eb5019749326e91de9179ae0fe3a7d85b6",
+      "toSha256": "31789147c20d3c08c17a48b34d010cc8d281ef08ef33970cc2dbcccf39a5047f",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-sagittarius.wam",
+      "fromSha256": "960f7769e95e03d139fcc004190a3404ce49677c39f34aee5af2b5c28e06cfdc",
+      "toSha256": "4f9a89ef546e7dd41706be642c35e2f321b14ffe7bcd421e269401908dc6471c",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "fromSha256": "cf4d5fa64c98fac98fd478a8a9ca23bf4860762acc1f38f67ee1c6b2eb1daf97",
+      "toSha256": "c0f7b0ed16b05c43418b7a74782d429e636495338599c393d436ae6cda4e9518",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-scorpio.wam",
+      "fromSha256": "96b7f5f8314ff56f179f6e72823c9b84ba6f89a6b626b7e9f0911e326de358dc",
+      "toSha256": "f2715a64f10cf69497e9c2e9c750b5d3be30cf04e8097e30d9c772b6d8f7e003",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "fromSha256": "2b1f79f4e7e2645bcee79d0dc5dfba1e7dea10e8ab0a71add8bc134e142bdf72",
+      "toSha256": "4cf8c236af5056d2f85e792f23b3a66bf25abef5b239c641ce2b2104be2305a6",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-taurus.wam",
+      "fromSha256": "3f6a9de3dd28ad687046904ad4d050b7389af9376e5c739218cbca9453a722af",
+      "toSha256": "94df2cddb792b66340477387b56374b7db64c503d264a8f372b447ce8095ada9",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "fromSha256": "f4d998717a35e70642b55d0a2f1aaa7770ee7690979b7f7dfd84aa8107fdd2ae",
+      "toSha256": "52e113d3f1f7a1a8a3d7201e4019bd27e5dcf0fdd0a531669b688353cfe6fa52",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "maps/speaker-virgo.wam",
+      "fromSha256": "6127578146c17c0a8699288aa7dfbafa81ac8ce4830459b5faf3ddc5df69db1b",
+      "toSha256": "3c502513db172f30c5811f42ffb3671af7f2efbbd315e7ce587008b3172e7a7b",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "tests/authored-interiors.test.ts",
+      "fromSha256": "cc323ad5bfa51594af9e145690d0145fb7ceb4a2c6e2cd1a3f950f32e10f1d78",
+      "toSha256": "ecf93cb999e5ef9ebb8b0a7aa7b36443af26c711e7b1aa3db5849494940e03bd",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "38e0c42c130f1c9411c9552d7df98e8faa84db6866d9cfdb58b23a6a714dc1e5",
+      "toSha256": "8985bdba379c1f1ef24de197cd539dfed4c2d80776495496e1a12bb59a250ee1",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "tests/speaker-maps.test.ts",
+      "fromSha256": "44f15dd0417f705307b6672f1119f379ce67832b03c6a30ad06dee02ad68b295",
+      "toSha256": "5d79fd4931d79b565954f413290472ecc739a4981cb004020307445c155627fa",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "a51cb8be50f591264f63bf4cc68f4140a97379af00d640795a32c22345332c97",
+      "toSha256": "7ec49552420b7194d86d80b22d0eddff152f3168f1422ec28603e7d524dd62e0",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "97bbe8a829dfd4b444a9a2e44c8471731ec4f833a96613be737a6db04efafa29",
+      "toSha256": "9cfd88fb3a066af1e13b4d9f903039d1f24f2641d53b6dd7404cc7388d214d6e",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "787d52bff1fb6d928a30c9e6daa2bc429a56ab73868937dc0acb4a16b3753aec",
+      "toSha256": "bda224eca52c1149812700f7d54c21a25077e66b41ada3f6aa19b3c2a36bc311",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "f59f7fca304d16a0324bd617704e753de61650ad03ab9e167c123817f25e51d9",
+      "toSha256": "a8a9da0e224994087e7103f6e921aeae969659fd690583a1c93407b20252aa37",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "08dfc3a54b778ba1c826647e00d551112a23aa8c668813e3e49b5e661044a38d",
+      "toSha256": "f35342f9d42ba66ae09578b6cdf15b38854a47aa5a80be34f26521dbcc8bcb0f",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "562f8968363701131e5b7e7e06777d628b1843f1814bea639d99db29c5791b72",
+      "toSha256": "1b6c2c624db2958c1c966090041b43fb6cb39b16185eba87121bd006f0503d6f",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "580b83632ee06a5d691dae2d60f43486deef9b11f9f071e0cfeb2b6b5c9bf9e8",
+      "toSha256": "05d847995ef2f28eb7368dc40825528b5888d0670055e41fdb8bf9a7e776ab0c",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "0cac03b592aa1df63155e6917c884de0d7e067b47f7da6049176e1f548b74142",
+      "toSha256": "3ffc605bdeda1254582b3da66304bb601a8095be2ff98eb845a775c1f66a6d2f",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "8f6a28f3d1cbfba83675b37c3fbd435461ffd1d5b540d7500ce329609f6278f5",
+      "toSha256": "f9e409853b3dacc04a41f6d743dd07165a8a44023a768be77327893b8b00e643",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "ef750741c7de0bf481460dc4b02bc81256757a95f1884a6f1fa0966a2aeb3ee6",
+      "toSha256": "c762bf1b9458e70f1e8a561309896908b2033f622e0db487741287b4bc223151",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "718fcde7fa4e07b891eb1b39c89a6810e6015c6fbec4cfe6d8172fa9fa951105",
+      "toSha256": "0ddb45472bd1eaf13d7beb2da97c887a4b5caab65931868394da90112a3b2d1f",
+      "reason": "Apply approved Aries styling and presenter/listener controls to the other eleven zodiac rooms while preserving original furnishings, geometry and existing artwork."
+    }
+  ]
+}
