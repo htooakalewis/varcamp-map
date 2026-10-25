@@ -10,8 +10,8 @@
     {
       "path": "art/sources.json",
       "fromSha256": "75fad7f999fede7cd497900ba83e3e5b0ef0c930f39324350868114207e7aa7a",
-      "toSha256": "af6ce680656d0ce18f533ed6088798e36816d91ca96856453177ea19190e7024",
-      "reason": "Zodiac WOKAs v3: pixel-art redraw added to the release"
+      "toSha256": "bff3d8079ae5edda27d767d07df45fcaf95e43cd99215b64cd067b2876df2aff",
+      "reason": "Roadster single-flip revision: fixed viewpoint and pivot; preserve routes and frozen v1 atlas"
     },
     {
       "path": "art/sponsors.json",
@@ -52,8 +52,8 @@
     {
       "path": "maps/overworld.tmj",
       "fromSha256": "9c141a299bbd1f6dcb8bbf29466f1fa0b73441d259be9c65f53371ffdefe4be6",
-      "toSha256": "47bd830a7872bf472601c2b3e06741e83e3e38e5c3a4af2558db3aaaa8d02a8f",
-      "reason": "Zodiac WOKAs v3: pixel-art redraw added to the release"
+      "toSha256": "f7db4ebeb3ea0afc1f99764e365bc4719552204345d3c72d8c32dd568072089c",
+      "reason": "Roadster single-flip revision: fixed viewpoint and pivot; preserve routes and frozen v1 atlas"
     },
     {
       "path": "maps/preview/constellation-shore.tmj",
@@ -70,8 +70,8 @@
     {
       "path": "maps/preview/overworld.tmj",
       "fromSha256": "84540122405757614b9b9e5c55593cbc2c2915b138c9d1ecef4727247c07c5a5",
-      "toSha256": "74fc52c1d4f6cd42d283a8e51bfacedf4292b6301f985ca72bd2a5734dbd4cf8",
-      "reason": "Zodiac WOKAs v3: pixel-art redraw added to the release"
+      "toSha256": "7a1453380276f2bd68bf9cc6942b6cb89e3d1206c25f23b4d2efd55171623d9b",
+      "reason": "Roadster single-flip revision: fixed viewpoint and pivot; preserve routes and frozen v1 atlas"
     },
     {
       "path": "maps/preview/shipyard-beach.tmj",
@@ -262,8 +262,8 @@
     {
       "path": "world/layouts/overworld.json",
       "fromSha256": "768728e52acc2bfbd5a881e81087bab36affb1e57a9743f04eb3bef2fca83f73",
-      "toSha256": "6a83112241cab142fa7dede9b334ded7e17603b53688baa7c70e7e35a8f99ef1",
-      "reason": "Zodiac WOKAs v3: pixel-art redraw added to the release"
+      "toSha256": "2508e0b31c17172410ca143b42b64e9d4f38738f7db2e8487a09b4cf94602df0",
+      "reason": "Roadster single-flip revision: fixed viewpoint and pivot; preserve routes and frozen v1 atlas"
     },
     {
       "path": "world/layouts/shipyard-beach.json",

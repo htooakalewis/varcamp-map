@@ -219,7 +219,7 @@
       },
       {
         "path": "art/source/roadster.json",
-        "sha256": "868388fd92a26a745f8f698dc903a3e7b1ecfc8f8e097fbdee62673c276d54a0"
+        "sha256": "2cb87734deb6810425f09558e5e004aa15d373c35b15e2e2c9066bfa9f344fd2"
       },
       {
         "path": "art/source/rolling-breaker-east.json",
@@ -891,15 +891,15 @@
       },
       {
         "path": "art/source/roadster-v2-authoring.json",
-        "sha256": "590b8c0e05d245c10d0d0329f8745045183d7f1950af2a8cedd36d6e118fc579"
+        "sha256": "1ce94db442ebdc102efd7bd10c448fa5a91d4e991c9c819b6cd7cebd363bb4f3"
       },
       {
         "path": "art/source/roadster-v2.json",
-        "sha256": "3c992ef451bb899264d87058015175ce98f4d542b4afd17c5dcd90c6a7897734"
+        "sha256": "a9218ef0abc4779dff1b298db54ee600cf1f344b64571e18a2c374e399f23e57"
       },
       {
         "path": "assets/tilesets/original/roadster-v2.png",
-        "sha256": "3857592f6c7bf7d0978fa00215bcf832d0491e1b9c21326da43a224b84bdfd94"
+        "sha256": "e7d1e60509d55e2e78bf71eb6108b307716dd25a24f008837df2fc5f6e494802"
       }
     ]
   },

@@ -108,6 +108,37 @@ it('keeps compiling the frozen v1 epoch byte for byte from the original generate
 });
 describe('v2 compiled motion', () => {
  const render = (async () => ({ v2: await renderRoadster(), v1: await renderRoadsterV1() }))();
+ it('makes exactly one continuous full flip from a single unchanged car viewpoint before recovering upright', async () => {
+  const {v2}=await render;
+  const turn=v2.metadata.frames.filter(r=>r.rotationDeg!==null) as (RoadsterFrameReceipt & {rotationDeg:number})[];
+  expect(turn.length,'the flight needs explicit rotation frames, rather than swapping camera viewpoints').toBeGreaterThanOrEqual(17);
+  expect(new Set(turn.map(r=>r.pose))).toEqual(new Set([5]));
+  const degrees=turn.map(r=>r.rotationDeg);
+  expect(degrees[0]).toBe(0);expect(degrees.at(-1)).toBe(360);
+  expect(degrees).toEqual([...degrees].sort((a,b)=>a-b));
+  const advances=degrees.slice(1).map((d,i)=>d-degrees[i]);
+  expect(advances.reduce((sum,d)=>sum+d,0)).toBe(360);
+  expect(Math.max(...advances)).toBeLessThanOrEqual(22.5);
+  const startAt=(index:number)=>v2.metadata.frames.slice(0,index).reduce((ms,r)=>ms+r.durationMs,0);
+  expect(startAt(turn.find(r=>r.rotationDeg===360)!.index)-startAt(turn[0].index)).toBe(1600);
+  expect(turn.filter(r=>r.phase==='recover').every(r=>r.rotationDeg===360)).toBe(true);
+  expect(turn.every(r=>r.blendFrom===null&&r.dy===0)).toBe(true);
+ });
+ it('rotates the actual jump sprite through a half-turn without changing its pixels, scale or fixed pivot', async () => {
+  const {v1,v2}=await render;
+  const half=v2.metadata.frames.find(r=>r.rotationDeg===180);
+  expect(half,'the car must pass through an actual upside-down frame').toBeDefined();
+  if(!half)return;
+  const source=v1.frames[5],actual=v2.frames[half.index];let checked=0;
+  // Independent 180-degree geometry around (80,74): (x,y) maps to (160-x,148-y).
+  // The source pad begins at y=135 and is deliberately outside the rotating car.
+  for(let y=0;y<135;y++)for(let x=0;x<160;x++){
+   const from=(y*160+x)*4;if(!source[from+3])continue;
+   const to=((148-y)*160+160-x)*4;
+   expect(actual.subarray(to,to+4),`car pixel ${x},${y}`).toEqual(source.subarray(from,from+4));checked++;
+  }
+  expect(checked).toBeGreaterThan(3000);
+ });
  it('compiles the committed v2 atlas and metadata from the same sixteen poses within the native bound', async () => {
   const {v2}=await render,{png,metadata,frames}=v2;
   expect(png).toEqual(readFileSync(ROADSTER_V2_ATLAS_PATH));
@@ -146,7 +177,8 @@ describe('v2 compiled motion', () => {
  });
  it('tweens every motion phase at 100 ms with eased offsets, a ±2 px hover bob and a 1-2 px landing settle', async () => {
   const {v2}=await render,receipts=v2.metadata.frames as RoadsterFrameReceipt[],phase=(n:string)=>receipts.filter(r=>r.phase===n);
-  for(const n of ['rise','low-hover','hover','jump','recover','descend','touchdown'])expect(phase(n).every(r=>r.durationMs===100),n).toBe(true);
+  for(const n of ['rise','low-hover','hover','jump','descend','touchdown'])expect(phase(n).every(r=>r.durationMs===100),n).toBe(true);
+  expect(phase('recover').every(r=>r.pose===5&&r.rotationDeg===360&&r.dy===0)).toBe(true);
   const rise=phase('rise').map(r=>r.dy);expect(rise[0]).toBeGreaterThan(10);expect(rise.at(-1)).toBe(0);expect(rise).toEqual([...rise].sort((a,b)=>b-a));
   const eased=rise.slice(0,-1).map((d,i)=>d-rise[i+1]);expect(Math.max(...eased)).toBeGreaterThan(Math.min(...eased));// ease-in/out: unequal steps
   const hover=phase('hover');expect(hover[0].dy).toBeGreaterThan(10);const bob=hover.filter(r=>Math.abs(r.dy)<=2).map(r=>r.dy);
@@ -158,10 +190,11 @@ describe('v2 compiled motion', () => {
   expect(touchdown.slice(0,contact).map(r=>r.dy)).toEqual(touchdown.slice(0,contact).map(r=>r.dy).sort((a,b)=>a-b));
  });
  it('blooms the thrusters only while airborne, flickering at 100 ms and brightest at ignition and touchdown', async () => {
-  const {v2}=await render,receipts=v2.metadata.frames as RoadsterFrameReceipt[],airborne=receipts.filter(r=>!GROUNDED.includes(r.phase));
+  const {v2}=await render,receipts=v2.metadata.frames as RoadsterFrameReceipt[],airborne=receipts.filter(r=>!GROUNDED.includes(r.phase)&&r.rotationDeg===null);
   expect(airborne.filter(r=>r.glow>0).every(r=>r.glowPixels>0)).toBe(true);
   expect(airborne.filter(r=>r.phase!=='touchdown'||r.dy<=0).every(r=>r.glow>0)).toBe(true);
-  for(const n of ['rise','low-hover','hover','jump','recover','descend'])expect(new Set(receipts.filter(r=>r.phase===n).map(r=>r.flicker)).size,n).toBe(3);
+  for(const n of ['rise','low-hover','hover','jump','descend'])expect(new Set(receipts.filter(r=>r.phase===n).map(r=>r.flicker)).size,n).toBe(3);
+  expect(receipts.filter(r=>r.rotationDeg!==null).every(r=>r.glow===0&&r.glowPixels===0)).toBe(true);
   const peak=(n:string)=>Math.max(...receipts.filter(r=>r.phase===n).map(r=>r.glow));
   expect(peak('ignition')).toBeGreaterThan(peak('hover'));expect(peak('touchdown')).toBeGreaterThan(peak('hover'));
   // Dithered bloom is binary alpha: its pixels are extra opaque cyan/white positions outside the v1 pose.
@@ -184,20 +217,13 @@ describe('v2 compiled motion', () => {
   expect(receipts.filter(r=>r.phase==='touchdown').map(r=>r.dust)).toEqual([-1,-1,-1,0,1,2]);
   expect(receipts.filter(r=>r.dust>=0).every(r=>r.dy>=0)).toBe(true);
  });
- it('pulses the front strip, flares the rear bar at ignition and brightens it on descent, and ghosts every roll transition', async () => {
+ it('pulses the front strip, flares the rear bar at ignition and brightens it on descent', async () => {
   const {v2}=await render,receipts=v2.metadata.frames as RoadsterFrameReceipt[],phase=(n:string)=>receipts.filter(r=>r.phase===n);
   expect(phase('ignition').map(r=>r.rearLight)).toEqual([2,2,2,1,1,1]);
   expect(phase('descend').every(r=>r.rearLight===1)).toBe(true);expect(phase('hover').every(r=>r.rearLight===0)).toBe(true);
   expect(phase('touchdown').map(r=>r.rearLight)).toEqual([2,2,2,1,1,1]);
   expect(receipts.filter(r=>r.frontLight>=0).every(r=>[0,1,2].includes(r.frontLight))).toBe(true);
   expect(new Set(phase('rest').map(r=>r.frontLight))).toEqual(new Set([0,1,2]));
-  const blends=receipts.filter(r=>r.blendFrom!==null);
-  expect(blends.map(r=>[r.phase,r.blendFrom,r.durationMs])).toEqual([['roll-1',5,100],['roll-2',6,100],['roll-3',7,100],['inverted',8,100],['roll-5',9,100],['roll-6',10,100],['recover',11,100]]);
-  expect(blends.every(r=>r.frontLight===-1&&r.rearLight===0&&r.glow>0)).toBe(true);
-  // A ghost frame is a 50% checkerboard: its opaque pixels sit on alternating cells of both drawings.
-  const {v1}=await render,ghost=v2.frames[blends[0].index],a=opaque(v1.frames[5]),b=opaque(v1.frames[6]);
-  let both=0,either=0,outside=0;for(const i of opaque(ghost)){const x=i%160,y=Math.floor(i/160);if(y>=135)continue;const even=(x+y)%2===0;if(a.has(i)&&b.has(i))both++;else if(a.has(i)||b.has(i)){either++;if(!even)outside++;}}
-  expect(both).toBeGreaterThan(0);expect(either).toBeGreaterThan(0);expect(outside/either).toBeLessThan(.2);// glow dither may add a few odd cells
  });
  it('resolves every v2 frame and the loop boundary through the pinned deployed Phaser parser without tile seams or world travel',async()=>{
   for(const entry of json(`${fixtureRoot}/source-manifest.json`))expect(sha(readFileSync(`${fixtureRoot}/${entry.path}`))).toBe(entry.sha256);

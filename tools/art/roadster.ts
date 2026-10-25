@@ -100,9 +100,9 @@ interface Blob { cx: number; yTop: number; yBottom: number; height: number; coun
 interface Features { jets: Blob[]; jetMask: Uint8Array; front: number[]; rear: number[] }
 interface V2Pose { name: string; altitudePx: number; upright: boolean }
 interface V2Phase { name: string; pose: number; durationMs: number; motion: 'ground' | 'tween' | 'roll' | 'drop'; tweenMs?: number; endDy?: number; dropMs?: number; settlePx?: number[]; bob?: boolean; glow?: number; steadyGlow?: boolean; dust?: boolean; rearLight?: 'flare' | 'bright'; padLights?: 'wake' | 'flash' }
-interface V2Spec { version: number; base: string; atlas: string; stepMs: number; visibleWidth: number; pad: { surfaceY: number; centerX: number }; poses: V2Pose[]; phases: V2Phase[]; bob: { amplitudePx: number; periodMs: number }; flicker: number[]; shadow: { centerY: number; groundHalfWidth: number; highHalfWidth: number; halfHeight: number; levels: number; maxAltitudePx: number }; glow: { color: number[]; radiusScale: number; minRadius: number; maxRadius: number }; frontLight: { periodMs: number }; padChase: { stepMs: number; segmentPx: number; stridePx: number } }
+interface V2Spec { version: number; base: string; atlas: string; stepMs: number; visibleWidth: number; pad: { surfaceY: number; centerX: number }; flip: { sourcePose: number; centerX: number; centerY: number; durationMs: number }; poses: V2Pose[]; phases: V2Phase[]; bob: { amplitudePx: number; periodMs: number }; flicker: number[]; shadow: { centerY: number; groundHalfWidth: number; highHalfWidth: number; halfHeight: number; levels: number; maxAltitudePx: number }; glow: { color: number[]; radiusScale: number; minRadius: number; maxRadius: number }; frontLight: { periodMs: number }; padChase: { stepMs: number; segmentPx: number; stridePx: number } }
 type PadState = { mode: 'static' } | { mode: 'chase'; phase: number } | { mode: 'wake'; phase: number } | { mode: 'flash' };
-export interface RoadsterStep { phase: string; pose: number; blendFrom: number | null; dy: number; altitudePx: number; shadowLevel: number; glow: number; flicker: number; dust: number; frontLight: number; rearLight: number; pad: PadState }
+export interface RoadsterStep { phase: string; pose: number; rotationDeg: number | null; blendFrom: number | null; dy: number; altitudePx: number; shadowLevel: number; glow: number; flicker: number; dust: number; frontLight: number; rearLight: number; pad: PadState }
 export interface RoadsterFrameReceipt extends RoadsterStep { index: number; durationMs: number; glowPixels: number; shadowHalfWidth: number }
 const easeInOut = (t: number): number => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 const easeIn = (t: number): number => t * t;
@@ -137,33 +137,34 @@ function analyze(car: Buffer, target: PoseCrop['target']): Features {
 }
 function timeline(spec: V2Spec, crops: PoseCrop[]): RoadsterStep[] {
  const steps: RoadsterStep[] = [], step = spec.stepMs, top = (pose: number) => crops[pose].target.y;
- let t = 0, lastPose = spec.phases.at(-1)!.pose, lastDy = 0, bobClock = 0;
+ const turnSteps = spec.flip.durationMs / step;
+ let t = 0, lastPose = spec.phases.at(-1)!.pose, lastDy = 0, bobClock = 0, turnStep = 0;
  for (const p of spec.phases) {
-  const count = p.durationMs / step, pose = spec.poses[p.pose], entryRoof = top(lastPose) + lastDy, startDy = entryRoof - top(p.pose), drop = (p.dropMs ?? 0) / step;
+  const count = p.durationMs / step, rolling = p.motion === 'roll', poseIndex = rolling ? spec.flip.sourcePose : p.pose, pose = spec.poses[poseIndex], entryRoof = top(lastPose) + lastDy, startDy = entryRoof - top(poseIndex), drop = (p.dropMs ?? 0) / step;
   for (let s = 0; s < count; s++, t += step) {
-   let dy = 0, blendFrom: number | null = null, glow = p.glow ?? 0;
+   let dy = 0, glow = rolling ? 0 : p.glow ?? 0;
+   const blendFrom = null, rotationDeg = rolling ? 360 * Math.min(turnStep, turnSteps) / turnSteps : null;
    if (p.motion === 'tween') { const f = easeInOut(Math.min(1, (s + 1) * step / p.tweenMs!)); dy = Math.round(startDy * (1 - f) + (p.endDy ?? 0) * f); if (p.bob && f >= 1) { dy += Math.round(spec.bob.amplitudePx * Math.sin(2 * Math.PI * bobClock / spec.bob.periodMs)); bobClock += step; } }
-   else if (p.motion === 'roll') { if (s === 0) blendFrom = lastPose; }
+   else if (rolling && p.name !== 'recover') { turnStep++; }
    else if (p.motion === 'drop') { if (s < drop) dy = Math.round(startDy * (1 - easeIn((s + 1) * step / p.dropMs!))); else dy = p.settlePx?.[s - drop] ?? 0; }
    dy = dy || 0;// Math.round yields -0 for small negative tweens; receipts must round-trip through JSON
-   const flicker = p.steadyGlow && blendFrom === null ? 1 : s % spec.flicker.length;
-   if (blendFrom !== null) glow *= .8;
+   const flicker = p.steadyGlow ? 1 : s % spec.flicker.length;
    if (p.padLights === 'wake') glow *= Math.min(1, (s + 1) / 3);
    if (p.motion === 'drop' && s >= drop + 2) glow = 0;
    const dust = p.dust ? (p.motion === 'drop' ? s - (drop - 1) : s) : -1;
-   const altitudePx = (blendFrom === null ? pose.altitudePx : (pose.altitudePx + spec.poses[blendFrom].altitudePx) / 2) - dy;
+   const altitudePx = pose.altitudePx - dy;
    const shadowLevel = clamp(Math.round(altitudePx / spec.shadow.maxAltitudePx * (spec.shadow.levels - 1)), 0, spec.shadow.levels - 1);
-   const upright = pose.upright && blendFrom === null;
+   const upright = pose.upright && !rolling;
    const frontLight = upright ? Math.round(1 + Math.sin(2 * Math.PI * t / spec.frontLight.periodMs)) : -1;
    const rearLight = !upright ? 0 : p.rearLight === 'flare' ? (s < 3 ? 2 : 1) : p.rearLight === 'bright' ? 1 : 0;
    let pad: PadState = { mode: 'static' };
    if (p.padLights === 'wake') pad = { mode: 'wake', phase: s };
    else if (p.motion === 'drop') pad = s < drop - 1 ? { mode: 'chase', phase: Math.floor(t / spec.padChase.stepMs) % 14 } : s <= drop ? { mode: 'flash' } : { mode: 'static' };
    else if (p.motion !== 'ground') pad = { mode: 'chase', phase: Math.floor(t / spec.padChase.stepMs) % 14 };
-   steps.push({ phase: p.name, pose: p.pose, blendFrom, dy, altitudePx, shadowLevel, glow: Number((glow * (glow ? spec.flicker[flicker] : 0)).toFixed(4)), flicker, dust: dust >= 0 && dust < 3 ? dust : -1, frontLight, rearLight, pad });
+   steps.push({ phase: p.name, pose: poseIndex, rotationDeg, blendFrom, dy, altitudePx, shadowLevel, glow: Number((glow * (glow ? spec.flicker[flicker] : 0)).toFixed(4)), flicker, dust: dust >= 0 && dust < 3 ? dust : -1, frontLight, rearLight, pad });
    lastDy = dy;
   }
-  lastPose = p.pose;
+  lastPose = poseIndex;
  }
  return steps;
 }
@@ -227,10 +228,15 @@ class Renderer {
   for (let y = 0; y < SIZE; y++) { const sy = y - dy; if (sy < 0 || sy >= SIZE) continue; src.copy(out, y * SIZE * 4, sy * SIZE * 4, (sy + 1) * SIZE * 4); }
   return out;
  }
- /** Motion-blur ghost: a checkerboard of the previous and current roll drawings. */
- private ghost(from: number, to: number): Buffer {
-  const out = Buffer.alloc(SIZE * SIZE * 4), a = this.cars[from], b = this.cars[to];
-  for (let i = 0; i < SIZE * SIZE; i++) { const even = ((i % SIZE) + Math.floor(i / SIZE)) % 2 === 0, hasA = a[i * 4 + 3] !== 0, hasB = b[i * 4 + 3] !== 0; const src = hasA && hasB ? (even ? a : b) : even ? (hasA ? a : hasB ? b : null) : null; if (src) src.copy(out, i * 4, i * 4, i * 4 + 4); }
+ /** One fixed-viewpoint car, sampled without scaling or blending around a fixed pivot. */
+ private rotated(pose: number, degrees: number): Buffer {
+  const out = Buffer.alloc(SIZE * SIZE * 4), source = this.cars[pose], angle = degrees * Math.PI / 180, cos = Math.cos(angle), sin = Math.sin(angle), { centerX, centerY } = this.spec.flip;
+  for (let y = 0; y < SIZE; y++) for (let x = 0; x < SIZE; x++) {
+   const dx = x - centerX, dy = y - centerY, sx = Math.round(centerX + dx * cos + dy * sin), sy = Math.round(centerY - dx * sin + dy * cos);
+   if (sx < 0 || sy < 0 || sx >= SIZE || sy >= SIZE) continue;
+   const from = (sy * SIZE + sx) * 4;
+   if (source[from + 3]) source.copy(out, (y * SIZE + x) * 4, from, from + 4);
+  }
   return out;
  }
  render(step: RoadsterStep): { frame: Buffer; glowPixels: number; shadowHalfWidth: number } {
@@ -239,8 +245,8 @@ class Renderer {
   const shadowHalfWidth = this.shadow(frame, step.shadowLevel);
   if (step.dust >= 0) this.dust(frame, step.dust);
   const glowPixels = this.glowUnder(frame, step.pose, step.dy, step.glow, step.flicker);
-  const car = step.blendFrom === null ? this.shifted(step.pose, step.dy) : this.ghost(step.blendFrom, step.pose);
-  if (step.blendFrom === null) this.lights(car, step.pose, step.frontLight, step.rearLight);
+  const car = step.rotationDeg === null ? this.shifted(step.pose, step.dy) : this.rotated(step.pose, step.rotationDeg);
+  if (step.rotationDeg === null) this.lights(car, step.pose, step.frontLight, step.rearLight);
   for (let i = 0; i < SIZE * SIZE; i++) if (car[i * 4 + 3]) { const x = i % SIZE, y = Math.floor(i / SIZE); if (x === 0 || y === 0 || x >= this.spec.visibleWidth || y === SIZE - 1) throw Error(`Roadster v2 car pixel leaves the arrival view at ${x},${y} (${step.phase})`); car.copy(frame, i * 4, i * 4, i * 4 + 3); frame[i * 4 + 3] = 255; }
   this.glowOver(frame, step.pose, step.dy, step.glow);
   return { frame, glowPixels, shadowHalfWidth };
@@ -248,7 +254,8 @@ class Renderer {
 }
 /** Compile the v2 display: 100 ms motion steps with eased roof-height tweens, a sinusoidal
  * hover bob, a landing settle, flickering thruster bloom, an altitude-scaled pad shadow, pad
- * light chases, ignition/touchdown dust and light pulses; consecutive identical steps merge. */
+ * light chases, ignition/touchdown dust, light pulses and one fixed-sprite full flip;
+ * consecutive identical steps merge. */
 export async function renderRoadster(options: { spec?: Partial<V2Spec> } = {}) {
  const compiled = await compilePoses(), { spec, source, pad, cars, crops } = compiled;
  const v2 = { ...JSON.parse(readFileSync(ROADSTER_V2_AUTHORING_PATH, 'utf8')), ...options.spec } as V2Spec;
@@ -256,6 +263,7 @@ export async function renderRoadster(options: { spec?: Partial<V2Spec> } = {}) {
  if (v2.version !== 2 || v2.base !== authoringPath || v2.atlas !== ROADSTER_V2_ATLAS_PATH || v2.stepMs !== 100 || v2.poses.length !== 16 || v2.phases.length !== 16 || v2.phases.some((p, i) => p.pose !== i || p.durationMs % v2.stepMs || p.name !== spec.poses[i].name || v2.poses[i].name !== spec.poses[i].name)) throw Error('Roadster v2 authoring must step every reviewed pose in order at 100 ms');
  if (v2.phases.reduce((n, p) => n + p.durationMs, 0) !== cycleMs) throw Error('Roadster v2 must keep the reviewed 12.8 s cycle');
  if (v2.phases[0].motion !== 'ground' || v2.phases.at(-1)!.motion !== 'ground') throw Error('Roadster v2 first/last poses must stay grounded on the v1 anchor');
+ if (v2.flip?.sourcePose !== 5 || v2.flip.centerX !== 80 || v2.flip.centerY !== 74 || v2.flip.durationMs !== 1600 || v2.phases.filter(p => p.motion === 'roll' && p.name !== 'recover').reduce((n,p) => n+p.durationMs,0) !== 1800) throw Error('Roadster flip must rotate the jump sprite once around its reviewed fixed pivot');
  const features = cars.map((car, i) => analyze(car, crops[i].target)), renderer = new Renderer(v2, pad, cars, features), steps = timeline(v2, crops);
  const frames: Buffer[] = [], durations: number[] = [], receipts: RoadsterFrameReceipt[] = []; let lastDigest = '';
  for (const step of steps) {

@@ -51,7 +51,7 @@ export const approvedBrandAssetRegistry={
  * atlas are verified by their pure producer (tools/art/roadster.ts). Appended after every earlier row so
  * no registered row position moves. */
 export const approvedRoadsterV2StaticPins:Record<string,string>={
- 'art/source/roadster-v2-authoring.json':'590b8c0e05d245c10d0d0329f8745045183d7f1950af2a8cedd36d6e118fc579',
+ 'art/source/roadster-v2-authoring.json':'1ce94db442ebdc102efd7bd10c448fa5a91d4e991c9c819b6cd7cebd363bb4f3',
 };
 export const approvedRoadsterV2Rows:Record<string,number>={'art/source/roadster-v2-authoring.json':201,'art/source/roadster-v2.json':202,'assets/tilesets/original/roadster-v2.png':203};
 /** The one sentence the roadster-v2 epoch appended to the `original` registry's change log. */
