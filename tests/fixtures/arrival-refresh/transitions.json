@@ -190,10 +190,6 @@
       "6835b911a8e686501d960c966a378b4121839ac5fcf28ac5c5db9cb44ee3d833",
       "f758cfafce4965c5961096e836ddc67d3246abda12df8a0a343e270a2ccd18c9"
     ],
-    "publication/source-manifest.json": [
-      "23f07501cb19cd412fd7048e0eaa0c0845bbeae40aaf1592fa0962f62c5accf9",
-      "36dbb866c0b3fd756c81d42b43046b1333174d638deb290c1ee1fcbf4f2a48ee"
-    ],
     "publication/verify-source.mjs": [
       "ccd7c2ff6a1991a57f8ecbc46b76957a5df2d0a54444e46ebe4e9c25358d8dd3",
       "019ce7894e6aa6e2018e575fc1edd3bc48d20aff933d1ebc632779238530c093"

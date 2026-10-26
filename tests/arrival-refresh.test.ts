@@ -68,4 +68,8 @@ describe('current colourful arrival and topmost drones',()=>{
  it('retains every old placement except the two explicit sign objects',()=>{
   const l=read<MapLayout>('world/layouts/overworld.json'),old=beforeArrivalJson<MapLayout>('world/layouts/overworld.json');expect(isDeepStrictEqual(l.placements,old.placements.filter(p=>!['arrival-direction-crosspost','arrival-crosspost-pole'].includes(p.id)))).toBe(true);
  });
+ it('binds every arrival byte transition to genuine before and current bytes without cyclic manifest authority',()=>{
+  const table=read('tests/fixtures/arrival-refresh/transitions.json'),before=beforeArrival();expect(table.base).toBe(before.base);expect(table.transitions).not.toHaveProperty('publication/source-manifest.json');
+  for(const[path,[from,to]]of Object.entries(table.transitions)as[string,[string,string]][]){expect(path).not.toMatch(/^tests\//);expect(from,path+' genuine predecessor').toBe(before.pins[path]);expect(to,path+' current bytes').toBe(sha(readFileSync(path)));expect(from).not.toBe(to);}
+ });
 });
