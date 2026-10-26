@@ -5,6 +5,8 @@ import {loadTileCatalog} from '../tools/art/catalog';
 import type {MapLayout} from '../tools/maps/types';
 import {refinePlazaFloorGarden} from '../tools/maps/plaza-floor-garden';
 import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
+import {applyZodiacPhysics,restoreZodiacPhysics} from '../tools/maps/zodiac-physics';
+import {prePhysicsLayout} from './helpers/pre-zodiac-physics-epoch';
 import {expectedPlazaSuccessor,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
 import type {TiledMap,TileLayer} from '../tools/maps/types';
@@ -30,7 +32,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyZodiacExteriors(refinePlazaFloorGarden(l))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(l))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;
@@ -44,7 +46,9 @@ it('is idempotent and retains every real native semantic layer and reachable gui
 },20000); // first successor call renders roadster/drone/fleet art and runs the projection gate
 
 it('retains all twelve doorway footprints while consuming original generated pavilion and grass artwork',()=>{
- const l=source(),old=before(),catalog=loadTileCatalog();
+ // Prove the complete current physical successor before staging its genuine
+ // pre-physics layout for this retained original pavilion/grass contract.
+ const l=prePhysicsLayout(source()),old=before(),catalog=loadTileCatalog();
  for(const sign of SIGN_IDS){
   const p=l.placements.find(p=>p.id===`${sign}-building`)!,b=old.placements.find(row=>row.id===p.id)!;
   expect({...p,sprite:b.sprite}).toEqual(b);

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "292ce0f6e4cf7f8d4a7550422f81a78bae4b2f7fecf9556a493e36994a84b7bc",
+      "toSha256": "b65ca323e0422698622de999e57ba0ce5fa382471a32a2ac02a5b848b332960e",
+      "reason": "Extend the medium-hub identity and retained plaza fixed-point/footprint assertions through the exact physical successor. Preserve all runtime map, art and guide bytes and every prior publication receipt."
+    },
+    {
+      "path": "tests/medium-hub.test.ts",
+      "fromSha256": "1ca2c9cf24ddc7aa14d3de5779cee10e3a87e502291c34cb2fca89c0acbdf5eb",
+      "toSha256": "c13bad317f99760ceaffe7bcb4b1bd1b7a1d8339d29f3c68f5700c4b1c333c34",
+      "reason": "Extend the medium-hub identity and retained plaza fixed-point/footprint assertions through the exact physical successor. Preserve all runtime map, art and guide bytes and every prior publication receipt."
+    }
+  ]
+}
