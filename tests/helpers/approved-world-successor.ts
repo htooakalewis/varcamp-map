@@ -7,6 +7,8 @@ import assert from 'node:assert/strict';
 import {WORLD_CATALOG} from '../../src/world/catalog';
 import type {MapLayout,TiledMap} from '../../tools/maps/types';
 import {applyAriesPresentation} from '../../tools/maps/aries-presentation';
+import {arrivalSuccessorSha} from './arrival-refresh-history';
+import {advanceArrivalProvenance} from '../../tools/maps/arrival-refresh';
 import {applyHallPresentation} from '../../tools/maps/hall-presentation';
 
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
@@ -110,10 +112,10 @@ export function approvedHistoricalPlaza():TiledMap{return JSON.parse(approvedHis
  * The expo epoch advanced three of them (builder footprints, image type note,
  * expo reservation family); every other row is the fleet epoch value. */
 export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
- for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),path==='tools/maps/native-ownership-context.ts'?hallContext:coveChanges[path]?.[1]??after,'Reviewed producer epoch changed '+path);
+ for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),arrivalSuccessorSha(path,path==='tools/maps/native-ownership-context.ts'?hallContext:coveChanges[path]?.[1]??after),'Reviewed producer epoch changed '+path);
  const result=structuredClone(layout);
  for(const overlay of result.animatedOverlays??[])for(const input of overlay.provenance?.inputs??[]){const pair=changes[input.path];if(pair){assert.equal(input.sha256,pair[0],'Unreviewed old provenance '+input.path);input.sha256=pair[1];const cove=coveChanges[input.path];if(cove){assert.equal(input.sha256,cove[0],'Unreviewed pre-cove provenance '+input.path);input.sha256=cove[1];if(input.path==='tools/maps/native-ownership-context.ts'){assert.equal(input.sha256,coveChanges[input.path][1]);input.sha256=exteriorContext;assert.equal(input.sha256,'e2aa6ada9d1b8242682dc5680d62f3e8c4684287530ac0514e5e3556eaf74c53');input.sha256=hallContext;}}}}
- return result;
+ return advanceArrivalProvenance(result);
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
  const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));

@@ -22,6 +22,9 @@ it('normal native build preserves later Tiled edits instead of repainting author
   expect(preview.properties.some((p:{name:string})=>p.name==='team-authored-note')).toBe(true);
   expect(preview.layers.some((l:{type:string})=>l.type==='imagelayer')).toBe(false);
   // Every layout image is a preview sponsor atlas; the registered arrival panels keep their historical reservation order and the expo booth marks are admitted after the fleet, so the roster is compared, not the order.
-  expect(preview.tilesets.filter((t:{image:string})=>t.image.includes('/sponsors/')).map((t:{image:string})=>t.image).sort()).toEqual((JSON.parse(readFileSync('world/layouts/overworld.json','utf8')).images as {image:string}[]).map(p=>'../../'+p.image).sort());
+  const sponsorImages=preview.tilesets.filter((t:{image:string})=>t.image.includes('/sponsors/')).map((t:{image:string})=>t.image).sort();
+  expect(sponsorImages).toEqual(tmj.tilesets.filter((t:{image:string})=>t.image.includes('/sponsors/')).map((t:{image:string})=>'../'+t.image).sort());
+  for(const image of JSON.parse(readFileSync('world/layouts/overworld.json','utf8')).images as {image:string}[])expect(sponsorImages).toContain('../../'+image.image);
+  expect(sponsorImages).toContain('../../assets/sponsors/varcamp-2026.png'); // historical reservation stays even after its paint retires
  }finally{rmSync(root,{recursive:true,force:true});}
 },40_000);

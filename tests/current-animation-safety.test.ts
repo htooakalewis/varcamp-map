@@ -23,13 +23,13 @@ it('current plaza entry rejects coherent omission of the required Roadster',()=>
  const orphan=structuredClone(map),at=registered.maps.overworld.atlases.findIndex(t=>t.name==='roadster');
  expect(registered.maps.overworld.atlases[at]).toMatchObject({name:'roadster',firstgid:4330,tilecount:240});
  map.tilesets=map.tilesets.filter((s:any)=>s.image!=='../assets/tilesets/original/roadster-v2.png');map.tilesets.splice(at,0,structuredClone(registered.maps.overworld.atlases[at]));
- // The appended exterior reservation cannot move when the v2 role disappears,
- // so the complete current gate now refuses this omission at ownership first.
+ // The mandatory arrival boundary now detects the complete missing car before
+ // ownership checks; this remains a coherent source/native omission.
  // Independently retain the unconditional role-roster denial as well.
  expect(()=>assertNativeAnimationSafety(map,layout,read('art/tile-catalog.json'))).toThrow(/animation safety/i);
- expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/native context/i);
- // Leaving the v2 atlas behind without its source owner is refused even earlier, by the native ownership context.
- expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/native context/i);
+ expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Arrival refresh: complete car placement/i);
+ // Leaving the atlas orphaned is also refused by the mandatory arrival boundary.
+ expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Arrival refresh: complete car placement/i);
 });
 it('current boundary rejects native upper pixels outside actual owning alpha255 art even when all output hashes are coherently rebound',async()=>{
  const project=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-upper-alpha-'));
