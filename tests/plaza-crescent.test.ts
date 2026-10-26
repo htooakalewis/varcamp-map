@@ -1,8 +1,10 @@
+import {preLandscapeLayout,preLandscapeNative} from './helpers/plaza-landscape-history';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import {beforeCrescentJson} from './helpers/plaza-crescent-history';
 import {assertCurrentNativeMap} from '../tools/maps/current-native';
-const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const raw=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const read=(p:string)=>p==='world/layouts/overworld.json'?preLandscapeLayout(raw(p)):p==='maps/overworld.tmj'?preLandscapeNative(raw(p)):raw(p);
 const signs=['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'];
 const ground=(l:any)=>{const g=new Map<string,string>();for(const p of l.placements)if(p.layer==='terrain')for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)g.set(`${x},${y}`,p.sprite);return g;};
 describe('Crescent plaza and expanded circular speaker ring',()=>{
@@ -50,13 +52,13 @@ describe('Crescent plaza and expanded circular speaker ring',()=>{
    expect(seen.has(r.y*128+r.x),sign+' return').toBe(true);
    for(let x=e.x;x<e.x+e.width;x++){expect(mask[e.y*128+x],sign+' doorway').toBe(0);expect(seen.has((e.y+1)*128+x),sign+' threshold approach').toBe(true);}
   }
-  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).not.toThrow();
+  expect(()=>assertCurrentNativeMap('overworld',raw('maps/overworld.tmj'),raw('world/layouts/overworld.json'),read('maps/overworld.wam'),read('art/tile-catalog.json'))).not.toThrow();
  });
  it.each(['collapsed-circle','blocked-promenade','misaligned-return'])('rejects %s at the publication gate',kind=>{
-  const l=read('world/layouts/overworld.json'),m=read('maps/overworld.tmj');
+  const l=raw('world/layouts/overworld.json'),m=raw('maps/overworld.tmj');
   if(kind==='collapsed-circle')l.placements.find((p:any)=>p.id==='leo-building').y--;
   if(kind==='misaligned-return')l.entries.find((p:any)=>p.name==='from-speaker-virgo').x++;
   if(kind==='blocked-promenade'){const layer=m.layers.find((l:any)=>l.name==='physical-collisions'),set=m.tilesets.find((s:any)=>s.name==='navigation-mask');layer.data[92*128+35]=set.firstgid+1;}
-  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza crescent|Native projection/);
+  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza landscape|Plaza crescent|Native projection/);
  });
 });

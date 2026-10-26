@@ -1,3 +1,4 @@
+import {applyPlazaLandscape,restorePlazaLandscape} from '../tools/maps/plaza-landscape';
 import {applyPlazaCrescent,restorePlazaCrescent} from '../tools/maps/plaza-crescent';
 import {applyHallBuildings,restoreHallBuildings} from '../tools/maps/hall-buildings';
 import {applyLeoLionHead,restoreLeoLionHead} from '../tools/maps/leo-lion-head';
@@ -40,7 +41,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyPlazaCrescent(applyHallBuildings(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(restoreHallBuildings(restorePlazaCrescent(l))))))))))))))))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyPlazaLandscape(applyPlazaCrescent(applyHallBuildings(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(restoreHallBuildings(restorePlazaCrescent(restorePlazaLandscape(l))))))))))))))))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;
@@ -50,7 +51,7 @@ it('is idempotent and retains every real native semantic layer and reachable gui
  for(const p of [...l.entries,...l.exits,...l.areas])for(let y=p.y;y<p.y+p.height;y++)for(let x=p.x;x<p.x+p.width;x++)expect(seen.has(y*128+x),p.name).toBe(true);
  const floor=native.layers.findIndex(p=>p.name==='floorLayer');
  for(const image of l.images!)expect(native.layers.findIndex(p=>p.name===image.name),image.name).toBeLessThan(floor);
- expect(restorePlazaCrescent(l).placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(132);
+ expect(restorePlazaCrescent(restorePlazaLandscape(l)).placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(132);
 },45000); // Complete historical chain now includes the additional spacing projection and native reconciliation.
 
 it('retains all twelve doorway footprints while consuming original generated pavilion and grass artwork',()=>{

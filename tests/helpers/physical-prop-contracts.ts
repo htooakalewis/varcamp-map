@@ -1,3 +1,4 @@
+import landscape from '../../world/plaza-landscape.json';
 import crescent from '../../world/plaza-crescent.json';
 import spacing from '../../world/expo-spacing.json';
 import {isDeepStrictEqual} from 'node:util';
@@ -71,7 +72,7 @@ export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map
   ...[0,1,2].map(i=>({name:`Sponsors / Demo 0${i+1}`,image:`assets/sponsors/demo-0${i+1}.png`,x:53+i*8,y:67,width:6,height:2,standing:false})),
   ...expoBoothLogos,
   ...(layout.images!.some(i=>i.name.startsWith('Arrival /'))?arrivalFloorPanels:[{name:'VarCamp 2026 Floor',image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false}]),
- ];const spaced=layout.placements.some(p=>p.id.startsWith('expo-spaced-'))?expected.map(image=>spacing.changes.images.find(row=>isDeepStrictEqual(row.before,image))?.after??image):expected;const placed=layout.placements.some(p=>p.id.startsWith('crescent-ground-'))?spaced.map(image=>crescent.changes.images.find(row=>isDeepStrictEqual(row.before,image))?.after??image):spaced;assert.deepEqual(images,placed,'Current floor identity roster/position changed');
+ ];const spaced=layout.placements.some(p=>p.id.startsWith('expo-spaced-'))?expected.map(image=>spacing.changes.images.find(row=>isDeepStrictEqual(row.before,image))?.after??image):expected;const placed=layout.placements.some(p=>p.id.startsWith('crescent-ground-'))?spaced.map(image=>crescent.changes.images.find(row=>isDeepStrictEqual(row.before,image))?.after??image):spaced;const current=layout.placements.some(p=>p.id.startsWith('landscape-ground-'))?placed.map(image=>landscape.changes.images.find(row=>isDeepStrictEqual(row.before,image))?.after??image):placed;assert.deepEqual(images,current,'Current floor identity roster/position changed');
  const mask=map.layers.find(l=>l.name==='physical-collisions') as TileLayer;assert.ok(mask?.type==='tilelayer');
  const start=layout.entries.find(e=>e.isDefault)!;assert.ok(start);const queue=[start.y*map.width+start.x],seen=new Set(queue);assert.equal(mask.data[queue[0]],0);
  for(let h=0;h<queue.length;h++){const n=queue[h],x=n%map.width,y=Math.floor(n/map.width);for(const [nx,ny]of[[x-1,y],[x+1,y],[x,y-1],[x,y+1]]){const cell=ny*map.width+nx;if(nx>=0&&ny>=0&&nx<map.width&&ny<map.height&&!mask.data[cell]&&!seen.has(cell)){seen.add(cell);queue.push(cell);}}}

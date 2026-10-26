@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "base": "b7e33533802cef82d6a6d059a66a8be40b5fd707",
+  "transitions": {
+    "docs/current-release-facts.md": [
+      "06a33051ceb62862c01f84473d9d07420514fe6bd02909847ed22a7802a17127",
+      "e16baeef9567fdf7632a2970e98a2efb08555d0f9ac76467479f3c429b44c1df"
+    ],
+    "maps/overworld.tmj": [
+      "a1a549c6b6acc31bdb0af3962feb5a114349493efec6e61ede156cb60754a8ef",
+      "71bb18a14550c37b90596b64c819b3643ce64ac56e070e7f710a678f7c845be1"
+    ],
+    "maps/preview/overworld.tmj": [
+      "b342c614b43b60458c973a95d25644e36808e5dfe25b16c5859c7c3c1c2b9709",
+      "d1a0be3cbe4a75c7f207232f5d1b2be070500cba74a183bfe58df0cce2116596"
+    ],
+    "ops/bots/config.mjs": [
+      "0c75a90804a5f9e229deb11b874635177185a577280890ffa624d37019e351c5",
+      "8e585e0c6e5b8c0e93b081fe13070f22fd7db5d2b05a481c17b7497e105ddf5d"
+    ],
+    "publication/verify-source.mjs": [
+      "776e0f3dfd360c787f0ce9b391b4d5918f5aac05fe5f260333ca41d59ab397f4",
+      "e30600dc66d176642beb1e674072873c377a051297d6a800f2bc8f24e6e2f268"
+    ],
+    "src/bots/lyra-routes.json": [
+      "51d12c01e6b028b6799e44b353496263908b24155f3906de4406923208f0ac6e",
+      "db9ed99f445985b03fb57ec767e6659e482ec7e75a38477a1789f60d24e70052"
+    ],
+    "tools/bots/route-audit.ts": [
+      "cc7167d1d1987b30e787f4b55d27b9e1442e3f495f779da5c53a4b6b267c8601",
+      "47671835b82b951cde24acfd95478be8d5b770f080e7e4b8726208cb28a67cf0"
+    ],
+    "tools/maps/plaza-native.ts": [
+      "9c0b9f8fadf65106031ba99e396b5c43224cafc3ca55b012b82d1c6580e87c29",
+      "456d3888ddb62007464e6cc6f3f1e93e1b603ff4cfb18553cdbecbe4689c506a"
+    ],
+    "world/layouts/overworld.json": [
+      "65753dac9925307c4ec2608d0eb16de5ab26b5ad25e1d10520e3a2d14cecdb2a",
+      "776bd703083b8835bd7b23981e371f5fc212c831c1ad994da2f749ff1c6b706f"
+    ]
+  }
+}

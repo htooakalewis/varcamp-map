@@ -43,7 +43,7 @@ describe('fixed persona and name-first contract', () => {
     for (const persona of ['aster', '', null, undefined, 7, {}, ['nova']]) expect(() => profiles.personaFromMetadata({ persona })).toThrow(/persona/i);
   });
   it('independently confines distinct homes and cyclic patrols to every existing audited cell and unchanged startup escape', () => {
-    expect(ROUTES.allowedCells).toHaveLength(871); expect(ROUTES.startupReservedCells).toHaveLength(4);
+    expect(ROUTES.allowedCells).toHaveLength(864); expect(ROUTES.startupReservedCells).toHaveLength(4);
     const allowed = new Set(ROUTES.allowedCells.map(p => p.join(',')));
     expect(new Set(Object.values(profiles.PERSONAS).map(p => p.home.join(','))).size).toBe(3);
     for (const p of Object.values(profiles.PERSONAS)) {

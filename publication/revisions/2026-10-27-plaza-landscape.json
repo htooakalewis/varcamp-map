@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "a1a549c6b6acc31bdb0af3962feb5a114349493efec6e61ede156cb60754a8ef",
+      "toSha256": "71bb18a14550c37b90596b64c819b3643ce64ac56e070e7f710a678f7c845be1",
+      "reason": "Owner-approved continuous stone outer road, substantial planted gardens, clean arrival floor and sponsor semicircle. Retain building-circle positions, native artwork and atlas reservations, booth spacing and all portals/media controls. Move complete local flight loops onto clear promenades and re-audit the public guide graph."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "b342c614b43b60458c973a95d25644e36808e5dfe25b16c5859c7c3c1c2b9709",
+      "toSha256": "d1a0be3cbe4a75c7f207232f5d1b2be070500cba74a183bfe58df0cce2116596",
+      "reason": "Owner-approved continuous stone outer road, substantial planted gardens, clean arrival floor and sponsor semicircle. Retain building-circle positions, native artwork and atlas reservations, booth spacing and all portals/media controls. Move complete local flight loops onto clear promenades and re-audit the public guide graph."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "65753dac9925307c4ec2608d0eb16de5ab26b5ad25e1d10520e3a2d14cecdb2a",
+      "toSha256": "776bd703083b8835bd7b23981e371f5fc212c831c1ad994da2f749ff1c6b706f",
+      "reason": "Owner-approved continuous stone outer road, substantial planted gardens, clean arrival floor and sponsor semicircle. Retain building-circle positions, native artwork and atlas reservations, booth spacing and all portals/media controls. Move complete local flight loops onto clear promenades and re-audit the public guide graph."
+    }
+  ]
+}

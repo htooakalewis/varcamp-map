@@ -51,6 +51,6 @@ describe('Enclosed hall buildings and zodiac ground labels',()=>{
   if(kind==='closed-door')c['hall-building-solar'].blockingCells.push([5,11]);
   if(kind==='raised-ground-name')c['zodiac-ground-name-scorpio'].level='aboveAvatar';
   if(kind==='returned-board')l.placements.push(beforeHallBuildingsJson('world/layouts/overworld.json').placements.find((p:any)=>p.id==='scorpio-bold-nameplate'));
-  expect(()=>assertCurrentNativeMap('overworld',raw('maps/overworld.tmj'),l,read('maps/overworld.wam'),c)).toThrow(/Hall buildings|Plaza crescent/);
+  expect(()=>assertCurrentNativeMap('overworld',raw('maps/overworld.tmj'),l,read('maps/overworld.wam'),c)).toThrow(/Hall buildings|Plaza crescent|Plaza landscape/);
  });
 });

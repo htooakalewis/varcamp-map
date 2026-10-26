@@ -25,12 +25,12 @@ describe('final plaza guide physical/depth audit',()=>{
   expect(overlaps).toEqual([]);
   expect([...crossed].sort()).toEqual(['arrival-position-label','inner-garden-southeast-bench','inner-garden-southeast-tea-table','inner-garden-southwest-bench','inner-garden-southwest-tea-table']);
  });
- it('accepts the final exact 871-cell graph and intentional below-avatar floor identity',()=>{
+ it('accepts the final exact 864-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:871,startupReservedCells:4,nativeCollisionCells:6924,portalCells:48,walkablePropOverlapCells:72,walkableImageOverlapCells:26});
-  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual([...['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`),...['cancer','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-ground-name`),'approach-arrow-cancer','approach-arrow-capricorn'].sort());
+  expect(result).toMatchObject({allowedCells:864,startupReservedCells:4,nativeCollisionCells:6854,portalCells:48,walkablePropOverlapCells:78,walkableImageOverlapCells:12});
+  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual([...['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`),...['cancer','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-ground-name`),'approach-arrow-cancer','approach-arrow-capricorn','gate-return-arrow-maze'].sort());
   const {provenance,...graph}=d.routes;
-  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('713f8cbf31202e08e4bb6dd79fd616f04998074025f26a3e52bb270c74423f96');
+  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('3f0e753809114d3d54f4e56affe909cbdb46daf66b43ed7d5d801111376a5666');
  });
  it('explicitly retains only the inherited four-cell welcome escape, never ordinary area entry',()=>{
   const d=data();expect(check(d).startupInsideWelcomeArea).toEqual([[63,65],[64,65],[63,66],[64,66]]);
