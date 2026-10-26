@@ -36,7 +36,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   expect(m.layers.filter(l=>l.type!=='tilelayer')).toEqual(prior.layers.filter(l=>l.type!=='tilelayer'));
   expect(m.layers.find(l=>l.name==='physical-collisions')).toEqual(prior.layers.find(l=>l.name==='physical-collisions'));
   const preview=read<TiledMap>('maps/preview/overworld.tmj');expect(preview.layers.find(l=>l.name==='physical-collisions')).toEqual(read<TiledMap>('maps/overworld.tmj').layers.find(l=>l.name==='physical-collisions'));
-  expect(preview.tilesets.map(t=>[t.firstgid,t.name,t.image])).toEqual(m.tilesets.map(t=>[t.firstgid,t.name,'../'+t.image]));
+  expect(preview.tilesets.map(t=>[t.firstgid,t.name,t.image])).toEqual(read<TiledMap>('maps/overworld.tmj').tilesets.map(t=>[t.firstgid,t.name,'../'+t.image]));
   const allowed=new Set<number>();for(const x0 of[17,103])for(let y=18;y<24;y++)for(let x=x0;x<x0+8;x++)allowed.add(y*128+x);
   expect(m.layers.map(l=>l.name)).toEqual(prior.layers.map(l=>l.name));
   for(const layer of m.layers){const before=prior.layers.find(l=>l.name===layer.name)!;if(layer.type!=='tilelayer'||before.type!=='tilelayer')continue;for(let n=0;n<layer.data.length;n++)if(layer.data[n]!==before.data[n])expect(allowed.has(n)&&/^scenery-aboveAvatar-/.test(layer.name),layer.name+' changed cell '+n).toBe(true);}

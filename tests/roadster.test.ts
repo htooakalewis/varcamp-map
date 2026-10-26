@@ -22,7 +22,7 @@ describe('stationary native Roadster display', () => {
   // The v2 epoch: the role atlas is the compiled motion atlas, appended after the brand family.
   expect(set).toMatchObject({ image: '../assets/tilesets/original/roadster-v2.png', firstgid: 11783, columns: 16, imagewidth: 512 });
   expect(map.tilesets[82]).toBe(set); // every prior reservation stays fixed; the two named exterior families append afterward
-  expect(map.tilesets.slice(83).map(t=>t.name)).toEqual(['zodiac-exteriors','hall-exteriors']);
+  expect(map.tilesets.slice(83).map(t=>t.name)).toEqual(['zodiac-exteriors','hall-exteriors','Arrival / VarCamp NW','Arrival / VarCamp NE','Arrival / VarCamp SW','Arrival / VarCamp SE']);
   expect(map.tilesets.filter(s => s.name === 'roadster')).toHaveLength(1);
  });
 });
@@ -69,21 +69,19 @@ it('preserves the original sole-addition Roadster receipt against its immutable 
 // Current whole-world byte authority belongs to publication/verify-source.mjs,
 // whose real CLI tests establish a positive baseline before artifact mutations.
 // Roadster's sole-addition history above uses independent immutable 17d4 inputs.
-it('fits the arrival view without touching any792 guide cell, spawn, entrance, scenery or sponsor panel', () => {
- const overlay = json(ROADSTER_V2_METADATA_PATH).overlay;
- expect(overlay).toMatchObject({x:73,y:60,width:5,height:5,level:'belowAvatar',name:'roadster'});
+it('fits the upper-right blue arrival floor without touching any792guide cell, spawn, entrance, scenery or sponsor panel', () => {
+ const overlay = json('art/source/arrival-roadster.json').overlay;
+ expect(overlay).toMatchObject({x:74,y:54,width:5,height:5,level:'belowAvatar',name:'roadster'});
  expect(json('art/source/roadster.json').overlay).toMatchObject({x:73,y:60,width:5,height:5});
- const inside = (x:number,y:number) => x>=73&&x<78&&y>=60&&y<65;
+ expect(json(ROADSTER_V2_METADATA_PATH).overlay).toMatchObject({x:73,y:60,width:5,height:5});
+ const inside = (x:number,y:number) => x>=74&&x<79&&y>=54&&y<59;
  expect(ROUTES.allowedCells).toHaveLength(792);
  expect(sha(JSON.stringify(ROUTES.allowedCells))).toBe('04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9');
  expect(ROUTES.allowedCells.filter(([x,y])=>inside(x,y))).toEqual([]);
  const layout = json('world/layouts/overworld.json') as MapLayout;
  expect(layout.animatedOverlays!.find(o=>o.name==='roadster')).toEqual(overlay);
- for(const r of [...layout.entries,...layout.exits,...layout.areas,...layout.placements.filter(p=>p.layer==='props'),...(layout.images??[])]) expect(r.x<78&&r.x+r.width>73&&r.y<65&&r.y+r.height>60,'name' in r?r.name:r.id).toBe(false);
- for(const e of layout.entries.filter(e=>['welcome','start'].includes(e.name)))for(let y=e.y;y<e.y+e.height;y++)for(let x=e.x;x<e.x+e.width;x++){
-  expect(73).toBeGreaterThanOrEqual(x+.5-14);expect(73+142/32).toBeLessThanOrEqual(x+.5+14);
-  expect(60).toBeGreaterThanOrEqual(y+.5-7);expect(65).toBeLessThanOrEqual(y+.5+6);
- }
+ for(const r of [...layout.entries,...layout.exits,...layout.areas,...layout.placements.filter(p=>p.layer==='props'),...(layout.images??[])]) expect(r.x<79&&r.x+r.width>74&&r.y<59&&r.y+r.height>54,'name' in r?r.name:r.id).toBe(false);
+ expect(overlay.x).toBeGreaterThanOrEqual(50);expect(overlay.x+5).toBeLessThanOrEqual(80);expect(overlay.y).toBeGreaterThanOrEqual(54);expect(overlay.y+5).toBeLessThanOrEqual(71);
 });
 it('accepts the re-audited native map but still fails closed on moved animation or collision changes', async () => {
  await expect(guardMap(native())).resolves.toBeUndefined();
@@ -235,7 +233,7 @@ describe('v2 compiled motion', () => {
   for(const [phase,time]of starts.entries()){
    const out=Buffer.alloc(160*160*4);
    for(let y=0;y<5;y++)for(let x=0;x<5;x++){
-    const gid=engine.getAnimatedTileId(layer.data[(60+y)*128+73+x],time);
+    const gid=engine.getAnimatedTileId(layer.data[(54+y)*128+74+x],time);
     expect(gid).not.toBeNull();const tile=gid-set.firstgid,sx=tile%set.columns!*32,sy=Math.floor(tile/set.columns!)*32;
     for(let row=0;row<32;row++)atlas.copy(out,((y*32+row)*160+x*32)*4,((sy+row)*metadata.atlas.width+sx)*4,((sy+row)*metadata.atlas.width+sx+32)*4);
    }

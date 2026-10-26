@@ -7,6 +7,8 @@ import {refinePlazaFloorGarden} from '../tools/maps/plaza-floor-garden';
 import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
 import {applyZodiacPhysics,restoreZodiacPhysics} from '../tools/maps/zodiac-physics';
 import {prePhysicsLayout} from './helpers/pre-zodiac-physics-epoch';
+import {applyArrivalRefresh,restoreArrivalRefresh} from '../tools/maps/arrival-refresh';
+import {arrivalFloorPanels} from './helpers/physical-prop-contracts';
 import {expectedPlazaSuccessor,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
 import type {TiledMap,TileLayer} from '../tools/maps/types';
@@ -22,17 +24,17 @@ it('reserves unique engine atlas names as well as nonoverlapping GIDs in the act
 it('puts sponsor and event identity on the floor without posts or unrelated sign assemblies',()=>{
  const l=source(),sponsors=l.images!.filter(p=>p.name.startsWith('Sponsors /'));
  expect(sponsors).toHaveLength(3);for(const p of sponsors)expect(p.standing,p.name).toBe(false);
- expect(l.images!.find(p=>p.name==='VarCamp 2026 Floor')).toMatchObject({image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false});
+ expect(l.images!.filter(p=>p.name.startsWith('Arrival /'))).toEqual(arrivalFloorPanels);
  expect(l.placements.filter(p=>/^standing-sponsor-|^sponsor-frame-|^sponsor-trim-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id))).toEqual([]);
  expect(l.standingSigns!.filter(s=>s.face==='varcamp-nameplate'||s.faceKind==='image')).toEqual([]);
  // The twelve expo booth nameplates (fascia faces over fascia posts) are the only assemblies added since the retirements.
  const nameplate=(face:string)=>/^expo-[ns]\d-nameplate-fascia$/.test(face);
- expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&!nameplate(s.face))).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
+ expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&!nameplate(s.face))).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.face!=='arrival-direction-crosspost'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
  expect(l.standingSigns!.filter(s=>nameplate(s.face))).toHaveLength(12);
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(l))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(l))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;

@@ -13,7 +13,6 @@ export function standingFace(layout:MapLayout,catalog:TileCatalog,id:string,orig
  assert.equal(catalog[rows[0].sprite]?.standingRole,'face');assertVisual(catalog[rows[0].sprite],catalog[originalVisual]);return rows[0];
 }
 export const arrivalFaces={
- 'arrival-direction-crosspost':'hub-nav-arrival-crosspost',
  'exterior-road-sign-north':'exterior-road-north','exterior-road-sign-west':'exterior-road-west','exterior-road-sign-east':'exterior-road-east','exterior-road-sign-south':'exterior-road-south',
 } as const;
 export function arrivalPlaques(layout:MapLayout,catalog:TileCatalog):Placement[] {
@@ -46,7 +45,8 @@ export function assertRaisedSponsorFootprints(layout:MapLayout,catalog:TileCatal
  }
 }
 export function sponsorSupportIds(layout:MapLayout,catalog:TileCatalog):Set<string>{
- validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,15,'Exactly three sponsors, eleven expo booth logos and the event floor identity');
+ const current=layout.images?.some(i=>i.name.startsWith('Arrival /'));
+ validateStandingSigns(layout,catalog);assert.equal(layout.images?.length,current?18:15,'Exactly three sponsors, eleven expo logos and the approved floor identity');
  assert.ok(layout.images!.every(i=>i.standing===false),'Every current logo is an explicit floor inlay');
  assert.ok(!layout.standingSigns?.some(s=>s.faceKind==='image'||s.face==='varcamp-nameplate'),'Floor logos have no standing assemblies');
  assert.ok(!layout.placements.some(p=>/^standing-sponsor-|^reception-post-brand-|^varcamp-nameplate$/.test(p.id)),'Retired logo posts/brand board remain');
@@ -60,13 +60,14 @@ export const expoBoothLogos=[
  ['Expo / Demo Orbit','demo-01',41,75,6],['Expo / Demo Nova Compact','demo-02-compact',49,75,4],['Expo / Demo Atlas','demo-03',55,75,6],['Expo / Demo Vector','demo-04',68,75,4],['Expo / Demo Lumen','demo-05',75,75,4],['Expo / VarCamp','varcamp-horizontal',82,75,4],
  ['Expo / AWS User Group Myanmar','partner-aws-ug-mm',42,85,4],['Expo / BSides Myanmar','partner-bsides-mm',49,85,4],['Expo / OpenInfra User Group Myanmar','partner-openinfra-mm',56,85,4],['Expo / Code Circle','hub-01',68,85,4],['Expo / Design Guild','hub-02',75,85,4],
 ].map(([name,file,x,y,width])=>({name:String(name),image:`assets/sponsors/${file}.png`,x:Number(x),y:Number(y),width:Number(width),height:2,standing:false}));
+export const arrivalFloorPanels=['nw','ne','sw','se'].map((key,i)=>({name:'Arrival / VarCamp '+key.toUpperCase(),image:'assets/sponsors/varcamp-arrival-'+key+'.png',x:58+i%2*6,y:60+Math.floor(i/2)*2,width:6,height:2,standing:false}));
 /** Current floor representation has no physical posts; every actual cell must remain visible and connected. */
 export function assertSponsorFootprints(layout:MapLayout,catalog:TileCatalog,map:TiledMap):void{
  sponsorSupportIds(layout,catalog);
  const images=layout.images!,expected=[
   ...[0,1,2].map(i=>({name:`Sponsors / Demo 0${i+1}`,image:`assets/sponsors/demo-0${i+1}.png`,x:53+i*8,y:67,width:6,height:2,standing:false})),
   ...expoBoothLogos,
-  {name:'VarCamp 2026 Floor',image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false},
+  ...(layout.images!.some(i=>i.name.startsWith('Arrival /'))?arrivalFloorPanels:[{name:'VarCamp 2026 Floor',image:'assets/sponsors/varcamp-2026.png',x:60,y:60,width:6,height:2,standing:false}]),
  ];assert.deepEqual(images,expected,'Current floor identity roster/position changed');
  const mask=map.layers.find(l=>l.name==='physical-collisions') as TileLayer;assert.ok(mask?.type==='tilelayer');
  const start=layout.entries.find(e=>e.isDefault)!;assert.ok(start);const queue=[start.y*map.width+start.x],seen=new Set(queue);assert.equal(mask.data[queue[0]],0);

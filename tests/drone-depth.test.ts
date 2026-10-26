@@ -4,7 +4,9 @@ import {describe,expect,it} from 'vitest';
 import type {MapLayout,TiledMap} from '../tools/maps/types';
 import {PLAZA_DRONES} from '../tools/maps/airborne';
 import {applyDroneDepth,beforeDroneDepthJson,beforeDroneDepthLayout,beforeDroneDepthRaw,droneDepthNative,preDroneDepthLayout,preDroneDepthNative,isDrone} from './helpers/drone-depth-epoch';
-const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
+import {preArrivalLayout,preArrivalNative} from './helpers/pre-arrival-epoch';
+import {arrivalSuccessorSha} from './helpers/arrival-refresh-history';
+const read=<T=any>(p:string):T=>{const v=JSON.parse(readFileSync(p,'utf8'));return(p==='world/layouts/overworld.json'?preArrivalLayout(v):p==='maps/overworld.tmj'?preArrivalNative(v):v)as T;};
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 describe('drone-depth epoch: every overworld drone flies above all scenery and attendees',()=>{
  it('the current source is exactly the genuine predecessor with only the43 drone levels moved',()=>{
@@ -27,7 +29,7 @@ describe('drone-depth epoch: every overworld drone flies above all scenery and a
   const table=read('tests/fixtures/drone-depth/transitions.json');
   for(const[path,[from,to]]of Object.entries(table.transitions)as[string,[string,string]][]){
    expect(path,'no test path in the release receipt').not.toMatch(/^tests\//);expect(path,'no image changes').not.toMatch(/\.(png|svg)$/);
-   expect(from).not.toBe(to);expect(sha(readFileSync(path)),path).toBe(to);
+   expect(from).not.toBe(to);expect(sha(readFileSync(path)),path).toBe(arrivalSuccessorSha(path,to));
   }
   for(const path of ['world/layouts/overworld.json','maps/overworld.tmj'])expect(table.transitions[path][0]).toBe(sha(beforeDroneDepthRaw(path)));
  });

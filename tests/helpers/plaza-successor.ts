@@ -21,6 +21,8 @@ import {renderPlazaDrones} from '../../tools/art/plaza-drones';
 import {renderPlazaFleet} from '../../tools/art/plaza-fleet';
 import {approvedHistoricalPlaza,approvedHistoricalRaw} from './approved-world-successor';
 import {DRONE_DEPTH_INPUTS,advanceDroneDepthLayout,advanceDroneDepthNative,beforeDroneDepthJson,renumberFreshDroneLayers} from './drone-depth-epoch';
+import {arrivalSuccessorSha,beforeArrivalJson} from './arrival-refresh-history';
+import {applyArrivalRefresh,reconcileArrivalRefresh,advanceArrivalProvenance} from '../../tools/maps/arrival-refresh';
 import type {TileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
 import contract from '../../world/plaza-floor-garden-native.json';
@@ -135,7 +137,7 @@ export async function expectedPreExpoSuccessor(catalog:TileCatalog):Promise<{lay
  return (async()=>{
   // The reviewed fleet producer/recipe advanced once, in the drone-depth epoch (level only, belowAvatar -> aboveScenery).
   assert.equal(DRONE_DEPTH_INPUTS['tools/art/plaza-fleet.ts'][0],'3ffa9d3b2da3aba95251226725d56516ecfc5e0688944a73d41e178cb3ba6960');assert.equal(DRONE_DEPTH_INPUTS['art/source/plaza-fleet-recipe.json'][0],'343db1ef1f79eaf111759651092ae82efeaa61ae152fe971c5f30ce4d41f78f3');
-  assert.equal(createHash('sha256').update(readFileSync('tools/art/plaza-fleet.ts')).digest('hex'),DRONE_DEPTH_INPUTS['tools/art/plaza-fleet.ts'][1]);
+  assert.equal(createHash('sha256').update(readFileSync('tools/art/plaza-fleet.ts')).digest('hex'),arrivalSuccessorSha('tools/art/plaza-fleet.ts',DRONE_DEPTH_INPUTS['tools/art/plaza-fleet.ts'][1]));
   assert.equal(createHash('sha256').update(readFileSync('art/source/plaza-fleet-recipe.json')).digest('hex'),DRONE_DEPTH_INPUTS['art/source/plaza-fleet-recipe.json'][1]);
   const l=refinePlazaFloorGarden(historicalFloorPlaza('layout') as MapLayout),roadster=await renderRoadsterV1(),drones=await renderPlazaDrones(),fleet=await renderPlazaFleet();// the pre-v2 chain carries the frozen v1 roadster epoch
   l.animatedOverlays=l.animatedOverlays!.filter(o=>o.name!=='roadster'&&!o.name.startsWith('plaza-drone-'));
@@ -220,7 +222,9 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const physical=applyZodiacPhysics(next),physicalNative=reconcileZodiacPhysics(hallNative,physical,catalog);
  assert.deepEqual(physical,advanceDroneDepthLayout(beforeDroneDepthJson('world/layouts/overworld.json')),'Genuine pre-drone-depth source must match the physics forward operation');
  assert.deepEqual(physicalNative,advanceDroneDepthNative(beforeDroneDepthJson('maps/overworld.tmj')),'Genuine pre-drone-depth native must match the physics forward operation');
- return {layout:physical,native:physicalNative};
+ assert.deepEqual(physical,advanceArrivalProvenance(beforeArrivalJson('world/layouts/overworld.json')),'Genuine pre-arrival source must match the preceding forward chain');
+ assert.deepEqual(physicalNative,beforeArrivalJson('maps/overworld.tmj'),'Genuine pre-arrival native must match the preceding forward chain');
+ const arrival=applyArrivalRefresh(physical);return {layout:arrival,native:reconcileArrivalRefresh(physicalNative,arrival,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

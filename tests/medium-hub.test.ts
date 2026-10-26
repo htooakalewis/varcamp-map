@@ -1,4 +1,5 @@
-import {standingFace,arrivalPlaques,arrivalFaces,assertVisual,sponsorSupportIds,assertSponsorFootprints} from './helpers/physical-prop-contracts';
+import {arrivalPlaques,arrivalFaces,arrivalFloorPanels,assertVisual,sponsorSupportIds,assertSponsorFootprints} from './helpers/physical-prop-contracts';
+import {preArrivalLayout} from './helpers/pre-arrival-epoch';
 import { readFileSync, existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import sharp from 'sharp';
@@ -35,13 +36,10 @@ describe('medium authored arrival',()=>{
   expect(arrivalPlaques(l,loadTileCatalog()).map(p=>p.id).sort()).toEqual(Object.keys(arrivalFaces).sort());
  });
 
- it('shows all four directional arrows within six tiles of the welcome spawn',()=>{
-  const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost');
-  expect(post,'first camera must show the four branch choices').toBeDefined();
-  const gap=Math.max(Math.max(post!.x-spawn.x-spawn.width,spawn.x-post!.x-post!.width,0),Math.max(post!.y-spawn.y-spawn.height,spawn.y-post!.y-post!.height,0));expect(gap).toBeLessThanOrEqual(6);
-  standingFace(l,loadTileCatalog(),post!.id,'hub-nav-arrival-crosspost');
-  for(const other of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&p.id!==post!.id))expect(overlap(post!,other),`arrival arrows cover ${other.id}`).toBe(false);
-  const svg=readFileSync('art/source/hub-labels.svg','utf8');for(const direction of ['north','west','east','south'])expect(svg).toContain(`data-direction="${direction}"`);
+ it('shows the enlarged colourful floor lockup above the welcome spawn and clears the road crosspost',()=>{
+  const l=source(),spawn=l.entries.find(e=>e.isDefault)!;expect(l.images!.filter(i=>i.name.startsWith('Arrival /'))).toEqual(arrivalFloorPanels);
+  expect(l.placements.some(p=>['arrival-direction-crosspost','arrival-crosspost-pole'].includes(p.id))).toBe(false);
+  for(const p of arrivalFloorPanels){expect(p.y+p.height).toBeLessThan(spawn.y);for(const other of l.placements.filter(p=>!['terrain','atmosphere'].includes(p.layer)))expect(overlap(p,other),p.name+' covers '+other.id).toBe(false);}
  });
  it('gives every arrow glyph four clear dark pixels of vertical inset',async()=>{
   const svg=readFileSync('art/source/hub-labels.svg','utf8');
@@ -59,13 +57,12 @@ describe('medium authored arrival',()=>{
   }
   expect(glyphPixels).toBeGreaterThan(0);expect(failures).toEqual([]);
  });
- it('keeps three logos and all four arrow arms inside every default first viewport with HUD clearance',()=>{
+ it('keeps the partner logos and complete enlarged event lockup inside every default first viewport with HUD clearance',()=>{
   // Pinned HdpiManager:640×480 recommended game pixels; this2880px-wide screen defaults to3×.
   // Conservatively use30×16 tiles and reserve1tile above/sides plus2tiles below for normal HUD.
-  const l=source(),spawn=l.entries.find(e=>e.isDefault)!,post=l.placements.find(p=>p.id==='arrival-direction-crosspost')!;
-  const arrows=[{name:'north',x:post.x+1.5,y:post.y,width:3,height:1},{name:'west',x:post.x,y:post.y+1,width:3,height:1},{name:'east',x:post.x+3,y:post.y+1,width:3,height:1},{name:'south',x:post.x+1.5,y:post.y+2,width:3,height:1}];
+  const l=source(),spawn=l.entries.find(e=>e.isDefault)!;
   // The eleven expo booth logos live in the hall band south of the first viewport; only the arrival inlays must be in view.
-  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=[...arrival,...arrows];expect(l.images).toHaveLength(15);expect(arrival).toHaveLength(4);
+  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=arrival;expect(l.images).toHaveLength(18);expect(arrival).toHaveLength(7);
   const supportIds=sponsorSupportIds(l,loadTileCatalog());
   assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);
@@ -74,8 +71,8 @@ describe('medium authored arrival',()=>{
    for(const r of required)expect(r.x>=safe.x&&r.y>=safe.y&&r.x+r.width<=safe.x+safe.width&&r.y+r.height<=safe.y+safe.height,`${r.name} misses first-view HUD-safe rectangle from ${c%l.width},${Math.floor(c/l.width)}`).toBe(true);
   }
  });
- it('uses compact native arrival boards while retaining full bold speaker nameplates',()=>{
-  const l=source();for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3]})){
+ it('retains the compact crosspost only in the independently checked pre-arrival history',()=>{
+  const l=preArrivalLayout(source());for(const[id,size]of Object.entries({'arrival-direction-crosspost':[6,3]})){
    const p=l.placements.find(p=>p.id===id)!;expect([p.width,p.height],id).toEqual(size);
   }
  });
@@ -94,7 +91,7 @@ describe('medium authored arrival',()=>{
  });
  it('keeps every raster nameplate and pointer apart from controls and other plaques',()=>{
   const l=source(),plaques=[...SIGN_IDS.map(sign=>{const p=l.placements.find(p=>p.id===`${sign}-bold-nameplate`)!;expect(p).toBeDefined();assertVisual(loadTileCatalog()[p.sprite],loadTileCatalog()[`hub-label-${sign}`]);return p;}),...arrivalPlaques(l,loadTileCatalog())];
-  expect(new Set(plaques.map(p=>p.id)).size).toBe(17);
+  expect(new Set(plaques.map(p=>p.id)).size).toBe(16);
   for(const[i,p]of plaques.entries()){
    for(const r of [...l.entries,...l.exits,...l.areas])expect(overlap(p,r),`${p.id} covers ${r.name}`).toBe(false);
    for(const other of plaques.slice(i+1))expect(overlap(p,other),`${p.id} overlaps ${other.id}`).toBe(false);

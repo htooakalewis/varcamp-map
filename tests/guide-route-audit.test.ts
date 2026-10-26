@@ -26,7 +26,7 @@ describe('final plaza guide physical/depth audit',()=>{
  });
  it('accepts the final exact792-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6814,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
+  expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6813,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:8});
   expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual(['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`).sort());
   const {provenance,...graph}=d.routes;
   expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('083815da9057307c02218ec83816d0280a17b24143f2c90a16a3287e3d186899');
@@ -58,8 +58,8 @@ describe('final plaza guide physical/depth audit',()=>{
   ['source solid base',(d:ReturnType<typeof data>)=>{d.layout.placements.push({id:'new-solid-route-obstacle',sprite:'plaza-tree-round',layer:'props',x:70,y:68,width:2,height:3});},/collision/],
   ['native raised face',(d:ReturnType<typeof data>)=>{layer(d,'scenery-aboveAvatar-0').data[70*128+70]=maskGid(d,false);},/raised/],
   ['source raised crest',(d:ReturnType<typeof data>)=>{d.catalog['zodiac-emblem-aries'].upperCells=[[1,1]];},/raised/],
-  ['standing image',(d:ReturnType<typeof data>)=>{d.layout.images.find((p:any)=>p.name==='VarCamp 2026 Floor').standing=true;},/standing/],
-  ['native image above floor',(d:ReturnType<typeof data>)=>{const l=layer(d,'VarCamp 2026 Floor');d.map.layers=d.map.layers.filter((x:any)=>x!==l);d.map.layers.push(l);},/raised|image.*depth/],
+  ['standing image',(d:ReturnType<typeof data>)=>{d.layout.images.find((p:any)=>p.name==='Arrival / VarCamp NW').standing=true;},/standing/],
+  ['native image above floor',(d:ReturnType<typeof data>)=>{const l=layer(d,'Arrival / VarCamp NW');d.map.layers=d.map.layers.filter((x:any)=>x!==l);d.map.layers.push(l);},/raised|image.*depth/],
   ['native portal',(d:ReturnType<typeof data>)=>{layer(d,'exit-solar').data[70*128+70]=maskGid(d,false);},/portal/],
   ['WAM normal interaction',(d:ReturnType<typeof data>)=>{d.wam.areas.push({...d.wam.areas[0],id:'new',name:'new-interaction',x:70*32,y:70*32,width:32,height:32});},/interaction/],
   ['source normal interaction',(d:ReturnType<typeof data>)=>{d.layout.areas.push({...d.layout.areas[0],name:'new-interaction',x:70,y:70,width:1,height:1});},/interaction/],

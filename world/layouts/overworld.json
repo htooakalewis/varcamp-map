@@ -10255,24 +10255,6 @@
       "layer": "terrain"
     },
     {
-      "id": "arrival-direction-crosspost",
-      "sprite": "standing-hub-nav-arrival-crosspost",
-      "x": 66,
-      "y": 61,
-      "width": 6,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "arrival-crosspost-pole",
-      "sprite": "solid-sign-post",
-      "x": 68,
-      "y": 64,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "welcome-table",
       "sprite": "table-small-white",
       "x": 52,
@@ -16312,10 +16294,37 @@
       "standing": false
     },
     {
-      "name": "VarCamp 2026 Floor",
-      "image": "assets/sponsors/varcamp-2026.png",
-      "x": 60,
+      "name": "Arrival / VarCamp NW",
+      "image": "assets/sponsors/varcamp-arrival-nw.png",
+      "x": 58,
       "y": 60,
+      "width": 6,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Arrival / VarCamp NE",
+      "image": "assets/sponsors/varcamp-arrival-ne.png",
+      "x": 64,
+      "y": 60,
+      "width": 6,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Arrival / VarCamp SW",
+      "image": "assets/sponsors/varcamp-arrival-sw.png",
+      "x": 58,
+      "y": 62,
+      "width": 6,
+      "height": 2,
+      "standing": false
+    },
+    {
+      "name": "Arrival / VarCamp SE",
+      "image": "assets/sponsors/varcamp-arrival-se.png",
+      "x": 64,
+      "y": 62,
       "width": 6,
       "height": 2,
       "standing": false
@@ -16327,8 +16336,8 @@
       "image": "assets/tilesets/original/roadster-v2.png",
       "sourceId": "original",
       "level": "belowAvatar",
-      "x": 73,
-      "y": 60,
+      "x": 74,
+      "y": 54,
       "width": 5,
       "height": 5,
       "carrierTileIds": [
@@ -25086,7 +25095,7 @@
         }
       ],
       "provenance": {
-        "metadataPath": "art/source/roadster-v2.json",
+        "metadataPath": "art/source/arrival-roadster.json",
         "atlasSha256": "e7d1e60509d55e2e78bf71eb6108b307716dd25a24f008837df2fc5f6e494802",
         "inputs": [
           {
@@ -25112,6 +25121,14 @@
           {
             "path": "tools/maps/types.ts",
             "sha256": "fbc36024fcd05330f1e7e7593158e877585a55447be4cfcb964202cbd47a58ff"
+          },
+          {
+            "path": "art/source/arrival-refresh.json",
+            "sha256": "de2cf09d014d7ad5317acdc3c95fb3b7aa50b9e3b0cab527de6b19e97ff717c2"
+          },
+          {
+            "path": "tools/art/arrival-refresh.ts",
+            "sha256": "255fc99a65f9100b62e9399ebd6a55ddf5a1dbda7334689077ac07e3e17b1395"
           }
         ]
       }
@@ -68363,7 +68380,7 @@
           },
           {
             "path": "tools/art/plaza-fleet.ts",
-            "sha256": "1805e418fb36508ea1ba0eda72d9cfbe983919a57f46a413c44deb71b6fd8bac"
+            "sha256": "6f03f343a2e559b5f2701a8cfbcab086ea3f942f68511df392052ceda600a8d9"
           },
           {
             "path": "tools/art/native-motion.ts",
@@ -69555,7 +69572,7 @@
           },
           {
             "path": "tools/art/plaza-fleet.ts",
-            "sha256": "1805e418fb36508ea1ba0eda72d9cfbe983919a57f46a413c44deb71b6fd8bac"
+            "sha256": "6f03f343a2e559b5f2701a8cfbcab086ea3f942f68511df392052ceda600a8d9"
           },
           {
             "path": "tools/art/native-motion.ts",
@@ -70869,7 +70886,7 @@
           },
           {
             "path": "tools/art/plaza-fleet.ts",
-            "sha256": "1805e418fb36508ea1ba0eda72d9cfbe983919a57f46a413c44deb71b6fd8bac"
+            "sha256": "6f03f343a2e559b5f2701a8cfbcab086ea3f942f68511df392052ceda600a8d9"
           },
           {
             "path": "tools/art/native-motion.ts",
@@ -70888,12 +70905,6 @@
     }
   ],
   "standingSigns": [
-    {
-      "face": "arrival-direction-crosspost",
-      "supports": [
-        "arrival-crosspost-pole"
-      ]
-    },
     {
       "face": "exterior-road-sign-north",
       "supports": [

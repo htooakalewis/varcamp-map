@@ -13,6 +13,9 @@ import {buildMap} from '../../tools/maps/builder';
 import {reconcileNativeProjection} from '../../tools/maps/native-projection';
 import {loadTileCatalog} from '../../tools/art/catalog';
 import type {LayoutAnimatedOverlay,MapLayout,TiledMap} from '../../tools/maps/types';
+import {arrivalSuccessorSha} from './arrival-refresh-history';
+import {advanceArrivalOverlay} from '../../tools/maps/arrival-refresh';
+import {preArrivalLayout,preArrivalNative} from './pre-arrival-epoch';
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 /** Exact old -> reviewed new producer bytes carried in animated-overlay provenance. The two drone
  * producers and the fleet recipe change only the emitted level; the role registry and its contract
@@ -27,13 +30,13 @@ export const DRONE_DEPTH_INPUTS:Record<string,readonly[string,string]>={
 };
 const droneNames=new Set(PLAZA_DRONES.map(r=>r.name));
 export const isDrone=(name:string)=>droneNames.has(name);
-export function assertDroneDepthProducers():void{for(const[path,[,after]]of Object.entries(DRONE_DEPTH_INPUTS))assert.equal(sha(readFileSync(path)),after,'Reviewed drone-depth producer changed '+path);}
+export function assertDroneDepthProducers():void{for(const[path,[,after]]of Object.entries(DRONE_DEPTH_INPUTS))assert.equal(sha(readFileSync(path)),arrivalSuccessorSha(path,after),'Reviewed drone-depth producer changed '+path);}
 /** Provenance-only transition of one genuine pre-epoch descriptor (any map): exact old input
  * SHAs advance to the reviewed producer bytes; level, pixels and every other field stay. */
 export function advanceDroneDepthOverlay(o:LayoutAnimatedOverlay):LayoutAnimatedOverlay{
  const result=structuredClone(o);
  for(const input of result.provenance?.inputs??[]){const pair=DRONE_DEPTH_INPUTS[input.path];if(!pair)continue;assert.equal(input.sha256,pair[0],'Unreviewed pre-drone-depth provenance '+input.path+' in '+o.name);input.sha256=pair[1];}
- return result;
+ return advanceArrivalOverlay(result);
 }
 /** Genuine historical layouts stay buildable by the current builder (which re-verifies every
  * provenance input) only through this closed transition, applied to historical bytes. */
@@ -47,7 +50,7 @@ export function applyDroneDepth(layout:MapLayout):MapLayout{
  assertDroneDepthProducers();const result=structuredClone(layout);let count=0;
  result.animatedOverlays=result.animatedOverlays?.map(o=>{
   if(!isDrone(o.name))return o;count++;assert.equal(o.level,'belowAvatar','Drone depth epoch requires belowAvatar: '+o.name);
-  for(const input of o.provenance?.inputs??[])if(DRONE_DEPTH_INPUTS[input.path])assert.equal(input.sha256,DRONE_DEPTH_INPUTS[input.path][1],'Drone depth requires advanced provenance '+input.path);
+  for(const input of o.provenance?.inputs??[])if(DRONE_DEPTH_INPUTS[input.path])assert.equal(input.sha256,arrivalSuccessorSha(input.path,DRONE_DEPTH_INPUTS[input.path][1]),'Drone depth requires advanced provenance '+input.path);
   return{...o,level:'aboveScenery'};
  });
  assert.equal(count,PLAZA_DRONES.length,'Drone depth epoch requires all43 drones');return result;
@@ -60,10 +63,11 @@ export function retractDroneLevel(o:LayoutAnimatedOverlay):LayoutAnimatedOverlay
 }
 /** Closed byte receipt of the epoch: every non-test path it changed, base SHA -> current SHA. An
  * earlier epoch's "every other byte unchanged" pin advances only through an exact row here. */
-export function droneDepthSuccessorSha(path:string,pin:string):string{
+export function preArrivalDroneDepthSuccessorSha(path:string,pin:string):string{
  const table=JSON.parse(readFileSync('tests/fixtures/drone-depth/transitions.json','utf8'));assert.equal(table.version,1);assert.equal(table.base,'01502e170de47873fae2c3ad4b04343c783b8c84');
  const row=table.transitions[path] as [string,string]|undefined;return row&&row[0]===pin?row[1]:pin;
 }
+export const droneDepthSuccessorSha=(path:string,pin:string)=>arrivalSuccessorSha(path,preArrivalDroneDepthSuccessorSha(path,pin));
 export const DRONE_DEPTH_FIXTURE_SHA256='a6c3b45513d9d660a4d8a956c86e4b4cddb7c42f62692bd4f661fcea1ce70096';
 function fixture(){
  const raw=readFileSync('tests/fixtures/drone-depth/before.json.gz');assert.equal(sha(raw),DRONE_DEPTH_FIXTURE_SHA256,'Genuine pre-drone-depth fixture changed');
@@ -108,12 +112,14 @@ export function droneDepthNative(before:TiledMap,layout:MapLayout):TiledMap{
  assert.deepEqual(map,droneDepthNativeOracle(before,next),'Drone-depth projection differs from the independent reorder oracle');return map;
 }
 export function preDroneDepthLayout(layout:MapLayout):MapLayout{
+ layout=preArrivalLayout(layout);
  if(!layout.animatedOverlays?.some(o=>isDrone(o.name)&&o.level==='aboveScenery'))return structuredClone(layout);
  const before=beforeDroneDepthLayout();
  assert.deepEqual(layout,applyDroneDepth(before),'Current source must be exactly the drone-depth successor');return before;
 }
 let expected:TiledMap|undefined;
 export function preDroneDepthNative(map:TiledMap):TiledMap{
+ map=preArrivalNative(map);
  const floor=map.layers.findIndex(l=>l.name==='floorLayer');
  if(!map.layers.some((l,i)=>isDrone(l.name)&&i>floor))return structuredClone(map);
  const before=beforeDroneDepthJson<TiledMap>('maps/overworld.tmj');

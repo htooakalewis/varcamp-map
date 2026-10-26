@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "source": {
+    "path": "art/source/varcamp-horizontal.svg",
+    "sha256": "05f5ea29e8635156bf4ed74f9e39a6067bb2121ac266db514d7918703924250f"
+  },
+  "panel": {
+    "width": 384,
+    "height": 128
+  },
+  "raster": {
+    "x": 4,
+    "y": 21,
+    "width": 376,
+    "height": 85
+  },
+  "roadster": {
+    "before": {
+      "x": 73,
+      "y": 60
+    },
+    "after": {
+      "x": 74,
+      "y": 54
+    },
+    "metadataPath": "art/source/arrival-roadster.json"
+  },
+  "colours": {
+    "flame": "#f96216",
+    "wordmark": "#ffffff"
+  }
+}

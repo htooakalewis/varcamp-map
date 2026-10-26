@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "70664b5c61e53b4463d68edf82e2cd9eaa969284f25f437c24127c42d2939a51",
+      "toSha256": "5d3245de820e5275d0ed7fdaad1f2d7ad7e16e83211087ce251cb161df03d019",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "4f4979461fe713d6139cbaeb4612cc3c007969c3c73ec291d9bfc857dbff740c",
+      "toSha256": "4a4e539c80e6a1f4b2eed6f30065d3c3c1be7f92865b870895ab29ae0590a738",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "art/sponsors.json",
+      "fromSha256": "725bfee6f49e1952572521fc3b978d3532f46ca39166790f8b0dde93549fb9c6",
+      "toSha256": "acbdace1c2450bb6232eeee3214e412cf9eb96d3f4b2d095fd6ab71aef56552d",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "fec9679fdd384c46c67ed1e854fa705ffdb626514a40638e85b2a642d027fbfb",
+      "toSha256": "fd4e093a077704e2bddfee46249c364253554897ae9a606d5267e1795c30e5ad",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "a473f1387014c6d40812d3207fb46a9e3ffd6bf199981d464795c317c6cf65fe",
+      "toSha256": "f14cf2c4bb34c9d4f51b6b648a1766ea1d4d8f8d27de0bb7cf9bfae6f6e486ea",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "b65ca323e0422698622de999e57ba0ce5fa382471a32a2ac02a5b848b332960e",
+      "toSha256": "88af14c1a29fc5ff20d67742fc1500dcaa93842c7ce90f8c164cfffb37a4b264",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "tests/medium-hub.test.ts",
+      "fromSha256": "c13bad317f99760ceaffe7bcb4b1bd1b7a1d8339d29f3c68f5700c4b1c333c34",
+      "toSha256": "6c21f2da9afbf8c591fad82af9bdcdeeae6caccf45f1aa7d3d7fd2d388568ed6",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "5085391916c0b1b568706145c54d82464124db5059c5d1ed1334c4d7ed258ed7",
+      "toSha256": "e4810bf878887ecf48771cd99f7591271156d6f54116093711c95544110f0137",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "e3f9a77d886bdaaabf1d29cc200f1b6d65e07903212858fb165ae83d6eadeb41",
+      "toSha256": "9e166946b3f44ce5dea2c78711aef1f5bc6114885010d426fa8ea26f859d7e1f",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "36ff4a03d934b7f8565e7770981cea3cc8c196e8d3bb02c7177ad836e13011f1",
+      "toSha256": "3f5294d1cb70540afe3e1b5acc50b7240ac4449eef94dfa81bdd225ddb8d1232",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "ffbfde519b0e92e4f037bc6dc739962f261b07c842281dcad66350c0a63fb0e8",
+      "toSha256": "35d40f33ed25b5c8f2c3e30a0f6bfdbf64478412fe0a79ff615002239bf80d02",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "7a258d11c462a2bf97b6e4357890d9f7a428398d6e5f50e0d66d305d94fcaf62",
+      "toSha256": "129a3fb7da5ea4b79c2f0c8c928a4df37308aaccb36f7f85f4e02ea8e17459b5",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "022097df30a1e0c068f0eb75f3438f3aafd5e9861a34a7f401ac1eab18603d40",
+      "toSha256": "e9528e47a2da361b474f9272ca3950c7b9a880a79ed61f035c274535e88feb0f",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "3f3a19e6272e60132bf327160c6f3516cd2b16c093736d5808e9a2265271d795",
+      "toSha256": "4b53f0ea4262aba771b20d320ba5cd65d85ec739969718b08a576a7fa7ff6f1a",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "fccd33687230695c1fb3b6215bf2440aa8eba81c3c85c4d309714621d54c7092",
+      "toSha256": "7ffd70378629aff124fbb4d1db3024062cbd588047527ff4d1f52eb3e9b3c008",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "df4aaa3f2763ec9fb7126a798c261144fc6191fe74d3ab0b2b40b36afa916d0b",
+      "toSha256": "5ded6213070c845bad810ca07de0e3dffb67438f7c2f210a58221fe10def7b8c",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "0dba4f4b5a8f469e98737d729c3c56717c4ae381496aeb60e71314a3352b7856",
+      "toSha256": "b1b5799595c22a5e4f2f7d419d7d617c3df6cdb5a83e66ea30eea7d1662b8175",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "4cd4d0171fc1fb2aee25f64b09bc4de7bb2da185fe96431110137a5a80cd1cca",
+      "toSha256": "9e95db24449604c13992341be40e67ca50bb8167f3aad81e4b46cd7f9efe20e2",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "18e1735a003b13442f12e205f0fd8c92ae33d6696fa192c5996161bde1a1545f",
+      "toSha256": "f53d37710cd5c52d006db94bd931b5b531e48ca579f46d0661953d6db45cae1a",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "d71047603a6e5088e4feb9c02262f5064095dfb802ef9e3467a874f70626d42b",
+      "toSha256": "6d89a76f1756517f9a7675453a8ff37abc1420f8764f6b6bbe4cbda3578decc4",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "cd7806e4437a3a43bc5763fad044f1786ee41adb7dbb67c05647e0b7004bf5dd",
+      "toSha256": "18d78a05d077dfdf4e40b5e48142e863e72a9964467ea2ac2ba539f745fc0adb",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "6f3ef0f77e1a3276b8dda27323f36083424e0a578d89cf98b1c6868ff4faa3cd",
+      "toSha256": "6c4b53df7d049c887cc5792842995834ed965d45eae6e68cb75238cdc2e3dd17",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "36d4e7c0b9bb47f6f42d8a95447fd3bc506690414916bc9f44c8fd2c32e83939",
+      "toSha256": "a1aaa887eeabc4d1176f263e8fd5a66dfc09ddf3702a7b05e7950e8f37c59b8e",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "aa61c77f98561f1c6ac77fe17e1eab4a6a949603d242db3c740a244cb684a11f",
+      "toSha256": "8daefddf60eecd16cb3451a640ae1c18b6ed69642fb2f78ca6be2e2b228672cc",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "a367239febf98fc819666b1fb0e2c9b5499b81b176d6ec1391808a5e08148674",
+      "toSha256": "e1a795c487d32d99d94f3e58a51d86c0ec45364e2a9fd5fdd8bcfd33f4faa6ca",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "af77472e7d8dd36ad4adcaf0e1a70adb22d625dadd8420d3f110c740d568429c",
+      "toSha256": "d964966b62c7922d63371e16ba8c80df09d48bb67ab32a8169e05a647957b6e6",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "782a56b16c3860156365cb9fad39e780f09025a6de95393c1cbd44fe30ecd11f",
+      "toSha256": "9f5452b990ed277f45cecc3cfdf2cb7157b50e79dd80e3d7aad925ea71c1e922",
+      "reason": "Owner-authorized43drone top-layer epoch and finite arrival successor: larger colourful booth logo, removed crosspost/pole and upper-right placement-only car. Preserve603old media,34source WAMs,85atlas bodies,792guide cells and all earlier receipts; regenerate only reviewed provenance and exact current guards."
+    }
+  ]
+}

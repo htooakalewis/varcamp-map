@@ -3,12 +3,13 @@ import {describe,it,expect} from 'vitest';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {standingFace,assertVisual,assertSponsorFootprints,assertRaisedSponsorFootprints} from './helpers/physical-prop-contracts';
 import {historicalFloorPlaza} from './helpers/plaza-successor';
+import {preArrivalLayout} from './helpers/pre-arrival-epoch';
 const source=()=>JSON.parse(readFileSync('world/layouts/overworld.json','utf8'));
 const native=()=>JSON.parse(readFileSync('maps/overworld.tmj','utf8'));
 const catalog=loadTileCatalog();
 describe('physical prop consumer contracts',()=>{
- it('requires exact declared face and original visual lineage',()=>{expect(standingFace(source(),catalog,'arrival-direction-crosspost','hub-nav-arrival-crosspost').id).toBe('arrival-direction-crosspost');});
- it.each(['missing','duplicate','wrongface','wrongvisual'])('rejects %s assembly omission/substitution',kind=>{const l=source();if(kind==='missing')l.standingSigns=l.standingSigns.filter((s:any)=>s.face!=='arrival-direction-crosspost');if(kind==='duplicate')l.standingSigns.push(l.standingSigns.find((s:any)=>s.face==='arrival-direction-crosspost'));if(kind==='wrongface')l.standingSigns.find((s:any)=>s.face==='arrival-direction-crosspost').face='directory-prompt';if(kind==='wrongvisual')l.placements.find((p:any)=>p.id==='arrival-direction-crosspost').sprite='standing-hub-nav-directory';expect(()=>standingFace(l,catalog,'arrival-direction-crosspost','hub-nav-arrival-crosspost')).toThrow();});
+ it('retains the exact historical face and original visual lineage behind the checked arrival successor',()=>{expect(standingFace(preArrivalLayout(source()),catalog,'arrival-direction-crosspost','hub-nav-arrival-crosspost').id).toBe('arrival-direction-crosspost');});
+ it.each(['missing','duplicate','wrongface','wrongvisual'])('rejects historical %s assembly omission/substitution',kind=>{const l=preArrivalLayout(source());if(kind==='missing')l.standingSigns=l.standingSigns!.filter((s:any)=>s.face!=='arrival-direction-crosspost');if(kind==='duplicate')l.standingSigns!.push(l.standingSigns!.find((s:any)=>s.face==='arrival-direction-crosspost')!);if(kind==='wrongface')l.standingSigns!.find((s:any)=>s.face==='arrival-direction-crosspost')!.face='directory-prompt';if(kind==='wrongvisual')l.placements.find((p:any)=>p.id==='arrival-direction-crosspost')!.sprite='standing-hub-nav-directory';expect(()=>standingFace(l,catalog,'arrival-direction-crosspost','hub-nav-arrival-crosspost')).toThrow();});
  it('rejects unrelated visual despite a plausible alias name',()=>expect(()=>assertVisual({...catalog['hub-nav-welcome'],rect:catalog['hub-nav-directory'].rect},catalog['hub-nav-welcome'])).toThrow());
  it('retains the six-post historical sponsor receipt on actual frozen bytes',()=>assertRaisedSponsorFootprints(historicalFloorPlaza('layout') as any,catalog,historicalFloorPlaza('native') as any));
  it('keeps all four current logo inlays walkable below avatars',()=>assertSponsorFootprints(source(),catalog,native()));

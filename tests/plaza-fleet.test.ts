@@ -18,6 +18,12 @@ it('adds three original readable drone types to the preserved two-aircraft plaza
  expect(extra.aircraft.map((a:{id:string})=>a.id)).toEqual(['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey']);
  expect(baseline.tracks.length+extra.aircraft.length).toBe(5);
 });
+it('allows the registered topmost fleet above the exact walkable arrival floor logo while keeping raised panels protected',()=>{
+ const l=read('world/layouts/overworld.json')as MapLayout,r=read('art/source/plaza-fleet-recipe.json');
+ expect(()=>assertFleetSafety(l,r)).not.toThrow();
+ l.images!.find(i=>i.name==='Arrival / VarCamp SW')!.standing=true;
+ expect(()=>assertFleetSafety(l,r)).toThrow(/logo/);
+});
 it('reproduces original native pose PNGs, metadata and three resource atlases without writing',async()=>{
  const result=await renderPlazaFleet();expect(result.aircraft).toHaveLength(3);
  expect(result.aircraft.reduce((n,a)=>n+a.diagnostics.decodedRgbaBytes,0)).toBeLessThan(6*1024*1024);
@@ -34,13 +40,13 @@ it('has three distinctly readable silhouettes, twelve actual native poses and re
  }
  expect(new Set(hashes).size).toBe(3);
 });
-it('uses whole-box clear lanes without props, logos, entrances, exits or activity overlap',()=>{
+it('uses whole-box clear lanes without props, raised/unrelated logos, entrances, exits or activity overlap',()=>{
  const layout=read('world/layouts/overworld.json')as MapLayout,recipe=read('art/source/plaza-fleet-recipe.json');expect(()=>assertFleetSafety(layout,recipe)).not.toThrow();
  for(const[name,mutate]of[
   ['sponsor',(r:typeof recipe)=>{r.aircraft[0].rect={x:61,y:67,width:6,height:2};}],
   ['welcome',(r:typeof recipe)=>{r.aircraft[0].rect={x:62,y:65,width:4,height:2};}],
   ['room door',(r:typeof recipe)=>{r.aircraft[0].rect={x:101,y:69,width:2,height:2};}],
-  ['board',(r:typeof recipe)=>{r.aircraft[0].rect={x:66,y:61,width:6,height:3};}],
+  ['fountain',(r:typeof recipe)=>{r.aircraft[0].rect={x:49,y:70,width:4,height:3};}],
   ['above avatar',(r:typeof recipe)=>{r.aircraft[0].level='aboveAvatar';}],
   ['below avatar',(r:typeof recipe)=>{r.aircraft[0].level='belowAvatar';}],
   ['duplicate',(r:typeof recipe)=>{r.aircraft[1].id=r.aircraft[0].id;}],
