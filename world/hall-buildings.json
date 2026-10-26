@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "base": "a117126d20cbc9b43ac89a5907ed9dee38cc7e4d",
+  "beforeLayoutSha256": "aca2178a8b2965908b15beb489ffb99ac29466e40696335d29680d8c2a4a496c",
+  "glyphsSha256": "84ca7be058c64921726f0879e148c4900444621aae75f427e24c0014ae4e9293",
+  "masters": {
+    "solar": {
+      "path": "art/source/hall-buildings/solar-generated-master.png",
+      "sha256": "4a0dbd292889748524637a1047d2c6b85333fc71aca51666f249d89c544b995b"
+    },
+    "lunar": {
+      "path": "art/source/hall-buildings/lunar-generated-master.png",
+      "sha256": "a87c8955b53f74a0b3b63f8040396a31e567d9542925e22e2152887a9c72e1f7"
+    }
+  },
+  "replacements": [
+    {
+      "before": {
+        "id": "exterior-gate-solar",
+        "sprite": "hall-exterior-solar",
+        "x": 17,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "after": {
+        "id": "exterior-gate-solar",
+        "sprite": "hall-building-solar",
+        "x": 15,
+        "y": 10,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "exterior-gate-lunar",
+        "sprite": "hall-exterior-lunar",
+        "x": 103,
+        "y": 18,
+        "width": 8,
+        "height": 6,
+        "layer": "props"
+      },
+      "after": {
+        "id": "exterior-gate-lunar",
+        "sprite": "hall-building-lunar",
+        "x": 101,
+        "y": 10,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "aries-bold-nameplate",
+        "sprite": "hub-label-aries",
+        "x": 96,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "aries-ground-name",
+        "sprite": "zodiac-ground-name-aries",
+        "x": 96,
+        "y": 74,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "taurus-bold-nameplate",
+        "sprite": "hub-label-taurus",
+        "x": 91,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "taurus-ground-name",
+        "sprite": "zodiac-ground-name-taurus",
+        "x": 91,
+        "y": 93,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "gemini-bold-nameplate",
+        "sprite": "hub-label-gemini",
+        "x": 77,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "gemini-ground-name",
+        "sprite": "zodiac-ground-name-gemini",
+        "x": 77,
+        "y": 107,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "cancer-bold-nameplate",
+        "sprite": "hub-label-cancer",
+        "x": 58,
+        "y": 101,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "cancer-ground-name",
+        "sprite": "zodiac-ground-name-cancer",
+        "x": 58,
+        "y": 112,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "leo-bold-nameplate",
+        "sprite": "hub-label-leo",
+        "x": 39,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "leo-ground-name",
+        "sprite": "zodiac-ground-name-leo",
+        "x": 39,
+        "y": 107,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "virgo-bold-nameplate",
+        "sprite": "hub-label-virgo",
+        "x": 25,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "virgo-ground-name",
+        "sprite": "zodiac-ground-name-virgo",
+        "x": 25,
+        "y": 93,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "libra-bold-nameplate",
+        "sprite": "hub-label-libra",
+        "x": 20,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "libra-ground-name",
+        "sprite": "zodiac-ground-name-libra",
+        "x": 20,
+        "y": 74,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "scorpio-bold-nameplate",
+        "sprite": "hub-label-scorpio",
+        "x": 25,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "scorpio-ground-name",
+        "sprite": "zodiac-ground-name-scorpio",
+        "x": 25,
+        "y": 55,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "sagittarius-bold-nameplate",
+        "sprite": "hub-label-sagittarius",
+        "x": 39,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "sagittarius-ground-name",
+        "sprite": "zodiac-ground-name-sagittarius",
+        "x": 39,
+        "y": 41,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "capricorn-bold-nameplate",
+        "sprite": "hub-label-capricorn",
+        "x": 58,
+        "y": 25,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "capricorn-ground-name",
+        "sprite": "zodiac-ground-name-capricorn",
+        "x": 58,
+        "y": 36,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "aquarius-bold-nameplate",
+        "sprite": "hub-label-aquarius",
+        "x": 77,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "aquarius-ground-name",
+        "sprite": "zodiac-ground-name-aquarius",
+        "x": 77,
+        "y": 41,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "pisces-bold-nameplate",
+        "sprite": "hub-label-pisces",
+        "x": 91,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "pisces-ground-name",
+        "sprite": "zodiac-ground-name-pisces",
+        "x": 91,
+        "y": 55,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-cancer-0",
+        "sprite": "plaza-tree-birch",
+        "x": 63,
+        "y": 112,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-cancer-0",
+        "sprite": "plaza-tree-birch",
+        "x": 73,
+        "y": 111,
+        "width": 2,
+        "height": 3,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "draft-grove-south-inner-low-0",
+        "sprite": "plaza-flower-bed",
+        "x": 65,
+        "y": 113,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      },
+      "after": {
+        "id": "draft-grove-south-inner-low-0",
+        "sprite": "plaza-flower-bed",
+        "x": 75,
+        "y": 111,
+        "width": 2,
+        "height": 2,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-cancer-1",
+        "sprite": "plaza-shrub",
+        "x": 65,
+        "y": 112,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-cancer-1",
+        "sprite": "plaza-shrub",
+        "x": 65,
+        "y": 114,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-outer-2-2",
+        "sprite": "plaza-lavender",
+        "x": 61,
+        "y": 113,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-outer-2-2",
+        "sprite": "plaza-lavender",
+        "x": 63,
+        "y": 114,
+        "width": 2,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-cancer-3",
+        "sprite": "plaza-fern",
+        "x": 66,
+        "y": 111,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-cancer-3",
+        "sprite": "plaza-fern",
+        "x": 71,
+        "y": 110,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-cancer-4",
+        "sprite": "plaza-grass-tuft",
+        "x": 61,
+        "y": 111,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-cancer-4",
+        "sprite": "plaza-grass-tuft",
+        "x": 58,
+        "y": 111,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "before": {
+        "id": "plaza-garden-cancer-5",
+        "sprite": "plaza-mushrooms",
+        "x": 62,
+        "y": 112,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      },
+      "after": {
+        "id": "plaza-garden-cancer-5",
+        "sprite": "plaza-mushrooms",
+        "x": 57,
+        "y": 112,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      }
+    }
+  ],
+  "removed": [
+    {
+      "index": 1251,
+      "placement": {
+        "id": "gate-plaza-return-solar",
+        "sprite": "standing-exterior-road-plaza",
+        "x": 25,
+        "y": 19,
+        "width": 4,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "index": 1255,
+      "placement": {
+        "id": "gate-plaza-return-lunar",
+        "sprite": "standing-exterior-road-plaza",
+        "x": 98,
+        "y": 19,
+        "width": 4,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "index": 1289,
+      "placement": {
+        "id": "gate-plaza-return-solar-support-0",
+        "sprite": "solid-sign-post",
+        "x": 26,
+        "y": 20,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      }
+    },
+    {
+      "index": 1290,
+      "placement": {
+        "id": "gate-plaza-return-lunar-support-0",
+        "sprite": "solid-sign-post",
+        "x": 99,
+        "y": 20,
+        "width": 1,
+        "height": 1,
+        "layer": "props"
+      }
+    }
+  ],
+  "producerInputs": {
+    "tools/maps/native-ownership-context.ts": [
+      "49ac7b80de87ac2f499cafdea8094ab79ab0285a3ad441d1984234470ad5c8d3",
+      "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+    ]
+  },
+  "removedStandingSigns": [
+    {
+      "index": 4,
+      "sign": {
+        "face": "gate-plaza-return-solar",
+        "supports": [
+          "gate-plaza-return-solar-support-0"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "sign": {
+        "face": "gate-plaza-return-lunar",
+        "supports": [
+          "gate-plaza-return-lunar-support-0"
+        ]
+      }
+    }
+  ],
+  "additions": [
+    {
+      "id": "cancer-name-forecourt",
+      "sprite": "path-stone",
+      "x": 61,
+      "y": 110,
+      "width": 6,
+      "height": 4,
+      "layer": "terrain"
+    }
+  ]
+}

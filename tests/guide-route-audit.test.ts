@@ -27,8 +27,8 @@ describe('final plaza guide physical/depth audit',()=>{
  });
  it('accepts the final exact814-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6936,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:14});
-  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual(['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`).sort());
+  expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6960,portalCells:48,walkablePropOverlapCells:52,walkableImageOverlapCells:14});
+  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual([...['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`),...['scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-ground-name`)].sort());
   const {provenance,...graph}=d.routes;
   expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('c29b89353e82bae6dd41a9f4cd5f02a7b63b5cdb1374728d02f48cbce26e3833');
  });

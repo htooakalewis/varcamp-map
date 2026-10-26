@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "recipeSha256": "229462e953be8e7501b220616f7c10eb2a7672e413e42312be4589d98b3ee2f8",
+  "operation": "Uniform nearest-neighbor native compilation; complete enclosed halls; only bottom four-wide threshold cleared; numbered names rendered as translucent glyphs with no board or border below avatars",
+  "subjects": [
+    {
+      "id": "solar",
+      "master": {
+        "path": "art/source/hall-buildings/solar-generated-master.png",
+        "sha256": "4a0dbd292889748524637a1047d2c6b85333fc71aca51666f249d89c544b995b"
+      },
+      "crop": {
+        "left": 8,
+        "top": 67,
+        "width": 1238,
+        "height": 1079
+      },
+      "target": {
+        "x": 0,
+        "y": 49,
+        "width": 384,
+        "height": 335
+      },
+      "threshold": {
+        "x": 128,
+        "y": 352,
+        "width": 128,
+        "height": 32
+      }
+    },
+    {
+      "id": "lunar",
+      "master": {
+        "path": "art/source/hall-buildings/lunar-generated-master.png",
+        "sha256": "a87c8955b53f74a0b3b63f8040396a31e567d9542925e22e2152887a9c72e1f7"
+      },
+      "crop": {
+        "left": 3,
+        "top": 78,
+        "width": 1247,
+        "height": 1101
+      },
+      "target": {
+        "x": 384,
+        "y": 45,
+        "width": 384,
+        "height": 339
+      },
+      "threshold": {
+        "x": 512,
+        "y": 352,
+        "width": 128,
+        "height": 32
+      }
+    }
+  ],
+  "images": [
+    {
+      "path": "assets/tilesets/original/hall-buildings.png",
+      "sha256": "652dcd737f54acac03c153604c93e06c8b7217a1a733cfef4ad21ec95c91d7a8"
+    },
+    {
+      "path": "assets/tilesets/original/zodiac-ground-names.png",
+      "sha256": "a00bba247dcc36b3fbc5c856325d7c8db05beec0d702f4bdea726a7dc4cdf9eb"
+    }
+  ]
+}

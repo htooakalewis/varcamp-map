@@ -77,7 +77,7 @@ describe('zodiac building physical silhouettes',()=>{
   const before=beforePhysicsJson<TiledMap>('maps/overworld.tmj'),savedNative=structuredClone(before),c=loadTileCatalog();expect(reconcileZodiacPhysics(before,current,c)).toEqual(native);expect(before).toEqual(savedNative);expect(reconcileZodiacPhysics(native,current,c)).toEqual(native);
  });
  it('requires current geometry even if every new source and catalog marker is removed',()=>{
-  expect(()=>assertNativePlaza(beforePhysicsJson('maps/overworld.tmj'),beforePhysicsJson('world/layouts/overworld.json'),beforePhysicsJson('art/tile-catalog.json'))).toThrow(/Zodiac physics/);
+  expect(()=>assertNativePlaza(beforePhysicsJson('maps/overworld.tmj'),beforePhysicsJson('world/layouts/overworld.json'),beforePhysicsJson('art/tile-catalog.json'))).toThrow(/Zodiac physics|Hall buildings/);
  });
  it('keeps the native art gate mandatory when the complete new physical catalog family is absent',async()=>{
   const {checkZodiacPhysicsArt}=await import('../tools/maps/zodiac-physics'),c=loadTileCatalog();
@@ -90,7 +90,7 @@ describe('zodiac building physical silhouettes',()=>{
   if(kind==='missing')l.placements=l.placements.filter(p=>p.id!=='libra-building');if(kind==='duplicate')l.placements.push(structuredClone(p));
   if(kind==='old-mask')p.sprite='zodiac-building-libra';if(kind==='raised-facade')p.renderRole='grounded';if(kind==='raised-nameplate')l.placements.find(p=>p.id==='libra-bold-nameplate')!.renderRole='grounded';
   if(kind==='moved')p.x++;if(kind==='closed-door')c[p.sprite].blockingCells.push([5,11]);if(kind==='catalog-missing')delete c[p.sprite];if(kind==='catalog-extra')c['zodiac-physical-extra']=structuredClone(c[p.sprite]);
-  expect(()=>assertNativePlaza(read('maps/overworld.tmj'),l,c)).toThrow(/Zodiac physics/);
+  expect(()=>assertNativePlaza(read('maps/overworld.tmj'),l,c)).toThrow(/Zodiac physics|Hall buildings/);
  });
  it('refuses to repair an unrelated collision while authoring the building fix',async()=>{
   const {reconcileZodiacPhysics}=await import('../tools/maps/zodiac-physics');const m=beforePhysicsJson<TiledMap>('maps/overworld.tmj'),mask=m.layers.find(l=>l.name==='physical-collisions')as TileLayer;

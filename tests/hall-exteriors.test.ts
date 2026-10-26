@@ -1,3 +1,4 @@
+import {preHallBuildingsLayout} from './helpers/hall-buildings-history';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
@@ -13,7 +14,7 @@ const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 describe('Solar and Lunar exterior architectures',()=>{
  for(const [id,x]of [['solar',17],['lunar',103]]as const)it(id+': displays its themed architecture on the unchanged four-wide hall entrance',()=>{
-  const l=read<MapLayout>('world/layouts/overworld.json'),old=beforeHallJson<MapLayout>('world/layouts/overworld.json'),c=loadTileCatalog();
+  const l=preHallBuildingsLayout(read<MapLayout>('world/layouts/overworld.json')),old=beforeHallJson<MapLayout>('world/layouts/overworld.json'),c=loadTileCatalog();
   const p=l.placements.find(p=>p.id==='exterior-gate-'+id)!,b=old.placements.find(p=>p.id==='exterior-gate-'+id)!;
   expect(p.sprite).toBe('hall-exterior-'+id);expect({...p,sprite:b.sprite}).toEqual(b);
   expect(p).toMatchObject({x,y:18,width:8,height:6,layer:'props'});
@@ -21,7 +22,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   expect(c[p.sprite].blockingCells).toHaveLength(24);expect(l.exits.find(e=>e.name===id)).toMatchObject({x:x+2,y:21,width:4,height:1,destination:id+'-hall'});
  });
  it('requires the new exterior family even when all its markers are removed',()=>{
-  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),applyZodiacPhysics(beforeHallJson<MapLayout>('world/layouts/overworld.json')),{...beforeHallJson('art/tile-catalog.json'),...zodiacPhysicsSprites()})).toThrow(/Hall exteriors/);
+  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),applyZodiacPhysics(beforeHallJson<MapLayout>('world/layouts/overworld.json')),{...beforeHallJson('art/tile-catalog.json'),...zodiacPhysicsSprites()})).toThrow(/Hall exteriors|Hall buildings/);
  });
  it('provides a separate transparent native atlas without replacing the original gate artwork',()=>{
   expect(existsSync('assets/tilesets/original/hall-exteriors.png'),'two themed hall facade atlas exists').toBe(true);
@@ -67,7 +68,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   if(kind==='wrong-depth')p.renderRole='grounded';
   if(kind==='blocker')c[p.sprite].blockingCells.push([2,3]);
   if(kind==='extra-catalog')c['hall-exterior-extra']=structuredClone(c[p.sprite]);
-  expect(()=>assertNativePlaza(read<TiledMap>('maps/overworld.tmj'),l,c)).toThrow(/Hall exteriors/);
+  expect(()=>assertNativePlaza(read<TiledMap>('maps/overworld.tmj'),l,c)).toThrow(/Hall exteriors|Hall buildings/);
  });
  it.each(['missing','duplicate','misidentified','resized'])('denies a %s new native reservation',kind=>{
   const m=read<TiledMap>('maps/overworld.tmj'),t=m.tilesets.at(-1)!;

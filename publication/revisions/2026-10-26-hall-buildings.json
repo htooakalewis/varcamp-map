@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "87d24ba1c9886bf8d5721ebf90a7ed89cfa544ff780f7f858b1cfcdabe67001c",
+      "toSha256": "50711c52b4e79823a6b776a99f1b2997686931585c2274ab4ae52f8220f9ba70",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "113cffbcba8e63beee4824daad6cd0b9bafad55df1655a9ca7fb739431c004be",
+      "toSha256": "0963b35482a6b04600f05644e79110bf8c358ab547e631f68a2fc832cca9ef89",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "ad74592f1d6258a15f05331cab430f64aeb5f10c5a44ab4aeecf567611a00c17",
+      "toSha256": "85f6069b8c11367c766dffb91569e0e2f9c09d253535df41be0a655e51831301",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "9dba4fd1a6ded681547fe2ae2eb1c2f73c9fd01bb4b8eafcf89cd262748087e4",
+      "toSha256": "86675106b1a4eaaf1424b73801f13880cfcbb5d04b8958ffe08217db2358f4fe",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "367fd06b6b46685668a0d1070430998cee2d6ddcf99515beb687ff5e840cb02b",
+      "toSha256": "6e1cc3e7a8a7b6b8e72788773ac1c2ff7038e1250d2fd93785fa00cb0efb284b",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "028df8b69d6c4518353b13d2b91ed3e56b07d2981947f577f747d278ce461c61",
+      "toSha256": "f68c50d88a7b5a2122e5bf39b4bf94214db4372d1d96a2569b768005d2f0bfcc",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "1cd727e3de9ba86c35a35676b4358398dfa4d313eb3f483fa7705958496d95f6",
+      "toSha256": "7982db05f90ecdde4449371d9739092e36b3020ffbc2d0d22f56807c522463c6",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "137ee325a9f9169c16de012d9727e531c47e57ea1b0367a91e92621e831f2b41",
+      "toSha256": "a8041a6debaeb1fb7f7688d6c24098c240d5bedd29dd15536e45c408966418ed",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "1db2e2ea0ec982c876472a8590774b184bfd50e9acc224613835289427245d02",
+      "toSha256": "e78b5ea5cd11cdb5aa6242850162fa4858bd7e2420e963fd40ed61ce9073b495",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "59c575fca44a53281bd57a9f08f76135ad477ba87dbd45f518346de8da4eec1c",
+      "toSha256": "e25ac091ad8eb53e5e089209f313f2d18156ac2c6944528263ab4f80c34c72e5",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "82b0d036ddb877a097d3d686836febb1a59255de9f5ef252c1d2160925f9a6d3",
+      "toSha256": "e92fc2529371a0cabff774f7615161567d4e5dbd082c8c3b6e08c75cc029fbb3",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "996016bf50b340ee33697cc31be632f01304931bd90c7e6004025cc7a38d1d47",
+      "toSha256": "bdca0a969eeca4c0a44082baded614e8f60d8ef26e755229a2bb7e0d818561df",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "16efe93e6327bdd34bdc596dd26a6d6da751a20a2c6613c5ef744d1abe10ce34",
+      "toSha256": "43863ac1ccc1ddbe7e31c592c244e6f62928ea5c28733ec717b21d511469553f",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "2a6bb5613f5579bb28ddd5defa689ae29fe4c220148e6687b5372476244e29fd",
+      "toSha256": "f0dee8b3f2d205c9afa8a8812812b883ba571f8a9c2d511c58b4e480ab26c876",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "bbc4b187522772c089484b4b9f72ee4e6d9ad69df7ee7a278a8116d567c8968f",
+      "toSha256": "de13b51afceaa831b385deb34bcb61a8123d490c00ace8d2ae45f6431fc1a40d",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "d667357669140698118375e5ea0b1d3a32b5f15c29d037ed0d09542df102e53b",
+      "toSha256": "bc95226c6c917472fd89c2aaaa30e08be06a08cb05a337d534a906b8502c40d7",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "07f029bc51266b1970bfee3ce77d159cf40ea0561fbe51f461a70620e8a360f5",
+      "toSha256": "3590819464321b98143f791843ed639f23191c347bb1daadafc1fb6ac451d6b0",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "f4fd455e72feb19595d8fed34c569953a526f93d992b33df87573bbaf2f43715",
+      "toSha256": "b9890c452f6a6f71bc80a6c1a924c3e6575249f261c3d09512524816f3b3911b",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "9b8d69d21abeb0e404cadd35d7283b8a2b9e0ba59ac516b1b4984485b1f8c78d",
+      "toSha256": "38eed6fbe0549c27c52d7ad992b8a64e6b94ee9bd73ec867b3846354fff11f87",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "e6813f93999fb542be3e6ed317cb5446232e837cf37c5c674e6abd11ff5b8ea1",
+      "toSha256": "d64889979ee8c18fe7985a11697703d89e2890ec09f079ac0b4007e64e165c51",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "2b456d307acbc591d743febb183deeebae5b3a0c900943d2e4b6c2cbea264fd5",
+      "toSha256": "cd6c879707f320da680cc377ec0bf502a5fffcd72592d5ebe270577afb7f1d2e",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "20734ea99be2eb917d46a7a18720d037fbba6709710f69e273a3dcfa1388c759",
+      "toSha256": "aa1a7fbca1791e80decf14c8d0b9fb916f203fbab4149eacfbb63655b7d16417",
+      "reason": "Owner-authorized Solar and Lunar enclosed hall buildings and twelve zodiac ground-name watermarks. Retain prior assets, atlas reservations and portal positions; confine physical changes to hall fronts and retired adjacent signposts; preserve the public guide graph."
+    }
+  ]
+}

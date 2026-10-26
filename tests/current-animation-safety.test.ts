@@ -28,9 +28,9 @@ it('current plaza entry rejects coherent omission of the required Roadster',()=>
  // ownership checks; this remains a coherent source/native omission.
  // Independently retain the unconditional role-roster denial as well.
  expect(()=>assertNativeAnimationSafety(map,layout,read('art/tile-catalog.json'))).toThrow(/animation safety/i);
- expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/(?:Plaza patrol|Expo spacing|Fountain motion|Leo lion head): unrelated source change/i);
+ expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/(?:Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings): unrelated source change/i);
  // Leaving the atlas orphaned is also refused by the mandatory patrol boundary.
- expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/(?:Plaza patrol|Expo spacing|Fountain motion|Leo lion head): unrelated source change/i);
+ expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/(?:Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings): unrelated source change/i);
 });
 it('current boundary rejects native upper pixels outside actual owning alpha255 art even when all output hashes are coherently rebound',async()=>{
  const project=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-upper-alpha-'));

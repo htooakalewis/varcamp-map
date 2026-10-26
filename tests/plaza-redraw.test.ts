@@ -1,3 +1,4 @@
+import {applyHallBuildings,restoreHallBuildings} from '../tools/maps/hall-buildings';
 import {applyLeoLionHead,restoreLeoLionHead} from '../tools/maps/leo-lion-head';
 import {applyFountainMotion,restoreFountainMotion} from '../tools/maps/fountain-motion';
 import {applyExpoSpacing,restoreExpoSpacing} from '../tools/maps/expo-spacing';
@@ -33,12 +34,12 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
  expect(l.standingSigns!.filter(s=>s.face==='varcamp-nameplate'||s.faceKind==='image')).toEqual([]);
  // The twelve expo booth nameplates (fascia faces over fascia posts) are the only assemblies added since the retirements.
  const nameplate=(face:string)=>/^expo-[ns]\d-nameplate-fascia$/.test(face);
- expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&!nameplate(s.face))).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.face!=='arrival-direction-crosspost'&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
+ expect(l.standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&!nameplate(s.face))).toEqual(before().standingSigns!.filter(s=>s.face!=='varcamp-nameplate'&&s.face!=='arrival-direction-crosspost'&&!['gate-plaza-return-solar','gate-plaza-return-lunar'].includes(s.face)&&s.faceKind!=='image'&&!WELCOME_PLAZA_RETIREMENT.standingSigns.includes(s.face)&&!WELCOME_SIGN_RETIREMENT.standingSigns.includes(s.face)));
  expect(l.standingSigns!.filter(s=>nameplate(s.face))).toHaveLength(12);
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(l))))))))))))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyHallBuildings(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(restoreHallBuildings(l))))))))))))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;

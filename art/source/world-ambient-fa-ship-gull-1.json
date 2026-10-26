@@ -1963,7 +1963,7 @@
         },
         {
           "path": "tools/maps/native-ownership-context.ts",
-          "sha256": "49ac7b80de87ac2f499cafdea8094ab79ab0285a3ad441d1984234470ad5c8d3"
+          "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
         },
         {
           "path": "art/source/native-ownership-context.json",

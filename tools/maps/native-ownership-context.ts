@@ -6,6 +6,7 @@ import type{TiledMap,TiledLayer,TiledTileset}from'./types';
 import {PATROL_IDS} from './patrol-roles';
 import {FOUNTAIN_MOTION_IDS} from './fountain-motion-roles';
 import {LEO_LION_IMAGE} from './leo-lion-head-definition';
+import {HALL_BUILDING_ATLASES} from './hall-buildings-definition';
 
 interface ContextRow{
  atlases:TiledTileset[];
@@ -114,6 +115,8 @@ function patrolAtlases(source:TiledMap,start:number):TiledTileset[]{
 }
 function hallExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefined{
  const r=HALL_EXTERIOR_ATLAS,sets=source.tilesets.filter(t=>t.image===r.image||t.name===r.name);
+ // The former gate is retired from paint, but its exact reservation is never reused.
+ if(!sets.length&&source.tilesets.some(t=>t.image==='../assets/tilesets/original/hall-buildings.png'))return{...r,firstgid:start,tilewidth:32,tileheight:32,properties:[{name:'tilesetCopyright',type:'string',value:'Original Solar and Lunar pavilion artwork generated for VarCamp using OpenAI image generation, 2026-10-25; native sprite compilation by the VarCamp map team; Original project artwork; permitted project distribution'}]};
  need(sets.length<=1,'hall exterior atlas duplicated');if(!sets.length)return;
  need(identities(source)[0]==='overworld','hall exterior atlas requires overworld identity');
  const set=sets[0];need(/^art-\d+$/.test(set.name??'')&&set.image===r.image&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&set.imageheight===r.imageheight&&set.tilecount===r.tilecount&&!set.tiles,'hall exterior source atlas identity/geometry changed');
@@ -206,7 +209,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true,includePatrol=true,includeFountain=true,includeLeo=true):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true,includePatrol=true,includeFountain=true,includeLeo=true,includeBuildings=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -250,6 +253,13 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   if(lions.length){const t=lions[0];need(fountain.length===2,'Leo ornament requires the preceding fountain reservations');need(/^art-\d+$/.test(t.name??'')&&t.image==='../'+LEO_LION_IMAGE&&t.tilewidth===32&&t.tileheight===32&&!t.source&&(t.spacing??0)===0&&(t.margin??0)===0&&t.columns===4&&t.imagewidth===128&&t.imageheight===96&&t.tilecount===12&&!t.tiles,'Leo ornament atlas identity/geometry changed');
    if(includeLeo&&includeFountain&&includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push({...structuredClone(t),name:'leo-lion-head',firstgid:v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0)+[...arrival,...patrol,...fountain].reduce((n,s)=>n+s.tilecount!,0)});
   }
+  const buildings=source.tilesets.filter(t=>HALL_BUILDING_ATLASES.some(r=>r.image===t.image||r.name===t.name));
+  if(buildings.length){need(lions.length===1&&buildings.length===2,'two hall/ground-name atlases require the preceding Leo ornament');let at=v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0)+[...arrival,...patrol,...fountain,...lions].reduce((n,t)=>n+t.tilecount!,0);
+   for(const r of HALL_BUILDING_ATLASES){const matches=buildings.filter(t=>t.image===r.image||t.name===r.name);need(matches.length===1,'hall/ground-name atlas missing or duplicated');const t=matches[0];
+    need(/^art-\d+$/.test(t.name??'')&&t.image===r.image&&t.tilewidth===32&&t.tileheight===32&&!t.source&&(t.spacing??0)===0&&(t.margin??0)===0&&t.columns===r.columns&&t.imagewidth===r.imagewidth&&t.imageheight===r.imageheight&&t.tilecount===r.tilecount&&!t.tiles,'hall/ground-name atlas geometry changed');
+    if(includeBuildings&&includeLeo&&includeFountain&&includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push({...structuredClone(t),name:r.name,firstgid:at});at+=r.tilecount;
+   }
+  }
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
@@ -272,6 +282,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact previous Leo release, before the two building/ground-name reservations.
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,true,true,true,false)))return;
  // Exact preceding fountain context, before the single Leo ornament reservation.
  if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,true,true,false)))return;
  // Exact previous plaza context; final current validation requires the water components.

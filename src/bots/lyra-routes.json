@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "f4fd455e72feb19595d8fed34c569953a526f93d992b33df87573bbaf2f43715",
-      "maps/overworld.tmj": "ad74592f1d6258a15f05331cab430f64aeb5f10c5a44ab4aeecf567611a00c17",
+      "world/layouts/overworld.json": "b9890c452f6a6f71bc80a6c1a924c3e6575249f261c3d09512524816f3b3911b",
+      "maps/overworld.tmj": "85f6069b8c11367c766dffb91569e0e2f9c09d253535df41be0a655e51831301",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
@@ -11,9 +11,9 @@
       "tests/helpers/editor-catalog-history.ts": "b6668f1d84d6c028c1cba99d2ff3e936c241a030edbddb061a222168711eb7ee",
       "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
       "tests/helpers/physical-prop-contracts.ts": "185899aba292ae67aa96c55c65be7d90a55de108ba1909de98a609da8298a4a1",
-      "art/tile-catalog.json": "113cffbcba8e63beee4824daad6cd0b9bafad55df1655a9ca7fb739431c004be",
+      "art/tile-catalog.json": "0963b35482a6b04600f05644e79110bf8c358ab547e631f68a2fc832cca9ef89",
       "tools/bots/route-audit.ts": "4387a9aa36170d384e27ca2dd18ea1b56012400e4dbe279371a425ed42c0ebe9",
-      "tests/guide-route-audit.test.ts": "06cca4865af8b128dfc047bbbaee02ab6754b58dd5f8ff32ca0c9ca7b47c2c9c",
+      "tests/guide-route-audit.test.ts": "6e8f95bcfd1f39a17c9e32a577055c0869d596027b06d0f920a8a0f591062329",
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15",
       "tools/maps/expo-spacing.ts": "4330f38db5c0803df656a952819fd528be46e99b00f7a1186e727165692f3852",
       "world/expo-spacing.json": "7a89b2714d8073fed691cbd1c4d61cf1600a239d23581c2d84d427beb3f83a92",
@@ -26,14 +26,20 @@
       "art/source/plaza-fountain-water.json": "2b117c4b1bbee7086cbb04d501f2afff4885e157fac58a330c16daef2fb3b8ad",
       "art/source/plaza-fountain-water-upper.json": "62b67587ed9404ff5a164ebbef5782aef2a590fc82fb99ee64c850e2e4535073",
       "tools/maps/leo-lion-head.ts": "ec01dc2508bbfa4191d10961a8e0b3bae7561a1b3ad95ac536dda4904469897d",
-      "tools/maps/leo-lion-head-provenance.ts": "1a2ce4115ff4969f7b3cd77e37a290897524f8e6fe67033ea095e2e6217b6473",
+      "tools/maps/leo-lion-head-provenance.ts": "c788252f84001038b1f92f415c42eae0e9e7b92810c8b508302f5af7161f850c",
       "tools/maps/leo-lion-head-definition.ts": "96cf0d83176d727278157c19962178c9be20f2df50124f1ff55d5e39106406d8",
       "tools/art/leo-lion-head.ts": "e7c029ecdeec16d7c155e166e907538752728e6836675f6498064c807dcba15c",
       "world/leo-lion-head.json": "c87a048eebd33362874ec230f87aaac6d2d0b3571fd67247de25f473868d1762",
-      "art/source/leo-lion-head.json": "7a0d59a59ccfdfb760eef8bde12078a8a4bfc77c3bc4717cdecdc9870deacffb"
+      "art/source/leo-lion-head.json": "7a0d59a59ccfdfb760eef8bde12078a8a4bfc77c3bc4717cdecdc9870deacffb",
+      "tools/maps/hall-buildings.ts": "60c0fe6d428dfe28dee110fd4700dfd337b047518c601c742a482d6c705a409e",
+      "tools/maps/hall-buildings-provenance.ts": "d429b629688c3362b3d6d8c19de207d543061dca3635f97485ef82d881006cc4",
+      "tools/maps/hall-buildings-definition.ts": "8ba8606c519803afe7cdb53bcde93d7cf0f9a7fa5f1524de401b3a59899fe9f0",
+      "tools/art/hall-buildings.ts": "f124d57d926f3d8357482b957754f312c5de861e438798840b77d52420fe8f07",
+      "world/hall-buildings.json": "229462e953be8e7501b220616f7c10eb2a7672e413e42312be4589d98b3ee2f8",
+      "art/source/hall-buildings.json": "e045d0e867523f8292f1a39ae3e1b51bbe1033117f834a7610cd7e64e848c353"
     },
     "allowedCellsSha256": "34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d",
-    "geometrySha256": "f588e03ac546af0bb3a507173b6ce972db78f01f1c56814caf65de37a6d5ce3b",
+    "geometrySha256": "84389e28069e972359b2b1f150d1084ebb409114eff6d100eae0c3026d5a4b11",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [
