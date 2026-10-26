@@ -51,7 +51,7 @@ it('rejects native upper water outside the owning fountain and coherent omission
  layout.animatedOverlays=layout.animatedOverlays.filter((o:any)=>!o.name.startsWith('plaza-fountain-water'));
  clean.layers=clean.layers.filter((l:any)=>!l.name.startsWith('plaza-fountain-water'));
  clean.tilesets=clean.tilesets.filter((s:any)=>!s.name.startsWith('plaza-fountain-water'));
- expect(()=>assertCurrentNativeMap('overworld',clean,layout,read('maps/overworld.wam'),catalog)).toThrow(/Fountain motion/);
+ expect(()=>assertCurrentNativeMap('overworld',clean,layout,read('maps/overworld.wam'),catalog)).toThrow(/Fountain motion|Leo lion head/);
 });
 
 it('adds only the two fountain effects and retains every physical and chat setting',()=>{

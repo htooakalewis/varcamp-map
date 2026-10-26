@@ -1,3 +1,4 @@
+import {applyLeoLionHead,restoreLeoLionHead} from '../tools/maps/leo-lion-head';
 import {applyFountainMotion,restoreFountainMotion} from '../tools/maps/fountain-motion';
 import {applyExpoSpacing,restoreExpoSpacing} from '../tools/maps/expo-spacing';
 import {readFileSync} from 'node:fs';
@@ -37,7 +38,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(l))))))))))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(l))))))))))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;

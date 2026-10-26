@@ -1,6 +1,7 @@
 import {applyPlazaPatrol,restorePlazaPatrol} from './plaza-patrol';
 import {applyExpoSpacing,restoreExpoSpacing} from './expo-spacing';
 import {applyFountainMotion,restoreFountainMotion} from './fountain-motion';
+import {applyLeoLionHead,restoreLeoLionHead,assertLeoLionHead} from './leo-lion-head';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {buildMap} from './builder';
@@ -57,13 +58,14 @@ export function assertNativePlaza(map:TiledMap,layout:MapLayout,catalog:TileCata
  need(layout.id==='overworld'&&identity.length===1&&identity[0].type==='string'&&identity[0].value==='overworld'&&map.width===128&&map.height===128,'current map/layout identity changed');
  assertZodiacPhysics(layout,catalog);
  assertHallExteriors(layout,catalog);
- const priorPatrol=restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(layout)));
+ assertLeoLionHead(layout,catalog);
+ const priorPatrol=restorePlazaPatrol(restoreExpoSpacing(restoreFountainMotion(restoreLeoLionHead(layout))));
  assertArrivalRefresh(priorPatrol);
  const priorArrival=restoreArrivalRefresh(priorPatrol);
  const priorPhysics=restoreZodiacPhysics(priorArrival);
  assertZodiacExteriors(priorPhysics,catalog);
  assertHallExteriors(layout,catalog);
- need(isDeepStrictEqual(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyHallExteriors(applyZodiacExteriors(refinePlazaFloorGarden(priorPhysics)))))))),layout),'current source artwork/identity roster changed');
+ need(isDeepStrictEqual(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyHallExteriors(applyZodiacExteriors(refinePlazaFloorGarden(priorPhysics))))))))),layout),'current source artwork/identity roster changed');
  for(const [id,s] of Object.entries({...plazaGardenSprites(),...plazaBuildingSprites(),...plazaGrassSprites(),...plazaPotSprites(),...zodiacEmblemSprites()}))need(isDeepStrictEqual(catalog[id],s),`original artwork depth/footprint definition changed: ${id}`);
  const intended=buildMap(layout,catalog).tmj;assertNativeSourceProjection(map,intended);
 }

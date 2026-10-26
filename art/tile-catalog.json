@@ -39944,5 +39944,17 @@
     ],
     "level": "aboveAvatar",
     "sourceId": "zodiac-exteriors"
+  },
+  "leo-lion-head": {
+    "sheet": "assets/tilesets/original/leo-lion-head.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 4,
+      "height": 3
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
   }
 }

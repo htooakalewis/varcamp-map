@@ -1,5 +1,6 @@
 import {checkPlazaPatrolArt} from './plaza-patrol';
 import {checkFountainMotionArt} from './fountain-motion';
+import {checkLeoLionHeadArt} from './leo-lion-head';
 import{checkStandingCaptionArt}from'./standing-captions';
 import {checkTropicalCoveArt} from './tropical-cove';
 import{checkWorldAmbientArt}from'./world-ambient-check';
@@ -45,6 +46,7 @@ export async function checkArt(catalog: TileCatalog = loadTileCatalog()): Promis
   const arrivalErrors=await checkArrivalRefreshArt();if(arrivalErrors.length)return arrivalErrors;
   const patrolErrors=await checkPlazaPatrolArt();if(patrolErrors.length)return patrolErrors;
   try{await checkFountainMotionArt();}catch(error){errors.push(String(error));}
+  try{await checkLeoLionHeadArt(catalog);}catch(error){errors.push(String(error));}
   errors.push(...await checkWorldAmbientArt());
   try{await checkStandingCaptionArt();}catch(error){errors.push(String(error));}
   try{await checkTropicalCoveArt();}catch(error){errors.push(String(error));}

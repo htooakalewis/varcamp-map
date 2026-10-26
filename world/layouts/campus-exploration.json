@@ -2014,7 +2014,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "ada4a9c32f8d30e45a758c361a908e61dc7035b26cdaffc0676c9b94be6b1712"
+            "sha256": "49ac7b80de87ac2f499cafdea8094ab79ab0285a3ad441d1984234470ad5c8d3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -2438,7 +2438,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "ada4a9c32f8d30e45a758c361a908e61dc7035b26cdaffc0676c9b94be6b1712"
+            "sha256": "49ac7b80de87ac2f499cafdea8094ab79ab0285a3ad441d1984234470ad5c8d3"
           },
           {
             "path": "art/source/native-ownership-context.json",

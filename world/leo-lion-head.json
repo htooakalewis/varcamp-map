@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "base": "427c4a2e423ae4bad5c5eff2193b1f424783e729",
+  "beforeLayoutSha256": "8ef388fedc8a18f888597622c059da98110ea7636001f78d5fa8241ba4a1623d",
+  "master": {
+    "path": "art/source/leo-lion-head/generated-master.png",
+    "sha256": "7d0402abcfeb992eeaa5ac7c8d78436e225eb7a4a405fdd561111ef80115fa9f"
+  },
+  "image": "assets/tilesets/original/leo-lion-head.png",
+  "placement": {
+    "id": "leo-lion-head",
+    "sprite": "leo-lion-head",
+    "x": 43,
+    "y": 93,
+    "width": 4,
+    "height": 3,
+    "layer": "props"
+  },
+  "producerInputs": {
+    "tools/maps/native-ownership-context.ts": [
+      "ada4a9c32f8d30e45a758c361a908e61dc7035b26cdaffc0676c9b94be6b1712",
+      "49ac7b80de87ac2f499cafdea8094ab79ab0285a3ad441d1984234470ad5c8d3"
+    ]
+  }
+}

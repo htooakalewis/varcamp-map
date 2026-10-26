@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "master": {
+    "path": "art/source/leo-lion-head/generated-master.png",
+    "sha256": "7d0402abcfeb992eeaa5ac7c8d78436e225eb7a4a405fdd561111ef80115fa9f"
+  },
+  "operation": "Complete transparent lion-head ornament; uniform nearest-neighbor fit inside128x96; alpha below192 cleared; original building unchanged",
+  "crop": {
+    "left": 123,
+    "top": 41,
+    "width": 1006,
+    "height": 1165
+  },
+  "target": {
+    "x": 23,
+    "y": 1,
+    "width": 81,
+    "height": 94
+  },
+  "image": {
+    "path": "assets/tilesets/original/leo-lion-head.png",
+    "width": 128,
+    "height": 96,
+    "sha256": "b2c76652721cc8b30906d8fbf999add8a35164f1ba024ba14e47513389fe12c4"
+  },
+  "sprite": {
+    "sheet": "assets/tilesets/original/leo-lion-head.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 4,
+      "height": 3
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  }
+}
