@@ -12,15 +12,15 @@ No art regeneration. All603old media files,133other map/layout/WAM files, old ca
 
 Interfaces: genuine predecessor -> reviewed12masks/24placement successor -> explicit invisible collision remap + native paint transaction -> unchanged792guide graph -> named publication successor.
 
-- [ ] Freeze genuine65a2source/native/catalog/registry/WAM inputs. Write tests for Libra's blank north gap, solid right wall and above-avatar drawing; observe failures.
+- [x] Freeze genuine65a2source/native/catalog/registry/WAM inputs. Write tests for Libra's blank north gap, solid right wall and above-avatar drawing; observe failures.
   Run: fnm exec --using26.11.1 npm test -- tests/zodiac-physics.test.ts
   Expected: reported defect assertions fail against the current copied mask and grounded assembly.
-- [ ] Add per-sign literal masks, same-atlas physical sprite definitions, mandatory geometry/art guards and finite placement/native author. Retain all old pixels/catalog/atlas bodies; add only one needed raised paint layer.
-- [ ] Extend historical proofs through exact independently frozen predecessors, then re-qualify public guide provenance with unchanged graph/portal controls and only bounded collision changes. Append a publication revision; preserve all earlier receipts.
-- [ ] Run focused geometry/history/publication checks, maps/art/type/build validation and one stable full-suite comparison against the exact130known failure names. Run Node suite and identify its one existing COPY readability failure.
+- [x] Add per-sign literal masks, same-atlas physical sprite definitions, mandatory geometry/art guards and finite placement/native author. Retain all old pixels/catalog/atlas bodies; add only one needed raised paint layer.
+- [x] Extend historical proofs through exact independently frozen predecessors, then re-qualify public guide provenance with unchanged graph/portal controls and only bounded collision changes. Append a publication revision; preserve all earlier receipts.
+- [x] Run focused geometry/history/publication checks, maps/art/type/build validation and one stable full-suite comparison against the exact130known failure names. Run Node suite and identify its one existing COPY readability failure.
   Run: fnm exec --using26.11.1 npm test -- tests/zodiac-physics.test.ts tests/zodiac-exteriors.test.ts tests/hall-exteriors.test.ts tests/guide-route-audit.test.ts tests/lyra-bot.test.ts --maxWorkers=1 --testTimeout=30000
   Expected: focused tests pass; full comparison adds no new failure names/suite errors.
-- [ ] Commit locally; obtain one fresh whole-change review and fix Important findings RED->GREEN. Record all evidence.
+- [x] Commit locally; obtain one fresh whole-change review and fix Important findings RED->GREEN. Record all evidence.
 
 Finish: FFlocalmain; prepare/review/apply a new guarded release; verify two complete readbacks and media-off live keyboard collisions/cleared Libra road/all12door roundtrips. Record receipts and close out only after browser closure.
 
@@ -31,3 +31,5 @@ Finish: FFlocalmain; prepare/review/apply a new guarded release; verify two comp
 - Current production gates remain mandatory after every new marker is removed. Authoring accepts only genuine before/current projections and cannot repair unrelated native tampering.
 - Old pixels,85reservations, controls, WAMs, unrelated maps/layouts and792guide graph remain exact; private services remain stopped.
 - Live keyboard contacts must test actual player physics, alongside path/door checks; keep media off and preserve organizer data through double readback.
+
+Completed live: all12keyboard walls/door roundtrips and Libra gap pass;7smoke checks; full2512/2382pass/130unchanged known failures. Details: .orca/zodiac-physics/VERIFICATION.md.
