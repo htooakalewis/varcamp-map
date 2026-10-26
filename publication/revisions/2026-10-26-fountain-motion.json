@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "4a19ec10a97afda2689fa3606b8907fbd7ee4fe76d31fe4a87531c2e1216e934",
+      "toSha256": "4d459183c11b7e5cc46002b35d70b719990ec10ce7dd44d6b7c3224f75457519",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "8c5bf26c15758f93b41bb18617f82e074ef85c3f7c67be51df59493a9b1e5fd1",
+      "toSha256": "ab928d84e4685ab211fb9223edf63ea047dec03550dc5535bd7652f3d33a0dab",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "5a269c1ed1a9c39364c5c9e7e93b12ba8a724ab3772b105438a009caea237b65",
+      "toSha256": "eacdf74ce9ee6ad0364b5dfe30e6a3ba8560000edce2884db5ef927d05af9171",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "c36e791aaab73d1d9244012ab0716382ff94e9efa3aeca2e10ffabf8b63a88b1",
+      "toSha256": "beb4a387b740405abfbc10ae25467cfe652612c84600e06361e09eb055632567",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "cdb1c3df0bde6f64f77dcdfa84fdd693b0b04c7800629288a6f4e1449513ec23",
+      "toSha256": "31cb1ba24b0c1fcb95fd64b32df9d3bfb90729e484946bde8d2a21cdd1cb97d9",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "de8f42e4f376a4f1d2e6bb8c47fb611f29caa8d24216fcfc66e9b9ca005a3238",
+      "toSha256": "1533323e7639110c4daebb92a1f0d5c250aa5195fcefd6cae539c5e17ff06f8b",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "cf2f7b73388e89bb438f95e80a524a6ae989c16d9580d9bc72ddb51bdf9bebf9",
+      "toSha256": "4a9bcb878315c8623f0c36bfb455299bda59de2815a2a6b42b5d3bec7fc020c4",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "09c19de52513865dead49085b49ac03fe279d1c37f60fad2d5971c2a0681ad35",
+      "toSha256": "ebbc40bc2b745d31e5c880456cb29101e71626bd27ed5b51c30fd232bf6a3cf6",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "95a065277a471e649f61e617f1eeab1b115e8cadf540c9216ca98888376946ac",
+      "toSha256": "1c05779caa1c7053e9d55990dee9b40b0566bf0baa4944e95f31aa4590f52e33",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "3989b83573aae21c4a7a19fd011dca3a73a806afd8049bf842237bfa45823076",
+      "toSha256": "a8d21ddea8b23fb28cf7ebaa5d4399b5dea6535ba565490ed08661bf14cb37dd",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "9449e6fc07552bbe19a6d7dcfcfbb419d585e497b11909b0cffd3ef431da1c0b",
+      "toSha256": "a6d33315592b6437971cf21e354bfcb79b2a12f3c15f1073549afa3b37c67b7e",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "67aa83785e8b60ca9a26b627754141e1b05543df53f7bc14366822bd68fc16b2",
+      "toSha256": "106dff9d7989705b84111fd648e7e2e5db6023bd9d77ca4106d3af5a82c57492",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "7dbcb20476d76e4b4200fb266c3bf493da8ce021d9e2b84d5680107775d8bd1b",
+      "toSha256": "fddeb3801c0a5ac714b6e579232b81733523158ba4fd00afb49ed0ec06ae1d91",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "d597c6ceea7e5898e6bc01cd58baede97a65c62b3114a7b50b62bcee1205dc7a",
+      "toSha256": "2825a912aac598670d7b2a7112716b8863f33e151eaadddae8e80d014e95ddf2",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "70e7c27ba29a65553c19422db15fc0b10d0e5a7c405ca8b89b1af2c281957979",
+      "toSha256": "e682a2a2b265a617c2cd89e7fc63f4be0b7874eaa10b1206f4bc7bcf0d7ffa01",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "4ae70f6cd2adbffdcff2cc2a8e8b6c066a4a72f283b002550eeffb48a64da74f",
+      "toSha256": "8d492fe094a269e1b1f8dead5634805c7f43d20b70e28f45f07068c1c89ef7cf",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "ba3581231bd71ee4b1303e74af970b3008452bb85a9dbd971e933c27cb26e777",
+      "toSha256": "224b22bd12d41799b011c1b3a0a9c2f1492c28dc0d1ba8ae9b5e1586086c6d01",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "b4a5f82708b37bfc72ad3e8249e823038ed3cccf7a72588ddd32ea3fc20c79b0",
+      "toSha256": "527a92cbc1130ddc3094a12bb097d5e8a231a29f6bd0a60a55638eb74328f495",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "e16c6f51527750ed0834a8fc5bc5017fcd2535bddf587db3031aa71cecc04397",
+      "toSha256": "2eddabfc17f8d0f1ffb153bd3bc6a45004046ca8f96c4152739db988a1281c32",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "9417e7e0487a5ac9ab4db5d3bd620e363e2316ed9798322764839b38d5da4e6b",
+      "toSha256": "bb3af75851722de6da96ee603ff0ace31e88edbce1aa3f68cff45d9d1ae54d5e",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "1c909d23084d424a3f7ae93584d97b3ecdaa72c80d42565d1a04240f4b4506d5",
+      "toSha256": "a2ebfe604a7c998d3feea6ae792f6e27489294d30fa891d0e8b1a11bc8e09ef3",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "5ffafca5042e8360538745937186afdc48322324591794a397305a995d443f29",
+      "toSha256": "c568dfd609c219cabc2faa71d8b90a51dba73f8499eba4693e82706437a5067d",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "052d573d7e8aa8a1bc80d4c0eea0d2c4b32a08c16d37c4fd6bb299b45a33addb",
+      "toSha256": "7386af3547ce3112a082eda11a22258643663388d3fedfdf10e5af5c9e9b0b51",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "522643f4b67dcacc408d0b5b8ccfc4602fddcceed955c05919d0c5cc7398264d",
+      "toSha256": "5440883d578b4f117a66b3c9a00c83af441ad04f7d181c3c3086227487fffedf",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "14961b3a7504c8021a0acfb0c2562e388860e430bb95ed9de027920e32616ecd",
+      "toSha256": "33808c015baa888c2545828cdc9d63ca15706dc05b14443c175d4c006b50376f",
+      "reason": "Owner-authorized fountain water animation: retain every placement, collision cell and original atlas; add two water-only components on the existing fountain depth planes and requalify the unchanged public guide graph."
+    }
+  ]
+}

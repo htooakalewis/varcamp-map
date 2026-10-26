@@ -28,6 +28,7 @@ import {advancePatrolProvenance} from '../../tools/maps/plaza-patrol-provenance'
 import {beforePatrolJson} from './plaza-patrol-history';
 import {applyExpoSpacing,reconcileExpoSpacing} from '../../tools/maps/expo-spacing';
 import {spacingSuccessorSha,beforeSpacingJson} from './expo-spacing-history';
+import {applyFountainMotion,reconcileFountainMotion} from '../../tools/maps/fountain-motion';
 import type {TileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
 import contract from '../../world/plaza-floor-garden-native.json';
@@ -235,7 +236,7 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const patrol=applyPlazaPatrol(arrival),patrolNative=reconcilePlazaPatrol(arrivalNative,patrol,catalog);
  assert.deepEqual(patrol,beforeSpacingJson('world/layouts/overworld.json'),'Genuine pre-spacing source matches the patrol forward operation');
  assert.deepEqual(patrolNative,beforeSpacingJson('maps/overworld.tmj'),'Genuine pre-spacing native matches the patrol forward operation');
- const spaced=applyExpoSpacing(patrol);return {layout:spaced,native:reconcileExpoSpacing(patrolNative,spaced,catalog)};
+ const spaced=applyExpoSpacing(patrol),spacedNative=reconcileExpoSpacing(patrolNative,spaced,catalog),flowing=applyFountainMotion(spaced);return {layout:flowing,native:reconcileFountainMotion(spacedNative,flowing,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

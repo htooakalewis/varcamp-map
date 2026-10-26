@@ -4,6 +4,7 @@ import{WORLD_CATALOG}from'../../src/world/catalog';
 import contract from'./animated-decoration-contract.json';
 import type{TiledMap,TiledLayer,TiledTileset}from'./types';
 import {PATROL_IDS} from './patrol-roles';
+import {FOUNTAIN_MOTION_IDS} from './fountain-motion-roles';
 
 interface ContextRow{
  atlases:TiledTileset[];
@@ -117,6 +118,16 @@ function hallExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefined{
  const set=sets[0];need(/^art-\d+$/.test(set.name??'')&&set.image===r.image&&set.tilewidth===32&&set.tileheight===32&&!set.source&&(set.spacing??0)===0&&(set.margin??0)===0&&set.columns===r.columns&&set.imagewidth===r.imagewidth&&set.imageheight===r.imageheight&&set.tilecount===r.tilecount&&!set.tiles,'hall exterior source atlas identity/geometry changed');
  return{...structuredClone(set),firstgid:start,name:r.name};
 }
+/** Water-only fountain components append after all95 retained atlas bodies. */
+function fountainAtlases(source:TiledMap,start:number):TiledTileset[]{
+ const sets=source.tilesets.filter(t=>FOUNTAIN_MOTION_IDS.some(id=>t.name===id||t.image===`../assets/tilesets/original/${id}.png`));
+ if(!sets.length)return[];
+ need(identities(source)[0]==='overworld'&&isDeepStrictEqual(sets.map(t=>t.name),FOUNTAIN_MOTION_IDS),'closed fountain atlas roster/order changed');
+ let next=start;return sets.map(t=>{
+  need(t.image===`../assets/tilesets/original/${t.name}.png`&&t.tilewidth===32&&t.tileheight===32&&!t.source&&(t.spacing??0)===0&&(t.margin??0)===0&&t.columns===16&&t.imagewidth===512&&Number.isSafeInteger(t.imageheight)&&t.imageheight!>0&&t.imageheight!<=320&&t.imageheight!%32===0&&t.tilecount===t.imageheight!/32*16&&t.tiles?.length===12&&t.tiles.every(tile=>tile.animation?.length&&tile.animation.every(f=>f.duration%120===0)&&tile.animation.reduce((s,f)=>s+f.duration,0)===1440),'fountain atlas geometry/clock changed');
+  const result={...structuredClone(t),firstgid:next};next+=t.tilecount!;return result;
+ });
+}
 /** Beach-only cove successor. The former coast reservation remains untouched;
  * one bounded native32px atlas is appended after the frozen beach context. */
 export const TROPICAL_COVE_ATLAS=Object.freeze({name:'tropical-cove-coast',image:'../assets/tilesets/original/tropical-cove-coast.png',columns:64,imagewidth:2048,maxImageHeight:1024});
@@ -194,7 +205,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true,includePatrol=true):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true,includePatrol=true,includeFountain=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -233,6 +244,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   const hall=hallExteriorAtlas(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0));if(hall){need(zodiac,'hall exteriors require the preceding zodiac reservation');if(includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(hall);}
   const arrival=arrivalFloorAtlases(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0));if(arrival.length){need(hall,'arrival floor requires the preceding hall reservation');if(includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(...arrival);}
   const patrol=patrolAtlases(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0)+arrival.reduce((n,t)=>n+t.tilecount!,0));if(patrol.length){need(arrival.length===4,'patrols require the preceding arrival reservations');if(includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(...patrol);}
+  const fountain=fountainAtlases(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0)+[...arrival,...patrol].reduce((n,t)=>n+t.tilecount!,0));if(fountain.length){need(patrol.length===6,'fountain requires the preceding patrol reservations');if(includeFountain&&includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(...fountain);}
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
@@ -255,6 +267,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact previous plaza context; final current validation requires the water components.
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,true,false)))return;
  // Exact preceding arrival context; final current validation requires all six.
  if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,false)))return;
  // Exact pre-arrival context only; this never weakens the final current gate.

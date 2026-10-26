@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "9417e7e0487a5ac9ab4db5d3bd620e363e2316ed9798322764839b38d5da4e6b",
-      "maps/overworld.tmj": "5a269c1ed1a9c39364c5c9e7e93b12ba8a724ab3772b105438a009caea237b65",
+      "world/layouts/overworld.json": "bb3af75851722de6da96ee603ff0ace31e88edbce1aa3f68cff45d9d1ae54d5e",
+      "maps/overworld.tmj": "eacdf74ce9ee6ad0364b5dfe30e6a3ba8560000edce2884db5ef927d05af9171",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
@@ -17,10 +17,17 @@
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15",
       "tools/maps/expo-spacing.ts": "4330f38db5c0803df656a952819fd528be46e99b00f7a1186e727165692f3852",
       "world/expo-spacing.json": "7a89b2714d8073fed691cbd1c4d61cf1600a239d23581c2d84d427beb3f83a92",
-      "world/plaza-guide-before-spacing.json": "c45d317e292d25c537766141efa93e599cf53216df45f024bff62647d625eff8"
+      "world/plaza-guide-before-spacing.json": "c45d317e292d25c537766141efa93e599cf53216df45f024bff62647d625eff8",
+      "tools/maps/fountain-motion.ts": "63d3a0cba99845cdcd933d95662c5f277c8085d04891ffebec083d2b9b83f1c6",
+      "tools/maps/fountain-motion-provenance.ts": "349588b6e411dec53d683799c9ef13a9cabb399fa20735444579c40fd75331f8",
+      "tools/maps/fountain-motion-roles.ts": "7f1e390b098d26861f919097a4c0cb5d9698d0bc6b21742403fd9ab67e0b1801",
+      "tools/art/fountain-motion.ts": "833c684ac2a048a7cbe0412d2a0f0e92cdb30923f08f8ede71357bae20142af2",
+      "world/fountain-motion.json": "cdfc2d8b4deba7156556b939adb75ba88517bc61a0dff48dd01051b1ac1ac5c7",
+      "art/source/plaza-fountain-water.json": "2b117c4b1bbee7086cbb04d501f2afff4885e157fac58a330c16daef2fb3b8ad",
+      "art/source/plaza-fountain-water-upper.json": "62b67587ed9404ff5a164ebbef5782aef2a590fc82fb99ee64c850e2e4535073"
     },
     "allowedCellsSha256": "34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d",
-    "geometrySha256": "c2f70b2650d24c73f36b7117e172d0b130e95b703061402e91ef1beb0af282cc",
+    "geometrySha256": "c48e560ce9b01972932c5855e9bf1c3bd1b4df35a7e4afa20e00a915e91b5c1f",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

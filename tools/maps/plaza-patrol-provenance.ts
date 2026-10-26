@@ -7,7 +7,7 @@ const pairs=()=>JSON.parse(readFileSync('world/plaza-patrol.json','utf8')).produ
 export function patrolInputSha(path:string,pin:string):string{const pair=pairs()[path];return spacingInputSha(path,pair&&pair[0]===pin?pair[1]:pin);}
 export function advancePatrolOverlay(original:LayoutAnimatedOverlay):LayoutAnimatedOverlay{
  const o=structuredClone(original);for(const input of o.provenance?.inputs??[]){const pair=pairs()[input.path];if(!pair)continue;
-  if(!pair.includes(input.sha256)||createHash('sha256').update(readFileSync(input.path)).digest('hex')!==pair[1])throw Error('Plaza patrol: unknown producer '+input.path);
+  if(![...pair,spacingInputSha(input.path,pair[1])].includes(input.sha256)||createHash('sha256').update(readFileSync(input.path)).digest('hex')!==spacingInputSha(input.path,pair[1]))throw Error('Plaza patrol: unknown producer '+input.path);
   input.sha256=pair[1];
  }return advanceSpacingOverlay(o);
 }

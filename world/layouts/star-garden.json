@@ -1768,7 +1768,7 @@
   "signs": [
     {
       "name": "plaza-return-label",
-      "text": "↓ ZODIAC PLAZA",
+      "text": "\u2193 ZODIAC PLAZA",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 15,
@@ -1779,7 +1779,7 @@
     },
     {
       "name": "branch-return-label",
-      "text": "↓ EXPLORATION",
+      "text": "\u2193 EXPLORATION",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 4,
@@ -2291,7 +2291,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
+            "sha256": "995b3766bba1268d9e56a9c6b78c530b6515179a3779f73d81757f9c92b8d065"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -2303,7 +2303,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
+            "sha256": "162cdc94cdbfd3464fa690c0008fbfa66167fa7b14292154439c1e2afc7bb168"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -2323,7 +2323,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "ac55da1fd064d487acc3751354a47e0c8900dc08b45b9c1ce38aee21dbecb57e"
+            "sha256": "ada4a9c32f8d30e45a758c361a908e61dc7035b26cdaffc0676c9b94be6b1712"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -2715,7 +2715,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
+            "sha256": "995b3766bba1268d9e56a9c6b78c530b6515179a3779f73d81757f9c92b8d065"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -2727,7 +2727,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
+            "sha256": "162cdc94cdbfd3464fa690c0008fbfa66167fa7b14292154439c1e2afc7bb168"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -2747,7 +2747,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "ac55da1fd064d487acc3751354a47e0c8900dc08b45b9c1ce38aee21dbecb57e"
+            "sha256": "ada4a9c32f8d30e45a758c361a908e61dc7035b26cdaffc0676c9b94be6b1712"
           },
           {
             "path": "art/source/native-ownership-context.json",

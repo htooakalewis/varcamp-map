@@ -1,3 +1,4 @@
+import {FOUNTAIN_MOTION_IDS} from '../tools/maps/fountain-motion-roles';
 import {auditGuideRoutes} from '../tools/bots/route-audit';
 import {PATROL_IDS} from '../tools/maps/patrol-roles';
 import {historicalPlaza} from './helpers/plaza-groves';
@@ -274,7 +275,7 @@ describe('audited WorkAdventure runtime object aliases',()=>{
       (m:TiledMap)=>{const historical=preCanonicalNative(),layers=new Map(m.layers.map(l=>[l.name,l])),fleet=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
         // The expo hall added one panel layer per booth logo and one caption layer per nameplate after the fleet.
         const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),expo=[...layout.images.filter((i:{name:string})=>i.name.startsWith('Expo / ')).map((i:{name:string})=>i.name),...layout.standingSigns.filter((s:{text?:string})=>/^expo-[ns]\d-nameplate$/.test(s.text??'')).map((s:{text?:string})=>'standing-caption-'+s.text)];expect(expo).toHaveLength(23);
-        const retained=historical.layers.filter(l=>l.name!=='VarCamp 2026 Floor'),arrival=['NW','NE','SW','SE'].map(k=>'Arrival / VarCamp '+k);expect([...layers.keys()].sort()).toEqual([...retained.map(l=>l.name),...fleet,...expo,'scenery-aboveAvatar-1',...arrival,...PATROL_IDS].sort());const oldNames=new Set(retained.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(retained[index++].name)!:l);expect(index).toBe(retained.length);},
+        const retained=historical.layers.filter(l=>l.name!=='VarCamp 2026 Floor'),arrival=['NW','NE','SW','SE'].map(k=>'Arrival / VarCamp '+k);expect([...layers.keys()].sort()).toEqual([...retained.map(l=>l.name),...fleet,...expo,'scenery-aboveAvatar-1',...arrival,...PATROL_IDS,...FOUNTAIN_MOTION_IDS].sort());const oldNames=new Set(retained.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(retained[index++].name)!:l);expect(index).toBe(retained.length);},
     ]){const changed=runtimeMap();mutate(changed);await expect(guardMap(changed)).rejects.toThrow(/signature|geometry/i);}
   });
 });

@@ -3,6 +3,7 @@ import {gunzipSync} from 'node:zlib';
 import {expect,it} from 'vitest';
 import type {MapLayout,TiledMap,TileLayer} from '../tools/maps/types';
 import {priorSpacingProvenance} from '../tools/maps/expo-spacing-provenance';
+import {preFountainLayout} from './helpers/fountain-motion-history';
 const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
 const current=()=>read<MapLayout>('world/layouts/overworld.json');
 const native=()=>read<TiledMap>('maps/overworld.tmj');
@@ -45,7 +46,7 @@ it('blocks both divider columns while retaining a walking route into every booth
  }
 });
 it('preserves all meeting, media, entry, exit, animation and zodiac building behavior',()=>{
- const l=priorSpacingProvenance(current()),old=prior();
+ const l=priorSpacingProvenance(preFountainLayout(current())),old=prior();
  for(const key of ['areas','entries','exits','inspectionZones','animatedOverlays','standingSigns'] as const)expect(l[key],key).toEqual(old[key]);
  expect(l.placements.filter(p=>!p.id.startsWith('expo-')&&p.id!=='plaza-fountain')).toEqual(old.placements.filter(p=>!p.id.startsWith('expo-')&&p.id!=='plaza-fountain'));
  expect(read('maps/overworld.wam').areas).toEqual(JSON.parse(JSON.parse(gunzipSync(readFileSync('tests/fixtures/expo-spacing/before.json.gz')).toString()).components['maps/overworld.wam'].raw).areas);

@@ -425,6 +425,54 @@
         "role": "aircraft"
       },
       {
+        "name": "plaza-fountain-water",
+        "role": "avatarForeground"
+      },
+      {
+        "name": "plaza-fountain-water-upper",
+        "role": "opaqueOwnerUpper",
+        "owner": {
+          "placement": {
+            "id": "plaza-fountain",
+            "sprite": "plaza-fountain",
+            "x": 49,
+            "y": 59,
+            "width": 4,
+            "height": 3,
+            "layer": "props",
+            "renderRole": null
+          },
+          "visual": {
+            "sheet": "assets/tilesets/original/plaza-fountain.png",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 4,
+              "height": 3
+            }
+          },
+          "upperCells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "sheetSha256": "cec850cca9c6f9e1e2c523314105dc201500d8009db29e15022e8fc382d97af4"
+        }
+      },
+      {
         "name": "plaza-patrol-arrival-east",
         "role": "aircraft"
       },

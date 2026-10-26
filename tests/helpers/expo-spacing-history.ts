@@ -6,6 +6,7 @@ import {applyExpoSpacing,reconcileExpoSpacing} from '../../tools/maps/expo-spaci
 import {advanceSpacingProvenance} from '../../tools/maps/expo-spacing-provenance';
 import {loadTileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
+import {preFountainLayout,preFountainNative,fountainSuccessorSha} from './fountain-motion-history';
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 let saved:any;
 export function beforeSpacing(){
@@ -18,15 +19,17 @@ export function beforeSpacingJson<T=any>(path:string):T{const r=beforeSpacing().
 export function spacingSuccessorSha(path:string,pin:string):string{
  const table=JSON.parse(readFileSync('tests/fixtures/expo-spacing/transitions.json','utf8'));assert.equal(table.base,beforeSpacing().base);
  const pair=table.transitions[path] as [string,string]|undefined;
- if(!pair||pair[0]!==pin)return pin;assert.equal(pair[0],beforeSpacing().pins[path]);return pair[1];
+ if(!pair||pair[0]!==pin)return fountainSuccessorSha(path,pin);assert.equal(pair[0],beforeSpacing().pins[path]);return fountainSuccessorSha(path,pair[1]);
 }
 export function preSpacingLayout(layout:MapLayout):MapLayout{
+ layout=preFountainLayout(layout);
  if(!layout.placements.some(p=>p.id.startsWith('expo-spaced-')))return structuredClone(layout);
  const before=beforeSpacingJson<MapLayout>('world/layouts/overworld.json');
  assert.deepEqual(layout,applyExpoSpacing(before),'exact spacing successor required');return before;
 }
 let expected:TiledMap|undefined;
 export function preSpacingNative(map:TiledMap):TiledMap{
+ map=preFountainNative(map);
  const caption=map.layers.find(l=>l.name==='standing-caption-expo-n1-nameplate') as TileLayer|undefined;
  if(!caption?.data.slice(65*128,66*128).some(Boolean))return structuredClone(map);
  const before=beforeSpacingJson<TiledMap>('maps/overworld.tmj');

@@ -1,4 +1,5 @@
 import {PATROL_IDS} from './patrol-roles';
+import {FOUNTAIN_MOTION_IDS,FOUNTAIN_OWNER,FOUNTAIN_SOURCE_SHA} from './fountain-motion-roles';
 import{readFileSync,statSync}from'node:fs';
 import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
@@ -23,7 +24,7 @@ export function currentDecorationRoles():Record<string,Role[]>{
  let count=0,upper=0,airborne=0,aircraft=0;
  for(const id of ids){
   const rows=contract.maps[id];need(Array.isArray(rows)&&rows.every((r:any)=>r&&typeof r.name==='string')&&new Set(rows.map((r:Role)=>r.name)).size===rows.length,'role rows missing/duplicate: '+id);let names:string[];
-  if(id==='overworld')names=['roadster',...Array.from({length:40},(_,i)=>'plaza-drone-'+String(i).padStart(2,'0')),'plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey',...PATROL_IDS];
+  if(id==='overworld')names=['roadster',...Array.from({length:40},(_,i)=>'plaza-drone-'+String(i).padStart(2,'0')),'plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey',...PATROL_IDS,...FOUNTAIN_MOTION_IDS];
   else if(id==='shipyard-beach')names=['coastal-flight','rolling-breaker-west','rolling-breaker-east',...['fish-west','fish-east','gull-north','gull-south','dolphin'].map(k=>'coast-life-harbor-'+k)];
   else if(id==='constellation-shore')names=['fish-west','fish-bay','gull-north','gull-south','dolphin','seal'].map(k=>'coast-life-shore-'+k);
   else if(interiors.includes(id))names=['plant','steam','server',...(interior.maps[id].water?['water']:[])].map(k=>'interior-ambient-'+k);
@@ -32,9 +33,9 @@ export function currentDecorationRoles():Record<string,Role[]>{
    need(names.length===(id==='fa-ship-interior'||id==='nebula-arcade'?3:2),'independent ambient component count changed: '+id);
   }
   need(isDeepStrictEqual(rows.map((r:Role)=>r.name),sorted(names)),'required role roster/order changed: '+id);
-  for(const r of rows){const isUpper=r.role==='opaqueOwnerUpper';need(r&&isDeepStrictEqual(Object.keys(r).sort(),isUpper?['name','owner','role']:['name','role'])&&typeof r.name==='string'&&['avatarForeground','opaqueOwnerUpper','airborne','aircraft'].includes(r.role),'role schema changed');if(isUpper){upper++;need(id==='fa-ship-interior'&&r.owner&&/^[a-f0-9]{64}$/.test(r.owner.sheetSha256),'owning upper family/registration changed');}need((r.role==='airborne')===isCurrentAirborne(id,r.name),'closed airborne role changed');if(r.role==='airborne')airborne++;need((r.role==='aircraft')===isCurrentAircraft(id,r.name),'closed aircraft role changed');if(r.role==='aircraft')aircraft++;count++;}
+  for(const r of rows){const isUpper=r.role==='opaqueOwnerUpper';need(r&&isDeepStrictEqual(Object.keys(r).sort(),isUpper?['name','owner','role']:['name','role'])&&typeof r.name==='string'&&['avatarForeground','opaqueOwnerUpper','airborne','aircraft'].includes(r.role),'role schema changed');if(isUpper){upper++;need((id==='fa-ship-interior'||id==='overworld'&&r.name===FOUNTAIN_MOTION_IDS[1]&&isDeepStrictEqual(r.owner,{...FOUNTAIN_OWNER,sheetSha256:FOUNTAIN_SOURCE_SHA}))&&r.owner&&/^[a-f0-9]{64}$/.test(r.owner.sheetSha256),'owning upper family/registration changed');}need((r.role==='airborne')===isCurrentAirborne(id,r.name),'closed airborne role changed');if(r.role==='airborne')airborne++;need((r.role==='aircraft')===isCurrentAircraft(id,r.name),'closed aircraft role changed');if(r.role==='aircraft')aircraft++;count++;}
  }
- need(count===146&&upper===2&&airborne===5&&aircraft===50,'closed146-role/two-upper/50-aircraft ownership count changed');return contract.maps;
+ need(count===148&&upper===3&&airborne===5&&aircraft===50,'closed148-role/three-upper/50-aircraft ownership count changed');return contract.maps;
 }
 /** Shared current author/current acceptance source policy; historical generic
  * builders never call this and retain their independently tested behavior. */
@@ -48,7 +49,8 @@ export function assertAnimatedDecorationSource(layout:MapLayout):Role[]{
  * pose receipts or unused atlas pixels. The two valid upper projections add no
  * avatar occlusion beyond the same owning fixture's existing opaque upper art. */
 export function assertOwnedUpperAnimation(map:TiledMap,layout:MapLayout,o:LayoutAnimatedOverlay,catalog:TileCatalog,registered:Role):void{
- need(o.provenance?.metadataPath===`art/source/${o.name}.json`,'upper descriptor identity changed');const meta=read(o.provenance!.metadataPath),recipe=read('art/source/world-ambient.json'),group=recipe.maps.filter((m:any)=>m.id===layout.id);need(group.length===1,'upper family missing');const effects=group[0].effects.filter((e:any)=>e.name===meta.effect?.name);need(effects.length===1&&isDeepStrictEqual(effects[0],meta.effect)&&meta.componentNames?.includes(o.name)&&meta.partition==='opaqueOwnerUpper','upper component role changed');
+ need(o.provenance?.metadataPath===`art/source/${o.name}.json`,'upper descriptor identity changed');const meta=read(o.provenance!.metadataPath),isFountain=layout.id==='overworld'&&o.name===FOUNTAIN_MOTION_IDS[1];
+ const group=isFountain?[{effects:[{name:FOUNTAIN_MOTION_IDS[0],kind:'cascade',anchor:'plaza-fountain',clip:{x:49,y:59,width:4,height:3}}]}]:read('art/source/world-ambient.json').maps.filter((m:any)=>m.id===layout.id);need(group.length===1,'upper family missing');const effects=group[0].effects.filter((e:any)=>e.name===meta.effect?.name);need(effects.length===1&&isDeepStrictEqual(effects[0],meta.effect)&&meta.componentNames?.includes(o.name)&&meta.partition==='opaqueOwnerUpper','upper component role changed');
  const e=effects[0],owner=ambientDepthOwner(layout,e,catalog);need(owner,'upper pixels have no owning fixture');if(!owner)return;
  need(registered.role==='opaqueOwnerUpper'&&registered.owner,'physical owner registration missing');if(!registered.owner)return;const{sheetSha256,...registeredOwner}=registered.owner;need(isDeepStrictEqual(owner,registeredOwner),'registered owner identity/partition changed before image read');
  need(isDeepStrictEqual(meta.depthReceipt?.owner,owner)&&meta.depthReceipt?.policy==='opaque-owner-upper-v1','upper owner identity changed');
