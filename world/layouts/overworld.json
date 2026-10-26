@@ -9698,13 +9698,12 @@
     },
     {
       "id": "aries-building",
-      "sprite": "zodiac-building-aries",
+      "sprite": "zodiac-physical-aries",
       "x": 96,
       "y": 58,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "aries-bold-nameplate",
@@ -9713,8 +9712,7 @@
       "y": 63,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-aries",
@@ -9754,13 +9752,12 @@
     },
     {
       "id": "taurus-building",
-      "sprite": "zodiac-building-taurus",
+      "sprite": "zodiac-physical-taurus",
       "x": 91,
       "y": 77,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "taurus-bold-nameplate",
@@ -9769,8 +9766,7 @@
       "y": 82,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-taurus",
@@ -9810,13 +9806,12 @@
     },
     {
       "id": "gemini-building",
-      "sprite": "zodiac-building-gemini",
+      "sprite": "zodiac-physical-gemini",
       "x": 77,
       "y": 91,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "gemini-bold-nameplate",
@@ -9825,8 +9820,7 @@
       "y": 96,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-gemini",
@@ -9866,13 +9860,12 @@
     },
     {
       "id": "cancer-building",
-      "sprite": "zodiac-building-cancer",
+      "sprite": "zodiac-physical-cancer",
       "x": 58,
       "y": 96,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "cancer-bold-nameplate",
@@ -9881,8 +9874,7 @@
       "y": 101,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-cancer",
@@ -9922,13 +9914,12 @@
     },
     {
       "id": "leo-building",
-      "sprite": "zodiac-building-leo",
+      "sprite": "zodiac-physical-leo",
       "x": 39,
       "y": 91,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "leo-bold-nameplate",
@@ -9937,8 +9928,7 @@
       "y": 96,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-leo",
@@ -9978,13 +9968,12 @@
     },
     {
       "id": "virgo-building",
-      "sprite": "zodiac-building-virgo",
+      "sprite": "zodiac-physical-virgo",
       "x": 25,
       "y": 77,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "virgo-bold-nameplate",
@@ -9993,8 +9982,7 @@
       "y": 82,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-virgo",
@@ -10034,13 +10022,12 @@
     },
     {
       "id": "libra-building",
-      "sprite": "zodiac-building-libra",
+      "sprite": "zodiac-physical-libra",
       "x": 20,
       "y": 58,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "libra-bold-nameplate",
@@ -10049,8 +10036,7 @@
       "y": 63,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-libra",
@@ -10072,13 +10058,12 @@
     },
     {
       "id": "scorpio-building",
-      "sprite": "zodiac-building-scorpio",
+      "sprite": "zodiac-physical-scorpio",
       "x": 25,
       "y": 39,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "scorpio-bold-nameplate",
@@ -10087,8 +10072,7 @@
       "y": 44,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-scorpio",
@@ -10110,13 +10094,12 @@
     },
     {
       "id": "sagittarius-building",
-      "sprite": "zodiac-building-sagittarius",
+      "sprite": "zodiac-physical-sagittarius",
       "x": 39,
       "y": 25,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "sagittarius-bold-nameplate",
@@ -10125,8 +10108,7 @@
       "y": 30,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-sagittarius",
@@ -10148,13 +10130,12 @@
     },
     {
       "id": "capricorn-building",
-      "sprite": "zodiac-building-capricorn",
+      "sprite": "zodiac-physical-capricorn",
       "x": 58,
       "y": 20,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "capricorn-bold-nameplate",
@@ -10163,8 +10144,7 @@
       "y": 25,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-capricorn",
@@ -10186,13 +10166,12 @@
     },
     {
       "id": "aquarius-building",
-      "sprite": "zodiac-building-aquarius",
+      "sprite": "zodiac-physical-aquarius",
       "x": 77,
       "y": 25,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "aquarius-bold-nameplate",
@@ -10201,8 +10180,7 @@
       "y": 30,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-aquarius",
@@ -10242,13 +10220,12 @@
     },
     {
       "id": "pisces-building",
-      "sprite": "zodiac-building-pisces",
+      "sprite": "zodiac-physical-pisces",
       "x": 91,
       "y": 39,
       "width": 12,
       "height": 12,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "pisces-bold-nameplate",
@@ -10257,8 +10234,7 @@
       "y": 44,
       "width": 12,
       "height": 2,
-      "layer": "props",
-      "renderRole": "grounded"
+      "layer": "props"
     },
     {
       "id": "approach-arrow-pisces",

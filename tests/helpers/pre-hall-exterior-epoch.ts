@@ -7,12 +7,15 @@ import {buildMap} from '../../tools/maps/builder';
 import {reconcileNativeProjection} from '../../tools/maps/native-projection';
 import {loadTileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap} from '../../tools/maps/types';
+import {prePhysicsLayout,prePhysicsNative} from './pre-zodiac-physics-epoch';
 export function preHallLayout(layout:MapLayout):MapLayout{
+ layout=prePhysicsLayout(layout);
  if(!layout.placements.some(p=>p.sprite.startsWith('hall-exterior-')))return structuredClone(layout);
  const before=beforeHallJson<MapLayout>('world/layouts/overworld.json');assert.deepEqual(layout,applyHallExteriors(before),'Current source must be the exact two-hall exterior successor');return before;
 }
 let expected:TiledMap|undefined;
 export function preHallNative(map:TiledMap):TiledMap{
+ map=prePhysicsNative(map);
  if(!map.tilesets.some(t=>t.image?.endsWith('/hall-exteriors.png')||t.name==='hall-exteriors'))return structuredClone(map);
  const before=beforeHallJson<TiledMap>('maps/overworld.tmj');
  expected??=reconcileNativeProjection(before,buildMap(applyHallExteriors(beforeHallJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog()).tmj);

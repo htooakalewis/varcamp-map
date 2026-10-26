@@ -51,7 +51,7 @@ describe('audited native navigation', () => {
     for (const [path, hash] of Object.entries(ROUTES.provenance.sourceSha256)) expect(createHash('sha256').update(readFileSync(path)).digest('hex'), path).toBe(hash);
     const map=native(),layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));
     const result=auditGuideRoutes({map,layout,wam,catalog:loadTileCatalog(),routes:ROUTES});
-    expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6743,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
+    expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6814,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:4});
     const collisionGids=new Set<number>();for(const s of map.tilesets)for(const t of s.tiles??[])if(t.properties?.some(p=>p.name==='collides'&&p.value===true))collisionGids.add(s.firstgid+t.id);
     const forbidden=new Set<number>();for(const l of map.layers)if(l.type==='tilelayer')l.data.forEach((g,i)=>{if(collisionGids.has((g&0x0fffffff)>>>0)||(g&&l.properties?.some(p=>p.name==='exitUrl')))forbidden.add(i);});
     for(const n of forbidden)expect(()=>planRoute([70,70],[n%128,Math.floor(n/128)])).toThrow();
@@ -273,7 +273,7 @@ describe('audited WorkAdventure runtime object aliases',()=>{
       (m:TiledMap)=>{const historical=preCanonicalNative(),layers=new Map(m.layers.map(l=>[l.name,l])),fleet=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
         // The expo hall added one panel layer per booth logo and one caption layer per nameplate after the fleet.
         const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),expo=[...layout.images.filter((i:{name:string})=>i.name.startsWith('Expo / ')).map((i:{name:string})=>i.name),...layout.standingSigns.filter((s:{text?:string})=>/^expo-[ns]\d-nameplate$/.test(s.text??'')).map((s:{text?:string})=>'standing-caption-'+s.text)];expect(expo).toHaveLength(23);
-        expect([...layers.keys()].sort()).toEqual([...historical.layers.map(l=>l.name),...fleet,...expo].sort());const oldNames=new Set(historical.layers.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(historical.layers[index++].name)!:l);expect(index).toBe(historical.layers.length);},
+        expect([...layers.keys()].sort()).toEqual([...historical.layers.map(l=>l.name),...fleet,...expo,'scenery-aboveAvatar-1'].sort());const oldNames=new Set(historical.layers.map(l=>l.name));let index=0;m.layers=m.layers.map(l=>oldNames.has(l.name)?layers.get(historical.layers[index++].name)!:l);expect(index).toBe(historical.layers.length);},
     ]){const changed=runtimeMap();mutate(changed);await expect(guardMap(changed)).rejects.toThrow(/signature|geometry/i);}
   });
 });

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "9ed3b75ca962fe50f4422381aae4febdf533e36d1cd9f4d986d673a75ef4010e",
+      "toSha256": "022bc756bc55fdb661e7fd1a4095659725cc247be376d20b8511891dfd6f7951",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "111b6e4bfbe0549e1c1157b4141547393736d3b24ef13709f157dadec84c28fa",
+      "toSha256": "fec9679fdd384c46c67ed1e854fa705ffdb626514a40638e85b2a642d027fbfb",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "4f94ab6cbac5a339c7a8f03eb45f73f5ebf5e7ef790709931758f84c5636dafc",
+      "toSha256": "a473f1387014c6d40812d3207fb46a9e3ffd6bf199981d464795c317c6cf65fe",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "855d7c8cb303a9970625c22f5d77fdeff324997fe437aa74bbd99d24851edee2",
+      "toSha256": "292ce0f6e4cf7f8d4a7550422f81a78bae4b2f7fecf9556a493e36994a84b7bc",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "27dbc0916c5d0be8810833e07ff322d008fe27d156e4296d17df8cdee3c7daae",
+      "toSha256": "5085391916c0b1b568706145c54d82464124db5059c5d1ed1334c4d7ed258ed7",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "f8a9cf4cd30a1228a9b52ecfaf5e7368169e697f316345e8e7b576072fa8fb91",
+      "toSha256": "6f3ef0f77e1a3276b8dda27323f36083424e0a578d89cf98b1c6868ff4faa3cd",
+      "reason": "Correct the collision silhouettes and drawing depth of all 12 zodiac buildings; retain native art, all 85 atlas reservations, portals, organizer WAMs and the 792-cell guide graph. Extend historical proofs through the frozen 65a2 predecessor; private guide services remain stopped."
+    }
+  ]
+}

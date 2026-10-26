@@ -6,7 +6,9 @@ import {SIGN_IDS} from '../src/world/catalog';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {assertNativePlaza} from '../tools/maps/plaza-native';
 import {renderZodiacExteriors,checkZodiacExteriorArt} from '../tools/art/zodiac-exteriors';
-import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
+import {applyZodiacExteriors,assertZodiacExteriors} from '../tools/maps/zodiac-exteriors';
+import {buildMap} from '../tools/maps/builder';
+import {assertNativeSourceProjection} from '../tools/maps/native-projection';
 import {emitNativeMapAssets} from '../tools/release';
 import {beforeZodiac,beforeZodiacJson,beforeZodiacRaw} from './helpers/zodiac-exterior-history';
 import type {MapLayout,TiledMap,TileLayer} from '../tools/maps/types';
@@ -44,9 +46,9 @@ describe('twelve zodiac exterior architectures',()=>{
   const masks:string[]=[],crops:string[]=[];for(let i=0;i<12;i++){const crop=await sharp(path).extract({left:i%4*384,top:Math.floor(i/4)*384,width:384,height:384}).ensureAlpha().raw().toBuffer();crops.push(sha(crop));masks.push(sha(Buffer.from(Array.from({length:384*160},(_,p)=>crop[p*4+3]>=192?1:0))));expect(crop.some((v,p)=>p%4===3&&v===0)).toBe(true);}
   expect(new Set(crops).size).toBe(12);expect(new Set(masks).size).toBe(12);expect(data.length).toBe(1536*1152*4);
  });
- it('rejects a coherent return to the old four-building design through the normal plaza gate',()=>{
+ it('rejects a coherent return to the old four-building design at its retained historical recipe gate',()=>{
   const l=read<MapLayout>('world/layouts/overworld.json'),c=loadTileCatalog();for(const sign of SIGN_IDS){const b=beforeZodiacJson<MapLayout>('world/layouts/overworld.json').placements.find(p=>p.id===sign+'-building')!;l.placements.find(p=>p.id===b.id)!.sprite=b.sprite;}
-  expect(()=>assertNativePlaza(beforeZodiacJson<TiledMap>('maps/overworld.tmj'),l,c)).toThrow();
+  expect(()=>assertZodiacExteriors(l,c)).toThrow();
  });
  it('reproduces the exact saved atlas/metadata and authors an idempotent twelve-field successor without mutating history',async()=>{
   const r=await renderZodiacExteriors();expect(r.png.equals(readFileSync('assets/tilesets/original/zodiac-exteriors.png'))).toBe(true);expect(r.metadata).toEqual(read('art/source/zodiac-exteriors.json'));
@@ -62,7 +64,7 @@ describe('twelve zodiac exterior architectures',()=>{
   if(kind==='wrong-depth')p.renderRole=undefined;
   if(kind==='blocking-change')c[p.sprite].blockingCells.push([5,10]);
   if(kind==='extra-catalog')c['zodiac-building-extra']=structuredClone(c[p.sprite]);
-  expect(()=>assertNativePlaza(read<TiledMap>('maps/overworld.tmj'),l,c)).toThrow();
+  expect(()=>assertZodiacExteriors(l,c)).toThrow();
  });
  it.each(['missing','duplicate','misidentified','resized'])('rejects a %s new native reservation while retaining all earlier bodies',kind=>{
   const l=read<MapLayout>('world/layouts/overworld.json'),c=loadTileCatalog(),m=read<TiledMap>('maps/overworld.tmj'),set=m.tilesets.at(-1)!;
@@ -70,12 +72,12 @@ describe('twelve zodiac exterior architectures',()=>{
   if(kind==='duplicate')m.tilesets.push(structuredClone(set));
   if(kind==='misidentified')set.name='unregistered-zodiac-art';
   if(kind==='resized')set.tilecount=(set.tilecount??0)-1;
-  expect(()=>assertNativePlaza(m,l,c)).toThrow();
+  expect(()=>assertNativeSourceProjection(m,buildMap(l,c).tmj)).toThrow();
  });
  it('does not opt out when the entire new source and registry family is absent',async()=>{
   const c=loadTileCatalog(),s=read('art/sources.json');for(const k of Object.keys(c))if(k.startsWith('zodiac-building-'))delete c[k];delete s['zodiac-exteriors'];
   expect((await checkZodiacExteriorArt(c,s)).join('\n')).toMatch(/source registry family missing/);
-  expect(()=>assertNativePlaza(beforeZodiacJson<TiledMap>('maps/overworld.tmj'),beforeZodiacJson<MapLayout>('world/layouts/overworld.json'),c)).toThrow(/Zodiac exteriors/);
+  expect(()=>assertNativePlaza(JSON.parse(readFileSync('maps/overworld.tmj','utf8')),JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),c)).toThrow(/Zodiac exteriors/);
  });
  it('publishes a titled provenance section with working license and attribution dependencies',()=>{
   const files=new Map<string,string|Buffer>();

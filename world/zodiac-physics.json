@@ -1,0 +1,675 @@
+{
+  "version": 1,
+  "atlas": "assets/tilesets/original/zodiac-exteriors.png",
+  "atlasSha256": "fa54c55447d267b205bab262cf3eb5066e5827cbcd904d6c354fd684de056e8e",
+  "alphaThreshold": 192,
+  "minOpaquePixels": 256,
+  "doorPassage": {
+    "x": 5,
+    "y": 9,
+    "width": 2,
+    "height": 3
+  },
+  "buildings": [
+    {
+      "sign": "aries",
+      "beforeBuilding": {
+        "id": "aries-building",
+        "sprite": "zodiac-building-aries",
+        "x": 96,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "aries-building",
+        "sprite": "zodiac-physical-aries",
+        "x": 96,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "aries-bold-nameplate",
+        "sprite": "hub-label-aries",
+        "x": 96,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "aries-bold-nameplate",
+        "sprite": "hub-label-aries",
+        "x": 96,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        ".###.##.###.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "taurus",
+      "beforeBuilding": {
+        "id": "taurus-building",
+        "sprite": "zodiac-building-taurus",
+        "x": 91,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "taurus-building",
+        "sprite": "zodiac-physical-taurus",
+        "x": 91,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "taurus-bold-nameplate",
+        "sprite": "hub-label-taurus",
+        "x": 91,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "taurus-bold-nameplate",
+        "sprite": "hub-label-taurus",
+        "x": 91,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "#..........#",
+        "############",
+        ".##########.",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "gemini",
+      "beforeBuilding": {
+        "id": "gemini-building",
+        "sprite": "zodiac-building-gemini",
+        "x": 77,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "gemini-building",
+        "sprite": "zodiac-physical-gemini",
+        "x": 77,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "gemini-bold-nameplate",
+        "sprite": "hub-label-gemini",
+        "x": 77,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "gemini-bold-nameplate",
+        "sprite": "hub-label-gemini",
+        "x": 77,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "...#....#...",
+        ".###....###.",
+        ".###....###.",
+        ".####..####.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "cancer",
+      "beforeBuilding": {
+        "id": "cancer-building",
+        "sprite": "zodiac-building-cancer",
+        "x": 58,
+        "y": 96,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "cancer-building",
+        "sprite": "zodiac-physical-cancer",
+        "x": 58,
+        "y": 96,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "cancer-bold-nameplate",
+        "sprite": "hub-label-cancer",
+        "x": 58,
+        "y": 101,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "cancer-bold-nameplate",
+        "sprite": "hub-label-cancer",
+        "x": 58,
+        "y": 101,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "....####....",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "leo",
+      "beforeBuilding": {
+        "id": "leo-building",
+        "sprite": "zodiac-building-leo",
+        "x": 39,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "leo-building",
+        "sprite": "zodiac-physical-leo",
+        "x": 39,
+        "y": 91,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "leo-bold-nameplate",
+        "sprite": "hub-label-leo",
+        "x": 39,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "leo-bold-nameplate",
+        "sprite": "hub-label-leo",
+        "x": 39,
+        "y": 96,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "....####....",
+        ".##########.",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "virgo",
+      "beforeBuilding": {
+        "id": "virgo-building",
+        "sprite": "zodiac-building-virgo",
+        "x": 25,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "virgo-building",
+        "sprite": "zodiac-physical-virgo",
+        "x": 25,
+        "y": 77,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "virgo-bold-nameplate",
+        "sprite": "hub-label-virgo",
+        "x": 25,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "virgo-bold-nameplate",
+        "sprite": "hub-label-virgo",
+        "x": 25,
+        "y": 82,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "..#......#..",
+        "..##....##..",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "libra",
+      "beforeBuilding": {
+        "id": "libra-building",
+        "sprite": "zodiac-building-libra",
+        "x": 20,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "libra-building",
+        "sprite": "zodiac-physical-libra",
+        "x": 20,
+        "y": 58,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "libra-bold-nameplate",
+        "sprite": "hub-label-libra",
+        "x": 20,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "libra-bold-nameplate",
+        "sprite": "hub-label-libra",
+        "x": 20,
+        "y": 63,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "..##.##.##..",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "scorpio",
+      "beforeBuilding": {
+        "id": "scorpio-building",
+        "sprite": "zodiac-building-scorpio",
+        "x": 25,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "scorpio-building",
+        "sprite": "zodiac-physical-scorpio",
+        "x": 25,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "scorpio-bold-nameplate",
+        "sprite": "hub-label-scorpio",
+        "x": 25,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "scorpio-bold-nameplate",
+        "sprite": "hub-label-scorpio",
+        "x": 25,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "....####....",
+        "....####....",
+        "....####....",
+        "..########..",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "sagittarius",
+      "beforeBuilding": {
+        "id": "sagittarius-building",
+        "sprite": "zodiac-building-sagittarius",
+        "x": 39,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "sagittarius-building",
+        "sprite": "zodiac-physical-sagittarius",
+        "x": 39,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "sagittarius-bold-nameplate",
+        "sprite": "hub-label-sagittarius",
+        "x": 39,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "sagittarius-bold-nameplate",
+        "sprite": "hub-label-sagittarius",
+        "x": 39,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "......#.....",
+        ".....##.....",
+        ".##########.",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "capricorn",
+      "beforeBuilding": {
+        "id": "capricorn-building",
+        "sprite": "zodiac-building-capricorn",
+        "x": 58,
+        "y": 20,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "capricorn-building",
+        "sprite": "zodiac-physical-capricorn",
+        "x": 58,
+        "y": 20,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "capricorn-bold-nameplate",
+        "sprite": "hub-label-capricorn",
+        "x": 58,
+        "y": 25,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "capricorn-bold-nameplate",
+        "sprite": "hub-label-capricorn",
+        "x": 58,
+        "y": 25,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "..##.##.##..",
+        "..########..",
+        "..########..",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "aquarius",
+      "beforeBuilding": {
+        "id": "aquarius-building",
+        "sprite": "zodiac-building-aquarius",
+        "x": 77,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "aquarius-building",
+        "sprite": "zodiac-physical-aquarius",
+        "x": 77,
+        "y": 25,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "aquarius-bold-nameplate",
+        "sprite": "hub-label-aquarius",
+        "x": 77,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "aquarius-bold-nameplate",
+        "sprite": "hub-label-aquarius",
+        "x": 77,
+        "y": 30,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "..##....##..",
+        ".##########.",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    },
+    {
+      "sign": "pisces",
+      "beforeBuilding": {
+        "id": "pisces-building",
+        "sprite": "zodiac-building-pisces",
+        "x": 91,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterBuilding": {
+        "id": "pisces-building",
+        "sprite": "zodiac-physical-pisces",
+        "x": 91,
+        "y": 39,
+        "width": 12,
+        "height": 12,
+        "layer": "props"
+      },
+      "beforeNameplate": {
+        "id": "pisces-bold-nameplate",
+        "sprite": "hub-label-pisces",
+        "x": 91,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props",
+        "renderRole": "grounded"
+      },
+      "afterNameplate": {
+        "id": "pisces-bold-nameplate",
+        "sprite": "hub-label-pisces",
+        "x": 91,
+        "y": 44,
+        "width": 12,
+        "height": 2,
+        "layer": "props"
+      },
+      "mask": [
+        "............",
+        "............",
+        "...######...",
+        ".##########.",
+        "############",
+        "############",
+        "############",
+        "############",
+        "############",
+        "#####..#####",
+        "#####..#####",
+        "#####..#####"
+      ]
+    }
+  ]
+}

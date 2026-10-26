@@ -7,6 +7,8 @@ import {assertNativePlaza} from '../tools/maps/plaza-native';
 import {beforeHallExteriors,beforeHallJson} from './helpers/hall-exterior-history';
 import {emitNativeMapAssets} from '../tools/release';
 import type {MapLayout,TiledMap} from '../tools/maps/types';
+import {prePhysicsNative} from './helpers/pre-zodiac-physics-epoch';
+import {applyZodiacPhysics,zodiacPhysicsSprites} from '../tools/maps/zodiac-physics';
 const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 describe('Solar and Lunar exterior architectures',()=>{
@@ -19,7 +21,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   expect(c[p.sprite].blockingCells).toHaveLength(24);expect(l.exits.find(e=>e.name===id)).toMatchObject({x:x+2,y:21,width:4,height:1,destination:id+'-hall'});
  });
  it('requires the new exterior family even when all its markers are removed',()=>{
-  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),beforeHallJson<MapLayout>('world/layouts/overworld.json'),beforeHallJson('art/tile-catalog.json'))).toThrow(/Hall exteriors/);
+  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),applyZodiacPhysics(beforeHallJson<MapLayout>('world/layouts/overworld.json')),{...beforeHallJson('art/tile-catalog.json'),...zodiacPhysicsSprites()})).toThrow(/Hall exteriors/);
  });
  it('provides a separate transparent native atlas without replacing the original gate artwork',()=>{
   expect(existsSync('assets/tilesets/original/hall-exteriors.png'),'two themed hall facade atlas exists').toBe(true);
@@ -28,12 +30,12 @@ describe('Solar and Lunar exterior architectures',()=>{
   const b=beforeHallExteriors(),c=loadTileCatalog(),old=beforeHallJson('art/tile-catalog.json');
   for(const[path,pin]of Object.entries({...b.assets,...b.nativeMaps,...b.wams}))if(path!=='maps/preview/overworld.tmj')expect(sha(readFileSync(path)),path+' retained bytes').toBe(pin);
   for(const[id,s]of Object.entries(old))expect(c[id],id+' retained catalog definition').toEqual(s);
-  const m=read<TiledMap>('maps/overworld.tmj'),prior=beforeHallJson<TiledMap>('maps/overworld.tmj');
+  const m=prePhysicsNative(read<TiledMap>('maps/overworld.tmj')),prior=beforeHallJson<TiledMap>('maps/overworld.tmj');
   expect(m.tilesets.slice(0,84)).toEqual(prior.tilesets);expect(m.tilesets).toHaveLength(85);
   expect(m.tilesets[84]).toMatchObject({firstgid:14519,name:'hall-exteriors',image:'../assets/tilesets/original/hall-exteriors.png',imagewidth:512,imageheight:192,columns:16,tilecount:96});
   expect(m.layers.filter(l=>l.type!=='tilelayer')).toEqual(prior.layers.filter(l=>l.type!=='tilelayer'));
   expect(m.layers.find(l=>l.name==='physical-collisions')).toEqual(prior.layers.find(l=>l.name==='physical-collisions'));
-  const preview=read<TiledMap>('maps/preview/overworld.tmj');expect(preview.layers.find(l=>l.name==='physical-collisions')).toEqual(m.layers.find(l=>l.name==='physical-collisions'));
+  const preview=read<TiledMap>('maps/preview/overworld.tmj');expect(preview.layers.find(l=>l.name==='physical-collisions')).toEqual(read<TiledMap>('maps/overworld.tmj').layers.find(l=>l.name==='physical-collisions'));
   expect(preview.tilesets.map(t=>[t.firstgid,t.name,t.image])).toEqual(m.tilesets.map(t=>[t.firstgid,t.name,'../'+t.image]));
   const allowed=new Set<number>();for(const x0 of[17,103])for(let y=18;y<24;y++)for(let x=x0;x<x0+8;x++)allowed.add(y*128+x);
   expect(m.layers.map(l=>l.name)).toEqual(prior.layers.map(l=>l.name));
