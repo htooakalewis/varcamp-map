@@ -8,6 +8,7 @@ import {applyZodiacExteriors} from '../tools/maps/zodiac-exteriors';
 import {applyZodiacPhysics,restoreZodiacPhysics} from '../tools/maps/zodiac-physics';
 import {prePhysicsLayout} from './helpers/pre-zodiac-physics-epoch';
 import {applyArrivalRefresh,restoreArrivalRefresh} from '../tools/maps/arrival-refresh';
+import {applyPlazaPatrol,restorePlazaPatrol} from '../tools/maps/plaza-patrol';
 import {arrivalFloorPanels} from './helpers/physical-prop-contracts';
 import {expectedPlazaSuccessor,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} from './helpers/plaza-successor';
 import routes from '../src/bots/lyra-routes.json';
@@ -34,7 +35,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(l))))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(l))))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;

@@ -1,3 +1,4 @@
+import {patrolSuccessorSha} from './plaza-patrol-history';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
@@ -14,6 +15,6 @@ export const beforeArrivalJson=<T=any>(path:string):T=>JSON.parse(beforeArrivalR
 /** Explicit byte successor, chained after earlier immutable epoch receipts. */
 export function arrivalSuccessorSha(path:string,pin:string):string{
  const table=JSON.parse(readFileSync('tests/fixtures/arrival-refresh/transitions.json','utf8'));assert.equal(table.version,1);assert.equal(table.base,beforeArrival().base);
- const row=table.transitions[path]as[string,string]|undefined;if(!row||row[0]!==pin)return pin;
- assert.equal(row[0],beforeArrival().pins[path],'Arrival receipt must start at genuine pre-arrival bytes');return row[1];
+ const row=table.transitions[path]as[string,string]|undefined;if(!row||row[0]!==pin)return patrolSuccessorSha(path,pin);
+ assert.equal(row[0],beforeArrival().pins[path],'Arrival receipt must start at genuine pre-arrival bytes');return patrolSuccessorSha(path,row[1]);
 }

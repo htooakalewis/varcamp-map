@@ -1,5 +1,6 @@
 import { approvedEditorCollections, editorCatalogHistoryMaps, historicalEditorWamBytes, editorMetadataHistoryPaths, historicalEditorMetadataBytes } from './helpers/editor-catalog-history';
 import { readFileSync } from 'node:fs';
+import { PATROL_IDS } from '../tools/maps/patrol-roles';
 import { describe, expect, it } from 'vitest';
 import type { TiledMap, TileLayer } from '../tools/maps/types';
 function frozenOverworld(kind:'tmj'):TiledMap;
@@ -22,7 +23,7 @@ describe('stationary native Roadster display', () => {
   // The v2 epoch: the role atlas is the compiled motion atlas, appended after the brand family.
   expect(set).toMatchObject({ image: '../assets/tilesets/original/roadster-v2.png', firstgid: 11783, columns: 16, imagewidth: 512 });
   expect(map.tilesets[82]).toBe(set); // every prior reservation stays fixed; the two named exterior families append afterward
-  expect(map.tilesets.slice(83).map(t=>t.name)).toEqual(['zodiac-exteriors','hall-exteriors','Arrival / VarCamp NW','Arrival / VarCamp NE','Arrival / VarCamp SW','Arrival / VarCamp SE']);
+  expect(map.tilesets.slice(83).map(t=>t.name)).toEqual(['zodiac-exteriors','hall-exteriors','Arrival / VarCamp NW','Arrival / VarCamp NE','Arrival / VarCamp SW','Arrival / VarCamp SE',...PATROL_IDS]);
   expect(map.tilesets.filter(s => s.name === 'roadster')).toHaveLength(1);
  });
 });

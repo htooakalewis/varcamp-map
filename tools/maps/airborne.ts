@@ -1,3 +1,4 @@
+import {PATROL_IDS} from './patrol-roles';
 import{readFileSync,statSync}from'node:fs';
 import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
@@ -16,16 +17,17 @@ export const AIRBORNE_BIRDS=[
 /** The closed overworld drone class (2026-10-26 owner decision, "set all
  * drones at upper layer top of other objects and tiles"): the forty ring drone
  * resources and the three fleet drones fly above every tile, object and
- * attendee exactly like the sponsor seaplane. Exactly these43 rows. */
+ * attendee exactly like the sponsor seaplane. These49 resource rows represent eleven actual aircraft. */
 export const PLAZA_DRONES=[
  ...Array.from({length:40},(_,i)=>({map:'overworld',name:'plaza-drone-'+String(i).padStart(2,'0')})),
  {map:'overworld',name:'plaza-fleet-camera'},{map:'overworld',name:'plaza-fleet-delivery'},{map:'overworld',name:'plaza-fleet-survey'},
+ ...PATROL_IDS.map(name=>({map:'overworld' as const,name})),
 ]as readonly{map:'overworld';name:string}[];
 /** The sponsor aircraft role (2026-10-24 owner decision) and the overworld
  * drones above: each draws above every tile, object and attendee as a purely
  * visual crossing, so it is deliberately exempt from the bird lane rules
  * (offshore blocked lane, 32px sprite, attendee-envelope alpha). Only these
- * closed44 rows may claim that exemption; every other aboveScenery overlay is a bird. */
+ * closed50 rows may claim that exemption; every other aboveScenery overlay is a bird. */
 export const AIRCRAFT=[{map:'shipyard-beach',name:'coastal-flight'},...PLAZA_DRONES]as readonly{map:string;name:string}[];
 export const isCurrentAircraft=(map:string,name:string)=>AIRCRAFT.some(r=>r.map===map&&r.name===name);
 const need=(ok:unknown,m:string):void=>{if(!ok)throw Error('Airborne safety '+m);};

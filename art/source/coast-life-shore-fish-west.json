@@ -1161,11 +1161,11 @@
         },
         {
           "path": "tools/maps/animated-decoration.ts",
-          "sha256": "803ec55098732becbdf5fbf315097a57363af5eaa77758fe6e9ba68c2ae259b5"
+          "sha256": "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
         },
         {
           "path": "tools/maps/animated-decoration-contract.json",
-          "sha256": "ad2cdc7b80dd2d60e4b4fc17597056d950f67952557e6615e245bfff7dfb6f0f"
+          "sha256": "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
         },
         {
           "path": "tools/art/native-motion.ts",

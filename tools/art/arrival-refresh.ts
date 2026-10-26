@@ -29,7 +29,13 @@ export async function renderArrivalRefresh(){
  need((svg.toString().match(/<path class="cls-1"/g)??[]).length===2,'closed flame/wordmark path roster changed');
  const coloured=svg.toString().replace('<path class="cls-1"','<path class="cls-1" style="fill:#f96216"');
  const lockup=await sharp(Buffer.from(coloured)).resize(376,85,{fit:'inside'}).png().toBuffer();
- const panel=await sharp({create:{width:384,height:128,channels:4,background:{r:0,g:0,b:0,alpha:0}}}).composite([{input:lockup,left:4,top:21}]).png().toBuffer();
+ // Keep the complete lockup at its approved size. Its lower transparent band
+ // carries the owner's location/year using the map's deterministic pixel font.
+ const glyphs=read('art/source/hub-nameplates.json').glyphs as Record<string,string[]>;
+ const text='MYANMAR 2026',scale=2,advance=16,left=Math.floor((384-((text.length-1)*advance+5*scale))/2);let letters='';
+ for(const[i,c]of[...text].entries())for(const[y,row]of glyphs[c].entries())for(let x=0;x<5;x++)if(row[x]==='1')letters+=`<rect x="${left+i*advance+x*scale}" y="${110+y*scale}" width="2" height="2" fill="#ffffff"/>`;
+ const subtitle=Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="384" height="128" shape-rendering="crispEdges">${letters}</svg>`);
+ const panel=await sharp({create:{width:384,height:128,channels:4,background:{r:0,g:0,b:0,alpha:0}}}).composite([{input:lockup,left:4,top:21},{input:subtitle,left:0,top:0}]).png().toBuffer();
  const logos=[];for(const[i,path]of ARRIVAL_LOGO_PATHS.entries())logos.push({path,png:await sharp(panel).extract({left:i%2*192,top:Math.floor(i/2)*64,width:192,height:64}).png().toBuffer()});
  const base=await renderRoadster();need(readFileSync(base.metadata.overlay.image).equals(base.png),'retained car atlas changed');
  need(isDeepStrictEqual(read(ROADSTER_V2_METADATA_PATH),base.metadata),'original car metadata changed');

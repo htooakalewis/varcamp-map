@@ -2,8 +2,8 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "6c4b53df7d049c887cc5792842995834ed965d45eae6e68cb75238cdc2e3dd17",
-      "maps/overworld.tmj": "fd4e093a077704e2bddfee46249c364253554897ae9a606d5267e1795c30e5ad",
+      "world/layouts/overworld.json": "d4086e34830705327cd4fdfdf76cb76e18972835fc45719e0a42fefc713ae66e",
+      "maps/overworld.tmj": "29297103f8d307843479e48813468baf8eb36bc758c5f06edeb394d8e3fa27d2",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
       "tests/npc-maps.test.ts": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
@@ -13,11 +13,11 @@
       "tests/helpers/physical-prop-contracts.ts": "de231dadf7d2e11c14dfa677edccc767a2f57e7a56881acf503f17b2706388cf",
       "art/tile-catalog.json": "022bc756bc55fdb661e7fd1a4095659725cc247be376d20b8511891dfd6f7951",
       "tools/bots/route-audit.ts": "5afd01b411c9843095f3c4f5bcf2b968a71e2ddaa02bee738131bb5aef87730d",
-      "tests/guide-route-audit.test.ts": "e07af92a38cb2187f12571b396c6ae526ce98065a480f05ce43c082a5a589a60",
+      "tests/guide-route-audit.test.ts": "1c60285ae874fc2ab78bcd06534d8847e5921ef7bef6af14672335662caf84c4",
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15"
     },
     "allowedCellsSha256": "04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9",
-    "geometrySha256": "6f824b9005135e6d954446d18840826397115bd580e727739d7b302cfbc643c0",
+    "geometrySha256": "f3264e5e0365c2f01320f420a3d94f8ea3403f52e15c9a3c3e8c8fdd4381f607",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

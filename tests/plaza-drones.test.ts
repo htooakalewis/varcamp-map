@@ -1,3 +1,4 @@
+import {PATROL_IDS} from '../tools/maps/patrol-roles';
 import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {resolve} from 'node:path';
@@ -26,12 +27,12 @@ it('renders two genuinely travelling drones in all quadrants, native clocks and 
  }
  expect(visiblePixels).toBeGreaterThan(400);
 });
-it('flies every one of the43 overworld drones above every tile, object and attendee in the trailing airborne stack',()=>{
+it('flies all49 overworld drone resources above every tile, object and attendee in the trailing airborne stack',()=>{
  const layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout,map=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap;
- const names=[...Array.from({length:40},(_,i)=>'plaza-drone-'+String(i).padStart(2,'0')),'plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey'];
+ const names=[...Array.from({length:40},(_,i)=>'plaza-drone-'+String(i).padStart(2,'0')),'plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey',...PATROL_IDS];
  expect(PLAZA_DRONES.map(r=>r.name)).toEqual(names);expect(PLAZA_DRONES.every(r=>r.map==='overworld'&&isCurrentAircraft('overworld',r.name))).toBe(true);
- expect(currentDecorationRoles().overworld.filter(r=>r.role==='aircraft').map(r=>r.name)).toEqual(names);
- const drones=layout.animatedOverlays!.filter(o=>/^plaza-(drone|fleet)-/.test(o.name));expect(drones.map(o=>o.name)).toEqual(names);
+ expect(currentDecorationRoles().overworld.filter(r=>r.role==='aircraft').map(r=>r.name)).toEqual([...names].sort());
+ const drones=layout.animatedOverlays!.filter(o=>/^plaza-(drone|fleet|patrol)-/.test(o.name));expect(drones.map(o=>o.name)).toEqual(names);
  for(const o of drones){expect(o.level,o.name).toBe('aboveScenery');expect(JSON.parse(readFileSync(o.provenance!.metadataPath,'utf8')).overlay.level,o.name).toBe('aboveScenery');}
  // Everything else on the overworld (roadster included) stays below the drones; the drones are the complete tail.
  expect(layout.animatedOverlays!.filter(o=>o.level==='aboveScenery').map(o=>o.name)).toEqual(names);

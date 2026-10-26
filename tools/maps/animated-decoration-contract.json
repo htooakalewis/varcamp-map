@@ -425,6 +425,30 @@
         "role": "aircraft"
       },
       {
+        "name": "plaza-patrol-arrival-east",
+        "role": "aircraft"
+      },
+      {
+        "name": "plaza-patrol-arrival-west",
+        "role": "aircraft"
+      },
+      {
+        "name": "plaza-patrol-east",
+        "role": "aircraft"
+      },
+      {
+        "name": "plaza-patrol-north",
+        "role": "aircraft"
+      },
+      {
+        "name": "plaza-patrol-south",
+        "role": "aircraft"
+      },
+      {
+        "name": "plaza-patrol-west",
+        "role": "aircraft"
+      },
+      {
         "name": "roadster",
         "role": "avatarForeground"
       }

@@ -8,7 +8,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
-import {PLAZA_DRONES} from '../../tools/maps/airborne';
+import {BEFORE_PATROL_DRONES as PLAZA_DRONES} from './plaza-patrol-history';
 import {buildMap} from '../../tools/maps/builder';
 import {reconcileNativeProjection} from '../../tools/maps/native-projection';
 import {loadTileCatalog} from '../../tools/art/catalog';

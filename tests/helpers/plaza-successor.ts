@@ -23,6 +23,9 @@ import {approvedHistoricalPlaza,approvedHistoricalRaw} from './approved-world-su
 import {DRONE_DEPTH_INPUTS,advanceDroneDepthLayout,advanceDroneDepthNative,beforeDroneDepthJson,renumberFreshDroneLayers} from './drone-depth-epoch';
 import {arrivalSuccessorSha,beforeArrivalJson} from './arrival-refresh-history';
 import {applyArrivalRefresh,reconcileArrivalRefresh,advanceArrivalProvenance} from '../../tools/maps/arrival-refresh';
+import {applyPlazaPatrol,reconcilePlazaPatrol} from '../../tools/maps/plaza-patrol';
+import {advancePatrolProvenance} from '../../tools/maps/plaza-patrol-provenance';
+import {beforePatrolJson} from './plaza-patrol-history';
 import type {TileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
 import contract from '../../world/plaza-floor-garden-native.json';
@@ -224,7 +227,10 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  assert.deepEqual(physicalNative,advanceDroneDepthNative(beforeDroneDepthJson('maps/overworld.tmj')),'Genuine pre-drone-depth native must match the physics forward operation');
  assert.deepEqual(physical,advanceArrivalProvenance(beforeArrivalJson('world/layouts/overworld.json')),'Genuine pre-arrival source must match the preceding forward chain');
  assert.deepEqual(physicalNative,beforeArrivalJson('maps/overworld.tmj'),'Genuine pre-arrival native must match the preceding forward chain');
- const arrival=applyArrivalRefresh(physical);return {layout:arrival,native:reconcileArrivalRefresh(physicalNative,arrival,catalog)};
+ const arrival=applyArrivalRefresh(physical),arrivalNative=reconcileArrivalRefresh(physicalNative,arrival,catalog);
+ assert.deepEqual(arrival,advancePatrolProvenance(beforePatrolJson('world/layouts/overworld.json')),'Genuine pre-patrol source must match the arrival forward operation');
+ assert.deepEqual(arrivalNative,beforePatrolJson('maps/overworld.tmj'),'Genuine pre-patrol native must match the arrival forward operation');
+ const patrol=applyPlazaPatrol(arrival);return {layout:patrol,native:reconcilePlazaPatrol(arrivalNative,patrol,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

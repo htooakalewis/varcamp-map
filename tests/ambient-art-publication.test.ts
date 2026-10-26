@@ -1,3 +1,6 @@
+import {renderPlazaPatrol,PATROL_RECIPE} from '../tools/art/plaza-patrol';
+import {PATROL_IDS} from '../tools/maps/patrol-roles';
+import {patrolSuccessorSha} from './helpers/plaza-patrol-history';
 import {renderArrivalRefresh,ARRIVAL_ROADSTER_METADATA} from '../tools/art/arrival-refresh';
 import {renderTropicalCove,tropicalCoveMetadata,COVE_IMAGE} from '../tools/art/tropical-cove';
 import{cpSync,mkdtempSync,readFileSync,writeFileSync,rmSync,symlinkSync,existsSync,readdirSync}from'node:fs';
@@ -57,6 +60,7 @@ async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:B
  add('art/source/plaza-generated.json',(await renderPlazaIdentity()).metadata);add('art/source/plaza-garden.json',(await renderPlazaGarden()).metadata);
  add('art/source/plaza-buildings.json',(await renderPlazaBuildings()).metadata);add('art/source/plaza-grass.json',(await renderPlazaGrass()).metadata);add('art/source/plaza-pots.json',(await renderPlazaPots()).metadata);
  const drones=await renderPlazaDrones();add('art/source/plaza-drones.json',drones.metadata);for(const r of drones.resources)add(r.metadataPath,{version:1,source:drones.metadata.source,overlay:r.overlay,diagnostics:r.diagnostics});
+ const patrol=await renderPlazaPatrol();add('art/source/plaza-patrol.json',patrol.metadata);for(const r of patrol.resources){add(r.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  const fleet=await renderPlazaFleet();add('art/source/plaza-fleet.json',fleet.metadata);for(const r of fleet.aircraft){add(r.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});outputs.set(r.posePath,{bytes:r.posePng});}
  add('art/source/coast-life-assets.json',(await renderCoastLifeAssets()).metadata);for(const r of await renderCoastLife()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
@@ -71,6 +75,8 @@ async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:B
 it('binds every current registry path and preserves static artwork while validating genuine generated descriptors',async()=>{
  const beforeRaw=readFileSync('tests/fixtures/ambient-art-publication/source-registry-before-aerial.json');expect(sha(beforeRaw)).toBe('bb557c5266bfd5b082119616918125e206f0514b3fa73a6e8e2d2f18de488d41');
  const before=JSON.parse(beforeRaw.toString()),current=read('art/sources.json');
+ const patrolPaths=[PATROL_RECIPE,'tools/art/plaza-patrol.ts','tools/maps/patrol-roles.ts','art/source/plaza-patrol.json',...PATROL_IDS.flatMap(id=>[`assets/tilesets/original/${id}.png`,`art/source/${id}.json`])];
+ const patrolStatic:Record<string,string>={"tools/art/plaza-patrol.ts":"ee6c558de3cfabffbde89ef33d2b1f4a8d8bc7acf70164380ca525f66730e993","tools/maps/patrol-roles.ts":"1a36045b32572b299ecf98ffeafafe20afb21f5c3a624ab256985ac955740212","art/source/plaza-patrol-recipe.json":"5710f418301eec9c17d6ad894f960952b0828e2cb4a474883f8fa37c73616b10"};
  assertApprovedLayoutSuccessor('speaker-aries',read('world/layouts/speaker-aries.json'));
  const fleetPaths=[...Object.keys(approvedFleetStaticPins),'art/source/plaza-fleet.json',...['camera','delivery','survey'].flatMap(type=>[`art/source/plaza-fleet-${type}.json`,`art/source/plaza-fleet-${type}-poses.png`,`assets/tilesets/original/plaza-fleet-${type}.png`])].sort();expect(fleetPaths).toHaveLength(16);
  // The brand epoch added exactly one reviewed registry id after the closed roster (owner-provided, not CC0); its complete record is pinned.
@@ -83,12 +89,13 @@ it('binds every current registry path and preserves static artwork while validat
  for(const id of Object.keys(before)){
   const{files:oldFiles,...oldMetadata}=before[id],{files:currentFiles,...currentMetadata}=current[id];expect(currentMetadata,id+' complete source metadata').toEqual(id==='original'?{...oldMetadata,changes:oldMetadata.changes+approvedExpoRegistryNote+approvedRoadsterV2RegistryNote+approvedAriesStyleRegistryNote}:id==='lpc-water'?{...oldMetadata,changes:oldMetadata.changes+' Tropical cove is a separately named32px derivative; original water and organic-coast atlases remain byte-exact.'}:oldMetadata);
   if(id==='original'){expect(currentFiles.map((r:any)=>r.path).filter((p:string)=>!expoPaths.includes(p)&&!arrivalRows.includes(p)),id+' closed path roster/order').toEqual(oldFiles.map((r:any)=>r.path));for(const[path,index]of Object.entries({...approvedExpoStaticRows,...approvedExpoCaptionRows,...approvedRoadsterV2Rows,...approvedAriesStyleRows}))expect(currentFiles[index].path,path+' registered forward row position').toBe(path);}
-  else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?fleetPaths:id==='lpc-water'?covePaths:[])]);
+  else expect(currentFiles.map((r:any)=>r.path),id+' closed path roster/order').toEqual([...oldFiles.map((r:any)=>r.path),...(id==='plaza-original-drones'?[...fleetPaths,...patrolPaths]:id==='lpc-water'?covePaths:[])]);
   for(let i=0;i<currentFiles.length;i++){
    const row=currentFiles[i],old=id==='original'?oldFiles.find((r:any)=>r.path===row.path):oldFiles[i],bytes=readFileSync(row.path);expect(Object.keys(row).sort()).toEqual(old?Object.keys(old).sort():['path','sha256']);expect(row.sha256,row.path+' actual registered bytes').toBe(sha(bytes));
    const produced=generated.get(row.path);
    if(produced){if('json'in produced)expect(JSON.parse(bytes.toString()),row.path+' genuine current producer').toEqual(produced.json);else if('pixels'in produced)expect((await sharp(bytes).ensureAlpha().raw().toBuffer()).equals(produced.pixels),row.path+' genuine caption glyph pixels').toBe(true);else expect(bytes.equals(produced.bytes),row.path+' genuine native/pose PNG').toBe(true);}
-   else if(Object.hasOwn(arrivalStatic,row.path))expect(row.sha256,row.path+' reviewed arrival source').toBe(arrivalStatic[row.path]);
+   else if(Object.hasOwn(arrivalStatic,row.path))expect(row.sha256,row.path+' reviewed arrival source').toBe(patrolSuccessorSha(row.path,arrivalStatic[row.path]));
+   else if(Object.hasOwn(patrolStatic,row.path))expect(row.sha256,row.path+' reviewed patrol source').toBe(patrolStatic[row.path]);
    else if(Object.hasOwn(coveStatic,row.path))expect(row.sha256,row.path+' reviewed cove source').toBe(coveStatic[row.path]);
    else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(approvedBirdRecipePins[row.path]);
    else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);

@@ -1,3 +1,4 @@
+import {PATROL_IDS} from '../tools/maps/patrol-roles';
 import{mkdtempSync,readFileSync,rmSync,writeFileSync}from'node:fs';
 import{tmpdir}from'node:os';
 import{resolve}from'node:path';
@@ -11,10 +12,10 @@ import registered from'../art/source/native-ownership-context.json';
 import {assertNativeAnimationSafety} from '../tools/maps/animated-decoration';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
-it('every current decoration is lower, an actual owned-upper projection, one of five safe airborne birds, the seaplane or one of the43 overworld drones',()=>{
- const invalid:string[]=[],upper:string[]=[],airborne:string[]=[],aircraft:string[]=[],lower:string[]=[];const birds=['shipyard-beach/coast-life-harbor-gull-north','shipyard-beach/coast-life-harbor-gull-south','constellation-shore/coast-life-shore-gull-north','constellation-shore/coast-life-shore-gull-south','fa-ship/world-ambient-fa-ship-gull-1'];const aircraftNames=[...Array.from({length:40},(_,i)=>'overworld/plaza-drone-'+String(i).padStart(2,'0')),'overworld/plaza-fleet-camera','overworld/plaza-fleet-delivery','overworld/plaza-fleet-survey','shipyard-beach/coastal-flight'];let count=0;
+it('every current decoration is lower, an actual owned-upper projection, one of five safe airborne birds, the seaplane or one of the49 overworld drone resources',()=>{
+ const invalid:string[]=[],upper:string[]=[],airborne:string[]=[],aircraft:string[]=[],lower:string[]=[];const birds=['shipyard-beach/coast-life-harbor-gull-north','shipyard-beach/coast-life-harbor-gull-south','constellation-shore/coast-life-shore-gull-north','constellation-shore/coast-life-shore-gull-south','fa-ship/world-ambient-fa-ship-gull-1'];const aircraftNames=[...Array.from({length:40},(_,i)=>'overworld/plaza-drone-'+String(i).padStart(2,'0')),'overworld/plaza-fleet-camera','overworld/plaza-fleet-delivery','overworld/plaza-fleet-survey',...PATROL_IDS.map(name=>'overworld/'+name),'shipyard-beach/coastal-flight'];let count=0;
  for(const id of Object.keys(WORLD_CATALOG))for(const o of read(`world/layouts/${id}.json`).animatedOverlays??[]){count++;if(o.level==='belowAvatar'){lower.push(`${id}/${o.name}`);continue;}const meta=o.provenance?read(o.provenance.metadataPath):{};if(o.level==='aboveScenery'&&birds.includes(`${id}/${o.name}`))airborne.push(`${id}/${o.name}`);else if(o.level==='aboveScenery'&&aircraftNames.includes(`${id}/${o.name}`))aircraft.push(`${id}/${o.name}`);else if(o.level==='aboveAvatar'&&meta.partition==='opaqueOwnerUpper'&&meta.depthReceipt?.owner)upper.push(o.name);else invalid.push(`${id}/${o.name}/${o.level}`);}
- expect(count).toBe(140);expect(lower).toHaveLength(89);expect(aircraft.sort()).toEqual(aircraftNames.slice().sort());expect(lower.filter(name=>/^overworld\/plaza-(drone|fleet)-/.test(name))).toEqual([]);expect(upper).toHaveLength(2);expect(airborne.sort()).toEqual(birds.sort());expect(invalid).toEqual([]);
+ expect(count).toBe(146);expect(lower).toHaveLength(89);expect(aircraft.sort()).toEqual(aircraftNames.slice().sort());expect(lower.filter(name=>/^overworld\/plaza-(drone|fleet|patrol)-/.test(name))).toEqual([]);expect(upper).toHaveLength(2);expect(airborne.sort()).toEqual(birds.sort());expect(invalid).toEqual([]);
 });
 it('current plaza entry rejects coherent omission of the required Roadster',()=>{
  const id='overworld',map=read(`maps/${id}.tmj`),layout=read(`world/layouts/${id}.json`);map.layers=map.layers.filter((l:any)=>l.name!=='roadster');layout.animatedOverlays=layout.animatedOverlays.filter((o:any)=>o.name!=='roadster');
@@ -23,13 +24,13 @@ it('current plaza entry rejects coherent omission of the required Roadster',()=>
  const orphan=structuredClone(map),at=registered.maps.overworld.atlases.findIndex(t=>t.name==='roadster');
  expect(registered.maps.overworld.atlases[at]).toMatchObject({name:'roadster',firstgid:4330,tilecount:240});
  map.tilesets=map.tilesets.filter((s:any)=>s.image!=='../assets/tilesets/original/roadster-v2.png');map.tilesets.splice(at,0,structuredClone(registered.maps.overworld.atlases[at]));
- // The mandatory arrival boundary now detects the complete missing car before
+ // The mandatory patrol successor now detects the complete missing car before
  // ownership checks; this remains a coherent source/native omission.
  // Independently retain the unconditional role-roster denial as well.
  expect(()=>assertNativeAnimationSafety(map,layout,read('art/tile-catalog.json'))).toThrow(/animation safety/i);
- expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Arrival refresh: complete car placement/i);
- // Leaving the atlas orphaned is also refused by the mandatory arrival boundary.
- expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Arrival refresh: complete car placement/i);
+ expect(()=>assertCurrentNativeMap(id,map,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Plaza patrol: unrelated source change/i);
+ // Leaving the atlas orphaned is also refused by the mandatory patrol boundary.
+ expect(()=>assertCurrentNativeMap(id,orphan,layout,read(`maps/${id}.wam`),read('art/tile-catalog.json'))).toThrow(/Plaza patrol: unrelated source change/i);
 });
 it('current boundary rejects native upper pixels outside actual owning alpha255 art even when all output hashes are coherently rebound',async()=>{
  const project=process.cwd(),fixture=mkdtempSync(resolve(tmpdir(),'varcamp-upper-alpha-'));

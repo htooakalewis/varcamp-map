@@ -2,7 +2,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,expect,it} from 'vitest';
 import type {MapLayout,TiledMap} from '../tools/maps/types';
-import {PLAZA_DRONES} from '../tools/maps/airborne';
+import {BEFORE_PATROL_DRONES as PLAZA_DRONES} from './helpers/plaza-patrol-history';
 import {applyDroneDepth,beforeDroneDepthJson,beforeDroneDepthLayout,beforeDroneDepthRaw,droneDepthNative,preDroneDepthLayout,preDroneDepthNative,isDrone} from './helpers/drone-depth-epoch';
 import {preArrivalLayout,preArrivalNative} from './helpers/pre-arrival-epoch';
 import {arrivalSuccessorSha} from './helpers/arrival-refresh-history';

@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/source/coastal-flight.json",
+      "fromSha256": "5d3245de820e5275d0ed7fdaad1f2d7ad7e16e83211087ce251cb161df03d019",
+      "toSha256": "4a19ec10a97afda2689fa3606b8907fbd7ee4fe76d31fe4a87531c2e1216e934",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "art/sources.json",
+      "fromSha256": "4a4e539c80e6a1f4b2eed6f30065d3c3c1be7f92865b870895ab29ae0590a738",
+      "toSha256": "83c1912adca6da9cbdfa3777e711cdd457cbfb83ccb35621bb2edfdf6a05a857",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "fd4e093a077704e2bddfee46249c364253554897ae9a606d5267e1795c30e5ad",
+      "toSha256": "29297103f8d307843479e48813468baf8eb36bc758c5f06edeb394d8e3fa27d2",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "f14cf2c4bb34c9d4f51b6b648a1766ea1d4d8f8d27de0bb7cf9bfae6f6e486ea",
+      "toSha256": "8edb9e192b4fd29a5489f52d5f621d0210d41c6e745436f9b5a19cee99921aa8",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "tests/coastal-boarding.test.ts",
+      "fromSha256": "88af14c1a29fc5ff20d67742fc1500dcaa93842c7ce90f8c164cfffb37a4b264",
+      "toSha256": "cdb1c3df0bde6f64f77dcdfa84fdd693b0b04c7800629288a6f4e1449513ec23",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "tools/art/check.ts",
+      "fromSha256": "e4810bf878887ecf48771cd99f7591271156d6f54116093711c95544110f0137",
+      "toSha256": "de8f42e4f376a4f1d2e6bb8c47fb611f29caa8d24216fcfc66e9b9ca005a3238",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "9e166946b3f44ce5dea2c78711aef1f5bc6114885010d426fa8ea26f859d7e1f",
+      "toSha256": "cf2f7b73388e89bb438f95e80a524a6ae989c16d9580d9bc72ddb51bdf9bebf9",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "3f5294d1cb70540afe3e1b5acc50b7240ac4449eef94dfa81bdd225ddb8d1232",
+      "toSha256": "09c19de52513865dead49085b49ac03fe279d1c37f60fad2d5971c2a0681ad35",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "35d40f33ed25b5c8f2c3e30a0f6bfdbf64478412fe0a79ff615002239bf80d02",
+      "toSha256": "95a065277a471e649f61e617f1eeab1b115e8cadf540c9216ca98888376946ac",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/constellation-shore.json",
+      "fromSha256": "129a3fb7da5ea4b79c2f0c8c928a4df37308aaccb36f7f85f4e02ea8e17459b5",
+      "toSha256": "3989b83573aae21c4a7a19fd011dca3a73a806afd8049bf842237bfa45823076",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "e9528e47a2da361b474f9272ca3950c7b9a880a79ed61f035c274535e88feb0f",
+      "toSha256": "9449e6fc07552bbe19a6d7dcfcfbb419d585e497b11909b0cffd3ef431da1c0b",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "4b53f0ea4262aba771b20d320ba5cd65d85ec739969718b08a576a7fa7ff6f1a",
+      "toSha256": "67aa83785e8b60ca9a26b627754141e1b05543df53f7bc14366822bd68fc16b2",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "7ffd70378629aff124fbb4d1db3024062cbd588047527ff4d1f52eb3e9b3c008",
+      "toSha256": "7dbcb20476d76e4b4200fb266c3bf493da8ce021d9e2b84d5680107775d8bd1b",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "5ded6213070c845bad810ca07de0e3dffb67438f7c2f210a58221fe10def7b8c",
+      "toSha256": "d597c6ceea7e5898e6bc01cd58baede97a65c62b3114a7b50b62bcee1205dc7a",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "b1b5799595c22a5e4f2f7d419d7d617c3df6cdb5a83e66ea30eea7d1662b8175",
+      "toSha256": "70e7c27ba29a65553c19422db15fc0b10d0e5a7c405ca8b89b1af2c281957979",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "9e95db24449604c13992341be40e67ca50bb8167f3aad81e4b46cd7f9efe20e2",
+      "toSha256": "4ae70f6cd2adbffdcff2cc2a8e8b6c066a4a72f283b002550eeffb48a64da74f",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "f53d37710cd5c52d006db94bd931b5b531e48ca579f46d0661953d6db45cae1a",
+      "toSha256": "ba3581231bd71ee4b1303e74af970b3008452bb85a9dbd971e933c27cb26e777",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "6d89a76f1756517f9a7675453a8ff37abc1420f8764f6b6bbe4cbda3578decc4",
+      "toSha256": "b4a5f82708b37bfc72ad3e8249e823038ed3cccf7a72588ddd32ea3fc20c79b0",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "18d78a05d077dfdf4e40b5e48142e863e72a9964467ea2ac2ba539f745fc0adb",
+      "toSha256": "e16c6f51527750ed0834a8fc5bc5017fcd2535bddf587db3031aa71cecc04397",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "6c4b53df7d049c887cc5792842995834ed965d45eae6e68cb75238cdc2e3dd17",
+      "toSha256": "d4086e34830705327cd4fdfdf76cb76e18972835fc45719e0a42fefc713ae66e",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/shipyard-beach.json",
+      "fromSha256": "a1aaa887eeabc4d1176f263e8fd5a66dfc09ddf3702a7b05e7950e8f37c59b8e",
+      "toSha256": "1c909d23084d424a3f7ae93584d97b3ecdaa72c80d42565d1a04240f4b4506d5",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "8daefddf60eecd16cb3451a640ae1c18b6ed69642fb2f78ca6be2e2b228672cc",
+      "toSha256": "5ffafca5042e8360538745937186afdc48322324591794a397305a995d443f29",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "e1a795c487d32d99d94f3e58a51d86c0ec45364e2a9fd5fdd8bcfd33f4faa6ca",
+      "toSha256": "052d573d7e8aa8a1bc80d4c0eea0d2c4b32a08c16d37c4fd6bb299b45a33addb",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "d964966b62c7922d63371e16ba8c80df09d48bb67ab32a8169e05a647957b6e6",
+      "toSha256": "522643f4b67dcacc408d0b5b8ccfc4602fddcceed955c05919d0c5cc7398264d",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "9f5452b990ed277f45cecc3cfdf2cb7157b50e79dd80e3d7aad925ea71c1e922",
+      "toSha256": "14961b3a7504c8021a0acfb0c2562e388860e430bb95ed9de027920e32616ecd",
+      "reason": "Owner-authorized plaza cleanup: remove the photographed table at52,67, add six camera patrol routes above scenery/attendees, retain existing aircraft and maps, add MYANMAR2026 below the arrival lockup, requalify public geometry only and push the completed local work."
+    }
+  ]
+}

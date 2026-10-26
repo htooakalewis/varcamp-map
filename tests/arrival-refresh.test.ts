@@ -3,12 +3,12 @@ import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
 import{describe,it,expect}from'vitest';
 import sharp from'sharp';
-import{PLAZA_DRONES}from'../tools/maps/airborne';
+import{BEFORE_PATROL_DRONES as PLAZA_DRONES,prePatrolLayout,prePatrolNative,patrolSuccessorSha}from'./helpers/plaza-patrol-history';
 import{loadTileCatalog}from'../tools/art/catalog';
 import{assertNativePlaza}from'../tools/maps/plaza-native';
 import{beforeArrival,beforeArrivalJson}from'./helpers/arrival-refresh-history';
 import type{MapLayout,TiledMap,TileLayer}from'../tools/maps/types';
-const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8')),sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
+const read=<T=any>(p:string):T=>{const v=JSON.parse(readFileSync(p,'utf8'));return(p==='world/layouts/overworld.json'?prePatrolLayout(v):p==='maps/overworld.tmj'?prePatrolNative(v):v) as T;},sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const panels=['nw','ne','sw','se'].map((key,i)=>({name:'Arrival / VarCamp '+key.toUpperCase(),image:'assets/sponsors/varcamp-arrival-'+key+'.png',x:58+i%2*6,y:60+Math.floor(i/2)*2,width:6,height:2,standing:false}));
 describe('current colourful arrival and topmost drones',()=>{
  it('forms one crisp12x4floor lockup above the spawn from exactly four seamless6x2panels',()=>{
@@ -45,7 +45,7 @@ describe('current colourful arrival and topmost drones',()=>{
   for(const key of['entries','exits','areas','inspectionZones','signs']as const)expect(l[key],key).toEqual(prior[key]);
   const a=(m.layers.find(l=>l.name==='physical-collisions')as TileLayer).data,c=(old.layers.find(l=>l.name==='physical-collisions')as TileLayer).data;expect(a.flatMap((v,i)=>v!==c[i]?[i]:[])).toEqual([64*128+68]);
  });
- it('requires the current arrival even when every new marker is absent',()=>{expect(()=>assertNativePlaza(beforeArrivalJson('maps/overworld.tmj'),beforeArrivalJson('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Arrival refresh/);});
+ it('requires the current arrival even when every new marker is absent',()=>{expect(()=>assertNativePlaza(beforeArrivalJson('maps/overworld.tmj'),beforeArrivalJson('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol/);});
  it('reproduces the exact retained SVG quadrants and the same car pixels through a pure current placement producer',async()=>{
   const{renderArrivalRefresh,checkArrivalRefreshArt}=await import('../tools/art/arrival-refresh');const r=await renderArrivalRefresh();expect(sha(readFileSync('art/source/varcamp-horizontal.svg'))).toBe('05f5ea29e8635156bf4ed74f9e39a6067bb2121ac266db514d7918703924250f');
   const rgba=Buffer.alloc(384*128*4);for(const[i,row]of r.logos.entries()){expect(row.png).toEqual(readFileSync(panels[i].image));const{data,info}=await sharp(row.png).ensureAlpha().raw().toBuffer({resolveWithObject:true});expect([info.width,info.height]).toEqual([192,64]);for(let y=0;y<64;y++)data.copy(rgba,((Math.floor(i/2)*64+y)*384+i%2*192)*4,y*192*4,(y+1)*192*4);}
@@ -56,11 +56,11 @@ describe('current colourful arrival and topmost drones',()=>{
   expect(applyArrivalRefresh(old)).toEqual(current);expect(applyArrivalRefresh(current)).toEqual(current);expect(old).toEqual(saved);expect(reconcileArrivalRefresh(native,current,loadTileCatalog())).toEqual(read('maps/overworld.tmj'));expect(native).toEqual(savedNative);expect(reconcileArrivalRefresh(read('maps/overworld.tmj'),current,loadTileCatalog())).toEqual(read('maps/overworld.tmj'));
  });
  it.each(['missing-panel','duplicate-panel','standing-panel','moved-panel','wrong-png','old-sign','old-pole','moved-car','old-logo'])('rejects coherent %s mutations at the normal production gate',kind=>{
-  const l=read<MapLayout>('world/layouts/overworld.json'),panel=l.images!.find(i=>i.name===panels[0].name)!;
+  const l=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout,panel=l.images!.find(i=>i.name===panels[0].name)!;
   if(kind==='missing-panel')l.images=l.images!.filter(i=>i!==panel);if(kind==='duplicate-panel')l.images!.push(structuredClone(panel));if(kind==='standing-panel')panel.standing=true;if(kind==='moved-panel')panel.x++;if(kind==='wrong-png')panel.image='assets/sponsors/varcamp-2026.png';
   if(kind==='old-sign'||kind==='old-pole')l.placements.push(beforeArrivalJson<MapLayout>('world/layouts/overworld.json').placements.find(p=>p.id===(kind==='old-sign'?'arrival-direction-crosspost':'arrival-crosspost-pole'))!);
   if(kind==='moved-car')l.animatedOverlays!.find(o=>o.name==='roadster')!.x--;if(kind==='old-logo')l.images!.push(beforeArrivalJson<MapLayout>('world/layouts/overworld.json').images!.find(i=>i.name==='VarCamp 2026 Floor')!);
-  expect(()=>assertNativePlaza(read('maps/overworld.tmj'),l,loadTileCatalog())).toThrow(/Arrival refresh/);
+  expect(()=>assertNativePlaza(JSON.parse(readFileSync('maps/overworld.tmj','utf8')),l,loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol/);
  });
  it('refuses to repair unrelated native collisions or controls while applying the arrival transaction',async()=>{
   const{reconcileArrivalRefresh}=await import('../tools/maps/arrival-refresh'),m=beforeArrivalJson<TiledMap>('maps/overworld.tmj');(m.layers.find(l=>l.name==='physical-collisions')as TileLayer).data[70*128+70]=1;expect(()=>reconcileArrivalRefresh(m,read('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Native projection/);
@@ -70,6 +70,6 @@ describe('current colourful arrival and topmost drones',()=>{
  });
  it('binds every arrival byte transition to genuine before and current bytes without cyclic manifest authority',()=>{
   const table=read('tests/fixtures/arrival-refresh/transitions.json'),before=beforeArrival();expect(table.base).toBe(before.base);expect(table.transitions).not.toHaveProperty('publication/source-manifest.json');
-  for(const[path,[from,to]]of Object.entries(table.transitions)as[string,[string,string]][]){expect(path).not.toMatch(/^tests\//);expect(from,path+' genuine predecessor').toBe(before.pins[path]);expect(to,path+' current bytes').toBe(sha(readFileSync(path)));expect(from).not.toBe(to);}
+  for(const[path,[from,to]]of Object.entries(table.transitions)as[string,[string,string]][]){expect(path).not.toMatch(/^tests\//);expect(from,path+' genuine predecessor').toBe(before.pins[path]);expect(patrolSuccessorSha(path,to),path+' current bytes').toBe(sha(readFileSync(path)));expect(from).not.toBe(to);}
  });
 });

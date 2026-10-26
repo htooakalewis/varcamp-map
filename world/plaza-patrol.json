@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "decision": "Owner: remove tiny plaza table, add six aerial surveillance patrols, label arrival MYANMAR 2026, deploy and push remote.",
+  "beforeLayoutSha256": "ce2e9c580c308715bc0c438dc08b80779362134d0c112ab018c7fcfdd98c69e2",
+  "removedTable": {
+    "index": 1139,
+    "placement": {
+      "id": "welcome-table",
+      "sprite": "table-small-white",
+      "x": 52,
+      "y": 67,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    }
+  },
+  "producerInputs": {
+    "tools/maps/native-ownership-context.ts": [
+      "9fb6120105191b20ed35be944ab8789850ccb496f89f4a683a2b96ae5fab226f",
+      "ac55da1fd064d487acc3751354a47e0c8900dc08b45b9c1ce38aee21dbecb57e"
+    ],
+    "tools/maps/animated-decoration.ts": [
+      "803ec55098732becbdf5fbf315097a57363af5eaa77758fe6e9ba68c2ae259b5",
+      "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
+    ],
+    "tools/maps/animated-decoration-contract.json": [
+      "ad2cdc7b80dd2d60e4b4fc17597056d950f67952557e6615e245bfff7dfb6f0f",
+      "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
+    ],
+    "tools/art/arrival-refresh.ts": [
+      "255fc99a65f9100b62e9399ebd6a55ddf5a1dbda7334689077ac07e3e17b1395",
+      "986e6048258feec6b37f46a04ed6e9fbdc43f72f653d06168da0bd415d20ab36"
+    ]
+  }
+}

@@ -3,6 +3,7 @@ import registered from'../../art/source/native-ownership-context.json';
 import{WORLD_CATALOG}from'../../src/world/catalog';
 import contract from'./animated-decoration-contract.json';
 import type{TiledMap,TiledLayer,TiledTileset}from'./types';
+import {PATROL_IDS} from './patrol-roles';
 
 interface ContextRow{
  atlases:TiledTileset[];
@@ -99,6 +100,16 @@ function arrivalFloorAtlases(source:TiledMap,start:number):TiledTileset[]{
   return{...structuredClone(t),firstgid:start+i*12};
  });
 }
+/** Six new patrol atlases append after every retained arrival reservation. */
+function patrolAtlases(source:TiledMap,start:number):TiledTileset[]{
+ const sets=source.tilesets.filter(t=>PATROL_IDS.some(id=>t.name===id||t.image===`../assets/tilesets/original/${id}.png`));
+ if(!sets.length)return[];
+ need(identities(source)[0]==='overworld'&&isDeepStrictEqual(sets.map(t=>t.name),PATROL_IDS),'closed six-patrol atlas roster/order changed');
+ let next=start;return sets.map(t=>{
+  need(t.image===`../assets/tilesets/original/${t.name}.png`&&t.tilewidth===32&&t.tileheight===32&&!t.source&&(t.spacing??0)===0&&(t.margin??0)===0&&t.columns===16&&t.imagewidth===512&&Number.isSafeInteger(t.imageheight)&&t.imageheight!>0&&t.imageheight!<=2048&&t.imageheight!%32===0&&t.tilecount===t.imageheight!/32*16&&Array.isArray(t.tiles)&&t.tiles.length>0&&t.tiles.length<256,'patrol atlas geometry changed');
+  const result={...structuredClone(t),firstgid:next};next+=t.tilecount!;return result;
+ });
+}
 function hallExteriorAtlas(source:TiledMap,start:number):TiledTileset|undefined{
  const r=HALL_EXTERIOR_ATLAS,sets=source.tilesets.filter(t=>t.image===r.image||t.name===r.name);
  need(sets.length<=1,'hall exterior atlas duplicated');if(!sets.length)return;
@@ -183,7 +194,7 @@ function protectedContext(actual:TiledMap,row:ContextRow):void{
  * mandatory, the expo family may be absent only together with the brand family. */
 interface Epoch{expo:boolean;brand:boolean;roadsterV2:boolean}
 const CURRENT:Epoch={expo:true,brand:true,roadsterV2:true},PRE_ROADSTER_V2:Epoch={expo:true,brand:true,roadsterV2:false},PRE_BRAND:Epoch={expo:true,brand:false,roadsterV2:false},PRE_EXPO:Epoch={expo:false,brand:false,roadsterV2:false};
-function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true):TiledTileset[]{
+function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,includeCove=true,includeZodiac=true,includeHall=true,includeArrival=true,includePatrol=true):TiledTileset[]{
  const retired=new Set(row.retired.map(t=>t.firstgid));
  const expected=structuredClone(row.atlases.filter(t=>!retired.has(t.firstgid)));
  let next=row.nextAtlasGid;
@@ -221,6 +232,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   const zodiac=zodiacExteriorAtlas(source,v2Start+(v2?.tilecount??0));if(zodiac&&includeZodiac&&epoch.roadsterV2)expected.push(zodiac);
   const hall=hallExteriorAtlas(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0));if(hall){need(zodiac,'hall exteriors require the preceding zodiac reservation');if(includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(hall);}
   const arrival=arrivalFloorAtlases(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0));if(arrival.length){need(hall,'arrival floor requires the preceding hall reservation');if(includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(...arrival);}
+  const patrol=patrolAtlases(source,v2Start+(v2?.tilecount??0)+(zodiac?.tilecount??0)+(hall?.tilecount??0)+arrival.reduce((n,t)=>n+t.tilecount!,0));if(patrol.length){need(arrival.length===4,'patrols require the preceding arrival reservations');if(includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push(...patrol);}
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
  return expected;
@@ -243,6 +255,8 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact preceding arrival context; final current validation requires all six.
+ if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,false)))return;
  // Exact pre-arrival context only; this never weakens the final current gate.
  if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,false)))return;
  // Exact immediately preceding hall context, then the genuine pre-zodiac context.

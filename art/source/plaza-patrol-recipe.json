@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "source": "art/source/plaza-fleet-camera-poses.png",
+  "sourceSha256": "10387384eeb012a8a9f3ba00b12ca1bece07827f22205e3f91d61fe9baec44a0",
+  "stepMs": 200,
+  "periodMs": 32000,
+  "routes": [
+    {
+      "id": "plaza-patrol-north",
+      "rect": {
+        "x": 53,
+        "y": 16,
+        "width": 3,
+        "height": 29
+      },
+      "phaseOffset": 0
+    },
+    {
+      "id": "plaza-patrol-south",
+      "rect": {
+        "x": 53,
+        "y": 92,
+        "width": 3,
+        "height": 25
+      },
+      "phaseOffset": 25
+    },
+    {
+      "id": "plaza-patrol-west",
+      "rect": {
+        "x": 10,
+        "y": 53,
+        "width": 27,
+        "height": 3
+      },
+      "phaseOffset": 50
+    },
+    {
+      "id": "plaza-patrol-east",
+      "rect": {
+        "x": 92,
+        "y": 53,
+        "width": 27,
+        "height": 3
+      },
+      "phaseOffset": 75
+    },
+    {
+      "id": "plaza-patrol-arrival-west",
+      "rect": {
+        "x": 49,
+        "y": 58,
+        "width": 3,
+        "height": 15
+      },
+      "phaseOffset": 100
+    },
+    {
+      "id": "plaza-patrol-arrival-east",
+      "rect": {
+        "x": 80,
+        "y": 58,
+        "width": 3,
+        "height": 15
+      },
+      "phaseOffset": 125
+    }
+  ]
+}

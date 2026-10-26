@@ -604,7 +604,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "ad2cdc7b80dd2d60e4b4fc17597056d950f67952557e6615e245bfff7dfb6f0f"
+            "sha256": "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -616,7 +616,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "803ec55098732becbdf5fbf315097a57363af5eaa77758fe6e9ba68c2ae259b5"
+            "sha256": "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -636,7 +636,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "9fb6120105191b20ed35be944ab8789850ccb496f89f4a683a2b96ae5fab226f"
+            "sha256": "ac55da1fd064d487acc3751354a47e0c8900dc08b45b9c1ce38aee21dbecb57e"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -840,7 +840,7 @@
           },
           {
             "path": "tools/maps/animated-decoration-contract.json",
-            "sha256": "ad2cdc7b80dd2d60e4b4fc17597056d950f67952557e6615e245bfff7dfb6f0f"
+            "sha256": "dc13dafa7bd8c3addec2bf78ed887b6fa03486eb824f260c896bcd7e767924d9"
           },
           {
             "path": "tools/art/world-ambient.ts",
@@ -852,7 +852,7 @@
           },
           {
             "path": "tools/maps/animated-decoration.ts",
-            "sha256": "803ec55098732becbdf5fbf315097a57363af5eaa77758fe6e9ba68c2ae259b5"
+            "sha256": "f795942e675101671eb8f3a960a0c2b40d523ec9c98c6efcada9bb9ce036a580"
           },
           {
             "path": "tools/maps/world-ambient.ts",
@@ -872,7 +872,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "9fb6120105191b20ed35be944ab8789850ccb496f89f4a683a2b96ae5fab226f"
+            "sha256": "ac55da1fd064d487acc3751354a47e0c8900dc08b45b9c1ce38aee21dbecb57e"
           },
           {
             "path": "art/source/native-ownership-context.json",

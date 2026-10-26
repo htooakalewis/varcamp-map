@@ -1,3 +1,4 @@
+import {advancePatrolOverlay,patrolInputSha,priorPatrolProvenance} from './plaza-patrol-provenance';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
@@ -17,14 +18,14 @@ const inputRows=()=>Object.entries((recipe as typeof recipe&{producerInputs:Reco
 export function advanceArrivalOverlay(original:LayoutAnimatedOverlay):LayoutAnimatedOverlay{
  const o=structuredClone(original);
  for(const input of o.provenance?.inputs??[]){const pair=inputRows().find(([path])=>path===input.path)?.[1];if(!pair)continue;
-  need(input.sha256===pair[0]||input.sha256===pair[1],'unknown predecessor input: '+input.path);need(createHash('sha256').update(readFileSync(input.path)).digest('hex')===pair[1],'reviewed producer changed: '+input.path);input.sha256=pair[1];
- }return o;
+  need(input.sha256===pair[0]||input.sha256===pair[1]||input.sha256===patrolInputSha(input.path,pair[1]),'unknown predecessor input: '+input.path);need(createHash('sha256').update(readFileSync(input.path)).digest('hex')===patrolInputSha(input.path,pair[1]),'reviewed producer changed: '+input.path);input.sha256=pair[1];
+ }return advancePatrolOverlay(o);
 }
 export function advanceArrivalProvenance<T extends MapLayout>(original:T):T{
  const l=structuredClone(original);if(l.animatedOverlays)l.animatedOverlays=l.animatedOverlays.map(advanceArrivalOverlay);return l;
 }
 function priorProvenance(original:MapLayout,requireCurrent:boolean):MapLayout{
- const l=structuredClone(original);for(const o of l.animatedOverlays??[])for(const input of o.provenance?.inputs??[]){const pair=inputRows().find(([path])=>path===input.path)?.[1];if(!pair)continue;need(input.sha256===pair[1]||!requireCurrent&&input.sha256===pair[0],'unknown current producer input: '+input.path);input.sha256=pair[0];}return l;
+ const l=priorPatrolProvenance(original);for(const o of l.animatedOverlays??[])for(const input of o.provenance?.inputs??[]){const pair=inputRows().find(([path])=>path===input.path)?.[1];if(!pair)continue;need(input.sha256===pair[1]||!requireCurrent&&input.sha256===pair[0],'unknown current producer input: '+input.path);input.sha256=pair[0];}return l;
 }
 /** Mandatory checked inverse. The source pin prevents unrelated edits from
  * being legitimised by an inverse or by the native author. */
