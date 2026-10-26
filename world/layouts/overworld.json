@@ -9672,7 +9672,7 @@
     {
       "id": "aries-apron",
       "sprite": "path-stone",
-      "x": 99,
+      "x": 105,
       "y": 69,
       "width": 6,
       "height": 7,
@@ -9681,7 +9681,7 @@
     {
       "id": "aries-side-approach",
       "sprite": "path-stone",
-      "x": 94,
+      "x": 100,
       "y": 62,
       "width": 4,
       "height": 11,
@@ -9690,7 +9690,7 @@
     {
       "id": "aries-front-approach",
       "sprite": "path-stone",
-      "x": 94,
+      "x": 100,
       "y": 69,
       "width": 10,
       "height": 4,
@@ -9699,7 +9699,7 @@
     {
       "id": "aries-building",
       "sprite": "zodiac-physical-aries",
-      "x": 96,
+      "x": 102,
       "y": 58,
       "width": 12,
       "height": 12,
@@ -9708,7 +9708,7 @@
     {
       "id": "aries-ground-name",
       "sprite": "zodiac-ground-name-aries",
-      "x": 96,
+      "x": 102,
       "y": 74,
       "width": 12,
       "height": 2,
@@ -9717,7 +9717,7 @@
     {
       "id": "approach-arrow-aries",
       "sprite": "arrow-north",
-      "x": 99,
+      "x": 105,
       "y": 71,
       "width": 1,
       "height": 1,
@@ -9726,8 +9726,8 @@
     {
       "id": "taurus-apron",
       "sprite": "path-stone",
-      "x": 94,
-      "y": 88,
+      "x": 99,
+      "y": 91,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -9735,8 +9735,8 @@
     {
       "id": "taurus-side-approach",
       "sprite": "path-stone",
-      "x": 89,
-      "y": 81,
+      "x": 94,
+      "y": 84,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -9744,8 +9744,8 @@
     {
       "id": "taurus-front-approach",
       "sprite": "path-stone",
-      "x": 89,
-      "y": 88,
+      "x": 94,
+      "y": 91,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -9753,8 +9753,8 @@
     {
       "id": "taurus-building",
       "sprite": "zodiac-physical-taurus",
-      "x": 91,
-      "y": 77,
+      "x": 96,
+      "y": 80,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -9762,8 +9762,8 @@
     {
       "id": "taurus-ground-name",
       "sprite": "zodiac-ground-name-taurus",
-      "x": 91,
-      "y": 93,
+      "x": 96,
+      "y": 96,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -9771,8 +9771,8 @@
     {
       "id": "approach-arrow-taurus",
       "sprite": "arrow-north",
-      "x": 94,
-      "y": 90,
+      "x": 99,
+      "y": 93,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -9780,8 +9780,8 @@
     {
       "id": "gemini-apron",
       "sprite": "path-stone",
-      "x": 80,
-      "y": 102,
+      "x": 83,
+      "y": 107,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -9789,8 +9789,8 @@
     {
       "id": "gemini-side-approach",
       "sprite": "path-stone",
-      "x": 75,
-      "y": 95,
+      "x": 78,
+      "y": 100,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -9798,8 +9798,8 @@
     {
       "id": "gemini-front-approach",
       "sprite": "path-stone",
-      "x": 75,
-      "y": 102,
+      "x": 78,
+      "y": 107,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -9807,8 +9807,8 @@
     {
       "id": "gemini-building",
       "sprite": "zodiac-physical-gemini",
-      "x": 77,
-      "y": 91,
+      "x": 80,
+      "y": 96,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -9816,8 +9816,8 @@
     {
       "id": "gemini-ground-name",
       "sprite": "zodiac-ground-name-gemini",
-      "x": 77,
-      "y": 107,
+      "x": 80,
+      "y": 112,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -9825,8 +9825,8 @@
     {
       "id": "approach-arrow-gemini",
       "sprite": "arrow-north",
-      "x": 80,
-      "y": 104,
+      "x": 83,
+      "y": 109,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -9835,7 +9835,7 @@
       "id": "cancer-apron",
       "sprite": "path-stone",
       "x": 61,
-      "y": 107,
+      "y": 113,
       "width": 6,
       "height": 4,
       "layer": "terrain"
@@ -9844,7 +9844,7 @@
       "id": "cancer-side-approach",
       "sprite": "path-stone",
       "x": 56,
-      "y": 100,
+      "y": 106,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -9853,7 +9853,7 @@
       "id": "cancer-front-approach",
       "sprite": "path-stone",
       "x": 56,
-      "y": 107,
+      "y": 113,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -9862,7 +9862,7 @@
       "id": "cancer-building",
       "sprite": "zodiac-physical-cancer",
       "x": 58,
-      "y": 96,
+      "y": 102,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -9871,7 +9871,7 @@
       "id": "cancer-ground-name",
       "sprite": "zodiac-ground-name-cancer",
       "x": 58,
-      "y": 112,
+      "y": 118,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -9880,7 +9880,7 @@
       "id": "approach-arrow-cancer",
       "sprite": "arrow-north",
       "x": 61,
-      "y": 109,
+      "y": 115,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -9888,8 +9888,8 @@
     {
       "id": "leo-apron",
       "sprite": "path-stone",
-      "x": 42,
-      "y": 102,
+      "x": 39,
+      "y": 107,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -9897,8 +9897,8 @@
     {
       "id": "leo-side-approach",
       "sprite": "path-stone",
-      "x": 49,
-      "y": 95,
+      "x": 46,
+      "y": 100,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -9906,8 +9906,8 @@
     {
       "id": "leo-front-approach",
       "sprite": "path-stone",
-      "x": 43,
-      "y": 102,
+      "x": 40,
+      "y": 107,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -9915,8 +9915,8 @@
     {
       "id": "leo-building",
       "sprite": "zodiac-physical-leo",
-      "x": 39,
-      "y": 91,
+      "x": 36,
+      "y": 96,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -9924,8 +9924,8 @@
     {
       "id": "leo-ground-name",
       "sprite": "zodiac-ground-name-leo",
-      "x": 39,
-      "y": 107,
+      "x": 36,
+      "y": 112,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -9933,8 +9933,8 @@
     {
       "id": "approach-arrow-leo",
       "sprite": "arrow-north",
-      "x": 42,
-      "y": 104,
+      "x": 39,
+      "y": 109,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -9942,8 +9942,8 @@
     {
       "id": "virgo-apron",
       "sprite": "path-stone",
-      "x": 28,
-      "y": 88,
+      "x": 23,
+      "y": 91,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -9951,8 +9951,8 @@
     {
       "id": "virgo-side-approach",
       "sprite": "path-stone",
-      "x": 35,
-      "y": 81,
+      "x": 30,
+      "y": 84,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -9960,8 +9960,8 @@
     {
       "id": "virgo-front-approach",
       "sprite": "path-stone",
-      "x": 29,
-      "y": 88,
+      "x": 24,
+      "y": 91,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -9969,8 +9969,8 @@
     {
       "id": "virgo-building",
       "sprite": "zodiac-physical-virgo",
-      "x": 25,
-      "y": 77,
+      "x": 20,
+      "y": 80,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -9978,8 +9978,8 @@
     {
       "id": "virgo-ground-name",
       "sprite": "zodiac-ground-name-virgo",
-      "x": 25,
-      "y": 93,
+      "x": 20,
+      "y": 96,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -9987,8 +9987,8 @@
     {
       "id": "approach-arrow-virgo",
       "sprite": "arrow-north",
-      "x": 28,
-      "y": 90,
+      "x": 23,
+      "y": 93,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -9996,7 +9996,7 @@
     {
       "id": "libra-apron",
       "sprite": "path-stone",
-      "x": 23,
+      "x": 17,
       "y": 69,
       "width": 6,
       "height": 7,
@@ -10005,7 +10005,7 @@
     {
       "id": "libra-side-approach",
       "sprite": "path-stone",
-      "x": 30,
+      "x": 24,
       "y": 62,
       "width": 4,
       "height": 11,
@@ -10014,7 +10014,7 @@
     {
       "id": "libra-front-approach",
       "sprite": "path-stone",
-      "x": 24,
+      "x": 18,
       "y": 69,
       "width": 10,
       "height": 4,
@@ -10023,7 +10023,7 @@
     {
       "id": "libra-building",
       "sprite": "zodiac-physical-libra",
-      "x": 20,
+      "x": 14,
       "y": 58,
       "width": 12,
       "height": 12,
@@ -10032,7 +10032,7 @@
     {
       "id": "libra-ground-name",
       "sprite": "zodiac-ground-name-libra",
-      "x": 20,
+      "x": 14,
       "y": 74,
       "width": 12,
       "height": 2,
@@ -10041,7 +10041,7 @@
     {
       "id": "approach-arrow-libra",
       "sprite": "arrow-north",
-      "x": 23,
+      "x": 17,
       "y": 71,
       "width": 1,
       "height": 1,
@@ -10050,8 +10050,8 @@
     {
       "id": "scorpio-apron",
       "sprite": "path-stone",
-      "x": 28,
-      "y": 50,
+      "x": 23,
+      "y": 47,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -10059,8 +10059,8 @@
     {
       "id": "scorpio-building",
       "sprite": "zodiac-physical-scorpio",
-      "x": 25,
-      "y": 39,
+      "x": 20,
+      "y": 36,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -10068,8 +10068,8 @@
     {
       "id": "scorpio-ground-name",
       "sprite": "zodiac-ground-name-scorpio",
-      "x": 25,
-      "y": 55,
+      "x": 20,
+      "y": 52,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -10077,8 +10077,8 @@
     {
       "id": "approach-arrow-scorpio",
       "sprite": "arrow-north",
-      "x": 28,
-      "y": 52,
+      "x": 23,
+      "y": 49,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -10086,8 +10086,8 @@
     {
       "id": "sagittarius-apron",
       "sprite": "path-stone",
-      "x": 42,
-      "y": 36,
+      "x": 39,
+      "y": 31,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -10095,8 +10095,8 @@
     {
       "id": "sagittarius-building",
       "sprite": "zodiac-physical-sagittarius",
-      "x": 39,
-      "y": 25,
+      "x": 36,
+      "y": 20,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -10104,8 +10104,8 @@
     {
       "id": "sagittarius-ground-name",
       "sprite": "zodiac-ground-name-sagittarius",
-      "x": 39,
-      "y": 41,
+      "x": 36,
+      "y": 36,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -10113,8 +10113,8 @@
     {
       "id": "approach-arrow-sagittarius",
       "sprite": "arrow-north",
-      "x": 42,
-      "y": 38,
+      "x": 39,
+      "y": 33,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -10123,7 +10123,7 @@
       "id": "capricorn-apron",
       "sprite": "path-stone",
       "x": 61,
-      "y": 31,
+      "y": 25,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -10132,7 +10132,7 @@
       "id": "capricorn-building",
       "sprite": "zodiac-physical-capricorn",
       "x": 58,
-      "y": 20,
+      "y": 14,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -10141,7 +10141,7 @@
       "id": "capricorn-ground-name",
       "sprite": "zodiac-ground-name-capricorn",
       "x": 58,
-      "y": 36,
+      "y": 30,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -10150,7 +10150,7 @@
       "id": "approach-arrow-capricorn",
       "sprite": "arrow-north",
       "x": 61,
-      "y": 33,
+      "y": 27,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -10158,8 +10158,8 @@
     {
       "id": "aquarius-apron",
       "sprite": "path-stone",
-      "x": 80,
-      "y": 36,
+      "x": 83,
+      "y": 31,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -10167,8 +10167,8 @@
     {
       "id": "aquarius-building",
       "sprite": "zodiac-physical-aquarius",
-      "x": 77,
-      "y": 25,
+      "x": 80,
+      "y": 20,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -10176,8 +10176,8 @@
     {
       "id": "aquarius-ground-name",
       "sprite": "zodiac-ground-name-aquarius",
-      "x": 77,
-      "y": 41,
+      "x": 80,
+      "y": 36,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -10185,8 +10185,8 @@
     {
       "id": "approach-arrow-aquarius",
       "sprite": "arrow-north",
-      "x": 80,
-      "y": 38,
+      "x": 83,
+      "y": 33,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -10194,8 +10194,8 @@
     {
       "id": "pisces-apron",
       "sprite": "path-stone",
-      "x": 94,
-      "y": 50,
+      "x": 99,
+      "y": 47,
       "width": 6,
       "height": 7,
       "layer": "terrain"
@@ -10203,8 +10203,8 @@
     {
       "id": "pisces-side-approach",
       "sprite": "path-stone",
-      "x": 89,
-      "y": 43,
+      "x": 94,
+      "y": 40,
       "width": 4,
       "height": 11,
       "layer": "terrain"
@@ -10212,8 +10212,8 @@
     {
       "id": "pisces-front-approach",
       "sprite": "path-stone",
-      "x": 89,
-      "y": 50,
+      "x": 94,
+      "y": 47,
       "width": 10,
       "height": 4,
       "layer": "terrain"
@@ -10221,8 +10221,8 @@
     {
       "id": "pisces-building",
       "sprite": "zodiac-physical-pisces",
-      "x": 91,
-      "y": 39,
+      "x": 96,
+      "y": 36,
       "width": 12,
       "height": 12,
       "layer": "props"
@@ -10230,8 +10230,8 @@
     {
       "id": "pisces-ground-name",
       "sprite": "zodiac-ground-name-pisces",
-      "x": 91,
-      "y": 55,
+      "x": 96,
+      "y": 52,
       "width": 12,
       "height": 2,
       "layer": "props"
@@ -10239,8 +10239,8 @@
     {
       "id": "approach-arrow-pisces",
       "sprite": "arrow-north",
-      "x": 94,
-      "y": 52,
+      "x": 99,
+      "y": 49,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -10253,186 +10253,6 @@
       "width": 30,
       "height": 20,
       "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-rim",
-      "sprite": "floor-inlay",
-      "x": 43,
-      "y": 49,
-      "width": 11,
-      "height": 11,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-lawn-west",
-      "sprite": "plaza-grass-03",
-      "x": 44,
-      "y": 50,
-      "width": 3,
-      "height": 2,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-lawn-east",
-      "sprite": "plaza-grass-04",
-      "x": 51,
-      "y": 50,
-      "width": 2,
-      "height": 2,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-lawn-south",
-      "sprite": "plaza-grass-01",
-      "x": 44,
-      "y": 52,
-      "width": 9,
-      "height": 7,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-walk",
-      "sprite": "path-stone",
-      "x": 44,
-      "y": 57,
-      "width": 9,
-      "height": 2,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northwest-tree-0",
-      "sprite": "plaza-tree-flowering",
-      "x": 44,
-      "y": 50,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northwest-tree-1",
-      "sprite": "plaza-tree-flowering",
-      "x": 51,
-      "y": 50,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northwest-tree-2",
-      "sprite": "plaza-tree-flowering",
-      "x": 44,
-      "y": 54,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northwest-flower",
-      "sprite": "plaza-flower-bed",
-      "x": 51,
-      "y": 54,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northwest-bench",
-      "sprite": "bench-park",
-      "x": 46,
-      "y": 57,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northwest-tea-table",
-      "sprite": "table-small-wood",
-      "x": 49,
-      "y": 57,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-rim",
-      "sprite": "floor-inlay",
-      "x": 79,
-      "y": 49,
-      "width": 8,
-      "height": 11,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northeast-lawn",
-      "sprite": "plaza-grass-03",
-      "x": 80,
-      "y": 50,
-      "width": 6,
-      "height": 9,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northeast-walk",
-      "sprite": "path-stone",
-      "x": 80,
-      "y": 57,
-      "width": 6,
-      "height": 2,
-      "layer": "terrain"
-    },
-    {
-      "id": "inner-garden-northeast-tree-0",
-      "sprite": "plaza-tree-round",
-      "x": 80,
-      "y": 50,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-tree-1",
-      "sprite": "plaza-tree-round",
-      "x": 84,
-      "y": 50,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-tree-2",
-      "sprite": "plaza-tree-round",
-      "x": 80,
-      "y": 54,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-flower",
-      "sprite": "plaza-flower-bed",
-      "x": 84,
-      "y": 54,
-      "width": 2,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-bench",
-      "sprite": "bench-park",
-      "x": 82,
-      "y": 57,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "inner-garden-northeast-tea-table",
-      "sprite": "table-small-wood",
-      "x": 85,
-      "y": 57,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
     },
     {
       "id": "inner-garden-southwest-rim",
@@ -10509,8 +10329,8 @@
     {
       "id": "outer-garden-northwest-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 34,
-      "y": 34,
+      "x": 29,
+      "y": 29,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -10518,8 +10338,8 @@
     {
       "id": "outer-garden-northwest-tree",
       "sprite": "plaza-tree-flowering",
-      "x": 36,
-      "y": 34,
+      "x": 31,
+      "y": 26,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10527,8 +10347,8 @@
     {
       "id": "outer-garden-northwest-second-tree",
       "sprite": "plaza-tree-round",
-      "x": 34,
-      "y": 34,
+      "x": 27,
+      "y": 30,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10572,8 +10392,8 @@
     {
       "id": "outer-garden-northeast-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 90,
-      "y": 34,
+      "x": 96,
+      "y": 28,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -10581,8 +10401,8 @@
     {
       "id": "outer-garden-northeast-tree",
       "sprite": "plaza-tree-flowering",
-      "x": 92,
-      "y": 34,
+      "x": 98,
+      "y": 29,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10590,8 +10410,8 @@
     {
       "id": "outer-garden-northeast-second-tree",
       "sprite": "plaza-tree-round",
-      "x": 90,
-      "y": 34,
+      "x": 94,
+      "y": 25,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10635,8 +10455,8 @@
     {
       "id": "outer-garden-southwest-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 35,
-      "y": 91,
+      "x": 32,
+      "y": 96,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -10644,8 +10464,8 @@
     {
       "id": "outer-garden-southwest-tree",
       "sprite": "plaza-tree-flowering",
-      "x": 37,
-      "y": 91,
+      "x": 33,
+      "y": 98,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10653,8 +10473,8 @@
     {
       "id": "outer-garden-southwest-second-tree",
       "sprite": "plaza-tree-round",
-      "x": 35,
-      "y": 91,
+      "x": 31,
+      "y": 98,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10662,8 +10482,8 @@
     {
       "id": "outer-garden-southwest-bench",
       "sprite": "bench-park",
-      "x": 36,
-      "y": 96,
+      "x": 34,
+      "y": 104,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -10698,8 +10518,8 @@
     {
       "id": "outer-garden-southeast-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 90,
-      "y": 91,
+      "x": 94,
+      "y": 96,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -10707,8 +10527,8 @@
     {
       "id": "outer-garden-southeast-tree",
       "sprite": "plaza-tree-flowering",
-      "x": 92,
-      "y": 91,
+      "x": 93,
+      "y": 98,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10716,8 +10536,8 @@
     {
       "id": "outer-garden-southeast-second-tree",
       "sprite": "plaza-tree-round",
-      "x": 90,
-      "y": 91,
+      "x": 95,
+      "y": 98,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10725,8 +10545,8 @@
     {
       "id": "outer-garden-southeast-bench",
       "sprite": "bench-park",
-      "x": 91,
-      "y": 96,
+      "x": 92,
+      "y": 104,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -10777,46 +10597,19 @@
       "layer": "terrain"
     },
     {
-      "id": "moon-fountain-court",
-      "sprite": "floor-inlay",
-      "x": 54,
-      "y": 47,
-      "width": 6,
-      "height": 8,
-      "layer": "terrain"
-    },
-    {
       "id": "central-moon-fountain",
       "sprite": "hub-moon-fountain",
-      "x": 54,
-      "y": 48,
+      "x": 51,
+      "y": 43,
       "width": 6,
       "height": 6,
       "layer": "props"
     },
     {
-      "id": "community-kiosk-court",
-      "sprite": "floor-inlay",
-      "x": 69,
-      "y": 47,
-      "width": 9,
-      "height": 7,
-      "layer": "terrain"
-    },
-    {
-      "id": "community-kiosk-inner",
-      "sprite": "floor-wood",
-      "x": 70,
-      "y": 48,
-      "width": 7,
-      "height": 5,
-      "layer": "terrain"
-    },
-    {
       "id": "community-kiosk-table",
       "sprite": "table-circular",
-      "x": 71,
-      "y": 49,
+      "x": 72,
+      "y": 45,
       "width": 4,
       "height": 3,
       "layer": "props"
@@ -10825,7 +10618,7 @@
       "id": "community-kiosk-bench-left",
       "sprite": "bench-park",
       "x": 70,
-      "y": 52,
+      "y": 50,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -10833,8 +10626,8 @@
     {
       "id": "community-kiosk-bench-right",
       "sprite": "bench-park",
-      "x": 75,
-      "y": 52,
+      "x": 76,
+      "y": 50,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -10842,8 +10635,8 @@
     {
       "id": "community-kiosk-tree",
       "sprite": "plaza-tree-round",
-      "x": 76,
-      "y": 47,
+      "x": 78,
+      "y": 44,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -10854,7 +10647,7 @@
       "x": 52,
       "y": 12,
       "width": 5,
-      "height": 35,
+      "height": 26,
       "layer": "terrain"
     },
     {
@@ -11137,28 +10930,10 @@
       "layer": "props"
     },
     {
-      "id": "exterior-road-sign-north",
-      "sprite": "standing-exterior-road-north",
-      "x": 58,
-      "y": 43,
-      "width": 4,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "exterior-road-post-north",
-      "sprite": "solid-sign-post",
-      "x": 59,
-      "y": 44,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "exterior-alley-arrow-north",
       "sprite": "arrow-north",
-      "x": 54,
-      "y": 44,
+      "x": 62,
+      "y": 39,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -11218,28 +10993,10 @@
       "layer": "props"
     },
     {
-      "id": "exterior-road-sign-south",
-      "sprite": "standing-exterior-road-south",
-      "x": 58,
-      "y": 90,
-      "width": 4,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "exterior-road-post-south",
-      "sprite": "solid-sign-post",
-      "x": 59,
-      "y": 91,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "exterior-alley-arrow-south",
       "sprite": "arrow-south",
-      "x": 54,
-      "y": 91,
+      "x": 62,
+      "y": 92,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -11418,8 +11175,8 @@
     {
       "id": "gate-return-arrow-campus",
       "sprite": "arrow-north",
-      "x": 64,
-      "y": 119,
+      "x": 57,
+      "y": 120,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -11455,7 +11212,7 @@
       "id": "exterior-grove-northwest-flowers",
       "sprite": "plaza-flower-bed",
       "x": 40,
-      "y": 11,
+      "y": 10,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11491,7 +11248,7 @@
       "id": "exterior-grove-westnorth-flowers",
       "sprite": "plaza-flower-bed",
       "x": 12,
-      "y": 39,
+      "y": 36,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11509,7 +11266,7 @@
       "id": "exterior-grove-westsouth-flowers",
       "sprite": "plaza-flower-bed",
       "x": 12,
-      "y": 89,
+      "y": 90,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11527,7 +11284,7 @@
       "id": "exterior-grove-eastnorth-flowers",
       "sprite": "plaza-flower-bed",
       "x": 114,
-      "y": 39,
+      "y": 36,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11545,7 +11302,7 @@
       "id": "exterior-grove-eastsouth-flowers",
       "sprite": "plaza-flower-bed",
       "x": 114,
-      "y": 89,
+      "y": 90,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11553,8 +11310,8 @@
     {
       "id": "exterior-grove-southwest-tree",
       "sprite": "plaza-tree-round",
-      "x": 38,
-      "y": 114,
+      "x": 48,
+      "y": 110,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11562,8 +11319,8 @@
     {
       "id": "exterior-grove-southwest-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 40,
-      "y": 115,
+      "x": 44,
+      "y": 119,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11571,8 +11328,8 @@
     {
       "id": "exterior-grove-southeast-tree",
       "sprite": "plaza-tree-round",
-      "x": 88,
-      "y": 114,
+      "x": 78,
+      "y": 110,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11580,8 +11337,8 @@
     {
       "id": "exterior-grove-southeast-flowers",
       "sprite": "plaza-flower-bed",
-      "x": 90,
-      "y": 115,
+      "x": 82,
+      "y": 119,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -11625,8 +11382,8 @@
     {
       "id": "draft-grove-north-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 60,
-      "y": 14,
+      "x": 50,
+      "y": 15,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11634,7 +11391,7 @@
     {
       "id": "draft-grove-north-inner-tree-1",
       "sprite": "plaza-tree-evergreen",
-      "x": 64,
+      "x": 71,
       "y": 14,
       "width": 2,
       "height": 3,
@@ -11643,8 +11400,8 @@
     {
       "id": "draft-grove-north-inner-tree-2",
       "sprite": "plaza-tree-flowering",
-      "x": 62,
-      "y": 14,
+      "x": 58,
+      "y": 4,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11652,7 +11409,7 @@
     {
       "id": "draft-grove-north-inner-tree-3",
       "sprite": "plaza-tree-round",
-      "x": 67,
+      "x": 73,
       "y": 14,
       "width": 2,
       "height": 3,
@@ -11661,8 +11418,8 @@
     {
       "id": "draft-grove-northwest-inner-tree-0",
       "sprite": "plaza-tree-evergreen",
-      "x": 40,
-      "y": 19,
+      "x": 43,
+      "y": 17,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11670,8 +11427,8 @@
     {
       "id": "draft-grove-northwest-inner-tree-1",
       "sprite": "plaza-tree-flowering",
-      "x": 44,
-      "y": 18,
+      "x": 45,
+      "y": 17,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11679,8 +11436,8 @@
     {
       "id": "draft-grove-northwest-inner-tree-2",
       "sprite": "plaza-tree-round",
-      "x": 42,
-      "y": 19,
+      "x": 47,
+      "y": 17,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11688,8 +11445,8 @@
     {
       "id": "draft-grove-northwest-inner-tree-3",
       "sprite": "plaza-tree-round",
-      "x": 47,
-      "y": 17,
+      "x": 45,
+      "y": 7,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11706,8 +11463,8 @@
     {
       "id": "draft-grove-northeast-inner-tree-1",
       "sprite": "plaza-tree-round",
-      "x": 84,
-      "y": 19,
+      "x": 83,
+      "y": 17,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11715,8 +11472,8 @@
     {
       "id": "draft-grove-northeast-inner-tree-2",
       "sprite": "plaza-tree-round",
-      "x": 82,
-      "y": 18,
+      "x": 78,
+      "y": 16,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11724,8 +11481,8 @@
     {
       "id": "draft-grove-northeast-inner-tree-3",
       "sprite": "plaza-tree-evergreen",
-      "x": 87,
-      "y": 20,
+      "x": 92,
+      "y": 12,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11733,8 +11490,8 @@
     {
       "id": "draft-grove-westnorth-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 22,
-      "y": 37,
+      "x": 23,
+      "y": 33,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11751,7 +11508,7 @@
     {
       "id": "draft-grove-westnorth-inner-tree-2",
       "sprite": "plaza-tree-evergreen",
-      "x": 19,
+      "x": 17,
       "y": 43,
       "width": 2,
       "height": 3,
@@ -11760,8 +11517,8 @@
     {
       "id": "draft-grove-westnorth-inner-tree-3",
       "sprite": "plaza-tree-flowering",
-      "x": 20,
-      "y": 40,
+      "x": 17,
+      "y": 46,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11769,8 +11526,8 @@
     {
       "id": "draft-grove-eastnorth-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 104,
-      "y": 37,
+      "x": 103,
+      "y": 33,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11778,8 +11535,8 @@
     {
       "id": "draft-grove-eastnorth-inner-tree-1",
       "sprite": "plaza-tree-evergreen",
-      "x": 106,
-      "y": 40,
+      "x": 109,
+      "y": 43,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11787,8 +11544,8 @@
     {
       "id": "draft-grove-eastnorth-inner-tree-2",
       "sprite": "plaza-tree-flowering",
-      "x": 107,
-      "y": 43,
+      "x": 109,
+      "y": 46,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11796,8 +11553,8 @@
     {
       "id": "draft-grove-eastnorth-inner-tree-3",
       "sprite": "plaza-tree-round",
-      "x": 108,
-      "y": 46,
+      "x": 109,
+      "y": 49,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11805,8 +11562,8 @@
     {
       "id": "draft-grove-west-middle-tree-0",
       "sprite": "plaza-tree-evergreen",
-      "x": 13,
-      "y": 59,
+      "x": 5,
+      "y": 58,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11814,8 +11571,8 @@
     {
       "id": "draft-grove-west-middle-tree-1",
       "sprite": "plaza-tree-flowering",
-      "x": 15,
-      "y": 61,
+      "x": 5,
+      "y": 55,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11823,8 +11580,8 @@
     {
       "id": "draft-grove-west-middle-tree-2",
       "sprite": "plaza-tree-round",
-      "x": 13,
-      "y": 65,
+      "x": 5,
+      "y": 70,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11833,7 +11590,7 @@
       "id": "draft-grove-west-middle-tree-3",
       "sprite": "plaza-tree-round",
       "x": 15,
-      "y": 66,
+      "y": 77,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11841,8 +11598,8 @@
     {
       "id": "draft-grove-east-middle-tree-0",
       "sprite": "plaza-tree-flowering",
-      "x": 112,
-      "y": 59,
+      "x": 121,
+      "y": 58,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11850,8 +11607,8 @@
     {
       "id": "draft-grove-east-middle-tree-1",
       "sprite": "plaza-tree-round",
-      "x": 113,
-      "y": 62,
+      "x": 121,
+      "y": 67,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11859,8 +11616,8 @@
     {
       "id": "draft-grove-east-middle-tree-2",
       "sprite": "plaza-tree-round",
-      "x": 112,
-      "y": 65,
+      "x": 121,
+      "y": 70,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11868,8 +11625,8 @@
     {
       "id": "draft-grove-east-middle-tree-3",
       "sprite": "plaza-tree-evergreen",
-      "x": 113,
-      "y": 68,
+      "x": 120,
+      "y": 73,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11877,7 +11634,7 @@
     {
       "id": "draft-grove-westsouth-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 19,
+      "x": 17,
       "y": 82,
       "width": 2,
       "height": 3,
@@ -11886,8 +11643,8 @@
     {
       "id": "draft-grove-westsouth-inner-tree-1",
       "sprite": "plaza-tree-round",
-      "x": 20,
-      "y": 85,
+      "x": 17,
+      "y": 79,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11895,8 +11652,8 @@
     {
       "id": "draft-grove-westsouth-inner-tree-2",
       "sprite": "plaza-tree-evergreen",
-      "x": 22,
-      "y": 88,
+      "x": 15,
+      "y": 94,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11904,8 +11661,8 @@
     {
       "id": "draft-grove-westsouth-inner-tree-3",
       "sprite": "plaza-tree-flowering",
-      "x": 24,
-      "y": 91,
+      "x": 16,
+      "y": 97,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11913,7 +11670,7 @@
     {
       "id": "draft-grove-eastsouth-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 107,
+      "x": 109,
       "y": 82,
       "width": 2,
       "height": 3,
@@ -11922,8 +11679,8 @@
     {
       "id": "draft-grove-eastsouth-inner-tree-1",
       "sprite": "plaza-tree-evergreen",
-      "x": 106,
-      "y": 85,
+      "x": 109,
+      "y": 79,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11931,8 +11688,8 @@
     {
       "id": "draft-grove-eastsouth-inner-tree-2",
       "sprite": "plaza-tree-flowering",
-      "x": 104,
-      "y": 88,
+      "x": 111,
+      "y": 94,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11940,8 +11697,8 @@
     {
       "id": "draft-grove-eastsouth-inner-tree-3",
       "sprite": "plaza-tree-round",
-      "x": 106,
-      "y": 88,
+      "x": 113,
+      "y": 92,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11949,26 +11706,8 @@
     {
       "id": "draft-grove-southwest-inner-tree-0",
       "sprite": "plaza-tree-evergreen",
-      "x": 38,
-      "y": 104,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-southwest-inner-tree-1",
-      "sprite": "plaza-tree-flowering",
-      "x": 40,
-      "y": 106,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-southwest-inner-tree-2",
-      "sprite": "plaza-tree-round",
-      "x": 36,
-      "y": 104,
+      "x": 50,
+      "y": 109,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11976,8 +11715,8 @@
     {
       "id": "draft-grove-southwest-inner-tree-3",
       "sprite": "plaza-tree-round",
-      "x": 46,
-      "y": 109,
+      "x": 51,
+      "y": 120,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -11985,35 +11724,8 @@
     {
       "id": "draft-grove-southeast-inner-tree-0",
       "sprite": "plaza-tree-flowering",
-      "x": 81,
+      "x": 76,
       "y": 109,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-southeast-inner-tree-1",
-      "sprite": "plaza-tree-round",
-      "x": 86,
-      "y": 105,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-southeast-inner-tree-2",
-      "sprite": "plaza-tree-round",
-      "x": 88,
-      "y": 105,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-southeast-inner-tree-3",
-      "sprite": "plaza-tree-evergreen",
-      "x": 90,
-      "y": 104,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -12021,8 +11733,8 @@
     {
       "id": "draft-grove-south-inner-tree-0",
       "sprite": "plaza-tree-round",
-      "x": 59,
-      "y": 111,
+      "x": 58,
+      "y": 121,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -12030,8 +11742,8 @@
     {
       "id": "draft-grove-south-inner-tree-1",
       "sprite": "plaza-tree-round",
-      "x": 67,
-      "y": 111,
+      "x": 72,
+      "y": 120,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -12039,17 +11751,8 @@
     {
       "id": "draft-grove-south-inner-tree-2",
       "sprite": "plaza-tree-evergreen",
-      "x": 69,
-      "y": 112,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "draft-grove-south-inner-tree-3",
-      "sprite": "plaza-tree-flowering",
-      "x": 71,
-      "y": 111,
+      "x": 74,
+      "y": 120,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -12057,8 +11760,8 @@
     {
       "id": "draft-grove-north-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 58,
-      "y": 15,
+      "x": 54,
+      "y": 6,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12066,8 +11769,8 @@
     {
       "id": "draft-grove-north-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 69,
-      "y": 14,
+      "x": 75,
+      "y": 15,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12075,8 +11778,8 @@
     {
       "id": "draft-grove-north-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 66,
-      "y": 15,
+      "x": 76,
+      "y": 17,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12084,8 +11787,8 @@
     {
       "id": "draft-grove-north-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 69,
-      "y": 16,
+      "x": 71,
+      "y": 17,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12093,8 +11796,8 @@
     {
       "id": "draft-grove-northwest-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 38,
-      "y": 22,
+      "x": 41,
+      "y": 18,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12102,8 +11805,8 @@
     {
       "id": "draft-grove-northwest-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 45,
-      "y": 16,
+      "x": 48,
+      "y": 15,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12111,7 +11814,7 @@
     {
       "id": "draft-grove-northwest-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 37,
+      "x": 34,
       "y": 23,
       "width": 1,
       "height": 2,
@@ -12121,7 +11824,7 @@
       "id": "draft-grove-northwest-inner-low-3",
       "sprite": "plaza-plant-flower",
       "x": 46,
-      "y": 19,
+      "y": 16,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12129,8 +11832,8 @@
     {
       "id": "draft-grove-northeast-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 78,
-      "y": 17,
+      "x": 85,
+      "y": 18,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12138,8 +11841,8 @@
     {
       "id": "draft-grove-northeast-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 89,
-      "y": 20,
+      "x": 93,
+      "y": 23,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12147,8 +11850,8 @@
     {
       "id": "draft-grove-northeast-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 86,
-      "y": 21,
+      "x": 82,
+      "y": 18,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12157,7 +11860,7 @@
       "id": "draft-grove-northeast-inner-low-3",
       "sprite": "plaza-plant-flower",
       "x": 88,
-      "y": 23,
+      "y": 19,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12165,8 +11868,8 @@
     {
       "id": "draft-grove-westnorth-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 18,
-      "y": 46,
+      "x": 17,
+      "y": 49,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12174,7 +11877,7 @@
     {
       "id": "draft-grove-westnorth-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 27,
+      "x": 25,
       "y": 31,
       "width": 2,
       "height": 2,
@@ -12183,8 +11886,8 @@
     {
       "id": "draft-grove-westnorth-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 22,
-      "y": 40,
+      "x": 18,
+      "y": 41,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12192,8 +11895,8 @@
     {
       "id": "draft-grove-westnorth-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 25,
-      "y": 36,
+      "x": 22,
+      "y": 35,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12210,8 +11913,8 @@
     {
       "id": "draft-grove-eastnorth-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 103,
-      "y": 35,
+      "x": 101,
+      "y": 32,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12219,8 +11922,8 @@
     {
       "id": "draft-grove-eastnorth-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 105,
-      "y": 40,
+      "x": 109,
+      "y": 41,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12228,8 +11931,8 @@
     {
       "id": "draft-grove-eastnorth-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 108,
-      "y": 42,
+      "x": 111,
+      "y": 45,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12237,8 +11940,8 @@
     {
       "id": "draft-grove-west-middle-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 13,
-      "y": 63,
+      "x": 6,
+      "y": 53,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12247,7 +11950,7 @@
       "id": "draft-grove-west-middle-low-1",
       "sprite": "plaza-flower-bed",
       "x": 15,
-      "y": 59,
+      "y": 50,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12255,8 +11958,8 @@
     {
       "id": "draft-grove-west-middle-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 13,
-      "y": 68,
+      "x": 7,
+      "y": 72,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12265,7 +11968,7 @@
       "id": "draft-grove-west-middle-low-3",
       "sprite": "plaza-plant-flower",
       "x": 16,
-      "y": 64,
+      "y": 57,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12273,8 +11976,8 @@
     {
       "id": "draft-grove-east-middle-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 112,
-      "y": 71,
+      "x": 111,
+      "y": 77,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12283,7 +11986,7 @@
       "id": "draft-grove-east-middle-low-1",
       "sprite": "plaza-flower-bed",
       "x": 121,
-      "y": 58,
+      "y": 56,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12291,8 +11994,8 @@
     {
       "id": "draft-grove-east-middle-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 112,
-      "y": 68,
+      "x": 110,
+      "y": 77,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12301,7 +12004,7 @@
       "id": "draft-grove-east-middle-low-3",
       "sprite": "plaza-plant-flower",
       "x": 114,
-      "y": 61,
+      "y": 57,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12309,8 +12012,8 @@
     {
       "id": "draft-grove-westsouth-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 20,
-      "y": 88,
+      "x": 13,
+      "y": 92,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12319,7 +12022,7 @@
       "id": "draft-grove-westsouth-inner-low-1",
       "sprite": "plaza-flower-bed",
       "x": 17,
-      "y": 82,
+      "y": 77,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12327,8 +12030,8 @@
     {
       "id": "draft-grove-westsouth-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 21,
-      "y": 90,
+      "x": 18,
+      "y": 85,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12336,8 +12039,8 @@
     {
       "id": "draft-grove-westsouth-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 22,
-      "y": 86,
+      "x": 16,
+      "y": 82,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12345,8 +12048,8 @@
     {
       "id": "draft-grove-eastsouth-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 102,
-      "y": 91,
+      "x": 110,
+      "y": 97,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12354,8 +12057,8 @@
     {
       "id": "draft-grove-eastsouth-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 109,
-      "y": 82,
+      "x": 116,
+      "y": 86,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12363,8 +12066,8 @@
     {
       "id": "draft-grove-eastsouth-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 104,
-      "y": 91,
+      "x": 109,
+      "y": 85,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12372,8 +12075,8 @@
     {
       "id": "draft-grove-eastsouth-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 108,
-      "y": 86,
+      "x": 111,
+      "y": 82,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12381,8 +12084,8 @@
     {
       "id": "draft-grove-southwest-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 34,
-      "y": 104,
+      "x": 32,
+      "y": 101,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12390,8 +12093,8 @@
     {
       "id": "draft-grove-southwest-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 44,
-      "y": 109,
+      "x": 47,
+      "y": 120,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12399,8 +12102,8 @@
     {
       "id": "draft-grove-southwest-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 39,
-      "y": 107,
+      "x": 33,
+      "y": 114,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12408,7 +12111,7 @@
     {
       "id": "draft-grove-southwest-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 48,
+      "x": 49,
       "y": 108,
       "width": 1,
       "height": 1,
@@ -12418,7 +12121,7 @@
       "id": "draft-grove-southeast-inner-low-0",
       "sprite": "plaza-flower-bed",
       "x": 79,
-      "y": 109,
+      "y": 120,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12426,7 +12129,7 @@
     {
       "id": "draft-grove-southeast-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 92,
+      "x": 94,
       "y": 101,
       "width": 2,
       "height": 2,
@@ -12435,8 +12138,8 @@
     {
       "id": "draft-grove-southeast-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 83,
-      "y": 109,
+      "x": 78,
+      "y": 108,
       "width": 1,
       "height": 2,
       "layer": "props"
@@ -12444,8 +12147,8 @@
     {
       "id": "draft-grove-southeast-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 88,
-      "y": 104,
+      "x": 93,
+      "y": 101,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -12453,8 +12156,8 @@
     {
       "id": "draft-grove-south-inner-low-0",
       "sprite": "plaza-flower-bed",
-      "x": 75,
-      "y": 111,
+      "x": 76,
+      "y": 120,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12462,8 +12165,8 @@
     {
       "id": "draft-grove-south-inner-low-1",
       "sprite": "plaza-flower-bed",
-      "x": 72,
-      "y": 120,
+      "x": 70,
+      "y": 121,
       "width": 2,
       "height": 2,
       "layer": "props"
@@ -12471,7 +12174,7 @@
     {
       "id": "draft-grove-south-inner-low-2",
       "sprite": "plaza-plant-grass",
-      "x": 58,
+      "x": 50,
       "y": 112,
       "width": 1,
       "height": 2,
@@ -12480,8 +12183,8 @@
     {
       "id": "draft-grove-south-inner-low-3",
       "sprite": "plaza-plant-flower",
-      "x": 67,
-      "y": 114,
+      "x": 68,
+      "y": 121,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14439,7 +14142,7 @@
     {
       "id": "aries-zodiac-threshold",
       "sprite": "zodiac-emblem-aries",
-      "x": 100,
+      "x": 106,
       "y": 70,
       "width": 4,
       "height": 4,
@@ -14448,8 +14151,8 @@
     {
       "id": "taurus-zodiac-threshold",
       "sprite": "zodiac-emblem-taurus",
-      "x": 95,
-      "y": 89,
+      "x": 100,
+      "y": 92,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14457,8 +14160,8 @@
     {
       "id": "gemini-zodiac-threshold",
       "sprite": "zodiac-emblem-gemini",
-      "x": 81,
-      "y": 103,
+      "x": 84,
+      "y": 108,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14467,7 +14170,7 @@
       "id": "cancer-zodiac-threshold",
       "sprite": "zodiac-emblem-cancer",
       "x": 62,
-      "y": 108,
+      "y": 114,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14475,8 +14178,8 @@
     {
       "id": "leo-zodiac-threshold",
       "sprite": "zodiac-emblem-leo",
-      "x": 43,
-      "y": 103,
+      "x": 40,
+      "y": 108,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14484,8 +14187,8 @@
     {
       "id": "virgo-zodiac-threshold",
       "sprite": "zodiac-emblem-virgo",
-      "x": 29,
-      "y": 89,
+      "x": 24,
+      "y": 92,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14493,7 +14196,7 @@
     {
       "id": "libra-zodiac-threshold",
       "sprite": "zodiac-emblem-libra",
-      "x": 24,
+      "x": 18,
       "y": 70,
       "width": 4,
       "height": 4,
@@ -14502,8 +14205,8 @@
     {
       "id": "scorpio-zodiac-threshold",
       "sprite": "zodiac-emblem-scorpio",
-      "x": 29,
-      "y": 51,
+      "x": 24,
+      "y": 48,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14511,8 +14214,8 @@
     {
       "id": "sagittarius-zodiac-threshold",
       "sprite": "zodiac-emblem-sagittarius",
-      "x": 43,
-      "y": 37,
+      "x": 40,
+      "y": 32,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14521,7 +14224,7 @@
       "id": "capricorn-zodiac-threshold",
       "sprite": "zodiac-emblem-capricorn",
       "x": 62,
-      "y": 32,
+      "y": 26,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14529,8 +14232,8 @@
     {
       "id": "aquarius-zodiac-threshold",
       "sprite": "zodiac-emblem-aquarius",
-      "x": 81,
-      "y": 37,
+      "x": 84,
+      "y": 32,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14538,8 +14241,8 @@
     {
       "id": "pisces-zodiac-threshold",
       "sprite": "zodiac-emblem-pisces",
-      "x": 95,
-      "y": 51,
+      "x": 100,
+      "y": 48,
       "width": 4,
       "height": 4,
       "layer": "props"
@@ -14547,8 +14250,8 @@
     {
       "id": "plaza-garden-aries-0",
       "sprite": "plaza-tree-round",
-      "x": 111,
-      "y": 62,
+      "x": 120,
+      "y": 53,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -14556,8 +14259,8 @@
     {
       "id": "plaza-garden-aries-1",
       "sprite": "plaza-shrub",
-      "x": 110,
-      "y": 71,
+      "x": 111,
+      "y": 79,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14566,7 +14269,7 @@
       "id": "plaza-garden-aries-2",
       "sprite": "plaza-lavender",
       "x": 111,
-      "y": 58,
+      "y": 57,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14574,8 +14277,8 @@
     {
       "id": "plaza-garden-aries-3",
       "sprite": "plaza-fern",
-      "x": 111,
-      "y": 65,
+      "x": 113,
+      "y": 57,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14583,8 +14286,8 @@
     {
       "id": "plaza-garden-aries-4",
       "sprite": "plaza-grass-tuft",
-      "x": 111,
-      "y": 66,
+      "x": 120,
+      "y": 72,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14593,25 +14296,16 @@
       "id": "plaza-garden-aries-5",
       "sprite": "plaza-mushrooms",
       "x": 111,
-      "y": 61,
+      "y": 51,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-taurus-0",
-      "sprite": "plaza-tree-birch",
-      "x": 101,
-      "y": 93,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-taurus-1",
       "sprite": "plaza-shrub",
-      "x": 108,
-      "y": 81,
+      "x": 117,
+      "y": 84,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14619,7 +14313,7 @@
     {
       "id": "plaza-garden-taurus-2",
       "sprite": "plaza-blueberry",
-      "x": 108,
+      "x": 117,
       "y": 85,
       "width": 2,
       "height": 1,
@@ -14628,8 +14322,8 @@
     {
       "id": "plaza-garden-taurus-3",
       "sprite": "plaza-fern",
-      "x": 103,
-      "y": 89,
+      "x": 97,
+      "y": 98,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14637,8 +14331,8 @@
     {
       "id": "plaza-garden-taurus-4",
       "sprite": "plaza-grass-tuft",
-      "x": 105,
-      "y": 86,
+      "x": 108,
+      "y": 79,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14646,26 +14340,17 @@
     {
       "id": "plaza-garden-taurus-5",
       "sprite": "plaza-clover",
-      "x": 105,
-      "y": 87,
+      "x": 111,
+      "y": 81,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-gemini-0",
-      "sprite": "plaza-tree-round",
-      "x": 92,
-      "y": 103,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-gemini-1",
       "sprite": "plaza-shrub",
-      "x": 90,
-      "y": 94,
+      "x": 96,
+      "y": 101,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14673,8 +14358,8 @@
     {
       "id": "plaza-garden-gemini-2",
       "sprite": "plaza-lavender",
-      "x": 89,
-      "y": 103,
+      "x": 94,
+      "y": 114,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14682,8 +14367,8 @@
     {
       "id": "plaza-garden-gemini-3",
       "sprite": "plaza-fern",
-      "x": 89,
-      "y": 104,
+      "x": 96,
+      "y": 102,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14691,8 +14376,8 @@
     {
       "id": "plaza-garden-gemini-4",
       "sprite": "plaza-grass-tuft",
-      "x": 91,
-      "y": 102,
+      "x": 93,
+      "y": 97,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14700,26 +14385,17 @@
     {
       "id": "plaza-garden-gemini-5",
       "sprite": "plaza-clover",
-      "x": 92,
-      "y": 94,
+      "x": 97,
+      "y": 99,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-cancer-0",
-      "sprite": "plaza-tree-birch",
-      "x": 73,
-      "y": 111,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-cancer-1",
       "sprite": "plaza-shrub",
-      "x": 65,
-      "y": 114,
+      "x": 68,
+      "y": 122,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14727,8 +14403,8 @@
     {
       "id": "plaza-garden-cancer-2",
       "sprite": "plaza-blueberry",
-      "x": 69,
-      "y": 111,
+      "x": 76,
+      "y": 112,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14736,8 +14412,8 @@
     {
       "id": "plaza-garden-cancer-3",
       "sprite": "plaza-fern",
-      "x": 71,
-      "y": 110,
+      "x": 77,
+      "y": 108,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14745,8 +14421,8 @@
     {
       "id": "plaza-garden-cancer-4",
       "sprite": "plaza-grass-tuft",
-      "x": 58,
-      "y": 111,
+      "x": 51,
+      "y": 112,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14754,26 +14430,17 @@
     {
       "id": "plaza-garden-cancer-5",
       "sprite": "plaza-mushrooms",
-      "x": 57,
-      "y": 112,
+      "x": 50,
+      "y": 108,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-leo-0",
-      "sprite": "plaza-tree-round",
-      "x": 34,
-      "y": 101,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-leo-1",
       "sprite": "plaza-shrub",
-      "x": 37,
-      "y": 94,
+      "x": 30,
+      "y": 101,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14781,8 +14448,8 @@
     {
       "id": "plaza-garden-leo-2",
       "sprite": "plaza-lavender",
-      "x": 40,
-      "y": 105,
+      "x": 48,
+      "y": 109,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14790,8 +14457,8 @@
     {
       "id": "plaza-garden-leo-3",
       "sprite": "plaza-fern",
-      "x": 38,
-      "y": 103,
+      "x": 34,
+      "y": 101,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14799,8 +14466,8 @@
     {
       "id": "plaza-garden-leo-4",
       "sprite": "plaza-grass-tuft",
-      "x": 36,
-      "y": 94,
+      "x": 34,
+      "y": 97,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14808,8 +14475,8 @@
     {
       "id": "plaza-garden-leo-5",
       "sprite": "plaza-clover",
-      "x": 37,
-      "y": 103,
+      "x": 31,
+      "y": 102,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14817,8 +14484,8 @@
     {
       "id": "plaza-garden-virgo-0",
       "sprite": "plaza-tree-birch",
-      "x": 22,
-      "y": 91,
+      "x": 9,
+      "y": 85,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -14826,8 +14493,8 @@
     {
       "id": "plaza-garden-virgo-1",
       "sprite": "plaza-shrub",
-      "x": 26,
-      "y": 94,
+      "x": 18,
+      "y": 101,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14835,8 +14502,8 @@
     {
       "id": "plaza-garden-virgo-2",
       "sprite": "plaza-blueberry",
-      "x": 27,
-      "y": 95,
+      "x": 17,
+      "y": 100,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14844,8 +14511,8 @@
     {
       "id": "plaza-garden-virgo-3",
       "sprite": "plaza-fern",
-      "x": 24,
-      "y": 89,
+      "x": 30,
+      "y": 98,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14853,8 +14520,8 @@
     {
       "id": "plaza-garden-virgo-4",
       "sprite": "plaza-grass-tuft",
-      "x": 22,
-      "y": 87,
+      "x": 16,
+      "y": 81,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14862,8 +14529,8 @@
     {
       "id": "plaza-garden-virgo-5",
       "sprite": "plaza-clover",
-      "x": 24,
-      "y": 90,
+      "x": 14,
+      "y": 94,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14871,8 +14538,8 @@
     {
       "id": "plaza-garden-libra-0",
       "sprite": "plaza-tree-round",
-      "x": 15,
-      "y": 69,
+      "x": 6,
+      "y": 74,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -14880,8 +14547,8 @@
     {
       "id": "plaza-garden-libra-1",
       "sprite": "plaza-shrub",
-      "x": 15,
-      "y": 65,
+      "x": 14,
+      "y": 57,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14889,8 +14556,8 @@
     {
       "id": "plaza-garden-libra-2",
       "sprite": "plaza-lavender",
-      "x": 15,
-      "y": 58,
+      "x": 17,
+      "y": 51,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14898,8 +14565,8 @@
     {
       "id": "plaza-garden-libra-3",
       "sprite": "plaza-fern",
-      "x": 15,
-      "y": 64,
+      "x": 13,
+      "y": 57,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14907,8 +14574,8 @@
     {
       "id": "plaza-garden-libra-4",
       "sprite": "plaza-grass-tuft",
-      "x": 17,
-      "y": 71,
+      "x": 19,
+      "y": 79,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14916,8 +14583,8 @@
     {
       "id": "plaza-garden-libra-5",
       "sprite": "plaza-mushrooms",
-      "x": 17,
-      "y": 72,
+      "x": 16,
+      "y": 80,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14925,8 +14592,8 @@
     {
       "id": "plaza-garden-scorpio-0",
       "sprite": "plaza-tree-birch",
-      "x": 23,
-      "y": 34,
+      "x": 17,
+      "y": 27,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -14934,8 +14601,8 @@
     {
       "id": "plaza-garden-scorpio-1",
       "sprite": "plaza-shrub",
-      "x": 34,
-      "y": 37,
+      "x": 29,
+      "y": 28,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14943,8 +14610,8 @@
     {
       "id": "plaza-garden-scorpio-2",
       "sprite": "plaza-blueberry",
-      "x": 36,
-      "y": 37,
+      "x": 42,
+      "y": 45,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14952,8 +14619,8 @@
     {
       "id": "plaza-garden-scorpio-3",
       "sprite": "plaza-fern",
-      "x": 24,
-      "y": 38,
+      "x": 22,
+      "y": 34,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14961,8 +14628,8 @@
     {
       "id": "plaza-garden-scorpio-4",
       "sprite": "plaza-grass-tuft",
-      "x": 21,
-      "y": 43,
+      "x": 16,
+      "y": 45,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14971,7 +14638,7 @@
       "id": "plaza-garden-scorpio-5",
       "sprite": "plaza-clover",
       "x": 24,
-      "y": 37,
+      "y": 32,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -14979,8 +14646,8 @@
     {
       "id": "plaza-garden-sagittarius-0",
       "sprite": "plaza-tree-round",
-      "x": 35,
-      "y": 23,
+      "x": 28,
+      "y": 16,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -14988,8 +14655,8 @@
     {
       "id": "plaza-garden-sagittarius-1",
       "sprite": "plaza-shrub",
-      "x": 40,
-      "y": 22,
+      "x": 39,
+      "y": 19,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -14997,7 +14664,7 @@
     {
       "id": "plaza-garden-sagittarius-2",
       "sprite": "plaza-lavender",
-      "x": 34,
+      "x": 33,
       "y": 26,
       "width": 2,
       "height": 1,
@@ -15006,8 +14673,8 @@
     {
       "id": "plaza-garden-sagittarius-3",
       "sprite": "plaza-fern",
-      "x": 38,
-      "y": 24,
+      "x": 34,
+      "y": 25,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15015,8 +14682,8 @@
     {
       "id": "plaza-garden-sagittarius-4",
       "sprite": "plaza-grass-tuft",
-      "x": 39,
-      "y": 21,
+      "x": 34,
+      "y": 22,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15024,8 +14691,8 @@
     {
       "id": "plaza-garden-sagittarius-5",
       "sprite": "plaza-clover",
-      "x": 37,
-      "y": 22,
+      "x": 33,
+      "y": 23,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15033,8 +14700,8 @@
     {
       "id": "plaza-garden-capricorn-0",
       "sprite": "plaza-tree-birch",
-      "x": 71,
-      "y": 15,
+      "x": 72,
+      "y": 5,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15060,8 +14727,8 @@
     {
       "id": "plaza-garden-capricorn-3",
       "sprite": "plaza-fern",
-      "x": 70,
-      "y": 16,
+      "x": 72,
+      "y": 17,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15070,7 +14737,7 @@
       "id": "plaza-garden-capricorn-4",
       "sprite": "plaza-grass-tuft",
       "x": 66,
-      "y": 14,
+      "y": 13,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15079,7 +14746,7 @@
       "id": "plaza-garden-capricorn-5",
       "sprite": "plaza-mushrooms",
       "x": 57,
-      "y": 16,
+      "y": 13,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15087,8 +14754,8 @@
     {
       "id": "plaza-garden-aquarius-0",
       "sprite": "plaza-tree-round",
-      "x": 89,
-      "y": 22,
+      "x": 94,
+      "y": 13,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15096,8 +14763,8 @@
     {
       "id": "plaza-garden-aquarius-1",
       "sprite": "plaza-shrub",
-      "x": 90,
-      "y": 37,
+      "x": 99,
+      "y": 32,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15105,8 +14772,8 @@
     {
       "id": "plaza-garden-aquarius-2",
       "sprite": "plaza-lavender",
-      "x": 91,
-      "y": 25,
+      "x": 96,
+      "y": 26,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15114,7 +14781,7 @@
     {
       "id": "plaza-garden-aquarius-3",
       "sprite": "plaza-fern",
-      "x": 92,
+      "x": 93,
       "y": 26,
       "width": 1,
       "height": 1,
@@ -15123,8 +14790,8 @@
     {
       "id": "plaza-garden-aquarius-4",
       "sprite": "plaza-grass-tuft",
-      "x": 91,
-      "y": 24,
+      "x": 93,
+      "y": 25,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15132,7 +14799,7 @@
     {
       "id": "plaza-garden-aquarius-5",
       "sprite": "plaza-clover",
-      "x": 92,
+      "x": 93,
       "y": 37,
       "width": 1,
       "height": 1,
@@ -15141,8 +14808,8 @@
     {
       "id": "plaza-garden-pisces-0",
       "sprite": "plaza-tree-birch",
-      "x": 106,
-      "y": 37,
+      "x": 113,
+      "y": 33,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15150,8 +14817,8 @@
     {
       "id": "plaza-garden-pisces-1",
       "sprite": "plaza-shrub",
-      "x": 108,
-      "y": 41,
+      "x": 111,
+      "y": 48,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15159,8 +14826,8 @@
     {
       "id": "plaza-garden-pisces-2",
       "sprite": "plaza-blueberry",
-      "x": 109,
-      "y": 45,
+      "x": 111,
+      "y": 49,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15169,7 +14836,7 @@
       "id": "plaza-garden-pisces-3",
       "sprite": "plaza-fern",
       "x": 93,
-      "y": 37,
+      "y": 36,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15177,8 +14844,8 @@
     {
       "id": "plaza-garden-pisces-4",
       "sprite": "plaza-grass-tuft",
-      "x": 103,
-      "y": 38,
+      "x": 105,
+      "y": 35,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15186,8 +14853,8 @@
     {
       "id": "plaza-garden-pisces-5",
       "sprite": "plaza-clover",
-      "x": 106,
-      "y": 43,
+      "x": 111,
+      "y": 46,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15195,8 +14862,8 @@
     {
       "id": "plaza-garden-outer-0-0",
       "sprite": "plaza-tree-round",
-      "x": 121,
-      "y": 67,
+      "x": 120,
+      "y": 76,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15205,7 +14872,7 @@
       "id": "plaza-garden-outer-0-1",
       "sprite": "plaza-shrub",
       "x": 121,
-      "y": 60,
+      "y": 52,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15213,8 +14880,8 @@
     {
       "id": "plaza-garden-outer-0-2",
       "sprite": "plaza-lavender",
-      "x": 113,
-      "y": 58,
+      "x": 111,
+      "y": 50,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15222,8 +14889,8 @@
     {
       "id": "plaza-garden-outer-0-3",
       "sprite": "plaza-fern",
-      "x": 114,
-      "y": 65,
+      "x": 123,
+      "y": 67,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15231,8 +14898,8 @@
     {
       "id": "plaza-garden-outer-0-4",
       "sprite": "plaza-grass-tuft",
-      "x": 114,
-      "y": 66,
+      "x": 123,
+      "y": 68,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15240,26 +14907,17 @@
     {
       "id": "plaza-garden-outer-0-5",
       "sprite": "plaza-mushrooms",
-      "x": 114,
-      "y": 67,
+      "x": 123,
+      "y": 69,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-outer-1-0",
-      "sprite": "plaza-tree-birch",
-      "x": 98,
-      "y": 98,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-outer-1-1",
       "sprite": "plaza-shrub",
-      "x": 100,
-      "y": 98,
+      "x": 106,
+      "y": 104,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15267,8 +14925,8 @@
     {
       "id": "plaza-garden-outer-1-2",
       "sprite": "plaza-blueberry",
-      "x": 97,
-      "y": 101,
+      "x": 100,
+      "y": 110,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15276,8 +14934,8 @@
     {
       "id": "plaza-garden-outer-1-3",
       "sprite": "plaza-fern",
-      "x": 100,
-      "y": 99,
+      "x": 97,
+      "y": 100,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15285,8 +14943,8 @@
     {
       "id": "plaza-garden-outer-1-4",
       "sprite": "plaza-grass-tuft",
-      "x": 101,
-      "y": 97,
+      "x": 108,
+      "y": 101,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15294,8 +14952,8 @@
     {
       "id": "plaza-garden-outer-1-5",
       "sprite": "plaza-clover",
-      "x": 100,
-      "y": 97,
+      "x": 107,
+      "y": 103,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15303,7 +14961,7 @@
     {
       "id": "plaza-garden-outer-2-0",
       "sprite": "plaza-tree-round",
-      "x": 58,
+      "x": 56,
       "y": 121,
       "width": 2,
       "height": 3,
@@ -15312,8 +14970,8 @@
     {
       "id": "plaza-garden-outer-2-1",
       "sprite": "plaza-shrub",
-      "x": 61,
-      "y": 114,
+      "x": 54,
+      "y": 120,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15321,8 +14979,8 @@
     {
       "id": "plaza-garden-outer-2-2",
       "sprite": "plaza-lavender",
-      "x": 63,
-      "y": 114,
+      "x": 54,
+      "y": 121,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15330,8 +14988,8 @@
     {
       "id": "plaza-garden-outer-2-3",
       "sprite": "plaza-fern",
-      "x": 60,
-      "y": 114,
+      "x": 53,
+      "y": 120,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15339,8 +14997,8 @@
     {
       "id": "plaza-garden-outer-2-4",
       "sprite": "plaza-grass-tuft",
-      "x": 68,
-      "y": 114,
+      "x": 69,
+      "y": 121,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15348,26 +15006,17 @@
     {
       "id": "plaza-garden-outer-2-5",
       "sprite": "plaza-clover",
-      "x": 68,
-      "y": 121,
+      "x": 76,
+      "y": 122,
       "width": 1,
       "height": 1,
       "layer": "props"
     },
     {
-      "id": "plaza-garden-outer-3-0",
-      "sprite": "plaza-tree-birch",
-      "x": 29,
-      "y": 99,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
       "id": "plaza-garden-outer-3-1",
       "sprite": "plaza-shrub",
-      "x": 27,
-      "y": 99,
+      "x": 20,
+      "y": 104,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15375,8 +15024,8 @@
     {
       "id": "plaza-garden-outer-3-2",
       "sprite": "plaza-blueberry",
-      "x": 27,
-      "y": 98,
+      "x": 19,
+      "y": 103,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15384,7 +15033,7 @@
     {
       "id": "plaza-garden-outer-3-3",
       "sprite": "plaza-fern",
-      "x": 28,
+      "x": 30,
       "y": 100,
       "width": 1,
       "height": 1,
@@ -15393,8 +15042,8 @@
     {
       "id": "plaza-garden-outer-3-4",
       "sprite": "plaza-grass-tuft",
-      "x": 26,
-      "y": 98,
+      "x": 30,
+      "y": 99,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15402,8 +15051,8 @@
     {
       "id": "plaza-garden-outer-3-5",
       "sprite": "plaza-mushrooms",
-      "x": 29,
-      "y": 98,
+      "x": 21,
+      "y": 105,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15411,8 +15060,8 @@
     {
       "id": "plaza-garden-outer-4-0",
       "sprite": "plaza-tree-round",
-      "x": 5,
-      "y": 58,
+      "x": 6,
+      "y": 50,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15420,8 +15069,8 @@
     {
       "id": "plaza-garden-outer-4-1",
       "sprite": "plaza-shrub",
-      "x": 13,
-      "y": 62,
+      "x": 15,
+      "y": 49,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15429,8 +15078,8 @@
     {
       "id": "plaza-garden-outer-4-2",
       "sprite": "plaza-lavender",
-      "x": 13,
-      "y": 58,
+      "x": 15,
+      "y": 48,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15438,8 +15087,8 @@
     {
       "id": "plaza-garden-outer-4-3",
       "sprite": "plaza-fern",
-      "x": 14,
-      "y": 68,
+      "x": 6,
+      "y": 73,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15447,8 +15096,8 @@
     {
       "id": "plaza-garden-outer-4-4",
       "sprite": "plaza-grass-tuft",
-      "x": 14,
-      "y": 69,
+      "x": 5,
+      "y": 73,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15456,8 +15105,8 @@
     {
       "id": "plaza-garden-outer-4-5",
       "sprite": "plaza-clover",
-      "x": 13,
-      "y": 70,
+      "x": 8,
+      "y": 77,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15465,8 +15114,8 @@
     {
       "id": "plaza-garden-outer-5-0",
       "sprite": "plaza-tree-birch",
-      "x": 28,
-      "y": 27,
+      "x": 30,
+      "y": 14,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15510,7 +15159,7 @@
     {
       "id": "plaza-garden-outer-5-5",
       "sprite": "plaza-clover",
-      "x": 27,
+      "x": 26,
       "y": 30,
       "width": 1,
       "height": 1,
@@ -15519,7 +15168,7 @@
     {
       "id": "plaza-garden-outer-6-0",
       "sprite": "plaza-tree-round",
-      "x": 58,
+      "x": 56,
       "y": 4,
       "width": 2,
       "height": 3,
@@ -15537,7 +15186,7 @@
     {
       "id": "plaza-garden-outer-6-2",
       "sprite": "plaza-lavender",
-      "x": 66,
+      "x": 67,
       "y": 13,
       "width": 2,
       "height": 1,
@@ -15564,7 +15213,7 @@
     {
       "id": "plaza-garden-outer-6-5",
       "sprite": "plaza-mushrooms",
-      "x": 68,
+      "x": 69,
       "y": 13,
       "width": 1,
       "height": 1,
@@ -15573,8 +15222,8 @@
     {
       "id": "plaza-garden-outer-7-0",
       "sprite": "plaza-tree-birch",
-      "x": 99,
-      "y": 28,
+      "x": 100,
+      "y": 29,
       "width": 2,
       "height": 3,
       "layer": "props"
@@ -15591,8 +15240,8 @@
     {
       "id": "plaza-garden-outer-7-2",
       "sprite": "plaza-blueberry",
-      "x": 101,
-      "y": 31,
+      "x": 99,
+      "y": 28,
       "width": 2,
       "height": 1,
       "layer": "props"
@@ -15600,8 +15249,8 @@
     {
       "id": "plaza-garden-outer-7-3",
       "sprite": "plaza-fern",
-      "x": 101,
-      "y": 29,
+      "x": 102,
+      "y": 31,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15609,8 +15258,8 @@
     {
       "id": "plaza-garden-outer-7-4",
       "sprite": "plaza-grass-tuft",
-      "x": 101,
-      "y": 30,
+      "x": 103,
+      "y": 32,
       "width": 1,
       "height": 1,
       "layer": "props"
@@ -15625,118 +15274,10 @@
       "layer": "props"
     },
     {
-      "id": "plaza-garden-inner-0-0",
-      "sprite": "plaza-tree-round",
-      "x": 47,
-      "y": 52,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-0-1",
-      "sprite": "plaza-shrub",
-      "x": 49,
-      "y": 52,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-0-2",
-      "sprite": "plaza-lavender",
-      "x": 45,
-      "y": 53,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-0-3",
-      "sprite": "plaza-fern",
-      "x": 46,
-      "y": 52,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-0-4",
-      "sprite": "plaza-grass-tuft",
-      "x": 46,
-      "y": 51,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-0-5",
-      "sprite": "plaza-clover",
-      "x": 46,
-      "y": 50,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-0",
-      "sprite": "plaza-tree-birch",
-      "x": 82,
-      "y": 52,
-      "width": 2,
-      "height": 3,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-1",
-      "sprite": "plaza-shrub",
-      "x": 82,
-      "y": 51,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-2",
-      "sprite": "plaza-blueberry",
-      "x": 82,
-      "y": 50,
-      "width": 2,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-3",
-      "sprite": "plaza-fern",
-      "x": 81,
-      "y": 53,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-4",
-      "sprite": "plaza-grass-tuft",
-      "x": 80,
-      "y": 53,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
-      "id": "plaza-garden-inner-1-5",
-      "sprite": "plaza-mushrooms",
-      "x": 84,
-      "y": 53,
-      "width": 1,
-      "height": 1,
-      "layer": "props"
-    },
-    {
       "id": "leo-lion-head",
       "sprite": "leo-lion-head",
-      "x": 43,
-      "y": 93,
+      "x": 40,
+      "y": 98,
       "width": 4,
       "height": 3,
       "layer": "props"
@@ -15745,94 +15286,5107 @@
       "id": "cancer-name-forecourt",
       "sprite": "path-stone",
       "x": 61,
-      "y": 110,
+      "y": 116,
       "width": 6,
       "height": 4,
       "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-14-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 14,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-15-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 15,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-16-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 16,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-17-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 17,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-18-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 18,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-19-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 19,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-20-36",
+      "sprite": "path-stone",
+      "x": 36,
+      "y": 20,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-20-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 20,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-20-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 20,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-21-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 21,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-21-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 21,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-21-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 21,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-22-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 22,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-22-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 22,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-22-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 22,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-23-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 23,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-23-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 23,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-23-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 23,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-24-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 24,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-24-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 24,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-24-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 24,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-25-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 25,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-25-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 25,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-25-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 25,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-25-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 25,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-26-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 26,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-26-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 26,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-26-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 26,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-26-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 26,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-27-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 27,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-27-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 27,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-27-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 27,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-27-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 27,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-28-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 28,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-28-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 28,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-28-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 28,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-28-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 28,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-29-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 29,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-29-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 29,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-30-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 30,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-30-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 30,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-31-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 31,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-31-45",
+      "sprite": "path-stone",
+      "x": 45,
+      "y": 31,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-31-78",
+      "sprite": "path-stone",
+      "x": 78,
+      "y": 31,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-31-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 31,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-32-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 32,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-32-45",
+      "sprite": "path-stone",
+      "x": 45,
+      "y": 32,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-32-80",
+      "sprite": "path-stone",
+      "x": 80,
+      "y": 32,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-32-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 32,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-33-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 33,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-33-45",
+      "sprite": "path-stone",
+      "x": 45,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-33-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 33,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-33-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 33,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-34-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 34,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-34-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 34,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-35-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 35,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-35-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 35,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-36-20",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 36,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-36-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 36,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-36-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 36,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-36-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 36,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 37,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 37,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 37,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 37,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 37,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-37-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 37,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 38,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 38,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-54",
+      "sprite": "path-stone",
+      "x": 54,
+      "y": 38,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 38,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 38,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-38-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 38,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 39,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-52",
+      "sprite": "path-stone",
+      "x": 52,
+      "y": 39,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-54",
+      "sprite": "plaza-grass-01",
+      "x": 54,
+      "y": 39,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 39,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-74",
+      "sprite": "path-stone",
+      "x": 74,
+      "y": 39,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-39-94",
+      "sprite": "path-stone",
+      "x": 94,
+      "y": 39,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-40-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 40,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-40-50",
+      "sprite": "plaza-grass-01",
+      "x": 50,
+      "y": 40,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-40-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 40,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-40-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 40,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-41-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 41,
+      "width": 18,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-41-47",
+      "sprite": "plaza-grass-01",
+      "x": 47,
+      "y": 41,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-41-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 41,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-41-91",
+      "sprite": "path-stone",
+      "x": 91,
+      "y": 41,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-41-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 41,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-42-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 42,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-42-45",
+      "sprite": "plaza-grass-01",
+      "x": 45,
+      "y": 42,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-42-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 42,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-42-92",
+      "sprite": "path-stone",
+      "x": 92,
+      "y": 42,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-42-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 42,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 43,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-44",
+      "sprite": "plaza-grass-01",
+      "x": 44,
+      "y": 43,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-51",
+      "sprite": "floor-charcoal",
+      "x": 51,
+      "y": 43,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-57",
+      "sprite": "plaza-grass-01",
+      "x": 57,
+      "y": 43,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 43,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-71",
+      "sprite": "floor-wood",
+      "x": 71,
+      "y": 43,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-77",
+      "sprite": "plaza-grass-01",
+      "x": 77,
+      "y": 43,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-93",
+      "sprite": "path-stone",
+      "x": 93,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-43-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 43,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 44,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-43",
+      "sprite": "plaza-grass-01",
+      "x": 43,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 44,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 44,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 44,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 44,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 44,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-44-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 44,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 45,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-42",
+      "sprite": "plaza-grass-01",
+      "x": 42,
+      "y": 45,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 45,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 45,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 45,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 45,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 45,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-45-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 45,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 46,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-42",
+      "sprite": "plaza-grass-01",
+      "x": 42,
+      "y": 46,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 46,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 46,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 46,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 46,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 46,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-46-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 46,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 47,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 47,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-42",
+      "sprite": "plaza-grass-01",
+      "x": 42,
+      "y": 47,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 47,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 47,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 47,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 47,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 47,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-47-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 47,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 48,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 48,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-41",
+      "sprite": "path-stone",
+      "x": 41,
+      "y": 48,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-42",
+      "sprite": "plaza-grass-01",
+      "x": 42,
+      "y": 48,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 48,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 48,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 48,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 48,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 48,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 48,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-48-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 48,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 49,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 49,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-41",
+      "sprite": "path-stone",
+      "x": 41,
+      "y": 49,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-43",
+      "sprite": "plaza-grass-01",
+      "x": 43,
+      "y": 49,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-50",
+      "sprite": "floor-charcoal",
+      "x": 50,
+      "y": 49,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-58",
+      "sprite": "plaza-grass-01",
+      "x": 58,
+      "y": 49,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-68",
+      "sprite": "plaza-grass-01",
+      "x": 68,
+      "y": 49,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-70",
+      "sprite": "floor-wood",
+      "x": 70,
+      "y": 49,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 49,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-85",
+      "sprite": "path-stone",
+      "x": 85,
+      "y": 49,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-49-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 49,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 50,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 50,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 50,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-44",
+      "sprite": "plaza-grass-01",
+      "x": 44,
+      "y": 50,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-51",
+      "sprite": "floor-charcoal",
+      "x": 51,
+      "y": 50,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-57",
+      "sprite": "plaza-grass-01",
+      "x": 57,
+      "y": 50,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-59",
+      "sprite": "path-stone",
+      "x": 59,
+      "y": 50,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 50,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-69",
+      "sprite": "plaza-grass-01",
+      "x": 69,
+      "y": 50,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-71",
+      "sprite": "floor-wood",
+      "x": 71,
+      "y": 50,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-77",
+      "sprite": "plaza-grass-01",
+      "x": 77,
+      "y": 50,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-84",
+      "sprite": "path-stone",
+      "x": 84,
+      "y": 50,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-50-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 50,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 51,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 51,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 51,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-46",
+      "sprite": "plaza-grass-01",
+      "x": 46,
+      "y": 51,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-58",
+      "sprite": "path-stone",
+      "x": 58,
+      "y": 51,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 51,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-70",
+      "sprite": "plaza-grass-01",
+      "x": 70,
+      "y": 51,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 51,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 51,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-51-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 51,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 52,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-48",
+      "sprite": "plaza-grass-01",
+      "x": 48,
+      "y": 52,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 52,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 52,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-71",
+      "sprite": "plaza-grass-01",
+      "x": 71,
+      "y": 52,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-52-80",
+      "sprite": "path-stone",
+      "x": 80,
+      "y": 52,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 53,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-50",
+      "sprite": "plaza-grass-01",
+      "x": 50,
+      "y": 53,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-55",
+      "sprite": "path-stone",
+      "x": 55,
+      "y": 53,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 53,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-73",
+      "sprite": "plaza-grass-01",
+      "x": 73,
+      "y": 53,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-53-78",
+      "sprite": "path-stone",
+      "x": 78,
+      "y": 53,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-54-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 54,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-54-49",
+      "sprite": "path-stone",
+      "x": 49,
+      "y": 54,
+      "width": 25,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-54-74",
+      "sprite": "floor-charcoal",
+      "x": 74,
+      "y": 54,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-54-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 54,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-55-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 55,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-55-52",
+      "sprite": "path-stone",
+      "x": 52,
+      "y": 55,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-55-73",
+      "sprite": "floor-charcoal",
+      "x": 73,
+      "y": 55,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-55-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 55,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-56-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 56,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-56-49",
+      "sprite": "path-stone",
+      "x": 49,
+      "y": 56,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-56-56",
+      "sprite": "path-stone",
+      "x": 56,
+      "y": 56,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-56-72",
+      "sprite": "floor-charcoal",
+      "x": 72,
+      "y": 56,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-56-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 56,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-24",
+      "sprite": "path-stone",
+      "x": 24,
+      "y": 57,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-37",
+      "sprite": "path-stone",
+      "x": 37,
+      "y": 57,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-47",
+      "sprite": "path-stone",
+      "x": 47,
+      "y": 57,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-72",
+      "sprite": "floor-charcoal",
+      "x": 72,
+      "y": 57,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 57,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-57-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 57,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-58-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 58,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-58-46",
+      "sprite": "path-stone",
+      "x": 46,
+      "y": 58,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-58-73",
+      "sprite": "floor-charcoal",
+      "x": 73,
+      "y": 58,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-58-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 58,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-59-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 59,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-59-46",
+      "sprite": "path-stone",
+      "x": 46,
+      "y": 59,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-59-74",
+      "sprite": "floor-charcoal",
+      "x": 74,
+      "y": 59,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-59-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 59,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-60-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 60,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-60-38",
+      "sprite": "floor-blue",
+      "x": 38,
+      "y": 60,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-60-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 60,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-60-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 60,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-60-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 60,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-61-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 61,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-61-38",
+      "sprite": "floor-blue",
+      "x": 38,
+      "y": 61,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-61-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 61,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-61-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 61,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-61-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 61,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 62,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 62,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-38",
+      "sprite": "floor-blue",
+      "x": 38,
+      "y": 62,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 62,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 62,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 62,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-62-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 62,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 63,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-37",
+      "sprite": "floor-blue",
+      "x": 37,
+      "y": 63,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 63,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-63-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 63,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 64,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 64,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-37",
+      "sprite": "floor-blue",
+      "x": 37,
+      "y": 64,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 64,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 64,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-64-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 64,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 65,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 65,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-38",
+      "sprite": "floor-blue",
+      "x": 38,
+      "y": 65,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-80",
+      "sprite": "floor-blue",
+      "x": 80,
+      "y": 65,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 65,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-65-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 65,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-66-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 66,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-66-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 66,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-66-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 66,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-66-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 66,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-67-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 67,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-67-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 67,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-67-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 67,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-67-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 67,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-68-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 68,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-68-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-68-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 68,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-68-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 68,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-69-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 69,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-69-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 69,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-69-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 69,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-69-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 69,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-70-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 70,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-70-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 70,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-70-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 70,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-70-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 70,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-71-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 71,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-71-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 71,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-71-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 71,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-71-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 71,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-72-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 72,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-72-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 72,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-72-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 72,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-72-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 72,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-73-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-73-23",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 73,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-73-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 73,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-73-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 73,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-74-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 74,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-74-23",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 74,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-74-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 74,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-74-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 74,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-75-13",
+      "sprite": "path-stone",
+      "x": 13,
+      "y": 75,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-75-23",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 75,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-75-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 75,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-75-111",
+      "sprite": "path-stone",
+      "x": 111,
+      "y": 75,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-76-14",
+      "sprite": "path-stone",
+      "x": 14,
+      "y": 76,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-76-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 76,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-77-24",
+      "sprite": "path-stone",
+      "x": 24,
+      "y": 77,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-77-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 77,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-78-24",
+      "sprite": "path-stone",
+      "x": 24,
+      "y": 78,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-78-96",
+      "sprite": "path-stone",
+      "x": 96,
+      "y": 78,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-79-24",
+      "sprite": "path-stone",
+      "x": 24,
+      "y": 79,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-79-96",
+      "sprite": "path-stone",
+      "x": 96,
+      "y": 79,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-80-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 80,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-80-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 80,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-81-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 81,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-81-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 81,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-82-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 82,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-82-94",
+      "sprite": "path-stone",
+      "x": 94,
+      "y": 82,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-83-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 83,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-83-94",
+      "sprite": "path-stone",
+      "x": 94,
+      "y": 83,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-84-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 84,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-84-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 84,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-84-93",
+      "sprite": "path-stone",
+      "x": 93,
+      "y": 84,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-84-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 84,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-85-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 85,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-85-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 85,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-85-92",
+      "sprite": "path-stone",
+      "x": 92,
+      "y": 85,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-85-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 85,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-86-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 86,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-86-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 86,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-86-91",
+      "sprite": "path-stone",
+      "x": 91,
+      "y": 86,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-86-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 86,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-87-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 87,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-87-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 87,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-87-91",
+      "sprite": "path-stone",
+      "x": 91,
+      "y": 87,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-87-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 87,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-88-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 88,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-88-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 88,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-88-90",
+      "sprite": "path-stone",
+      "x": 90,
+      "y": 88,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-88-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 88,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-89-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 89,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-89-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 89,
+      "width": 28,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-89-66",
+      "sprite": "path-stone",
+      "x": 66,
+      "y": 89,
+      "width": 28,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-89-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 89,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 90,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 90,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 90,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-68",
+      "sprite": "path-stone",
+      "x": 68,
+      "y": 90,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-88",
+      "sprite": "path-stone",
+      "x": 88,
+      "y": 90,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-90-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 90,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-91-20",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 91,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-91-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 91,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-91-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 91,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-91-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 91,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-92-21",
+      "sprite": "path-stone",
+      "x": 21,
+      "y": 92,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-92-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 92,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-92-85",
+      "sprite": "path-stone",
+      "x": 85,
+      "y": 92,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-92-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 92,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-93-21",
+      "sprite": "path-stone",
+      "x": 21,
+      "y": 93,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-93-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 93,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-93-84",
+      "sprite": "path-stone",
+      "x": 84,
+      "y": 93,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-93-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 93,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 94,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-22",
+      "sprite": "path-stone",
+      "x": 22,
+      "y": 94,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 94,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 94,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 94,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-94-111",
+      "sprite": "plaza-grass-01",
+      "x": 111,
+      "y": 94,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 95,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-17",
+      "sprite": "path-stone",
+      "x": 17,
+      "y": 95,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 95,
+      "width": 19,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-80",
+      "sprite": "path-stone",
+      "x": 80,
+      "y": 95,
+      "width": 19,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-110",
+      "sprite": "path-stone",
+      "x": 110,
+      "y": 95,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-95-111",
+      "sprite": "plaza-grass-01",
+      "x": 111,
+      "y": 95,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 96,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-17",
+      "sprite": "path-stone",
+      "x": 17,
+      "y": 96,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 96,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-31",
+      "sprite": "plaza-grass-01",
+      "x": 31,
+      "y": 96,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 96,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-39",
+      "sprite": "path-stone",
+      "x": 39,
+      "y": 96,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-78",
+      "sprite": "path-stone",
+      "x": 78,
+      "y": 96,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-94",
+      "sprite": "plaza-grass-01",
+      "x": 94,
+      "y": 96,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 96,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-110",
+      "sprite": "path-stone",
+      "x": 110,
+      "y": 96,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-96-111",
+      "sprite": "plaza-grass-01",
+      "x": 111,
+      "y": 96,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 97,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-18",
+      "sprite": "path-stone",
+      "x": 18,
+      "y": 97,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 97,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 97,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-39",
+      "sprite": "path-stone",
+      "x": 39,
+      "y": 97,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-76",
+      "sprite": "path-stone",
+      "x": 76,
+      "y": 97,
+      "width": 14,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-93",
+      "sprite": "plaza-grass-01",
+      "x": 93,
+      "y": 97,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 97,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-109",
+      "sprite": "path-stone",
+      "x": 109,
+      "y": 97,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-97-110",
+      "sprite": "plaza-grass-01",
+      "x": 110,
+      "y": 97,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 98,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-18",
+      "sprite": "path-stone",
+      "x": 18,
+      "y": 98,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-25",
+      "sprite": "path-stone",
+      "x": 25,
+      "y": 98,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 98,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 98,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-72",
+      "sprite": "path-stone",
+      "x": 72,
+      "y": 98,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-93",
+      "sprite": "plaza-grass-01",
+      "x": 93,
+      "y": 98,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 98,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-108",
+      "sprite": "path-stone",
+      "x": 108,
+      "y": 98,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-98-110",
+      "sprite": "plaza-grass-01",
+      "x": 110,
+      "y": 98,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-16",
+      "sprite": "plaza-grass-01",
+      "x": 16,
+      "y": 99,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-18",
+      "sprite": "path-stone",
+      "x": 18,
+      "y": 99,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-26",
+      "sprite": "path-stone",
+      "x": 26,
+      "y": 99,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 99,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 99,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 99,
+      "width": 36,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-93",
+      "sprite": "plaza-grass-01",
+      "x": 93,
+      "y": 99,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 99,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-107",
+      "sprite": "path-stone",
+      "x": 107,
+      "y": 99,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-99-110",
+      "sprite": "plaza-grass-01",
+      "x": 110,
+      "y": 99,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-19",
+      "sprite": "path-stone",
+      "x": 19,
+      "y": 100,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-27",
+      "sprite": "path-stone",
+      "x": 27,
+      "y": 100,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-34",
+      "sprite": "plaza-grass-01",
+      "x": 34,
+      "y": 100,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 100,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 100,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 100,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 100,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-93",
+      "sprite": "plaza-grass-01",
+      "x": 93,
+      "y": 100,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 100,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-100-106",
+      "sprite": "path-stone",
+      "x": 106,
+      "y": 100,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-17",
+      "sprite": "plaza-grass-01",
+      "x": 17,
+      "y": 101,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-20",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 101,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 101,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 101,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 101,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 101,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 101,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 101,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-93",
+      "sprite": "plaza-grass-01",
+      "x": 93,
+      "y": 101,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 101,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-106",
+      "sprite": "path-stone",
+      "x": 106,
+      "y": 101,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-101-108",
+      "sprite": "plaza-grass-01",
+      "x": 108,
+      "y": 101,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-20",
+      "sprite": "path-stone",
+      "x": 20,
+      "y": 102,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 102,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 102,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 102,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 102,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 102,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 102,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-102-105",
+      "sprite": "path-stone",
+      "x": 105,
+      "y": 102,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-19",
+      "sprite": "plaza-grass-01",
+      "x": 19,
+      "y": 103,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-21",
+      "sprite": "path-stone",
+      "x": 21,
+      "y": 103,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-30",
+      "sprite": "path-stone",
+      "x": 30,
+      "y": 103,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 103,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 103,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 103,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-104",
+      "sprite": "path-stone",
+      "x": 104,
+      "y": 103,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-103-107",
+      "sprite": "plaza-grass-01",
+      "x": 107,
+      "y": 103,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-22",
+      "sprite": "path-stone",
+      "x": 22,
+      "y": 104,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-31",
+      "sprite": "path-stone",
+      "x": 31,
+      "y": 104,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 104,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 104,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 104,
+      "width": 15,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-104-103",
+      "sprite": "path-stone",
+      "x": 103,
+      "y": 104,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-21",
+      "sprite": "plaza-grass-01",
+      "x": 21,
+      "y": 105,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-22",
+      "sprite": "path-stone",
+      "x": 22,
+      "y": 105,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-33",
+      "sprite": "path-stone",
+      "x": 33,
+      "y": 105,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 105,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 105,
+      "width": 21,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 105,
+      "width": 13,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-102",
+      "sprite": "path-stone",
+      "x": 102,
+      "y": 105,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-105-106",
+      "sprite": "plaza-grass-01",
+      "x": 106,
+      "y": 105,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-23",
+      "sprite": "path-stone",
+      "x": 23,
+      "y": 106,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 106,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 106,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 106,
+      "width": 18,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-82",
+      "sprite": "path-stone",
+      "x": 82,
+      "y": 106,
+      "width": 12,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-106-100",
+      "sprite": "path-stone",
+      "x": 100,
+      "y": 106,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-23",
+      "sprite": "plaza-grass-01",
+      "x": 23,
+      "y": 107,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-24",
+      "sprite": "path-stone",
+      "x": 24,
+      "y": 107,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-36",
+      "sprite": "path-stone",
+      "x": 36,
+      "y": 107,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-50",
+      "sprite": "path-stone",
+      "x": 50,
+      "y": 107,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 107,
+      "width": 18,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 107,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-99",
+      "sprite": "path-stone",
+      "x": 99,
+      "y": 107,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-107-104",
+      "sprite": "plaza-grass-01",
+      "x": 104,
+      "y": 107,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-25",
+      "sprite": "path-stone",
+      "x": 25,
+      "y": 108,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-37",
+      "sprite": "path-stone",
+      "x": 37,
+      "y": 108,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-49",
+      "sprite": "plaza-grass-01",
+      "x": 49,
+      "y": 108,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-51",
+      "sprite": "path-stone",
+      "x": 51,
+      "y": 108,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 108,
+      "width": 17,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-77",
+      "sprite": "plaza-grass-01",
+      "x": 77,
+      "y": 108,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-89",
+      "sprite": "path-stone",
+      "x": 89,
+      "y": 108,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-108-98",
+      "sprite": "path-stone",
+      "x": 98,
+      "y": 108,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-25",
+      "sprite": "plaza-grass-01",
+      "x": 25,
+      "y": 109,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-26",
+      "sprite": "path-stone",
+      "x": 26,
+      "y": 109,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-48",
+      "sprite": "plaza-grass-01",
+      "x": 48,
+      "y": 109,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 109,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-76",
+      "sprite": "plaza-grass-01",
+      "x": 76,
+      "y": 109,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-97",
+      "sprite": "path-stone",
+      "x": 97,
+      "y": 109,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-109-102",
+      "sprite": "plaza-grass-01",
+      "x": 102,
+      "y": 109,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-110-28",
+      "sprite": "path-stone",
+      "x": 28,
+      "y": 110,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-110-48",
+      "sprite": "plaza-grass-01",
+      "x": 48,
+      "y": 110,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-110-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 110,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-110-78",
+      "sprite": "plaza-grass-01",
+      "x": 78,
+      "y": 110,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-110-95",
+      "sprite": "path-stone",
+      "x": 95,
+      "y": 110,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-27",
+      "sprite": "plaza-grass-01",
+      "x": 27,
+      "y": 111,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-29",
+      "sprite": "path-stone",
+      "x": 29,
+      "y": 111,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-45",
+      "sprite": "path-stone",
+      "x": 45,
+      "y": 111,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-48",
+      "sprite": "plaza-grass-01",
+      "x": 48,
+      "y": 111,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 111,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-76",
+      "sprite": "plaza-grass-01",
+      "x": 76,
+      "y": 111,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-80",
+      "sprite": "path-stone",
+      "x": 80,
+      "y": 111,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-94",
+      "sprite": "path-stone",
+      "x": 94,
+      "y": 111,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-111-99",
+      "sprite": "plaza-grass-01",
+      "x": 99,
+      "y": 111,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-29",
+      "sprite": "plaza-grass-01",
+      "x": 29,
+      "y": 112,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-30",
+      "sprite": "path-stone",
+      "x": 30,
+      "y": 112,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-45",
+      "sprite": "path-stone",
+      "x": 45,
+      "y": 112,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-48",
+      "sprite": "plaza-grass-01",
+      "x": 48,
+      "y": 112,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-60",
+      "sprite": "path-stone",
+      "x": 60,
+      "y": 112,
+      "width": 16,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-76",
+      "sprite": "plaza-grass-01",
+      "x": 76,
+      "y": 112,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-80",
+      "sprite": "path-stone",
+      "x": 80,
+      "y": 112,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-92",
+      "sprite": "path-stone",
+      "x": 92,
+      "y": 112,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-112-98",
+      "sprite": "plaza-grass-01",
+      "x": 98,
+      "y": 112,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 113,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-32",
+      "sprite": "path-stone",
+      "x": 32,
+      "y": 113,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-48",
+      "sprite": "path-stone",
+      "x": 48,
+      "y": 113,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-49",
+      "sprite": "plaza-grass-01",
+      "x": 49,
+      "y": 113,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-51",
+      "sprite": "path-stone",
+      "x": 51,
+      "y": 113,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 113,
+      "width": 10,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-77",
+      "sprite": "plaza-grass-01",
+      "x": 77,
+      "y": 113,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-79",
+      "sprite": "path-stone",
+      "x": 79,
+      "y": 113,
+      "width": 1,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-90",
+      "sprite": "path-stone",
+      "x": 90,
+      "y": 113,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-113-96",
+      "sprite": "plaza-grass-01",
+      "x": 96,
+      "y": 113,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-114-32",
+      "sprite": "plaza-grass-01",
+      "x": 32,
+      "y": 114,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-114-34",
+      "sprite": "path-stone",
+      "x": 34,
+      "y": 114,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-114-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 114,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-114-88",
+      "sprite": "path-stone",
+      "x": 88,
+      "y": 114,
+      "width": 6,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-114-94",
+      "sprite": "plaza-grass-01",
+      "x": 94,
+      "y": 114,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-115-35",
+      "sprite": "path-stone",
+      "x": 35,
+      "y": 115,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-115-67",
+      "sprite": "path-stone",
+      "x": 67,
+      "y": 115,
+      "width": 4,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-115-86",
+      "sprite": "path-stone",
+      "x": 86,
+      "y": 115,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-116-35",
+      "sprite": "plaza-grass-01",
+      "x": 35,
+      "y": 116,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-116-37",
+      "sprite": "path-stone",
+      "x": 37,
+      "y": 116,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-116-83",
+      "sprite": "path-stone",
+      "x": 83,
+      "y": 116,
+      "width": 8,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-116-91",
+      "sprite": "plaza-grass-01",
+      "x": 91,
+      "y": 116,
+      "width": 2,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-117-37",
+      "sprite": "plaza-grass-01",
+      "x": 37,
+      "y": 117,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-117-40",
+      "sprite": "path-stone",
+      "x": 40,
+      "y": 117,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-117-81",
+      "sprite": "path-stone",
+      "x": 81,
+      "y": 117,
+      "width": 7,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-117-88",
+      "sprite": "plaza-grass-01",
+      "x": 88,
+      "y": 117,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-118-39",
+      "sprite": "plaza-grass-01",
+      "x": 39,
+      "y": 118,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-118-42",
+      "sprite": "path-stone",
+      "x": 42,
+      "y": 118,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-118-77",
+      "sprite": "path-stone",
+      "x": 77,
+      "y": 118,
+      "width": 9,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-118-86",
+      "sprite": "plaza-grass-01",
+      "x": 86,
+      "y": 118,
+      "width": 3,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-119-46",
+      "sprite": "path-stone",
+      "x": 46,
+      "y": 119,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-119-71",
+      "sprite": "path-stone",
+      "x": 71,
+      "y": 119,
+      "width": 11,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-120-57",
+      "sprite": "path-stone",
+      "x": 57,
+      "y": 120,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-ground-120-66",
+      "sprite": "path-stone",
+      "x": 66,
+      "y": 120,
+      "width": 5,
+      "height": 1,
+      "layer": "terrain"
+    },
+    {
+      "id": "crescent-west-garden-0",
+      "sprite": "plaza-tree-flowering",
+      "x": 47,
+      "y": 41,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-0",
+      "sprite": "plaza-tree-flowering",
+      "x": 79,
+      "y": 41,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-1",
+      "sprite": "plaza-tree-round",
+      "x": 45,
+      "y": 44,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-1",
+      "sprite": "plaza-tree-round",
+      "x": 83,
+      "y": 44,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-2",
+      "sprite": "plaza-tree-flowering",
+      "x": 42,
+      "y": 46,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-2",
+      "sprite": "plaza-tree-flowering",
+      "x": 83,
+      "y": 47,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-3",
+      "sprite": "plaza-flower-bed",
+      "x": 47,
+      "y": 50,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-3",
+      "sprite": "plaza-flower-bed",
+      "x": 80,
+      "y": 50,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-4",
+      "sprite": "plaza-lavender",
+      "x": 48,
+      "y": 47,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-4",
+      "sprite": "plaza-lavender",
+      "x": 78,
+      "y": 47,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-5",
+      "sprite": "plaza-shrub",
+      "x": 57,
+      "y": 40,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-5",
+      "sprite": "plaza-shrub",
+      "x": 70,
+      "y": 40,
+      "width": 2,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-west-garden-6",
+      "sprite": "plaza-fern",
+      "x": 49,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "crescent-east-garden-6",
+      "sprite": "plaza-fern",
+      "x": 78,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
     }
   ],
   "entries": [
     {
       "name": "from-speaker-aries",
-      "x": 101,
+      "x": 107,
       "y": 71,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-taurus",
-      "x": 96,
-      "y": 90,
+      "x": 101,
+      "y": 93,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-gemini",
-      "x": 82,
-      "y": 104,
+      "x": 85,
+      "y": 109,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-cancer",
       "x": 63,
-      "y": 109,
+      "y": 115,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-leo",
-      "x": 44,
-      "y": 104,
+      "x": 41,
+      "y": 109,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-virgo",
-      "x": 30,
-      "y": 90,
+      "x": 25,
+      "y": 93,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-libra",
-      "x": 25,
+      "x": 19,
       "y": 71,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-scorpio",
-      "x": 30,
-      "y": 52,
+      "x": 25,
+      "y": 49,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-sagittarius",
-      "x": 44,
-      "y": 38,
+      "x": 41,
+      "y": 33,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-capricorn",
       "x": 63,
-      "y": 33,
+      "y": 27,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-aquarius",
-      "x": 82,
-      "y": 38,
+      "x": 85,
+      "y": 33,
       "width": 2,
       "height": 2
     },
     {
       "name": "from-speaker-pisces",
-      "x": 96,
-      "y": 52,
+      "x": 101,
+      "y": 49,
       "width": 2,
       "height": 2
     },
@@ -15941,7 +20495,7 @@
       "name": "speaker-aries",
       "destination": "speaker-aries",
       "entry": "speaker-entry",
-      "x": 101,
+      "x": 107,
       "y": 69,
       "width": 2,
       "height": 1
@@ -15950,8 +20504,8 @@
       "name": "speaker-taurus",
       "destination": "speaker-taurus",
       "entry": "speaker-entry",
-      "x": 96,
-      "y": 88,
+      "x": 101,
+      "y": 91,
       "width": 2,
       "height": 1
     },
@@ -15959,8 +20513,8 @@
       "name": "speaker-gemini",
       "destination": "speaker-gemini",
       "entry": "speaker-entry",
-      "x": 82,
-      "y": 102,
+      "x": 85,
+      "y": 107,
       "width": 2,
       "height": 1
     },
@@ -15969,7 +20523,7 @@
       "destination": "speaker-cancer",
       "entry": "speaker-entry",
       "x": 63,
-      "y": 107,
+      "y": 113,
       "width": 2,
       "height": 1
     },
@@ -15977,8 +20531,8 @@
       "name": "speaker-leo",
       "destination": "speaker-leo",
       "entry": "speaker-entry",
-      "x": 44,
-      "y": 102,
+      "x": 41,
+      "y": 107,
       "width": 2,
       "height": 1
     },
@@ -15986,8 +20540,8 @@
       "name": "speaker-virgo",
       "destination": "speaker-virgo",
       "entry": "speaker-entry",
-      "x": 30,
-      "y": 88,
+      "x": 25,
+      "y": 91,
       "width": 2,
       "height": 1
     },
@@ -15995,7 +20549,7 @@
       "name": "speaker-libra",
       "destination": "speaker-libra",
       "entry": "speaker-entry",
-      "x": 25,
+      "x": 19,
       "y": 69,
       "width": 2,
       "height": 1
@@ -16004,8 +20558,8 @@
       "name": "speaker-scorpio",
       "destination": "speaker-scorpio",
       "entry": "speaker-entry",
-      "x": 30,
-      "y": 50,
+      "x": 25,
+      "y": 47,
       "width": 2,
       "height": 1
     },
@@ -16013,8 +20567,8 @@
       "name": "speaker-sagittarius",
       "destination": "speaker-sagittarius",
       "entry": "speaker-entry",
-      "x": 44,
-      "y": 36,
+      "x": 41,
+      "y": 31,
       "width": 2,
       "height": 1
     },
@@ -16023,7 +20577,7 @@
       "destination": "speaker-capricorn",
       "entry": "speaker-entry",
       "x": 63,
-      "y": 31,
+      "y": 25,
       "width": 2,
       "height": 1
     },
@@ -16031,8 +20585,8 @@
       "name": "speaker-aquarius",
       "destination": "speaker-aquarius",
       "entry": "speaker-entry",
-      "x": 82,
-      "y": 36,
+      "x": 85,
+      "y": 31,
       "width": 2,
       "height": 1
     },
@@ -16040,8 +20594,8 @@
       "name": "speaker-pisces",
       "destination": "speaker-pisces",
       "entry": "speaker-entry",
-      "x": 96,
-      "y": 50,
+      "x": 101,
+      "y": 47,
       "width": 2,
       "height": 1
     },
@@ -16115,7 +20669,7 @@
     {
       "name": "aries-pavilion",
       "kind": "room",
-      "x": 96,
+      "x": 102,
       "y": 58,
       "width": 12,
       "height": 12
@@ -16123,16 +20677,16 @@
     {
       "name": "taurus-pavilion",
       "kind": "room",
-      "x": 91,
-      "y": 77,
+      "x": 96,
+      "y": 80,
       "width": 12,
       "height": 12
     },
     {
       "name": "gemini-pavilion",
       "kind": "room",
-      "x": 77,
-      "y": 91,
+      "x": 80,
+      "y": 96,
       "width": 12,
       "height": 12
     },
@@ -16140,30 +20694,30 @@
       "name": "cancer-pavilion",
       "kind": "room",
       "x": 58,
-      "y": 96,
+      "y": 102,
       "width": 12,
       "height": 12
     },
     {
       "name": "leo-pavilion",
       "kind": "room",
-      "x": 39,
-      "y": 91,
+      "x": 36,
+      "y": 96,
       "width": 12,
       "height": 12
     },
     {
       "name": "virgo-pavilion",
       "kind": "room",
-      "x": 25,
-      "y": 77,
+      "x": 20,
+      "y": 80,
       "width": 12,
       "height": 12
     },
     {
       "name": "libra-pavilion",
       "kind": "room",
-      "x": 20,
+      "x": 14,
       "y": 58,
       "width": 12,
       "height": 12
@@ -16171,16 +20725,16 @@
     {
       "name": "scorpio-pavilion",
       "kind": "room",
-      "x": 25,
-      "y": 39,
+      "x": 20,
+      "y": 36,
       "width": 12,
       "height": 12
     },
     {
       "name": "sagittarius-pavilion",
       "kind": "room",
-      "x": 39,
-      "y": 25,
+      "x": 36,
+      "y": 20,
       "width": 12,
       "height": 12
     },
@@ -16188,23 +20742,23 @@
       "name": "capricorn-pavilion",
       "kind": "room",
       "x": 58,
-      "y": 20,
+      "y": 14,
       "width": 12,
       "height": 12
     },
     {
       "name": "aquarius-pavilion",
       "kind": "room",
-      "x": 77,
-      "y": 25,
+      "x": 80,
+      "y": 20,
       "width": 12,
       "height": 12
     },
     {
       "name": "pisces-pavilion",
       "kind": "room",
-      "x": 91,
-      "y": 39,
+      "x": 96,
+      "y": 36,
       "width": 12,
       "height": 12
     },
@@ -16431,8 +20985,8 @@
     {
       "name": "Sponsors / Demo 01",
       "image": "assets/sponsors/demo-01.png",
-      "x": 53,
-      "y": 55,
+      "x": 37,
+      "y": 63,
       "width": 6,
       "height": 2,
       "standing": false
@@ -16440,8 +20994,8 @@
     {
       "name": "Sponsors / Demo 02",
       "image": "assets/sponsors/demo-02.png",
-      "x": 60,
-      "y": 55,
+      "x": 44,
+      "y": 63,
       "width": 6,
       "height": 2,
       "standing": false
@@ -16449,8 +21003,8 @@
     {
       "name": "Sponsors / Demo 03",
       "image": "assets/sponsors/demo-03.png",
-      "x": 67,
-      "y": 55,
+      "x": 51,
+      "y": 63,
       "width": 6,
       "height": 2,
       "standing": false
@@ -89855,12 +94409,6 @@
   ],
   "standingSigns": [
     {
-      "face": "exterior-road-sign-north",
-      "supports": [
-        "exterior-road-post-north"
-      ]
-    },
-    {
       "face": "exterior-road-sign-west",
       "supports": [
         "exterior-road-post-west"
@@ -89870,12 +94418,6 @@
       "face": "exterior-road-sign-east",
       "supports": [
         "exterior-road-post-east"
-      ]
-    },
-    {
-      "face": "exterior-road-sign-south",
-      "supports": [
-        "exterior-road-post-south"
       ]
     },
     {

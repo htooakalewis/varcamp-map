@@ -48,12 +48,12 @@ afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); });
 describe('audited native navigation', () => {
   it('pins current provenance and audits physical/depth boundaries while preserving walkable floor graphics', async () => {
     const { ROUTES, planRoute } = await modules();
-    expect(ROUTES.allowedCells).toHaveLength(814);
-    expect(createHash('sha256').update(JSON.stringify(ROUTES.allowedCells)).digest('hex')).toBe('34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d');
+    expect(ROUTES.allowedCells).toHaveLength(871);
+    expect(createHash('sha256').update(JSON.stringify(ROUTES.allowedCells)).digest('hex')).toBe('daa24dec45133b16200fb4056b7e0709c61ed91955831b679bcf767b5702f719');
     for (const [path, hash] of Object.entries(ROUTES.provenance.sourceSha256)) expect(createHash('sha256').update(readFileSync(path)).digest('hex'), path).toBe(hash);
     const map=native(),layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));
     const result=auditGuideRoutes({map,layout,wam,catalog:loadTileCatalog(),routes:ROUTES});
-    expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6960,portalCells:48,walkablePropOverlapCells:52,walkableImageOverlapCells:14});
+    expect(result).toMatchObject({allowedCells:871,startupReservedCells:4,nativeCollisionCells:6924,portalCells:48,walkablePropOverlapCells:72,walkableImageOverlapCells:26});
     const collisionGids=new Set<number>();for(const s of map.tilesets)for(const t of s.tiles??[])if(t.properties?.some(p=>p.name==='collides'&&p.value===true))collisionGids.add(s.firstgid+t.id);
     const forbidden=new Set<number>();for(const l of map.layers)if(l.type==='tilelayer')l.data.forEach((g,i)=>{if(collisionGids.has((g&0x0fffffff)>>>0)||(g&&l.properties?.some(p=>p.name==='exitUrl')))forbidden.add(i);});
     for(const n of forbidden)expect(()=>planRoute([70,76],[n%128,Math.floor(n/128)])).toThrow();
@@ -90,7 +90,7 @@ describe('audited native navigation', () => {
 });
 
 describe('commands', () => {
-  const goals = [['aries',101,71],['taurus',96,90],['gemini',82,104],['cancer',63,109],['leo',44,104],['virgo',30,90],['libra',25,71],['scorpio',30,52],['sagittarius',44,38],['capricorn',63,33],['aquarius',82,38],['pisces',96,52],['solar hall',20,24],['lunar hall',106,24],['mazes',68,5],['park',5,68],['harbor',118,63],['exploration',63,120]] as const;
+  const goals = [['aries',107,71],['taurus',101,93],['gemini',85,109],['cancer',63,115],['leo',41,109],['virgo',25,93],['libra',19,71],['scorpio',25,49],['sagittarius',41,33],['capricorn',63,27],['aquarius',85,33],['pisces',101,49],['solar hall',20,24],['lunar hall',106,24],['mazes',68,5],['park',5,68],['harbor',118,63],['exploration',63,120]] as const;
   it.each(goals)('escorts %s to its safe preportal point and returns home', async (alias, x, y) => {
     const { createLyraController } = await modules(); const h = harness(); const c = createLyraController(h.adapter); await c.start();await flush(); h.join(); h.chat(` GO   ${alias.toUpperCase()} `); await flush();
     let reached = false;

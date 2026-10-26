@@ -25,12 +25,12 @@ describe('final plaza guide physical/depth audit',()=>{
   expect(overlaps).toEqual([]);
   expect([...crossed].sort()).toEqual(['arrival-position-label','inner-garden-southeast-bench','inner-garden-southeast-tea-table','inner-garden-southwest-bench','inner-garden-southwest-tea-table']);
  });
- it('accepts the final exact814-cell graph and intentional below-avatar floor identity',()=>{
+ it('accepts the final exact 871-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6960,portalCells:48,walkablePropOverlapCells:52,walkableImageOverlapCells:14});
-  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual([...['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`),...['scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-ground-name`)].sort());
+  expect(result).toMatchObject({allowedCells:871,startupReservedCells:4,nativeCollisionCells:6924,portalCells:48,walkablePropOverlapCells:72,walkableImageOverlapCells:26});
+  expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual([...['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`),...['cancer','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-ground-name`),'approach-arrow-cancer','approach-arrow-capricorn'].sort());
   const {provenance,...graph}=d.routes;
-  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('c29b89353e82bae6dd41a9f4cd5f02a7b63b5cdb1374728d02f48cbce26e3833');
+  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('713f8cbf31202e08e4bb6dd79fd616f04998074025f26a3e52bb270c74423f96');
  });
  it('explicitly retains only the inherited four-cell welcome escape, never ordinary area entry',()=>{
   const d=data();expect(check(d).startupInsideWelcomeArea).toEqual([[63,65],[64,65],[63,66],[64,66]]);

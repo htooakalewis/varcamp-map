@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "85f6069b8c11367c766dffb91569e0e2f9c09d253535df41be0a655e51831301",
+      "toSha256": "a1a549c6b6acc31bdb0af3962feb5a114349493efec6e61ede156cb60754a8ef",
+      "reason": "Owner-approved crescent forecourt, symmetric southern paving and a uniformly expanded twelve-building zodiac circle. Retain every atlas, artwork asset, booth dimension, animation and interaction; move paired entry/exit cells with their buildings and re-audit the public guide graph."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "86675106b1a4eaaf1424b73801f13880cfcbb5d04b8958ffe08217db2358f4fe",
+      "toSha256": "b342c614b43b60458c973a95d25644e36808e5dfe25b16c5859c7c3c1c2b9709",
+      "reason": "Owner-approved crescent forecourt, symmetric southern paving and a uniformly expanded twelve-building zodiac circle. Retain every atlas, artwork asset, booth dimension, animation and interaction; move paired entry/exit cells with their buildings and re-audit the public guide graph."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "4c14be13d0ba12bb4104c9ed65bde28e7e2a88d5229b6869c374dc7b823f1e55",
+      "toSha256": "9279e5ac664003ce036c0628b2bb8c71a13f00f0fbe3f7607bb09287ca90926e",
+      "reason": "Owner-approved crescent forecourt, symmetric southern paving and a uniformly expanded twelve-building zodiac circle. Retain every atlas, artwork asset, booth dimension, animation and interaction; move paired entry/exit cells with their buildings and re-audit the public guide graph."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "b9890c452f6a6f71bc80a6c1a924c3e6575249f261c3d09512524816f3b3911b",
+      "toSha256": "65753dac9925307c4ec2608d0eb16de5ab26b5ad25e1d10520e3a2d14cecdb2a",
+      "reason": "Owner-approved crescent forecourt, symmetric southern paving and a uniformly expanded twelve-building zodiac circle. Retain every atlas, artwork asset, booth dimension, animation and interaction; move paired entry/exit cells with their buildings and re-audit the public guide graph."
+    }
+  ]
+}

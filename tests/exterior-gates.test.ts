@@ -41,23 +41,25 @@ describe('exterior circle road keeps public destinations out of the speaker plaz
   for(const n of ring){expect(mask[n],`outer road blocked at${n%128},${Math.floor(n/128)}`).toBe(0);expect(portals.has(n),'automatic teleport during lap').toBe(false);}
   const forbidden=new Set(Array.from({length:128*128},(_,n)=>n).filter(n=>!ring.has(n))),d=walk(128,mask,[...ring][0],forbidden);expect(d.size).toBe(ring.size);
  });
- it('keeps all retired central trigger cells and the complete five-wide signed alleys walkable',()=>{
+ it('keeps retired trigger cells, the side alleys and the new north approach walkable',()=>{
   const{l,mask}=built(),spawn=l.entries.find(e=>e.isDefault)!,d=walk(l.width,mask,spawn.y*l.width+spawn.x);
   for(const old of before.exits.filter(e=>!e.destination.startsWith('speaker-')))for(const n of cells(translated(old),l.width)){expect(mask[n],old.name+' retired trigger blocks north/speaker circulation').toBe(0);expect(d.has(n),old.name+' retired trigger is detached').toBe(true);}
-  for(const[name,x,y,width,height]of [['north',52,12,5,35],['south',52,89,5,29],['west',12,52,28,5],['east',88,52,30,5]] as const){
+  for(const[name,x,y,width,height]of [['north',52,12,5,26],['south',52,89,5,29],['west',12,52,28,5],['east',88,52,30,5]] as const){
    const r={x,y,width,height},p=l.placements.find(p=>p.id==='outer-alley-'+name)!;expect(p).toMatchObject({...r,sprite:'path-stone',layer:'terrain'});
    const ns=cells(r,l.width);for(const n of ns){expect(mask[n],name+' five-wide alley blocked at'+n%l.width+','+Math.floor(n/l.width)).toBe(0);expect(d.has(n),name+' alley detached').toBe(true);}
    expect(ns.some(n=>radius(n,l.width)>=52&&radius(n,l.width)<=56),name+' does not join the outer road').toBe(true);expect(ns.some(n=>radius(n,l.width)<36.5),name+' does not reach the original plaza').toBe(true);
   }
+  for(const r of [{x:52,y:34,width:16,height:4},{x:60,y:34,width:8,height:20}])for(const n of cells(r,l.width)){expect(mask[n],'north connector blocked').toBe(0);expect(d.has(n),'north connector detached').toBe(true);}
  });
  it('keeps the new verge bounded by water outside deliberate native gate decks',()=>{
   const{l,mask}=built();const decks=l.placements.filter(p=>p.layer==='terrain'&&/^(exterior-court-|exterior-court-inlay-|exterior-spur-|gate-plaza-pad-|maze-return-|festival-return-)/.test(p.id));
   const deckCells=new Set(decks.flatMap(r=>cells(r,l.width)));
   for(let n=0;n<l.width*l.height;n++)if(radius(n,l.width)>60&&!deckCells.has(n))expect(mask[n],`unbounded walkable exterior at${n%l.width},${Math.floor(n/l.width)}`).not.toBe(0);
  });
+ // Expanding the circle adds at most eight Manhattan tiles to each former doorway approach.
  it('reaches all twelve speaker doors while every non-speaker exit is forbidden',()=>{
   const{l,mask}=built(),portals=new Set(l.exits.filter(e=>!e.destination.startsWith('speaker-')).flatMap(e=>cells(e,l.width)));
-  for(const start of cells(l.entries.find(e=>e.isDefault)!,l.width)){const d=walk(l.width,mask,start,portals);for(const e of l.exits.filter(e=>e.destination.startsWith('speaker-')))expect(Math.min(...cells(e,l.width).map(n=>d.get(n)??Infinity)),e.name).toBeLessThanOrEqual(65);}
+  for(const start of cells(l.entries.find(e=>e.isDefault)!,l.width)){const d=walk(l.width,mask,start,portals);for(const e of l.exits.filter(e=>e.destination.startsWith('speaker-')))expect(Math.min(...cells(e,l.width).map(n=>d.get(n)??Infinity)),e.name).toBeLessThanOrEqual(73);}
  });
  it('keeps every spawn and portal cell clear, reachable, separated and within the exterior walking budget',()=>{
   const{l,mask}=built(),gates=l.exits.filter(e=>!e.destination.startsWith('speaker-'));

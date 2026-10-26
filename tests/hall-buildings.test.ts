@@ -1,9 +1,11 @@
+import {preCrescentLayout,preCrescentNative} from './helpers/plaza-crescent-history';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import sharp from 'sharp';
 import {assertCurrentNativeMap} from '../tools/maps/current-native';
 import {beforeHallBuildingsJson} from './helpers/hall-buildings-history';
-const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const raw=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const read=(p:string)=>p==='world/layouts/overworld.json'?preCrescentLayout(raw(p)):p==='maps/overworld.tmj'?preCrescentNative(raw(p)):raw(p);
 describe('Enclosed hall buildings and zodiac ground labels',()=>{
  it('uses full-size enclosed buildings at both existing entrances',()=>{
   const l=read('world/layouts/overworld.json'),c=read('art/tile-catalog.json');
@@ -32,7 +34,7 @@ describe('Enclosed hall buildings and zodiac ground labels',()=>{
   const a=old.layers.find((l:any)=>l.name==='physical-collisions').data,b=map.layers.find((l:any)=>l.name==='physical-collisions').data;
   for(let i=0;i<a.length;i++)if(a[i]!==b[i]){const x=i%128,y=Math.floor(i/128);expect((y>=10&&y<24&&((x>=15&&x<27)||(x>=99&&x<113)))||(y>=110&&y<115&&x>=57&&x<77)).toBe(true);}
   for(const e of [...layout.entries,...layout.exits])for(let y=e.y;y<e.y+e.height;y++)for(let x=e.x;x<e.x+e.width;x++)expect(b[y*128+x],e.name+' portal/return').toBe(0);
-  expect(()=>assertCurrentNativeMap('overworld',map,layout,read('maps/overworld.wam'),read('art/tile-catalog.json'))).not.toThrow();
+  expect(()=>assertCurrentNativeMap('overworld',raw('maps/overworld.tmj'),raw('world/layouts/overworld.json'),read('maps/overworld.wam'),read('art/tile-catalog.json'))).not.toThrow();
  });
  it('uses translucent text-only floor marks and clears only the hall threshold',async()=>{
   const {data,info}=await sharp('assets/tilesets/original/zodiac-ground-names.png').ensureAlpha().raw().toBuffer({resolveWithObject:true});expect([info.width,info.height]).toEqual([384,768]);
@@ -44,11 +46,11 @@ describe('Enclosed hall buildings and zodiac ground labels',()=>{
   }
  });
  it.each(['missing-hall','closed-door','raised-ground-name','returned-board'])('rejects %s at the current publication gate',kind=>{
-  const l=read('world/layouts/overworld.json'),c=read('art/tile-catalog.json');
+  const l=raw('world/layouts/overworld.json'),c=read('art/tile-catalog.json');
   if(kind==='missing-hall')l.placements=l.placements.filter((p:any)=>p.sprite!=='hall-building-solar');
   if(kind==='closed-door')c['hall-building-solar'].blockingCells.push([5,11]);
   if(kind==='raised-ground-name')c['zodiac-ground-name-scorpio'].level='aboveAvatar';
   if(kind==='returned-board')l.placements.push(beforeHallBuildingsJson('world/layouts/overworld.json').placements.find((p:any)=>p.id==='scorpio-bold-nameplate'));
-  expect(()=>assertCurrentNativeMap('overworld',read('maps/overworld.tmj'),l,read('maps/overworld.wam'),c)).toThrow(/Hall buildings/);
+  expect(()=>assertCurrentNativeMap('overworld',raw('maps/overworld.tmj'),l,read('maps/overworld.wam'),c)).toThrow(/Hall buildings|Plaza crescent/);
  });
 });

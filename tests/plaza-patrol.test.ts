@@ -64,5 +64,5 @@ it('preserves every earlier media file except the four explicitly updated arriva
 it('requires the patrol family and table removal even after coherent source/native omissions',()=>{
  const l=read<MapLayout>('world/layouts/overworld.json'),m=read<TiledMap>('maps/overworld.tmj');
  l.animatedOverlays=l.animatedOverlays!.filter(o=>!o.name.startsWith('plaza-patrol-'));m.layers=m.layers.filter(l=>!l.name.startsWith('plaza-patrol-'));
- expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings/);
+ expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent/);
 });

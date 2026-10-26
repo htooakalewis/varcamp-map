@@ -1,4 +1,5 @@
 import {applyHallBuildings,reconcileHallBuildings} from '../../tools/maps/hall-buildings';
+import {applyPlazaCrescent,reconcilePlazaCrescent} from '../../tools/maps/plaza-crescent';
 import{assertNativeSourceProjection,reconcileNativeProjection}from'../../tools/maps/native-projection';
 import{buildMap}from'../../tools/maps/builder';
 import assert from 'node:assert/strict';
@@ -238,7 +239,7 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const patrol=applyPlazaPatrol(arrival),patrolNative=reconcilePlazaPatrol(arrivalNative,patrol,catalog);
  assert.deepEqual(patrol,beforeSpacingJson('world/layouts/overworld.json'),'Genuine pre-spacing source matches the patrol forward operation');
  assert.deepEqual(patrolNative,beforeSpacingJson('maps/overworld.tmj'),'Genuine pre-spacing native matches the patrol forward operation');
- const spaced=applyExpoSpacing(patrol),spacedNative=reconcileExpoSpacing(patrolNative,spaced,catalog),flowing=applyFountainMotion(spaced),flowingNative=reconcileFountainMotion(spacedNative,flowing,catalog),lion=applyLeoLionHead(flowing);const buildings=applyHallBuildings(lion);return {layout:buildings,native:reconcileHallBuildings(reconcileLeoLionHead(flowingNative,lion,catalog),buildings,catalog)};
+ const spaced=applyExpoSpacing(patrol),spacedNative=reconcileExpoSpacing(patrolNative,spaced,catalog),flowing=applyFountainMotion(spaced),flowingNative=reconcileFountainMotion(spacedNative,flowing,catalog),lion=applyLeoLionHead(flowing);const buildings=applyHallBuildings(lion),buildingNative=reconcileHallBuildings(reconcileLeoLionHead(flowingNative,lion,catalog),buildings,catalog),crescent=applyPlazaCrescent(buildings);return {layout:crescent,native:reconcilePlazaCrescent(buildingNative,crescent,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

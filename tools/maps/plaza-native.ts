@@ -3,6 +3,7 @@ import {applyExpoSpacing,restoreExpoSpacing} from './expo-spacing';
 import {applyFountainMotion,restoreFountainMotion} from './fountain-motion';
 import {applyLeoLionHead,restoreLeoLionHead,assertLeoLionHead} from './leo-lion-head';
 import {applyHallBuildings,restoreHallBuildings,assertHallBuildings} from './hall-buildings';
+import {applyPlazaCrescent,restorePlazaCrescent} from './plaza-crescent';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {buildMap} from './builder';
@@ -57,8 +58,9 @@ export function assertNativePlaza(map:TiledMap,layout:MapLayout,catalog:TileCata
  if(layout.id!=='overworld'&&!identity.some(p=>p.value==='overworld')&&!map.tilesets.some(t=>t.image?.endsWith('/plaza-buildings.png')||t.name?.startsWith('plaza-drone-')))return;
  const need=(ok:unknown,message:string)=>{if(!ok)throw Error('Plaza '+message);};
  need(layout.id==='overworld'&&identity.length===1&&identity[0].type==='string'&&identity[0].value==='overworld'&&map.width===128&&map.height===128,'current map/layout identity changed');
- assertHallBuildings(layout,catalog);
- const priorBuildings=restoreHallBuildings(layout);
+ const priorCrescent=restorePlazaCrescent(layout);
+ assertHallBuildings(priorCrescent,catalog);
+ const priorBuildings=restoreHallBuildings(priorCrescent);
  assertZodiacPhysics(priorBuildings,catalog);
  assertHallExteriors(priorBuildings,catalog);
  assertLeoLionHead(priorBuildings,catalog);
@@ -68,7 +70,7 @@ export function assertNativePlaza(map:TiledMap,layout:MapLayout,catalog:TileCata
  const priorPhysics=restoreZodiacPhysics(priorArrival);
  assertZodiacExteriors(priorPhysics,catalog);
  assertHallExteriors(priorBuildings,catalog);
- need(isDeepStrictEqual(applyHallBuildings(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyHallExteriors(applyZodiacExteriors(refinePlazaFloorGarden(priorPhysics)))))))))),layout),'current source artwork/identity roster changed');
+ need(isDeepStrictEqual(applyPlazaCrescent(applyHallBuildings(applyLeoLionHead(applyFountainMotion(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyHallExteriors(applyZodiacExteriors(refinePlazaFloorGarden(priorPhysics))))))))))),layout),'current source artwork/identity roster changed');
  for(const [id,s] of Object.entries({...plazaGardenSprites(),...plazaBuildingSprites(),...plazaGrassSprites(),...plazaPotSprites(),...zodiacEmblemSprites()}))need(isDeepStrictEqual(catalog[id],s),`original artwork depth/footprint definition changed: ${id}`);
  const intended=buildMap(layout,catalog).tmj;assertNativeSourceProjection(map,intended);
 }
