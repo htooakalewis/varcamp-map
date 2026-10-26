@@ -29,7 +29,7 @@ describe('finished release artifact (run npm run buildmap first)', () => {
     expect(map.layers.some(l => l.type === 'imagelayer')).toBe(false);
     const ranges = map.tilesets.map(t => ({ first: t.firstgid, end: t.firstgid + t.tilecount! })).sort((a,b)=>a.first-b.first);
     for(let i=1;i<ranges.length;i++)expect(ranges[i].first).toBeGreaterThanOrEqual(ranges[i-1].end);
-    for(const [n,x] of [[1,53],[2,61],[3,69]]) {
+    for(const [n,x] of [[1,53],[2,60],[3,67]]) {
       const asset = `../assets/sponsors/demo-0${n}.png`;
       const sheet = map.tilesets.find(t => t.image && nativeImage(t.image) === asset);
       expect(sheet).toMatchObject({ columns: 6, tilecount: 12, tilewidth: 32, tileheight: 32, imagewidth: 192, imageheight: 64 });
@@ -37,7 +37,7 @@ describe('finished release artifact (run npm run buildmap first)', () => {
       expect(panel).toMatchObject({ type: 'tilelayer', visible: true, opacity: 1 });
       if(panel?.type!=='tilelayer'||!sheet)throw new Error('Sponsor missing renderer-consumable sheet/layer');
       expect(panel.data.filter(Boolean)).toHaveLength(12);
-      for(let y=0;y<2;y++)for(let dx=0;dx<6;dx++)expect(panel.data[(67+y)*map.width+x+dx]).toBe(sheet.firstgid+y*6+dx);
+      for(let y=0;y<2;y++)for(let dx=0;dx<6;dx++)expect(panel.data[(55+y)*map.width+x+dx]).toBe(sheet.firstgid+y*6+dx);
       expect(readFileSync(reference(resolve(root,'maps/overworld.tmj'),sheet.image!))).toEqual(readFileSync(`assets/sponsors/demo-0${n}.png`));
     }
   });

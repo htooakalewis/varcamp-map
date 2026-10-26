@@ -62,6 +62,6 @@ describe('medium authored zodiac arrival',()=>{
   const spawn=l.entries.find(e=>e.isDefault)!,queue=[spawn.y*l.width+spawn.x],seen=new Set(queue);
   for(let h=0;h<queue.length;h++){const n=queue[h];for(const next of[n-l.width,n+l.width,n-1,n+1])if(next>=0&&next<l.width*l.height&&Math.abs(next%l.width-n%l.width)<=1&&!mask.data[next]&&!seen.has(next)){seen.add(next);queue.push(next);}}
   expect(l.areas.some(a=>a.name==='npc-guide')).toBe(false);
-  for(const target of [area,{name:'former-guide-station',x:76,y:71,width:3,height:3}])for(let y=target.y;y<target.y+target.height;y++)for(let x=target.x;x<target.x+target.width;x++){expect(mask.data[y*l.width+x],`${target.name} collision ${x},${y}`).toBe(0);expect(seen.has(y*l.width+x),`${target.name} unreachable ${x},${y}`).toBe(true);}
+  for(const target of [area,{name:'current-guide-aisle',x:70,y:75,width:4,height:2}])for(let y=target.y;y<target.y+target.height;y++)for(let x=target.x;x<target.x+target.width;x++){expect(mask.data[y*l.width+x],`${target.name} collision ${x},${y}`).toBe(0);expect(seen.has(y*l.width+x),`${target.name} unreachable ${x},${y}`).toBe(true);}
  });
 });

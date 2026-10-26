@@ -199,7 +199,7 @@
       },
       {
         "path": "art/source/expo-captions.json",
-        "sha256": "819d049b18d4c72a45750af78b216aee0a82bd616d1249298e379022290b07e2"
+        "sha256": "6012f6e07caed3cb16979415100091d4b25143ecbee54f55c3abcc282dc069c4"
       },
       {
         "path": "art/source/expo-captions.svg",
@@ -251,7 +251,7 @@
       },
       {
         "path": "art/source/standing-captions.json",
-        "sha256": "78dca945faa9ea1f20d269020e1d03b1ad5ae2b5d71e0fd06421830646e2f448"
+        "sha256": "64fcc9df5b5a986249eaf1fb5223c0030d353fec619bfb5bb194cc154cf06b7d"
       },
       {
         "path": "art/source/standing-captions.svg",
@@ -1376,7 +1376,7 @@
       },
       {
         "path": "art/source/plaza-fleet-camera.json",
-        "sha256": "c5b000b2e07191ad1afe6fddb6cf0cf6d0ad6041e92ad5bdade00f92dae5a5c0"
+        "sha256": "711d04c9cec89bc605fa6f843d07cf6ffaa3f1f13b88a07de78f9e5304ffe154"
       },
       {
         "path": "art/source/plaza-fleet-delivery-poses.png",
@@ -1384,7 +1384,7 @@
       },
       {
         "path": "art/source/plaza-fleet-delivery.json",
-        "sha256": "d4def45532d99a0a2e734acecd8d68fcbeb3f6c16f060f6725c555d0e73a657b"
+        "sha256": "cec415c26279f30083394f83aeead95c9c7c389d233d833bc11e4c382c50130c"
       },
       {
         "path": "art/source/plaza-fleet-original/NOTICE.txt",
@@ -1416,11 +1416,11 @@
       },
       {
         "path": "art/source/plaza-fleet-survey.json",
-        "sha256": "be6b2e994914be1eff042709549fae3bfd4409728b1b986fa7408287aa38142c"
+        "sha256": "a6002eda388bc9b94f3d628fc762428c5a0ec8fc4a0072104b7ed2d0bfcb5592"
       },
       {
         "path": "art/source/plaza-fleet.json",
-        "sha256": "77a210a66d0a333dead4ff24a605ca0aa34aae2882c28e9973a658bf6ba37767"
+        "sha256": "ebe1bb1aebe23462044a96b62df568b81cf1e8c83335e588ec57a41a37400146"
       },
       {
         "path": "assets/tilesets/original/plaza-fleet-camera.png",

@@ -1,5 +1,5 @@
 import {isDeepStrictEqual} from 'node:util';
-import routes from '../../src/bots/lyra-routes.json';
+import routes from '../../world/plaza-guide-before-spacing.json';
 import {buildMap} from './builder';
 import {EXPO_STICKERS,expoCaption,expoLogoImage,expoSticker,withExpoCaption} from './expo-fixtures';
 import {EXPO_MARKS} from './native-ownership-context';

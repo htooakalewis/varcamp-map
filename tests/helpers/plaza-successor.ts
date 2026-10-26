@@ -26,6 +26,8 @@ import {applyArrivalRefresh,reconcileArrivalRefresh,advanceArrivalProvenance} fr
 import {applyPlazaPatrol,reconcilePlazaPatrol} from '../../tools/maps/plaza-patrol';
 import {advancePatrolProvenance} from '../../tools/maps/plaza-patrol-provenance';
 import {beforePatrolJson} from './plaza-patrol-history';
+import {applyExpoSpacing,reconcileExpoSpacing} from '../../tools/maps/expo-spacing';
+import {spacingSuccessorSha,beforeSpacingJson} from './expo-spacing-history';
 import type {TileCatalog} from '../../tools/art/catalog';
 import type {MapLayout,TiledMap,TileLayer} from '../../tools/maps/types';
 import contract from '../../world/plaza-floor-garden-native.json';
@@ -116,7 +118,7 @@ export const EXPO_PLAZA_PRODUCER_SHA256='11d400811d48b3e47e8f4966ae4b32b7afdee1e
  * on n6, the generic placeholders on s4-s5) and two six-wide plates fewer posters/more posts. */
 export const EXPO_PLAZA_COUNTS=Object.freeze({placements:253,images:11,captions:12});
 export function applyExpoPlazaSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
- assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),EXPO_PLAZA_PRODUCER_SHA256,'Expo plaza producer changed');
+ assert.equal(createHash('sha256').update(readFileSync('tools/maps/expo-plaza.ts')).digest('hex'),spacingSuccessorSha('tools/maps/expo-plaza.ts',EXPO_PLAZA_PRODUCER_SHA256),'Expo plaza producer changed');
  const fixtures=expoFixtures(),{placements,images,captions}=EXPO_PLAZA_COUNTS;
  assert.equal(EXPO_PLAZA.retiredPlacements.length,33);assert.equal(expoPlacements().length,placements);assert.equal(fixtures.images.length,images);assert.equal(fixtures.captions.length,captions);
  const l=applyExpoPlaza(layout);
@@ -164,7 +166,7 @@ export async function expectedPreExpoSuccessor(catalog:TileCatalog):Promise<{lay
 export const BRAND_ASSETS_PRODUCER_SHA256='ab66e87410ffb7ca0efb71f4328f81553e5b605d5437b5dfaf546f4d22806e90';
 export const BRAND_ASSETS_COUNTS=Object.freeze({placements:7,atlases:['plaza-fountain','plaza-lamp']});
 export function applyBrandAssetsSuccessor(layout:MapLayout,native:TiledMap,catalog:TileCatalog):{layout:MapLayout;native:TiledMap}{
- assert.equal(createHash('sha256').update(readFileSync('tools/maps/brand-assets.ts')).digest('hex'),BRAND_ASSETS_PRODUCER_SHA256,'Brand assets producer changed');
+ assert.equal(createHash('sha256').update(readFileSync('tools/maps/brand-assets.ts')).digest('hex'),spacingSuccessorSha('tools/maps/brand-assets.ts',BRAND_ASSETS_PRODUCER_SHA256),'Brand assets producer changed');
  assert.equal(brandAssetPlacements().length,BRAND_ASSETS_COUNTS.placements);
  const l=applyBrandAssets(layout);
  assert.equal(l.placements.length,layout.placements.length+BRAND_ASSETS_COUNTS.placements);
@@ -230,7 +232,10 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const arrival=applyArrivalRefresh(physical),arrivalNative=reconcileArrivalRefresh(physicalNative,arrival,catalog);
  assert.deepEqual(arrival,advancePatrolProvenance(beforePatrolJson('world/layouts/overworld.json')),'Genuine pre-patrol source must match the arrival forward operation');
  assert.deepEqual(arrivalNative,beforePatrolJson('maps/overworld.tmj'),'Genuine pre-patrol native must match the arrival forward operation');
- const patrol=applyPlazaPatrol(arrival);return {layout:patrol,native:reconcilePlazaPatrol(arrivalNative,patrol,catalog)};
+ const patrol=applyPlazaPatrol(arrival),patrolNative=reconcilePlazaPatrol(arrivalNative,patrol,catalog);
+ assert.deepEqual(patrol,beforeSpacingJson('world/layouts/overworld.json'),'Genuine pre-spacing source matches the patrol forward operation');
+ assert.deepEqual(patrolNative,beforeSpacingJson('maps/overworld.tmj'),'Genuine pre-spacing native matches the patrol forward operation');
+ const spaced=applyExpoSpacing(patrol);return {layout:spaced,native:reconcileExpoSpacing(patrolNative,spaced,catalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

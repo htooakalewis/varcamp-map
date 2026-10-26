@@ -6,6 +6,7 @@ import sharp from'sharp';
 import{renderNativeMotion}from'./native-motion';
 import type{NativeMotionPose,NativeMotionTrack}from'./native-motion';
 import type{MapLayout,TileRect}from'../maps/types';
+import spacing from'../../world/expo-spacing.json';
 export const FLEET_IDS=['plaza-fleet-camera','plaza-fleet-delivery','plaza-fleet-survey']as const;
 type Aircraft={id:typeof FLEET_IDS[number];type:string;source:string;sourceSha256:string;rect:TileRect;periodMs:number;phaseOffset:number;level:'aboveScenery'};
 type Recipe={version:number;sourceId:string;nativePoseBox:number;stepMs:number;maxTotalDecodedRgbaBytes:number;aircraft:Aircraft[]};
@@ -23,7 +24,11 @@ export function assertFleetSafety(layout:MapLayout,recipe:Recipe):void{
  for(const a of recipe.aircraft){
   if(a.id!=='plaza-fleet-'+a.type||a.source!==`art/source/plaza-fleet-original/${a.type}-generated-master.png`||!/^[a-f0-9]{64}$/.test(a.sourceSha256))throw Error('Fleet aircraft type/master binding changed');
   const r=a.rect;if(a.level!=='aboveScenery'||![r.x,r.y,r.width,r.height,a.periodMs].every(Number.isSafeInteger)||r.x<0||r.y<0||r.width<2||r.height<2||r.width*r.height>=256||r.x+r.width>128||r.y+r.height>128||a.periodMs<12000||a.periodMs>20000||a.periodMs%200||!Number.isFinite(a.phaseOffset)||a.phaseOffset<0||a.phaseOffset>=1)throw Error('Fleet bounded above-scenery lane/clock changed');
-  if(obstacles.some(p=>overlaps(r,p)))throw Error('Fleet lane intersects a prop, logo, entry, exit or activity: '+a.id);
+  // These same topmost drones now pass above the exact expanded booth fixtures.
+  // Admit that finite physical successor only for the unchanged registered lanes.
+  const originalLane=read(recipePath).aircraft.find((v:Aircraft)=>v.id===a.id);
+  const approvedBelow=(p:unknown)=>isDeepStrictEqual(a,originalLane)&&[...spacing.changes.placements,...spacing.changes.images].some(c=>c.after!==null&&isDeepStrictEqual(c.after,p));
+  if(obstacles.some(p=>overlaps(r,p)&&!approvedBelow(p)))throw Error('Fleet lane intersects a prop, logo, entry, exit or activity: '+a.id);
  }
  for(let i=0;i<recipe.aircraft.length;i++)for(let j=i+1;j<recipe.aircraft.length;j++)if(overlaps(recipe.aircraft[i].rect,recipe.aircraft[j].rect))throw Error('Fleet lanes overlap');
 }

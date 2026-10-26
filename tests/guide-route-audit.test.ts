@@ -6,6 +6,7 @@ import {historicalFloorPlaza,WELCOME_PLAZA_RETIREMENT,WELCOME_SIGN_RETIREMENT} f
 import {EXPO_PLAZA} from '../tools/maps/expo-plaza';
 import {loadTileCatalog} from '../tools/art/catalog';
 import {planRoute,startupRoute} from '../src/bots/venue';
+import historicalRoutes from '../world/plaza-guide-before-spacing.json';
 import {PERSONAS} from '../src/bots/personas';
 import type {TileLayer,MapLayout} from '../tools/maps/types';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -19,17 +20,17 @@ describe('final plaza guide physical/depth audit',()=>{
  it('keeps the old conservative full-footprint rule on every immutable before-plaza prop that survives the approved retirements',()=>{
   // The expo hall aisle crosses the retired south-garden benches and the retired arrival label; every other historical footprint stays untouched by the graph.
   const retired=new Set([...WELCOME_PLAZA_RETIREMENT.placements,...WELCOME_SIGN_RETIREMENT.placements,...EXPO_PLAZA.retiredPlacements]);
-  const l=historicalFloorPlaza('layout') as MapLayout,routes=data().routes,overlaps=[],crossed=new Set<string>();
+  const l=historicalFloorPlaza('layout') as MapLayout,routes=historicalRoutes,overlaps=[],crossed=new Set<string>();
   for(const [x,y] of routes.allowedCells)for(const p of [...l.placements.filter((p:any)=>p.layer==='props'),...(l.images??[])])if(x>=p.x&&x<p.x+p.width&&y>=p.y&&y<p.y+p.height){if('id' in p&&retired.has(p.id))crossed.add(p.id);else overlaps.push(`${'id' in p?p.id:p.name}:${x},${y}`);}
   expect(overlaps).toEqual([]);
   expect([...crossed].sort()).toEqual(['arrival-position-label','inner-garden-southeast-bench','inner-garden-southeast-tea-table','inner-garden-southwest-bench','inner-garden-southwest-tea-table']);
  });
- it('accepts the final exact792-cell graph and intentional below-avatar floor identity',()=>{
+ it('accepts the final exact814-cell graph and intentional below-avatar floor identity',()=>{
   const d=data(),result=check(d);
-  expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6812,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:8});
+  expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6936,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:14});
   expect(result.walkableProps.map((p:any)=>p.id).sort()).toEqual(['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'].map(s=>`${s}-zodiac-threshold`).sort());
   const {provenance,...graph}=d.routes;
-  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('083815da9057307c02218ec83816d0280a17b24143f2c90a16a3287e3d186899');
+  expect(createHash('sha256').update(JSON.stringify(graph)).digest('hex')).toBe('c29b89353e82bae6dd41a9f4cd5f02a7b63b5cdb1374728d02f48cbce26e3833');
  });
  it('explicitly retains only the inherited four-cell welcome escape, never ordinary area entry',()=>{
   const d=data();expect(check(d).startupInsideWelcomeArea).toEqual([[63,65],[64,65],[63,66],[64,66]]);
@@ -54,20 +55,20 @@ describe('final plaza guide physical/depth audit',()=>{
   }
  });
  it.each([
-  ['native collision',(d:ReturnType<typeof data>)=>{layer(d,'physical-collisions').data[70*128+70]=maskGid(d,true);},/collision/],
-  ['source solid base',(d:ReturnType<typeof data>)=>{d.layout.placements.push({id:'new-solid-route-obstacle',sprite:'plaza-tree-round',layer:'props',x:70,y:68,width:2,height:3});},/collision/],
-  ['native raised face',(d:ReturnType<typeof data>)=>{layer(d,'scenery-aboveAvatar-0').data[70*128+70]=maskGid(d,false);},/raised/],
+  ['native collision',(d:ReturnType<typeof data>)=>{layer(d,'physical-collisions').data[76*128+70]=maskGid(d,true);},/collision/],
+  ['source solid base',(d:ReturnType<typeof data>)=>{d.layout.placements.push({id:'new-solid-route-obstacle',sprite:'plaza-tree-round',layer:'props',x:70,y:74,width:2,height:3});},/collision/],
+  ['native raised face',(d:ReturnType<typeof data>)=>{layer(d,'scenery-aboveAvatar-0').data[76*128+70]=maskGid(d,false);},/raised/],
   ['source raised crest',(d:ReturnType<typeof data>)=>{d.catalog['zodiac-emblem-aries'].upperCells=[[1,1]];},/raised/],
   ['standing image',(d:ReturnType<typeof data>)=>{d.layout.images.find((p:any)=>p.name==='Arrival / VarCamp NW').standing=true;},/standing/],
   ['native image above floor',(d:ReturnType<typeof data>)=>{const l=layer(d,'Arrival / VarCamp NW');d.map.layers=d.map.layers.filter((x:any)=>x!==l);d.map.layers.push(l);},/raised|image.*depth/],
-  ['native portal',(d:ReturnType<typeof data>)=>{layer(d,'exit-solar').data[70*128+70]=maskGid(d,false);},/portal/],
-  ['WAM normal interaction',(d:ReturnType<typeof data>)=>{d.wam.areas.push({...d.wam.areas[0],id:'new',name:'new-interaction',x:70*32,y:70*32,width:32,height:32});},/interaction/],
-  ['source normal interaction',(d:ReturnType<typeof data>)=>{d.layout.areas.push({...d.layout.areas[0],name:'new-interaction',x:70,y:70,width:1,height:1});},/interaction/],
-  ['unaudited WAM entity',(d:ReturnType<typeof data>)=>{d.wam.entities.unreviewed={x:70*32,y:70*32,prefabRef:{collectionName:'unknown',id:'unknown'}};},/WAM entity/],
-  ['unsupported route surface',(d:ReturnType<typeof data>)=>{d.layout.placements.push({id:'route-grass',sprite:'plaza-grass-01',layer:'terrain',x:70,y:70,width:1,height:1});},/surface/],
+  ['native portal',(d:ReturnType<typeof data>)=>{layer(d,'exit-solar').data[76*128+70]=maskGid(d,false);},/portal/],
+  ['WAM normal interaction',(d:ReturnType<typeof data>)=>{d.wam.areas.push({...d.wam.areas[0],id:'new',name:'new-interaction',x:70*32,y:76*32,width:32,height:32});},/interaction/],
+  ['source normal interaction',(d:ReturnType<typeof data>)=>{d.layout.areas.push({...d.layout.areas[0],name:'new-interaction',x:70,y:76,width:1,height:1});},/interaction/],
+  ['unaudited WAM entity',(d:ReturnType<typeof data>)=>{d.wam.entities.unreviewed={x:70*32,y:76*32,prefabRef:{collectionName:'unknown',id:'unknown'}};},/WAM entity/],
+  ['unsupported route surface',(d:ReturnType<typeof data>)=>{d.layout.placements.push({id:'route-grass',sprite:'plaza-grass-01',layer:'terrain',x:70,y:76,width:1,height:1});},/surface/],
   ['duplicate route cell',(d:ReturnType<typeof data>)=>{d.routes.allowedCells[0]=d.routes.allowedCells[1];},/graph/],
   ['route widening',(d:ReturnType<typeof data>)=>{d.routes.allowedCells.push([1,1]);},/graph/],
-  ['invalid GID',(d:ReturnType<typeof data>)=>{layer(d,'terrain').data[70*128+70]=0x0fffffff;},/GID/],
+  ['invalid GID',(d:ReturnType<typeof data>)=>{layer(d,'terrain').data[76*128+70]=0x0fffffff;},/GID/],
   ['missing source identity',(d:ReturnType<typeof data>)=>{d.layout.id='other';},/identity/],
   ['missing native identity',(d:ReturnType<typeof data>)=>{d.map.properties=d.map.properties.filter((p:any)=>p.name!=='worldMapId');},/identity/],
   ['nonorthogonal native geometry',(d:ReturnType<typeof data>)=>{d.map.orientation='hexagonal';},/identity/],

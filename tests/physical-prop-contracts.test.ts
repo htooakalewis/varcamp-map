@@ -21,11 +21,11 @@ it.each(['raised','post','moved','missing-cell','wrong-cell','above-avatar','blo
  if(kind==='raised')l.images[0].standing=true;
  if(kind==='post')l.placements.push({id:'standing-sponsor-0-support-0',sprite:'solid-sign-post',x:53,y:68,width:1,height:1,layer:'props'});
  if(kind==='moved')l.images[0].x++;
- if(kind==='missing-cell')panel.data[67*128+53]=0;
- if(kind==='wrong-cell')panel.data[67*128+53]++;
+ if(kind==='missing-cell')panel.data[55*128+53]=0;
+ if(kind==='wrong-cell')panel.data[55*128+53]++;
  if(kind==='above-avatar')m.layers.push(m.layers.splice(m.layers.indexOf(panel),1)[0]);
- if(kind==='blocked-logo')mask[67*128+53]=wall;
+ if(kind==='blocked-logo')mask[55*128+53]=wall;
  if(kind==='blocked-control'){const e=l.entries[0];mask[e.y*128+e.x]=wall;}
- if(kind==='unrelated-prop')l.placements.push({id:'unrelated-cover',sprite:'floor-charcoal',x:54,y:67,width:1,height:1,layer:'props'});
+ if(kind==='unrelated-prop')l.placements.push({id:'unrelated-cover',sprite:'floor-charcoal',x:54,y:55,width:1,height:1,layer:'props'});
  expect(()=>assertSponsorFootprints(l,catalog,m)).toThrow();
 });

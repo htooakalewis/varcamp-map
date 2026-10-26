@@ -2,7 +2,9 @@ import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {expect,it} from 'vitest';
 import {loadTileCatalog} from '../tools/art/catalog';
-import {EXPO_BOOTHS} from '../tools/maps/expo-plaza';
+import {EXPO_BOOTHS as HISTORICAL_BOOTHS} from '../tools/maps/expo-plaza';
+import spacing from '../world/expo-spacing.json';
+const EXPO_BOOTHS=HISTORICAL_BOOTHS.map(b=>({...b,interior:spacing.booths.find(s=>s.id===b.id)!}));
 import {buildMap} from '../tools/maps/builder';
 import {auditGuideRoutes} from '../tools/bots/route-audit';
 import type {MapLayout,TileLayer,TiledMap} from '../tools/maps/types';
@@ -35,9 +37,9 @@ it('uses native four-column reception counters without scaling or overlapping bo
  const l=layout(),c=loadTileCatalog();
  for(const b of EXPO_BOOTHS){
   const counter=l.placements.find(p=>p.id===`expo-${b.id}-counter`)!;
-  expect(counter,b.id+' reception counter').toMatchObject({sprite:'desk-curved',x:b.interior.x+1,y:b.row==='north'?77:82,width:4,height:3});
+  expect(counter,b.id+' reception counter').toMatchObject({sprite:'desk-curved',x:b.interior.x+1,y:b.row==='north'?71:80,width:4,height:3});
   expect([counter.width,counter.height]).toEqual([c[counter.sprite].rect.width,c[counter.sprite].rect.height]);
-  expect(counter.y+counter.height<=80||counter.y>=82,b.id+' aisle remains clear').toBe(true);
+  expect(counter.y+counter.height<=74||counter.y>=80,b.id+' aisle remains clear').toBe(true);
   for(const image of l.images!.filter(i=>i.name.startsWith('Expo / ')))expect(counter.x<image.x+image.width&&counter.x+counter.width>image.x&&counter.y<image.y+image.height&&counter.y+counter.height>image.y,b.id+' must not cover a mark').toBe(false);
  }
 });
@@ -57,7 +59,7 @@ it('mirrors only the north counters so both rows have their closed fronts and co
  const m=native(),c=loadTileCatalog()['desk-curved'],sheet=m.tilesets.find(s=>s.image==='../'+c.sheet)!,mask=m.layers.find(l=>l.name==='physical-collisions') as TileLayer;
  const art=m.layers.filter((l):l is TileLayer=>l.type==='tilelayer'&&l.visible!==false&&l.name.startsWith('scenery-'));
  for(const b of EXPO_BOOTHS){
-  const north=b.row==='north',left=b.interior.x+1,top=north?77:82;
+  const north=b.row==='north',left=b.interior.x+1,top=north?71:80;
   for(let y=0;y<3;y++)for(let x=0;x<4;x++){
    const i=(top+y)*128+left+x,sy=north?2-y:y,expected=((sheet.firstgid+(c.rect.y+sy)*sheet.columns!+c.rect.x+x)|(north?0x40000000:0))>>>0;
    expect(art.some(l=>l.data[i]===expected),`${b.id} actual tile ${x},${y}`).toBe(true);

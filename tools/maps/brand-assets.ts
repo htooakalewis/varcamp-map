@@ -1,5 +1,5 @@
 import {isDeepStrictEqual} from 'node:util';
-import routes from '../../src/bots/lyra-routes.json';
+import routes from '../../world/plaza-guide-before-spacing.json';
 import {EXPO_PLAZA,expoPlazaNative,isExpoPlaza} from './expo-plaza';
 import type {TileCatalog} from '../art/catalog';
 import type {MapLayout,Placement,TileRect,TiledMap} from './types';

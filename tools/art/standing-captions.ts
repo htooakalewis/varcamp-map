@@ -5,6 +5,7 @@ import{resolve}from'node:path';
 import{pathToFileURL}from'node:url';
 import sharp from'sharp';
 import cove from'../../world/tropical-cove.json';
+import spacing from'../../world/expo-spacing.json';
 import type{MapLayout,LayoutSign}from'../maps/types';
 export const CAPTION_IMAGE='assets/tilesets/original/standing-captions.png';
 export const EXPO_CAPTION_IMAGE='assets/tilesets/original/expo-captions.png';
@@ -56,7 +57,14 @@ export function readStandingCaptions(layout:MapLayout):{rows:CaptionRow[];width:
  if(meta.svgSha256!==sha(rendered.svg)||readFileSync(family.svg,'utf8')!==rendered.svg||meta.pngSha256!==sha(png)||png.readUInt32BE(16)!==rendered.width||png.readUInt32BE(20)!==rendered.height)throw Error('Stale standing caption artwork');
  // The cove retires three trailing beach boards. Keep their reserved glyph pixels
  // and every other map's atlas coordinates intact; only those exact names may retire.
- const selected=rendered.rows.filter(r=>r.map===layout.id&&!(layout.id==='shipyard-beach'&&cove.retiredSigns.includes(r.sign.name)&&!expected.some(s=>s.sign.name===r.sign.name)));if(!isDeepStrictEqual(selected.map(({atlasX:_x,atlasY:_y,...spec})=>spec),expected))throw Error('Stale standing caption semantic source');
+ let selected=rendered.rows.filter(r=>r.map===layout.id&&!(layout.id==='shipyard-beach'&&cove.retiredSigns.includes(r.sign.name)&&!expected.some(s=>s.sign.name===r.sign.name)));
+ // Preserve the frozen glyph sheet and its historical positions. The spacing
+ // transaction admits only these exact before/after sign records, with no repack.
+ if(layout.id==='overworld'){
+  const moved=selected.map(r=>{const change=spacing.changes.signs.find(c=>isDeepStrictEqual(c.before,r.sign));return change?{...r,sign:{...r.sign,x:change.after.x,y:change.after.y}}:r;});
+  if(isDeepStrictEqual(moved.map(({atlasX:_x,atlasY:_y,...spec})=>spec),expected))selected=moved;
+ }
+ if(!isDeepStrictEqual(selected.map(({atlasX:_x,atlasY:_y,...spec})=>spec),expected))throw Error('Stale standing caption semantic source');
  return{rows:selected,width:rendered.width,height:rendered.height,image:family.image,pngSha256:meta.pngSha256};
 }
 const layouts=():MapLayout[]=>existsSync('world/layouts')?readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>JSON.parse(readFileSync('world/layouts/'+f,'utf8'))):[];

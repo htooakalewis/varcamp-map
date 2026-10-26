@@ -1,6 +1,6 @@
 import {isDeepStrictEqual} from 'node:util';
 import {SIGN_IDS} from '../../src/world/catalog';
-import routes from '../../src/bots/lyra-routes.json';
+import routes from '../../world/plaza-guide-before-spacing.json';
 import {EXPO_PLAZA,isExpoPlaza} from './expo-plaza';
 import type {MapLayout,Placement,TileRect} from './types';
 const cells=(r:TileRect)=>Array.from({length:r.width*r.height},(_,i)=>[r.x+i%r.width,r.y+Math.floor(i/r.width)] as const);

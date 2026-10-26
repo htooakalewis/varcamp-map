@@ -1,3 +1,4 @@
+import {preSpacingLayout} from './helpers/expo-spacing-history';
 import {renderPlazaPatrol,PATROL_RECIPE} from '../tools/art/plaza-patrol';
 import {PATROL_IDS} from '../tools/maps/patrol-roles';
 import {patrolSuccessorSha} from './helpers/plaza-patrol-history';
@@ -66,7 +67,7 @@ async function generatedDescriptors():Promise<Map<string,{json:unknown}|{bytes:B
  const interior=await renderInteriorReferenceMotion();for(const[path,body]of interior.artifacts)if(path.endsWith('.json'))add(path,JSON.parse(body.toString()));
  add('art/source/world-ambient-assets.json',(await renderWorldAmbientAssets()).metadata);for(const r of await renderWorldAmbient()){add(r.overlay.provenance!.metadataPath,r.metadata);outputs.set(r.overlay.image,{bytes:r.png});}
  // Caption family descriptors are rendered by the current caption producer from the linked layouts; the glyph PNGs themselves stay static registry rows.
- for(const family of CAPTION_FAMILIES){const specs=family.id==='shared'?read(family.meta).specs:readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>read('world/layouts/'+f)).filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(l));if(!specs.length)continue;const master=renderCaptionMaster(specs);add(family.meta,{schemaVersion:1,specs,glyphsSha256:sha(readFileSync('art/source/hub-nameplates.json')),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(master.svg),pngSha256:sha(readFileSync(family.image))});
+ for(const family of CAPTION_FAMILIES){const specs=family.id==='shared'?read(family.meta).specs:readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>read('world/layouts/'+f)).filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(preSpacingLayout(l)));if(!specs.length)continue;const master=renderCaptionMaster(specs);add(family.meta,{schemaVersion:1,specs,glyphsSha256:sha(readFileSync('art/source/hub-nameplates.json')),producerSha256:sha(readFileSync('tools/art/standing-captions.ts')),svgSha256:sha(master.svg),pngSha256:sha(readFileSync(family.image))});
   // The expo family (overworld booth nameplates) is fully rendered: its SVG master is the producer's bytes and its glyph PNG the producer's pixels.
   if(family.id==='expo'){outputs.set(family.svg,{bytes:Buffer.from(master.svg)});outputs.set(family.image,{pixels:await sharp(Buffer.from(master.svg)).ensureAlpha().raw().toBuffer()});}}
  const cove=await renderTropicalCove();add('art/source/tropical-cove-coast.json',tropicalCoveMetadata(cove));outputs.set(COVE_IMAGE,{bytes:cove.png});

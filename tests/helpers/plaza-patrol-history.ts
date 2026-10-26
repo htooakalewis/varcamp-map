@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {preSpacingLayout,preSpacingNative,spacingSuccessorSha} from './expo-spacing-history';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
@@ -12,14 +13,16 @@ export function beforePatrol(){if(cached)return cached;const raw=readFileSync('t
 export function beforePatrolJson<T=any>(path:string):T{const r=beforePatrol().components[path];assert.ok(r);assert.equal(sha(Buffer.from(r.raw)),r.sha256);return JSON.parse(r.raw);}
 export function patrolSuccessorSha(path:string,pin:string):string{
  const table=JSON.parse(readFileSync('tests/fixtures/plaza-patrol/transitions.json','utf8'));assert.equal(table.base,beforePatrol().base);
- const row=table.transitions[path] as [string,string]|undefined;if(!row||row[0]!==pin)return pin;assert.equal(row[0],beforePatrol().pins[path]);return row[1];
+ const row=table.transitions[path] as [string,string]|undefined;if(!row||row[0]!==pin)return spacingSuccessorSha(path,pin);assert.equal(row[0],beforePatrol().pins[path]);return spacingSuccessorSha(path,row[1]);
 }
 export function prePatrolLayout(layout:MapLayout):MapLayout{
+ layout=preSpacingLayout(layout);
  if(!layout.animatedOverlays?.some(o=>o.name.startsWith('plaza-patrol-')))return advancePatrolProvenance(layout);
  const before=advancePatrolProvenance(beforePatrolJson<MapLayout>('world/layouts/overworld.json'));assert.deepEqual(layout,applyPlazaPatrol(before),'exact patrol successor required');return before;
 }
 let expected:TiledMap|undefined;
 export function prePatrolNative(map:TiledMap):TiledMap{
+ map=preSpacingNative(map);
  if(!map.layers.some(l=>l.name.startsWith('plaza-patrol-')))return structuredClone(map);
  const before=beforePatrolJson<TiledMap>('maps/overworld.tmj');expected??=reconcilePlazaPatrol(before,applyPlazaPatrol(advancePatrolProvenance(beforePatrolJson<MapLayout>('world/layouts/overworld.json'))),loadTileCatalog());assert.deepEqual(map,expected,'exact native patrol successor required');return before;
 }

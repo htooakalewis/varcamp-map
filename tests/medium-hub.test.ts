@@ -57,12 +57,12 @@ describe('medium authored arrival',()=>{
   }
   expect(glyphPixels).toBeGreaterThan(0);expect(failures).toEqual([]);
  });
- it('keeps the partner logos and complete enlarged event lockup inside every default first viewport with HUD clearance',()=>{
+ it('keeps the complete event lockup in the first viewport and relocated sponsor logos clear on the northern approach',()=>{
   // Pinned HdpiManager:640×480 recommended game pixels; this2880px-wide screen defaults to3×.
   // Conservatively use30×16 tiles and reserve1tile above/sides plus2tiles below for normal HUD.
   const l=source(),spawn=l.entries.find(e=>e.isDefault)!;
   // The eleven expo booth logos live in the hall band south of the first viewport; only the arrival inlays must be in view.
-  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=arrival;expect(l.images).toHaveLength(18);expect(arrival).toHaveLength(7);
+  const arrival=(l.images??[]).filter(i=>!i.name.startsWith('Expo / ')),required=arrival.filter(i=>i.name.startsWith('Arrival /'));expect(l.images).toHaveLength(18);expect(arrival).toHaveLength(7);
   const supportIds=sponsorSupportIds(l,loadTileCatalog());
   assertSponsorFootprints(l,loadTileCatalog(),built().tmj);
   for(const image of l.images??[])for(const p of l.placements.filter(p=>p.layer!=='terrain'&&p.layer!=='atmosphere'&&!supportIds.has(p.id)))expect(overlap(image,p),`${image.name} covered by ${p.id}`).toBe(false);

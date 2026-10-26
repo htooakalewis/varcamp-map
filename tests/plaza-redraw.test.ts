@@ -1,3 +1,4 @@
+import {applyExpoSpacing,restoreExpoSpacing} from '../tools/maps/expo-spacing';
 import {readFileSync} from 'node:fs';
 import {expect,it} from 'vitest';
 import {SIGN_IDS} from '../src/world/catalog';
@@ -35,7 +36,7 @@ it('puts sponsor and event identity on the floor without posts or unrelated sign
 });
 
 it('is idempotent and retains every real native semantic layer and reachable guide/entrance cell',async()=>{
- const l=source(),catalog=loadTileCatalog();expect(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(l))))))))).toEqual(l);
+ const l=source(),catalog=loadTileCatalog();expect(applyExpoSpacing(applyPlazaPatrol(applyArrivalRefresh(applyZodiacPhysics(applyZodiacExteriors(refinePlazaFloorGarden(restoreZodiacPhysics(restoreArrivalRefresh(restorePlazaPatrol(restoreExpoSpacing(l))))))))))).toEqual(l);
  const native=JSON.parse(readFileSync('maps/overworld.tmj','utf8')) as TiledMap,expected=await expectedPlazaSuccessor(catalog);
  expect(l).toEqual(expected.layout);expect(expected.native).toEqual(native);
  const mask=native.layers.find(p=>p.name==='physical-collisions') as TileLayer;
@@ -46,7 +47,7 @@ it('is idempotent and retains every real native semantic layer and reachable gui
  const floor=native.layers.findIndex(p=>p.name==='floorLayer');
  for(const image of l.images!)expect(native.layers.findIndex(p=>p.name===image.name),image.name).toBeLessThan(floor);
  expect(l.placements.filter(p=>p.id.startsWith('plaza-garden-'))).toHaveLength(132);
-},20000); // first successor call renders roadster/drone/fleet art and runs the projection gate
+},45000); // Complete historical chain now includes the additional spacing projection and native reconciliation.
 
 it('retains all twelve doorway footprints while consuming original generated pavilion and grass artwork',()=>{
  // Prove the complete current physical successor before staging its genuine

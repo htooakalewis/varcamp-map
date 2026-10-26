@@ -14,7 +14,7 @@ async function modules() {
   expect(existsSync('src/bots/controller.ts'), 'Lyra controller must exist before dedicated startup can work').toBe(true);
   return { ...(await import('../src/bots/controller')), ...(await import('../src/bots/venue')), ...(await import('../src/bots/map-guard')) };
 }
-function harness(start: Point = { x: 2256, y: 2256 }) {
+function harness(start: Point = { x: 2256, y: 2448 }) {
   let position = start, room = 'overworld', chat: (e: GuideRequest) => void = () => {}, bubble: (b: Audience) => void = () => {};
   const replies: string[] = [], diagnostics: string[] = [], moves: Point[] = [];
   let automatic = false;
@@ -47,17 +47,17 @@ afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); });
 describe('audited native navigation', () => {
   it('pins current provenance and audits physical/depth boundaries while preserving walkable floor graphics', async () => {
     const { ROUTES, planRoute } = await modules();
-    expect(ROUTES.allowedCells).toHaveLength(792);
-    expect(createHash('sha256').update(JSON.stringify(ROUTES.allowedCells)).digest('hex')).toBe('04695f018d0f5f46b0ff52c41afe0c50facdbf5c2db3acf2df06fbaf9e33a0b9');
+    expect(ROUTES.allowedCells).toHaveLength(814);
+    expect(createHash('sha256').update(JSON.stringify(ROUTES.allowedCells)).digest('hex')).toBe('34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d');
     for (const [path, hash] of Object.entries(ROUTES.provenance.sourceSha256)) expect(createHash('sha256').update(readFileSync(path)).digest('hex'), path).toBe(hash);
     const map=native(),layout=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),wam=JSON.parse(readFileSync('maps/overworld.wam','utf8'));
     const result=auditGuideRoutes({map,layout,wam,catalog:loadTileCatalog(),routes:ROUTES});
-    expect(result).toMatchObject({allowedCells:792,startupReservedCells:4,nativeCollisionCells:6812,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:8});
+    expect(result).toMatchObject({allowedCells:814,startupReservedCells:4,nativeCollisionCells:6936,portalCells:48,walkablePropOverlapCells:42,walkableImageOverlapCells:14});
     const collisionGids=new Set<number>();for(const s of map.tilesets)for(const t of s.tiles??[])if(t.properties?.some(p=>p.name==='collides'&&p.value===true))collisionGids.add(s.firstgid+t.id);
     const forbidden=new Set<number>();for(const l of map.layers)if(l.type==='tilelayer')l.data.forEach((g,i)=>{if(collisionGids.has((g&0x0fffffff)>>>0)||(g&&l.properties?.some(p=>p.name==='exitUrl')))forbidden.add(i);});
-    for(const n of forbidden)expect(()=>planRoute([70,70],[n%128,Math.floor(n/128)])).toThrow();
+    for(const n of forbidden)expect(()=>planRoute([70,76],[n%128,Math.floor(n/128)])).toThrow();
     for (const d of ROUTES.destinations) {
-      const route = planRoute([70, 70], d.tile);
+      const route = planRoute([70, 76], d.tile);
       expect(route.at(-1)).toEqual(d.tile);
       for (let i = 1; i < route.length; i++) expect(Math.abs(route[i][0] - route[i-1][0]) + Math.abs(route[i][1] - route[i-1][1])).toBe(1);
     }
@@ -67,8 +67,8 @@ describe('audited native navigation', () => {
     for (const x of [63, 64]) for (const y of [65, 66]) {
       const route = startupRoute([x, y]);
       expect(route.slice(0, y - 64 + 1)).toEqual(Array.from({ length: y - 63 }, (_, i) => [x, y - i]));
-      expect(route.at(-1)).toEqual([70, 70]);
-      expect(() => planRoute([70, 70], [x, y])).toThrow();
+      expect(route.at(-1)).toEqual([70, 76]);
+      expect(() => planRoute([70, 76], [x, y])).toThrow();
     }
     for (const cell of [[62,65], [65,66], [0,0], [76,71]]) expect(() => startupRoute(cell)).toThrow();
   });
@@ -94,11 +94,11 @@ describe('commands', () => {
     const { createLyraController } = await modules(); const h = harness(); const c = createLyraController(h.adapter); await c.start();await flush(); h.join(); h.chat(` GO   ${alias.toUpperCase()} `); await flush();
     let reached = false;
     for (let i = 0; i < 300; i++) {
-      if (!h.moves.length || h.moves.at(-1)!.x === 2256 && h.moves.at(-1)!.y === 2256 && reached) break;
+      if (!h.moves.length || h.moves.at(-1)!.x === 2256 && h.moves.at(-1)!.y === 2448 && reached) break;
       const p = h.moves.at(-1)!; if (p.x === x*32+16 && p.y === y*32+16) reached = true;
       h.complete(); await flush(); await vi.advanceTimersByTimeAsync(100);
     }
-    expect(reached).toBe(true); expect(h.replies.some(r => /gate/i.test(r))).toBe(true); expect(h.moves.at(-1)).toEqual({x:2256,y:2256}); c.stop(); await flush();
+    expect(reached).toBe(true); expect(h.replies.some(r => /gate/i.test(r))).toBe(true); expect(h.moves.at(-1)).toEqual({x:2256,y:2448}); c.stop(); await flush();
   });
   it('normalizes every numbered English/Burmese room and returns Burmese for Burmese forms', async () => {
     const { parseCommand } = await modules();
@@ -117,8 +117,8 @@ describe('single movement lifecycle and conversation', () => {
   it('starts from native spawn, reaches home, patrols adjacent cells and rests at corners', async () => {
     const {createLyraController}=await modules();const h=harness({x:2032,y:2128});const c=createLyraController(h.adapter);await c.start();await flush();await flush();
     expect(h.moves[0]).toEqual({x:2032,y:2096});h.complete();await flush();await vi.advanceTimersByTimeAsync(99);expect(h.moves).toHaveLength(1);await vi.advanceTimersByTimeAsync(1);expect(h.moves[1]).toEqual({x:2032,y:2064});
-    for(let i=0;i<60&&!(h.moves.at(-1)!.x===2352&&h.moves.at(-1)!.y===2256);i++){h.complete();await flush();await vi.advanceTimersByTimeAsync(100);}
-    expect(h.moves.at(-1)).toEqual({x:2352,y:2256});h.complete();await flush();const count=h.moves.length;await vi.advanceTimersByTimeAsync(1999);expect(h.moves).toHaveLength(count);await vi.advanceTimersByTimeAsync(101);expect(h.moves.length).toBeGreaterThan(count);c.stop();await flush();
+    for(let i=0;i<120&&!(h.moves.at(-1)!.x===2352&&h.moves.at(-1)!.y===2448);i++){h.complete();await flush();await vi.advanceTimersByTimeAsync(100);}
+    expect(h.moves.at(-1)).toEqual({x:2352,y:2448});h.complete();await flush();const count=h.moves.length;await vi.advanceTimersByTimeAsync(1999);expect(h.moves).toHaveLength(count);await vi.advanceTimersByTimeAsync(101);expect(h.moves.length).toBeGreaterThan(count);c.stop();await flush();
   });
   it('pauses only for bubble members, greets once per 120s, resumes after 20s idle and cleans subscriptions', async () => {
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.chat('help',9);expect(h.replies).toHaveLength(0);
@@ -129,7 +129,7 @@ describe('single movement lifecycle and conversation', () => {
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.join([1,2]);const greetings=h.replies.length;
     h.chat('go aries',undefined);expect(h.replies).toHaveLength(greetings);h.chat('go aries');h.chat('help');expect(h.replies).toHaveLength(greetings+1);
     h.chat('go lunar hall',2);expect(h.replies.at(-1)).toMatch(/busy/i);await vi.advanceTimersByTimeAsync(2000);h.chat('stop',2);expect(h.replies.at(-1)).toMatch(/busy/i);h.chat('stop',1);expect(h.replies.at(-1)).toMatch(/stop|home/i);expect(h.moves).toHaveLength(1);
-    h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2256});c.stop();await flush();
+    h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2448});c.stop();await flush();
   });
   it('bounds and expires visitor reply/greeting bookkeeping without flooding unsupported text', async () => {
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();const b=h.join();h.chat('weather');const count=h.replies.length;h.chat('weather');expect(h.replies).toHaveLength(count);
@@ -160,7 +160,7 @@ describe('startup deadline and deferred actions',()=>{
 describe('response throttling preserves user control',()=>{
   it('accepts the owner stop immediately while suppressing the second reply, without overlapping moves',async()=>{
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();h.join();h.chat('go aries');const count=h.replies.length;h.chat('stop');expect(h.replies).toHaveLength(count);expect(h.moves).toHaveLength(1);
-    h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2256});c.stop();h.complete();await c.done;
+    h.complete();await flush();await vi.advanceTimersByTimeAsync(100);expect(h.moves[1]).toEqual({x:2256,y:2448});c.stop();h.complete();await c.done;
   });
 });
 
@@ -170,22 +170,22 @@ describe('review regressions',()=>{
     const {createLyraController}=await modules();const h=harness();const original=h.adapter.position;let calls=0;let resolvePosition!: (point:Point)=>void;
     h.adapter.position=()=>++calls===1?original():new Promise(resolve=>{resolvePosition=resolve;});
     const c=createLyraController(h.adapter);await c.start();await flush();await flush();expect(calls).toBe(2);expect(h.moves).toEqual([]);
-    h.room('different-room');resolvePosition({x:2256,y:2256});await flush();
+    h.room('different-room');resolvePosition({x:2256,y:2448});await flush();
     expect(h.moves).toEqual([]);expect(h.diagnostics.join()).toMatch(/room changed/);await c.done;expect(vi.getTimerCount()).toBe(0);
   });
   it('rests for one two-second corner interval at closing home before the next patrol circuit',async()=>{
     const {createLyraController}=await modules();const h=harness();const c=createLyraController(h.adapter);await c.start();await flush();
     for(let step=0;step<30;step++) {
       const point=h.moves.at(-1)!;
-      if(point.x===2256&&point.y===2256)break;
+      if(point.x===2256&&point.y===2448)break;
       h.complete();await flush();await vi.advanceTimersByTimeAsync(100);
       const count=h.moves.length;await vi.advanceTimersByTimeAsync(2000);
       // No pending native move is completed here; the extra advance only expires a corner rest.
       expect(h.moves.length-count).toBeLessThanOrEqual(1);
     }
-    expect(h.moves.at(-1)).toEqual({x:2256,y:2256});const count=h.moves.length;
+    expect(h.moves.at(-1)).toEqual({x:2256,y:2448});const count=h.moves.length;
     h.complete();await flush();await vi.advanceTimersByTimeAsync(2099);expect(h.moves).toHaveLength(count);
-    await vi.advanceTimersByTimeAsync(1);expect(h.moves).toHaveLength(count+1);expect(h.moves.at(-1)).toEqual({x:2288,y:2256});c.stop();h.complete();await c.done;
+    await vi.advanceTimersByTimeAsync(1);expect(h.moves).toHaveLength(count+1);expect(h.moves.at(-1)).toEqual({x:2288,y:2448});c.stop();h.complete();await c.done;
   });
 });
 

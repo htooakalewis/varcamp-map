@@ -26,7 +26,7 @@ it('BOT-03 nested causes/cycles and uppercase URL credentials stay redacted thro
  const stored=JSON.stringify(saved.at(-1));expect(stored).not.toContain(sentinel);expect(saved.at(-1).failure.redacted).toBe(true);expect(saved.at(-1).failure.error.stack).toBe(original.stack);
 });
 it('BOT-01 retained 180s patrol-position proof is terminal and cannot admit identity or another move',async()=>{
- vi.useFakeTimers();let position={x:2256,y:2256},reads=0,moves=0,release!:(p:any)=>void;const rows:any[]=[],logs:any[]=[];
+ vi.useFakeTimers();let position={x:2256,y:2448},reads=0,moves=0,release!:(p:any)=>void;const rows:any[]=[],logs:any[]=[];
  vi.stubGlobal('WA',{player:{playerId:7,name:config.botName},room:{id:config.roomUrl}});
  const c=createLyraController({self:()=>({id:7,name:config.botName}),roomId:()=>config.roomUrl,map:async()=>JSON.parse(readFileSync('maps/overworld.tmj','utf8')),position:()=>++reads<=2?Promise.resolve(position):new Promise(r=>{release=r;}),move:async p=>{moves++;position=p;return {...p,cancelled:false};},reply(){},diagnostic:(_,e)=>logs.push(e),receipt:e=>{rows.push(e);vi.stubGlobal('__varcampGuideEvidence',e);},onRequest:()=>()=>{},onAudience:()=>()=>{}});
  await c.start();for(let i=0;i<30;i++)await Promise.resolve();expect(moves).toBe(1);

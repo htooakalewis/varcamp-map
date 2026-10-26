@@ -1,0 +1,4833 @@
+{
+  "version": 1,
+  "base": "1feca766409787dbfc5bc77407dc8da571bf2571",
+  "intent": "Physical spacing only. Keep normal proximity chat and every area/property unchanged. Six-by-six tile interiors, two-tile shared dividers, six-tile central aisle. Native artwork remains at 32px per tile.",
+  "beforeLayoutSha256": "57b4eca0428cd33d7b08361e37700d5a55692a3dda2cec6c6dbd1f9cc61f6df5",
+  "afterLayoutSha256": "fbb9cbfe8cd725adaa9e9c420e1eb001f35fb168c04e8ed12b4a30ff5c356814",
+  "aisle": {
+    "x": 38,
+    "y": 74,
+    "width": 52,
+    "height": 6
+  },
+  "booths": [
+    {
+      "id": "n1",
+      "x": 39,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "n2",
+      "x": 47,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "n3",
+      "x": 55,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "n4",
+      "x": 67,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "n5",
+      "x": 75,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "n6",
+      "x": 83,
+      "y": 67,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s1",
+      "x": 39,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s2",
+      "x": 47,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s3",
+      "x": 55,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s4",
+      "x": 67,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s5",
+      "x": 75,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    },
+    {
+      "id": "s6",
+      "x": 83,
+      "y": 81,
+      "width": 6,
+      "height": 6
+    }
+  ],
+  "changes": {
+    "placements": [
+      {
+        "beforeIndex": 1391,
+        "afterIndex": 1391,
+        "before": {
+          "id": "expo-hall-floor-west",
+          "sprite": "floor-charcoal",
+          "layer": "terrain",
+          "x": 40,
+          "y": 74,
+          "width": 22,
+          "height": 16
+        },
+        "after": {
+          "id": "expo-hall-floor-west",
+          "sprite": "floor-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 66,
+          "width": 24,
+          "height": 24
+        }
+      },
+      {
+        "beforeIndex": 1392,
+        "afterIndex": 1392,
+        "before": {
+          "id": "expo-hall-floor-east",
+          "sprite": "floor-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 74,
+          "width": 22,
+          "height": 16
+        },
+        "after": {
+          "id": "expo-hall-floor-east",
+          "sprite": "floor-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 66,
+          "width": 24,
+          "height": 24
+        }
+      },
+      {
+        "beforeIndex": 1393,
+        "afterIndex": 1393,
+        "before": {
+          "id": "expo-n1-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 41,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n1-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 39,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1394,
+        "afterIndex": 1394,
+        "before": {
+          "id": "expo-n2-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 48,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n2-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 47,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1395,
+        "afterIndex": 1395,
+        "before": {
+          "id": "expo-n3-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 55,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n3-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 55,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1396,
+        "afterIndex": 1396,
+        "before": {
+          "id": "expo-n4-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 67,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n4-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 67,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1397,
+        "afterIndex": 1397,
+        "before": {
+          "id": "expo-n5-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 74,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n5-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 75,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1398,
+        "afterIndex": 1398,
+        "before": {
+          "id": "expo-n6-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 81,
+          "y": 75,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-n6-carpet",
+          "sprite": "floor-cosmic",
+          "layer": "terrain",
+          "x": 83,
+          "y": 67,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1399,
+        "afterIndex": 1399,
+        "before": {
+          "id": "expo-s1-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 41,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s1-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 39,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1400,
+        "afterIndex": 1400,
+        "before": {
+          "id": "expo-s2-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 48,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s2-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 47,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1401,
+        "afterIndex": 1401,
+        "before": {
+          "id": "expo-s3-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 55,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s3-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 55,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1402,
+        "afterIndex": 1402,
+        "before": {
+          "id": "expo-s4-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 67,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s4-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 67,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1403,
+        "afterIndex": 1403,
+        "before": {
+          "id": "expo-s5-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 74,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s5-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 75,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1404,
+        "afterIndex": 1404,
+        "before": {
+          "id": "expo-s6-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 81,
+          "y": 83,
+          "width": 6,
+          "height": 4
+        },
+        "after": {
+          "id": "expo-s6-carpet",
+          "sprite": "floor-wood",
+          "layer": "terrain",
+          "x": 83,
+          "y": 81,
+          "width": 6,
+          "height": 6
+        }
+      },
+      {
+        "beforeIndex": 1405,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-side-40",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 40,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1406,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-seal-40-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 40,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1407,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-side-47",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 47,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1408,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-seal-47-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 47,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1409,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-side-54",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 54,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1410,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-seal-54-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 54,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1411,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-side-61",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 61,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1412,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-north-seal-61-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1413,
+        "afterIndex": 1405,
+        "before": {
+          "id": "expo-n1-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 41,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n1-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 39,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1414,
+        "afterIndex": 1406,
+        "before": {
+          "id": "expo-n1-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 46,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n1-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 44,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1415,
+        "afterIndex": 1407,
+        "before": {
+          "id": "expo-n1-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 41,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 39,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1416,
+        "afterIndex": 1408,
+        "before": {
+          "id": "expo-n1-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 46,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n1-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 44,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1417,
+        "afterIndex": 1409,
+        "before": {
+          "id": "expo-n1-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 42,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n1-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 40,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1418,
+        "afterIndex": 1410,
+        "before": {
+          "id": "expo-n2-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 48,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n2-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 47,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1419,
+        "afterIndex": 1411,
+        "before": {
+          "id": "expo-n2-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 53,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n2-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 52,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1420,
+        "afterIndex": 1412,
+        "before": {
+          "id": "expo-n2-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 48,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 47,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1421,
+        "afterIndex": 1413,
+        "before": {
+          "id": "expo-n2-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 53,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n2-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 52,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1422,
+        "afterIndex": 1414,
+        "before": {
+          "id": "expo-n2-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 49,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n2-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 48,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1423,
+        "afterIndex": 1415,
+        "before": {
+          "id": "expo-n3-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 55,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n3-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 55,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1424,
+        "afterIndex": 1416,
+        "before": {
+          "id": "expo-n3-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 60,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n3-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 60,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1425,
+        "afterIndex": 1417,
+        "before": {
+          "id": "expo-n3-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 55,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 55,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1426,
+        "afterIndex": 1418,
+        "before": {
+          "id": "expo-n3-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 60,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n3-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 60,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1427,
+        "afterIndex": 1419,
+        "before": {
+          "id": "expo-n3-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 56,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n3-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 56,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1428,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-side-66",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 66,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1429,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-seal-66-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1430,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-side-73",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 73,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1431,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-seal-73-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1432,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-side-80",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 80,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1433,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-seal-80-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 80,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1434,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-side-87",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 87,
+          "y": 73,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1435,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-north-seal-87-75",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 87,
+          "y": 75,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1436,
+        "afterIndex": 1420,
+        "before": {
+          "id": "expo-n4-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 67,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n4-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 67,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1437,
+        "afterIndex": 1421,
+        "before": {
+          "id": "expo-n4-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 72,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n4-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 72,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1438,
+        "afterIndex": 1422,
+        "before": {
+          "id": "expo-n4-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 72,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 72,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1439,
+        "afterIndex": 1423,
+        "before": {
+          "id": "expo-n4-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 67,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n4-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 67,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1440,
+        "afterIndex": 1424,
+        "before": {
+          "id": "expo-n4-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 68,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n4-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 68,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1441,
+        "afterIndex": 1425,
+        "before": {
+          "id": "expo-n5-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 74,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n5-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 75,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1442,
+        "afterIndex": 1426,
+        "before": {
+          "id": "expo-n5-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 79,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n5-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 80,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1443,
+        "afterIndex": 1427,
+        "before": {
+          "id": "expo-n5-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 79,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 80,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1444,
+        "afterIndex": 1428,
+        "before": {
+          "id": "expo-n5-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 74,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n5-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 75,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1445,
+        "afterIndex": 1429,
+        "before": {
+          "id": "expo-n5-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 75,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n5-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 76,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1446,
+        "afterIndex": 1430,
+        "before": {
+          "id": "expo-n6-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 81,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n6-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 83,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1447,
+        "afterIndex": 1431,
+        "before": {
+          "id": "expo-n6-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 86,
+          "y": 73,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n6-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 88,
+          "y": 65,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1448,
+        "afterIndex": 1432,
+        "before": {
+          "id": "expo-n6-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 86,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 88,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1449,
+        "afterIndex": 1433,
+        "before": {
+          "id": "expo-n6-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 81,
+          "y": 77,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-n6-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 83,
+          "y": 71,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1450,
+        "afterIndex": 1434,
+        "before": {
+          "id": "expo-n6-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 82,
+          "y": 77,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        },
+        "after": {
+          "id": "expo-n6-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 84,
+          "y": 71,
+          "width": 4,
+          "height": 3,
+          "flipY": true
+        }
+      },
+      {
+        "beforeIndex": 1451,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-side-40",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 40,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1452,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-40-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 40,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1453,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-40-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 40,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1454,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-side-47",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 47,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1455,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-47-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 47,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1456,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-47-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 47,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1457,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-side-54",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 54,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1458,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-54-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 54,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1459,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-54-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 54,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1460,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-side-61",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 61,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1461,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-61-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1462,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-west-south-seal-61-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1463,
+        "afterIndex": 1435,
+        "before": {
+          "id": "expo-s1-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 41,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 39,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1464,
+        "afterIndex": 1436,
+        "before": {
+          "id": "expo-s1-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 46,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s1-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 44,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1465,
+        "afterIndex": 1437,
+        "before": {
+          "id": "expo-s1-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 42,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s1-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 40,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1466,
+        "afterIndex": 1438,
+        "before": {
+          "id": "expo-s2-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 48,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 47,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1467,
+        "afterIndex": 1439,
+        "before": {
+          "id": "expo-s2-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 53,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s2-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 52,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1468,
+        "afterIndex": 1440,
+        "before": {
+          "id": "expo-s2-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 49,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s2-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 48,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1474,
+        "afterIndex": 1446,
+        "before": {
+          "id": "expo-s3-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 56,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s3-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 56,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1475,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-side-66",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 66,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1476,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-66-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1477,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-66-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1478,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-side-73",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 73,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1479,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-73-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1480,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-73-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1481,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-side-80",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 80,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1482,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-80-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 80,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1483,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-80-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 80,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1484,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-side-87",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 87,
+          "y": 85,
+          "width": 1,
+          "height": 4
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1485,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-87-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 87,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1486,
+        "afterIndex": null,
+        "before": {
+          "id": "expo-east-south-seal-87-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 87,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        },
+        "after": null
+      },
+      {
+        "beforeIndex": 1492,
+        "afterIndex": 1452,
+        "before": {
+          "id": "expo-s4-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 68,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s4-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 68,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1493,
+        "afterIndex": 1453,
+        "before": {
+          "id": "expo-s5-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 74,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 75,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1494,
+        "afterIndex": 1454,
+        "before": {
+          "id": "expo-s5-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 74,
+          "y": 87,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s5-wall-0",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 75,
+          "y": 87,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1495,
+        "afterIndex": 1455,
+        "before": {
+          "id": "expo-s5-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 79,
+          "y": 87,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s5-wall-5",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 80,
+          "y": 87,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1496,
+        "afterIndex": 1456,
+        "before": {
+          "id": "expo-s5-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 79,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-poster",
+          "sprite": "poster-night-city",
+          "layer": "props",
+          "x": 80,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1497,
+        "afterIndex": 1457,
+        "before": {
+          "id": "expo-s5-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 74,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s5-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 75,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1498,
+        "afterIndex": 1458,
+        "before": {
+          "id": "expo-s5-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 75,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s5-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 76,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1499,
+        "afterIndex": 1459,
+        "before": {
+          "id": "expo-s6-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-seal-cap",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 83,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1500,
+        "afterIndex": 1460,
+        "before": {
+          "id": "expo-s6-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 81,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        },
+        "after": {
+          "id": "expo-s6-chair",
+          "sprite": "chair-presentation",
+          "layer": "props",
+          "x": 83,
+          "y": 84,
+          "width": 1,
+          "height": 2
+        }
+      },
+      {
+        "beforeIndex": 1501,
+        "afterIndex": 1461,
+        "before": {
+          "id": "expo-s6-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 82,
+          "y": 82,
+          "width": 4,
+          "height": 3
+        },
+        "after": {
+          "id": "expo-s6-counter",
+          "sprite": "desk-curved",
+          "layer": "props",
+          "x": 84,
+          "y": 80,
+          "width": 4,
+          "height": 3
+        }
+      },
+      {
+        "beforeIndex": 1502,
+        "afterIndex": 1462,
+        "before": {
+          "id": "expo-n1-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 42,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 40,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1503,
+        "afterIndex": 1463,
+        "before": {
+          "id": "expo-n1-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 42,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 40,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1504,
+        "afterIndex": 1464,
+        "before": {
+          "id": "expo-n1-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 43,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 41,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1505,
+        "afterIndex": 1465,
+        "before": {
+          "id": "expo-n1-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 44,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 42,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1506,
+        "afterIndex": 1466,
+        "before": {
+          "id": "expo-n1-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 45,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n1-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 43,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1507,
+        "afterIndex": 1467,
+        "before": {
+          "id": "expo-n2-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 49,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 48,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1508,
+        "afterIndex": 1468,
+        "before": {
+          "id": "expo-n2-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 49,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 48,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1509,
+        "afterIndex": 1469,
+        "before": {
+          "id": "expo-n2-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 50,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 49,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1510,
+        "afterIndex": 1470,
+        "before": {
+          "id": "expo-n2-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 51,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 50,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1511,
+        "afterIndex": 1471,
+        "before": {
+          "id": "expo-n2-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 52,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n2-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 51,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1512,
+        "afterIndex": 1472,
+        "before": {
+          "id": "expo-n3-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 56,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 56,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1513,
+        "afterIndex": 1473,
+        "before": {
+          "id": "expo-n3-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 56,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 56,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1514,
+        "afterIndex": 1474,
+        "before": {
+          "id": "expo-n3-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 57,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 57,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1515,
+        "afterIndex": 1475,
+        "before": {
+          "id": "expo-n3-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 58,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 58,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1516,
+        "afterIndex": 1476,
+        "before": {
+          "id": "expo-n3-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 59,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n3-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 59,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1517,
+        "afterIndex": 1477,
+        "before": {
+          "id": "expo-n4-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 68,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 68,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1518,
+        "afterIndex": 1478,
+        "before": {
+          "id": "expo-n4-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 68,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 68,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1519,
+        "afterIndex": 1479,
+        "before": {
+          "id": "expo-n4-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 69,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 69,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1520,
+        "afterIndex": 1480,
+        "before": {
+          "id": "expo-n4-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 70,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 70,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1521,
+        "afterIndex": 1481,
+        "before": {
+          "id": "expo-n4-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 71,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n4-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 71,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1522,
+        "afterIndex": 1482,
+        "before": {
+          "id": "expo-n5-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 75,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 76,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1523,
+        "afterIndex": 1483,
+        "before": {
+          "id": "expo-n5-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 75,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 76,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1524,
+        "afterIndex": 1484,
+        "before": {
+          "id": "expo-n5-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 76,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 77,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1525,
+        "afterIndex": 1485,
+        "before": {
+          "id": "expo-n5-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 77,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 78,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1526,
+        "afterIndex": 1486,
+        "before": {
+          "id": "expo-n5-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 78,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n5-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 79,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1527,
+        "afterIndex": 1487,
+        "before": {
+          "id": "expo-n6-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 82,
+          "y": 73,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 84,
+          "y": 65,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1528,
+        "afterIndex": 1488,
+        "before": {
+          "id": "expo-n6-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 82,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 84,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1529,
+        "afterIndex": 1489,
+        "before": {
+          "id": "expo-n6-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 83,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 85,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1530,
+        "afterIndex": 1490,
+        "before": {
+          "id": "expo-n6-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 84,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 86,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1531,
+        "afterIndex": 1491,
+        "before": {
+          "id": "expo-n6-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 85,
+          "y": 74,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-n6-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 87,
+          "y": 66,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1532,
+        "afterIndex": 1492,
+        "before": {
+          "id": "expo-s1-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 41,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 39,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1533,
+        "afterIndex": 1493,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 41,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 39,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1534,
+        "afterIndex": 1494,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 42,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 40,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1535,
+        "afterIndex": 1495,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 43,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 41,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1536,
+        "afterIndex": 1496,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 44,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 42,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1537,
+        "afterIndex": 1497,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 45,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 43,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1538,
+        "afterIndex": 1498,
+        "before": {
+          "id": "expo-s1-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 46,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s1-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 44,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1539,
+        "afterIndex": 1499,
+        "before": {
+          "id": "expo-s2-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 48,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 47,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1540,
+        "afterIndex": 1500,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 48,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 47,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1541,
+        "afterIndex": 1501,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 49,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 48,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1542,
+        "afterIndex": 1502,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 50,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 49,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1543,
+        "afterIndex": 1503,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 51,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 50,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1544,
+        "afterIndex": 1504,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 52,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 51,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1545,
+        "afterIndex": 1505,
+        "before": {
+          "id": "expo-s2-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 53,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s2-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 52,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1556,
+        "afterIndex": 1516,
+        "before": {
+          "id": "expo-s5-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 75,
+          "y": 87,
+          "width": 4,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 76,
+          "y": 87,
+          "width": 4,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1557,
+        "afterIndex": 1517,
+        "before": {
+          "id": "expo-s5-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 75,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 76,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1558,
+        "afterIndex": 1518,
+        "before": {
+          "id": "expo-s5-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 76,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 77,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1559,
+        "afterIndex": 1519,
+        "before": {
+          "id": "expo-s5-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 77,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 78,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1560,
+        "afterIndex": 1520,
+        "before": {
+          "id": "expo-s5-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 78,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s5-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 79,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1561,
+        "afterIndex": 1521,
+        "before": {
+          "id": "expo-s6-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 81,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia",
+          "sprite": "expo-fascia",
+          "layer": "props",
+          "x": 83,
+          "y": 87,
+          "width": 6,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1562,
+        "afterIndex": 1522,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 81,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-0",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 83,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1563,
+        "afterIndex": 1523,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 82,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-1",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 84,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1564,
+        "afterIndex": 1524,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 83,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-2",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 85,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1565,
+        "afterIndex": 1525,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 84,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-3",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 86,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1566,
+        "afterIndex": 1526,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 85,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-4",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 87,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1567,
+        "afterIndex": 1527,
+        "before": {
+          "id": "expo-s6-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 86,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        },
+        "after": {
+          "id": "expo-s6-nameplate-fascia-post-5",
+          "sprite": "expo-fascia-post",
+          "layer": "props",
+          "x": 88,
+          "y": 88,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": 1568,
+        "afterIndex": 1600,
+        "before": {
+          "id": "plaza-fountain",
+          "sprite": "plaza-fountain",
+          "x": 49,
+          "y": 70,
+          "width": 4,
+          "height": 3,
+          "layer": "props"
+        },
+        "after": {
+          "id": "plaza-fountain",
+          "sprite": "plaza-fountain",
+          "x": 49,
+          "y": 59,
+          "width": 4,
+          "height": 3,
+          "layer": "props"
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1528,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-38-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 38,
+          "y": 65,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1529,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-38-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 67,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1530,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-38-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 69,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1531,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-38-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 71,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1532,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-45-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 45,
+          "y": 65,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1533,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-45-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 67,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1534,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-45-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 69,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1535,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-45-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 71,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1536,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-53-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 53,
+          "y": 65,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1537,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-53-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 67,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1538,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-53-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 69,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1539,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-53-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 71,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1540,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-61-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 61,
+          "y": 65,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1541,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-61-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 67,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1542,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-61-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 69,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1543,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-north-61-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 71,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1544,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-38-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 38,
+          "y": 81,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1545,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-38-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 81,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1546,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-38-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 83,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1547,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-38-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1548,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-38-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 38,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1549,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-45-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 45,
+          "y": 81,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1550,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-45-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 81,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1551,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-45-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 83,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1552,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-45-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 85,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1553,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-45-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 45,
+          "y": 87,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1554,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-53-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 53,
+          "y": 81,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1555,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-53-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 81,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1556,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-53-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 83,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1557,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-53-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 85,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1558,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-53-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 53,
+          "y": 87,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1559,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-61-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 61,
+          "y": 81,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1560,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-61-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 81,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1561,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-61-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 83,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1562,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-61-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1563,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-west-south-61-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 61,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1564,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-66-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 66,
+          "y": 65,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1565,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-66-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 67,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1566,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-66-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 69,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1567,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-66-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 71,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1568,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-73-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 73,
+          "y": 65,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1569,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-73-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 67,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1570,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-73-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 69,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1571,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-73-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 71,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1572,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-81-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 81,
+          "y": 65,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1573,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-81-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 67,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1574,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-81-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 69,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1575,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-81-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 71,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1576,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-89-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 89,
+          "y": 65,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1577,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-89-seal-67",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 67,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1578,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-89-seal-69",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 69,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1579,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-north-89-seal-71",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 71,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1580,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-66-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 66,
+          "y": 81,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1581,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-66-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 81,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1582,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-66-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 83,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1583,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-66-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1584,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-66-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 66,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1585,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-73-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 73,
+          "y": 81,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1586,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-73-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 81,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1587,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-73-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 83,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1588,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-73-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 85,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1589,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-73-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 73,
+          "y": 87,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1590,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-81-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 81,
+          "y": 81,
+          "width": 2,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1591,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-81-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 81,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1592,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-81-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 83,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1593,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-81-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 85,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1594,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-81-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 81,
+          "y": 87,
+          "width": 2,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1595,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-89-wall",
+          "sprite": "expo-wall-navy",
+          "layer": "props",
+          "x": 89,
+          "y": 81,
+          "width": 1,
+          "height": 8
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1596,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-89-seal-81",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 81,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1597,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-89-seal-83",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 83,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1598,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-89-seal-85",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 85,
+          "width": 1,
+          "height": 1
+        }
+      },
+      {
+        "beforeIndex": null,
+        "afterIndex": 1599,
+        "before": null,
+        "after": {
+          "id": "expo-spaced-east-south-89-seal-87",
+          "sprite": "wall-charcoal",
+          "layer": "terrain",
+          "x": 89,
+          "y": 87,
+          "width": 1,
+          "height": 1
+        }
+      }
+    ],
+    "images": [
+      {
+        "beforeIndex": 0,
+        "afterIndex": 0,
+        "before": {
+          "name": "Sponsors / Demo 01",
+          "image": "assets/sponsors/demo-01.png",
+          "x": 53,
+          "y": 67,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Sponsors / Demo 01",
+          "image": "assets/sponsors/demo-01.png",
+          "x": 53,
+          "y": 55,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 1,
+        "afterIndex": 1,
+        "before": {
+          "name": "Sponsors / Demo 02",
+          "image": "assets/sponsors/demo-02.png",
+          "x": 61,
+          "y": 67,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Sponsors / Demo 02",
+          "image": "assets/sponsors/demo-02.png",
+          "x": 60,
+          "y": 55,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 2,
+        "afterIndex": 2,
+        "before": {
+          "name": "Sponsors / Demo 03",
+          "image": "assets/sponsors/demo-03.png",
+          "x": 69,
+          "y": 67,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Sponsors / Demo 03",
+          "image": "assets/sponsors/demo-03.png",
+          "x": 67,
+          "y": 55,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 3,
+        "afterIndex": 3,
+        "before": {
+          "name": "Expo / Demo Orbit",
+          "image": "assets/sponsors/demo-01.png",
+          "x": 41,
+          "y": 75,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Demo Orbit",
+          "image": "assets/sponsors/demo-01.png",
+          "x": 39,
+          "y": 67,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 4,
+        "afterIndex": 4,
+        "before": {
+          "name": "Expo / Demo Nova Compact",
+          "image": "assets/sponsors/demo-02-compact.png",
+          "x": 49,
+          "y": 75,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Demo Nova Compact",
+          "image": "assets/sponsors/demo-02-compact.png",
+          "x": 48,
+          "y": 67,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 5,
+        "afterIndex": 5,
+        "before": {
+          "name": "Expo / Demo Atlas",
+          "image": "assets/sponsors/demo-03.png",
+          "x": 55,
+          "y": 75,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Demo Atlas",
+          "image": "assets/sponsors/demo-03.png",
+          "x": 55,
+          "y": 67,
+          "width": 6,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 6,
+        "afterIndex": 6,
+        "before": {
+          "name": "Expo / Demo Vector",
+          "image": "assets/sponsors/demo-04.png",
+          "x": 68,
+          "y": 75,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Demo Vector",
+          "image": "assets/sponsors/demo-04.png",
+          "x": 68,
+          "y": 67,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 7,
+        "afterIndex": 7,
+        "before": {
+          "name": "Expo / Demo Lumen",
+          "image": "assets/sponsors/demo-05.png",
+          "x": 75,
+          "y": 75,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Demo Lumen",
+          "image": "assets/sponsors/demo-05.png",
+          "x": 76,
+          "y": 67,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 8,
+        "afterIndex": 8,
+        "before": {
+          "name": "Expo / VarCamp",
+          "image": "assets/sponsors/varcamp-horizontal.png",
+          "x": 82,
+          "y": 75,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / VarCamp",
+          "image": "assets/sponsors/varcamp-horizontal.png",
+          "x": 84,
+          "y": 67,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 9,
+        "afterIndex": 9,
+        "before": {
+          "name": "Expo / AWS User Group Myanmar",
+          "image": "assets/sponsors/partner-aws-ug-mm.png",
+          "x": 42,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / AWS User Group Myanmar",
+          "image": "assets/sponsors/partner-aws-ug-mm.png",
+          "x": 40,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 10,
+        "afterIndex": 10,
+        "before": {
+          "name": "Expo / BSides Myanmar",
+          "image": "assets/sponsors/partner-bsides-mm.png",
+          "x": 49,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / BSides Myanmar",
+          "image": "assets/sponsors/partner-bsides-mm.png",
+          "x": 48,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      },
+      {
+        "beforeIndex": 13,
+        "afterIndex": 13,
+        "before": {
+          "name": "Expo / Design Guild",
+          "image": "assets/sponsors/hub-02.png",
+          "x": 75,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        },
+        "after": {
+          "name": "Expo / Design Guild",
+          "image": "assets/sponsors/hub-02.png",
+          "x": 76,
+          "y": 85,
+          "width": 4,
+          "height": 2,
+          "standing": false
+        }
+      }
+    ],
+    "signs": [
+      {
+        "beforeIndex": 0,
+        "afterIndex": 0,
+        "before": {
+          "name": "expo-n1-nameplate",
+          "text": "DEMO ORBIT",
+          "x": 42,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n1-nameplate",
+          "text": "DEMO ORBIT",
+          "x": 40,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 1,
+        "afterIndex": 1,
+        "before": {
+          "name": "expo-n2-nameplate",
+          "text": "DEMO NOVA",
+          "x": 49,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n2-nameplate",
+          "text": "DEMO NOVA",
+          "x": 48,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 2,
+        "afterIndex": 2,
+        "before": {
+          "name": "expo-n3-nameplate",
+          "text": "DEMO ATLAS",
+          "x": 56,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n3-nameplate",
+          "text": "DEMO ATLAS",
+          "x": 56,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 3,
+        "afterIndex": 3,
+        "before": {
+          "name": "expo-n4-nameplate",
+          "text": "DEMO VECTOR",
+          "x": 68,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n4-nameplate",
+          "text": "DEMO VECTOR",
+          "x": 68,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 4,
+        "afterIndex": 4,
+        "before": {
+          "name": "expo-n5-nameplate",
+          "text": "DEMO LUMEN",
+          "x": 75,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n5-nameplate",
+          "text": "DEMO LUMEN",
+          "x": 76,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 5,
+        "afterIndex": 5,
+        "before": {
+          "name": "expo-n6-nameplate",
+          "text": "INFO DESK",
+          "x": 82,
+          "y": 73,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-n6-nameplate",
+          "text": "INFO DESK",
+          "x": 84,
+          "y": 65,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 6,
+        "afterIndex": 6,
+        "before": {
+          "name": "expo-s1-nameplate",
+          "text": "AWS UG MYANMAR",
+          "x": 41,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-s1-nameplate",
+          "text": "AWS UG MYANMAR",
+          "x": 39,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 7,
+        "afterIndex": 7,
+        "before": {
+          "name": "expo-s2-nameplate",
+          "text": "BSIDES MYANMAR",
+          "x": 48,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-s2-nameplate",
+          "text": "BSIDES MYANMAR",
+          "x": 47,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 10,
+        "afterIndex": 10,
+        "before": {
+          "name": "expo-s5-nameplate",
+          "text": "DESIGN GUILD",
+          "x": 75,
+          "y": 87,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-s5-nameplate",
+          "text": "DESIGN GUILD",
+          "x": 76,
+          "y": 87,
+          "width": 4,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      },
+      {
+        "beforeIndex": 11,
+        "afterIndex": 11,
+        "before": {
+          "name": "expo-s6-nameplate",
+          "text": "YOUR LOGO HERE",
+          "x": 81,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        },
+        "after": {
+          "name": "expo-s6-nameplate",
+          "text": "YOUR LOGO HERE",
+          "x": 83,
+          "y": 87,
+          "width": 6,
+          "height": 1,
+          "fontSize": 18,
+          "color": "#f1d9a0",
+          "align": "center",
+          "padding": 1
+        }
+      }
+    ]
+  },
+  "producerInputs": {
+    "tools/art/plaza-fleet.ts": [
+      "6f03f343a2e559b5f2701a8cfbcab086ea3f942f68511df392052ceda600a8d9",
+      "d4b445b26c0c0ddb71746f5f48707e0bdb7216a76be5d3f1ba8e6b0688fee783"
+    ]
+  }
+}

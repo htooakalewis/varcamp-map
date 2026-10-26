@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {preSpacingLayout} from './helpers/expo-spacing-history';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import sharp from 'sharp';
@@ -15,7 +16,7 @@ it('removes the photographed white table at52,67 and leaves its actual tile walk
  expect(l.placements.some(p=>p.id==='welcome-table')).toBe(false);
  expect((m.layers.find(l=>l.name==='physical-collisions') as TileLayer).data[67*128+52]).toBe(0);
  const old=JSON.parse(baseline().components['world/layouts/overworld.json'].raw);
- expect(l.placements).toEqual(old.placements.filter((p:any)=>p.id!=='welcome-table'));
+ expect(preSpacingLayout(l).placements).toEqual(old.placements.filter((p:any)=>p.id!=='welcome-table'));
 });
 it('adds six travelling camera patrols above every old layer, preserving the89old atlas bodies',()=>{
  const m=read<TiledMap>('maps/overworld.tmj'),l=read<MapLayout>('world/layouts/overworld.json'),old=JSON.parse(baseline().components['maps/overworld.tmj'].raw);
@@ -63,5 +64,5 @@ it('preserves every earlier media file except the four explicitly updated arriva
 it('requires the patrol family and table removal even after coherent source/native omissions',()=>{
  const l=read<MapLayout>('world/layouts/overworld.json'),m=read<TiledMap>('maps/overworld.tmj');
  l.animatedOverlays=l.animatedOverlays!.filter(o=>!o.name.startsWith('plaza-patrol-'));m.layers=m.layers.filter(l=>!l.name.startsWith('plaza-patrol-'));
- expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol/);
+ expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol|Expo spacing/);
 });

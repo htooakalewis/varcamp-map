@@ -1553,7 +1553,7 @@
         },
         {
           "path": "tools/art/plaza-fleet.ts",
-          "sha256": "6f03f343a2e559b5f2701a8cfbcab086ea3f942f68511df392052ceda600a8d9"
+          "sha256": "d4b445b26c0c0ddb71746f5f48707e0bdb7216a76be5d3f1ba8e6b0688fee783"
         },
         {
           "path": "tools/art/native-motion.ts",
