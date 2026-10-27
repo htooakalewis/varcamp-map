@@ -1687,7 +1687,7 @@
   "signs": [
     {
       "name": "fire-label",
-      "text": "\u2191 FIRE DISTRICT",
+      "text": "↑ FIRE DISTRICT",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 4,
@@ -1698,7 +1698,7 @@
     },
     {
       "name": "air-label",
-      "text": "\u2191 AIR DISTRICT",
+      "text": "↑ AIR DISTRICT",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 14,
@@ -1709,7 +1709,7 @@
     },
     {
       "name": "earth-label",
-      "text": "\u2191 EARTH DISTRICT",
+      "text": "↑ EARTH DISTRICT",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 24,
@@ -1720,7 +1720,7 @@
     },
     {
       "name": "water-label",
-      "text": "\u2191 WATER DISTRICT",
+      "text": "↑ WATER DISTRICT",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 34,
@@ -1731,7 +1731,7 @@
     },
     {
       "name": "star-garden-label",
-      "text": "\u2191 STAR GARDEN",
+      "text": "↑ STAR GARDEN",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 4,
@@ -1742,7 +1742,7 @@
     },
     {
       "name": "moon-cafe-label",
-      "text": "\u2191 MOON CAF\u00c9",
+      "text": "↑ MOON CAFÉ",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 34,
@@ -1753,7 +1753,7 @@
     },
     {
       "name": "moon-grotto-label",
-      "text": "\u2191 MOON GROTTO",
+      "text": "↑ MOON GROTTO",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 4,
@@ -1764,7 +1764,7 @@
     },
     {
       "name": "stargazer-terrace-label",
-      "text": "\u2191 STARGAZER TERRACE",
+      "text": "↑ STARGAZER TERRACE",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 34,
@@ -1786,7 +1786,7 @@
     },
     {
       "name": "directory-board",
-      "text": "\u2191 FOUR DISTRICTS\n\u2190 GARDEN / GROTTO\nCAF\u00c9 / STARGAZER \u2192\n\u2193 ZODIAC PLAZA",
+      "text": "↑ FOUR DISTRICTS\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →\n↓ ZODIAC PLAZA",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 18,
@@ -1797,7 +1797,7 @@
     },
     {
       "name": "plaza-return-label",
-      "text": "\u2193 ZODIAC PLAZA",
+      "text": "↓ ZODIAC PLAZA",
       "fontSize": 15,
       "color": "#fff0b0",
       "x": 19,
@@ -1808,7 +1808,7 @@
     },
     {
       "name": "arrival-routes",
-      "text": "\u2191 FOUR DISTRICTS \u00b7 NORTH\n\u2190 GARDEN / GROTTO\nCAF\u00c9 / STARGAZER \u2192",
+      "text": "↑ FOUR DISTRICTS · NORTH\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →",
       "x": 18,
       "y": 35,
       "width": 12,
@@ -2014,7 +2014,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -2438,7 +2438,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

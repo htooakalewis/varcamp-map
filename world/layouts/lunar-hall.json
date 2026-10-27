@@ -2375,6 +2375,14 @@
       "y": 3,
       "width": 4,
       "height": 2
+    },
+    {
+      "name": "Lunar / Vibe Code Tours",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "x": 22,
+      "y": 0,
+      "width": 4,
+      "height": 2
     }
   ]
 }

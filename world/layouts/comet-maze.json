@@ -994,7 +994,7 @@
     },
     {
       "name": "maze-instructions",
-      "text": "\u2191 MAZE \u00b7 FIND 3 CRYSTALS + SHRINE\n\u2193 ORBIT RETURN \u00b7 PLAZA TO THE EAST",
+      "text": "↑ MAZE · FIND 3 CRYSTALS + SHRINE\n↓ ORBIT RETURN · PLAZA TO THE EAST",
       "x": 12,
       "y": 41,
       "width": 24,
@@ -1005,7 +1005,7 @@
     },
     {
       "name": "return-label",
-      "text": "\u2193 ORBIT MAZE",
+      "text": "↓ ORBIT MAZE",
       "x": 3,
       "y": 44,
       "width": 9,
@@ -1016,7 +1016,7 @@
     },
     {
       "name": "plaza-return-label",
-      "text": "\u2193 PLAZA",
+      "text": "↓ PLAZA",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 24,
@@ -1268,7 +1268,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -1444,7 +1444,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

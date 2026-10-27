@@ -346,6 +346,24 @@
       "permission": "Supplied by the VarCamp organiser for the 2026 event; official event identity, brand rights retained; see art/source/plaza-original/NOTICE.txt and eventIdentity below. Not covered by the CC0 dedication.",
       "license": "VarCamp brand; event-use permission; not CC0",
       "changes": "Native SVG quadrant of one384x128floor lockup; booth treatment retained: flame#f96216, wordmark white; aspect preserved."
+    },
+    {
+      "name": "Vibe Code Tours",
+      "kind": "community-partner",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "source": "art/source/sponsors/vibecode-tours-original.svg",
+      "sourceUrl": "https://vibecode.tours/favicon.svg",
+      "size": {
+        "width": 128,
+        "height": 64,
+        "tileWidth": 4,
+        "tileHeight": 2
+      },
+      "owner": "Vibe Code Tours",
+      "permission": "Lewis requested this public favicon for the VarCamp booth and room branding on 2026-10-27. No broader redistribution permission is asserted.",
+      "license": "Brand artwork; no open-content license stated at source",
+      "changes": "Original 48px vector icon retained unchanged inside a transparent 128x64 native panel; companion VIBE CODE TOURS lettering uses original VarCamp pixel glyphs.",
+      "sourceSha256": "cce91844d3802b0294959108b90a94cbe35cb715921642321a4ac2314e9f7217"
     }
   ],
   "replacement": {

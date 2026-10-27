@@ -1,3 +1,4 @@
+import {vibeCodeSuccessorSha} from './helpers/vibecode-history';
 import{readFileSync}from'node:fs';
 import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
@@ -40,12 +41,12 @@ describe('current colourful arrival and topmost drones',()=>{
   for(const row of PLAZA_DRONES){expect(l.animatedOverlays!.find(o=>o.name===row.name)!.level).toBe('aboveScenery');expect(m.layers.find(l=>l.name===row.name)).toEqual(old.layers.find(l=>l.name===row.name));}
  });
  it('preserves all603old media files,101other map/WAM files and every native control/portal body',()=>{
-  const b=beforeArrival();for(const[p,pin]of Object.entries({...b.assets,...b.protected}))expect(sha(readFileSync(p)),p).toBe(pin);
+  const b=beforeArrival();for(const[p,pin]of Object.entries({...b.assets,...b.protected}))expect(sha(readFileSync(p)),p).toBe(vibeCodeSuccessorSha(p,pin));
   const m=read<TiledMap>('maps/overworld.tmj'),old=beforeArrivalJson<TiledMap>('maps/overworld.tmj'),l=read<MapLayout>('world/layouts/overworld.json'),prior=beforeArrivalJson<MapLayout>('world/layouts/overworld.json');expect(m.layers.filter(l=>l.type!=='tilelayer')).toEqual(old.layers.filter(l=>l.type!=='tilelayer'));
   for(const key of['entries','exits','areas','inspectionZones','signs']as const)expect(l[key],key).toEqual(prior[key]);
   const a=(m.layers.find(l=>l.name==='physical-collisions')as TileLayer).data,c=(old.layers.find(l=>l.name==='physical-collisions')as TileLayer).data;expect(a.flatMap((v,i)=>v!==c[i]?[i]:[])).toEqual([64*128+68]);
  });
- it('requires the current arrival even when every new marker is absent',()=>{expect(()=>assertNativePlaza(beforeArrivalJson('maps/overworld.tmj'),beforeArrivalJson('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape/);});
+ it('requires the current arrival even when every new marker is absent',()=>{expect(()=>assertNativePlaza(beforeArrivalJson('maps/overworld.tmj'),beforeArrivalJson('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);});
  it('reproduces the exact retained SVG quadrants and the same car pixels through a pure current placement producer',async()=>{
   const{renderArrivalRefresh,checkArrivalRefreshArt}=await import('../tools/art/arrival-refresh');const r=await renderArrivalRefresh();expect(sha(readFileSync('art/source/varcamp-horizontal.svg'))).toBe('05f5ea29e8635156bf4ed74f9e39a6067bb2121ac266db514d7918703924250f');
   const rgba=Buffer.alloc(384*128*4);for(const[i,row]of r.logos.entries()){expect(row.png).toEqual(readFileSync(panels[i].image));const{data,info}=await sharp(row.png).ensureAlpha().raw().toBuffer({resolveWithObject:true});expect([info.width,info.height]).toEqual([192,64]);for(let y=0;y<64;y++)data.copy(rgba,((Math.floor(i/2)*64+y)*384+i%2*192)*4,y*192*4,(y+1)*192*4);}
@@ -60,7 +61,7 @@ describe('current colourful arrival and topmost drones',()=>{
   if(kind==='missing-panel')l.images=l.images!.filter(i=>i!==panel);if(kind==='duplicate-panel')l.images!.push(structuredClone(panel));if(kind==='standing-panel')panel.standing=true;if(kind==='moved-panel')panel.x++;if(kind==='wrong-png')panel.image='assets/sponsors/varcamp-2026.png';
   if(kind==='old-sign'||kind==='old-pole')l.placements.push(beforeArrivalJson<MapLayout>('world/layouts/overworld.json').placements.find(p=>p.id===(kind==='old-sign'?'arrival-direction-crosspost':'arrival-crosspost-pole'))!);
   if(kind==='moved-car')l.animatedOverlays!.find(o=>o.name==='roadster')!.x--;if(kind==='old-logo')l.images!.push(beforeArrivalJson<MapLayout>('world/layouts/overworld.json').images!.find(i=>i.name==='VarCamp 2026 Floor')!);
-  expect(()=>assertNativePlaza(JSON.parse(readFileSync('maps/overworld.tmj','utf8')),l,loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape/);
+  expect(()=>assertNativePlaza(JSON.parse(readFileSync('maps/overworld.tmj','utf8')),l,loadTileCatalog())).toThrow(/Arrival refresh|Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);
  });
  it('refuses to repair unrelated native collisions or controls while applying the arrival transaction',async()=>{
   const{reconcileArrivalRefresh}=await import('../tools/maps/arrival-refresh'),m=beforeArrivalJson<TiledMap>('maps/overworld.tmj');(m.layers.find(l=>l.name==='physical-collisions')as TileLayer).data[70*128+70]=1;expect(()=>reconcileArrivalRefresh(m,read('world/layouts/overworld.json'),loadTileCatalog())).toThrow(/Native projection/);

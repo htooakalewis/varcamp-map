@@ -56610,7 +56610,7 @@
     },
     {
       "name": "expo-s6-nameplate",
-      "text": "YOUR LOGO HERE",
+      "text": "VIBE CODE TOURS",
       "x": 83,
       "y": 87,
       "width": 6,
@@ -56783,6 +56783,14 @@
       "width": 6,
       "height": 2,
       "standing": false
+    },
+    {
+      "name": "Expo / Vibe Code Tours",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "x": 84,
+      "y": 85,
+      "width": 4,
+      "height": 2
     }
   ],
   "animatedOverlays": [

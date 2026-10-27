@@ -1371,6 +1371,14 @@
       "y": 4,
       "width": 4,
       "height": 2
+    },
+    {
+      "name": "Capricorn / Vibe Code Tours",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "x": 8,
+      "y": 0,
+      "width": 4,
+      "height": 2
     }
   ]
 }

@@ -1,3 +1,4 @@
+import {restoreVibeCodeBranding} from './vibecode-branding';
 import{isDeepStrictEqual}from'node:util';
 import{SIGN_IDS}from'../../src/world/catalog';
 import contractData from'../../world/interior-reference-contract.json';
@@ -25,13 +26,14 @@ export function assertNativeReferenceInterior(map:TiledMap,layout:MapLayout,cata
  if(!IDS.includes(layout.id))return;
  need(contract.version===1&&isDeepStrictEqual(Object.keys(contract.maps).sort(),IDS.slice().sort()),'contract must cover exactly the known fourteen rooms');
  const row=contract.maps[layout.id],functional=ariesPresentationFunctional(layout.id,row.functional);
- assertAriesPresentation(layout,catalog);
+ const beforeBrand=restoreVibeCodeBranding(layout);
+ assertAriesPresentation(beforeBrand,catalog);
  for(const[key,value]of Object.entries(functional))need(isDeepStrictEqual(layout[key as keyof MapLayout],value),`${layout.id}: protected functional ${key} changed`);
  for(const[key,value]of Object.entries(contract.catalog))need(isDeepStrictEqual(catalog[key],value),`${layout.id}: required catalog/depth contract changed: ${key}`);
  for(const expected of [...row.requiredPlacements,...row.requiredSeats]){
   const found=layout.placements.filter(p=>p.id===expected.id);need(found.length===1&&Object.entries(expected).every(([key,value])=>isDeepStrictEqual(found[0][key as keyof typeof found[0]],value)),`${layout.id}: required furnishing/crest/seat ${expected.id} missing or changed`);
  }
- assertHallPresentation(layout,catalog);
+ assertHallPresentation(beforeBrand,catalog);
  const titles=layout.signs?.filter(s=>s.name==='scene-title')??[];need(titles.length===1&&titles[0].text===row.title,`${layout.id}: bold English title source changed`);
  const configs=[{kind:'plant',placement:layout.placements.find(p=>p.sprite==='interior-ref-plant-motion-base'),width:3,height:2,step:750,phases:4},{kind:'steam',placement:layout.placements.find(p=>p.id==='interior-ref-tea-console'||p.id==='interior-ref-refreshments'),width:1,height:1,step:400,phases:6},{kind:'server',placement:layout.placements.find(p=>p.sprite==='interior-ref-server'),width:2,height:3,step:750,phases:4},...(row.water?[{kind:'water',placement:layout.placements.find(p=>p.sprite==='interior-ref-aquarium'),width:4,height:3,step:600,phases:4}]:[])];
  const overlays=layout.animatedOverlays??[];need(overlays.length===configs.length,`${layout.id}: required motion roster changed`);

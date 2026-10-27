@@ -1,3 +1,4 @@
+import {beforeVibeCodeCaption,vibeCodeCaptionResource,checkVibeCodeArt} from './vibecode';
 import{readFileSync,writeFileSync,readdirSync,existsSync}from'node:fs';
 import{createHash}from'node:crypto';
 import{isDeepStrictEqual}from'node:util';
@@ -50,7 +51,7 @@ export function renderCaptionMaster(specs:CaptionSpec[]):{svg:string;rows:Captio
  const height=(y+1)*32;return{svg:`<svg xmlns="http://www.w3.org/2000/svg" width="512" height="${height}" shape-rendering="crispEdges">${art}</svg>\n`,rows,width:512,height};
 }
 export function readStandingCaptions(layout:MapLayout):{rows:CaptionRow[];width:number;height:number;image:string;pngSha256:string}|undefined{
- const expected=captionSpecs(layout);if(!expected.length)return;
+ const expected=captionSpecs(beforeVibeCodeCaption(layout));if(!expected.length)return;
  const family=captionFamily(layout.id),meta=JSON.parse(readFileSync(family.meta,'utf8'));if(meta.schemaVersion!==1||meta.glyphsSha256!==sha(readFileSync(FONT))||meta.producerSha256!==sha(readFileSync('tools/art/standing-captions.ts')))throw Error('Stale standing caption font/producer');
  if(!Array.isArray(meta.specs)||meta.specs.some((s:CaptionSpec)=>captionFamily(s.map)!==family))throw Error('Standing caption family mixes atlases');
  const rendered=renderCaptionMaster(meta.specs),png=readFileSync(family.image);
@@ -65,7 +66,7 @@ export function readStandingCaptions(layout:MapLayout):{rows:CaptionRow[];width:
   if(isDeepStrictEqual(moved.map(({atlasX:_x,atlasY:_y,...spec})=>spec),expected))selected=moved;
  }
  if(!isDeepStrictEqual(selected.map(({atlasX:_x,atlasY:_y,...spec})=>spec),expected))throw Error('Stale standing caption semantic source');
- return{rows:selected,width:rendered.width,height:rendered.height,image:family.image,pngSha256:meta.pngSha256};
+ return vibeCodeCaptionResource(layout,{rows:selected,width:rendered.width,height:rendered.height,image:family.image,pngSha256:meta.pngSha256});
 }
 const layouts=():MapLayout[]=>existsSync('world/layouts')?readdirSync('world/layouts').filter(f=>f.endsWith('.json')).sort().map(f=>JSON.parse(readFileSync('world/layouts/'+f,'utf8'))):[];
 const familySpecs=(family:CaptionFamily,all:MapLayout[]):CaptionSpec[]=>all.filter(l=>captionFamily(l.id)===family).flatMap(l=>captionSpecs(l));
@@ -76,6 +77,7 @@ export async function checkStandingCaptionArt():Promise<void>{
   const specs=JSON.parse(readFileSync(family.meta,'utf8')).specs as CaptionSpec[];const rendered=renderCaptionMaster(specs),expected=await sharp(Buffer.from(rendered.svg)).ensureAlpha().raw().toBuffer(),actual=await sharp(family.image).ensureAlpha().raw().toBuffer();if(!expected.equals(actual))throw Error('Standing caption PNG differs from original glyph artwork: '+family.id);
  }
  for(const layout of all)readStandingCaptions(layout);
+ await checkVibeCodeArt();
 }
 /** The shared coastal reservation is immutable, including archived rows. Active
  * expo authoring must never repack it from the smaller current beach sign roster. */
@@ -87,6 +89,11 @@ export async function writeStandingCaptions():Promise<void>{
    if(!linked.some(l=>l.standingSigns?.length)&&!files.some(existsSync))continue;
    if(!files.every(existsSync))throw Error('Frozen shared caption resource is missing; restore its reviewed bytes');
    for(const layout of linked)readStandingCaptions(layout);
+   continue;
+  }
+  // The new sponsor caption uses an additive sheet; retain every historical glyph slot.
+  if(family.id==='expo'&&all.some(l=>l.images?.some(i=>i.image==='assets/sponsors/vibecode-tours.png'))){
+   for(const l of all.filter(l=>captionFamily(l.id)===family))readStandingCaptions(l);
    continue;
   }
   const specs=familySpecs(family,all);if(!specs.length)continue;

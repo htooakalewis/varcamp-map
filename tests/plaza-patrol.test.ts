@@ -1,3 +1,5 @@
+import {preVibeCodeNative} from './helpers/vibecode-history';
+import {vibeCodeSuccessorSha} from './helpers/vibecode-history';
 import {readFileSync} from 'node:fs';
 import {preSpacingLayout} from './helpers/expo-spacing-history';
 import {createHash} from 'node:crypto';
@@ -19,7 +21,7 @@ it('removes the photographed white table at52,67 and leaves its actual tile walk
  expect(preSpacingLayout(l).placements).toEqual(old.placements.filter((p:any)=>p.id!=='welcome-table'));
 });
 it('adds six travelling camera patrols above every old layer, preserving the89old atlas bodies',()=>{
- const m=read<TiledMap>('maps/overworld.tmj'),l=read<MapLayout>('world/layouts/overworld.json'),old=JSON.parse(baseline().components['maps/overworld.tmj'].raw);
+ const m=preVibeCodeNative(read<TiledMap>('maps/overworld.tmj')),l=read<MapLayout>('world/layouts/overworld.json'),old=JSON.parse(baseline().components['maps/overworld.tmj'].raw);
  expect(m.tilesets.slice(0,89)).toEqual(old.tilesets);expect(m.tilesets).toHaveLength(100);
  expect(m.layers.slice(-6).map(l=>l.name)).toEqual(PATROL_IDS);
  for(const id of PATROL_IDS){const o=l.animatedOverlays!.find(o=>o.name===id)!;expect(o.level).toBe('aboveScenery');
@@ -59,10 +61,10 @@ it('the actual native carrier frames show one visible24px camera moving around e
  }
 });
 it('preserves every earlier media file except the four explicitly updated arrival logo quadrants',()=>{
- const b=baseline();for(const[p,pin]of Object.entries({...b.assets,...b.protected}))if(!/^assets\/sponsors\/varcamp-arrival-(nw|ne|sw|se)\.png$/.test(p))expect(sha(readFileSync(p)),p).toBe(pin);
+ const b=baseline();for(const[p,pin]of Object.entries({...b.assets,...b.protected}))if(!/^assets\/sponsors\/varcamp-arrival-(nw|ne|sw|se)\.png$/.test(p))expect(sha(readFileSync(p)),p).toBe(vibeCodeSuccessorSha(p,String(pin)));
 });
 it('requires the patrol family and table removal even after coherent source/native omissions',()=>{
  const l=read<MapLayout>('world/layouts/overworld.json'),m=read<TiledMap>('maps/overworld.tmj');
  l.animatedOverlays=l.animatedOverlays!.filter(o=>!o.name.startsWith('plaza-patrol-'));m.layers=m.layers.filter(l=>!l.name.startsWith('plaza-patrol-'));
- expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape/);
+ expect(()=>assertNativePlaza(m,l,loadTileCatalog())).toThrow(/Plaza patrol|Expo spacing|Fountain motion|Leo lion head|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);
 });

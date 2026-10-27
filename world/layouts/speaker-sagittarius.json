@@ -1408,6 +1408,14 @@
       "y": 4,
       "width": 4,
       "height": 2
+    },
+    {
+      "name": "Sagittarius / Vibe Code Tours",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "x": 10,
+      "y": 0,
+      "width": 4,
+      "height": 2
     }
   ]
 }

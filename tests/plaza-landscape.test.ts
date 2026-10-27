@@ -1,3 +1,4 @@
+import {preVibeCodeLayout,preVibeCodeNative} from './helpers/vibecode-history';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import {beforeLandscapeJson,preLandscapeLayout,preLandscapeNative} from './helpers/plaza-landscape-history';
@@ -8,12 +9,12 @@ const cells=(p:any):string[]=>Array.from({length:p.width*p.height},(_,i)=>`${p.x
 const overlaps=(a:any,b:any)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
 describe('Landscaped circular campus and uncluttered arrival',()=>{
  it('retains the twelve circle positions, native building stencils, booth spacing and every portal/control',()=>{
-  const l=read('world/layouts/overworld.json'),old=beforeLandscapeJson('world/layouts/overworld.json');
+  const l=preVibeCodeLayout(read('world/layouts/overworld.json')),old=beforeLandscapeJson('world/layouts/overworld.json');
   for(const prefix of ['expo-'])expect(l.placements.filter((p:any)=>p.id.startsWith(prefix))).toEqual(old.placements.filter((p:any)=>p.id.startsWith(prefix)));
   expect(l.placements.filter((p:any)=>p.sprite.startsWith('zodiac-physical-'))).toEqual(old.placements.filter((p:any)=>p.sprite.startsWith('zodiac-physical-')));
-  for(const key of ['entries','exits','areas','signs','standingSigns','inspectionZones'])expect(l[key],key).toEqual(old[key]);
+  for(const key of ['entries','exits','areas','signs','standingSigns','inspectionZones'] as const)expect(l[key],key).toEqual(old[key]);
   expect(read('maps/overworld.wam')).toEqual(beforeLandscapeJson('maps/overworld.wam'));
-  const m=read('maps/overworld.tmj'),n=beforeLandscapeJson('maps/overworld.tmj');expect(m.tilesets).toEqual(n.tilesets);expect(m.layers.map((l:any)=>[l.id,l.name])).toEqual(n.layers.map((l:any)=>[l.id,l.name]));
+  const m=preVibeCodeNative(read('maps/overworld.tmj')),n=beforeLandscapeJson('maps/overworld.tmj');expect(m.tilesets).toEqual(n.tilesets);expect(m.layers.map((l:any)=>[l.id,l.name])).toEqual(n.layers.map((l:any)=>[l.id,l.name]));
   expect(preLandscapeLayout(l)).toEqual(old);expect(preLandscapeNative(m)).toEqual(n);
  });
  it('keeps the full outer road stone-paved, collision-free and connected',()=>{
@@ -62,6 +63,6 @@ describe('Landscaped circular campus and uncluttered arrival',()=>{
   if(kind==='sponsor-over-booth')l.images.find((p:any)=>p.name==='Sponsors / Demo 01').y=65;
   if(kind==='break-flight')l.animatedOverlays.find((p:any)=>p.name==='plaza-drone-00').x++;
   if(kind==='alter-circle')l.placements.find((p:any)=>p.id==='leo-building').y--;
-  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza landscape/);
+  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza landscape|Vibe Code branding/);
  });
 });

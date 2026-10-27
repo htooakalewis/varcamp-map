@@ -4183,7 +4183,7 @@
     },
     {
       "name": "restart-label",
-      "text": "\u2191 RESTART ORBIT",
+      "text": "↑ RESTART ORBIT",
       "x": 69,
       "y": 13,
       "width": 9,
@@ -4205,7 +4205,7 @@
     },
     {
       "name": "maze-instructions",
-      "text": "\u2191 ORBIT MAZE \u00b7 FOLLOW 01 / 02 / 03\n\u2193 PLAZA \u00b7 SOUTH LANE\nCOMET MAZE \u2192 VIA SOUTH LANE",
+      "text": "↑ ORBIT MAZE · FOLLOW 01 / 02 / 03\n↓ PLAZA · SOUTH LANE\nCOMET MAZE → VIA SOUTH LANE",
       "x": 15,
       "y": 65,
       "width": 22,
@@ -4216,7 +4216,7 @@
     },
     {
       "name": "campus-return-label",
-      "text": "\u2193 ZODIAC PLAZA",
+      "text": "↓ ZODIAC PLAZA",
       "x": 35,
       "y": 76,
       "width": 11,
@@ -4260,7 +4260,7 @@
     },
     {
       "name": "comet-gate-label",
-      "text": "\u2191 COMET MAZE",
+      "text": "↑ COMET MAZE",
       "x": 68,
       "y": 72,
       "width": 9,
@@ -4642,7 +4642,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -4818,7 +4818,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

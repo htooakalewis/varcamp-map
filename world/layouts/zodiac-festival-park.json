@@ -2034,7 +2034,7 @@
   "signs": [
     {
       "name": "plaza-return-label",
-      "text": "\u2193 ZODIAC PLAZA",
+      "text": "↓ ZODIAC PLAZA",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 19,
@@ -2056,7 +2056,7 @@
     },
     {
       "name": "arcade-label",
-      "text": "\u2191 NEBULA ARCADE",
+      "text": "↑ NEBULA ARCADE",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 7,
@@ -2067,7 +2067,7 @@
     },
     {
       "name": "playground-label",
-      "text": "\u2191 ORBIT PLAYGROUND",
+      "text": "↑ ORBIT PLAYGROUND",
       "fontSize": 16,
       "color": "#fff0b0",
       "x": 30,
@@ -2133,7 +2133,7 @@
     },
     {
       "name": "arrival-routes",
-      "text": "\u2196 ARCADE \u00b7 NORTHWEST\nPLAYGROUND \u00b7 NORTHEAST \u2197\n\u2193 PLAZA \u00b7 SOUTH GATE",
+      "text": "↖ ARCADE · NORTHWEST\nPLAYGROUND · NORTHEAST ↗\n↓ PLAZA · SOUTH GATE",
       "x": 17,
       "y": 34,
       "width": 14,
@@ -3075,7 +3075,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -3499,7 +3499,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

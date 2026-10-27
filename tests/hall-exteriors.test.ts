@@ -1,3 +1,4 @@
+import {vibeCodeSuccessorSha} from './helpers/vibecode-history';
 import {preHallBuildingsLayout} from './helpers/hall-buildings-history';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -22,14 +23,14 @@ describe('Solar and Lunar exterior architectures',()=>{
   expect(c[p.sprite].blockingCells).toHaveLength(24);expect(l.exits.find(e=>e.name===id)).toMatchObject({x:x+2,y:21,width:4,height:1,destination:id+'-hall'});
  });
  it('requires the new exterior family even when all its markers are removed',()=>{
-  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),applyZodiacPhysics(beforeHallJson<MapLayout>('world/layouts/overworld.json')),{...beforeHallJson('art/tile-catalog.json'),...zodiacPhysicsSprites()})).toThrow(/Hall exteriors|Hall buildings|Plaza crescent|Plaza landscape/);
+  expect(()=>assertNativePlaza(beforeHallJson<TiledMap>('maps/overworld.tmj'),applyZodiacPhysics(beforeHallJson<MapLayout>('world/layouts/overworld.json')),{...beforeHallJson('art/tile-catalog.json'),...zodiacPhysicsSprites()})).toThrow(/Hall exteriors|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);
  });
  it('provides a separate transparent native atlas without replacing the original gate artwork',()=>{
   expect(existsSync('assets/tilesets/original/hall-exteriors.png'),'two themed hall facade atlas exists').toBe(true);
  });
  it('preserves every prior asset, other native map, WAM, catalog definition and collision cell',()=>{
   const b=beforeHallExteriors(),c=loadTileCatalog(),old=beforeHallJson('art/tile-catalog.json');
-  for(const[path,pin]of Object.entries({...b.assets,...b.nativeMaps,...b.wams}))if(path!=='maps/preview/overworld.tmj')expect(sha(readFileSync(path)),path+' retained bytes').toBe(pin);
+  for(const[path,pin]of Object.entries({...b.assets,...b.nativeMaps,...b.wams}))if(path!=='maps/preview/overworld.tmj')expect(sha(readFileSync(path)),path+' retained bytes or exact branding successor').toBe(vibeCodeSuccessorSha(path,pin));
   for(const[id,s]of Object.entries(old))expect(c[id],id+' retained catalog definition').toEqual(s);
   const m=prePhysicsNative(read<TiledMap>('maps/overworld.tmj')),prior=beforeHallJson<TiledMap>('maps/overworld.tmj');
   expect(m.tilesets.slice(0,84)).toEqual(prior.tilesets);expect(m.tilesets).toHaveLength(85);
@@ -68,7 +69,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   if(kind==='wrong-depth')p.renderRole='grounded';
   if(kind==='blocker')c[p.sprite].blockingCells.push([2,3]);
   if(kind==='extra-catalog')c['hall-exterior-extra']=structuredClone(c[p.sprite]);
-  expect(()=>assertNativePlaza(read<TiledMap>('maps/overworld.tmj'),l,c)).toThrow(/Hall exteriors|Hall buildings|Plaza crescent|Plaza landscape/);
+  expect(()=>assertNativePlaza(read<TiledMap>('maps/overworld.tmj'),l,c)).toThrow(/Hall exteriors|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);
  });
  it.each(['missing','duplicate','misidentified','resized'])('denies a %s new native reservation',kind=>{
   const m=read<TiledMap>('maps/overworld.tmj'),t=m.tilesets.at(-1)!;

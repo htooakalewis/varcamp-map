@@ -1638,6 +1638,14 @@
       "y": 4,
       "width": 4,
       "height": 2
+    },
+    {
+      "name": "Pisces / Vibe Code Tours",
+      "image": "assets/sponsors/vibecode-tours.png",
+      "x": 8,
+      "y": 0,
+      "width": 4,
+      "height": 2
     }
   ]
 }

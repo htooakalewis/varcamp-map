@@ -1,3 +1,5 @@
+import {applyVibeCodeBranding,VIBECODE_MAP_IDS} from '../../tools/maps/vibecode-branding';
+import {vibeCodeSuccessorSha} from './vibecode-history';
 /** Test-only finite forward epoch. Genuine historical bytes are never inferred
  * from current receipts, stripped current objects or a producer's own output. */
 import {readFileSync} from 'node:fs';
@@ -115,10 +117,10 @@ export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
  for(const[path,[,after]]of Object.entries(changes))assert.equal(sha(readFileSync(path)),arrivalSuccessorSha(path,path==='tools/maps/native-ownership-context.ts'?hallContext:coveChanges[path]?.[1]??after),'Reviewed producer epoch changed '+path);
  const result=structuredClone(layout);
  for(const overlay of result.animatedOverlays??[])for(const input of overlay.provenance?.inputs??[]){const pair=changes[input.path];if(pair){assert.equal(input.sha256,pair[0],'Unreviewed old provenance '+input.path);input.sha256=pair[1];const cove=coveChanges[input.path];if(cove){assert.equal(input.sha256,cove[0],'Unreviewed pre-cove provenance '+input.path);input.sha256=cove[1];if(input.path==='tools/maps/native-ownership-context.ts'){assert.equal(input.sha256,coveChanges[input.path][1]);input.sha256=exteriorContext;assert.equal(input.sha256,'e2aa6ada9d1b8242682dc5680d62f3e8c4684287530ac0514e5e3556eaf74c53');input.sha256=hallContext;}}}}
- return advanceArrivalProvenance(result);
+ const next=advanceArrivalProvenance(result);for(const o of next.animatedOverlays??[])for(const input of o.provenance?.inputs??[])input.sha256=vibeCodeSuccessorSha(input.path,input.sha256);return next;
 }
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
  const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));
  const speaker=applyAriesPresentation(baseline),next=['solar-hall','lunar-hall'].includes(id)?applyHallPresentation(speaker):speaker;
- assert.deepEqual(current,next,'Only finite reviewed producer/presentation successors may advance '+id);
+ assert.deepEqual(current,VIBECODE_MAP_IDS.includes(id)?applyVibeCodeBranding(next):next,'Only finite reviewed producer/presentation successors may advance '+id);
 }

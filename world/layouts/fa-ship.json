@@ -56656,7 +56656,7 @@
   "signs": [
     {
       "name": "harbor-return-label",
-      "text": "\u2191 HARBOR",
+      "text": "↑ HARBOR",
       "x": 7,
       "y": 20,
       "width": 6,
@@ -56668,7 +56668,7 @@
     },
     {
       "name": "plaza-return-label",
-      "text": "\u2191 PLAZA",
+      "text": "↑ PLAZA",
       "x": 34,
       "y": 20,
       "width": 5,
@@ -56680,7 +56680,7 @@
     },
     {
       "name": "arrival-harbor-route",
-      "text": "\u2191 HARBOR",
+      "text": "↑ HARBOR",
       "x": 18,
       "y": 24,
       "width": 3,
@@ -58627,7 +58627,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -60015,7 +60015,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

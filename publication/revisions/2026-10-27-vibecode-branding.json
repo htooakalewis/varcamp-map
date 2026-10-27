@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "50711c52b4e79823a6b776a99f1b2997686931585c2274ab4ae52f8220f9ba70",
+      "toSha256": "4230622d9aa626ae7ffb962f5dc65707f6e210d79d529a5be2c6294799eb77e4",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "art/sponsors.json",
+      "fromSha256": "acbdace1c2450bb6232eeee3214e412cf9eb96d3f4b2d095fd6ab71aef56552d",
+      "toSha256": "4b21160c0edec5a125ae5587f4aa6e964f453ac6eb670f495374e280c65133da",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "fromSha256": "e78676b6e010e66caffa8f5e5eef74fdf1fbc7695e3bc073d20772cae7155fe2",
+      "toSha256": "f54c32fe9acde5da4d4161bb677d7d8c136d0c822a293621a747c333c560a41e",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "71bb18a14550c37b90596b64c819b3643ce64ac56e070e7f710a678f7c845be1",
+      "toSha256": "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/lunar-hall.tmj",
+      "fromSha256": "599549c7b5895636623cf8ee1a262e05ecd3197d3297f42bdf95974eb73237ce",
+      "toSha256": "e177d8b67e1963dd663b3287798b00a0219fa96a5d76ba7f8a87a4b20252c989",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "d1a0be3cbe4a75c7f207232f5d1b2be070500cba74a183bfe58df0cce2116596",
+      "toSha256": "9776df066c5ce7dfea24f66e1fa5cfc82af40f81f7de4b37906cbd11ee5480ed",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/solar-hall.tmj",
+      "fromSha256": "45cf247bbd6503c577ef7987085aebde0c6b93c8fcf69e084906c32bf07a5f53",
+      "toSha256": "4af19c79f57201e4450dba873a9ce80ff875499ad006e00cdab236552fe45142",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-aquarius.tmj",
+      "fromSha256": "8ce4ff441b5fe30674b7173f513356f6d29fc0536140ad41e9a67eb344c76b7c",
+      "toSha256": "e3ace710168464af81dd09d2280914601985cfa298296b7d1dd79cd805369653",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-aries.tmj",
+      "fromSha256": "98901e30aaaee6f843b135c646c606118ef03ed5f4d13469bb830bafd3b4a957",
+      "toSha256": "79569bdc24c9455845ebcae8daa8d45cce156846192fb6c3f2d80059fe97ac48",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-cancer.tmj",
+      "fromSha256": "46056aa869fdbcd6804095c022a0ece54e1d3df9402dc106cd14f04f39ee8367",
+      "toSha256": "8532990823fe15ba2a01eab8389cea8d443846f9da492a9cb3e81d8f06daa03e",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-capricorn.tmj",
+      "fromSha256": "33bfe2f943ef4ba81cedecced2ba266bf38b1e40f793cf70c5b9163aec2683ae",
+      "toSha256": "e71c0cf9c4a870ee664af3888bea810d3efed780fc0af17f3685faf8542f7e24",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-gemini.tmj",
+      "fromSha256": "4338f19fcd17d4810fce5591e7e64e4f47cfda1b9eed476d3c62b72116c52c60",
+      "toSha256": "81cb21e9aa7d0f600558a8e335c95e33ca2c2c2a0eb1f446e907c5d46f8dbe6c",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-leo.tmj",
+      "fromSha256": "e32562b6b632a9a8ced52562764b0e897d014ced411ec6e2f23574faaead6440",
+      "toSha256": "55241f6d8ad54ea3c00597e1170b9c075ca1c5b821348826125e11f872d356c5",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-libra.tmj",
+      "fromSha256": "4ca7afce94e7ac27918634e9d0463b2a543feba040edb51b528b39f962760bc5",
+      "toSha256": "796075ed570a8458abbc951dd0d852f575ed5ca3f04c291cfa17ce9bdc3e6389",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-pisces.tmj",
+      "fromSha256": "533f52a016fa94b724b6a61dcf6a05cb58309f6c627787d86ecb66277487e4d6",
+      "toSha256": "489ca9fec0127ce531525ef48ea9a8f5596ed2228e407fb7d592814c6fc11820",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-sagittarius.tmj",
+      "fromSha256": "d125fc5422e0758ba7070cf04143b2d844f8d5af8ccc32c6d33be9de884943e8",
+      "toSha256": "a3432167555aef30f7f433d088b948773ed715f846427748136a27ee3e31c39a",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-scorpio.tmj",
+      "fromSha256": "7fa4643d6163c2ab1f7ff1370c7a5c90d200fff429fab27bbaa93639681b72d3",
+      "toSha256": "2a07bd241ba6548ea941dc0c5614966b474ee6f4c4a408ca8b1e9879d4017133",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-taurus.tmj",
+      "fromSha256": "c45498e9a60d17462437d7aaf70e5c9e3a202c9d4570c2b25d89cc29e1dcb570",
+      "toSha256": "b76e6f7bbae3fb369f16926a738addf3fbffc26acb65404de09e1c161d51802b",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/preview/speaker-virgo.tmj",
+      "fromSha256": "f80892948cd7a9a14c694e84ed8bb1a8d88bd07db5522773922c2374d36125f1",
+      "toSha256": "f087295040a7c5656c6e13d75b4776dcbce2ee0d8972773c3d7f797f72180146",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "fromSha256": "6578ecafc0fe634a9f931a4a7bc83b7884527d7a253741732fff8ae76a03d7b3",
+      "toSha256": "b7f7364a891490309ecd7615f2688d55fcc7412b578348e8a2f710b722598942",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "fromSha256": "9e447074980b1f306a61f5a7e14ae8a2760c88022a4d355fd81fd0ba2155ef8e",
+      "toSha256": "960c1c46ded22a03b9c6000b6eb653959f5b96b058b7a68a049253ee55c4b562",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "fromSha256": "86affaec2c2708b399473628b1c41edf0cecd102ab08cc172d76b41226c28842",
+      "toSha256": "79cd84dbbae464e10bd45038546920f3fea64d439065f9da54132f5a36483654",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "fromSha256": "f001366b47202861afe31f382bbeed7dbb82c66e2d20f94eb9272cdd5cdc72e9",
+      "toSha256": "0b21285f9caf57984ae550c0f50cb7a72afb3296f22aaa668900bd746360902d",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "fromSha256": "7deba4740589611adfc00a002e5d4b17add8d4c8a154d3f8a2646412d56a9f08",
+      "toSha256": "7fcea4b12e404f16b3fab06ac0ecd92298567eec84833d94ade0cda35d778ad0",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "fromSha256": "1d876e3663fa26186b5e53d93ff4daf5e4f0b0004f0747b3fa035d433df77816",
+      "toSha256": "eb7994805f60d1b34d3767a8fbbcafe7b18399fcfe9fb92ddd966176e20fa6df",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "fromSha256": "09726db6388049f410168696202fe175ddd432d8528efdeffed9203ce4fb31d5",
+      "toSha256": "4e528ac0372b0a9992ca339f6c4c62cdb9c171120f47004a93fc43115957d928",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "fromSha256": "ba792a7690a3ff78f46e128b99effd80de5a8065a84ce43b79cde909397387bc",
+      "toSha256": "a4eaf681e2015d0712fd39a508b1b50619fa8f762fe01b03ffc68aa2be409a2f",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "fromSha256": "5589a9460695662db5dd9163efcac5d122dc22018734db0639e7cfa4092163d1",
+      "toSha256": "433a4b4844fba86b96871cbc087da6bb1eba509896826aab92639f25d0832b82",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "fromSha256": "31789147c20d3c08c17a48b34d010cc8d281ef08ef33970cc2dbcccf39a5047f",
+      "toSha256": "3b7b6459d46a8cb08f2a791c143d6796f3d3445e90efc130b7fb44bdbda77e01",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "fromSha256": "c0f7b0ed16b05c43418b7a74782d429e636495338599c393d436ae6cda4e9518",
+      "toSha256": "4e0343c5404d8e74fefc91f7a705472a61d6451c14795e99504c28288005e336",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "fromSha256": "4cf8c236af5056d2f85e792f23b3a66bf25abef5b239c641ce2b2104be2305a6",
+      "toSha256": "9b1e34dc907daa58dcca9e76af38b0b790f1600c55906ef6060f24a88ca80796",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "fromSha256": "52e113d3f1f7a1a8a3d7201e4019bd27e5dcf0fdd0a531669b688353cfe6fa52",
+      "toSha256": "115270bbe665a894c5c7ff23c1f29bd4d99ee65f33fd70201b47578369b543e9",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "tests/exterior-gates.test.ts",
+      "fromSha256": "9279e5ac664003ce036c0628b2bb8c71a13f00f0fbe3f7607bb09287ca90926e",
+      "toSha256": "eeaf05f4e7311d7bf8053609a7221d63dbc60d6b0493cfa513278a77339f84da",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "f68c50d88a7b5a2122e5bf39b4bf94214db4372d1d96a2569b768005d2f0bfcc",
+      "toSha256": "386b1178e53dfc32512b6eedb6fa6521c1e3504443757559fa1abf878cea2c28",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "7982db05f90ecdde4449371d9739092e36b3020ffbc2d0d22f56807c522463c6",
+      "toSha256": "85b21ed49de327682b62779789d7ca0e8dec3856254e5438f1645211bc6be14c",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "a8041a6debaeb1fb7f7688d6c24098c240d5bedd29dd15536e45c408966418ed",
+      "toSha256": "6bafd491eb4b59ca9047843475f8d2060b76158d4335a7b4ba9593198b534979",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "e78b5ea5cd11cdb5aa6242850162fa4858bd7e2420e963fd40ed61ce9073b495",
+      "toSha256": "c0775c692d6f58f7f61f1af48fea6142bc48e320331d897d56c0ae93297a7976",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "e25ac091ad8eb53e5e089209f313f2d18156ac2c6944528263ab4f80c34c72e5",
+      "toSha256": "a1d91fb55e92cc7c59f1b1f2e25a965bdbf128e7240f5f4d8346f4c4496e5737",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "e92fc2529371a0cabff774f7615161567d4e5dbd082c8c3b6e08c75cc029fbb3",
+      "toSha256": "fd78c807460fa10acdc08dc2bc502b8dc130d1cdb13a315b69345a5dd265b361",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "bdca0a969eeca4c0a44082baded614e8f60d8ef26e755229a2bb7e0d818561df",
+      "toSha256": "c4c3816a2e0d77424d999a6e1b7a5ea3d4b21c3f0d2ce66e33428714f2c218d6",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/lunar-hall.json",
+      "fromSha256": "10cd50ff24a6cc29c41bd37cc1222e4f74573a468e2ccf315e7c4a3c8b7060d0",
+      "toSha256": "d0860fcc197902e935fa7c9aac7676ba9b86ff462e3abd88a017ddfa742974d1",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "43863ac1ccc1ddbe7e31c592c244e6f62928ea5c28733ec717b21d511469553f",
+      "toSha256": "906c7c6f7219b3c3477ed3d2f392d822a9c6f2ce14a9a9989a22fed95f072b58",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "f0dee8b3f2d205c9afa8a8812812b883ba571f8a9c2d511c58b4e480ab26c876",
+      "toSha256": "aa57bb971c09814eee1b822e32e6782b78f37a76a5ff84b2ad68d076863ee9b2",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "de13b51afceaa831b385deb34bcb61a8123d490c00ace8d2ae45f6431fc1a40d",
+      "toSha256": "4b49c6de27acac7b637a0c9d1aa8424de83958208b4cefb0c66b23ba0b6d4f3f",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "bc95226c6c917472fd89c2aaaa30e08be06a08cb05a337d534a906b8502c40d7",
+      "toSha256": "404e6ec01018204b989aacd0227b6fac102777533c36e7207c187d9ffc1be078",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "3590819464321b98143f791843ed639f23191c347bb1daadafc1fb6ac451d6b0",
+      "toSha256": "19178749195d520bca02ee17c2fa9d54bceb3e30797c0974309ae4e99075f93b",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/overworld.json",
+      "fromSha256": "776bd703083b8835bd7b23981e371f5fc212c831c1ad994da2f749ff1c6b706f",
+      "toSha256": "d21f3cb13dbaccc9a47cf42ad9ee424f32673a80465ff1357430d25fd1342b41",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/solar-hall.json",
+      "fromSha256": "29f533abf8e2d29080202f9ebe4dbead0ce90bd29a1ba7b47084ecc03630d652",
+      "toSha256": "9a04f7711a8a9f3725704fccae9302db9e6d38fe7b5e0fb93aa1aa4fbd9533d6",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-aquarius.json",
+      "fromSha256": "7ec49552420b7194d86d80b22d0eddff152f3168f1422ec28603e7d524dd62e0",
+      "toSha256": "8a5ccfc61b1613743111ec7a003df3749c1f827becf64d44d758146ebc107468",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-aries.json",
+      "fromSha256": "b6a0aacc567a86d4a9b1865b6377c2c732b0c817956c6977aa042491f823b938",
+      "toSha256": "df09f5f835794d830188728a54e33c24c10379e2ffe0b214d58d31feb81ba754",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-cancer.json",
+      "fromSha256": "9cfd88fb3a066af1e13b4d9f903039d1f24f2641d53b6dd7404cc7388d214d6e",
+      "toSha256": "84d701fe8337a870ed679a1b2d984be81090fbed975d6e883ca1930b332b66dd",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-capricorn.json",
+      "fromSha256": "bda224eca52c1149812700f7d54c21a25077e66b41ada3f6aa19b3c2a36bc311",
+      "toSha256": "441d301214879ef96fd0299b01fca49624fdce6540e863daa4cb50395851e4c9",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-gemini.json",
+      "fromSha256": "a8a9da0e224994087e7103f6e921aeae969659fd690583a1c93407b20252aa37",
+      "toSha256": "5206beae3296cddfcf39d06c3eab3a52c9aa92ea325c866f630766f380a6d42d",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-leo.json",
+      "fromSha256": "f35342f9d42ba66ae09578b6cdf15b38854a47aa5a80be34f26521dbcc8bcb0f",
+      "toSha256": "e8afe3d98b080a3f7a1cb3e020c5370759ef58bd94a50d155162bf18b87dc1b9",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-libra.json",
+      "fromSha256": "1b6c2c624db2958c1c966090041b43fb6cb39b16185eba87121bd006f0503d6f",
+      "toSha256": "f1dc5f1b30207af962ee9e62e69f663bd0e4c9ef18b4bf85a2ef098be041e9a5",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-pisces.json",
+      "fromSha256": "05d847995ef2f28eb7368dc40825528b5888d0670055e41fdb8bf9a7e776ab0c",
+      "toSha256": "2dce1c4f9bdcf69b741c1305ff7551ae62cfa683ec579933552601f5f11ae682",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-sagittarius.json",
+      "fromSha256": "3ffc605bdeda1254582b3da66304bb601a8095be2ff98eb845a775c1f66a6d2f",
+      "toSha256": "ea966bc69c438059110e681e7bcb91135aedde826740ce0e7034accb0d6606f1",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-scorpio.json",
+      "fromSha256": "f9e409853b3dacc04a41f6d743dd07165a8a44023a768be77327893b8b00e643",
+      "toSha256": "5c320a7e1e891b132626147ea0ed1323d64fd5c370b79d93f7faa83b4cbcb348",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-taurus.json",
+      "fromSha256": "c762bf1b9458e70f1e8a561309896908b2033f622e0db487741287b4bc223151",
+      "toSha256": "8403024384e70d2bb7e8e424c828b9952f3e13755ed31a3de6b7e88f33d561af",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/speaker-virgo.json",
+      "fromSha256": "0ddb45472bd1eaf13d7beb2da97c887a4b5caab65931868394da90112a3b2d1f",
+      "toSha256": "8f3fd84ee2773320a001c091e7157c1fb46b626a26195b4717430f7232bd4e21",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "38eed6fbe0549c27c52d7ad992b8a64e6b94ee9bd73ec867b3846354fff11f87",
+      "toSha256": "3e3a4ba92eeb092e2396b11e8571d6302181e2c8b471600554e1f1fea9ba6987",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "d64889979ee8c18fe7985a11697703d89e2890ec09f079ac0b4007e64e165c51",
+      "toSha256": "8bae191d46fcaf13e533d0c2e0483117725917772629bbee7d58218e14702967",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "cd6c879707f320da680cc377ec0bf502a5fffcd72592d5ebe270577afb7f1d2e",
+      "toSha256": "b6b149f814fe4dd77d4378591684f2610b4b0919e9c77b18cbcfd58969218bbb",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "aa1a7fbca1791e80decf14c8d0b9fb916f203fbab4149eacfbb63655b7d16417",
+      "toSha256": "aa34b6a6d706fa17a99bcca4b7353a7549c146be80c7ebb4eb7d6b435f40a17f",
+      "reason": "Owner-requested Vibe Code Tours branding in the empty plaza booth and all twelve zodiac speaker rooms plus Solar and Lunar halls. Preserve physical geometry, prior logos, zodiac themes and media controls; replace only the empty booth caption."
+    }
+  ]
+}

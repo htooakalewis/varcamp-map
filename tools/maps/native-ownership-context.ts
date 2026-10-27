@@ -1,3 +1,4 @@
+import {VIBECODE_IMAGE,VIBECODE_CAPTION_IMAGE} from '../art/vibecode';
 import{isDeepStrictEqual}from'node:util';
 import registered from'../../art/source/native-ownership-context.json';
 import{WORLD_CATALOG}from'../../src/world/catalog';
@@ -175,7 +176,7 @@ function expoAtlases(source:TiledMap,row:ContextRow,start:number):TiledTileset[]
    need(/^art-\d+$/.test(set.name??'')&&set.columns===EXPO_STICKER_ATLAS.columns&&set.tilecount===EXPO_STICKER_ATLAS.tilecount&&set.imagewidth===EXPO_STICKER_ATLAS.imagewidth&&set.imageheight===EXPO_STICKER_ATLAS.imageheight&&!set.tiles,'expo sticker sheet identity/geometry changed');
    result.push({...structuredClone(set),firstgid:next,name:EXPO_STICKER_ATLAS.name});
   }else{
-   need(set.image===EXPO_CAPTION_ATLAS.image&&set.columns===EXPO_CAPTION_ATLAS.columns&&set.imagewidth===EXPO_CAPTION_ATLAS.imagewidth&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&set.imageheight!<=EXPO_CAPTION_ATLAS.maxImageHeight&&set.tilecount===set.imageheight!/32*16&&!set.tiles&&set.properties?.some(p=>p.name==='captionAtlasSha256'&&/^[0-9a-f]{64}$/.test(String(p.value)))===true,'expo caption atlas identity/geometry leaves its registered reservation');
+   need(set.image===(source.tilesets.some(t=>t.image==='../'+VIBECODE_IMAGE)?'../'+VIBECODE_CAPTION_IMAGE:EXPO_CAPTION_ATLAS.image)&&set.columns===EXPO_CAPTION_ATLAS.columns&&set.imagewidth===EXPO_CAPTION_ATLAS.imagewidth&&Number.isSafeInteger(set.imageheight)&&set.imageheight!>0&&set.imageheight!%32===0&&set.imageheight!<=EXPO_CAPTION_ATLAS.maxImageHeight&&set.tilecount===set.imageheight!/32*16&&!set.tiles&&set.properties?.some(p=>p.name==='captionAtlasSha256'&&/^[0-9a-f]{64}$/.test(String(p.value)))===true,'expo caption atlas identity/geometry leaves its registered reservation');
    result.push({...structuredClone(set),firstgid:next});
   }
   next+=set.tilecount!;
@@ -259,6 +260,11 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
     need(/^art-\d+$/.test(t.name??'')&&t.image===r.image&&t.tilewidth===32&&t.tileheight===32&&!t.source&&(t.spacing??0)===0&&(t.margin??0)===0&&t.columns===r.columns&&t.imagewidth===r.imagewidth&&t.imageheight===r.imageheight&&t.tilecount===r.tilecount&&!t.tiles,'hall/ground-name atlas geometry changed');
     if(includeBuildings&&includeLeo&&includeFountain&&includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push({...structuredClone(t),name:r.name,firstgid:at});at+=r.tilecount;
    }
+  }
+  const vibe=source.tilesets.filter(t=>t.image==='../'+VIBECODE_IMAGE||t.name==='Expo / Vibe Code Tours');
+  need(vibe.length<=1,'Vibe Code sponsor atlas duplicated');
+  if(vibe.length){const t=vibe[0];need(buildings.length===2&&t.name==='Expo / Vibe Code Tours'&&t.image==='../'+VIBECODE_IMAGE&&!t.source&&t.tilewidth===32&&t.tileheight===32&&t.columns===4&&t.tilecount===8&&t.imagewidth===128&&t.imageheight===64&&!t.tiles&&(t.margin??0)===0&&(t.spacing??0)===0&&t.properties?.some(p=>p.name==='sponsorPanel'&&p.value===true),'Vibe Code sponsor identity/geometry changed');
+   if(includeBuildings&&includeLeo&&includeFountain&&includePatrol&&includeArrival&&includeHall&&includeZodiac&&epoch.roadsterV2)expected.push({...structuredClone(t),firstgid:Math.max(...expected.map(t=>t.firstgid+t.tilecount!))});
   }
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);

@@ -651,7 +651,7 @@
     },
     {
       "name": "plaza-wayfinding",
-      "text": "\u2193 RETURN TO ZODIAC PLAZA",
+      "text": "↓ RETURN TO ZODIAC PLAZA",
       "x": 23,
       "y": 32,
       "width": 15,
@@ -662,7 +662,7 @@
     },
     {
       "name": "west-gallery-label",
-      "text": "ZODIAC ARCHIVE  I\u2013VI",
+      "text": "ZODIAC ARCHIVE  I–VI",
       "x": 2,
       "y": 4,
       "width": 11,
@@ -673,7 +673,7 @@
     },
     {
       "name": "east-gallery-label",
-      "text": "ZODIAC ARCHIVE  VII\u2013XII",
+      "text": "ZODIAC ARCHIVE  VII–XII",
       "x": 28,
       "y": 4,
       "width": 10,
@@ -1013,7 +1013,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -1179,7 +1179,7 @@
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55"
+            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
           },
           {
             "path": "art/source/native-ownership-context.json",

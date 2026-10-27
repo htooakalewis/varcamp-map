@@ -22,6 +22,6 @@ it('draws the lion head only above the solid Leo roof, preserving every doorway 
 it('rejects a missing lion head or an ornament moved onto the road',()=>{
  const map=read('maps/overworld.tmj'),layout=read('world/layouts/overworld.json'),wam=read('maps/overworld.wam'),catalog=loadTileCatalog();
  for(const kind of ['missing','road']){const l=structuredClone(layout);if(kind==='missing')l.placements=l.placements.filter((p:any)=>p.id!=='leo-lion-head');else l.placements.find((p:any)=>p.id==='leo-lion-head').x=51;
-  expect(()=>assertCurrentNativeMap('overworld',map,l,wam,catalog)).toThrow(/Leo lion head|Hall buildings|Plaza crescent|Plaza landscape/);
+  expect(()=>assertCurrentNativeMap('overworld',map,l,wam,catalog)).toThrow(/Leo lion head|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);
  }
 });

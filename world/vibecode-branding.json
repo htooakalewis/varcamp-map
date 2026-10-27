@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "sourceUrl": "https://vibecode.tours/favicon.svg",
+  "originalSha256": "cce91844d3802b0294959108b90a94cbe35cb715921642321a4ac2314e9f7217",
+  "image": "assets/sponsors/vibecode-tours.png",
+  "maps": {
+    "overworld": {
+      "beforeLayoutSha256": "34eed8208ef9e72eae9e536ac565b8d12f9edf7a036147f55aad18e6058abd69",
+      "image": {
+        "name": "Expo / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 84,
+        "y": 85,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 18,
+      "beforeSign": {
+        "name": "expo-s6-nameplate",
+        "text": "YOUR LOGO HERE",
+        "x": 83,
+        "y": 87,
+        "width": 6,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      },
+      "afterSign": {
+        "name": "expo-s6-nameplate",
+        "text": "VIBE CODE TOURS",
+        "x": 83,
+        "y": 87,
+        "width": 6,
+        "height": 1,
+        "fontSize": 18,
+        "color": "#f1d9a0",
+        "align": "center",
+        "padding": 1
+      },
+      "afterLayoutSha256": "970ffbe169fdee0a274c481a3750307035e419173cd9a348c789852efee53d1b"
+    },
+    "speaker-aries": {
+      "beforeLayoutSha256": "0be4b85c10abeab6933a45003c32137920934c9d186117ba0904fe5ec3bc23f7",
+      "image": {
+        "name": "Aries / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "73ff718b746a95ea740e4114186f40a3b4bfe1919b29252621901b7bfe39f6e4"
+    },
+    "speaker-taurus": {
+      "beforeLayoutSha256": "27bff6ecf8e42670b05412e61e618c71cb6ba7a6449e420a90cca2916e631f2e",
+      "image": {
+        "name": "Taurus / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "e053bb14475b9b407125ba080326f3923f38b3ddfae1fff52da6de02757a98eb"
+    },
+    "speaker-gemini": {
+      "beforeLayoutSha256": "74a9c171774403fadec0b3e88079af1187a3c0345be243d1a9768a385dc25afe",
+      "image": {
+        "name": "Gemini / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "a403b856d6c7abcdb11b906a8e758b44c2ac7cc301ad027d4d622a80a0c518b1"
+    },
+    "speaker-cancer": {
+      "beforeLayoutSha256": "9edbc579131e6a0f9fdfcdc89c7ee219d116c9b989423fef50bd6ad710bc52d8",
+      "image": {
+        "name": "Cancer / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "dce69467c388870b22b223f52527cb9a6d87aaa1f11281faf33a2fc7843f53b1"
+    },
+    "speaker-leo": {
+      "beforeLayoutSha256": "8b3aa0cc800f77029ebd0d060d13766007c4526bc7b4bf316283abed47f39dc2",
+      "image": {
+        "name": "Leo / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "962c17996a028a952c68da20bb5c73fe1a729c30443bba7b0657671621b8a330"
+    },
+    "speaker-virgo": {
+      "beforeLayoutSha256": "d31650988d06f0e6eb091a7078d54d701ae6ba22b88612edd9b056e1cd0562ee",
+      "image": {
+        "name": "Virgo / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "f164bf49f6cf81fa09c162436c18516d7c4d830f9036391115ba222c1dd47d3b"
+    },
+    "speaker-libra": {
+      "beforeLayoutSha256": "68016d5739fb23e3b01646aac98edc309dee88aba767a565c42fdc18a5ea93c4",
+      "image": {
+        "name": "Libra / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "a554cdc9ba45b33f3c3a2780d3aab3c7d40c7ce3f3129a20d740334e91a737fa"
+    },
+    "speaker-scorpio": {
+      "beforeLayoutSha256": "526f2d63e1d0a7f39f5f7045c133221dc5269bc709efffc73e52b3565413a702",
+      "image": {
+        "name": "Scorpio / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "bf68a5b7613b1fd31973b563f5b63b19766ca569104ff7ad13782c05492e1583"
+    },
+    "speaker-sagittarius": {
+      "beforeLayoutSha256": "e66c1ef247d029ffcaf8773bdc4a40d7224955df7d793bf596366890a23cc452",
+      "image": {
+        "name": "Sagittarius / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 10,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "42dff43d71b356fd6ce41001b60ecbfa214751c5239312d65a4bd7f7aa4ff772"
+    },
+    "speaker-capricorn": {
+      "beforeLayoutSha256": "d3ec330c22db8a5643ba77d30d9fb3a44e83e149584a702fcc31c6fdc76631c5",
+      "image": {
+        "name": "Capricorn / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "d600d955d406cf1f061f730da40cd124fbc428477baf5c7a1cd7f604b196a665"
+    },
+    "speaker-aquarius": {
+      "beforeLayoutSha256": "dca911c719d222b19cf95828d370e943eb9557091fcc79836bc93cc842a6eb1a",
+      "image": {
+        "name": "Aquarius / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "696d96961bc1c52ae9a798e985628bd9db00d49c63cf844998b69e86ab5b3748"
+    },
+    "speaker-pisces": {
+      "beforeLayoutSha256": "a341b86370c59b3bf09e8fe2a4f362980f1a08f7f2aba3625f04b7c9fd3c977b",
+      "image": {
+        "name": "Pisces / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 8,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "2b1eb844e9d5e085bd27a2efe61169b4f3c0721e64074c02f6922c8663d99a88"
+    },
+    "solar-hall": {
+      "beforeLayoutSha256": "c9f8a14bd88812f97a96c59eeb9d5d610b6cce347d05fac0f254f30479d0acff",
+      "image": {
+        "name": "Solar / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 22,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "3bd944ef37040a6cb7ee592ecddab5452cb1900f71fd77f90abb0aaaed7a5627"
+    },
+    "lunar-hall": {
+      "beforeLayoutSha256": "8aae33ffae01fa0aba8216ed500173b0f880ad301a553e0f83921a8b49f91510",
+      "image": {
+        "name": "Lunar / Vibe Code Tours",
+        "image": "assets/sponsors/vibecode-tours.png",
+        "x": 22,
+        "y": 0,
+        "width": 4,
+        "height": 2
+      },
+      "imageIndex": 4,
+      "afterLayoutSha256": "1691997d6ab3c073ec3364538ee2b636e6ea2aa3c9a403b9c26d73811775c142"
+    }
+  }
+}

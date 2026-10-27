@@ -77,3 +77,11 @@ node --input-type=module -e 'import sharp from "sharp"; await sharp("art/source/
 ```
 
 The SVGs use authored paths for both lettering and marks, so native exports do not depend on installed fonts. The separate VarCamp Myanmar 2026 floor identity uses its organizer-approved generated PNG and retained source master, with the official VarCamp mark as its identity reference. It has its own provenance entry; the fictional sponsor CC0 dedication does not relicense the event brand. No purchased assets, web fonts or new dependencies are used.
+
+### Vibe Code Tours — 2026-10-27
+
+Lewis supplied `https://vibecode.tours/favicon.svg` for event placement. The exact downloaded vector is retained at `art/source/sponsors/vibecode-tours-original.svg`; `art/sponsors.json` records its source and the limited organizer request without asserting an open-content license. `tools/art/vibecode.ts` packages the unchanged 48px icon with pixel lettering into the native 128×64 panel `assets/sponsors/vibecode-tours.png`.
+
+The formerly empty south-row booth 6 now carries the panel at `(84,85)` and reads **VIBE CODE TOURS** on its existing six-tile fascia at `(83,87)`. The new caption sheet retains all old glyph coordinates and changes only that label; the historical sheet remains intact. All 12 zodiac speaker rooms carry the panel at `(8,0)` (Sagittarius: `(10,0)`), and Solar/Lunar carry it at `(22,0)`. The north-wall placement clears the windows, VarCamp header and themed stage artwork.
+
+`world/vibecode-branding.json` defines the exact 15-map addition. Furniture, terrain, collision masks, drone routes, doorway portals and saved WAM media areas remain unchanged. Asset checks, the native-map gates and `tests/vibecode-branding.test.ts` verify this scope.

@@ -7,7 +7,7 @@ import {validateWam} from '../tools/maps/validate';
 import type {MapLayout,TiledMap,TileLayer,WamFile} from '../tools/maps/types';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const current=()=>({layout:read('world/layouts/speaker-aries.json') as MapLayout,map:read('maps/speaker-aries.tmj') as TiledMap,wam:read('maps/speaker-aries.wam') as WamFile,catalog:loadTileCatalog()});
-const marks=[['VarCamp','assets/sponsors/varcamp-2026.png',15,0,6],['AWS UG Myanmar','assets/sponsors/partner-aws-ug-mm.png',8,4,4],['BSides Myanmar','assets/sponsors/partner-bsides-mm.png',16,4,4],['OpenInfra Myanmar','assets/sponsors/partner-openinfra-mm.png',24,4,4]] as const;
+const marks=[['VarCamp','assets/sponsors/varcamp-2026.png',15,0,6],['AWS UG Myanmar','assets/sponsors/partner-aws-ug-mm.png',8,4,4],['BSides Myanmar','assets/sponsors/partner-bsides-mm.png',16,4,4],['OpenInfra Myanmar','assets/sponsors/partner-openinfra-mm.png',24,4,4],['Vibe Code Tours','assets/sponsors/vibecode-tours.png',8,0,4]] as const;
 describe('Aries in-game presentation preview',()=>{
  it('publishes a stage and listener zone covering every seat while leaving the social foyer outside',()=>{
   const a=current(),stage=a.wam.areas.find(z=>z.id==='meeting-aries')!,audience=a.wam.areas.find(z=>z.id==='aries-audience');
@@ -20,8 +20,8 @@ describe('Aries in-game presentation preview',()=>{
   expect(validateWam(a.wam)).toEqual([]);
   expect(()=>assertNativeReferenceInterior(a.map,a.layout,a.catalog,a.wam)).not.toThrow();
  });
- it('paints four complete logos in exact native 32px tiles without altering their source pixels',()=>{
-  const a=current();expect(a.layout.images).toHaveLength(4);
+ it('paints five complete logos in exact native 32px tiles without altering their source pixels',()=>{
+  const a=current();expect(a.layout.images).toHaveLength(5);
   for(const [name,image,x,y,width] of marks){
    expect(a.layout.images).toContainEqual({name:'Aries / '+name,image,x,y,width,height:2});
    const sheet=a.map.tilesets.find(s=>s.name==='Aries / '+name)!;

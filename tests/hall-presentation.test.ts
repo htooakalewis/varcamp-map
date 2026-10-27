@@ -1,3 +1,4 @@
+import {applyVibeCodeBranding} from '../tools/maps/vibecode-branding';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,expect,it} from 'vitest';
@@ -15,16 +16,17 @@ describe('VarCamp assembly hall presentation',()=>{
   const id=sign+'-hall',label=sign==='solar'?'Solar':'Lunar';
   it(`${sign}: authors the exact current treatment from genuine history and rejects repeated authoring`,()=>{
    const old=before(`world/layouts/${id}.json`),saved=structuredClone(old),current=read(`world/layouts/${id}.json`);
-   expect(applyHallPresentation(old)).toEqual(current);expect(old).toEqual(saved);
+   expect(applyVibeCodeBranding(applyHallPresentation(old))).toEqual(current);expect(old).toEqual(saved);
    expect(()=>applyHallPresentation(current)).toThrow('genuine pre-treatment');
   });
-  it(`${sign}: paints four native logos clearly above the original stage and furnishings`,()=>{
+  it(`${sign}: paints five native logos clearly above the original stage and furnishings`,()=>{
    const l=read(`world/layouts/${id}.json`),m=read(`maps/${id}.tmj`),old=before(`world/layouts/${id}.json`);
    expect(l.images).toEqual([
     {name:label+' / VarCamp',image:'assets/sponsors/varcamp-2026.png',x:29,y:0,width:6,height:2},
     {name:label+' / AWS UG Myanmar',image:'assets/sponsors/partner-aws-ug-mm.png',x:22,y:3,width:4,height:2},
     {name:label+' / BSides Myanmar',image:'assets/sponsors/partner-bsides-mm.png',x:30,y:3,width:4,height:2},
-    {name:label+' / OpenInfra Myanmar',image:'assets/sponsors/partner-openinfra-mm.png',x:38,y:3,width:4,height:2}]);
+    {name:label+' / OpenInfra Myanmar',image:'assets/sponsors/partner-openinfra-mm.png',x:38,y:3,width:4,height:2},
+    {name:label+' / Vibe Code Tours',image:'assets/sponsors/vibecode-tours.png',x:22,y:0,width:4,height:2}]);
    for(const img of l.images){
     expect(old.placements.filter((p:any)=>p.layer!=='terrain'&&!/wall|foundation/.test(p.id)&&overlap(img,p)).map((p:any)=>p.id),img.name+' covers old furniture/window').toEqual([]);
     const t=m.tilesets.find((t:any)=>t.name===img.name),layer=m.layers.find((t:any)=>t.name===img.name);

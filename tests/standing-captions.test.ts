@@ -1,3 +1,4 @@
+import {VIBECODE_CAPTION_IMAGE} from '../tools/art/vibecode';
 import{spawnSync}from'node:child_process';import{resolve}from'node:path';
 import{mkdtempSync,mkdirSync,writeFileSync,rmSync}from'node:fs';import{tmpdir}from'node:os';import{join,dirname}from'node:path';
 import{readFileSync}from'node:fs';import{createHash}from'node:crypto';import{runInNewContext}from'node:vm';import ts from'typescript';import{describe,it,expect}from'vitest';import{buildMap}from'../tools/maps/builder';import{loadTileCatalog}from'../tools/art/catalog';
@@ -69,7 +70,7 @@ it('keeps the shared beach sheet closed to the overworld: expo captions belong t
  const meta=json(shared.meta);expect(meta.specs.map((s:any)=>s.map)).not.toContain('overworld');expect(meta.specs).toHaveLength(12);expect(meta.producerSha256).toBe(createHash('sha256').update(readFileSync('tools/art/standing-captions.ts')).digest('hex'));
  const forged=structuredClone(meta);forged.specs[0]={...forged.specs[0],map:'overworld'};const cwd=process.cwd(),dir=mkdtempSync(join(tmpdir(),'varcamp-caption-family-'));
  try{for(const file of [shared.meta,shared.svg,'art/source/hub-nameplates.json','tools/art/standing-captions.ts',CAPTION_IMAGE]){mkdirSync(join(dir,dirname(file)),{recursive:true});writeFileSync(join(dir,file),file===shared.meta?JSON.stringify(forged):readFileSync(file));}process.chdir(dir);expect(()=>readStandingCaptions(json(resolve(cwd,'world/layouts/constellation-shore.json')))).toThrow(/family/);}finally{process.chdir(cwd);rmSync(dir,{recursive:true,force:true});}
- const expo=readStandingCaptions(json('world/layouts/overworld.json'))!;expect(expo.image).toBe(EXPO_CAPTION_IMAGE);expect(expo.rows).toHaveLength(12);expect(expo.rows.every(r=>r.map==='overworld'&&/^expo-[ns]\d-nameplate$/.test(r.sign.name))).toBe(true);expect([expo.width,expo.height]).toEqual([512,128]);
+ const expo=readStandingCaptions(json('world/layouts/overworld.json'))!;expect(expo.image).toBe(VIBECODE_CAPTION_IMAGE);expect(expo.rows).toHaveLength(12);expect(expo.rows.every(r=>r.map==='overworld'&&/^expo-[ns]\d-nameplate$/.test(r.sign.name))).toBe(true);expect([expo.width,expo.height]).toEqual([512,128]);
 });
 it('enforces the approved six-row atlas rather than growing to512square',()=>{const spec=captionSpecs(json('world/layouts/constellation-shore.json'))[0];expect(()=>renderCaptionMaster(Array.from({length:7},(_,i)=>({...spec,map:'fixture',sign:{...spec.sign,name:`row-${i}`,text:'A',width:16}})))).toThrow(/512x192/);});
 

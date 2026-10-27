@@ -59,6 +59,6 @@ describe('Crescent plaza and expanded circular speaker ring',()=>{
   if(kind==='collapsed-circle')l.placements.find((p:any)=>p.id==='leo-building').y--;
   if(kind==='misaligned-return')l.entries.find((p:any)=>p.name==='from-speaker-virgo').x++;
   if(kind==='blocked-promenade'){const layer=m.layers.find((l:any)=>l.name==='physical-collisions'),set=m.tilesets.find((s:any)=>s.name==='navigation-mask');layer.data[92*128+35]=set.firstgid+1;}
-  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza landscape|Plaza crescent|Native projection/);
+  expect(()=>assertCurrentNativeMap('overworld',m,l,read('maps/overworld.wam'),read('art/tile-catalog.json'))).toThrow(/Plaza landscape|Plaza crescent|Native projection|Vibe Code branding/);
  });
 });

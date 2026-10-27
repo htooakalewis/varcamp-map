@@ -1,0 +1,450 @@
+{
+  "version": 1,
+  "base": "5c57fb4385d13300f6472516708d520e2d71092a",
+  "transitions": {
+    "art/source/expo-captions.json": [
+      "6012f6e07caed3cb16979415100091d4b25143ecbee54f55c3abcc282dc069c4",
+      "f4288b45ef2abf5d87e37d3283cfb563fec42e186cd76131efcc0f6d6771d2fa"
+    ],
+    "art/source/standing-captions.json": [
+      "64fcc9df5b5a986249eaf1fb5223c0030d353fec619bfb5bb194cc154cf06b7d",
+      "6efaa2fd29d1aa9425ee393ddad2aaa2726f368b89f303036c080229af170d80"
+    ],
+    "art/source/world-ambient-air-district-device-1.json": [
+      "a18f4c543bb68fe021714054c1c7224c1dc3db06387ae530f64e1f07eaf8c23d",
+      "f5419a2380580463c5a5853dccde0287ed18ccae78e450e200cd1c480a047aa1"
+    ],
+    "art/source/world-ambient-air-district-lamp-2.json": [
+      "8bc1e3cdbeb83c852a815bbb87d2e0691f46d0b5f9f81a5fdce14595678904ba",
+      "c703dcf81b6876ec136540d9447e95ea08b518c225289b162085968b7f4458bd"
+    ],
+    "art/source/world-ambient-campus-exploration-device-1.json": [
+      "a23c569e37566140cc1ce084c4370e7d81c0b6f7cb8ea7796e9883ebb3aa130d",
+      "d042a3f0ffa2bb741f0c0c9b64193e9f0862a1b5dc6d683a6b009d0b10ecd6f0"
+    ],
+    "art/source/world-ambient-campus-exploration-leaves-2.json": [
+      "c40b31738c0688df22609083d1ec54689ef54fc4c275acdd4a8f777489be317d",
+      "22e2e34f4ad48bd4354da2d75dfd8e8da527088efebd368f963a14245efe649a"
+    ],
+    "art/source/world-ambient-comet-maze-lamp-1.json": [
+      "0b282bf2a5c2150148f206c2b717477af6ee4267db2a2750291cff71354cb928",
+      "84fe23ca1ca4eba5bc8a42d3c53db8a56c6326679cc8859ee16edd097fb3d2e7"
+    ],
+    "art/source/world-ambient-comet-maze-lamp-2.json": [
+      "5da00c9ffc5039a76272e53a3981cf79a8e1f266f96912e8bc6443e25f7e385f",
+      "0c2658ebb64b06bd9db8ce70c647fd92a08f88b20dc5755efb5655b99f23bd5b"
+    ],
+    "art/source/world-ambient-earth-district-device-1.json": [
+      "f203017e209a1cf215beb6ee2a6fa0c55c2e6585607b1fb9f507f3780ae48b81",
+      "6a66af900c7b14936515e268899a11738b34bd81c1be80773954db2570920ace"
+    ],
+    "art/source/world-ambient-earth-district-lamp-2.json": [
+      "3d98819fbea1ed206f6f46cd5504ddc8f08ca5a632eaa8238b24798b2a5450ae",
+      "d87933f0781213208f3b13f07f70559dd29b323a3bba218dc4325795434908d2"
+    ],
+    "art/source/world-ambient-fa-ship-fish-2.json": [
+      "4eb360c41f4c998b76ee0cf1c2d110b3ee1b482180502425fe1bddeb837ef97f",
+      "974bfd5cd14d17512d61e2da27436188cd9604c4dcdd31dd22dabc82d2e81bce"
+    ],
+    "art/source/world-ambient-fa-ship-gull-1.json": [
+      "539d4c353889aaaa2c5bb38928220e5c1b508d8a11b67ba994d46505c67466a3",
+      "2ee398143b7c357f67ab813c53fa4243c68c2c388fca8b9544cc74cd5c216a94"
+    ],
+    "art/source/world-ambient-fa-ship-interior-lamp-2.json": [
+      "ff52e3f7c83af2c7594bd92aca0dd548b84be14ce48c4720ee04c1e96d6c7757",
+      "1fac405a903c18a6c291fb85cef4ce891c654db4a91b886f8dcd56b309572981"
+    ],
+    "art/source/world-ambient-fa-ship-interior-steam-1-upper.json": [
+      "83270c1e53991a9f4e7c63987e279567fd0f0008cc03501558444a71068bc7d2",
+      "f4d997409fb220de3c61e17a99dd6abd07b07aad6b90e9e1d57af53eddb01a17"
+    ],
+    "art/source/world-ambient-fa-ship-interior-steam-1.json": [
+      "bc085626bafdd9493bc0a26253a2070adc40e7547516e19241f0ac2f91ac3dba",
+      "a8a823f8ee2b50f2603fde3cf7c0599b81037014b0ef97eec61324476b53e111"
+    ],
+    "art/source/world-ambient-fire-district-heat-1.json": [
+      "6c5f7b5992c7fdf097041d814bba394a31b456ae6adb8b28e948e84eecdd4520",
+      "4236572548aafaabd52c0f35360d9eaa754c0e170920970597c701383d0c591a"
+    ],
+    "art/source/world-ambient-fire-district-steam-2.json": [
+      "407bb917a23f0fbe4703576e26b7f000a37a6598550c50f9fd44002590fe6b07",
+      "86f7eceee9420dd283daf71b7e128b7da2744d9c3d7be1dc2f741a92a6189573"
+    ],
+    "art/source/world-ambient-hidden-observatory-device-2.json": [
+      "52f897f80a84c0aed1d26d59159ba0b4292f37d4afb1eb4050c36f22125bd099",
+      "2580a445621ce7dde8b58d3e01002325192521c94385399310e2afeedc7d0991"
+    ],
+    "art/source/world-ambient-hidden-observatory-instrument-1.json": [
+      "4217461871d9bca2b4ad0b315cffe49fec8a098bce172303c0bf24d5bf5e8ee9",
+      "448ba9807302432030e6f60826c6413e28b5cb45bfd0599f7b0706c674b7a39d"
+    ],
+    "art/source/world-ambient-moon-cafe-bubbles-2.json": [
+      "f9f53bd4373e78bf89c5d360072d766671de88ebbdce186f2d508c2d93d08e45",
+      "0ce76a6bfd4bcbd56e0f2e16f644d17bba1f0a9954a9524e658d7dc4f166ef62"
+    ],
+    "art/source/world-ambient-moon-cafe-steam-1.json": [
+      "d37f4986930b03f295453c4ea176eb123a8cbcd9840699564a76cf94a2832746",
+      "f9492dcab58eb182f6216b42acd598324140a2e0801c37649bd3e8584b798c0e"
+    ],
+    "art/source/world-ambient-moon-grotto-crystal-2.json": [
+      "5ad8a7721110c02628ca0d9d867dde52654eabb9e0081e73a6cc0df6d3b2bd9c",
+      "99a4d3c4bfb9b6305c29b91d90bd5cbfac514aef8fb9015cc5ba1cc2c95781c0"
+    ],
+    "art/source/world-ambient-moon-grotto-ripples-1.json": [
+      "5029cc605ed367173f5e570e214e4b9fcbcd03fe97677a2df9bf91be34970540",
+      "70b4d15dd0d480824181d76eef34c10b91f265ea9cac8ffdde4d743b40b91043"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-1.json": [
+      "61bc2943072620730a90b5d52be6c655b1f42e3f111dc696d7b18f78a67ba74c",
+      "6c97c165ea6093387ef2d85f1fe5d9154209c0a2526f50ae8d0ce3b81280fe42"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-2.json": [
+      "6a033eccd2349e3495ab74fffd763d41a35b45753b16ff7e59b495d96f129c88",
+      "a86b5e179be80fcc6d541d324c3adbd21550edbf4327c3a72fdbae18d081e147"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-3.json": [
+      "686a738fc7d61284f6ecadef5f3bdcb16d49e58bc84c3318845b8b35d1820e15",
+      "138c98ad5a7354383f4d3ebffbdfe5dd164efb7120cc6356652b5e306fb144ca"
+    ],
+    "art/source/world-ambient-orbit-maze-lamp-1.json": [
+      "9702d01f5349840b6840c471e0288dfdec6202aaa0055e1796f20f599f6dd1d7",
+      "7ae109302714d47f823139b84950435cc7397f1716c8a2f539c5250305910d54"
+    ],
+    "art/source/world-ambient-orbit-maze-lamp-2.json": [
+      "ece62e23ef96511fe6543a22f15d7de3c77ad52dae33710c1844e3813c2ccc17",
+      "33192f41916aee69e6f72a2965b9beec0d89cf56bfe75ba36112f99ad79f54c6"
+    ],
+    "art/source/world-ambient-orbit-playground-device-1.json": [
+      "5e4af04e73e5312053ac34feff7d2f15262f4aa02bdd93e3925bd8156570cf96",
+      "425124cd53585888928181fa95aa7595cfb3b6d0ea3db6dc91f2b906c0b1407c"
+    ],
+    "art/source/world-ambient-orbit-playground-leaves-2.json": [
+      "f2a0e3c808e328a711b5ed0d02d0d7110e151211e928004850be939917b28eab",
+      "451f223440b5fb25b47c73e7e92fab2c8d1ff04eaa96e22b3438816d77224578"
+    ],
+    "art/source/world-ambient-star-garden-leaves-2.json": [
+      "037201d8649cfc6423f96d284f605912d65e5aaf7240abd7c262a00ab4e70263",
+      "e0a2934cae62b0cb26658862653f7daa266f0ac1f6af9206eaacea7b8c97ed64"
+    ],
+    "art/source/world-ambient-star-garden-ripples-1.json": [
+      "77d6ba31f6317ec7d2b71cc0c1ed7d66efc33eccf5c565984dd95996e07a2460",
+      "5b3db251f6aab179bd7ce6c05ae2785194be558dcd3a5e78c57eb8f8b0c032dc"
+    ],
+    "art/source/world-ambient-stargazer-terrace-instrument-1.json": [
+      "fbd5adb2f1ebaf73c7ee539cb7cef25c77fa6ad552d76c6c18af6cf0a18b2bee",
+      "45faaba60679a5eb3e931a29f19ef928925a7b797d472f313801db522eb3269a"
+    ],
+    "art/source/world-ambient-stargazer-terrace-leaves-2.json": [
+      "ba734a44d17660295a5c2768c2a92e6b9fa20d176e25be1fa86987679b1e3fcf",
+      "c16d764208df586193f34e7e85bdd85ae34597c749e93851cad9d3e46d91b8d5"
+    ],
+    "art/source/world-ambient-water-district-cascade-2.json": [
+      "ed7b8ac17e5cd3d0cab27cabb552ea7877f1d6645c086d11a3996f7d59a3e7dc",
+      "5cfd3a3d5c568aee05b6c89a2d38c66afb83ff80467e0dfb099f10ccc6f2f067"
+    ],
+    "art/source/world-ambient-water-district-ripples-1.json": [
+      "c514c59afaf40dee882be6bdb5c40283262428e7a32d5742737af7391135ad8c",
+      "bfe56217ecd2b9a323b9d4ef2dd9ec787fbcbcc359ba2d21453996ffa3821d00"
+    ],
+    "art/source/world-ambient-zodiac-festival-park-leaves-2.json": [
+      "9242a736c84be7a46e65efea22fae5c3f4dba95ac5cdd6edc5d6089b9e66612f",
+      "af352d75bcdc6c54a8e33174ba50b612ace8ab315fecb19bc9f492ff9990ee85"
+    ],
+    "art/source/world-ambient-zodiac-festival-park-ripples-1.json": [
+      "c67779236f0693a06c45b7a369a15944a6bb73a61dc3faa7e19bf77f292c5878",
+      "692b37f7971b6407f7ad7741c5bacad653dd249451b7142e056a55c332254c7c"
+    ],
+    "art/sources.json": [
+      "50711c52b4e79823a6b776a99f1b2997686931585c2274ab4ae52f8220f9ba70",
+      "4230622d9aa626ae7ffb962f5dc65707f6e210d79d529a5be2c6294799eb77e4"
+    ],
+    "art/sponsors.json": [
+      "acbdace1c2450bb6232eeee3214e412cf9eb96d3f4b2d095fd6ab71aef56552d",
+      "4b21160c0edec5a125ae5587f4aa6e964f453ac6eb670f495374e280c65133da"
+    ],
+    "docs/current-release-facts.md": [
+      "e16baeef9567fdf7632a2970e98a2efb08555d0f9ac76467479f3c429b44c1df",
+      "eb4c938d8e302b6e9ccb784652feab8e65467da76b9b8fe1134c1918dc437c00"
+    ],
+    "docs/operating/sponsors.md": [
+      "3e13e9ae7c14b4c26d447e1e13af7661c873b1d72c39fec9e12d4c3698c6c6cf",
+      "2aa415ee3f4a004fb5ceceebaffa55adab88817f5383cc06fde47f86bd9b1978"
+    ],
+    "maps/lunar-hall.tmj": [
+      "e78676b6e010e66caffa8f5e5eef74fdf1fbc7695e3bc073d20772cae7155fe2",
+      "f54c32fe9acde5da4d4161bb677d7d8c136d0c822a293621a747c333c560a41e"
+    ],
+    "maps/overworld.tmj": [
+      "71bb18a14550c37b90596b64c819b3643ce64ac56e070e7f710a678f7c845be1",
+      "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461"
+    ],
+    "maps/preview/lunar-hall.tmj": [
+      "599549c7b5895636623cf8ee1a262e05ecd3197d3297f42bdf95974eb73237ce",
+      "e177d8b67e1963dd663b3287798b00a0219fa96a5d76ba7f8a87a4b20252c989"
+    ],
+    "maps/preview/overworld.tmj": [
+      "d1a0be3cbe4a75c7f207232f5d1b2be070500cba74a183bfe58df0cce2116596",
+      "9776df066c5ce7dfea24f66e1fa5cfc82af40f81f7de4b37906cbd11ee5480ed"
+    ],
+    "maps/preview/solar-hall.tmj": [
+      "45cf247bbd6503c577ef7987085aebde0c6b93c8fcf69e084906c32bf07a5f53",
+      "4af19c79f57201e4450dba873a9ce80ff875499ad006e00cdab236552fe45142"
+    ],
+    "maps/preview/speaker-aquarius.tmj": [
+      "8ce4ff441b5fe30674b7173f513356f6d29fc0536140ad41e9a67eb344c76b7c",
+      "e3ace710168464af81dd09d2280914601985cfa298296b7d1dd79cd805369653"
+    ],
+    "maps/preview/speaker-aries.tmj": [
+      "98901e30aaaee6f843b135c646c606118ef03ed5f4d13469bb830bafd3b4a957",
+      "79569bdc24c9455845ebcae8daa8d45cce156846192fb6c3f2d80059fe97ac48"
+    ],
+    "maps/preview/speaker-cancer.tmj": [
+      "46056aa869fdbcd6804095c022a0ece54e1d3df9402dc106cd14f04f39ee8367",
+      "8532990823fe15ba2a01eab8389cea8d443846f9da492a9cb3e81d8f06daa03e"
+    ],
+    "maps/preview/speaker-capricorn.tmj": [
+      "33bfe2f943ef4ba81cedecced2ba266bf38b1e40f793cf70c5b9163aec2683ae",
+      "e71c0cf9c4a870ee664af3888bea810d3efed780fc0af17f3685faf8542f7e24"
+    ],
+    "maps/preview/speaker-gemini.tmj": [
+      "4338f19fcd17d4810fce5591e7e64e4f47cfda1b9eed476d3c62b72116c52c60",
+      "81cb21e9aa7d0f600558a8e335c95e33ca2c2c2a0eb1f446e907c5d46f8dbe6c"
+    ],
+    "maps/preview/speaker-leo.tmj": [
+      "e32562b6b632a9a8ced52562764b0e897d014ced411ec6e2f23574faaead6440",
+      "55241f6d8ad54ea3c00597e1170b9c075ca1c5b821348826125e11f872d356c5"
+    ],
+    "maps/preview/speaker-libra.tmj": [
+      "4ca7afce94e7ac27918634e9d0463b2a543feba040edb51b528b39f962760bc5",
+      "796075ed570a8458abbc951dd0d852f575ed5ca3f04c291cfa17ce9bdc3e6389"
+    ],
+    "maps/preview/speaker-pisces.tmj": [
+      "533f52a016fa94b724b6a61dcf6a05cb58309f6c627787d86ecb66277487e4d6",
+      "489ca9fec0127ce531525ef48ea9a8f5596ed2228e407fb7d592814c6fc11820"
+    ],
+    "maps/preview/speaker-sagittarius.tmj": [
+      "d125fc5422e0758ba7070cf04143b2d844f8d5af8ccc32c6d33be9de884943e8",
+      "a3432167555aef30f7f433d088b948773ed715f846427748136a27ee3e31c39a"
+    ],
+    "maps/preview/speaker-scorpio.tmj": [
+      "7fa4643d6163c2ab1f7ff1370c7a5c90d200fff429fab27bbaa93639681b72d3",
+      "2a07bd241ba6548ea941dc0c5614966b474ee6f4c4a408ca8b1e9879d4017133"
+    ],
+    "maps/preview/speaker-taurus.tmj": [
+      "c45498e9a60d17462437d7aaf70e5c9e3a202c9d4570c2b25d89cc29e1dcb570",
+      "b76e6f7bbae3fb369f16926a738addf3fbffc26acb65404de09e1c161d51802b"
+    ],
+    "maps/preview/speaker-virgo.tmj": [
+      "f80892948cd7a9a14c694e84ed8bb1a8d88bd07db5522773922c2374d36125f1",
+      "f087295040a7c5656c6e13d75b4776dcbce2ee0d8972773c3d7f797f72180146"
+    ],
+    "maps/solar-hall.tmj": [
+      "6578ecafc0fe634a9f931a4a7bc83b7884527d7a253741732fff8ae76a03d7b3",
+      "b7f7364a891490309ecd7615f2688d55fcc7412b578348e8a2f710b722598942"
+    ],
+    "maps/speaker-aquarius.tmj": [
+      "9e447074980b1f306a61f5a7e14ae8a2760c88022a4d355fd81fd0ba2155ef8e",
+      "960c1c46ded22a03b9c6000b6eb653959f5b96b058b7a68a049253ee55c4b562"
+    ],
+    "maps/speaker-aries.tmj": [
+      "86affaec2c2708b399473628b1c41edf0cecd102ab08cc172d76b41226c28842",
+      "79cd84dbbae464e10bd45038546920f3fea64d439065f9da54132f5a36483654"
+    ],
+    "maps/speaker-cancer.tmj": [
+      "f001366b47202861afe31f382bbeed7dbb82c66e2d20f94eb9272cdd5cdc72e9",
+      "0b21285f9caf57984ae550c0f50cb7a72afb3296f22aaa668900bd746360902d"
+    ],
+    "maps/speaker-capricorn.tmj": [
+      "7deba4740589611adfc00a002e5d4b17add8d4c8a154d3f8a2646412d56a9f08",
+      "7fcea4b12e404f16b3fab06ac0ecd92298567eec84833d94ade0cda35d778ad0"
+    ],
+    "maps/speaker-gemini.tmj": [
+      "1d876e3663fa26186b5e53d93ff4daf5e4f0b0004f0747b3fa035d433df77816",
+      "eb7994805f60d1b34d3767a8fbbcafe7b18399fcfe9fb92ddd966176e20fa6df"
+    ],
+    "maps/speaker-leo.tmj": [
+      "09726db6388049f410168696202fe175ddd432d8528efdeffed9203ce4fb31d5",
+      "4e528ac0372b0a9992ca339f6c4c62cdb9c171120f47004a93fc43115957d928"
+    ],
+    "maps/speaker-libra.tmj": [
+      "ba792a7690a3ff78f46e128b99effd80de5a8065a84ce43b79cde909397387bc",
+      "a4eaf681e2015d0712fd39a508b1b50619fa8f762fe01b03ffc68aa2be409a2f"
+    ],
+    "maps/speaker-pisces.tmj": [
+      "5589a9460695662db5dd9163efcac5d122dc22018734db0639e7cfa4092163d1",
+      "433a4b4844fba86b96871cbc087da6bb1eba509896826aab92639f25d0832b82"
+    ],
+    "maps/speaker-sagittarius.tmj": [
+      "31789147c20d3c08c17a48b34d010cc8d281ef08ef33970cc2dbcccf39a5047f",
+      "3b7b6459d46a8cb08f2a791c143d6796f3d3445e90efc130b7fb44bdbda77e01"
+    ],
+    "maps/speaker-scorpio.tmj": [
+      "c0f7b0ed16b05c43418b7a74782d429e636495338599c393d436ae6cda4e9518",
+      "4e0343c5404d8e74fefc91f7a705472a61d6451c14795e99504c28288005e336"
+    ],
+    "maps/speaker-taurus.tmj": [
+      "4cf8c236af5056d2f85e792f23b3a66bf25abef5b239c641ce2b2104be2305a6",
+      "9b1e34dc907daa58dcca9e76af38b0b790f1600c55906ef6060f24a88ca80796"
+    ],
+    "maps/speaker-virgo.tmj": [
+      "52e113d3f1f7a1a8a3d7201e4019bd27e5dcf0fdd0a531669b688353cfe6fa52",
+      "115270bbe665a894c5c7ff23c1f29bd4d99ee65f33fd70201b47578369b543e9"
+    ],
+    "ops/bots/config.mjs": [
+      "8e585e0c6e5b8c0e93b081fe13070f22fd7db5d2b05a481c17b7497e105ddf5d",
+      "6da3d164cf862f238eedbfb05808b085188a4a07982e74d1bb41349e7cbe3805"
+    ],
+    "publication/verify-source.mjs": [
+      "e30600dc66d176642beb1e674072873c377a051297d6a800f2bc8f24e6e2f268",
+      "e98afeed82be62df8a5efe55b50b76afc53475029c9ea6b063f6353f27a4e03d"
+    ],
+    "src/bots/lyra-routes.json": [
+      "db9ed99f445985b03fb57ec767e6659e482ec7e75a38477a1789f60d24e70052",
+      "f964fe7725d6e1d1d56fbbd52fcaa1928f41da8bd285c320a8765d7dceba6ca2"
+    ],
+    "tools/art/standing-captions.ts": [
+      "54795deccb02c1e73535e4180fd014eeeb100b740029e358cea56aaedd1759d8",
+      "36cda455b0282e810312a7d921d914a11cf37d5239bc30c67ad28fd3fac2d0e2"
+    ],
+    "tools/maps/native-ownership-context.ts": [
+      "1a8d3d6d8e5f224804f09995d3bbf0d2bd37d60431aab18d18bda29779cd4f55",
+      "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
+    ],
+    "tools/maps/plaza-native.ts": [
+      "456d3888ddb62007464e6cc6f3f1e93e1b603ff4cfb18553cdbecbe4689c506a",
+      "1c10ac69d96222ae0e8d83f643e0e4288fab6e6920e48eac9446d4598b424722"
+    ],
+    "tools/maps/reference-interiors.ts": [
+      "5910f1964ff46cbead318a6839876af16bf3b2f8d1bd23c0c5a17aae98fc8bfd",
+      "fe20fa381f8e4a300967c8c0d54965133877610f18099ca71d322eef7a84508d"
+    ],
+    "world/layouts/air-district.json": [
+      "f68c50d88a7b5a2122e5bf39b4bf94214db4372d1d96a2569b768005d2f0bfcc",
+      "386b1178e53dfc32512b6eedb6fa6521c1e3504443757559fa1abf878cea2c28"
+    ],
+    "world/layouts/campus-exploration.json": [
+      "7982db05f90ecdde4449371d9739092e36b3020ffbc2d0d22f56807c522463c6",
+      "85b21ed49de327682b62779789d7ca0e8dec3856254e5438f1645211bc6be14c"
+    ],
+    "world/layouts/comet-maze.json": [
+      "a8041a6debaeb1fb7f7688d6c24098c240d5bedd29dd15536e45c408966418ed",
+      "6bafd491eb4b59ca9047843475f8d2060b76158d4335a7b4ba9593198b534979"
+    ],
+    "world/layouts/earth-district.json": [
+      "e78b5ea5cd11cdb5aa6242850162fa4858bd7e2420e963fd40ed61ce9073b495",
+      "c0775c692d6f58f7f61f1af48fea6142bc48e320331d897d56c0ae93297a7976"
+    ],
+    "world/layouts/fa-ship-interior.json": [
+      "89395ee795ac36f6b166ca902963c95f107c9429b93429b5f6d83cf12c8e9e3e",
+      "cb2d911f8a80774ef53e2bddcce1359c0c89132efa0382276ec754c9d0181cfd"
+    ],
+    "world/layouts/fa-ship.json": [
+      "e25ac091ad8eb53e5e089209f313f2d18156ac2c6944528263ab4f80c34c72e5",
+      "a1d91fb55e92cc7c59f1b1f2e25a965bdbf128e7240f5f4d8346f4c4496e5737"
+    ],
+    "world/layouts/fire-district.json": [
+      "e92fc2529371a0cabff774f7615161567d4e5dbd082c8c3b6e08c75cc029fbb3",
+      "fd78c807460fa10acdc08dc2bc502b8dc130d1cdb13a315b69345a5dd265b361"
+    ],
+    "world/layouts/hidden-observatory.json": [
+      "bdca0a969eeca4c0a44082baded614e8f60d8ef26e755229a2bb7e0d818561df",
+      "c4c3816a2e0d77424d999a6e1b7a5ea3d4b21c3f0d2ce66e33428714f2c218d6"
+    ],
+    "world/layouts/lunar-hall.json": [
+      "10cd50ff24a6cc29c41bd37cc1222e4f74573a468e2ccf315e7c4a3c8b7060d0",
+      "d0860fcc197902e935fa7c9aac7676ba9b86ff462e3abd88a017ddfa742974d1"
+    ],
+    "world/layouts/moon-cafe.json": [
+      "43863ac1ccc1ddbe7e31c592c244e6f62928ea5c28733ec717b21d511469553f",
+      "906c7c6f7219b3c3477ed3d2f392d822a9c6f2ce14a9a9989a22fed95f072b58"
+    ],
+    "world/layouts/moon-grotto.json": [
+      "f0dee8b3f2d205c9afa8a8812812b883ba571f8a9c2d511c58b4e480ab26c876",
+      "aa57bb971c09814eee1b822e32e6782b78f37a76a5ff84b2ad68d076863ee9b2"
+    ],
+    "world/layouts/nebula-arcade.json": [
+      "de13b51afceaa831b385deb34bcb61a8123d490c00ace8d2ae45f6431fc1a40d",
+      "4b49c6de27acac7b637a0c9d1aa8424de83958208b4cefb0c66b23ba0b6d4f3f"
+    ],
+    "world/layouts/orbit-maze.json": [
+      "bc95226c6c917472fd89c2aaaa30e08be06a08cb05a337d534a906b8502c40d7",
+      "404e6ec01018204b989aacd0227b6fac102777533c36e7207c187d9ffc1be078"
+    ],
+    "world/layouts/orbit-playground.json": [
+      "3590819464321b98143f791843ed639f23191c347bb1daadafc1fb6ac451d6b0",
+      "19178749195d520bca02ee17c2fa9d54bceb3e30797c0974309ae4e99075f93b"
+    ],
+    "world/layouts/overworld.json": [
+      "776bd703083b8835bd7b23981e371f5fc212c831c1ad994da2f749ff1c6b706f",
+      "d21f3cb13dbaccc9a47cf42ad9ee424f32673a80465ff1357430d25fd1342b41"
+    ],
+    "world/layouts/solar-hall.json": [
+      "29f533abf8e2d29080202f9ebe4dbead0ce90bd29a1ba7b47084ecc03630d652",
+      "9a04f7711a8a9f3725704fccae9302db9e6d38fe7b5e0fb93aa1aa4fbd9533d6"
+    ],
+    "world/layouts/speaker-aquarius.json": [
+      "7ec49552420b7194d86d80b22d0eddff152f3168f1422ec28603e7d524dd62e0",
+      "8a5ccfc61b1613743111ec7a003df3749c1f827becf64d44d758146ebc107468"
+    ],
+    "world/layouts/speaker-aries.json": [
+      "b6a0aacc567a86d4a9b1865b6377c2c732b0c817956c6977aa042491f823b938",
+      "df09f5f835794d830188728a54e33c24c10379e2ffe0b214d58d31feb81ba754"
+    ],
+    "world/layouts/speaker-cancer.json": [
+      "9cfd88fb3a066af1e13b4d9f903039d1f24f2641d53b6dd7404cc7388d214d6e",
+      "84d701fe8337a870ed679a1b2d984be81090fbed975d6e883ca1930b332b66dd"
+    ],
+    "world/layouts/speaker-capricorn.json": [
+      "bda224eca52c1149812700f7d54c21a25077e66b41ada3f6aa19b3c2a36bc311",
+      "441d301214879ef96fd0299b01fca49624fdce6540e863daa4cb50395851e4c9"
+    ],
+    "world/layouts/speaker-gemini.json": [
+      "a8a9da0e224994087e7103f6e921aeae969659fd690583a1c93407b20252aa37",
+      "5206beae3296cddfcf39d06c3eab3a52c9aa92ea325c866f630766f380a6d42d"
+    ],
+    "world/layouts/speaker-leo.json": [
+      "f35342f9d42ba66ae09578b6cdf15b38854a47aa5a80be34f26521dbcc8bcb0f",
+      "e8afe3d98b080a3f7a1cb3e020c5370759ef58bd94a50d155162bf18b87dc1b9"
+    ],
+    "world/layouts/speaker-libra.json": [
+      "1b6c2c624db2958c1c966090041b43fb6cb39b16185eba87121bd006f0503d6f",
+      "f1dc5f1b30207af962ee9e62e69f663bd0e4c9ef18b4bf85a2ef098be041e9a5"
+    ],
+    "world/layouts/speaker-pisces.json": [
+      "05d847995ef2f28eb7368dc40825528b5888d0670055e41fdb8bf9a7e776ab0c",
+      "2dce1c4f9bdcf69b741c1305ff7551ae62cfa683ec579933552601f5f11ae682"
+    ],
+    "world/layouts/speaker-sagittarius.json": [
+      "3ffc605bdeda1254582b3da66304bb601a8095be2ff98eb845a775c1f66a6d2f",
+      "ea966bc69c438059110e681e7bcb91135aedde826740ce0e7034accb0d6606f1"
+    ],
+    "world/layouts/speaker-scorpio.json": [
+      "f9e409853b3dacc04a41f6d743dd07165a8a44023a768be77327893b8b00e643",
+      "5c320a7e1e891b132626147ea0ed1323d64fd5c370b79d93f7faa83b4cbcb348"
+    ],
+    "world/layouts/speaker-taurus.json": [
+      "c762bf1b9458e70f1e8a561309896908b2033f622e0db487741287b4bc223151",
+      "8403024384e70d2bb7e8e424c828b9952f3e13755ed31a3de6b7e88f33d561af"
+    ],
+    "world/layouts/speaker-virgo.json": [
+      "0ddb45472bd1eaf13d7beb2da97c887a4b5caab65931868394da90112a3b2d1f",
+      "8f3fd84ee2773320a001c091e7157c1fb46b626a26195b4717430f7232bd4e21"
+    ],
+    "world/layouts/star-garden.json": [
+      "38eed6fbe0549c27c52d7ad992b8a64e6b94ee9bd73ec867b3846354fff11f87",
+      "3e3a4ba92eeb092e2396b11e8571d6302181e2c8b471600554e1f1fea9ba6987"
+    ],
+    "world/layouts/stargazer-terrace.json": [
+      "d64889979ee8c18fe7985a11697703d89e2890ec09f079ac0b4007e64e165c51",
+      "8bae191d46fcaf13e533d0c2e0483117725917772629bbee7d58218e14702967"
+    ],
+    "world/layouts/water-district.json": [
+      "cd6c879707f320da680cc377ec0bf502a5fffcd72592d5ebe270577afb7f1d2e",
+      "b6b149f814fe4dd77d4378591684f2610b4b0919e9c77b18cbcfd58969218bbb"
+    ],
+    "world/layouts/zodiac-festival-park.json": [
+      "aa1a7fbca1791e80decf14c8d0b9fb916f203fbab4149eacfbb63655b7d16417",
+      "aa34b6a6d706fa17a99bcca4b7353a7549c146be80c7ebb4eb7d6b435f40a17f"
+    ]
+  }
+}

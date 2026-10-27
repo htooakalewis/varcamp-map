@@ -1,3 +1,4 @@
+import {preVibeCodeNative,beforeVibeCode} from './helpers/vibecode-history';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
@@ -16,7 +17,8 @@ describe('approved Aries treatment across all speaker rooms',()=>{
    {name:`${label} / VarCamp`,image:'assets/sponsors/varcamp-2026.png',x:15+dx,y:0,width:6,height:2},
    {name:`${label} / AWS UG Myanmar`,image:'assets/sponsors/partner-aws-ug-mm.png',x:sign==='capricorn'?12:8+dx,y:4,width:4,height:2},
    {name:`${label} / BSides Myanmar`,image:'assets/sponsors/partner-bsides-mm.png',x:sign==='capricorn'?18:16+dx,y:4,width:4,height:2},
-   {name:`${label} / OpenInfra Myanmar`,image:'assets/sponsors/partner-openinfra-mm.png',x:24+dx,y:4,width:4,height:2}]);
+   {name:`${label} / OpenInfra Myanmar`,image:'assets/sponsors/partner-openinfra-mm.png',x:24+dx,y:4,width:4,height:2},
+   {name:`${label} / Vibe Code Tours`,image:'assets/sponsors/vibecode-tours.png',x:8+dx,y:0,width:4,height:2}]);
   const stage=w.areas.find((a:any)=>a.id===`meeting-${sign}`),audience=w.areas.find((a:any)=>a.id===`${sign}-audience`),border=l.placements.find((p:any)=>p.id==='stage-gold-edge');
   expect(stage).toMatchObject({x:border.x*32,y:border.y*32,width:border.width*32,height:border.height*32,properties:[{id:`${sign}-stage-broadcast`,type:'speakerMegaphone',name:`varcamp-${sign}-talk`,chatEnabled:false,seeAttendees:false}]});
   expect(audience).toMatchObject({x:64,y:448,width:(l.width-4)*32,height:(sign==='pisces'?12:11)*32,properties:[{id:`${sign}-listener`,type:'listenerMegaphone',speakerZoneName:`meeting-${sign}`,chatEnabled:false,allowTalking:false,raiseHandEnabled:true}]});
@@ -58,7 +60,8 @@ describe('approved Aries treatment across all speaker rooms',()=>{
    expect(()=>beforeSpeakerWam('speaker-taurus',JSON.stringify(w))).toThrow();
   }
  });
- it('keeps the approved Aries map byte-exact during rollout',()=>{
-  expect(createHash('sha256').update(readFileSync('maps/speaker-aries.tmj')).digest('hex')).toBe('86affaec2c2708b399473628b1c41edf0cecd102ab08cc172d76b41226c28842');
+ it('retains the byte-exact approved Aries map underneath the branding successor',()=>{
+  expect(preVibeCodeNative(read('maps/speaker-aries.tmj'))).toEqual(JSON.parse(beforeVibeCode().components['maps/speaker-aries.tmj'].raw));
+  expect(createHash('sha256').update(beforeVibeCode().components['maps/speaker-aries.tmj'].raw).digest('hex')).toBe('86affaec2c2708b399473628b1c41edf0cecd102ab08cc172d76b41226c28842');
  });
 });

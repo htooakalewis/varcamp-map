@@ -2,10 +2,10 @@
   "provenance": {
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
-      "world/layouts/overworld.json": "776bd703083b8835bd7b23981e371f5fc212c831c1ad994da2f749ff1c6b706f",
-      "maps/overworld.tmj": "71bb18a14550c37b90596b64c819b3643ce64ac56e070e7f710a678f7c845be1",
+      "world/layouts/overworld.json": "d21f3cb13dbaccc9a47cf42ad9ee424f32673a80465ff1357430d25fd1342b41",
+      "maps/overworld.tmj": "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
-      "tests/exterior-gates.test.ts": "9279e5ac664003ce036c0628b2bb8c71a13f00f0fbe3f7607bb09287ca90926e",
+      "tests/exterior-gates.test.ts": "eeaf05f4e7311d7bf8053609a7221d63dbc60d6b0493cfa513278a77339f84da",
       "tests/npc-maps.test.ts": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
       "tests/helpers/visibility-history.ts": "1e049c084a1de2eec245f75193849b6afdc298a626c6039a6a2d25c6695aefdf",
       "tests/helpers/editor-catalog-history.ts": "b6668f1d84d6c028c1cba99d2ff3e936c241a030edbddb061a222168711eb7ee",
@@ -47,10 +47,14 @@
       "art/source/landscape-plaza-fleet-survey.json": "56016fa601e0eade59fd1abe25c91565081edeb59659859b9b68d4cb8cf1028f",
       "art/source/landscape-plaza-patrol-north.json": "7ae1abc12a13ba4902c6df3dba75f059fee03d28b3f07655343aeb0d130ed292",
       "art/source/landscape-plaza-patrol-arrival-west.json": "af118e6d482cc40db290e5baa383a223245e41045b15d54c610efdc78f060560",
-      "art/source/landscape-plaza-patrol-arrival-east.json": "175053c61dcd220d1b418091b6ca478e83551685bfeaf9cd66d21a0c552365f8"
+      "art/source/landscape-plaza-patrol-arrival-east.json": "175053c61dcd220d1b418091b6ca478e83551685bfeaf9cd66d21a0c552365f8",
+      "tools/maps/vibecode-branding.ts": "4be8da1a4a6fed54c6cd696446f000ec9269808a397b77da88f1ffee5f33bdcd",
+      "world/vibecode-branding.json": "9a93006c3f30fd5505263df7be5e1303f3f526e86438549e0f348bdd6ba0abdd",
+      "tools/art/vibecode.ts": "b28d029f74eb4d8d9a64faec9a2f316bc5476312e451431c2381908246b88b4c",
+      "art/source/vibecode-branding.json": "f49a4c3beb174e16917e768499fe36806e1d0c5af2149c5b112bda04acd91e8c"
     },
     "allowedCellsSha256": "34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d",
-    "geometrySha256": "e41cde95636bc6198d74cb6bf9425a0029318b50920d0980f1caec61adba05b0",
+    "geometrySha256": "a55b68650073396f526ec49f676bd22b858246a7fedf2dc76e7baf03082342a1",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [
