@@ -38,7 +38,8 @@ export const WORLD_CATALOG = {
       "from-observatory",
       "from-arcade",
       "from-festival",
-      "from-wheel"
+      "from-wheel",
+      "start"
     ]
   },
   "comet-maze": {

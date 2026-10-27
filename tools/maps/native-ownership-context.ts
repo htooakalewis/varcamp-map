@@ -8,6 +8,7 @@ import {PATROL_IDS} from './patrol-roles';
 import {FOUNTAIN_MOTION_IDS} from './fountain-motion-roles';
 import {LEO_LION_IMAGE} from './leo-lion-head-definition';
 import {HALL_BUILDING_ATLASES} from './hall-buildings-definition';
+import {cafeArrivalProtectedLayers,cafeArrivalAtlases} from './cafe-arrival-context';
 
 interface ContextRow{
  atlases:TiledTileset[];
@@ -202,8 +203,10 @@ function context(actual:TiledMap,source:TiledMap):ContextRow|undefined{
  need(actualIds.length===1&&sourceIds.length===1&&actualIds[0]===sourceIds[0]&&Object.hasOwn(rows,actualIds[0]),'current identity missing or contradictory');
  return rows[actualIds[0]];
 }
-function protectedContext(actual:TiledMap,row:ContextRow):void{
- need(isDeepStrictEqual(actual.layers.filter(l=>l.type!=='tilelayer'&&l.name!=='floorLayer'),row.protectedLayers),'protected nonfloor layer bodies/roster changed');
+function protectedContext(actual:TiledMap,row:ContextRow,author=false):void{
+ const layers=actual.layers.filter(l=>l.type!=='tilelayer'&&l.name!=='floorLayer');
+ const current=cafeArrivalProtectedLayers(identities(actual)[0],row.protectedLayers);
+ need(isDeepStrictEqual(layers,current)||(author&&isDeepStrictEqual(layers,row.protectedLayers)),'protected nonfloor layer bodies/roster changed');
  need(isDeepStrictEqual(actual.layers.filter(l=>l.type!=='tilelayer').map(l=>l.name),row.protectedNonfloorOrder),'protected nonfloor order changed');
 }
 /** Reviewed epochs on the overworld, each admitted only after every earlier one: the fleet is
@@ -268,6 +271,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   }
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
+ expected.push(...cafeArrivalAtlases(identities(source)[0]));
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -282,12 +286,14 @@ export function assertNativeOwnershipContext(actual:TiledMap,source:TiledMap):vo
  * The final current release gate never admits the pre-epoch representation. */
 export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):void{
  const row=context(actual,source);if(!row)return;
- protectedContext(actual,row);
+ protectedContext(actual,row,true);
  // Required current source closure is validated even for a genuine historical
  // native input; old reservations do not opt the new source family out.
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact preceding café context, before the two reviewed decorative atlases.
+ if(identities(source)[0]==='moon-cafe'&&isDeepStrictEqual(actual.tilesets,expected.slice(0,-2)))return;
  // Exact previous Leo release, before the two building/ground-name reservations.
  if(identities(source)[0]==='overworld'&&isDeepStrictEqual(actual.tilesets,currentAtlases(row,source,CURRENT,true,true,true,true,true,true,true,false)))return;
  // Exact preceding fountain context, before the single Leo ornament reservation.

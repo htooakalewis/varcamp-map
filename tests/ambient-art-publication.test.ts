@@ -31,6 +31,7 @@ import{renderInteriorReferenceMotion}from'../tools/art/interior-reference-motion
 import{renderWorldAmbientAssets}from'../tools/art/world-ambient-assets';
 import{renderWorldAmbient}from'../tools/art/world-ambient';
 import{approvedFleetStaticPins,approvedBirdRecipePins,approvedExpoStaticPins,approvedExpoStaticRows,approvedExpoCaptionRows,approvedExpoRegistryNote,approvedBrandAssetRegistry,approvedRoadsterV2StaticPins,approvedRoadsterV2Rows,approvedRoadsterV2RegistryNote,approvedAriesStyleStaticPins,approvedAriesStyleRows,approvedAriesStyleRegistryNote,assertApprovedLayoutSuccessor}from'./helpers/approved-world-successor';
+import{cafeArrivalSuccessorSha}from'./helpers/cafe-arrival-history';
 import {approvedZodiacRegistry} from './helpers/zodiac-exterior-history';
 import {approvedHallRegistry} from './helpers/hall-exterior-history';
 const project=process.cwd(),sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
@@ -112,7 +113,7 @@ it('binds every current registry path and preserves static artwork while validat
    else if(Object.hasOwn(arrivalStatic,row.path))expect(row.sha256,row.path+' reviewed arrival source').toBe(patrolSuccessorSha(row.path,arrivalStatic[row.path]));
    else if(Object.hasOwn(patrolStatic,row.path))expect(row.sha256,row.path+' reviewed patrol source').toBe(patrolStatic[row.path]);
    else if(Object.hasOwn(coveStatic,row.path))expect(row.sha256,row.path+' reviewed cove source').toBe(coveStatic[row.path]);
-   else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(approvedBirdRecipePins[row.path]);
+   else if(Object.hasOwn(approvedBirdRecipePins,row.path))expect(row.sha256,row.path+' exact independently reviewed bird recipe').toBe(cafeArrivalSuccessorSha(row.path,approvedBirdRecipePins[row.path]));
    else if(Object.hasOwn(approvedFleetStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed original fleet input').toBe(approvedFleetStaticPins[row.path]);
    else if(Object.hasOwn(approvedExpoStaticPins,row.path))expect(row.sha256,row.path+' exact independently reviewed expo sticker artwork').toBe(approvedExpoStaticPins[row.path]);
    else if(Object.hasOwn(approvedRoadsterV2StaticPins,row.path))expect(row.sha256,row.path+' exact reviewed roadster-v2 motion authoring').toBe(approvedRoadsterV2StaticPins[row.path]);

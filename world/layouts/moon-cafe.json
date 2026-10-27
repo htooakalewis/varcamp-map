@@ -13,24 +13,6 @@
       "height": 40
     },
     {
-      "id": "authored-twilight",
-      "sprite": "night-wash",
-      "x": 0,
-      "y": 0,
-      "width": 40,
-      "height": 40,
-      "layer": "atmosphere"
-    },
-    {
-      "id": "court",
-      "sprite": "path-stone",
-      "layer": "terrain",
-      "x": 3,
-      "y": 7,
-      "width": 34,
-      "height": 30
-    },
-    {
       "id": "boundary-north",
       "sprite": "wall-charcoal",
       "layer": "terrain",
@@ -76,15 +58,6 @@
       "height": 2
     },
     {
-      "id": "arrival-way",
-      "sprite": "path-stone",
-      "layer": "terrain",
-      "x": 16,
-      "y": 30,
-      "width": 8,
-      "height": 8
-    },
-    {
       "id": "plaza-threshold",
       "sprite": "rune-threshold",
       "layer": "props",
@@ -94,15 +67,6 @@
       "height": 1
     },
     {
-      "id": "branch-way",
-      "sprite": "path-stone",
-      "layer": "terrain",
-      "x": 5,
-      "y": 30,
-      "width": 8,
-      "height": 8
-    },
-    {
       "id": "branch-threshold",
       "sprite": "rune-threshold",
       "layer": "props",
@@ -110,116 +74,6 @@
       "y": 36,
       "width": 4,
       "height": 1
-    },
-    {
-      "id": "cafe-timber",
-      "sprite": "floor-wood-long",
-      "layer": "terrain",
-      "x": 4,
-      "y": 8,
-      "width": 32,
-      "height": 24
-    },
-    {
-      "id": "cafe-aisle",
-      "sprite": "floor-blue",
-      "layer": "terrain",
-      "x": 17,
-      "y": 14,
-      "width": 7,
-      "height": 18
-    },
-    {
-      "id": "cafe-counter-left",
-      "sprite": "counter-left",
-      "layer": "props",
-      "x": 10,
-      "y": 10,
-      "width": 2,
-      "height": 5
-    },
-    {
-      "id": "cafe-counter-right",
-      "sprite": "counter-right",
-      "layer": "props",
-      "x": 27,
-      "y": 10,
-      "width": 2,
-      "height": 5
-    },
-    {
-      "id": "cafe-coffee",
-      "sprite": "coffee-maker",
-      "layer": "props",
-      "x": 12,
-      "y": 10,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "cafe-cooler",
-      "sprite": "water-cooler",
-      "layer": "props",
-      "x": 29,
-      "y": 12,
-      "width": 1,
-      "height": 2
-    },
-    {
-      "id": "cafe-window-west",
-      "sprite": "window-white",
-      "layer": "architecture",
-      "x": 5,
-      "y": 8,
-      "width": 4,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "cafe-window-east",
-      "sprite": "window-white",
-      "layer": "architecture",
-      "x": 31,
-      "y": 8,
-      "width": 4,
-      "height": 2,
-      "renderRole": "grounded"
-    },
-    {
-      "id": "cafe-table-west",
-      "sprite": "table-circular",
-      "layer": "props",
-      "x": 7,
-      "y": 19,
-      "width": 4,
-      "height": 3
-    },
-    {
-      "id": "cafe-sofa-west",
-      "sprite": "sofa-cream",
-      "layer": "props",
-      "x": 7,
-      "y": 26,
-      "width": 3,
-      "height": 2
-    },
-    {
-      "id": "cafe-table-east",
-      "sprite": "table-circular",
-      "layer": "props",
-      "x": 28,
-      "y": 19,
-      "width": 4,
-      "height": 3
-    },
-    {
-      "id": "cafe-sofa-east",
-      "sprite": "sofa-cream",
-      "layer": "props",
-      "x": 28,
-      "y": 26,
-      "width": 3,
-      "height": 2
     },
     {
       "id": "cafe-palm-west",
@@ -256,6 +110,15 @@
       "width": 12,
       "height": 1,
       "layer": "architecture"
+    },
+    {
+      "id": "cafe-backsplash",
+      "sprite": "floor-charcoal",
+      "x": 6,
+      "y": 7,
+      "width": 13,
+      "height": 2,
+      "layer": "terrain"
     },
     {
       "id": "wayfinding-wallboard-plaza-return-label-south",
@@ -346,6 +209,377 @@
       "width": 1,
       "height": 1,
       "layer": "architecture"
+    },
+    {
+      "id": "cafe-timber",
+      "sprite": "floor-wood-long",
+      "x": 3,
+      "y": 7,
+      "width": 34,
+      "height": 29,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-header",
+      "sprite": "floor-charcoal",
+      "x": 3,
+      "y": 3,
+      "width": 34,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-aisle",
+      "sprite": "floor-blue",
+      "x": 18,
+      "y": 17,
+      "width": 4,
+      "height": 19,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-moon-alcove",
+      "sprite": "floor-cosmic",
+      "x": 24,
+      "y": 8,
+      "width": 12,
+      "height": 11,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-rug-west",
+      "sprite": "floor-blue",
+      "x": 5,
+      "y": 19,
+      "width": 9,
+      "height": 13,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-rug-east",
+      "sprite": "floor-blue",
+      "x": 26,
+      "y": 19,
+      "width": 9,
+      "height": 13,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-bar-floor",
+      "sprite": "floor-charcoal",
+      "x": 6,
+      "y": 10,
+      "width": 13,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "cafe-back-worktop",
+      "sprite": "cafe-bar-span",
+      "x": 7,
+      "y": 9,
+      "width": 10,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-bar-left",
+      "sprite": "cafe-bar-left-end",
+      "x": 6,
+      "y": 13,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-bar-front",
+      "sprite": "cafe-bar-span",
+      "x": 7,
+      "y": 13,
+      "width": 10,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-bar-right",
+      "sprite": "cafe-bar-right-end",
+      "x": 17,
+      "y": 13,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-coffee",
+      "sprite": "coffee-maker",
+      "x": 12,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-counter-flowers",
+      "sprite": "plant-flower",
+      "x": 8,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-cooler",
+      "sprite": "water-cooler",
+      "x": 21,
+      "y": 12,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-window-west",
+      "sprite": "window-white",
+      "x": 5,
+      "y": 6,
+      "width": 4,
+      "height": 2,
+      "layer": "architecture",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cafe-window-bar",
+      "sprite": "window-white",
+      "x": 15,
+      "y": 6,
+      "width": 4,
+      "height": 2,
+      "layer": "architecture",
+      "renderRole": "grounded"
+    },
+    {
+      "id": "cafe-moon-fountain",
+      "sprite": "hub-moon-fountain",
+      "x": 27,
+      "y": 8,
+      "width": 6,
+      "height": 6,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-moon-sofa-left",
+      "sprite": "sofa-cream",
+      "x": 25,
+      "y": 16,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-moon-sofa-right",
+      "sprite": "sofa-cream",
+      "x": 32,
+      "y": 16,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-moon-table",
+      "sprite": "table-small-wood",
+      "x": 29,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-west",
+      "sprite": "table-workshop",
+      "x": 8,
+      "y": 20,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-chair-west-a",
+      "sprite": "cafe-chair-cream",
+      "x": 7,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-chair-west-b",
+      "sprite": "cafe-chair-cream",
+      "x": 10,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-sofa-west",
+      "sprite": "sofa-cream",
+      "x": 7,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-lounge-table-west",
+      "sprite": "table-small-wood",
+      "x": 8,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-lounge-chair-west",
+      "sprite": "cafe-chair-cream",
+      "x": 11,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-east",
+      "sprite": "table-workshop",
+      "x": 29,
+      "y": 20,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-chair-east-a",
+      "sprite": "cafe-chair-cream",
+      "x": 28,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-table-chair-east-b",
+      "sprite": "cafe-chair-cream",
+      "x": 31,
+      "y": 21,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-sofa-east",
+      "sprite": "sofa-cream",
+      "x": 28,
+      "y": 28,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-lounge-table-east",
+      "sprite": "table-small-wood",
+      "x": 29,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-lounge-chair-east",
+      "sprite": "cafe-chair-cream",
+      "x": 32,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-light-bar-west",
+      "sprite": "light-amber",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-light-bar-east",
+      "sprite": "light-amber",
+      "x": 19,
+      "y": 11,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-light-moon",
+      "sprite": "light-amber",
+      "x": 35,
+      "y": 14,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-light-west-lounge",
+      "sprite": "light-amber",
+      "x": 4,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-light-east-lounge",
+      "sprite": "light-amber",
+      "x": 35,
+      "y": 23,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-flower-bar",
+      "sprite": "plant-flower",
+      "x": 16,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-flower-moon",
+      "sprite": "plant-flower",
+      "x": 34,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-flower-west",
+      "sprite": "plant-flower",
+      "x": 6,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "cafe-flower-east",
+      "sprite": "plant-flower",
+      "x": 27,
+      "y": 27,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
     }
   ],
   "entries": [
@@ -434,22 +668,22 @@
     {
       "name": "cafe-title",
       "text": "MOON CAFÉ",
-      "fontSize": 26,
+      "fontSize": 28,
       "color": "#f4d77b",
-      "x": 12,
-      "y": 3,
-      "width": 18,
+      "x": 5,
+      "y": 4,
+      "width": 17,
       "height": 2,
       "align": "left"
     },
     {
       "name": "cafe-menu",
-      "text": "COFFEE · TEA · CONVERSATION",
-      "fontSize": 16,
+      "text": "COFFEE  ·  TEA",
+      "fontSize": 14,
       "color": "#f4d77b",
-      "x": 12,
-      "y": 7,
-      "width": 19,
+      "x": 9,
+      "y": 11,
+      "width": 7,
       "height": 1,
       "align": "left"
     }
@@ -461,7 +695,7 @@
       "sourceId": "original",
       "level": "belowAvatar",
       "x": 12,
-      "y": 10,
+      "y": 9,
       "width": 1,
       "height": 1,
       "carrierTileIds": [
@@ -580,7 +814,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
+            "sha256": "fdad1b2b0c46d8cfcd3d45b69e00b22aff1fe3e5ea4353f45e6c9f976794ec33"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -608,7 +842,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
+            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -628,15 +862,23 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+          },
+          {
+            "path": "tools/maps/cafe-arrival-context.ts",
+            "sha256": "66022b0035aba61c1791ae07e0c547a4c4bc10ff5a40126365c25b076d3b29c6"
+          },
+          {
+            "path": "art/source/cafe-arrival-refresh.json",
+            "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
+            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
+            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -662,7 +904,7 @@
       "image": "assets/tilesets/original/world-ambient-moon-cafe-bubbles-2.png",
       "sourceId": "original",
       "level": "belowAvatar",
-      "x": 29,
+      "x": 21,
       "y": 12,
       "width": 1,
       "height": 2,
@@ -816,7 +1058,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
+            "sha256": "fdad1b2b0c46d8cfcd3d45b69e00b22aff1fe3e5ea4353f45e6c9f976794ec33"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -844,7 +1086,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
+            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -864,15 +1106,23 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+          },
+          {
+            "path": "tools/maps/cafe-arrival-context.ts",
+            "sha256": "66022b0035aba61c1791ae07e0c547a4c4bc10ff5a40126365c25b076d3b29c6"
+          },
+          {
+            "path": "art/source/cafe-arrival-refresh.json",
+            "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
+            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
+            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -892,6 +1142,16 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Moon Café / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 26,
+      "y": 4,
+      "width": 6,
+      "height": 2
     }
   ]
 }

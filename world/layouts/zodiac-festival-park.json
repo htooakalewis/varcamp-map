@@ -3019,7 +3019,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
+            "sha256": "fdad1b2b0c46d8cfcd3d45b69e00b22aff1fe3e5ea4353f45e6c9f976794ec33"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -3047,7 +3047,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
+            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -3067,15 +3067,23 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+          },
+          {
+            "path": "tools/maps/cafe-arrival-context.ts",
+            "sha256": "66022b0035aba61c1791ae07e0c547a4c4bc10ff5a40126365c25b076d3b29c6"
+          },
+          {
+            "path": "art/source/cafe-arrival-refresh.json",
+            "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
+            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
+            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -3443,7 +3451,7 @@
         "inputs": [
           {
             "path": "art/source/world-ambient.json",
-            "sha256": "a890d78049e5f891358e11a3e8270ede2c2fb97ce5d3bd339686e3924a8ce8b7"
+            "sha256": "fdad1b2b0c46d8cfcd3d45b69e00b22aff1fe3e5ea4353f45e6c9f976794ec33"
           },
           {
             "path": "art/source/world-ambient-assets.json",
@@ -3471,7 +3479,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "46cbb04d3e4e016e72e8fea91f5c21bb67f13f219d4992996c3153a2735a6bac"
+            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -3491,15 +3499,23 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "4fcee6776fc82fa8ee83f5b48dd7857b17d512028aeb1e82f529e9b2705c3324"
+            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+          },
+          {
+            "path": "tools/maps/cafe-arrival-context.ts",
+            "sha256": "66022b0035aba61c1791ae07e0c547a4c4bc10ff5a40126365c25b076d3b29c6"
+          },
+          {
+            "path": "art/source/cafe-arrival-refresh.json",
+            "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8bda8df3ffbeec8d958d12ef0f5f91d818bdb8853decc5fddd1ab333b0ac38c0"
+            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "06b2ce8b768ce22058d1847f7a5eeca77e4b9ccb2a4b7898230f1bc63087ccb2"
+            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
           },
           {
             "path": "art/source/native-ownership-context.json",

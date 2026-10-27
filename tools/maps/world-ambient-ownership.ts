@@ -2,6 +2,7 @@ import{readFileSync}from'node:fs';
 import{createHash}from'node:crypto';
 import type{MapLayout,TiledMap,TiledLayer,TiledTileset}from'./types';
 import type{TileCatalog}from'../art/catalog';
+import{cafeArrivalOwners}from'./cafe-arrival-context';
 const sha=(v:unknown)=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Navigation uses a separate reserved GID range even when its one tile comes
  * from the same magic.png as ordinary art. Image identity alone is ambiguous. */
@@ -10,8 +11,10 @@ export function ambientAtlasKey(t:TiledTileset):string{if(t.name==='navigation-m
  * retirement is proof-driven; layer names alone never authorize deleting data. */
 export function validateAmbientOwnership(map:TiledMap,layout:MapLayout,catalog:TileCatalog,intended:TiledMap,retireHistorical=false):TiledLayer[]{
  const registry=JSON.parse(readFileSync('art/source/world-ambient-layer-ownership.json','utf8')).maps[layout.id];if(!registry)throw Error('World ambient ownership registry missing');
+ const oldOwners=registry.protectedLayers;
+ registry.protectedLayers=cafeArrivalOwners(layout.id,oldOwners);
  const names=new Set<string>(),ids=new Set<number>();for(const l of map.layers){if(names.has(l.name)||ids.has(l.id))throw Error('World ambient duplicate layer/producer ownership');names.add(l.name);ids.add(l.id);}
- for(const p of registry.protectedLayers){const found=map.layers.filter(l=>l.name===p.name);if(found.length!==1||sha(found[0])!==p.bodySha256)throw Error('World ambient protected native ownership changed: '+p.name);}
+ for(const p of registry.protectedLayers){const found=map.layers.filter(l=>l.name===p.name),old=oldOwners.find((o:any)=>o.name===p.name);if(retireHistorical&&((!old&&!found.length)||(old&&found.length===1&&sha(found[0])===old.bodySha256)))continue;if(found.length!==1||sha(found[0])!==p.bodySha256)throw Error('World ambient protected native ownership changed: '+p.name);}
  const sceneNames=new Set([...registry.sourceSceneLayers,...intended.layers.filter(l=>/^scenery-(belowAvatar|aboveAvatar)-[0-9]+$/.test(l.name)||l.name==='terrain').map(l=>l.name)]),overlayNames=new Set((layout.animatedOverlays??[]).map(o=>o.name)),retired=new Set<string>();
  for(const layer of map.layers){if(registry.protectedLayers.some((p:any)=>p.name===layer.name)||sceneNames.has(layer.name)||overlayNames.has(layer.name))continue;
   const old=registry.retiredProjections.find((p:any)=>p.layer===layer.name);if(!old||!retireHistorical)throw Error('World ambient unknown or retired native ownership: '+layer.name);

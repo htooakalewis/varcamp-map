@@ -1,3 +1,4 @@
+import {beforeCafeArrivalCatalog} from './helpers/cafe-arrival-history';
 import {preLandscapeLayout,preLandscapeNative} from './helpers/plaza-landscape-history';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
@@ -40,7 +41,7 @@ describe('Crescent plaza and expanded circular speaker ring',()=>{
   expect(l.images.filter((p:any)=>!p.name.startsWith('Sponsors / Demo'))).toEqual(old.images.filter((p:any)=>!p.name.startsWith('Sponsors / Demo')));
   for(const key of ['areas','signs','animatedOverlays'])expect(l[key],key).toEqual(old[key]);
   expect(read('maps/overworld.wam')).toEqual(beforeCrescentJson('maps/overworld.wam'));
-  expect(read('art/tile-catalog.json')).toEqual(beforeCrescentJson('art/tile-catalog.json'));
+  expect(beforeCafeArrivalCatalog(read('art/tile-catalog.json'))).toEqual(beforeCrescentJson('art/tile-catalog.json'));
   expect(m.tilesets).toEqual(n.tilesets);expect(m.layers.map((l:any)=>[l.id,l.name])).toEqual(n.layers.map((l:any)=>[l.id,l.name]));
  });
  it('keeps every moved door and return reachable from the arrival without crossing a different portal',()=>{

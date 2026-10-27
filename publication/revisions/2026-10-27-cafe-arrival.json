@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "4230622d9aa626ae7ffb962f5dc65707f6e210d79d529a5be2c6294799eb77e4",
+      "toSha256": "7b0f483da4ec0cf6275691e1bd19d09aaadd0501fe79291cdc8a13a5b102649d",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "0963b35482a6b04600f05644e79110bf8c358ab547e631f68a2fc832cca9ef89",
+      "toSha256": "39dc46cf0addeca8494b5458c6b56185b2dbd33a7cddb4457870ff30b0d1a047",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "fromSha256": "8f2b58295d4e6299f2be21d8a74ca8430810aea30ed2a29a6be32c74831d3684",
+      "toSha256": "bb2108895c879684de09f3d18ab4c25707139574b8bccf19cf6aa9e01df35b70",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "fromSha256": "552d1f79de24aecfab6d8e9a9412ad26ecbc2e4227f1125aceb85f1c4db412cb",
+      "toSha256": "a8d8a1afe8dfa2b5b4604af8298e5e0ba3e2c73df2cf8532e2f4181cc86601fc",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "maps/preview/campus-exploration.tmj",
+      "fromSha256": "981cc112dc2cb9364649d2b1cd1bdfdd6d5f39d6a4135078de5690dff4a5ea77",
+      "toSha256": "d2186b03f4170f16839bd7fffbafbdf429dd1ce9db81356cb6fbf35c5e95202e",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "maps/preview/moon-cafe.tmj",
+      "fromSha256": "9d2cd0325f641494665667c73635e3cb067dc414592f94c55198eba8d5a8a66a",
+      "toSha256": "5a1a530d38a8e1ec5edef9005a047129563032688ad2f623aa602f0b66d12ec5",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "src/world/catalog.ts",
+      "fromSha256": "95fbb4c9f5a762a34576252d32c3c9c497b850c56efef6bce1a54180a85f5920",
+      "toSha256": "58337bf70c132472a452458304a435527fb2158d6d31222fd4a9445901b2ea10",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "386b1178e53dfc32512b6eedb6fa6521c1e3504443757559fa1abf878cea2c28",
+      "toSha256": "a5d88ae70ea7b3843457ff9ba3dca5973779d228100b48e471092d79cf343902",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "85b21ed49de327682b62779789d7ca0e8dec3856254e5438f1645211bc6be14c",
+      "toSha256": "3b611ef19465fa36eb3ba77129f071017ff2ec73ebca9c968d68750427dcb211",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "6bafd491eb4b59ca9047843475f8d2060b76158d4335a7b4ba9593198b534979",
+      "toSha256": "71f7c0a6bd1283cdd6fa8c8f702f07156bdcb16bdf34835ccf2895c8ca8c5aa8",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "c0775c692d6f58f7f61f1af48fea6142bc48e320331d897d56c0ae93297a7976",
+      "toSha256": "cc415186a3ba2d8c1c11480fb77506ab6c4adfc07e625c2471671ac9876e258a",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "a1d91fb55e92cc7c59f1b1f2e25a965bdbf128e7240f5f4d8346f4c4496e5737",
+      "toSha256": "dd303a489f37e24322b2932af2037d0e918f51b4f00c6d1d3a8d5e64ca78eff9",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "fd78c807460fa10acdc08dc2bc502b8dc130d1cdb13a315b69345a5dd265b361",
+      "toSha256": "07df295f9e993c7aea6d1e71529c7fcae01e062a5a3f9fd377e187d2b025d397",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "c4c3816a2e0d77424d999a6e1b7a5ea3d4b21c3f0d2ce66e33428714f2c218d6",
+      "toSha256": "e513cbf134980b7e29de1ce53158d64c61437ce55e9e618608efe6fef34509f5",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "906c7c6f7219b3c3477ed3d2f392d822a9c6f2ce14a9a9989a22fed95f072b58",
+      "toSha256": "c62d2a1f6d3b08aa3e9bf9cddf696540518c0662da0100c4022d6bc840b6715a",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "aa57bb971c09814eee1b822e32e6782b78f37a76a5ff84b2ad68d076863ee9b2",
+      "toSha256": "82904701917ae83c24fd41ebfb3fc814e6a86f00b005044af722df2948005715",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "4b49c6de27acac7b637a0c9d1aa8424de83958208b4cefb0c66b23ba0b6d4f3f",
+      "toSha256": "20baf5a51e3f4cc41a1bb9d1c83a05631ee2d4bbf1e09add6c27ffd8413381ec",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "404e6ec01018204b989aacd0227b6fac102777533c36e7207c187d9ffc1be078",
+      "toSha256": "2671d43d1b7f121008882a82c31a0e990be8589d2237a6dac7160e4d49aac015",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "19178749195d520bca02ee17c2fa9d54bceb3e30797c0974309ae4e99075f93b",
+      "toSha256": "f3a6cdcdd9e5d9ff87902c964c35104093157f28264df48694b45562282e9cd4",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "3e3a4ba92eeb092e2396b11e8571d6302181e2c8b471600554e1f1fea9ba6987",
+      "toSha256": "6a42496fe27344698b9ec5212b34ca2cb9cf1d9381d79e1bb7ffdd3470dbe830",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "8bae191d46fcaf13e533d0c2e0483117725917772629bbee7d58218e14702967",
+      "toSha256": "fb9ac5d2c26d471497cdd39f7e0e6e3525749107084950886689af89a5f4455d",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "b6b149f814fe4dd77d4378591684f2610b4b0919e9c77b18cbcfd58969218bbb",
+      "toSha256": "a9f05617166463039a57b0f7997c21ef8b3035c92e2011b434e56f503514c6d1",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "aa34b6a6d706fa17a99bcca4b7353a7549c146be80c7ebb4eb7d6b435f40a17f",
+      "toSha256": "29b57fee672c851581a1723e6b7b5ecb915db0616f835270097a8b997ff83183",
+      "reason": "Approved first side-area refresh: Moon Cafe furniture, warm floor and lunar lounge; southern default arrival alias in Exploration Court. Preserve named returns, saved WAMs, all existing pixels and all other map geometry."
+    }
+  ]
+}

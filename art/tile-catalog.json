@@ -41246,5 +41246,85 @@
     "blockingCells": [],
     "level": "belowAvatar",
     "sourceId": "original"
+  },
+  "cafe-bar-left-end": {
+    "sheet": "assets/tilesets/workadventure/WA_Tables.png",
+    "rect": {
+      "x": 5,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
+  "cafe-bar-span": {
+    "sheet": "assets/tilesets/workadventure/WA_Tables.png",
+    "rect": {
+      "x": 6,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
+  "cafe-bar-right-end": {
+    "sheet": "assets/tilesets/workadventure/WA_Tables.png",
+    "rect": {
+      "x": 7,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
+  },
+  "cafe-chair-cream": {
+    "sheet": "assets/tilesets/workadventure/WA_Seats.png",
+    "rect": {
+      "x": 8,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "workadventure"
   }
 }

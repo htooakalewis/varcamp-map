@@ -1,5 +1,6 @@
 import {applyVibeCodeBranding,VIBECODE_MAP_IDS} from '../../tools/maps/vibecode-branding';
 import {vibeCodeSuccessorSha} from './vibecode-history';
+import {advanceCafeArrivalLayout} from './cafe-arrival-history';
 /** Test-only finite forward epoch. Genuine historical bytes are never inferred
  * from current receipts, stripped current objects or a producer's own output. */
 import {readFileSync} from 'node:fs';
@@ -122,5 +123,5 @@ export function advanceReviewedProvenance(layout:MapLayout):MapLayout{
 export function assertApprovedLayoutSuccessor(id:string,current:MapLayout):void{
  const baseline=advanceReviewedProvenance(approvedHistoricalLayout(id));
  const speaker=applyAriesPresentation(baseline),next=['solar-hall','lunar-hall'].includes(id)?applyHallPresentation(speaker):speaker;
- assert.deepEqual(current,VIBECODE_MAP_IDS.includes(id)?applyVibeCodeBranding(next):next,'Only finite reviewed producer/presentation successors may advance '+id);
+ assert.deepEqual(current,advanceCafeArrivalLayout(VIBECODE_MAP_IDS.includes(id)?applyVibeCodeBranding(next):next),'Only finite reviewed producer/presentation successors may advance '+id);
 }

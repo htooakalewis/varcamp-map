@@ -3,6 +3,7 @@ import{assertNativeOwnershipContext,assertNativeAuthoringContext,isRoadsterV2}fr
 import contract from'./animated-decoration-contract.json';
 import ocean from '../../world/beach-ship-native.json';
 import type {TiledMap,TiledTileset,TiledLayer,TileLayer,TiledProperty} from './types';
+import{authorCafeArrivalContext,cafeArrivalAtlases}from'./cafe-arrival-context';
 
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Native projection '+message);};
 const ordinary=(set:TiledTileset)=>/^art-\d+$/.test(set.name??'');
@@ -76,12 +77,15 @@ export function assertNativeSourceProjection(actual:TiledMap,rawSource:TiledMap)
 export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):TiledMap{
  const source=expectedNativeProjection(rawSource),result=structuredClone(native);checkStructure(result);checkStructure(source);
  assertNativeAuthoringContext(native,source);
+ authorCafeArrivalContext(result);
  const paint=source.layers.filter(l=>l.type==='tilelayer'&&l.visible!==false&&l.opacity!==0),owned=new Set(paint.map(l=>l.name)),sourceNames=new Set(source.layers.map(l=>l.name));
  need(result.layers.every(l=>l.type!=='tilelayer'||sourceNames.has(l.name)),'unknown native layer cannot be retired');
  const originalSets=structuredClone(result.tilesets),originalMax=Math.max(...originalSets.map(t=>t.firstgid+t.tilecount!));let next=originalMax;
  const named=new Set(source.tilesets.filter(t=>!ordinary(t)).map(t=>t.name));
  const references=(layers:TiledLayer[],from:number,to:number):string[]=>layers.flatMap(l=>l.type==='tilelayer'?l.data.some(g=>g&&plain(g)>=from&&plain(g)<to)?[l.name]:[]:l.type==='objectgroup'?l.objects.some(o=>o.gid&&plain(o.gid)>=from&&plain(o.gid)<to)?[l.name]:[]:l.type==='group'?references(l.layers,from,to):[]);
- for(const set of source.tilesets){
+ const cafe=cafeArrivalAtlases(String(source.properties?.find(p=>p.name==='worldMapId')?.value));
+ const ordered=cafe.length?[...source.tilesets.filter(s=>!cafe.some(t=>t.image===s.image)),...cafe.map(t=>source.tilesets.find(s=>s.image===t.image)!).filter(Boolean)]:source.tilesets;
+ for(const set of ordered){
   // Roadster-v2 epoch: the registered v1 reservation (same role name, v1 image) is vacated before
   // the v2 body is appended; its only references belong to the rebuilt roadster paint layer.
   if(isRoadsterV2(set)){const v1=result.tilesets.filter(t=>t.name===set.name&&t.image!==set.image);need(v1.length<=1,'ambiguous roadster epoch');if(v1.length){need(references(result.layers,v1[0].firstgid,v1[0].firstgid+v1[0].tilecount!).every(name=>owned.has(name)),'retired owned atlas has protected references');result.tilesets=result.tilesets.filter(t=>t!==v1[0]);}}
@@ -95,7 +99,7 @@ export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):Ti
    if(role){need(set.tilecount!<=prior.tilecount!,'role atlas exceeds its registered reservation');result.tilesets[result.tilesets.indexOf(prior)]={...structuredClone(set),firstgid:prior.firstgid,name:prior.name};continue;}
    result.tilesets=result.tilesets.filter(t=>t!==prior);
   }
-  const target={...structuredClone(set),firstgid:next,name:prior?.name??(ordinary(set)?set.image!.split('/').at(-1)!.replace(/\.png$/,''):set.name)};need(!result.tilesets.some(t=>t.name===target.name),'new atlas name already reserved');result.tilesets.push(target);next+=set.tilecount!;
+  const target={...structuredClone(set),firstgid:next,name:prior?.name??cafe.find(t=>t.image===set.image)?.name??(ordinary(set)?set.image!.split('/').at(-1)!.replace(/\.png$/,''):set.name)};need(!result.tilesets.some(t=>t.name===target.name),'new atlas name already reserved');result.tilesets.push(target);next+=set.tilecount!;
  }
  const bindings=bindAtlases(result,source),remap=(gid:number)=>{if(!gid)return 0;const set=sourceSet(source,gid);return((bindings.get(set)!.firstgid+plain(gid)-set.firstgid)|(gid&0xf0000000))>>>0;};
  let nextLayer=Math.max(result.nextlayerid??1,...result.layers.map(l=>l.id+1));
