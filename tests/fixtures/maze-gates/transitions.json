@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "base": "71405c9a9c4fbd780b5f94c174dd06144b4c0b2a",
+  "transitions": {
+    "art/source/world-ambient-air-district-device-1.json": [
+      "f22db9bb37990505c0cc616dc854e177c78fd68239067f42ad89ec194c2c3e1c",
+      "34608d409ae5f9e2bb9b6f292d3d884137f173168b1473d6a76b68c8d85a5ec8"
+    ],
+    "art/source/world-ambient-air-district-lamp-2.json": [
+      "0dfe0b4d8d03c7d9d1ad51c44458235299587ebb016eed39a1238f73e3033420",
+      "f08895c4bb2af1a2d77ef714313db5483e2a8e35bb008b1d36f153fb009e6a66"
+    ],
+    "art/source/world-ambient-campus-exploration-device-1.json": [
+      "baecf474e4c095f71ede3966df610aa7a339f3e126bda5c19f11934e2c893e09",
+      "bf1ae3738ea8e84e1f6c9be8daf120ae21519057b4daec0e2187d3af738c92f5"
+    ],
+    "art/source/world-ambient-campus-exploration-leaves-2.json": [
+      "6285033bc812fb29459bc851d03a71243bf80203b696e5c81fbf029cee79eced",
+      "0eb98d8e42fc34584d4377c0e9e88a84bab1bf31678c7305fb004a9e4f41a8d4"
+    ],
+    "art/source/world-ambient-comet-maze-lamp-1.json": [
+      "33b7d76347dd73c88f25af4c17e4c54b4b77a0221272b513c6e30bc4ab4ca00c",
+      "cfd94a4f61732ee494ca6ffc026ef8b7d8bfe92e29f4091b597072ccccc018e7"
+    ],
+    "art/source/world-ambient-comet-maze-lamp-2.json": [
+      "6b9bffad9d1c3bc9c7287b49e58ae16e14bb49eacab172f882028bde980921f5",
+      "ffaa191cd1c78eb5cd0e6fa39752c231c7c929d5517c0d720cdef02ce6aefba5"
+    ],
+    "art/source/world-ambient-earth-district-device-1.json": [
+      "bf9ef7363e362e77e4b16bb9d62c4c0baeb38c2324d0a2833d641b02e9ce88c8",
+      "8cacd7e0e4c11a5a1c81b058c7a932847eb1593f2e9aebb0deabfde099fdad89"
+    ],
+    "art/source/world-ambient-earth-district-lamp-2.json": [
+      "62d4eebd5d2291699e8161e777e74fc86b448b368ef8399190c059f4bbd1167b",
+      "564d97ef38c6755d90c1fbdfd5252b7202f789b5b410e386ab70e76cef48323f"
+    ],
+    "art/source/world-ambient-fa-ship-fish-2.json": [
+      "1d164d6486e61c186a940c1ef4e7afa668bff69f60744b79672e4558c2b3b702",
+      "c4a64dac9a62414936bf9cc3cdb5f9ca201b4d373a7ca5ced04a7b19f8294457"
+    ],
+    "art/source/world-ambient-fa-ship-gull-1.json": [
+      "9b41cda706602b7c5abe5be739b9b82d41be0ea05e9562245da719214ecf815d",
+      "8b110bcfe3403796b2e38bc3677793acf92265892853d211b8a10d5bf85bccb0"
+    ],
+    "art/source/world-ambient-fa-ship-interior-lamp-2.json": [
+      "10b6b99188e4c8d6dc8125a70c640a6f183f61fbc00c305aad59d4393413b040",
+      "6edf57e4689b248dd1b9e939c57f0caeccacc5ac72d613d51253955ce10dd386"
+    ],
+    "art/source/world-ambient-fa-ship-interior-steam-1-upper.json": [
+      "6a2fec43e78e67d225cbfed3f85a8642e2dcc10b45870821da97d395bde50911",
+      "477f6ff99da00b4002056e7aff0b1a59cbedacff973ee525fde56df5d3f18088"
+    ],
+    "art/source/world-ambient-fa-ship-interior-steam-1.json": [
+      "8c8e32b5e4783d2e002cd720fb142d1cc6a178ab993d6fca0a6863bfb9a1f16b",
+      "9f7062ccf947bf18d35653a89fff9b9885681cd6a763c1802759ec8b7828a1fa"
+    ],
+    "art/source/world-ambient-fire-district-heat-1.json": [
+      "4c654255fedfd127e1beeb2bf6f836778f2b6d78cd5e15ba59756d5bf598706d",
+      "c5b8438215a7be2ec9e1b6c16d169789167c4935b9a03d18a7b804bb6d8909ce"
+    ],
+    "art/source/world-ambient-fire-district-steam-2.json": [
+      "4e95f5823fbe10f1c4c77924074e1202b9091ddda174dd0e38ee290f3dee97b6",
+      "66df77bea470ffbdc5f3816be045a150250cf202b2b775f021362058a67e1cd1"
+    ],
+    "art/source/world-ambient-hidden-observatory-device-2.json": [
+      "e3059df5d16acc781324a85e0c82101b49d9aa64bef9bb81fb8d81deae11d687",
+      "30dc3306a643af261cf5feee18b57961e1ebdb070fb9417834524f32de2a4110"
+    ],
+    "art/source/world-ambient-hidden-observatory-instrument-1.json": [
+      "0bff12611ad9c0f67c5369fa5c94f7eb25081c9fa70f7d4f18f8ac7684834d61",
+      "60ecfc115905fdd0abbd6afbb56babafd61530fdf47268bce6d57d5ee7de21c4"
+    ],
+    "art/source/world-ambient-moon-cafe-bubbles-2.json": [
+      "e7b07f489a3b373dc0c07ec767eb789859cfcf417be4b272b0135a819a94aef8",
+      "380e672f852f2cd440dbaff1b9f764dcffbca80505caf3c5c92706141e183797"
+    ],
+    "art/source/world-ambient-moon-cafe-steam-1.json": [
+      "37f37d64f154987f0ae14054f4fb54becabdccc3a7b0d631f0f4d6d129de7654",
+      "ac65656921683cd2b74595da8df29eb170cd8c0d97bfae37cfd6507052e335c5"
+    ],
+    "art/source/world-ambient-moon-grotto-crystal-2.json": [
+      "bb9a27bd00591c55970cf23e6909be62f7feab52ccc81174cc90b770a7d56658",
+      "674831dff9c96d215a706c2c188974814824a18901c39257d7ef05d652f2982a"
+    ],
+    "art/source/world-ambient-moon-grotto-ripples-1.json": [
+      "b119b8114cefa7420a3306af15213f46dc89ecfc22b8eaa512a1728510dbafda",
+      "54ae38279326786a6c4cc5af057d412881cb0d091d44668d03086c991ccc891e"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-1.json": [
+      "77595f556e9367043e469241040962394b7a196cf16961f1f919aa7d588a52e4",
+      "7d7713ae68eb9c60653aebf579783417f1102880390479acbb61b6028b57833c"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-2.json": [
+      "bb9c4e2ee3cbc5d8286a9cbcaac8062cbec6f9b0c9367c250beca8dc87dc3b41",
+      "9fad0bbdb045f518d0c286934ca5010089107e2f1e73de514b51bb4f223e4140"
+    ],
+    "art/source/world-ambient-nebula-arcade-device-3.json": [
+      "80adb855882e68f92c9760862e7604f0f29a5fd1b1f6a17f260cb17917eeb382",
+      "a49bc40febb9b0f694dae1c9acbdf4aaf933ca06d6ae80d47ec786f28f79f4cc"
+    ],
+    "art/source/world-ambient-orbit-maze-lamp-1.json": [
+      "368de86e86e3906c7e82392f0aef1d4e2ff8b8f5ed37c19c69df33a87a5db1ca",
+      "02749d4b9fba9dd5a3b1f37cb167654544273183516f62900a733ad95837046c"
+    ],
+    "art/source/world-ambient-orbit-maze-lamp-2.json": [
+      "b74946b8845125f015effbe6f216766ccfdfe9cfe87dac44df422292366d3868",
+      "aacaa2dbe843eefa798c22dc064c9ebe52153c013333387d352d5bef9f147887"
+    ],
+    "art/source/world-ambient-orbit-playground-device-1.json": [
+      "311b5275ab1a4a1a5219fa402bc5fe8433ba8d140cac8077493aab654c70abcd",
+      "8a4585686ee8d12cceea1df24dfbee53a50cb879a5e8bc0be1cd0ec069b182f2"
+    ],
+    "art/source/world-ambient-orbit-playground-leaves-2.json": [
+      "18903ac7c307f7034b9b55c30c0a94ad4fae106906b19d9ee07c9c68f53fa0b4",
+      "773760b54716b15d8ee49394bfc70ac12dbfb4eb1d0bf4f0e16a4e37bd6abd8b"
+    ],
+    "art/source/world-ambient-star-garden-leaves-2.json": [
+      "02349c446e84a32ffa19854b3d0b732c2bffc2cfe890950e4492f16b675683f5",
+      "6c3eb3ecfa3f348a5a07a1cd9b42f07edab901900b94f0bf64743b47c42afbfa"
+    ],
+    "art/source/world-ambient-star-garden-ripples-1.json": [
+      "f7f1e3888eafe5a16f93adb5056bf775035356c0ae9d83233f832448040965e0",
+      "df314163febabac7f29d4c9d85402903d1fe55171700293fdae931d329abc602"
+    ],
+    "art/source/world-ambient-stargazer-terrace-instrument-1.json": [
+      "6286eaddd36ed61fdddbc36529f604f908f1c5e244cbc9292b6e2e55d970fcee",
+      "a28e86a32c319fbf7ef3eb12976357afaa88818b7eeb2d50e29e580c1fa932d1"
+    ],
+    "art/source/world-ambient-stargazer-terrace-leaves-2.json": [
+      "c1b4346dfe651814abcee1561b7462657677ed971dec995fce1616efa6409f84",
+      "eea3d4c2d53c6360810dfb8d7d9f064182222288abb58db9239787398ba327b2"
+    ],
+    "art/source/world-ambient-water-district-cascade-2.json": [
+      "9dd09d664266504489b60e62ac6841c9fee5968b37842f64f7d270b444419953",
+      "f58c57d85da789c3c14ca13ce9add9372370c10d5b6bb502be43128271f2c119"
+    ],
+    "art/source/world-ambient-water-district-ripples-1.json": [
+      "98495680b6b88d175810b60df692e735e6af917d201b8c52a77b40fd3ea314b3",
+      "1fcf0db91980e55f15c145b89e20c99f7d8fa3d2838a7e5ba0bb43fd405e6cdf"
+    ],
+    "art/source/world-ambient-zodiac-festival-park-leaves-2.json": [
+      "eda400c8e4b7549201bb1dbed71e1029d90c9fbdb60a93194187cd1ed15dde2c",
+      "57bbe68f11c3602adc24441cc069914be3c8a366b72985d0c10bce7b6d878f57"
+    ],
+    "art/source/world-ambient-zodiac-festival-park-ripples-1.json": [
+      "bfd90aeafb7edf2dee54d7742499243143865fc31dc8b74b329792b0d21a85cd",
+      "4ab882e043f1fbe72875b5164e69cb5d45aa8d081c9e48f1b5a1b501098813f6"
+    ],
+    "art/sources.json": [
+      "7b0f483da4ec0cf6275691e1bd19d09aaadd0501fe79291cdc8a13a5b102649d",
+      "5e07d9a4872b8d93c8e6f55b2f97677636f53b225f8b1d5998c2efcb6df53b57"
+    ],
+    "art/tile-catalog.json": [
+      "39dc46cf0addeca8494b5458c6b56185b2dbd33a7cddb4457870ff30b0d1a047",
+      "54538cfcc221acfd471b06ec8b971903278a81dee2f261f4f2dfbabab79d01e4"
+    ],
+    "docs/current-release-facts.md": [
+      "7acc3e5aa07712dcaa6cf20fe5058037fde5a31e2ac8dfab1e8bfeb45e5a251b",
+      "88dca627d8b5163ff002b5a78279f1d2929bd0b100e0c68ae43c718d255f2eca"
+    ],
+    "maps/campus-exploration.tmj": [
+      "bb2108895c879684de09f3d18ab4c25707139574b8bccf19cf6aa9e01df35b70",
+      "1418dfeb458d31c8f831968dfe46cea36ed19088fdc6a780dca36c6387c41bd8"
+    ],
+    "maps/comet-maze.tmj": [
+      "d5f8cf2c0520e537af07005d5f25b809afc0f868edc734fd6302402ad7109727",
+      "c120f39182d701310fd4bf458d4d4e32bfdd47057d23b7dd03b1b7ba7d88ac43"
+    ],
+    "maps/orbit-maze.tmj": [
+      "265f79b803d978868fd4d3d0b873e285184c6195f4b338cec4e64bc4e4031e1d",
+      "b30c019721a3fed256d4dad69a83d6010b695bb50e007eb4580f14564b5a802e"
+    ],
+    "maps/preview/campus-exploration.tmj": [
+      "d2186b03f4170f16839bd7fffbafbdf429dd1ce9db81356cb6fbf35c5e95202e",
+      "7d03547cd2e48d56ab3aef53688cc49ac65d73efb63a5695f4d8ef579582f531"
+    ],
+    "maps/preview/comet-maze.tmj": [
+      "f1689abc3662b9edacd170ab1507825b011b5fc0e2a9dd0f529bf4a423988b8e",
+      "dd5e852ca0f6ffda3cd7303bdd1ec3b448f346bb153fbca4493b0d6264a853b9"
+    ],
+    "maps/preview/orbit-maze.tmj": [
+      "55286a36da41099e86956446ef5a416f1ee9c52985d60cdab1cadb3187026c41",
+      "806f37d8ee9a1105305cc5f1b76ffea37f6858ef3eb741c8b6972094110bd95f"
+    ],
+    "publication/verify-source.mjs": [
+      "e71da87b7bfa9ffea96493e0b9cb6eff5500b47fc7a9899e3a8f3e2978aa550e",
+      "d4722d9bacf7d55426be557537406cbce82e323e30671b4e83f1e8767b151122"
+    ],
+    "src/bots/lyra-routes.json": [
+      "bf471be0eb42f422bf21fcd01df60fd66341e79a1b072303b70f3281c403aac0",
+      "e50d171e707adf08959248400fd68d7f531b2d54c2f4f63140d0d1c78a050284"
+    ],
+    "tools/art/world-ambient.ts": [
+      "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a",
+      "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
+    ],
+    "tools/maps/native-ownership-context.ts": [
+      "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3",
+      "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
+    ],
+    "tools/maps/native-projection.ts": [
+      "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19",
+      "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
+    ],
+    "tools/maps/world-ambient-ownership.ts": [
+      "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238",
+      "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
+    ],
+    "world/layouts/air-district.json": [
+      "a5d88ae70ea7b3843457ff9ba3dca5973779d228100b48e471092d79cf343902",
+      "b364914c58282857da12d5f9e482c4f094535225702270400cf636a57bda8f0a"
+    ],
+    "world/layouts/campus-exploration.json": [
+      "3b611ef19465fa36eb3ba77129f071017ff2ec73ebca9c968d68750427dcb211",
+      "8271961cf8f0d23ca44f1c3035f355d643f392f3ceb56dde0b85d99daf52a494"
+    ],
+    "world/layouts/comet-maze.json": [
+      "71f7c0a6bd1283cdd6fa8c8f702f07156bdcb16bdf34835ccf2895c8ca8c5aa8",
+      "5bdd7cb5330ea4ecd82314d1c28a9e96b94f56737a2f3f95c89cd5f1205a66a7"
+    ],
+    "world/layouts/earth-district.json": [
+      "cc415186a3ba2d8c1c11480fb77506ab6c4adfc07e625c2471671ac9876e258a",
+      "3c8c43602fdda10727033a474f0a0844eb33788ef6ce43bfc7aa528b0f6f5593"
+    ],
+    "world/layouts/fa-ship-interior.json": [
+      "5d316c1eebc76ef4eebb8a2ea202a8fca8485e66aea6c41d737c231d0beb8846",
+      "135cb4cee9b3efddc66be4214ccc607586ce53b7f3992cf9ef8359e2580ae7a2"
+    ],
+    "world/layouts/fa-ship.json": [
+      "dd303a489f37e24322b2932af2037d0e918f51b4f00c6d1d3a8d5e64ca78eff9",
+      "ae93a596f4839719197f6f8913a135ca575aeb7aaaeb943b77e81ec70be98add"
+    ],
+    "world/layouts/fire-district.json": [
+      "07df295f9e993c7aea6d1e71529c7fcae01e062a5a3f9fd377e187d2b025d397",
+      "ba1f1908ef0f360b72e3035efe2cb8be61f55f70b400d34655f5e37e51e761cd"
+    ],
+    "world/layouts/hidden-observatory.json": [
+      "e513cbf134980b7e29de1ce53158d64c61437ce55e9e618608efe6fef34509f5",
+      "264a77027118afcd829b706c451f0667ca89d1f74d60f430eef83daf7329de3a"
+    ],
+    "world/layouts/moon-cafe.json": [
+      "c62d2a1f6d3b08aa3e9bf9cddf696540518c0662da0100c4022d6bc840b6715a",
+      "25830a1a4d82a7b70ad14060918ffad2a853d8431e86aa9dfb064d1263f61d8b"
+    ],
+    "world/layouts/moon-grotto.json": [
+      "82904701917ae83c24fd41ebfb3fc814e6a86f00b005044af722df2948005715",
+      "11cd7c84f5f53f98cf8072359e6682089da257bf8a64d8681625816fe29d9b25"
+    ],
+    "world/layouts/nebula-arcade.json": [
+      "20baf5a51e3f4cc41a1bb9d1c83a05631ee2d4bbf1e09add6c27ffd8413381ec",
+      "917c672a742a0892b73a8b738e025f37e0e147504cce17fbd586de220f203449"
+    ],
+    "world/layouts/orbit-maze.json": [
+      "2671d43d1b7f121008882a82c31a0e990be8589d2237a6dac7160e4d49aac015",
+      "cfaa2c0d7bdeeded94d3f9a5c26af63813340d66f9505cb66b12e3a4ad6b1481"
+    ],
+    "world/layouts/orbit-playground.json": [
+      "f3a6cdcdd9e5d9ff87902c964c35104093157f28264df48694b45562282e9cd4",
+      "198b3fe99f744d14a3b705520ba79471640d92e6b73d26dffcff0dcb278bccc2"
+    ],
+    "world/layouts/star-garden.json": [
+      "6a42496fe27344698b9ec5212b34ca2cb9cf1d9381d79e1bb7ffdd3470dbe830",
+      "49817eb641c07d64f0185914d9162a6c5e0ef83e81262d0ab79c97ee9b2d5f97"
+    ],
+    "world/layouts/stargazer-terrace.json": [
+      "fb9ac5d2c26d471497cdd39f7e0e6e3525749107084950886689af89a5f4455d",
+      "7920ddb097dc341ccc6c808622d9bd250aa891ff0f10c82d7296a968346494f7"
+    ],
+    "world/layouts/water-district.json": [
+      "a9f05617166463039a57b0f7997c21ef8b3035c92e2011b434e56f503514c6d1",
+      "dc758ec838b6f0606155d9c127835fa89346a37d12e9e8a9ef5bb0be675a455d"
+    ],
+    "world/layouts/zodiac-festival-park.json": [
+      "29b57fee672c851581a1723e6b7b5ecb915db0616f835270097a8b997ff83183",
+      "b31f9f2ccde07402c50b7c60256a9e128cf0b8b1ffcdcb62688001f307fe1bf7"
+    ]
+  }
+}

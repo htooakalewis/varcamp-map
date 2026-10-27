@@ -9,6 +9,7 @@ import {FOUNTAIN_MOTION_IDS} from './fountain-motion-roles';
 import {LEO_LION_IMAGE} from './leo-lion-head-definition';
 import {HALL_BUILDING_ATLASES} from './hall-buildings-definition';
 import {cafeArrivalProtectedLayers,cafeArrivalAtlases} from './cafe-arrival-context';
+import {mazeGateProtectedLayers,mazeGateAtlases} from './maze-gate-context';
 
 interface ContextRow{
  atlases:TiledTileset[];
@@ -205,8 +206,9 @@ function context(actual:TiledMap,source:TiledMap):ContextRow|undefined{
 }
 function protectedContext(actual:TiledMap,row:ContextRow,author=false):void{
  const layers=actual.layers.filter(l=>l.type!=='tilelayer'&&l.name!=='floorLayer');
- const current=cafeArrivalProtectedLayers(identities(actual)[0],row.protectedLayers);
- need(isDeepStrictEqual(layers,current)||(author&&isDeepStrictEqual(layers,row.protectedLayers)),'protected nonfloor layer bodies/roster changed');
+ const preceding=cafeArrivalProtectedLayers(identities(actual)[0],row.protectedLayers);
+ const current=mazeGateProtectedLayers(identities(actual)[0],preceding);
+ need(isDeepStrictEqual(layers,current)||(author&&[preceding,row.protectedLayers].some(prior=>isDeepStrictEqual(layers,prior))),'protected nonfloor layer bodies/roster changed');
  need(isDeepStrictEqual(actual.layers.filter(l=>l.type!=='tilelayer').map(l=>l.name),row.protectedNonfloorOrder),'protected nonfloor order changed');
 }
 /** Reviewed epochs on the overworld, each admitted only after every earlier one: the fleet is
@@ -271,7 +273,7 @@ function currentAtlases(row:ContextRow,source:TiledMap,epoch:Epoch=CURRENT,inclu
   }
  }else{need(fleet.length===0,'plaza fleet source atlas requires overworld identity');need(!source.tilesets.some(set=>expoMember(set,row,false)),'expo source atlas requires overworld identity');need(!source.tilesets.some(brandMember),'brand asset source atlas requires overworld identity');need(!source.tilesets.some(isRoadsterV2),'roadster-v2 source atlas requires overworld identity');}
  const cove=tropicalCoveAtlas(source,next);if(cove&&includeCove)expected.push(cove);
- expected.push(...cafeArrivalAtlases(identities(source)[0]));
+ expected.push(...cafeArrivalAtlases(identities(source)[0]),...mazeGateAtlases(identities(source)[0]));
  return expected;
 }
 /** Mandatory final current context: complete atlas roster/order/bodies/ranges,
@@ -292,6 +294,9 @@ export function assertNativeAuthoringContext(actual:TiledMap,source:TiledMap):vo
  const expected=currentAtlases(row,source);
  if(isDeepStrictEqual(actual.tilesets,row.atlases))return;
  if(isDeepStrictEqual(actual.tilesets,expected))return;
+ // Exact preceding maze/Court context, before its reviewed entry atlases.
+ const mazeCount=mazeGateAtlases(identities(source)[0]).length;
+ if(mazeCount&&isDeepStrictEqual(actual.tilesets,expected.slice(0,-mazeCount)))return;
  // Exact preceding café context, before the two reviewed decorative atlases.
  if(identities(source)[0]==='moon-cafe'&&isDeepStrictEqual(actual.tilesets,expected.slice(0,-2)))return;
  // Exact previous Leo release, before the two building/ground-name reservations.

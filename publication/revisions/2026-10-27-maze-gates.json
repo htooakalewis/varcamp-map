@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/sources.json",
+      "fromSha256": "7b0f483da4ec0cf6275691e1bd19d09aaadd0501fe79291cdc8a13a5b102649d",
+      "toSha256": "5e07d9a4872b8d93c8e6f55b2f97677636f53b225f8b1d5998c2efcb6df53b57",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "39dc46cf0addeca8494b5458c6b56185b2dbd33a7cddb4457870ff30b0d1a047",
+      "toSha256": "54538cfcc221acfd471b06ec8b971903278a81dee2f261f4f2dfbabab79d01e4",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "fromSha256": "bb2108895c879684de09f3d18ab4c25707139574b8bccf19cf6aa9e01df35b70",
+      "toSha256": "1418dfeb458d31c8f831968dfe46cea36ed19088fdc6a780dca36c6387c41bd8",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "fromSha256": "d5f8cf2c0520e537af07005d5f25b809afc0f868edc734fd6302402ad7109727",
+      "toSha256": "c120f39182d701310fd4bf458d4d4e32bfdd47057d23b7dd03b1b7ba7d88ac43",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "fromSha256": "265f79b803d978868fd4d3d0b873e285184c6195f4b338cec4e64bc4e4031e1d",
+      "toSha256": "b30c019721a3fed256d4dad69a83d6010b695bb50e007eb4580f14564b5a802e",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/preview/campus-exploration.tmj",
+      "fromSha256": "d2186b03f4170f16839bd7fffbafbdf429dd1ce9db81356cb6fbf35c5e95202e",
+      "toSha256": "7d03547cd2e48d56ab3aef53688cc49ac65d73efb63a5695f4d8ef579582f531",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/preview/comet-maze.tmj",
+      "fromSha256": "f1689abc3662b9edacd170ab1507825b011b5fc0e2a9dd0f529bf4a423988b8e",
+      "toSha256": "dd5e852ca0f6ffda3cd7303bdd1ec3b448f346bb153fbca4493b0d6264a853b9",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "maps/preview/orbit-maze.tmj",
+      "fromSha256": "55286a36da41099e86956446ef5a416f1ee9c52985d60cdab1cadb3187026c41",
+      "toSha256": "806f37d8ee9a1105305cc5f1b76ffea37f6858ef3eb741c8b6972094110bd95f",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/air-district.json",
+      "fromSha256": "a5d88ae70ea7b3843457ff9ba3dca5973779d228100b48e471092d79cf343902",
+      "toSha256": "b364914c58282857da12d5f9e482c4f094535225702270400cf636a57bda8f0a",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/campus-exploration.json",
+      "fromSha256": "3b611ef19465fa36eb3ba77129f071017ff2ec73ebca9c968d68750427dcb211",
+      "toSha256": "8271961cf8f0d23ca44f1c3035f355d643f392f3ceb56dde0b85d99daf52a494",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/comet-maze.json",
+      "fromSha256": "71f7c0a6bd1283cdd6fa8c8f702f07156bdcb16bdf34835ccf2895c8ca8c5aa8",
+      "toSha256": "5bdd7cb5330ea4ecd82314d1c28a9e96b94f56737a2f3f95c89cd5f1205a66a7",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/earth-district.json",
+      "fromSha256": "cc415186a3ba2d8c1c11480fb77506ab6c4adfc07e625c2471671ac9876e258a",
+      "toSha256": "3c8c43602fdda10727033a474f0a0844eb33788ef6ce43bfc7aa528b0f6f5593",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/fa-ship.json",
+      "fromSha256": "dd303a489f37e24322b2932af2037d0e918f51b4f00c6d1d3a8d5e64ca78eff9",
+      "toSha256": "ae93a596f4839719197f6f8913a135ca575aeb7aaaeb943b77e81ec70be98add",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/fire-district.json",
+      "fromSha256": "07df295f9e993c7aea6d1e71529c7fcae01e062a5a3f9fd377e187d2b025d397",
+      "toSha256": "ba1f1908ef0f360b72e3035efe2cb8be61f55f70b400d34655f5e37e51e761cd",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/hidden-observatory.json",
+      "fromSha256": "e513cbf134980b7e29de1ce53158d64c61437ce55e9e618608efe6fef34509f5",
+      "toSha256": "264a77027118afcd829b706c451f0667ca89d1f74d60f430eef83daf7329de3a",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/moon-cafe.json",
+      "fromSha256": "c62d2a1f6d3b08aa3e9bf9cddf696540518c0662da0100c4022d6bc840b6715a",
+      "toSha256": "25830a1a4d82a7b70ad14060918ffad2a853d8431e86aa9dfb064d1263f61d8b",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/moon-grotto.json",
+      "fromSha256": "82904701917ae83c24fd41ebfb3fc814e6a86f00b005044af722df2948005715",
+      "toSha256": "11cd7c84f5f53f98cf8072359e6682089da257bf8a64d8681625816fe29d9b25",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/nebula-arcade.json",
+      "fromSha256": "20baf5a51e3f4cc41a1bb9d1c83a05631ee2d4bbf1e09add6c27ffd8413381ec",
+      "toSha256": "917c672a742a0892b73a8b738e025f37e0e147504cce17fbd586de220f203449",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/orbit-maze.json",
+      "fromSha256": "2671d43d1b7f121008882a82c31a0e990be8589d2237a6dac7160e4d49aac015",
+      "toSha256": "cfaa2c0d7bdeeded94d3f9a5c26af63813340d66f9505cb66b12e3a4ad6b1481",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/orbit-playground.json",
+      "fromSha256": "f3a6cdcdd9e5d9ff87902c964c35104093157f28264df48694b45562282e9cd4",
+      "toSha256": "198b3fe99f744d14a3b705520ba79471640d92e6b73d26dffcff0dcb278bccc2",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/star-garden.json",
+      "fromSha256": "6a42496fe27344698b9ec5212b34ca2cb9cf1d9381d79e1bb7ffdd3470dbe830",
+      "toSha256": "49817eb641c07d64f0185914d9162a6c5e0ef83e81262d0ab79c97ee9b2d5f97",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/stargazer-terrace.json",
+      "fromSha256": "fb9ac5d2c26d471497cdd39f7e0e6e3525749107084950886689af89a5f4455d",
+      "toSha256": "7920ddb097dc341ccc6c808622d9bd250aa891ff0f10c82d7296a968346494f7",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/water-district.json",
+      "fromSha256": "a9f05617166463039a57b0f7997c21ef8b3035c92e2011b434e56f503514c6d1",
+      "toSha256": "dc758ec838b6f0606155d9c127835fa89346a37d12e9e8a9ef5bb0be675a455d",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    },
+    {
+      "path": "world/layouts/zodiac-festival-park.json",
+      "fromSha256": "29b57fee672c851581a1723e6b7b5ecb915db0616f835270097a8b997ff83183",
+      "toSha256": "b31f9f2ccde07402c50b7c60256a9e128cf0b8b1ffcdcb62688001f307fe1bf7",
+      "reason": "Approved maze and entry-gate refresh: coherent maze paths and wall rims, compact landmark labels, eight themed Exploration Court fronts. Preserve both exact maze collision masks, all portals, saved WAMs and existing pixels."
+    }
+  ]
+}

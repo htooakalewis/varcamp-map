@@ -13,15 +13,6 @@
       "height": 48
     },
     {
-      "id": "authored-twilight",
-      "sprite": "night-wash",
-      "x": 0,
-      "y": 0,
-      "width": 48,
-      "height": 48,
-      "layer": "atmosphere"
-    },
-    {
       "id": "court",
       "sprite": "path-stone",
       "layer": "terrain",
@@ -94,16 +85,6 @@
       "height": 8
     },
     {
-      "id": "fire-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 5,
-      "y": 7,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
-    },
-    {
       "id": "fire-door",
       "sprite": "door-open",
       "layer": "props",
@@ -129,16 +110,6 @@
       "y": 7,
       "width": 8,
       "height": 8
-    },
-    {
-      "id": "air-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 15,
-      "y": 7,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
     },
     {
       "id": "air-door",
@@ -168,16 +139,6 @@
       "height": 8
     },
     {
-      "id": "earth-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 25,
-      "y": 7,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
-    },
-    {
       "id": "earth-door",
       "sprite": "door-open",
       "layer": "props",
@@ -203,16 +164,6 @@
       "y": 7,
       "width": 8,
       "height": 8
-    },
-    {
-      "id": "water-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 35,
-      "y": 7,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
     },
     {
       "id": "water-door",
@@ -242,16 +193,6 @@
       "height": 8
     },
     {
-      "id": "star-garden-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 5,
-      "y": 20,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
-    },
-    {
       "id": "star-garden-door",
       "sprite": "door-open",
       "layer": "props",
@@ -277,16 +218,6 @@
       "y": 20,
       "width": 8,
       "height": 8
-    },
-    {
-      "id": "moon-cafe-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 35,
-      "y": 20,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
     },
     {
       "id": "moon-cafe-door",
@@ -316,16 +247,6 @@
       "height": 8
     },
     {
-      "id": "moon-grotto-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 5,
-      "y": 31,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
-    },
-    {
       "id": "moon-grotto-door",
       "sprite": "door-open",
       "layer": "props",
@@ -351,16 +272,6 @@
       "y": 31,
       "width": 8,
       "height": 8
-    },
-    {
-      "id": "stargazer-terrace-wall",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 35,
-      "y": 31,
-      "width": 8,
-      "height": 2,
-      "renderRole": "cutaway"
     },
     {
       "id": "stargazer-terrace-door",
@@ -626,501 +537,6 @@
       "height": 2,
       "layer": "props",
       "renderRole": "grounded"
-    },
-    {
-      "id": "wayfinding-wallboard-fire-label-face",
-      "sprite": "sign-board-face",
-      "x": 4,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-fire-label-north",
-      "sprite": "sign-board-north",
-      "x": 4,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-fire-label-south",
-      "sprite": "sign-board-south",
-      "x": 4,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-fire-label-west",
-      "sprite": "sign-board-west",
-      "x": 4,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-fire-label-east",
-      "sprite": "sign-board-east",
-      "x": 13,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-air-label-face",
-      "sprite": "sign-board-face",
-      "x": 14,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-air-label-north",
-      "sprite": "sign-board-north",
-      "x": 14,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-air-label-south",
-      "sprite": "sign-board-south",
-      "x": 14,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-air-label-west",
-      "sprite": "sign-board-west",
-      "x": 14,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-air-label-east",
-      "sprite": "sign-board-east",
-      "x": 23,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-earth-label-face",
-      "sprite": "sign-board-face",
-      "x": 24,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-earth-label-north",
-      "sprite": "sign-board-north",
-      "x": 24,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-earth-label-south",
-      "sprite": "sign-board-south",
-      "x": 24,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-earth-label-west",
-      "sprite": "sign-board-west",
-      "x": 24,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-earth-label-east",
-      "sprite": "sign-board-east",
-      "x": 33,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-water-label-face",
-      "sprite": "sign-board-face",
-      "x": 34,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-water-label-north",
-      "sprite": "sign-board-north",
-      "x": 34,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-water-label-south",
-      "sprite": "sign-board-south",
-      "x": 34,
-      "y": 6,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-water-label-west",
-      "sprite": "sign-board-west",
-      "x": 34,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-water-label-east",
-      "sprite": "sign-board-east",
-      "x": 43,
-      "y": 6,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-star-garden-label-face",
-      "sprite": "sign-board-face",
-      "x": 4,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-star-garden-label-north",
-      "sprite": "sign-board-north",
-      "x": 4,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-star-garden-label-south",
-      "sprite": "sign-board-south",
-      "x": 4,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-star-garden-label-west",
-      "sprite": "sign-board-west",
-      "x": 4,
-      "y": 19,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-star-garden-label-east",
-      "sprite": "sign-board-east",
-      "x": 13,
-      "y": 19,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-cafe-label-face",
-      "sprite": "sign-board-face",
-      "x": 34,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-cafe-label-north",
-      "sprite": "sign-board-north",
-      "x": 34,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-cafe-label-south",
-      "sprite": "sign-board-south",
-      "x": 34,
-      "y": 19,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-cafe-label-west",
-      "sprite": "sign-board-west",
-      "x": 34,
-      "y": 19,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-cafe-label-east",
-      "sprite": "sign-board-east",
-      "x": 43,
-      "y": 19,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-grotto-label-face",
-      "sprite": "sign-board-face",
-      "x": 4,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-grotto-label-north",
-      "sprite": "sign-board-north",
-      "x": 4,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-grotto-label-south",
-      "sprite": "sign-board-south",
-      "x": 4,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-grotto-label-west",
-      "sprite": "sign-board-west",
-      "x": 4,
-      "y": 30,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-moon-grotto-label-east",
-      "sprite": "sign-board-east",
-      "x": 13,
-      "y": 30,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-stargazer-terrace-label-face",
-      "sprite": "sign-board-face",
-      "x": 34,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-stargazer-terrace-label-north",
-      "sprite": "sign-board-north",
-      "x": 34,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-stargazer-terrace-label-south",
-      "sprite": "sign-board-south",
-      "x": 34,
-      "y": 30,
-      "width": 10,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-stargazer-terrace-label-west",
-      "sprite": "sign-board-west",
-      "x": 34,
-      "y": 30,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-stargazer-terrace-label-east",
-      "sprite": "sign-board-east",
-      "x": 43,
-      "y": 30,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-plaza-return-label-face",
-      "sprite": "sign-board-face",
-      "x": 19,
-      "y": 45,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-plaza-return-label-north",
-      "sprite": "sign-board-north",
-      "x": 19,
-      "y": 45,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-plaza-return-label-south",
-      "sprite": "sign-board-south",
-      "x": 19,
-      "y": 45,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-plaza-return-label-west",
-      "sprite": "sign-board-west",
-      "x": 19,
-      "y": 45,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-plaza-return-label-east",
-      "sprite": "sign-board-east",
-      "x": 30,
-      "y": 45,
-      "width": 1,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-directory-board-face",
-      "sprite": "sign-board-face",
-      "x": 18,
-      "y": 25,
-      "width": 12,
-      "height": 4,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-directory-board-north",
-      "sprite": "sign-board-north",
-      "x": 18,
-      "y": 25,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-directory-board-south",
-      "sprite": "sign-board-south",
-      "x": 18,
-      "y": 28,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-directory-board-west",
-      "sprite": "sign-board-west",
-      "x": 18,
-      "y": 25,
-      "width": 1,
-      "height": 4,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-directory-board-east",
-      "sprite": "sign-board-east",
-      "x": 29,
-      "y": 25,
-      "width": 1,
-      "height": 4,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-arrival-routes-face",
-      "sprite": "sign-board-face",
-      "x": 18,
-      "y": 35,
-      "width": 12,
-      "height": 3,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-arrival-routes-north",
-      "sprite": "sign-board-north",
-      "x": 18,
-      "y": 35,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-arrival-routes-south",
-      "sprite": "sign-board-south",
-      "x": 18,
-      "y": 37,
-      "width": 12,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-arrival-routes-west",
-      "sprite": "sign-board-west",
-      "x": 18,
-      "y": 35,
-      "width": 1,
-      "height": 3,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-arrival-routes-east",
-      "sprite": "sign-board-east",
-      "x": 29,
-      "y": 35,
-      "width": 1,
-      "height": 3,
-      "layer": "architecture"
     },
     {
       "id": "wayfinding-wall-arrow-1",
@@ -1463,6 +879,1095 @@
       "width": 1,
       "height": 1,
       "layer": "terrain"
+    },
+    {
+      "id": "fire-front-solid",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "fire-front-left",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "fire-front-right",
+      "sprite": "maze-solid",
+      "x": 10,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "fire-entrance-roof",
+      "sprite": "floor-charcoal",
+      "x": 4,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "fire-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 4,
+      "y": 5,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "fire-window-4-left",
+      "sprite": "gate-window-left",
+      "x": 4,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-window-4-right",
+      "sprite": "gate-window-right",
+      "x": 5,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-window-10-left",
+      "sprite": "gate-window-left",
+      "x": 10,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-window-10-right",
+      "sprite": "gate-window-right",
+      "x": 11,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-entrance-emblem",
+      "sprite": "forge-wall-relief",
+      "x": 6,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-entry-lawn-4",
+      "sprite": "plaza-grass-01",
+      "x": 4,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "fire-entry-lawn-10",
+      "sprite": "plaza-grass-01",
+      "x": 10,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "fire-entry-apron",
+      "sprite": "path-stone",
+      "x": 6,
+      "y": 10,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "fire-warm-light-4",
+      "sprite": "light-amber",
+      "x": 4,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "fire-warm-light-11",
+      "sprite": "light-amber",
+      "x": 11,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "air-front-solid",
+      "sprite": "maze-solid",
+      "x": 14,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "air-front-left",
+      "sprite": "maze-solid",
+      "x": 14,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "air-front-right",
+      "sprite": "maze-solid",
+      "x": 20,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "air-entrance-roof",
+      "sprite": "floor-blue",
+      "x": 14,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "air-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 14,
+      "y": 5,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "air-window-14-left",
+      "sprite": "gate-window-left",
+      "x": 14,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "air-window-14-right",
+      "sprite": "gate-window-right",
+      "x": 15,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "air-window-20-left",
+      "sprite": "gate-window-left",
+      "x": 20,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "air-window-20-right",
+      "sprite": "gate-window-right",
+      "x": 21,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "air-entrance-emblem",
+      "sprite": "sigil-air",
+      "x": 17,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "air-entry-lawn-14",
+      "sprite": "plaza-grass-01",
+      "x": 14,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "air-entry-lawn-20",
+      "sprite": "plaza-grass-01",
+      "x": 20,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "air-entry-apron",
+      "sprite": "path-stone",
+      "x": 16,
+      "y": 10,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "earth-front-solid",
+      "sprite": "maze-solid",
+      "x": 24,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "earth-front-left",
+      "sprite": "maze-solid",
+      "x": 24,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "earth-front-right",
+      "sprite": "maze-solid",
+      "x": 30,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "earth-entrance-roof",
+      "sprite": "floor-wood",
+      "x": 24,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "earth-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 24,
+      "y": 5,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "earth-window-24-left",
+      "sprite": "gate-window-left",
+      "x": 24,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "earth-window-24-right",
+      "sprite": "gate-window-right",
+      "x": 25,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "earth-window-30-left",
+      "sprite": "gate-window-left",
+      "x": 30,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "earth-window-30-right",
+      "sprite": "gate-window-right",
+      "x": 31,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "earth-entrance-emblem",
+      "sprite": "bookcase",
+      "x": 27,
+      "y": 6,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "earth-entry-lawn-24",
+      "sprite": "plaza-grass-01",
+      "x": 24,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "earth-entry-lawn-30",
+      "sprite": "plaza-grass-01",
+      "x": 30,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "earth-entry-apron",
+      "sprite": "path-stone",
+      "x": 26,
+      "y": 10,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "water-front-solid",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "water-front-left",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "water-front-right",
+      "sprite": "maze-solid",
+      "x": 40,
+      "y": 9,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "water-entrance-roof",
+      "sprite": "floor-blue",
+      "x": 34,
+      "y": 6,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "water-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 34,
+      "y": 5,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "water-window-34-left",
+      "sprite": "gate-window-left",
+      "x": 34,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "water-window-34-right",
+      "sprite": "gate-window-right",
+      "x": 35,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "water-window-40-left",
+      "sprite": "gate-window-left",
+      "x": 40,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "water-window-40-right",
+      "sprite": "gate-window-right",
+      "x": 41,
+      "y": 8,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "water-entrance-emblem",
+      "sprite": "water-wall",
+      "x": 36,
+      "y": 6,
+      "width": 4,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "water-entry-lawn-34",
+      "sprite": "plaza-grass-01",
+      "x": 34,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "water-entry-lawn-40",
+      "sprite": "plaza-grass-01",
+      "x": 40,
+      "y": 11,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "water-entry-apron",
+      "sprite": "path-stone",
+      "x": 36,
+      "y": 10,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "water-cool-light-34",
+      "sprite": "light-cyan",
+      "x": 34,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "water-cool-light-41",
+      "sprite": "light-cyan",
+      "x": 41,
+      "y": 6,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-front-solid",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 19,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "star-garden-front-left",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "star-garden-front-right",
+      "sprite": "maze-solid",
+      "x": 10,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "star-garden-entrance-roof",
+      "sprite": "plaza-grass-01",
+      "x": 4,
+      "y": 19,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "star-garden-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 4,
+      "y": 19,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "star-garden-window-4-left",
+      "sprite": "gate-window-left",
+      "x": 4,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-window-4-right",
+      "sprite": "gate-window-right",
+      "x": 5,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-window-10-left",
+      "sprite": "gate-window-left",
+      "x": 10,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-window-10-right",
+      "sprite": "gate-window-right",
+      "x": 11,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-entrance-emblem",
+      "sprite": "plaza-flower-bed",
+      "x": 7,
+      "y": 20,
+      "width": 2,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-entry-lawn-4",
+      "sprite": "plaza-grass-01",
+      "x": 4,
+      "y": 24,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "star-garden-entry-lawn-10",
+      "sprite": "plaza-grass-01",
+      "x": 10,
+      "y": 24,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "star-garden-entry-apron",
+      "sprite": "path-stone",
+      "x": 6,
+      "y": 23,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "star-garden-front-tree-4",
+      "sprite": "plaza-tree-flowering",
+      "x": 4,
+      "y": 25,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "star-garden-front-tree-10",
+      "sprite": "plaza-tree-flowering",
+      "x": 10,
+      "y": 25,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-front-solid",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 19,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-cafe-front-left",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-cafe-front-right",
+      "sprite": "maze-solid",
+      "x": 40,
+      "y": 22,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-cafe-entrance-roof",
+      "sprite": "floor-wood-long",
+      "x": 34,
+      "y": 19,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-cafe-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 34,
+      "y": 19,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-cafe-window-34-left",
+      "sprite": "gate-window-left",
+      "x": 34,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-window-34-right",
+      "sprite": "gate-window-right",
+      "x": 35,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-window-40-left",
+      "sprite": "gate-window-left",
+      "x": 40,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-window-40-right",
+      "sprite": "gate-window-right",
+      "x": 41,
+      "y": 21,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-entrance-emblem",
+      "sprite": "coffee-maker",
+      "x": 37,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-entry-lawn-34",
+      "sprite": "plaza-grass-01",
+      "x": 34,
+      "y": 24,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-cafe-entry-lawn-40",
+      "sprite": "plaza-grass-01",
+      "x": 40,
+      "y": 24,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-cafe-entry-apron",
+      "sprite": "path-stone",
+      "x": 36,
+      "y": 23,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-cafe-flower-34",
+      "sprite": "plant-flower",
+      "x": 34,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "moon-cafe-flower-41",
+      "sprite": "plant-flower",
+      "x": 41,
+      "y": 20,
+      "width": 1,
+      "height": 1,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-front-solid",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 30,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-grotto-front-left",
+      "sprite": "maze-solid",
+      "x": 4,
+      "y": 33,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-grotto-front-right",
+      "sprite": "maze-solid",
+      "x": 10,
+      "y": 33,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-grotto-entrance-roof",
+      "sprite": "floor-cosmic",
+      "x": 4,
+      "y": 30,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-grotto-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 4,
+      "y": 29,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "moon-grotto-window-4-left",
+      "sprite": "gate-window-left",
+      "x": 4,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-window-4-right",
+      "sprite": "gate-window-right",
+      "x": 5,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-window-10-left",
+      "sprite": "gate-window-left",
+      "x": 10,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-window-10-right",
+      "sprite": "gate-window-right",
+      "x": 11,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-entrance-emblem",
+      "sprite": "crystal-cyan",
+      "x": 7,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-entry-lawn-4",
+      "sprite": "plaza-grass-01",
+      "x": 4,
+      "y": 35,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-grotto-entry-lawn-10",
+      "sprite": "plaza-grass-01",
+      "x": 10,
+      "y": 35,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-grotto-entry-apron",
+      "sprite": "path-stone",
+      "x": 6,
+      "y": 34,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "moon-grotto-front-tree-4",
+      "sprite": "plaza-tree-round",
+      "x": 4,
+      "y": 36,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-front-tree-10",
+      "sprite": "plaza-tree-round",
+      "x": 10,
+      "y": 36,
+      "width": 2,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-crystal-4",
+      "sprite": "crystal-cyan",
+      "x": 4,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "moon-grotto-crystal-11",
+      "sprite": "crystal-cyan",
+      "x": 11,
+      "y": 30,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-front-solid",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 30,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "stargazer-terrace-front-left",
+      "sprite": "maze-solid",
+      "x": 34,
+      "y": 33,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "stargazer-terrace-front-right",
+      "sprite": "maze-solid",
+      "x": 40,
+      "y": 33,
+      "width": 2,
+      "height": 2,
+      "layer": "architecture"
+    },
+    {
+      "id": "stargazer-terrace-entrance-roof",
+      "sprite": "floor-charcoal",
+      "x": 34,
+      "y": 30,
+      "width": 8,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "stargazer-terrace-entrance-header",
+      "sprite": "gate-header-face",
+      "x": 34,
+      "y": 29,
+      "width": 8,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "stargazer-terrace-window-34-left",
+      "sprite": "gate-window-left",
+      "x": 34,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-window-34-right",
+      "sprite": "gate-window-right",
+      "x": 35,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-window-40-left",
+      "sprite": "gate-window-left",
+      "x": 40,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-window-40-right",
+      "sprite": "gate-window-right",
+      "x": 41,
+      "y": 32,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-entrance-emblem",
+      "sprite": "telescope",
+      "x": 36,
+      "y": 30,
+      "width": 3,
+      "height": 3,
+      "layer": "props"
+    },
+    {
+      "id": "stargazer-terrace-entry-lawn-34",
+      "sprite": "plaza-grass-01",
+      "x": 34,
+      "y": 35,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "stargazer-terrace-entry-lawn-40",
+      "sprite": "plaza-grass-01",
+      "x": 40,
+      "y": 35,
+      "width": 2,
+      "height": 4,
+      "layer": "terrain"
+    },
+    {
+      "id": "stargazer-terrace-entry-apron",
+      "sprite": "path-stone",
+      "x": 36,
+      "y": 34,
+      "width": 4,
+      "height": 5,
+      "layer": "terrain"
+    },
+    {
+      "id": "wayfinding-wallboard-directory-board-face",
+      "sprite": "sign-board-face",
+      "x": 18,
+      "y": 25,
+      "width": 12,
+      "height": 4,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-directory-board-north",
+      "sprite": "sign-board-north",
+      "x": 18,
+      "y": 25,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-directory-board-south",
+      "sprite": "sign-board-south",
+      "x": 18,
+      "y": 28,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-directory-board-west",
+      "sprite": "sign-board-west",
+      "x": 18,
+      "y": 25,
+      "width": 1,
+      "height": 4,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-directory-board-east",
+      "sprite": "sign-board-east",
+      "x": 29,
+      "y": 25,
+      "width": 1,
+      "height": 4,
+      "layer": "architecture"
     }
   ],
   "entries": [
@@ -1694,107 +2199,107 @@
   "signs": [
     {
       "name": "fire-label",
-      "text": "↑ FIRE DISTRICT",
-      "fontSize": 15,
+      "text": "FIRE DISTRICT",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 4,
-      "y": 6,
-      "width": 10,
+      "y": 5,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "air-label",
-      "text": "↑ AIR DISTRICT",
-      "fontSize": 15,
+      "text": "AIR DISTRICT",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 14,
-      "y": 6,
-      "width": 10,
+      "y": 5,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "earth-label",
-      "text": "↑ EARTH DISTRICT",
-      "fontSize": 15,
+      "text": "EARTH DISTRICT",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 24,
-      "y": 6,
-      "width": 10,
+      "y": 5,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "water-label",
-      "text": "↑ WATER DISTRICT",
-      "fontSize": 15,
+      "text": "WATER DISTRICT",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 34,
-      "y": 6,
-      "width": 10,
+      "y": 5,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "star-garden-label",
-      "text": "↑ STAR GARDEN",
-      "fontSize": 15,
+      "text": "STAR GARDEN",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 4,
       "y": 19,
-      "width": 10,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "moon-cafe-label",
-      "text": "↑ MOON CAFÉ",
-      "fontSize": 15,
+      "text": "MOON CAFÉ",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 34,
       "y": 19,
-      "width": 10,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "moon-grotto-label",
-      "text": "↑ MOON GROTTO",
-      "fontSize": 15,
+      "text": "MOON GROTTO",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 4,
-      "y": 30,
-      "width": 10,
+      "y": 29,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "stargazer-terrace-label",
-      "text": "↑ STARGAZER TERRACE",
-      "fontSize": 15,
+      "text": "STARGAZER TERRACE",
+      "fontSize": 16,
       "color": "#fff0b0",
       "x": 34,
-      "y": 30,
-      "width": 10,
+      "y": 29,
+      "width": 8,
       "height": 1,
       "align": "left"
     },
     {
       "name": "directory-title",
       "text": "EXPLORATION COURT",
-      "fontSize": 24,
+      "fontSize": 20,
       "color": "#f4d77b",
-      "x": 16,
-      "y": 3,
-      "width": 19,
-      "height": 2,
+      "x": 18,
+      "y": 2,
+      "width": 12,
+      "height": 1,
       "align": "left"
     },
     {
       "name": "directory-board",
-      "text": "↑ FOUR DISTRICTS\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →\n↓ ZODIAC PLAZA",
-      "fontSize": 16,
+      "text": "EXPLORE VARCAMP\n↑ FOUR DISTRICTS\n← GARDEN · GROTTO\nCAFÉ · STARGAZER →",
+      "fontSize": 15,
       "color": "#fff0b0",
       "x": 18,
       "y": 25,
@@ -1811,17 +2316,6 @@
       "y": 45,
       "width": 12,
       "height": 1,
-      "align": "left"
-    },
-    {
-      "name": "arrival-routes",
-      "text": "↑ FOUR DISTRICTS · NORTH\n← GARDEN / GROTTO\nCAFÉ / STARGAZER →",
-      "x": 18,
-      "y": 35,
-      "width": 12,
-      "height": 3,
-      "fontSize": 16,
-      "color": "#fff0b0",
       "align": "left"
     }
   ],
@@ -1993,7 +2487,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
+            "sha256": "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -2013,7 +2507,7 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+            "sha256": "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
           },
           {
             "path": "tools/maps/cafe-arrival-context.ts",
@@ -2024,12 +2518,20 @@
             "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
+            "path": "tools/maps/maze-gate-context.ts",
+            "sha256": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350"
+          },
+          {
+            "path": "art/source/maze-gate-refresh.json",
+            "sha256": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+          },
+          {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
+            "sha256": "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
+            "sha256": "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -2425,7 +2927,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
+            "sha256": "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -2445,7 +2947,7 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+            "sha256": "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
           },
           {
             "path": "tools/maps/cafe-arrival-context.ts",
@@ -2456,12 +2958,20 @@
             "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
+            "path": "tools/maps/maze-gate-context.ts",
+            "sha256": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350"
+          },
+          {
+            "path": "art/source/maze-gate-refresh.json",
+            "sha256": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+          },
+          {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
+            "sha256": "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
+            "sha256": "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -2481,6 +2991,16 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Exploration / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 21,
+      "y": 16,
+      "width": 6,
+      "height": 2
     }
   ]
 }

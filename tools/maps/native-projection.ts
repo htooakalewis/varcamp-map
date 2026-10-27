@@ -4,6 +4,7 @@ import contract from'./animated-decoration-contract.json';
 import ocean from '../../world/beach-ship-native.json';
 import type {TiledMap,TiledTileset,TiledLayer,TileLayer,TiledProperty} from './types';
 import{authorCafeArrivalContext,cafeArrivalAtlases}from'./cafe-arrival-context';
+import{authorMazeGateContext,mazeGateAtlases}from'./maze-gate-context';
 
 const need=(ok:unknown,message:string):void=>{if(!ok)throw Error('Native projection '+message);};
 const ordinary=(set:TiledTileset)=>/^art-\d+$/.test(set.name??'');
@@ -78,12 +79,14 @@ export function reconcileNativeProjection(native:TiledMap,rawSource:TiledMap):Ti
  const source=expectedNativeProjection(rawSource),result=structuredClone(native);checkStructure(result);checkStructure(source);
  assertNativeAuthoringContext(native,source);
  authorCafeArrivalContext(result);
+ authorMazeGateContext(result);
  const paint=source.layers.filter(l=>l.type==='tilelayer'&&l.visible!==false&&l.opacity!==0),owned=new Set(paint.map(l=>l.name)),sourceNames=new Set(source.layers.map(l=>l.name));
  need(result.layers.every(l=>l.type!=='tilelayer'||sourceNames.has(l.name)),'unknown native layer cannot be retired');
  const originalSets=structuredClone(result.tilesets),originalMax=Math.max(...originalSets.map(t=>t.firstgid+t.tilecount!));let next=originalMax;
  const named=new Set(source.tilesets.filter(t=>!ordinary(t)).map(t=>t.name));
  const references=(layers:TiledLayer[],from:number,to:number):string[]=>layers.flatMap(l=>l.type==='tilelayer'?l.data.some(g=>g&&plain(g)>=from&&plain(g)<to)?[l.name]:[]:l.type==='objectgroup'?l.objects.some(o=>o.gid&&plain(o.gid)>=from&&plain(o.gid)<to)?[l.name]:[]:l.type==='group'?references(l.layers,from,to):[]);
- const cafe=cafeArrivalAtlases(String(source.properties?.find(p=>p.name==='worldMapId')?.value));
+ const id=String(source.properties?.find(p=>p.name==='worldMapId')?.value);
+ const cafe=[...cafeArrivalAtlases(id),...mazeGateAtlases(id)];
  const ordered=cafe.length?[...source.tilesets.filter(s=>!cafe.some(t=>t.image===s.image)),...cafe.map(t=>source.tilesets.find(s=>s.image===t.image)!).filter(Boolean)]:source.tilesets;
  for(const set of ordered){
   // Roadster-v2 epoch: the registered v1 reservation (same role name, v1 image) is vacated before

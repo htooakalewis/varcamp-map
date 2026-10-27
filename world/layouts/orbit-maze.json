@@ -5,7 +5,7 @@
   "placements": [
     {
       "id": "night-floor",
-      "sprite": "floor-cosmic",
+      "sprite": "floor-charcoal",
       "x": 0,
       "y": 0,
       "width": 80,
@@ -14,7 +14,7 @@
     },
     {
       "id": "maze-solid-walls",
-      "sprite": "wall-charcoal",
+      "sprite": "maze-solid",
       "x": 2,
       "y": 2,
       "width": 76,
@@ -284,7 +284,7 @@
     },
     {
       "id": "cell-10-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 7,
       "y": 7,
       "width": 7,
@@ -303,7 +303,7 @@
     },
     {
       "id": "cell-10-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 7,
       "y": 19,
       "width": 7,
@@ -322,7 +322,7 @@
     },
     {
       "id": "cell-10-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 7,
       "y": 31,
       "width": 7,
@@ -341,7 +341,7 @@
     },
     {
       "id": "cell-10-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 7,
       "y": 43,
       "width": 7,
@@ -360,7 +360,7 @@
     },
     {
       "id": "cell-10-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 7,
       "y": 55,
       "width": 7,
@@ -379,7 +379,7 @@
     },
     {
       "id": "cell-22-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 19,
       "y": 7,
       "width": 7,
@@ -398,7 +398,7 @@
     },
     {
       "id": "cell-22-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 19,
       "y": 19,
       "width": 7,
@@ -417,7 +417,7 @@
     },
     {
       "id": "cell-22-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 19,
       "y": 31,
       "width": 7,
@@ -436,7 +436,7 @@
     },
     {
       "id": "cell-22-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 19,
       "y": 43,
       "width": 7,
@@ -454,7 +454,7 @@
     },
     {
       "id": "cell-22-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 19,
       "y": 55,
       "width": 7,
@@ -473,7 +473,7 @@
     },
     {
       "id": "cell-34-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 31,
       "y": 7,
       "width": 7,
@@ -492,7 +492,7 @@
     },
     {
       "id": "cell-34-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 31,
       "y": 19,
       "width": 7,
@@ -511,7 +511,7 @@
     },
     {
       "id": "cell-34-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 31,
       "y": 31,
       "width": 7,
@@ -530,7 +530,7 @@
     },
     {
       "id": "cell-34-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 31,
       "y": 43,
       "width": 7,
@@ -549,7 +549,7 @@
     },
     {
       "id": "cell-34-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 31,
       "y": 55,
       "width": 7,
@@ -568,7 +568,7 @@
     },
     {
       "id": "cell-46-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 7,
       "width": 7,
@@ -587,7 +587,7 @@
     },
     {
       "id": "cell-46-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 19,
       "width": 7,
@@ -606,7 +606,7 @@
     },
     {
       "id": "cell-46-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 31,
       "width": 7,
@@ -625,7 +625,7 @@
     },
     {
       "id": "cell-46-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 43,
       "width": 7,
@@ -644,7 +644,7 @@
     },
     {
       "id": "cell-46-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 55,
       "width": 7,
@@ -663,7 +663,7 @@
     },
     {
       "id": "cell-58-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 55,
       "y": 7,
       "width": 7,
@@ -682,7 +682,7 @@
     },
     {
       "id": "cell-58-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 55,
       "y": 19,
       "width": 7,
@@ -701,7 +701,7 @@
     },
     {
       "id": "cell-58-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 55,
       "y": 31,
       "width": 7,
@@ -720,7 +720,7 @@
     },
     {
       "id": "cell-58-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 55,
       "y": 43,
       "width": 7,
@@ -739,7 +739,7 @@
     },
     {
       "id": "cell-58-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 55,
       "y": 55,
       "width": 7,
@@ -758,7 +758,7 @@
     },
     {
       "id": "cell-70-10",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 67,
       "y": 7,
       "width": 7,
@@ -777,7 +777,7 @@
     },
     {
       "id": "cell-70-22",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 67,
       "y": 19,
       "width": 7,
@@ -796,7 +796,7 @@
     },
     {
       "id": "cell-70-34",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 67,
       "y": 31,
       "width": 7,
@@ -815,7 +815,7 @@
     },
     {
       "id": "cell-70-46",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 67,
       "y": 43,
       "width": 7,
@@ -834,7 +834,7 @@
     },
     {
       "id": "cell-70-58",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 67,
       "y": 55,
       "width": 7,
@@ -924,29 +924,11 @@
       "layer": "props"
     },
     {
-      "id": "wall-zodiac-0",
-      "sprite": "constellation-cancer",
-      "x": 15,
-      "y": 15,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
       "id": "wall-light-0",
       "sprite": "light-amber",
       "x": 18,
       "y": 15,
       "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-zodiac-1",
-      "sprite": "constellation-sagittarius",
-      "x": 39,
-      "y": 15,
-      "width": 3,
       "height": 2,
       "layer": "props"
     },
@@ -960,29 +942,11 @@
       "layer": "props"
     },
     {
-      "id": "wall-zodiac-2",
-      "sprite": "constellation-aquarius",
-      "x": 51,
-      "y": 27,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
       "id": "wall-light-2",
       "sprite": "light-amber",
       "x": 54,
       "y": 27,
       "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-zodiac-3",
-      "sprite": "constellation-pisces",
-      "x": 27,
-      "y": 39,
-      "width": 3,
       "height": 2,
       "layer": "props"
     },
@@ -996,15 +960,6 @@
       "layer": "props"
     },
     {
-      "id": "wall-zodiac-4",
-      "sprite": "constellation-leo",
-      "x": 51,
-      "y": 51,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
       "id": "wall-light-4",
       "sprite": "light-amber",
       "x": 54,
@@ -1014,29 +969,11 @@
       "layer": "props"
     },
     {
-      "id": "wall-zodiac-5",
-      "sprite": "constellation-capricorn",
-      "x": 63,
-      "y": 3,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
       "id": "wall-light-5",
       "sprite": "light-amber",
       "x": 66,
       "y": 3,
       "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-zodiac-6",
-      "sprite": "constellation-virgo",
-      "x": 3,
-      "y": 39,
-      "width": 3,
       "height": 2,
       "layer": "props"
     },
@@ -1114,7 +1051,7 @@
     },
     {
       "id": "maze-entrance",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 8,
       "y": 58,
       "width": 5,
@@ -1123,7 +1060,7 @@
     },
     {
       "id": "external-main-route",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 8,
       "y": 70,
       "width": 35,
@@ -1132,7 +1069,7 @@
     },
     {
       "id": "campus-return-route",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 37,
       "y": 70,
       "width": 6,
@@ -1195,7 +1132,7 @@
     },
     {
       "id": "social-access",
-      "sprite": "floor-blue",
+      "sprite": "path-stone",
       "x": 43,
       "y": 70,
       "width": 33,
@@ -1322,2337 +1259,6 @@
       "height": 2,
       "layer": "props",
       "renderRole": "grounded"
-    },
-    {
-      "id": "wall-facing-66-4",
-      "sprite": "wall-navy",
-      "x": 66,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-67-4",
-      "sprite": "wall-navy",
-      "x": 67,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-68-4",
-      "sprite": "wall-navy",
-      "x": 68,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-69-4",
-      "sprite": "wall-navy",
-      "x": 69,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-70-4",
-      "sprite": "wall-navy",
-      "x": 70,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-71-4",
-      "sprite": "wall-navy",
-      "x": 71,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-72-4",
-      "sprite": "wall-navy",
-      "x": 72,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-73-4",
-      "sprite": "wall-navy",
-      "x": 73,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-74-4",
-      "sprite": "wall-navy",
-      "x": 74,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-7-6",
-      "sprite": "wall-navy",
-      "x": 7,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-8-6",
-      "sprite": "wall-navy",
-      "x": 8,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-9-6",
-      "sprite": "wall-navy",
-      "x": 9,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-10-6",
-      "sprite": "wall-navy",
-      "x": 10,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-11-6",
-      "sprite": "wall-navy",
-      "x": 11,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-12-6",
-      "sprite": "wall-navy",
-      "x": 12,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-13-6",
-      "sprite": "wall-navy",
-      "x": 13,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-19-6",
-      "sprite": "wall-navy",
-      "x": 19,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-20-6",
-      "sprite": "wall-navy",
-      "x": 20,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-21-6",
-      "sprite": "wall-navy",
-      "x": 21,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-22-6",
-      "sprite": "wall-navy",
-      "x": 22,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-23-6",
-      "sprite": "wall-navy",
-      "x": 23,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-24-6",
-      "sprite": "wall-navy",
-      "x": 24,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-25-6",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-31-6",
-      "sprite": "wall-navy",
-      "x": 31,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-32-6",
-      "sprite": "wall-navy",
-      "x": 32,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-33-6",
-      "sprite": "wall-navy",
-      "x": 33,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-34-6",
-      "sprite": "wall-navy",
-      "x": 34,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-35-6",
-      "sprite": "wall-navy",
-      "x": 35,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-36-6",
-      "sprite": "wall-navy",
-      "x": 36,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-37-6",
-      "sprite": "wall-navy",
-      "x": 37,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-43-6",
-      "sprite": "wall-navy",
-      "x": 43,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-44-6",
-      "sprite": "wall-navy",
-      "x": 44,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-45-6",
-      "sprite": "wall-navy",
-      "x": 45,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-46-6",
-      "sprite": "wall-navy",
-      "x": 46,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-47-6",
-      "sprite": "wall-navy",
-      "x": 47,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-48-6",
-      "sprite": "wall-navy",
-      "x": 48,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-49-6",
-      "sprite": "wall-navy",
-      "x": 49,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-55-6",
-      "sprite": "wall-navy",
-      "x": 55,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-56-6",
-      "sprite": "wall-navy",
-      "x": 56,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-57-6",
-      "sprite": "wall-navy",
-      "x": 57,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-58-6",
-      "sprite": "wall-navy",
-      "x": 58,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-59-6",
-      "sprite": "wall-navy",
-      "x": 59,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-60-6",
-      "sprite": "wall-navy",
-      "x": 60,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-61-6",
-      "sprite": "wall-navy",
-      "x": 61,
-      "y": 5,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-14-7",
-      "sprite": "wall-navy",
-      "x": 14,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-15-7",
-      "sprite": "wall-navy",
-      "x": 15,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-16-7",
-      "sprite": "wall-navy",
-      "x": 16,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-17-7",
-      "sprite": "wall-navy",
-      "x": 17,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-18-7",
-      "sprite": "wall-navy",
-      "x": 18,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-38-7",
-      "sprite": "wall-navy",
-      "x": 38,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-39-7",
-      "sprite": "wall-navy",
-      "x": 39,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-40-7",
-      "sprite": "wall-navy",
-      "x": 40,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-41-7",
-      "sprite": "wall-navy",
-      "x": 41,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-42-7",
-      "sprite": "wall-navy",
-      "x": 42,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-50-7",
-      "sprite": "wall-navy",
-      "x": 50,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-51-7",
-      "sprite": "wall-navy",
-      "x": 51,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-52-7",
-      "sprite": "wall-navy",
-      "x": 52,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-53-7",
-      "sprite": "wall-navy",
-      "x": 53,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-54-7",
-      "sprite": "wall-navy",
-      "x": 54,
-      "y": 6,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-75-9",
-      "sprite": "wall-navy",
-      "x": 75,
-      "y": 8,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-28-17",
-      "sprite": "wall-navy",
-      "x": 28,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-29-17",
-      "sprite": "wall-navy",
-      "x": 29,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-30-17",
-      "sprite": "wall-navy",
-      "x": 30,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-31-17",
-      "sprite": "wall-navy",
-      "x": 31,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-37-17",
-      "sprite": "wall-navy",
-      "x": 37,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-38-17",
-      "sprite": "wall-navy",
-      "x": 38,
-      "y": 16,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-7-18",
-      "sprite": "wall-navy",
-      "x": 7,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-13-18",
-      "sprite": "wall-navy",
-      "x": 13,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-19-18",
-      "sprite": "wall-navy",
-      "x": 19,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-25-18",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-43-18",
-      "sprite": "wall-navy",
-      "x": 43,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-44-18",
-      "sprite": "wall-navy",
-      "x": 44,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-45-18",
-      "sprite": "wall-navy",
-      "x": 45,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-46-18",
-      "sprite": "wall-navy",
-      "x": 46,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-47-18",
-      "sprite": "wall-navy",
-      "x": 47,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-48-18",
-      "sprite": "wall-navy",
-      "x": 48,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-49-18",
-      "sprite": "wall-navy",
-      "x": 49,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-55-18",
-      "sprite": "wall-navy",
-      "x": 55,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-56-18",
-      "sprite": "wall-navy",
-      "x": 56,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-57-18",
-      "sprite": "wall-navy",
-      "x": 57,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-58-18",
-      "sprite": "wall-navy",
-      "x": 58,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-59-18",
-      "sprite": "wall-navy",
-      "x": 59,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-60-18",
-      "sprite": "wall-navy",
-      "x": 60,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-61-18",
-      "sprite": "wall-navy",
-      "x": 61,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-67-18",
-      "sprite": "wall-navy",
-      "x": 67,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-73-18",
-      "sprite": "wall-navy",
-      "x": 73,
-      "y": 17,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-39-19",
-      "sprite": "wall-navy",
-      "x": 39,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-40-19",
-      "sprite": "wall-navy",
-      "x": 40,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-41-19",
-      "sprite": "wall-navy",
-      "x": 41,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-42-19",
-      "sprite": "wall-navy",
-      "x": 42,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-62-19",
-      "sprite": "wall-navy",
-      "x": 62,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-63-19",
-      "sprite": "wall-navy",
-      "x": 63,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-64-19",
-      "sprite": "wall-navy",
-      "x": 64,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-65-19",
-      "sprite": "wall-navy",
-      "x": 65,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-66-19",
-      "sprite": "wall-navy",
-      "x": 66,
-      "y": 18,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-54-29",
-      "sprite": "wall-navy",
-      "x": 54,
-      "y": 28,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-55-29",
-      "sprite": "wall-navy",
-      "x": 55,
-      "y": 28,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-61-29",
-      "sprite": "wall-navy",
-      "x": 61,
-      "y": 28,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-62-29",
-      "sprite": "wall-navy",
-      "x": 62,
-      "y": 28,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-7-30",
-      "sprite": "wall-navy",
-      "x": 7,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-13-30",
-      "sprite": "wall-navy",
-      "x": 13,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-19-30",
-      "sprite": "wall-navy",
-      "x": 19,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-20-30",
-      "sprite": "wall-navy",
-      "x": 20,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-21-30",
-      "sprite": "wall-navy",
-      "x": 21,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-22-30",
-      "sprite": "wall-navy",
-      "x": 22,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-23-30",
-      "sprite": "wall-navy",
-      "x": 23,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-24-30",
-      "sprite": "wall-navy",
-      "x": 24,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-25-30",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-31-30",
-      "sprite": "wall-navy",
-      "x": 31,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-37-30",
-      "sprite": "wall-navy",
-      "x": 37,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-43-30",
-      "sprite": "wall-navy",
-      "x": 43,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-49-30",
-      "sprite": "wall-navy",
-      "x": 49,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-67-30",
-      "sprite": "wall-navy",
-      "x": 67,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-73-30",
-      "sprite": "wall-navy",
-      "x": 73,
-      "y": 29,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-14-31",
-      "sprite": "wall-navy",
-      "x": 14,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-15-31",
-      "sprite": "wall-navy",
-      "x": 15,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-16-31",
-      "sprite": "wall-navy",
-      "x": 16,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-17-31",
-      "sprite": "wall-navy",
-      "x": 17,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-18-31",
-      "sprite": "wall-navy",
-      "x": 18,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-26-31",
-      "sprite": "wall-navy",
-      "x": 26,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-27-31",
-      "sprite": "wall-navy",
-      "x": 27,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-28-31",
-      "sprite": "wall-navy",
-      "x": 28,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-29-31",
-      "sprite": "wall-navy",
-      "x": 29,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-30-31",
-      "sprite": "wall-navy",
-      "x": 30,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-50-31",
-      "sprite": "wall-navy",
-      "x": 50,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-51-31",
-      "sprite": "wall-navy",
-      "x": 51,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-52-31",
-      "sprite": "wall-navy",
-      "x": 52,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-53-31",
-      "sprite": "wall-navy",
-      "x": 53,
-      "y": 30,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-25-41",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 40,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-26-41",
-      "sprite": "wall-navy",
-      "x": 26,
-      "y": 40,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-7-42",
-      "sprite": "wall-navy",
-      "x": 7,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-8-42",
-      "sprite": "wall-navy",
-      "x": 8,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-9-42",
-      "sprite": "wall-navy",
-      "x": 9,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-10-42",
-      "sprite": "wall-navy",
-      "x": 10,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-11-42",
-      "sprite": "wall-navy",
-      "x": 11,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-12-42",
-      "sprite": "wall-navy",
-      "x": 12,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-13-42",
-      "sprite": "wall-navy",
-      "x": 13,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-31-42",
-      "sprite": "wall-navy",
-      "x": 31,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-32-42",
-      "sprite": "wall-navy",
-      "x": 32,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-33-42",
-      "sprite": "wall-navy",
-      "x": 33,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-34-42",
-      "sprite": "wall-navy",
-      "x": 34,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-35-42",
-      "sprite": "wall-navy",
-      "x": 35,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-36-42",
-      "sprite": "wall-navy",
-      "x": 36,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-37-42",
-      "sprite": "wall-navy",
-      "x": 37,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-43-42",
-      "sprite": "wall-navy",
-      "x": 43,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-44-42",
-      "sprite": "wall-navy",
-      "x": 44,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-45-42",
-      "sprite": "wall-navy",
-      "x": 45,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-46-42",
-      "sprite": "wall-navy",
-      "x": 46,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-47-42",
-      "sprite": "wall-navy",
-      "x": 47,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-48-42",
-      "sprite": "wall-navy",
-      "x": 48,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-49-42",
-      "sprite": "wall-navy",
-      "x": 49,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-55-42",
-      "sprite": "wall-navy",
-      "x": 55,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-56-42",
-      "sprite": "wall-navy",
-      "x": 56,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-57-42",
-      "sprite": "wall-navy",
-      "x": 57,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-58-42",
-      "sprite": "wall-navy",
-      "x": 58,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-59-42",
-      "sprite": "wall-navy",
-      "x": 59,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-60-42",
-      "sprite": "wall-navy",
-      "x": 60,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-61-42",
-      "sprite": "wall-navy",
-      "x": 61,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-67-42",
-      "sprite": "wall-navy",
-      "x": 67,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-68-42",
-      "sprite": "wall-navy",
-      "x": 68,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-69-42",
-      "sprite": "wall-navy",
-      "x": 69,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-70-42",
-      "sprite": "wall-navy",
-      "x": 70,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-71-42",
-      "sprite": "wall-navy",
-      "x": 71,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-72-42",
-      "sprite": "wall-navy",
-      "x": 72,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-73-42",
-      "sprite": "wall-navy",
-      "x": 73,
-      "y": 41,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-14-43",
-      "sprite": "wall-navy",
-      "x": 14,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-38-43",
-      "sprite": "wall-navy",
-      "x": 38,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-39-43",
-      "sprite": "wall-navy",
-      "x": 39,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-40-43",
-      "sprite": "wall-navy",
-      "x": 40,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-41-43",
-      "sprite": "wall-navy",
-      "x": 41,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-42-43",
-      "sprite": "wall-navy",
-      "x": 42,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-50-43",
-      "sprite": "wall-navy",
-      "x": 50,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-51-43",
-      "sprite": "wall-navy",
-      "x": 51,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-52-43",
-      "sprite": "wall-navy",
-      "x": 52,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-53-43",
-      "sprite": "wall-navy",
-      "x": 53,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-54-43",
-      "sprite": "wall-navy",
-      "x": 54,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-62-43",
-      "sprite": "wall-navy",
-      "x": 62,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-63-43",
-      "sprite": "wall-navy",
-      "x": 63,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-64-43",
-      "sprite": "wall-navy",
-      "x": 64,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-65-43",
-      "sprite": "wall-navy",
-      "x": 65,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-66-43",
-      "sprite": "wall-navy",
-      "x": 66,
-      "y": 42,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-7-54",
-      "sprite": "wall-navy",
-      "x": 7,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-13-54",
-      "sprite": "wall-navy",
-      "x": 13,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-19-54",
-      "sprite": "wall-navy",
-      "x": 19,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-20-54",
-      "sprite": "wall-navy",
-      "x": 20,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-21-54",
-      "sprite": "wall-navy",
-      "x": 21,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-22-54",
-      "sprite": "wall-navy",
-      "x": 22,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-23-54",
-      "sprite": "wall-navy",
-      "x": 23,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-24-54",
-      "sprite": "wall-navy",
-      "x": 24,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-25-54",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-31-54",
-      "sprite": "wall-navy",
-      "x": 31,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-32-54",
-      "sprite": "wall-navy",
-      "x": 32,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-33-54",
-      "sprite": "wall-navy",
-      "x": 33,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-34-54",
-      "sprite": "wall-navy",
-      "x": 34,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-35-54",
-      "sprite": "wall-navy",
-      "x": 35,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-36-54",
-      "sprite": "wall-navy",
-      "x": 36,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-37-54",
-      "sprite": "wall-navy",
-      "x": 37,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-43-54",
-      "sprite": "wall-navy",
-      "x": 43,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-44-54",
-      "sprite": "wall-navy",
-      "x": 44,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-45-54",
-      "sprite": "wall-navy",
-      "x": 45,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-46-54",
-      "sprite": "wall-navy",
-      "x": 46,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-47-54",
-      "sprite": "wall-navy",
-      "x": 47,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-48-54",
-      "sprite": "wall-navy",
-      "x": 48,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-49-54",
-      "sprite": "wall-navy",
-      "x": 49,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-55-54",
-      "sprite": "wall-navy",
-      "x": 55,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-56-54",
-      "sprite": "wall-navy",
-      "x": 56,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-57-54",
-      "sprite": "wall-navy",
-      "x": 57,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-58-54",
-      "sprite": "wall-navy",
-      "x": 58,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-59-54",
-      "sprite": "wall-navy",
-      "x": 59,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-60-54",
-      "sprite": "wall-navy",
-      "x": 60,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-61-54",
-      "sprite": "wall-navy",
-      "x": 61,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-67-54",
-      "sprite": "wall-navy",
-      "x": 67,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-73-54",
-      "sprite": "wall-navy",
-      "x": 73,
-      "y": 53,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-14-55",
-      "sprite": "wall-navy",
-      "x": 14,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-15-55",
-      "sprite": "wall-navy",
-      "x": 15,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-16-55",
-      "sprite": "wall-navy",
-      "x": 16,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-17-55",
-      "sprite": "wall-navy",
-      "x": 17,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-18-55",
-      "sprite": "wall-navy",
-      "x": 18,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-26-55",
-      "sprite": "wall-navy",
-      "x": 26,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-27-55",
-      "sprite": "wall-navy",
-      "x": 27,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-28-55",
-      "sprite": "wall-navy",
-      "x": 28,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-29-55",
-      "sprite": "wall-navy",
-      "x": 29,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-30-55",
-      "sprite": "wall-navy",
-      "x": 30,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-38-55",
-      "sprite": "wall-navy",
-      "x": 38,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-39-55",
-      "sprite": "wall-navy",
-      "x": 39,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-40-55",
-      "sprite": "wall-navy",
-      "x": 40,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-41-55",
-      "sprite": "wall-navy",
-      "x": 41,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-42-55",
-      "sprite": "wall-navy",
-      "x": 42,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-50-55",
-      "sprite": "wall-navy",
-      "x": 50,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-51-55",
-      "sprite": "wall-navy",
-      "x": 51,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-52-55",
-      "sprite": "wall-navy",
-      "x": 52,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-53-55",
-      "sprite": "wall-navy",
-      "x": 53,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-54-55",
-      "sprite": "wall-navy",
-      "x": 54,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-62-55",
-      "sprite": "wall-navy",
-      "x": 62,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-63-55",
-      "sprite": "wall-navy",
-      "x": 63,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-64-55",
-      "sprite": "wall-navy",
-      "x": 64,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-65-55",
-      "sprite": "wall-navy",
-      "x": 65,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "wall-facing-66-55",
-      "sprite": "wall-navy",
-      "x": 66,
-      "y": 54,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-0",
-      "sprite": "constellation-gemini",
-      "x": 27,
-      "y": 3,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-0",
-      "sprite": "light-amber",
-      "x": 30,
-      "y": 3,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-0",
-      "sprite": "glass-partition",
-      "x": 27,
-      "y": 5,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-1",
-      "sprite": "constellation-libra",
-      "x": 39,
-      "y": 27,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-1",
-      "sprite": "light-amber",
-      "x": 42,
-      "y": 27,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-1",
-      "sprite": "glass-partition",
-      "x": 39,
-      "y": 29,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-2",
-      "sprite": "constellation-scorpio",
-      "x": 63,
-      "y": 39,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-2",
-      "sprite": "light-amber",
-      "x": 66,
-      "y": 39,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-2",
-      "sprite": "glass-partition",
-      "x": 63,
-      "y": 41,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-3",
-      "sprite": "constellation-taurus",
-      "x": 15,
-      "y": 51,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-3",
-      "sprite": "light-amber",
-      "x": 18,
-      "y": 51,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-3",
-      "sprite": "glass-partition",
-      "x": 15,
-      "y": 53,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-4",
-      "sprite": "constellation-aries",
-      "x": 39,
-      "y": 51,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-4",
-      "sprite": "light-amber",
-      "x": 42,
-      "y": 51,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-4",
-      "sprite": "glass-partition",
-      "x": 39,
-      "y": 53,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-5",
-      "sprite": "constellation-leo",
-      "x": 63,
-      "y": 51,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-5",
-      "sprite": "light-amber",
-      "x": 66,
-      "y": 51,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-5",
-      "sprite": "glass-partition",
-      "x": 63,
-      "y": 53,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-panel-6",
-      "sprite": "constellation-virgo",
-      "x": 3,
-      "y": 51,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-gold-6",
-      "sprite": "light-amber",
-      "x": 6,
-      "y": 51,
-      "width": 1,
-      "height": 2,
-      "layer": "props"
-    },
-    {
-      "id": "architecture-window-6",
-      "sprite": "glass-partition",
-      "x": 3,
-      "y": 53,
-      "width": 3,
-      "height": 2,
-      "layer": "props"
     },
     {
       "id": "quiet-sofa",
@@ -3830,102 +1436,66 @@
       "renderRole": "grounded"
     },
     {
-      "id": "authored-navy-fascia-0",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 3,
-      "y": 3,
-      "width": 74,
-      "height": 2
+      "id": "wayfinding-wall-arrow-1",
+      "sprite": "arrow-north",
+      "x": 10,
+      "y": 66,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
     },
     {
-      "id": "authored-navy-fascia-1",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 3,
-      "y": 15,
-      "width": 4,
-      "height": 2
+      "id": "wayfinding-wall-arrow-2",
+      "sprite": "arrow-south",
+      "x": 38,
+      "y": 75,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
     },
     {
-      "id": "authored-navy-fascia-3",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 39,
-      "y": 15,
-      "width": 14,
-      "height": 2
+      "id": "wayfinding-wall-arrow-3",
+      "sprite": "arrow-east",
+      "x": 69,
+      "y": 71,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
     },
     {
-      "id": "authored-navy-fascia-4",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 63,
-      "y": 15,
-      "width": 4,
-      "height": 2
+      "id": "maze-entry-post-west",
+      "sprite": "gate-post-west",
+      "x": 7,
+      "y": 62,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
     },
     {
-      "id": "authored-navy-fascia-5",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 3,
-      "y": 39,
-      "width": 4,
-      "height": 2
+      "id": "maze-entry-post-east",
+      "sprite": "gate-post-east",
+      "x": 13,
+      "y": 62,
+      "width": 1,
+      "height": 2,
+      "layer": "props"
     },
     {
-      "id": "authored-navy-fascia-6",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 27,
-      "y": 39,
-      "width": 14,
-      "height": 2
-    },
-    {
-      "id": "authored-navy-fascia-7",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 51,
-      "y": 39,
-      "width": 14,
-      "height": 2
-    },
-    {
-      "id": "authored-navy-fascia-8",
-      "sprite": "wall-navy",
-      "layer": "architecture",
-      "x": 3,
-      "y": 57,
-      "width": 4,
-      "height": 2
-    },
-    {
-      "id": "authored-navy-inner-west",
-      "sprite": "wall-navy",
-      "x": 15,
-      "y": 15,
+      "id": "maze-entry-lintel",
+      "sprite": "gate-beam",
+      "x": 8,
+      "y": 62,
       "width": 5,
-      "height": 2,
-      "layer": "architecture"
+      "height": 1,
+      "layer": "props"
     },
     {
-      "id": "authored-navy-inner-east",
-      "sprite": "wall-navy",
-      "x": 25,
-      "y": 15,
-      "width": 4,
-      "height": 2,
-      "layer": "architecture"
-    },
-    {
-      "id": "authored-navy-bottom-east",
-      "sprite": "wall-navy",
-      "x": 74,
-      "y": 57,
-      "width": 3,
-      "height": 2,
+      "id": "maze-entry-header",
+      "sprite": "gate-header-face",
+      "x": 7,
+      "y": 61,
+      "width": 7,
+      "height": 1,
       "layer": "architecture"
     },
     {
@@ -3971,6 +1541,51 @@
       "y": 13,
       "width": 1,
       "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-face",
+      "sprite": "sign-board-face",
+      "x": 17,
+      "y": 65,
+      "width": 12,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-north",
+      "sprite": "sign-board-north",
+      "x": 17,
+      "y": 65,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-south",
+      "sprite": "sign-board-south",
+      "x": 17,
+      "y": 67,
+      "width": 12,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-west",
+      "sprite": "sign-board-west",
+      "x": 17,
+      "y": 65,
+      "width": 1,
+      "height": 3,
+      "layer": "architecture"
+    },
+    {
+      "id": "wayfinding-wallboard-maze-instructions-east",
+      "sprite": "sign-board-east",
+      "x": 28,
+      "y": 65,
+      "width": 1,
+      "height": 3,
       "layer": "architecture"
     },
     {
@@ -4064,73 +1679,2782 @@
       "layer": "architecture"
     },
     {
-      "id": "wayfinding-wallboard-maze-instructions-face",
-      "sprite": "sign-board-face",
-      "x": 15,
-      "y": 65,
-      "width": 22,
-      "height": 3,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-maze-instructions-north",
-      "sprite": "sign-board-north",
-      "x": 15,
-      "y": 65,
-      "width": 22,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-maze-instructions-south",
-      "sprite": "sign-board-south",
-      "x": 15,
-      "y": 67,
-      "width": 22,
-      "height": 1,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-maze-instructions-west",
-      "sprite": "sign-board-west",
-      "x": 15,
-      "y": 65,
-      "width": 1,
-      "height": 3,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wallboard-maze-instructions-east",
-      "sprite": "sign-board-east",
-      "x": 36,
-      "y": 65,
-      "width": 1,
-      "height": 3,
-      "layer": "architecture"
-    },
-    {
-      "id": "wayfinding-wall-arrow-1",
-      "sprite": "arrow-north",
-      "x": 10,
-      "y": 66,
+      "id": "maze-south-rim-66-4",
+      "sprite": "maze-wall-rim",
+      "x": 66,
+      "y": 4,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "wayfinding-wall-arrow-2",
-      "sprite": "arrow-south",
-      "x": 38,
-      "y": 75,
+      "id": "maze-south-rim-67-4",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 4,
       "width": 1,
       "height": 1,
       "layer": "architecture"
     },
     {
-      "id": "wayfinding-wall-arrow-3",
-      "sprite": "arrow-east",
+      "id": "maze-south-rim-68-4",
+      "sprite": "maze-wall-rim",
+      "x": 68,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-69-4",
+      "sprite": "maze-wall-rim",
       "x": 69,
-      "y": 71,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-70-4",
+      "sprite": "maze-wall-rim",
+      "x": 70,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-71-4",
+      "sprite": "maze-wall-rim",
+      "x": 71,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-72-4",
+      "sprite": "maze-wall-rim",
+      "x": 72,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-4",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-74-4",
+      "sprite": "maze-wall-rim",
+      "x": 74,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-6",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-8-6",
+      "sprite": "maze-wall-rim",
+      "x": 8,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-9-6",
+      "sprite": "maze-wall-rim",
+      "x": 9,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-10-6",
+      "sprite": "maze-wall-rim",
+      "x": 10,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-11-6",
+      "sprite": "maze-wall-rim",
+      "x": 11,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-12-6",
+      "sprite": "maze-wall-rim",
+      "x": 12,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-6",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-19-6",
+      "sprite": "maze-wall-rim",
+      "x": 19,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-20-6",
+      "sprite": "maze-wall-rim",
+      "x": 20,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-21-6",
+      "sprite": "maze-wall-rim",
+      "x": 21,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-22-6",
+      "sprite": "maze-wall-rim",
+      "x": 22,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-23-6",
+      "sprite": "maze-wall-rim",
+      "x": 23,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-24-6",
+      "sprite": "maze-wall-rim",
+      "x": 24,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-6",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-6",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-32-6",
+      "sprite": "maze-wall-rim",
+      "x": 32,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-33-6",
+      "sprite": "maze-wall-rim",
+      "x": 33,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-34-6",
+      "sprite": "maze-wall-rim",
+      "x": 34,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-35-6",
+      "sprite": "maze-wall-rim",
+      "x": 35,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-36-6",
+      "sprite": "maze-wall-rim",
+      "x": 36,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-6",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-6",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-44-6",
+      "sprite": "maze-wall-rim",
+      "x": 44,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-45-6",
+      "sprite": "maze-wall-rim",
+      "x": 45,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-46-6",
+      "sprite": "maze-wall-rim",
+      "x": 46,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-47-6",
+      "sprite": "maze-wall-rim",
+      "x": 47,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-48-6",
+      "sprite": "maze-wall-rim",
+      "x": 48,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-6",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-6",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-56-6",
+      "sprite": "maze-wall-rim",
+      "x": 56,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-57-6",
+      "sprite": "maze-wall-rim",
+      "x": 57,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-58-6",
+      "sprite": "maze-wall-rim",
+      "x": 58,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-59-6",
+      "sprite": "maze-wall-rim",
+      "x": 59,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-60-6",
+      "sprite": "maze-wall-rim",
+      "x": 60,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-6",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 6,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-14-7",
+      "sprite": "maze-wall-rim",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-15-7",
+      "sprite": "maze-wall-rim",
+      "x": 15,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-16-7",
+      "sprite": "maze-wall-rim",
+      "x": 16,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-17-7",
+      "sprite": "maze-wall-rim",
+      "x": 17,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-18-7",
+      "sprite": "maze-wall-rim",
+      "x": 18,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-38-7",
+      "sprite": "maze-wall-rim",
+      "x": 38,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-39-7",
+      "sprite": "maze-wall-rim",
+      "x": 39,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-40-7",
+      "sprite": "maze-wall-rim",
+      "x": 40,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-41-7",
+      "sprite": "maze-wall-rim",
+      "x": 41,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-42-7",
+      "sprite": "maze-wall-rim",
+      "x": 42,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-50-7",
+      "sprite": "maze-wall-rim",
+      "x": 50,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-51-7",
+      "sprite": "maze-wall-rim",
+      "x": 51,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-52-7",
+      "sprite": "maze-wall-rim",
+      "x": 52,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-53-7",
+      "sprite": "maze-wall-rim",
+      "x": 53,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-54-7",
+      "sprite": "maze-wall-rim",
+      "x": 54,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-75-9",
+      "sprite": "maze-wall-rim",
+      "x": 75,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-28-17",
+      "sprite": "maze-wall-rim",
+      "x": 28,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-29-17",
+      "sprite": "maze-wall-rim",
+      "x": 29,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-30-17",
+      "sprite": "maze-wall-rim",
+      "x": 30,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-17",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-17",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-38-17",
+      "sprite": "maze-wall-rim",
+      "x": 38,
+      "y": 17,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-18",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-18",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-19-18",
+      "sprite": "maze-wall-rim",
+      "x": 19,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-18",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-18",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-44-18",
+      "sprite": "maze-wall-rim",
+      "x": 44,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-45-18",
+      "sprite": "maze-wall-rim",
+      "x": 45,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-46-18",
+      "sprite": "maze-wall-rim",
+      "x": 46,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-47-18",
+      "sprite": "maze-wall-rim",
+      "x": 47,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-48-18",
+      "sprite": "maze-wall-rim",
+      "x": 48,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-18",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-18",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-56-18",
+      "sprite": "maze-wall-rim",
+      "x": 56,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-57-18",
+      "sprite": "maze-wall-rim",
+      "x": 57,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-58-18",
+      "sprite": "maze-wall-rim",
+      "x": 58,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-59-18",
+      "sprite": "maze-wall-rim",
+      "x": 59,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-60-18",
+      "sprite": "maze-wall-rim",
+      "x": 60,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-18",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-67-18",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-18",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 18,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-39-19",
+      "sprite": "maze-wall-rim",
+      "x": 39,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-40-19",
+      "sprite": "maze-wall-rim",
+      "x": 40,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-41-19",
+      "sprite": "maze-wall-rim",
+      "x": 41,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-42-19",
+      "sprite": "maze-wall-rim",
+      "x": 42,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-62-19",
+      "sprite": "maze-wall-rim",
+      "x": 62,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-63-19",
+      "sprite": "maze-wall-rim",
+      "x": 63,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-64-19",
+      "sprite": "maze-wall-rim",
+      "x": 64,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-65-19",
+      "sprite": "maze-wall-rim",
+      "x": 65,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-66-19",
+      "sprite": "maze-wall-rim",
+      "x": 66,
+      "y": 19,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-54-29",
+      "sprite": "maze-wall-rim",
+      "x": 54,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-29",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-29",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-62-29",
+      "sprite": "maze-wall-rim",
+      "x": 62,
+      "y": 29,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-30",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-30",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-19-30",
+      "sprite": "maze-wall-rim",
+      "x": 19,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-20-30",
+      "sprite": "maze-wall-rim",
+      "x": 20,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-21-30",
+      "sprite": "maze-wall-rim",
+      "x": 21,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-22-30",
+      "sprite": "maze-wall-rim",
+      "x": 22,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-23-30",
+      "sprite": "maze-wall-rim",
+      "x": 23,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-24-30",
+      "sprite": "maze-wall-rim",
+      "x": 24,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-30",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-30",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-30",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-30",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-30",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-67-30",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-30",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 30,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-14-31",
+      "sprite": "maze-wall-rim",
+      "x": 14,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-15-31",
+      "sprite": "maze-wall-rim",
+      "x": 15,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-16-31",
+      "sprite": "maze-wall-rim",
+      "x": 16,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-17-31",
+      "sprite": "maze-wall-rim",
+      "x": 17,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-18-31",
+      "sprite": "maze-wall-rim",
+      "x": 18,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-26-31",
+      "sprite": "maze-wall-rim",
+      "x": 26,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-27-31",
+      "sprite": "maze-wall-rim",
+      "x": 27,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-28-31",
+      "sprite": "maze-wall-rim",
+      "x": 28,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-29-31",
+      "sprite": "maze-wall-rim",
+      "x": 29,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-30-31",
+      "sprite": "maze-wall-rim",
+      "x": 30,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-50-31",
+      "sprite": "maze-wall-rim",
+      "x": 50,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-51-31",
+      "sprite": "maze-wall-rim",
+      "x": 51,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-52-31",
+      "sprite": "maze-wall-rim",
+      "x": 52,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-53-31",
+      "sprite": "maze-wall-rim",
+      "x": 53,
+      "y": 31,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-41",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 41,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-26-41",
+      "sprite": "maze-wall-rim",
+      "x": 26,
+      "y": 41,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-42",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-8-42",
+      "sprite": "maze-wall-rim",
+      "x": 8,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-9-42",
+      "sprite": "maze-wall-rim",
+      "x": 9,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-10-42",
+      "sprite": "maze-wall-rim",
+      "x": 10,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-11-42",
+      "sprite": "maze-wall-rim",
+      "x": 11,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-12-42",
+      "sprite": "maze-wall-rim",
+      "x": 12,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-42",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-42",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-32-42",
+      "sprite": "maze-wall-rim",
+      "x": 32,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-33-42",
+      "sprite": "maze-wall-rim",
+      "x": 33,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-34-42",
+      "sprite": "maze-wall-rim",
+      "x": 34,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-35-42",
+      "sprite": "maze-wall-rim",
+      "x": 35,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-36-42",
+      "sprite": "maze-wall-rim",
+      "x": 36,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-42",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-42",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-44-42",
+      "sprite": "maze-wall-rim",
+      "x": 44,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-45-42",
+      "sprite": "maze-wall-rim",
+      "x": 45,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-46-42",
+      "sprite": "maze-wall-rim",
+      "x": 46,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-47-42",
+      "sprite": "maze-wall-rim",
+      "x": 47,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-48-42",
+      "sprite": "maze-wall-rim",
+      "x": 48,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-42",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-42",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-56-42",
+      "sprite": "maze-wall-rim",
+      "x": 56,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-57-42",
+      "sprite": "maze-wall-rim",
+      "x": 57,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-58-42",
+      "sprite": "maze-wall-rim",
+      "x": 58,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-59-42",
+      "sprite": "maze-wall-rim",
+      "x": 59,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-60-42",
+      "sprite": "maze-wall-rim",
+      "x": 60,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-42",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-67-42",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-68-42",
+      "sprite": "maze-wall-rim",
+      "x": 68,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-69-42",
+      "sprite": "maze-wall-rim",
+      "x": 69,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-70-42",
+      "sprite": "maze-wall-rim",
+      "x": 70,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-71-42",
+      "sprite": "maze-wall-rim",
+      "x": 71,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-72-42",
+      "sprite": "maze-wall-rim",
+      "x": 72,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-42",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 42,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-14-43",
+      "sprite": "maze-wall-rim",
+      "x": 14,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-38-43",
+      "sprite": "maze-wall-rim",
+      "x": 38,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-39-43",
+      "sprite": "maze-wall-rim",
+      "x": 39,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-40-43",
+      "sprite": "maze-wall-rim",
+      "x": 40,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-41-43",
+      "sprite": "maze-wall-rim",
+      "x": 41,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-42-43",
+      "sprite": "maze-wall-rim",
+      "x": 42,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-50-43",
+      "sprite": "maze-wall-rim",
+      "x": 50,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-51-43",
+      "sprite": "maze-wall-rim",
+      "x": 51,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-52-43",
+      "sprite": "maze-wall-rim",
+      "x": 52,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-53-43",
+      "sprite": "maze-wall-rim",
+      "x": 53,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-54-43",
+      "sprite": "maze-wall-rim",
+      "x": 54,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-62-43",
+      "sprite": "maze-wall-rim",
+      "x": 62,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-63-43",
+      "sprite": "maze-wall-rim",
+      "x": 63,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-64-43",
+      "sprite": "maze-wall-rim",
+      "x": 64,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-65-43",
+      "sprite": "maze-wall-rim",
+      "x": 65,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-66-43",
+      "sprite": "maze-wall-rim",
+      "x": 66,
+      "y": 43,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-54",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-54",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-19-54",
+      "sprite": "maze-wall-rim",
+      "x": 19,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-20-54",
+      "sprite": "maze-wall-rim",
+      "x": 20,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-21-54",
+      "sprite": "maze-wall-rim",
+      "x": 21,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-22-54",
+      "sprite": "maze-wall-rim",
+      "x": 22,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-23-54",
+      "sprite": "maze-wall-rim",
+      "x": 23,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-24-54",
+      "sprite": "maze-wall-rim",
+      "x": 24,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-54",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-54",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-32-54",
+      "sprite": "maze-wall-rim",
+      "x": 32,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-33-54",
+      "sprite": "maze-wall-rim",
+      "x": 33,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-34-54",
+      "sprite": "maze-wall-rim",
+      "x": 34,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-35-54",
+      "sprite": "maze-wall-rim",
+      "x": 35,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-36-54",
+      "sprite": "maze-wall-rim",
+      "x": 36,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-54",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-54",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-44-54",
+      "sprite": "maze-wall-rim",
+      "x": 44,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-45-54",
+      "sprite": "maze-wall-rim",
+      "x": 45,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-46-54",
+      "sprite": "maze-wall-rim",
+      "x": 46,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-47-54",
+      "sprite": "maze-wall-rim",
+      "x": 47,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-48-54",
+      "sprite": "maze-wall-rim",
+      "x": 48,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-54",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-54",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-56-54",
+      "sprite": "maze-wall-rim",
+      "x": 56,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-57-54",
+      "sprite": "maze-wall-rim",
+      "x": 57,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-58-54",
+      "sprite": "maze-wall-rim",
+      "x": 58,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-59-54",
+      "sprite": "maze-wall-rim",
+      "x": 59,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-60-54",
+      "sprite": "maze-wall-rim",
+      "x": 60,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-54",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-67-54",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-54",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 54,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-14-55",
+      "sprite": "maze-wall-rim",
+      "x": 14,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-15-55",
+      "sprite": "maze-wall-rim",
+      "x": 15,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-16-55",
+      "sprite": "maze-wall-rim",
+      "x": 16,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-17-55",
+      "sprite": "maze-wall-rim",
+      "x": 17,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-18-55",
+      "sprite": "maze-wall-rim",
+      "x": 18,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-26-55",
+      "sprite": "maze-wall-rim",
+      "x": 26,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-27-55",
+      "sprite": "maze-wall-rim",
+      "x": 27,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-28-55",
+      "sprite": "maze-wall-rim",
+      "x": 28,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-29-55",
+      "sprite": "maze-wall-rim",
+      "x": 29,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-30-55",
+      "sprite": "maze-wall-rim",
+      "x": 30,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-38-55",
+      "sprite": "maze-wall-rim",
+      "x": 38,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-39-55",
+      "sprite": "maze-wall-rim",
+      "x": 39,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-40-55",
+      "sprite": "maze-wall-rim",
+      "x": 40,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-41-55",
+      "sprite": "maze-wall-rim",
+      "x": 41,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-42-55",
+      "sprite": "maze-wall-rim",
+      "x": 42,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-50-55",
+      "sprite": "maze-wall-rim",
+      "x": 50,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-51-55",
+      "sprite": "maze-wall-rim",
+      "x": 51,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-52-55",
+      "sprite": "maze-wall-rim",
+      "x": 52,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-53-55",
+      "sprite": "maze-wall-rim",
+      "x": 53,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-54-55",
+      "sprite": "maze-wall-rim",
+      "x": 54,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-62-55",
+      "sprite": "maze-wall-rim",
+      "x": 62,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-63-55",
+      "sprite": "maze-wall-rim",
+      "x": 63,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-64-55",
+      "sprite": "maze-wall-rim",
+      "x": 64,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-65-55",
+      "sprite": "maze-wall-rim",
+      "x": 65,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-66-55",
+      "sprite": "maze-wall-rim",
+      "x": 66,
+      "y": 55,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-2-63",
+      "sprite": "maze-wall-rim",
+      "x": 2,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-3-63",
+      "sprite": "maze-wall-rim",
+      "x": 3,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-4-63",
+      "sprite": "maze-wall-rim",
+      "x": 4,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-5-63",
+      "sprite": "maze-wall-rim",
+      "x": 5,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-6-63",
+      "sprite": "maze-wall-rim",
+      "x": 6,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-7-63",
+      "sprite": "maze-wall-rim",
+      "x": 7,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-13-63",
+      "sprite": "maze-wall-rim",
+      "x": 13,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-14-63",
+      "sprite": "maze-wall-rim",
+      "x": 14,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-15-63",
+      "sprite": "maze-wall-rim",
+      "x": 15,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-16-63",
+      "sprite": "maze-wall-rim",
+      "x": 16,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-17-63",
+      "sprite": "maze-wall-rim",
+      "x": 17,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-18-63",
+      "sprite": "maze-wall-rim",
+      "x": 18,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-19-63",
+      "sprite": "maze-wall-rim",
+      "x": 19,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-20-63",
+      "sprite": "maze-wall-rim",
+      "x": 20,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-21-63",
+      "sprite": "maze-wall-rim",
+      "x": 21,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-22-63",
+      "sprite": "maze-wall-rim",
+      "x": 22,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-23-63",
+      "sprite": "maze-wall-rim",
+      "x": 23,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-24-63",
+      "sprite": "maze-wall-rim",
+      "x": 24,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-25-63",
+      "sprite": "maze-wall-rim",
+      "x": 25,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-26-63",
+      "sprite": "maze-wall-rim",
+      "x": 26,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-27-63",
+      "sprite": "maze-wall-rim",
+      "x": 27,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-28-63",
+      "sprite": "maze-wall-rim",
+      "x": 28,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-29-63",
+      "sprite": "maze-wall-rim",
+      "x": 29,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-30-63",
+      "sprite": "maze-wall-rim",
+      "x": 30,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-31-63",
+      "sprite": "maze-wall-rim",
+      "x": 31,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-32-63",
+      "sprite": "maze-wall-rim",
+      "x": 32,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-33-63",
+      "sprite": "maze-wall-rim",
+      "x": 33,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-34-63",
+      "sprite": "maze-wall-rim",
+      "x": 34,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-35-63",
+      "sprite": "maze-wall-rim",
+      "x": 35,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-36-63",
+      "sprite": "maze-wall-rim",
+      "x": 36,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-37-63",
+      "sprite": "maze-wall-rim",
+      "x": 37,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-38-63",
+      "sprite": "maze-wall-rim",
+      "x": 38,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-39-63",
+      "sprite": "maze-wall-rim",
+      "x": 39,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-40-63",
+      "sprite": "maze-wall-rim",
+      "x": 40,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-41-63",
+      "sprite": "maze-wall-rim",
+      "x": 41,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-42-63",
+      "sprite": "maze-wall-rim",
+      "x": 42,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-43-63",
+      "sprite": "maze-wall-rim",
+      "x": 43,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-44-63",
+      "sprite": "maze-wall-rim",
+      "x": 44,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-45-63",
+      "sprite": "maze-wall-rim",
+      "x": 45,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-46-63",
+      "sprite": "maze-wall-rim",
+      "x": 46,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-47-63",
+      "sprite": "maze-wall-rim",
+      "x": 47,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-48-63",
+      "sprite": "maze-wall-rim",
+      "x": 48,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-49-63",
+      "sprite": "maze-wall-rim",
+      "x": 49,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-50-63",
+      "sprite": "maze-wall-rim",
+      "x": 50,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-51-63",
+      "sprite": "maze-wall-rim",
+      "x": 51,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-52-63",
+      "sprite": "maze-wall-rim",
+      "x": 52,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-53-63",
+      "sprite": "maze-wall-rim",
+      "x": 53,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-54-63",
+      "sprite": "maze-wall-rim",
+      "x": 54,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-55-63",
+      "sprite": "maze-wall-rim",
+      "x": 55,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-56-63",
+      "sprite": "maze-wall-rim",
+      "x": 56,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-57-63",
+      "sprite": "maze-wall-rim",
+      "x": 57,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-58-63",
+      "sprite": "maze-wall-rim",
+      "x": 58,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-59-63",
+      "sprite": "maze-wall-rim",
+      "x": 59,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-60-63",
+      "sprite": "maze-wall-rim",
+      "x": 60,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-61-63",
+      "sprite": "maze-wall-rim",
+      "x": 61,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-62-63",
+      "sprite": "maze-wall-rim",
+      "x": 62,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-63-63",
+      "sprite": "maze-wall-rim",
+      "x": 63,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-64-63",
+      "sprite": "maze-wall-rim",
+      "x": 64,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-65-63",
+      "sprite": "maze-wall-rim",
+      "x": 65,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-66-63",
+      "sprite": "maze-wall-rim",
+      "x": 66,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-67-63",
+      "sprite": "maze-wall-rim",
+      "x": 67,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-68-63",
+      "sprite": "maze-wall-rim",
+      "x": 68,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-69-63",
+      "sprite": "maze-wall-rim",
+      "x": 69,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-70-63",
+      "sprite": "maze-wall-rim",
+      "x": 70,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-71-63",
+      "sprite": "maze-wall-rim",
+      "x": 71,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-72-63",
+      "sprite": "maze-wall-rim",
+      "x": 72,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-73-63",
+      "sprite": "maze-wall-rim",
+      "x": 73,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-74-63",
+      "sprite": "maze-wall-rim",
+      "x": 74,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-75-63",
+      "sprite": "maze-wall-rim",
+      "x": 75,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-76-63",
+      "sprite": "maze-wall-rim",
+      "x": 76,
+      "y": 63,
+      "width": 1,
+      "height": 1,
+      "layer": "architecture"
+    },
+    {
+      "id": "maze-south-rim-77-63",
+      "sprite": "maze-wall-rim",
+      "x": 77,
+      "y": 63,
       "width": 1,
       "height": 1,
       "layer": "architecture"
@@ -4144,7 +4468,7 @@
       "y": 49,
       "width": 9,
       "height": 1,
-      "fontSize": 12,
+      "fontSize": 16,
       "color": "#f1d9a0",
       "align": "left"
     },
@@ -4155,7 +4479,7 @@
       "y": 25,
       "width": 9,
       "height": 1,
-      "fontSize": 12,
+      "fontSize": 16,
       "color": "#f1d9a0",
       "align": "left"
     },
@@ -4166,7 +4490,7 @@
       "y": 37,
       "width": 9,
       "height": 1,
-      "fontSize": 12,
+      "fontSize": 16,
       "color": "#f1d9a0",
       "align": "left"
     },
@@ -4195,22 +4519,22 @@
     {
       "name": "maze-title",
       "text": "ORBIT MAZE",
-      "x": 4,
-      "y": 64,
-      "width": 14,
+      "x": 7,
+      "y": 61,
+      "width": 7,
       "height": 1,
-      "fontSize": 20,
+      "fontSize": 18,
       "color": "#f1d9a0",
       "align": "left"
     },
     {
       "name": "maze-instructions",
-      "text": "↑ ORBIT MAZE · FOLLOW 01 / 02 / 03\n↓ PLAZA · SOUTH LANE\nCOMET MAZE → VIA SOUTH LANE",
-      "x": 15,
+      "text": "01 → 02 → 03\nFIND THE ORBIT SHRINE\nRETURNS VIA SOUTH LANE",
+      "x": 17,
       "y": 65,
-      "width": 22,
+      "width": 12,
       "height": 3,
-      "fontSize": 17,
+      "fontSize": 16,
       "color": "#fff0b0",
       "align": "left"
     },
@@ -4230,7 +4554,7 @@
       "text": "QUIET GARDEN",
       "x": 14,
       "y": 74,
-      "width": 13,
+      "width": 10,
       "height": 1,
       "fontSize": 13,
       "color": "#f1d9a0",
@@ -4238,10 +4562,10 @@
     },
     {
       "name": "social-alcove-label",
-      "text": "SOCIAL ALCOVE  /  TALK HERE",
+      "text": "MEET & RELAX",
       "x": 51,
       "y": 65,
-      "width": 24,
+      "width": 12,
       "height": 1,
       "fontSize": 17,
       "color": "#17283c",
@@ -4249,12 +4573,12 @@
     },
     {
       "name": "social-alcove-note",
-      "text": "Meet friends before or after the maze.",
+      "text": "Before or after the maze.",
       "x": 52,
       "y": 66,
-      "width": 22,
+      "width": 12,
       "height": 1,
-      "fontSize": 13,
+      "fontSize": 12,
       "color": "#17283c",
       "align": "left"
     },
@@ -4614,7 +4938,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
+            "sha256": "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -4634,7 +4958,7 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+            "sha256": "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
           },
           {
             "path": "tools/maps/cafe-arrival-context.ts",
@@ -4645,12 +4969,20 @@
             "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
+            "path": "tools/maps/maze-gate-context.ts",
+            "sha256": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350"
+          },
+          {
+            "path": "art/source/maze-gate-refresh.json",
+            "sha256": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+          },
+          {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
+            "sha256": "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
+            "sha256": "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -4798,7 +5130,7 @@
           },
           {
             "path": "tools/art/world-ambient.ts",
-            "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
+            "sha256": "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
           },
           {
             "path": "tools/art/world-ambient-assets.ts",
@@ -4818,7 +5150,7 @@
           },
           {
             "path": "tools/maps/world-ambient-ownership.ts",
-            "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+            "sha256": "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
           },
           {
             "path": "tools/maps/cafe-arrival-context.ts",
@@ -4829,12 +5161,20 @@
             "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
           },
           {
+            "path": "tools/maps/maze-gate-context.ts",
+            "sha256": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350"
+          },
+          {
+            "path": "art/source/maze-gate-refresh.json",
+            "sha256": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+          },
+          {
             "path": "tools/maps/native-projection.ts",
-            "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
+            "sha256": "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
           },
           {
             "path": "tools/maps/native-ownership-context.ts",
-            "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
+            "sha256": "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
           },
           {
             "path": "art/source/native-ownership-context.json",
@@ -4854,6 +5194,16 @@
           }
         ]
       }
+    }
+  ],
+  "images": [
+    {
+      "name": "Orbit / VarCamp",
+      "image": "assets/sponsors/varcamp-2026.png",
+      "x": 37,
+      "y": 66,
+      "width": 6,
+      "height": 2
     }
   ]
 }

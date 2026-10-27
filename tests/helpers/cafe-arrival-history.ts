@@ -1,3 +1,4 @@
+import {mazeGateSuccessorSha,beforeMazeGateLayout,beforeMazeGateMap,beforeMazeGateCatalog} from './maze-gate-history';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -7,10 +8,11 @@ const raw=readFileSync('tests/fixtures/cafe-arrival/before.json.gz');
 assert.equal(createHash('sha256').update(raw).digest('hex'),'e8386da25ccfbe8c253e477af5c2556476994657fd5f06f6e215729c6dcd907f');
 const snapshot=JSON.parse(gunzipSync(raw).toString()),before=snapshot.components;
 assert.equal(snapshot.base,'5f54780d9ba9f03edec466a5eed665a9a81531c6');
-export function cafeArrivalSuccessorSha(path:string,pin:string):string{const t=JSON.parse(readFileSync('tests/fixtures/cafe-arrival/transitions.json','utf8'));assert.equal(t.base,snapshot.base);const pair=t.transitions[path];if(!pair||pair[0]!==pin)return pin;assert.equal(pair[0],snapshot.pins[path]);return pair[1];}
+export function cafeArrivalSuccessorSha(path:string,pin:string):string{const t=JSON.parse(readFileSync('tests/fixtures/cafe-arrival/transitions.json','utf8'));assert.equal(t.base,snapshot.base);const pair=t.transitions[path];if(!pair||pair[0]!==pin)return mazeGateSuccessorSha(path,pin);assert.equal(pair[0],snapshot.pins[path]);return mazeGateSuccessorSha(path,pair[1]);}
 /** Historical ambient assertions retain their original baseline. Only this
  * exact reviewed successor may be undone; current mutation tests check it too. */
 export function beforeCafeArrivalLayout(input:any):any{
+ input=beforeMazeGateLayout(input);
  const row=(refresh.maps as any)[input.id];if(!row)return input;
  const layout=structuredClone(input);delete layout.animatedOverlays;
  assert.deepEqual(layout,row.layoutAfter);
@@ -20,6 +22,7 @@ export function beforeCafeArrivalLayout(input:any):any{
  return prior;
 }
 export function beforeCafeArrivalMap(input:any):any{
+ input=beforeMazeGateMap(input);
  const id=input.properties.find((p:any)=>p.name==='worldMapId').value,row=(refresh.maps as any)[id];if(!row)return input;
  const prior=JSON.parse(before[`maps/${id}.tmj`]),map=structuredClone(input);
  for(const change of row.layers){
@@ -47,6 +50,7 @@ export function advanceCafeArrivalLayout(input:any):any{
 /** The reviewed four café crops extend the catalog without changing any of its
  * original 1895 cells. Historical comparisons remove only these exact bodies. */
 export function beforeCafeArrivalCatalog(input:any):any{
+ input=beforeMazeGateCatalog(input);
  const catalog=structuredClone(input);
  for(const [name,x] of [['cafe-bar-left-end',5],['cafe-bar-span',6],['cafe-bar-right-end',7]] as const){
   assert.deepEqual(catalog[name],{sheet:'assets/tilesets/workadventure/WA_Tables.png',rect:{x,y:9,width:1,height:2},blockingCells:[[0,0],[0,1]],level:'belowAvatar',sourceId:'workadventure'});

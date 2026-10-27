@@ -185,7 +185,7 @@
         },
         {
           "path": "tools/art/world-ambient.ts",
-          "sha256": "1d632cbdbc9590f3f696330ac0a1c5c51f935abf62c9d6b44f9ab52cf10b675a"
+          "sha256": "0d03a2f373000413cc6218b017de7358792cc45d77311b4a9d53b641700d676c"
         },
         {
           "path": "tools/art/world-ambient-assets.ts",
@@ -205,7 +205,7 @@
         },
         {
           "path": "tools/maps/world-ambient-ownership.ts",
-          "sha256": "710b099f8dce5ed91c00b69190362e56b19c13725a83302d7e6758fb0f5c8238"
+          "sha256": "b24e06546f32a42368b10f3cc5ab789f34bb05abeb82b5738367e377be574b8f"
         },
         {
           "path": "tools/maps/cafe-arrival-context.ts",
@@ -216,12 +216,20 @@
           "sha256": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526"
         },
         {
+          "path": "tools/maps/maze-gate-context.ts",
+          "sha256": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350"
+        },
+        {
+          "path": "art/source/maze-gate-refresh.json",
+          "sha256": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+        },
+        {
           "path": "tools/maps/native-projection.ts",
-          "sha256": "8289697538745f2bda70924f8adbe434aa55dee7398929f13b73762bf1d1dc19"
+          "sha256": "21658f5283bb19f4aa9141fce7be4d38dd2f38e6a5c454d80a9c9fa9fd3cb647"
         },
         {
           "path": "tools/maps/native-ownership-context.ts",
-          "sha256": "80de1e589444527eb424ee9f30b043188678f7d0a2e76c027b5c15db2eda97f3"
+          "sha256": "1a39505eae3a8c0046ce1d8a98d35a699ef724083d906bb9a26ac8bdd25772c3"
         },
         {
           "path": "art/source/native-ownership-context.json",

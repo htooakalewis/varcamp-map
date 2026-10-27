@@ -41326,5 +41326,126 @@
     ],
     "level": "belowAvatar",
     "sourceId": "workadventure"
+  },
+  "maze-solid": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 14,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "maze-wall-rim": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
+  },
+  "gate-post-west": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 1,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "gate-post-east": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 4,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "gate-beam": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 2,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "gate-window-left": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 9,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "gate-window-right": {
+    "sheet": "assets/tilesets/original/magic.png",
+    "rect": {
+      "x": 11,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    "blockingCells": [
+      [
+        0,
+        1
+      ]
+    ],
+    "level": "aboveAvatar",
+    "sourceId": "original"
+  },
+  "gate-header-face": {
+    "sheet": "assets/tilesets/original/wayfinding.png",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "blockingCells": [],
+    "level": "belowAvatar",
+    "sourceId": "original"
   }
 }
