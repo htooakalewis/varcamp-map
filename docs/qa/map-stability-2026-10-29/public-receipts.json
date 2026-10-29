@@ -1,0 +1,473 @@
+{
+  "geometrySha256": "99cccd86946e1600b2a8a491ab941b9a9dc25f6e7572e5cd2088af03cbb237ad",
+  "moduleSha256": "8eac9068e7e70afbb1f5856b8d17e3aa242c3c03155a4f0853b5e1d5f781013f",
+  "moduleBytes": 31454,
+  "graphSha256": "3f0e753809114d3d54f4e56affe909cbdb46daf66b43ed7d5d801111376a5666",
+  "audit": {
+    "allowedCells": 864,
+    "startupReservedCells": 4,
+    "nativeCollisionCells": 6854,
+    "portalCells": 48,
+    "walkablePropOverlapCells": 78,
+    "walkableImageOverlapCells": 12,
+    "walkableProps": [
+      {
+        "id": "cancer-ground-name",
+        "sprite": "zodiac-ground-name-cancer",
+        "cells": [
+          [
+            63,
+            118
+          ],
+          [
+            63,
+            119
+          ]
+        ]
+      },
+      {
+        "id": "approach-arrow-cancer",
+        "sprite": "arrow-north",
+        "cells": [
+          [
+            61,
+            115
+          ]
+        ]
+      },
+      {
+        "id": "scorpio-ground-name",
+        "sprite": "zodiac-ground-name-scorpio",
+        "cells": [
+          [
+            20,
+            52
+          ],
+          [
+            21,
+            52
+          ],
+          [
+            22,
+            52
+          ],
+          [
+            23,
+            52
+          ],
+          [
+            24,
+            52
+          ],
+          [
+            25,
+            52
+          ],
+          [
+            26,
+            52
+          ],
+          [
+            27,
+            52
+          ],
+          [
+            28,
+            52
+          ],
+          [
+            29,
+            52
+          ],
+          [
+            30,
+            52
+          ],
+          [
+            30,
+            53
+          ]
+        ]
+      },
+      {
+        "id": "sagittarius-ground-name",
+        "sprite": "zodiac-ground-name-sagittarius",
+        "cells": [
+          [
+            41,
+            36
+          ],
+          [
+            41,
+            37
+          ]
+        ]
+      },
+      {
+        "id": "capricorn-ground-name",
+        "sprite": "zodiac-ground-name-capricorn",
+        "cells": [
+          [
+            63,
+            30
+          ],
+          [
+            63,
+            31
+          ]
+        ]
+      },
+      {
+        "id": "approach-arrow-capricorn",
+        "sprite": "arrow-north",
+        "cells": [
+          [
+            61,
+            27
+          ]
+        ]
+      },
+      {
+        "id": "aquarius-ground-name",
+        "sprite": "zodiac-ground-name-aquarius",
+        "cells": [
+          [
+            85,
+            36
+          ],
+          [
+            85,
+            37
+          ]
+        ]
+      },
+      {
+        "id": "pisces-ground-name",
+        "sprite": "zodiac-ground-name-pisces",
+        "cells": [
+          [
+            96,
+            52
+          ],
+          [
+            97,
+            52
+          ],
+          [
+            98,
+            52
+          ],
+          [
+            99,
+            52
+          ],
+          [
+            100,
+            52
+          ],
+          [
+            101,
+            52
+          ],
+          [
+            102,
+            52
+          ],
+          [
+            103,
+            52
+          ],
+          [
+            104,
+            52
+          ],
+          [
+            105,
+            52
+          ],
+          [
+            106,
+            52
+          ],
+          [
+            107,
+            52
+          ],
+          [
+            96,
+            53
+          ]
+        ]
+      },
+      {
+        "id": "gate-return-arrow-maze",
+        "sprite": "arrow-south",
+        "cells": [
+          [
+            68,
+            7
+          ]
+        ]
+      },
+      {
+        "id": "aries-zodiac-threshold",
+        "sprite": "zodiac-emblem-aries",
+        "cells": [
+          [
+            106,
+            70
+          ],
+          [
+            107,
+            70
+          ],
+          [
+            108,
+            70
+          ],
+          [
+            109,
+            70
+          ],
+          [
+            107,
+            71
+          ]
+        ]
+      },
+      {
+        "id": "taurus-zodiac-threshold",
+        "sprite": "zodiac-emblem-taurus",
+        "cells": [
+          [
+            100,
+            92
+          ],
+          [
+            101,
+            92
+          ],
+          [
+            101,
+            93
+          ]
+        ]
+      },
+      {
+        "id": "gemini-zodiac-threshold",
+        "sprite": "zodiac-emblem-gemini",
+        "cells": [
+          [
+            84,
+            108
+          ],
+          [
+            85,
+            108
+          ],
+          [
+            85,
+            109
+          ]
+        ]
+      },
+      {
+        "id": "cancer-zodiac-threshold",
+        "sprite": "zodiac-emblem-cancer",
+        "cells": [
+          [
+            62,
+            115
+          ],
+          [
+            63,
+            115
+          ],
+          [
+            63,
+            116
+          ],
+          [
+            63,
+            117
+          ]
+        ]
+      },
+      {
+        "id": "leo-zodiac-threshold",
+        "sprite": "zodiac-emblem-leo",
+        "cells": [
+          [
+            41,
+            108
+          ],
+          [
+            42,
+            108
+          ],
+          [
+            43,
+            108
+          ],
+          [
+            41,
+            109
+          ]
+        ]
+      },
+      {
+        "id": "virgo-zodiac-threshold",
+        "sprite": "zodiac-emblem-virgo",
+        "cells": [
+          [
+            25,
+            92
+          ],
+          [
+            26,
+            92
+          ],
+          [
+            27,
+            92
+          ],
+          [
+            25,
+            93
+          ]
+        ]
+      },
+      {
+        "id": "libra-zodiac-threshold",
+        "sprite": "zodiac-emblem-libra",
+        "cells": [
+          [
+            19,
+            71
+          ],
+          [
+            20,
+            71
+          ],
+          [
+            21,
+            71
+          ]
+        ]
+      },
+      {
+        "id": "scorpio-zodiac-threshold",
+        "sprite": "zodiac-emblem-scorpio",
+        "cells": [
+          [
+            25,
+            49
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            25,
+            51
+          ]
+        ]
+      },
+      {
+        "id": "sagittarius-zodiac-threshold",
+        "sprite": "zodiac-emblem-sagittarius",
+        "cells": [
+          [
+            41,
+            33
+          ],
+          [
+            41,
+            34
+          ],
+          [
+            41,
+            35
+          ]
+        ]
+      },
+      {
+        "id": "capricorn-zodiac-threshold",
+        "sprite": "zodiac-emblem-capricorn",
+        "cells": [
+          [
+            62,
+            27
+          ],
+          [
+            63,
+            27
+          ],
+          [
+            63,
+            28
+          ],
+          [
+            63,
+            29
+          ]
+        ]
+      },
+      {
+        "id": "aquarius-zodiac-threshold",
+        "sprite": "zodiac-emblem-aquarius",
+        "cells": [
+          [
+            85,
+            33
+          ],
+          [
+            85,
+            34
+          ],
+          [
+            85,
+            35
+          ]
+        ]
+      },
+      {
+        "id": "pisces-zodiac-threshold",
+        "sprite": "zodiac-emblem-pisces",
+        "cells": [
+          [
+            101,
+            49
+          ],
+          [
+            101,
+            50
+          ],
+          [
+            101,
+            51
+          ]
+        ]
+      }
+    ],
+    "startupInsideWelcomeArea": [
+      [
+        63,
+        65
+      ],
+      [
+        64,
+        65
+      ],
+      [
+        63,
+        66
+      ],
+      [
+        64,
+        66
+      ]
+    ]
+  },
+  "privateGuideReleaseChanged": false
+}

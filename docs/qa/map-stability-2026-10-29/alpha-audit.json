@@ -1,0 +1,1045 @@
+{
+  "checkedSpriteCollisionCells": 2260,
+  "emptySpriteCells": {
+    "interior-ref-plant-motion-base": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "hall-building-solar": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        11,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        11,
+        2
+      ]
+    ],
+    "hall-building-lunar": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        11,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        11,
+        2
+      ]
+    ]
+  },
+  "faintSpriteCells": [
+    {
+      "sprite": "interior-ref-plant",
+      "cell": [
+        2,
+        2
+      ],
+      "opaque": 5,
+      "visible": 76
+    },
+    {
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        2
+      ],
+      "opaque": 5,
+      "visible": 76
+    },
+    {
+      "sprite": "hall-building-solar",
+      "cell": [
+        3,
+        2
+      ],
+      "opaque": 21,
+      "visible": 21
+    },
+    {
+      "sprite": "hall-building-solar",
+      "cell": [
+        8,
+        2
+      ],
+      "opaque": 21,
+      "visible": 21
+    },
+    {
+      "sprite": "hall-building-solar",
+      "cell": [
+        0,
+        3
+      ],
+      "opaque": 14,
+      "visible": 14
+    },
+    {
+      "sprite": "hall-building-solar",
+      "cell": [
+        11,
+        3
+      ],
+      "opaque": 13,
+      "visible": 13
+    },
+    {
+      "sprite": "hall-building-lunar",
+      "cell": [
+        5,
+        1
+      ],
+      "opaque": 22,
+      "visible": 22
+    },
+    {
+      "sprite": "hall-building-lunar",
+      "cell": [
+        6,
+        1
+      ],
+      "opaque": 25,
+      "visible": 25
+    },
+    {
+      "sprite": "hall-building-lunar",
+      "cell": [
+        0,
+        3
+      ],
+      "opaque": 12,
+      "visible": 12
+    },
+    {
+      "sprite": "hall-building-lunar",
+      "cell": [
+        11,
+        3
+      ],
+      "opaque": 12,
+      "visible": 12
+    }
+  ],
+  "emptyBorderPlacements": [
+    {
+      "map": "lunar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "lunar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "lunar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        5,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "lunar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        29
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "lunar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        5,
+        29
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "solar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "solar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "solar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        5,
+        28
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "solar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        29
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "solar-hall",
+      "id": "interior-ref-gallery-plant",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        5,
+        29
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aquarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aquarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aquarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aquarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aquarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aries",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aries",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aries",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aries",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-aries",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-cancer",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-cancer",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-cancer",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-cancer",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-cancer",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-capricorn",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-capricorn",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-capricorn",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-capricorn",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-capricorn",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-gemini",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-gemini",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-gemini",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-gemini",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-gemini",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-leo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-leo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-leo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-leo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-leo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-libra",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-libra",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-libra",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-libra",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-libra",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-pisces",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-pisces",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-pisces",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-pisces",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-pisces",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-sagittarius",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-scorpio",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-scorpio",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-scorpio",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-scorpio",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-scorpio",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-taurus",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-taurus",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-taurus",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-taurus",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-taurus",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-virgo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-virgo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        3,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-virgo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        3
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-virgo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        2,
+        4
+      ],
+      "layer": "props"
+    },
+    {
+      "map": "speaker-virgo",
+      "id": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "cell": [
+        4,
+        4
+      ],
+      "layer": "props"
+    }
+  ]
+}

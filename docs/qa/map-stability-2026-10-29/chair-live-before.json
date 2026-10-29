@@ -1,0 +1,63 @@
+{
+  "ok": false,
+  "shard": 0,
+  "maps": [],
+  "walks": [
+    {
+      "map": "overworld",
+      "from": {
+        "x": 2064,
+        "y": 2128
+      },
+      "to": {
+        "x": 1424,
+        "y": 2240
+      },
+      "tiles": 45
+    },
+    {
+      "map": "overworld",
+      "from": {
+        "x": 1424,
+        "y": 2288
+      },
+      "to": {
+        "x": 1424,
+        "y": 2368
+      },
+      "tiles": 16
+    }
+  ],
+  "walls": [],
+  "portals": [],
+  "restrictedAreas": [],
+  "responses": [],
+  "errors": [],
+  "failures": [],
+  "media": [],
+  "chair": {
+    "fromAbove": {
+      "before": {
+        "x": 1424,
+        "y": 2240
+      },
+      "after": {
+        "x": 1424,
+        "y": 2288
+      }
+    },
+    "fromBelow": {
+      "before": {
+        "x": 1424,
+        "y": 2368
+      },
+      "after": {
+        "x": 1424,
+        "y": 2336
+      }
+    },
+    "visibleSeatStops": false,
+    "emptyTrailingTilePasses": false
+  },
+  "browserClosed": true
+}

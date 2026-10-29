@@ -1,0 +1,902 @@
+{
+  "fullRun": {
+    "numTotalTests": 2640,
+    "numPassedTests": 2370,
+    "numFailedTests": 181,
+    "numPendingTests": 89
+  },
+  "focusedRun": {
+    "numTotalTests": 233,
+    "numPassedTests": 232,
+    "numFailedTests": 1,
+    "numPendingTests": 0
+  },
+  "latestByFile": {
+    "passed": 2376,
+    "failed": 175,
+    "skipped": 89
+  },
+  "newFailures": [],
+  "baselineFailuresRemaining": [
+    {
+      "file": "tests/approved-world-successor.test.ts",
+      "name": "ties genuine old14 interior hash oracles and every current30 source body to only the nine reviewed forward inputs",
+      "error": "Error: Arrival refresh: reviewed producer changed: tools/maps/native-ownership-context.ts"
+    },
+    {
+      "file": "tests/author-guard.test.ts",
+      "name": "explicit author export refuses to erase native changes after its recorded export",
+      "error": "Error: Command failed: /home/ubuntu/.local/share/fnm/node-versions/v26.11.1/installation/bin/node --import /home/ubuntu/varcamp-map/node_modules/tsx/dist/loader.mjs /home/ubuntu/varcamp-map/tools/maps/author.ts --initialize"
+    },
+    {
+      "file": "tests/authored-world.test.ts",
+      "name": "medium authored event world puts all twelve room doors and activity choices within short collision-aware arrival walks",
+      "error": "AssertionError: taurus arrival walk: expected 66 to be less than or equal to 65"
+    },
+    {
+      "file": "tests/authored-world.test.ts",
+      "name": "medium authored event world shows the three independently replaceable sponsor images beside the distinct VarCamp floor identity",
+      "error": "AssertionError: expected [ { \u2026(7) }, { \u2026(7) }, { \u2026(7) }, \u2026(16) ] to have a length of 18 but got 19"
+    },
+    {
+      "file": "tests/beach-refinement.test.ts",
+      "name": "relaxed native beach with retained harbor contracts refreshes existing surf metadata from changed descriptors without changing native GIDs or semantic layers",
+      "error": "Error: Historical CLI dependency changed: src/world/catalog.ts"
+    },
+    {
+      "file": "tests/campus-decoration.test.ts",
+      "name": "landscaped zodiac campus contains bounded planted beds and two edged water gardens close to the court",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "tests/coast-aerial-entry.test.ts",
+      "name": "actual normal build and direct current release reject coherent aircraft omission before writing or emitting anything",
+      "error": "AssertionError: expected Error: ENOENT: no such file or directory,\u2026 { \u2026(4) } to be undefined"
+    },
+    {
+      "file": "tests/coastal-boarding.test.ts",
+      "name": "native coastal boarding and nautical proportions preserves other maps/assets except the separately verified start alias and exact robot retirement",
+      "error": "AssertionError: maps/comet-maze.tmj final distinct current receipt: expected 'c120f39182d701310fd4bf458d4d4e32bfdd4\u2026' to be 'd5f8cf2c0520e537af07005d5f25b809afc0f\u2026' // Object.is equality"
+    },
+    {
+      "file": "tests/current-animation-entry.test.ts",
+      "name": "actual normal build and direct current release reject coherent Roadster omission before writing or emitting anything",
+      "error": "AssertionError: expected Error: ENOENT: no such file or directory,\u2026 { \u2026(4) } to be undefined"
+    },
+    {
+      "file": "tests/interior-original-palms.test.ts",
+      "name": "original same-footprint interior palms rejects a missing required original palm after native regeneration",
+      "error": "AssertionError: expected [Function] to throw error matching /Interior.*required furnishing/ but got 'Vibe Code branding: unreviewed source\u2026'"
+    },
+    {
+      "file": "tests/interior-original-palms.test.ts",
+      "name": "original same-footprint interior palms rejects a reverted required original palm after native regeneration",
+      "error": "AssertionError: expected [Function] to throw error matching /Interior.*required furnishing/ but got 'Vibe Code branding: unreviewed source\u2026'"
+    },
+    {
+      "file": "tests/interior-original-palms.test.ts",
+      "name": "original same-footprint interior palms rejects a moved required original palm after native regeneration",
+      "error": "AssertionError: expected [Function] to throw error matching /Interior.*required furnishing/ but got 'Vibe Code branding: unreviewed source\u2026'"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival keeps every speaker and primary choice within the approved collision walks",
+      "error": "AssertionError: speaker-taurus from 8383: expected 66 to be less than or equal to 65"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival aries has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival taurus has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival gemini has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival cancer has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival leo has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival virgo has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival libra has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival scorpio has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival sagittarius has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival capricorn has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival aquarius has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival pisces has a native roofed building and legible raster nameplate",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival uses four pointer boards instead of a welcome paragraph",
+      "error": "AssertionError [ERR_ASSERTION]: Missing/duplicate declared face exterior-road-sign-north"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival keeps the complete event lockup in the first viewport and relocated sponsor logos clear on the northern approach",
+      "error": "AssertionError: expected [ { \u2026(7) }, { \u2026(7) }, { \u2026(7) }, \u2026(16) ] to have a length of 18 but got 19"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival keeps every raster nameplate and pointer apart from controls and other plaques",
+      "error": "AssertionError: expected undefined to be defined"
+    },
+    {
+      "file": "tests/medium-hub.test.ts",
+      "name": "medium authored arrival leaves reception, every return and sponsor artwork clear and connected",
+      "error": "AssertionError [ERR_ASSERTION]: Exactly three sponsors, eleven expo logos and the approved floor identity"
+    },
+    {
+      "file": "tests/native-context-entry.test.ts",
+      "name": "actual direct release refuses unused drift before any artifact emission",
+      "error": "AssertionError: expected Error: ENOENT: no such file or directory,\u2026 { \u2026(4) } to be undefined"
+    },
+    {
+      "file": "tests/native-context-entry.test.ts",
+      "name": "actual direct release refuses text drift before any artifact emission",
+      "error": "AssertionError: expected Error: ENOENT: no such file or directory,\u2026 { \u2026(4) } to be undefined"
+    },
+    {
+      "file": "tests/native-projection-entry.test.ts",
+      "name": "actual current release rejects an invisible coast overlay before any artifact emission",
+      "error": "AssertionError: expected Error: ENOENT: no such file or directory,\u2026 { \u2026(4) } to be undefined"
+    },
+    {
+      "file": "tests/nonroom-visibility.test.ts",
+      "name": "overworld complete house assembly regression retains the historical published static overworld pixels including bold names and emblems",
+      "error": "Error: spawn /home/ubuntu/varcamp-map/.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer ENOENT"
+    },
+    {
+      "file": "tests/physical-prop-contracts.test.ts",
+      "name": "physical prop consumer contracts keeps all four current logo inlays walkable below avatars",
+      "error": "AssertionError [ERR_ASSERTION]: Exactly three sponsors, eleven expo logos and the approved floor identity"
+    },
+    {
+      "file": "tests/plaza-groves.test.ts",
+      "name": "historical plaza groves and the current original-art successor have closed forward deltas protects actual roads, controls, oldprops/canopy margins and743guide neighbors, and keeps every control and current guide cell reachable",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "tests/plaza-start.test.ts",
+      "name": "fresh plaza arrival uses the central welcome court in the pinned client retains explicit welcome and Aries house return positions",
+      "error": "AssertionError: expected { x: 3440, y: 2288 } to deeply equal { x: 3248, y: 2288 }"
+    },
+    {
+      "file": "tests/plaza-start.test.ts",
+      "name": "fresh plaza arrival uses the central welcome court in the pinned client selects every corrected return cell and preserves all other prior named entries",
+      "error": "AssertionError: authored, from-speaker-aries, sample 0: expected { x: 3440, y: 2288 } to deeply equal { x: 3248, y: 2288 }"
+    },
+    {
+      "file": "tests/plaza-start.test.ts",
+      "name": "fresh plaza arrival uses the central welcome court in the pinned client reproduces the Aries fallback if the literal start alias is removed",
+      "error": "AssertionError: expected { x: 3440, y: 2288 } to deeply equal { x: 3248, y: 2288 }"
+    },
+    {
+      "file": "tests/release-roster.test.ts",
+      "name": "real current release refuses matching regenerated native input with omitted required furnishings before any emission",
+      "error": "AssertionError: expected 'Error: Vibe Code branding: unreviewed\u2026' to match /Interior.*furnishing/"
+    },
+    {
+      "file": "tests/return-spawns.test.ts",
+      "name": "overworld return approach contract retains exact published navigation-only receipts independently of later props",
+      "error": "AssertionError: expected [ { \u2026(5) }, { \u2026(5) }, { \u2026(5) }, \u2026(23) ] to deeply equal [ { \u2026(5) }, { \u2026(5) }, { \u2026(5) }, \u2026(23) ]"
+    },
+    {
+      "file": "tests/solid-props.test.ts",
+      "name": "independent solid support and visual depth requires all current physical sign families to declare standing assemblies",
+      "error": "AssertionError: overworld: expected [ { \u2026(2) }, { \u2026(2) }, { \u2026(2) }, \u2026(15) ] to have a length of 22 but got 18"
+    },
+    {
+      "file": "tests/solid-props.test.ts",
+      "name": "overworld emits every intended native visual tile exactly once at its authored position and depth",
+      "error": "AssertionError: expected [ { \u2026(5) }, { \u2026(5) }, { \u2026(5) }, \u2026(23) ] to deeply equal [ { \u2026(5) }, { \u2026(5) }, { \u2026(5) }, \u2026(23) ]"
+    },
+    {
+      "file": "tests/sponsor-panels.test.ts",
+      "name": "replaceable WorkAdventure sponsor tile layers renders all 12 PNG cells in native order through nested tile layers",
+      "error": "Error: spawn /tmp/varcamp-sponsor-BO84sZ/.tools/tiled-1.12.2/Tiled.app/Contents/MacOS/tmxrasterizer ENOENT"
+    },
+    {
+      "file": "tests/tropical-cove.test.ts",
+      "name": "tropical cove visitor experience preserves frozen shared caption bytes with a present descriptor when the caption writer runs",
+      "error": "Error: ENOENT: no such file or directory, open 'art/source/vibecode-branding.json'"
+    },
+    {
+      "file": "tests/wayfinding-redraw.test.ts",
+      "name": "audience wayfinding in exported Tiled maps uses concise physical cardinal pointers and raster controls at first arrival",
+      "error": "AssertionError [ERR_ASSERTION]: Missing/duplicate declared face exterior-road-sign-north"
+    },
+    {
+      "file": "tests/wayfinding-redraw.test.ts",
+      "name": "audience wayfinding in exported Tiled maps campus-exploration labels every physical destination with a nearby readable direction",
+      "error": "AssertionError: campus-exploration/fire: no readable arrow sign names its actual destination: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "tests/wayfinding-redraw.test.ts",
+      "name": "audience wayfinding in exported Tiled maps overworld labels every physical destination with a nearby readable direction",
+      "error": "AssertionError: speaker-aries: raster plaque missing: expected undefined to be defined"
+    },
+    {
+      "file": "tests/wayfinding-redraw.test.ts",
+      "name": "audience wayfinding in exported Tiled maps points first-time visitors north toward the Festival and Exploration pavilion doors",
+      "error": "AssertionError: campus-exploration/fire points visitors away from its northbound door: expected undefined to be '\u2191' // Object.is equality"
+    },
+    {
+      "file": "tests/wayfinding-redraw.test.ts",
+      "name": "audience wayfinding in exported Tiled maps keeps all production labels apart from controls, other labels and scenery except deliberate wall plaques and return-rune backplates",
+      "error": "AssertionError: campus-exploration/star-garden-label obscures star-garden-front-solid: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "tests/world-package.test.ts",
+      "name": "finished release artifact (run npm run buildmap first) ships arrival sponsors through the pinned WorkAdventure tilelayer/tileset renderer boundary",
+      "error": "AssertionError: expected +0 to be 4294 // Object.is equality"
+    },
+    {
+      "file": "tests/zodiac-physics.test.ts",
+      "name": "zodiac building physical silhouettes preserves the twelve entrances, returns, every old media byte and all other maps/layouts/WAMs",
+      "error": "Error: STACK_TRACE_ERROR"
+    },
+    {
+      "file": "tests/zodiac-wheel.test.ts",
+      "name": "medium authored zodiac arrival numbers every speaker facade and signs all six hall and activity directions",
+      "error": "AssertionError: expected undefined to be 'hub-label-aries' // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request +0 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 1 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 2 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 3 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'configure-identity' request 4 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request +0 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 1 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 301 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 302 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 303 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 307 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 308 to 'https://other.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 301 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 302 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 303 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 307 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 308 to 'http://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 301 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 302 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 303 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 307 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "rejects 'retire-bootstrap' request 2 status 308 to 'https://trusted.example/redirected' before follow-on",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "preserves the ordinary 'configure-identity' flow with verified TLS defaults",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/identity-transport.test.ts",
+      "name": "preserves the ordinary 'retire-bootstrap' flow with verified TLS defaults",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "ops/tests/recovery-guard.test.ts",
+      "name": "private generation and isolated recovery guards enforces inert before any target write",
+      "error": "Error: Command failed: python3 ops/tests/recovery-guard-fixture.py inert"
+    }
+  ],
+  "nodeSuite": {
+    "passed": 17,
+    "failed": 1,
+    "reason": "Unchanged guide container COPY inputs have local mode 0600; world readability assertion fails at ops/bots/package.json. Guide services remain stopped."
+  }
+}

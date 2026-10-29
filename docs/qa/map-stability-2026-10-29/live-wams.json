@@ -1,0 +1,334 @@
+{
+  "ok": true,
+  "maps": [
+    {
+      "map": "air-district",
+      "status": 200,
+      "sha256": "f38fbdc661b135d1042b8b5e774ca5b427a47fc4b77c8b209d7df33f4a7c514c",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "campus-exploration",
+      "status": 200,
+      "sha256": "6e6d1afc88c14ca540c3b91bbab52476588416543a13bb4031d2bd8fee44bbe1",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "comet-maze",
+      "status": 200,
+      "sha256": "a6097c481f3e00d60037964d6a5ae816ad1e8484aca39f6d2f21d7d9cc385a8d",
+      "areas": 4,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "constellation-shore",
+      "status": 200,
+      "sha256": "81af353b4abf12c476bcee82d5c4b06d0a500d6f52b526bcfe2da9f2429a3ea4",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "earth-district",
+      "status": 200,
+      "sha256": "369e147ee7cc03371f573ffe6d99224eb3574b639d0eaa038a7c43729590b865",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "fa-ship-interior",
+      "status": 200,
+      "sha256": "234e22c5633677f6181483bd20d2c3158c15945d9b97645ca24d68fe6a9f6780",
+      "areas": 4,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "fa-ship",
+      "status": 200,
+      "sha256": "400894a13832190c8ce8bf61a79a3686b0c492c8856420ebce4004362daf1d7f",
+      "areas": 4,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "fire-district",
+      "status": 200,
+      "sha256": "cfb8027fd9536fe7289521446ccbf497fd314f6a75706cddb8281f8fe864d489",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "hidden-observatory",
+      "status": 200,
+      "sha256": "92bf01c5cfe6db5680e8e0d09fe05c740496a6597766a7f9631231f34d100027",
+      "areas": 2,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "lunar-hall",
+      "status": 200,
+      "sha256": "a6e62b4665d93610132d7b49f3a0d525d2a802276f2b3fd53f0445aa0924ace0",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "moon-cafe",
+      "status": 200,
+      "sha256": "f71caef1bb5a7ef6904da728cc5c8e120b44e8726ec6563d3df03e8dbfbc84aa",
+      "areas": 2,
+      "entities": 0,
+      "retainedAreaIds": [
+        {
+          "name": "cafe-west",
+          "source": "cafe-west",
+          "live": "campus-exploration-area-2"
+        },
+        {
+          "name": "cafe-east",
+          "source": "cafe-east",
+          "live": "campus-exploration-area-3"
+        }
+      ],
+      "differences": []
+    },
+    {
+      "map": "moon-grotto",
+      "status": 200,
+      "sha256": "c31c529db9efd4de0127f813c9ae8584390bfcc31d1a40fc7eee130611736b3d",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "nebula-arcade",
+      "status": 200,
+      "sha256": "ac2f9ba4b055b3d48782b94b14a246db079eb1a0d199415d1480b596847cf1cd",
+      "areas": 5,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "orbit-maze",
+      "status": 200,
+      "sha256": "f6d1f79d0f5cf932305b614f03b08ff79458cfa251b4b79a9731def4aef8ed59",
+      "areas": 4,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "orbit-playground",
+      "status": 200,
+      "sha256": "7cccaacdc635ab66db45046e772201d79faa0a2cabc3fc670d55173b8fd78082",
+      "areas": 2,
+      "entities": 0,
+      "retainedAreaIds": [
+        {
+          "name": "playground-conversation",
+          "source": "playground-conversation",
+          "live": "campus-exploration-area-1"
+        }
+      ],
+      "differences": []
+    },
+    {
+      "map": "overworld",
+      "status": 200,
+      "sha256": "f15817adc422af3d5c53860b545647edf9861922a6b6ae0dd92a3931fa1722aa",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "shipyard-beach",
+      "status": 200,
+      "sha256": "c6b427203b583941636d7b6686a15dbbdbb306ff74a9e91c9fdc9e8b4eee3009",
+      "areas": 2,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "solar-hall",
+      "status": 200,
+      "sha256": "ff2227ed41a584ffc01f53ad45960d3f6d461287c7392363832653f8487519ba",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-aquarius",
+      "status": 200,
+      "sha256": "39ea3bb3b4874400182884043e78ef0cf49a5e1118f5a9ea7c37369e8ad4e8a3",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-aries",
+      "status": 200,
+      "sha256": "687448e8873a12097d982c1f266b0889970af47db980d31e36834a811ab53caa",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-cancer",
+      "status": 200,
+      "sha256": "82748fa47f85c91751e1a43c18f42296af2b1bfdc4de2e914d8502b72a37160f",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-capricorn",
+      "status": 200,
+      "sha256": "0fbc320eb7248f2e448d3c870229128bc904495efc18b3fb5337cea803718835",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-gemini",
+      "status": 200,
+      "sha256": "77f029a3a3f951682830286d5c4319b45fa897f13ffdd0b65f772a0ada0d7756",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-leo",
+      "status": 200,
+      "sha256": "2613402c0a385158b3f8ec07e1153f4b5821403becbb5d169ea27a34a3af12ec",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-libra",
+      "status": 200,
+      "sha256": "3e1e4bed09ef825512b12cf5be3da2d2d215f1d7e46a29bd05339114666ee5c7",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-pisces",
+      "status": 200,
+      "sha256": "bf14191c766b4d3315aa7d577d78113b6ee4dedd270d736c733a2a6a7e5dbef4",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-sagittarius",
+      "status": 200,
+      "sha256": "7e8de02b88c248ab3be51a019ceec9dc6a0288c9ee18617ebfa60582810913ef",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-scorpio",
+      "status": 200,
+      "sha256": "bd2965c272966f80920206c2129e7c23bf0aab8024b64329d87483eff340472f",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-taurus",
+      "status": 200,
+      "sha256": "427efd2180ea6542f18f992d5650fa12e21d6d39b2825b7b2184a387ef8e1542",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "speaker-virgo",
+      "status": 200,
+      "sha256": "2ff46c95465500dcaaa4f2663fbafd2c9ce322a3f26d9df588caaf32c3c9fc41",
+      "areas": 3,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "star-garden",
+      "status": 200,
+      "sha256": "732bba0d72fa63008906047541458661c5113feae5edd99769a05ae50609deea",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [
+        {
+          "name": "garden-conversation",
+          "source": "garden-conversation",
+          "live": "campus-exploration-area-0"
+        }
+      ],
+      "differences": []
+    },
+    {
+      "map": "stargazer-terrace",
+      "status": 200,
+      "sha256": "a69eb6bae5d740d8d69080ed33c0098e9b8d24d8480505261470bd3e6f30eeee",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "water-district",
+      "status": 200,
+      "sha256": "440e0a8b60e5485e4d9f1d8ee28b7c24888d294c5cd21a6735c5087036e010b6",
+      "areas": 1,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    },
+    {
+      "map": "zodiac-festival-park",
+      "status": 200,
+      "sha256": "dd633a656270c672a6a8c3db9eeb75a857ec3e6de1ee9f116e33bc2d599d45cf",
+      "areas": 8,
+      "entities": 0,
+      "retainedAreaIds": [],
+      "differences": []
+    }
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "ok": true,
+  "shard": 0,
+  "maps": [
+    {
+      "id": "air-district",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "campus-exploration",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "comet-maze",
+      "areas": 4,
+      "wallProbes": 0
+    },
+    {
+      "id": "constellation-shore",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "earth-district",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "fa-ship",
+      "areas": 4,
+      "wallProbes": 0
+    },
+    {
+      "id": "fa-ship-interior",
+      "areas": 4,
+      "wallProbes": 0
+    },
+    {
+      "id": "fire-district",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "hidden-observatory",
+      "areas": 2,
+      "wallProbes": 0
+    },
+    {
+      "id": "lunar-hall",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "moon-cafe",
+      "areas": 2,
+      "wallProbes": 0
+    },
+    {
+      "id": "moon-grotto",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "nebula-arcade",
+      "areas": 5,
+      "wallProbes": 0
+    },
+    {
+      "id": "orbit-maze",
+      "areas": 4,
+      "wallProbes": 0
+    },
+    {
+      "id": "orbit-playground",
+      "areas": 2,
+      "wallProbes": 0
+    },
+    {
+      "id": "overworld",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "shipyard-beach",
+      "areas": 2,
+      "wallProbes": 0
+    },
+    {
+      "id": "solar-hall",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-aquarius",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-aries",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-cancer",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-capricorn",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-gemini",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-leo",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-libra",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-pisces",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-sagittarius",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-scorpio",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-taurus",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "speaker-virgo",
+      "areas": 3,
+      "wallProbes": 0
+    },
+    {
+      "id": "star-garden",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "stargazer-terrace",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "water-district",
+      "areas": 1,
+      "wallProbes": 0
+    },
+    {
+      "id": "zodiac-festival-park",
+      "areas": 8,
+      "wallProbes": 0
+    }
+  ],
+  "walks": [],
+  "walls": [],
+  "portals": [],
+  "restrictedAreas": [],
+  "responses": [
+    {
+      "path": "maps/air-district.tmj",
+      "status": 200,
+      "sha256": "a288a7cc83cc150a1e17971dde2e708f777938da076bd2e80b60483bbf6f1b94",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "a32df66c84a2832016b6c45ce3d8839fa7520b0d4d7d9d8221798afd32a1973c",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "status": 200,
+      "sha256": "41c9b63898e12326d3c56d1850255b588909c787dc8d549c0459552353d9fd96",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "status": 200,
+      "sha256": "30c28a297fdd05b5ee0ed68f5530a6f6e4dc67eb341fc51821edb20a1b9f4841",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/earth-district.tmj",
+      "status": 200,
+      "sha256": "5ba4ab7d2ace1bc366c1f7fc9e7a96b17527657c13e97566a6b6c901e707c229",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "status": 200,
+      "sha256": "6d9eab4d8dd56a184537dd994aaf7062aad2336a4b07555316a7fdf8c94034dd",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship-interior.tmj",
+      "status": 200,
+      "sha256": "d55d134169c6f514298521c961b2f667d9d6d2533a219117089bc8a679a25a30",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fire-district.tmj",
+      "status": 200,
+      "sha256": "403a663a6dee65bc28fbaa756a45ede0e063396e23dbdbf9c7502a7953d17483",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/hidden-observatory.tmj",
+      "status": 200,
+      "sha256": "9495f3d0faaef178f3347f47b44bb4223fbb629e627cc6381ad5bb4f9ff2f3ea",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "status": 200,
+      "sha256": "9488509af28c9a11d4273b32b2e13f4747be4ec14feed71a91c045b51b271c21",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "status": 200,
+      "sha256": "f083867477a43d8fd7823d91fd015f38cc046fbb3c34ab0826ffc85fcbba3351",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/moon-grotto.tmj",
+      "status": 200,
+      "sha256": "470e39b47fbdd4a7524a3c22ff62f0deec0192246e1a9e42899215a2c94b66ca",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "status": 200,
+      "sha256": "93f847ee55031c83d93ca9264a4686784b55c30cb0f0ca916508ab4932a81e69",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "status": 200,
+      "sha256": "4b09772958c3eea04818a80b19ea980f2830696cc71105db5989cd6ba372333f",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/orbit-playground.tmj",
+      "status": 200,
+      "sha256": "e607ea592714aa019b773eb3e5289e30cd6dec4554814e1f9ef866b780d4ae3a",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "3722c85fa1195f692a016b72b0bda07806d74ace8052705e296087fd2bdaea1d",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "status": 200,
+      "sha256": "a6d2b6342d490bd4da6022833ab043e7581d109d1548487dcfc5b844817db7e7",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "status": 200,
+      "sha256": "b4c583b710825fc962dbbfb4eebfe1990a8a2627fb6f28389ccfd12e13e4f309",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "status": 200,
+      "sha256": "c1827b5953fcd467964fa9e90290db4b7e75ec3625ec85ee5b7ad7d125df187b",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "status": 200,
+      "sha256": "79c18901106c3b4cf1022afc5bb0e257c0c88ceab8c9286645b36485b4cbeae5",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "status": 200,
+      "sha256": "fe0e493043199bd9cd986459a05eb2496500284959d41d40ea82646c5415fa97",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "status": 200,
+      "sha256": "805407d12ad01174a55eabbba1ec4874a34194dd810dd736373459dd489e0cc0",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "status": 200,
+      "sha256": "357d66676aa23d6da04b9501b84f0de2762fa0e7e977e2ebe68ab30b76684534",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "status": 200,
+      "sha256": "7b9838133acccb44940914011fcc31b1de86b1e187c9762e96d7be86e2e1276b",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "status": 200,
+      "sha256": "b2a5b86aa72efa61bf1af2418383aaf851f67877b2863e3ccacf8b4c5cb3f1c0",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "status": 200,
+      "sha256": "2552d8cbef37a36d4d0b6e428539370dd0eed3a85532e25008f86b73149096ff",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "status": 200,
+      "sha256": "b1c501a922b20829c5b0959b9d8674f02d09535b25ccdc3408468ca8048d0319",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "status": 200,
+      "sha256": "7fceaf0deea09e904b061d1d0170dad694529a67fef43c16462bb8b828a238b2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "status": 200,
+      "sha256": "5e4dfb5b0ee5aeb069306ae1a662dce02312aa66a3c5a8d2644d2fde81033c9c",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "status": 200,
+      "sha256": "ce6053a0f44bd62718b3a0a2c246116e6af1506ec8fe2aa1e52dcd0b4e629e8a",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/star-garden.tmj",
+      "status": 200,
+      "sha256": "d9254847f28c8e59baea883a82d329d6da2f5f8507caf1886f1d43cac5b4fc23",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/stargazer-terrace.tmj",
+      "status": 200,
+      "sha256": "62afbd4967cad5acd739ea96c133e082c3795b26fcc35b35dc513779a1732c9f",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "status": 200,
+      "sha256": "84be7892d2e6955f7dd0c904b9bf23dce9b0a26b587f33d75909282c8ae18b94",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "status": 200,
+      "sha256": "d9c31b398617144c450d5a2ff39e0dc8f4eabcd87a10c82e4b42fde443fe4303",
+      "matchesBuild": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "media": [
+    {
+      "map": "air-district",
+      "requests": 2,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "campus-exploration",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "comet-maze",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "constellation-shore",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "earth-district",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "fa-ship",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "fa-ship-interior",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "fire-district",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "hidden-observatory",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "lunar-hall",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "moon-cafe",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "moon-grotto",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "nebula-arcade",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "orbit-maze",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "orbit-playground",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "overworld",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "shipyard-beach",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "solar-hall",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-aquarius",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-aries",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-cancer",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-capricorn",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-gemini",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-leo",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-libra",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-pisces",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-sagittarius",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-scorpio",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-taurus",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-virgo",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "star-garden",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "stargazer-terrace",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "water-district",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "zodiac-festival-park",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    }
+  ],
+  "browserClosed": true
+}

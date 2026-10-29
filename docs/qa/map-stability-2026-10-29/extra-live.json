@@ -1,0 +1,217 @@
+{
+  "ok": true,
+  "shard": 0,
+  "maps": [],
+  "walks": [
+    {
+      "map": "overworld",
+      "from": {
+        "x": 2032,
+        "y": 2096
+      },
+      "to": {
+        "x": 880,
+        "y": 512
+      },
+      "tiles": 86
+    },
+    {
+      "map": "overworld",
+      "from": {
+        "x": 910,
+        "y": 512
+      },
+      "to": {
+        "x": 880,
+        "y": 512
+      },
+      "tiles": 2
+    },
+    {
+      "map": "overworld",
+      "from": {
+        "x": 872,
+        "y": 512
+      },
+      "to": {
+        "x": 3216,
+        "y": 512
+      },
+      "tiles": 76
+    },
+    {
+      "map": "overworld",
+      "from": {
+        "x": 3186,
+        "y": 512
+      },
+      "to": {
+        "x": 3216,
+        "y": 512
+      },
+      "tiles": 2
+    },
+    {
+      "map": "orbit-maze",
+      "from": {
+        "x": 368,
+        "y": 2224
+      },
+      "to": {
+        "x": 16,
+        "y": 32
+      },
+      "tiles": 80
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 752,
+        "y": 208
+      },
+      "to": {
+        "x": 752,
+        "y": 64
+      },
+      "tiles": 9
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 752,
+        "y": 94
+      },
+      "to": {
+        "x": 752,
+        "y": 64
+      },
+      "tiles": 1
+    }
+  ],
+  "walls": [
+    {
+      "map": "overworld",
+      "object": "exterior-gate-solar",
+      "sprite": "hall-building-solar",
+      "wall": [
+        26,
+        16
+      ],
+      "outside": [
+        27,
+        16
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 880,
+          "y": 512
+        },
+        "after": {
+          "x": 910,
+          "y": 512
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 880,
+          "y": 512
+        },
+        "after": {
+          "x": 872,
+          "y": 512
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "overworld",
+      "object": "exterior-gate-lunar",
+      "sprite": "hall-building-lunar",
+      "wall": [
+        101,
+        16
+      ],
+      "outside": [
+        100,
+        16
+      ],
+      "key": "ArrowRight",
+      "control": {
+        "before": {
+          "x": 3216,
+          "y": 512
+        },
+        "after": {
+          "x": 3186,
+          "y": 512
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 3216,
+          "y": 512
+        },
+        "after": {
+          "x": 3224,
+          "y": 512
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "shipyard-beach",
+      "object": "sea-boundary",
+      "sprite": "tropical-cove-water-4",
+      "wall": [
+        23,
+        1
+      ],
+      "outside": [
+        23,
+        2
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 752,
+          "y": 64
+        },
+        "after": {
+          "x": 752,
+          "y": 94
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 752,
+          "y": 64
+        },
+        "after": {
+          "x": 752,
+          "y": 64
+        }
+      },
+      "stopped": true
+    }
+  ],
+  "portals": [],
+  "restrictedAreas": [],
+  "responses": [],
+  "errors": [],
+  "failures": [],
+  "media": [],
+  "boundary": {
+    "map": "orbit-maze",
+    "before": {
+      "x": 16,
+      "y": 32
+    },
+    "after": {
+      "x": 8,
+      "y": 32
+    },
+    "stopped": true
+  },
+  "browserClosed": true
+}

@@ -1,0 +1,5055 @@
+{
+  "ok": true,
+  "shard": 0,
+  "maps": [
+    {
+      "id": "air-district",
+      "areas": 1,
+      "wallProbes": 3
+    },
+    {
+      "id": "comet-maze",
+      "areas": 4,
+      "wallProbes": 3
+    },
+    {
+      "id": "earth-district",
+      "areas": 1,
+      "wallProbes": 4
+    },
+    {
+      "id": "fa-ship-interior",
+      "areas": 4,
+      "wallProbes": 2
+    },
+    {
+      "id": "hidden-observatory",
+      "areas": 2,
+      "wallProbes": 4
+    },
+    {
+      "id": "moon-cafe",
+      "areas": 2,
+      "wallProbes": 4
+    },
+    {
+      "id": "nebula-arcade",
+      "areas": 5,
+      "wallProbes": 2
+    },
+    {
+      "id": "orbit-playground",
+      "areas": 2,
+      "wallProbes": 2
+    },
+    {
+      "id": "shipyard-beach",
+      "areas": 2,
+      "wallProbes": 3
+    },
+    {
+      "id": "speaker-aquarius",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "speaker-cancer",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "speaker-gemini",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "speaker-libra",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "speaker-sagittarius",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "speaker-taurus",
+      "areas": 3,
+      "wallProbes": 4
+    },
+    {
+      "id": "star-garden",
+      "areas": 1,
+      "wallProbes": 2
+    },
+    {
+      "id": "water-district",
+      "areas": 1,
+      "wallProbes": 4
+    }
+  ],
+  "walks": [
+    {
+      "map": "air-district",
+      "from": {
+        "x": 592,
+        "y": 912
+      },
+      "to": {
+        "x": 592,
+        "y": 352
+      },
+      "tiles": 18
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 592,
+        "y": 352
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 26
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 1077,
+        "y": 64
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 1112,
+        "y": 64
+      },
+      "to": {
+        "x": 176,
+        "y": 480
+      },
+      "tiles": 43
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 176,
+        "y": 453
+      },
+      "to": {
+        "x": 176,
+        "y": 480
+      },
+      "tiles": 2
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 176,
+        "y": 496
+      },
+      "to": {
+        "x": 80,
+        "y": 672
+      },
+      "tiles": 10
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 80,
+        "y": 702
+      },
+      "to": {
+        "x": 80,
+        "y": 672
+      },
+      "tiles": 1
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 80,
+        "y": 672
+      },
+      "to": {
+        "x": 560,
+        "y": 1024
+      },
+      "tiles": 27
+    },
+    {
+      "map": "air-district",
+      "from": {
+        "x": 592,
+        "y": 912
+      },
+      "to": {
+        "x": 80,
+        "y": 832
+      },
+      "tiles": 19
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 176,
+        "y": 1328
+      },
+      "to": {
+        "x": 496,
+        "y": 1056
+      },
+      "tiles": 19
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 496,
+        "y": 1056
+      },
+      "to": {
+        "x": 784,
+        "y": 480
+      },
+      "tiles": 28
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 784,
+        "y": 480
+      },
+      "to": {
+        "x": 1360,
+        "y": 768
+      },
+      "tiles": 28
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1360,
+        "y": 768
+      },
+      "to": {
+        "x": 1328,
+        "y": 256
+      },
+      "tiles": 18
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1328,
+        "y": 256
+      },
+      "to": {
+        "x": 560,
+        "y": 1440
+      },
+      "tiles": 84
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 560,
+        "y": 1470
+      },
+      "to": {
+        "x": 560,
+        "y": 1440
+      },
+      "tiles": 1
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 560,
+        "y": 1440
+      },
+      "to": {
+        "x": 1040,
+        "y": 1440
+      },
+      "tiles": 18
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1070,
+        "y": 1440
+      },
+      "to": {
+        "x": 1040,
+        "y": 1440
+      },
+      "tiles": 2
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1032,
+        "y": 1440
+      },
+      "to": {
+        "x": 1392,
+        "y": 1440
+      },
+      "tiles": 14
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1392,
+        "y": 1470
+      },
+      "to": {
+        "x": 1392,
+        "y": 1440
+      },
+      "tiles": 1
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 1392,
+        "y": 1440
+      },
+      "to": {
+        "x": 272,
+        "y": 1440
+      },
+      "tiles": 38
+    },
+    {
+      "map": "comet-maze",
+      "from": {
+        "x": 240,
+        "y": 1328
+      },
+      "to": {
+        "x": 816,
+        "y": 1440
+      },
+      "tiles": 23
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 560,
+        "y": 944
+      },
+      "to": {
+        "x": 592,
+        "y": 352
+      },
+      "tiles": 20
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 592,
+        "y": 352
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 26
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 1074,
+        "y": 64
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 1112,
+        "y": 64
+      },
+      "to": {
+        "x": 368,
+        "y": 608
+      },
+      "tiles": 41
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 368,
+        "y": 581
+      },
+      "to": {
+        "x": 368,
+        "y": 608
+      },
+      "tiles": 2
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 368,
+        "y": 624
+      },
+      "to": {
+        "x": 368,
+        "y": 736
+      },
+      "tiles": 7
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 368,
+        "y": 760
+      },
+      "to": {
+        "x": 368,
+        "y": 736
+      },
+      "tiles": 1
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 368,
+        "y": 736
+      },
+      "to": {
+        "x": 1008,
+        "y": 480
+      },
+      "tiles": 29
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 1008,
+        "y": 507
+      },
+      "to": {
+        "x": 1008,
+        "y": 480
+      },
+      "tiles": 1
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 1008,
+        "y": 480
+      },
+      "to": {
+        "x": 592,
+        "y": 1024
+      },
+      "tiles": 31
+    },
+    {
+      "map": "earth-district",
+      "from": {
+        "x": 560,
+        "y": 912
+      },
+      "to": {
+        "x": 80,
+        "y": 832
+      },
+      "tiles": 18
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 624,
+        "y": 432
+      },
+      "to": {
+        "x": 336,
+        "y": 224
+      },
+      "tiles": 16
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 336,
+        "y": 224
+      },
+      "to": {
+        "x": 944,
+        "y": 256
+      },
+      "tiles": 23
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 944,
+        "y": 256
+      },
+      "to": {
+        "x": 368,
+        "y": 640
+      },
+      "tiles": 31
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 368,
+        "y": 640
+      },
+      "to": {
+        "x": 944,
+        "y": 640
+      },
+      "tiles": 27
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 944,
+        "y": 640
+      },
+      "to": {
+        "x": 304,
+        "y": 224
+      },
+      "tiles": 34
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 304,
+        "y": 194
+      },
+      "to": {
+        "x": 304,
+        "y": 224
+      },
+      "tiles": 2
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 304,
+        "y": 240
+      },
+      "to": {
+        "x": 304,
+        "y": 352
+      },
+      "tiles": 7
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 304,
+        "y": 382
+      },
+      "to": {
+        "x": 304,
+        "y": 352
+      },
+      "tiles": 1
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 304,
+        "y": 352
+      },
+      "to": {
+        "x": 560,
+        "y": 288
+      },
+      "tiles": 11
+    },
+    {
+      "map": "fa-ship-interior",
+      "from": {
+        "x": 592,
+        "y": 432
+      },
+      "to": {
+        "x": 1104,
+        "y": 416
+      },
+      "tiles": 17
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 624,
+        "y": 976
+      },
+      "to": {
+        "x": 240,
+        "y": 832
+      },
+      "tiles": 17
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 240,
+        "y": 832
+      },
+      "to": {
+        "x": 656,
+        "y": 576
+      },
+      "tiles": 22
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 656,
+        "y": 576
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 36
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 75,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 1104,
+        "y": 800
+      },
+      "tiles": 57
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 1104,
+        "y": 830
+      },
+      "to": {
+        "x": 1104,
+        "y": 800
+      },
+      "tiles": 1
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 1104,
+        "y": 800
+      },
+      "to": {
+        "x": 912,
+        "y": 928
+      },
+      "tiles": 11
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 912,
+        "y": 958
+      },
+      "to": {
+        "x": 912,
+        "y": 928
+      },
+      "tiles": 1
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 912,
+        "y": 928
+      },
+      "to": {
+        "x": 1168,
+        "y": 736
+      },
+      "tiles": 15
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 1168,
+        "y": 766
+      },
+      "to": {
+        "x": 1168,
+        "y": 736
+      },
+      "tiles": 1
+    },
+    {
+      "map": "hidden-observatory",
+      "from": {
+        "x": 1168,
+        "y": 736
+      },
+      "to": {
+        "x": 656,
+        "y": 1088
+      },
+      "tiles": 28
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 656,
+        "y": 1040
+      },
+      "to": {
+        "x": 336,
+        "y": 768
+      },
+      "tiles": 19
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 336,
+        "y": 768
+      },
+      "to": {
+        "x": 1008,
+        "y": 768
+      },
+      "tiles": 22
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 1008,
+        "y": 768
+      },
+      "to": {
+        "x": 176,
+        "y": 992
+      },
+      "tiles": 34
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 176,
+        "y": 1022
+      },
+      "to": {
+        "x": 176,
+        "y": 992
+      },
+      "tiles": 1
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 176,
+        "y": 992
+      },
+      "to": {
+        "x": 880,
+        "y": 320
+      },
+      "tiles": 44
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 880,
+        "y": 293
+      },
+      "to": {
+        "x": 880,
+        "y": 320
+      },
+      "tiles": 2
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 880,
+        "y": 336
+      },
+      "to": {
+        "x": 816,
+        "y": 576
+      },
+      "tiles": 13
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 816,
+        "y": 606
+      },
+      "to": {
+        "x": 816,
+        "y": 576
+      },
+      "tiles": 1
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 816,
+        "y": 576
+      },
+      "to": {
+        "x": 944,
+        "y": 576
+      },
+      "tiles": 5
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 944,
+        "y": 606
+      },
+      "to": {
+        "x": 944,
+        "y": 576
+      },
+      "tiles": 1
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 944,
+        "y": 576
+      },
+      "to": {
+        "x": 656,
+        "y": 1120
+      },
+      "tiles": 27
+    },
+    {
+      "map": "moon-cafe",
+      "from": {
+        "x": 624,
+        "y": 1072
+      },
+      "to": {
+        "x": 304,
+        "y": 1152
+      },
+      "tiles": 14
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 624,
+        "y": 1072
+      },
+      "to": {
+        "x": 656,
+        "y": 480
+      },
+      "tiles": 20
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 656,
+        "y": 480
+      },
+      "to": {
+        "x": 240,
+        "y": 928
+      },
+      "tiles": 28
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 240,
+        "y": 928
+      },
+      "to": {
+        "x": 1072,
+        "y": 928
+      },
+      "tiles": 29
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 1072,
+        "y": 928
+      },
+      "to": {
+        "x": 368,
+        "y": 928
+      },
+      "tiles": 25
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 368,
+        "y": 928
+      },
+      "to": {
+        "x": 912,
+        "y": 928
+      },
+      "tiles": 20
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 912,
+        "y": 928
+      },
+      "to": {
+        "x": 592,
+        "y": 416
+      },
+      "tiles": 27
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 592,
+        "y": 446
+      },
+      "to": {
+        "x": 592,
+        "y": 416
+      },
+      "tiles": 1
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 592,
+        "y": 416
+      },
+      "to": {
+        "x": 400,
+        "y": 864
+      },
+      "tiles": 21
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 400,
+        "y": 894
+      },
+      "to": {
+        "x": 400,
+        "y": 864
+      },
+      "tiles": 1
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 400,
+        "y": 864
+      },
+      "to": {
+        "x": 624,
+        "y": 1120
+      },
+      "tiles": 16
+    },
+    {
+      "map": "nebula-arcade",
+      "from": {
+        "x": 624,
+        "y": 1040
+      },
+      "to": {
+        "x": 304,
+        "y": 1152
+      },
+      "tiles": 15
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 656,
+        "y": 1072
+      },
+      "to": {
+        "x": 656,
+        "y": 704
+      },
+      "tiles": 12
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 656,
+        "y": 704
+      },
+      "to": {
+        "x": 560,
+        "y": 480
+      },
+      "tiles": 11
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 560,
+        "y": 480
+      },
+      "to": {
+        "x": 176,
+        "y": 960
+      },
+      "tiles": 30
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 176,
+        "y": 987
+      },
+      "to": {
+        "x": 176,
+        "y": 960
+      },
+      "tiles": 1
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 176,
+        "y": 960
+      },
+      "to": {
+        "x": 176,
+        "y": 704
+      },
+      "tiles": 15
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 176,
+        "y": 731
+      },
+      "to": {
+        "x": 176,
+        "y": 704
+      },
+      "tiles": 1
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 176,
+        "y": 704
+      },
+      "to": {
+        "x": 624,
+        "y": 1120
+      },
+      "tiles": 28
+    },
+    {
+      "map": "orbit-playground",
+      "from": {
+        "x": 624,
+        "y": 1072
+      },
+      "to": {
+        "x": 304,
+        "y": 1152
+      },
+      "tiles": 14
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 720,
+        "y": 208
+      },
+      "to": {
+        "x": 496,
+        "y": 608
+      },
+      "tiles": 21
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 496,
+        "y": 608
+      },
+      "to": {
+        "x": 752,
+        "y": 864
+      },
+      "tiles": 17
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 752,
+        "y": 864
+      },
+      "to": {
+        "x": 400,
+        "y": 576
+      },
+      "tiles": 21
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 400,
+        "y": 603
+      },
+      "to": {
+        "x": 400,
+        "y": 576
+      },
+      "tiles": 1
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 400,
+        "y": 576
+      },
+      "to": {
+        "x": 144,
+        "y": 352
+      },
+      "tiles": 16
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 144,
+        "y": 382
+      },
+      "to": {
+        "x": 144,
+        "y": 352
+      },
+      "tiles": 1
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 144,
+        "y": 352
+      },
+      "to": {
+        "x": 944,
+        "y": 384
+      },
+      "tiles": 29
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 944,
+        "y": 417
+      },
+      "to": {
+        "x": 944,
+        "y": 384
+      },
+      "tiles": 2
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 944,
+        "y": 384
+      },
+      "to": {
+        "x": 816,
+        "y": 160
+      },
+      "tiles": 12
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 720,
+        "y": 208
+      },
+      "to": {
+        "x": 688,
+        "y": 1120
+      },
+      "tiles": 31
+    },
+    {
+      "map": "shipyard-beach",
+      "from": {
+        "x": 752,
+        "y": 208
+      },
+      "to": {
+        "x": 1456,
+        "y": 1120
+      },
+      "tiles": 52
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 560,
+        "y": 976
+      },
+      "to": {
+        "x": 592,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 592,
+        "y": 320
+      },
+      "to": {
+        "x": 912,
+        "y": 960
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 912,
+        "y": 960
+      },
+      "to": {
+        "x": 592,
+        "y": 608
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 592,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 35
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 75,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 208,
+        "y": 608
+      },
+      "tiles": 23
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 208,
+        "y": 578
+      },
+      "to": {
+        "x": 208,
+        "y": 608
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 208,
+        "y": 624
+      },
+      "to": {
+        "x": 176,
+        "y": 1056
+      },
+      "tiles": 30
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 206,
+        "y": 1056
+      },
+      "to": {
+        "x": 176,
+        "y": 1056
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 168,
+        "y": 1056
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 47
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 203,
+        "y": 96
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-aquarius",
+      "from": {
+        "x": 168,
+        "y": 96
+      },
+      "to": {
+        "x": 560,
+        "y": 1088
+      },
+      "tiles": 44
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 592,
+        "y": 1008
+      },
+      "to": {
+        "x": 592,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 592,
+        "y": 320
+      },
+      "to": {
+        "x": 912,
+        "y": 960
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 912,
+        "y": 960
+      },
+      "to": {
+        "x": 592,
+        "y": 608
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 592,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 35
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 78,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 304,
+        "y": 672
+      },
+      "tiles": 28
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 304,
+        "y": 702
+      },
+      "to": {
+        "x": 304,
+        "y": 672
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 304,
+        "y": 672
+      },
+      "to": {
+        "x": 368,
+        "y": 992
+      },
+      "tiles": 19
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 368,
+        "y": 1019
+      },
+      "to": {
+        "x": 368,
+        "y": 992
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 368,
+        "y": 992
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 41
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 206,
+        "y": 96
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-cancer",
+      "from": {
+        "x": 168,
+        "y": 96
+      },
+      "to": {
+        "x": 560,
+        "y": 1088
+      },
+      "tiles": 44
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 560,
+        "y": 976
+      },
+      "to": {
+        "x": 592,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 592,
+        "y": 320
+      },
+      "to": {
+        "x": 912,
+        "y": 960
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 912,
+        "y": 960
+      },
+      "to": {
+        "x": 592,
+        "y": 608
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 592,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 35
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 72,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 176,
+        "y": 640
+      },
+      "tiles": 23
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 176,
+        "y": 673
+      },
+      "to": {
+        "x": 176,
+        "y": 640
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 176,
+        "y": 640
+      },
+      "to": {
+        "x": 144,
+        "y": 1056
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 171,
+        "y": 1056
+      },
+      "to": {
+        "x": 144,
+        "y": 1056
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 136,
+        "y": 1056
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 48
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 203,
+        "y": 96
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-gemini",
+      "from": {
+        "x": 168,
+        "y": 96
+      },
+      "to": {
+        "x": 560,
+        "y": 1088
+      },
+      "tiles": 44
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 592,
+        "y": 1008
+      },
+      "to": {
+        "x": 592,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 592,
+        "y": 320
+      },
+      "to": {
+        "x": 912,
+        "y": 960
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 912,
+        "y": 960
+      },
+      "to": {
+        "x": 592,
+        "y": 608
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 592,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 35
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 75,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 240,
+        "y": 736
+      },
+      "tiles": 30
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 240,
+        "y": 766
+      },
+      "to": {
+        "x": 240,
+        "y": 736
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 240,
+        "y": 736
+      },
+      "to": {
+        "x": 144,
+        "y": 704
+      },
+      "tiles": 5
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 144,
+        "y": 734
+      },
+      "to": {
+        "x": 144,
+        "y": 704
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 144,
+        "y": 704
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 206,
+        "y": 96
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-libra",
+      "from": {
+        "x": 168,
+        "y": 96
+      },
+      "to": {
+        "x": 560,
+        "y": 1088
+      },
+      "tiles": 44
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 656,
+        "y": 1008
+      },
+      "to": {
+        "x": 656,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 656,
+        "y": 320
+      },
+      "to": {
+        "x": 1040,
+        "y": 960
+      },
+      "tiles": 33
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 1040,
+        "y": 960
+      },
+      "to": {
+        "x": 656,
+        "y": 608
+      },
+      "tiles": 24
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 656,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 37
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 75,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 80,
+        "y": 736
+      },
+      "tiles": 27
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 80,
+        "y": 766
+      },
+      "to": {
+        "x": 80,
+        "y": 736
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 80,
+        "y": 736
+      },
+      "to": {
+        "x": 272,
+        "y": 992
+      },
+      "tiles": 25
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 272,
+        "y": 1022
+      },
+      "to": {
+        "x": 272,
+        "y": 992
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 272,
+        "y": 992
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 42
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 203,
+        "y": 96
+      },
+      "to": {
+        "x": 176,
+        "y": 96
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-sagittarius",
+      "from": {
+        "x": 168,
+        "y": 96
+      },
+      "to": {
+        "x": 624,
+        "y": 1088
+      },
+      "tiles": 46
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 560,
+        "y": 976
+      },
+      "to": {
+        "x": 592,
+        "y": 320
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 592,
+        "y": 320
+      },
+      "to": {
+        "x": 912,
+        "y": 960
+      },
+      "tiles": 31
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 912,
+        "y": 960
+      },
+      "to": {
+        "x": 592,
+        "y": 608
+      },
+      "tiles": 22
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 592,
+        "y": 608
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 35
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 78,
+        "y": 64
+      },
+      "to": {
+        "x": 48,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 40,
+        "y": 64
+      },
+      "to": {
+        "x": 208,
+        "y": 608
+      },
+      "tiles": 23
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 208,
+        "y": 578
+      },
+      "to": {
+        "x": 208,
+        "y": 608
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 208,
+        "y": 624
+      },
+      "to": {
+        "x": 144,
+        "y": 288
+      },
+      "tiles": 13
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 174,
+        "y": 288
+      },
+      "to": {
+        "x": 144,
+        "y": 288
+      },
+      "tiles": 2
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 136,
+        "y": 288
+      },
+      "to": {
+        "x": 112,
+        "y": 992
+      },
+      "tiles": 42
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 112,
+        "y": 1022
+      },
+      "to": {
+        "x": 112,
+        "y": 992
+      },
+      "tiles": 1
+    },
+    {
+      "map": "speaker-taurus",
+      "from": {
+        "x": 112,
+        "y": 992
+      },
+      "to": {
+        "x": 560,
+        "y": 1088
+      },
+      "tiles": 18
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 624,
+        "y": 1040
+      },
+      "to": {
+        "x": 656,
+        "y": 832
+      },
+      "tiles": 8
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 656,
+        "y": 832
+      },
+      "to": {
+        "x": 368,
+        "y": 448
+      },
+      "tiles": 22
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 368,
+        "y": 478
+      },
+      "to": {
+        "x": 368,
+        "y": 448
+      },
+      "tiles": 1
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 368,
+        "y": 448
+      },
+      "to": {
+        "x": 432,
+        "y": 576
+      },
+      "tiles": 7
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 432,
+        "y": 603
+      },
+      "to": {
+        "x": 432,
+        "y": 576
+      },
+      "tiles": 1
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 432,
+        "y": 576
+      },
+      "to": {
+        "x": 624,
+        "y": 1120
+      },
+      "tiles": 24
+    },
+    {
+      "map": "star-garden",
+      "from": {
+        "x": 656,
+        "y": 1072
+      },
+      "to": {
+        "x": 304,
+        "y": 1152
+      },
+      "tiles": 15
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 560,
+        "y": 912
+      },
+      "to": {
+        "x": 592,
+        "y": 352
+      },
+      "tiles": 19
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 592,
+        "y": 352
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 26
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 1080,
+        "y": 64
+      },
+      "to": {
+        "x": 1104,
+        "y": 64
+      },
+      "tiles": 2
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 1112,
+        "y": 64
+      },
+      "to": {
+        "x": 144,
+        "y": 512
+      },
+      "tiles": 45
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 144,
+        "y": 539
+      },
+      "to": {
+        "x": 144,
+        "y": 512
+      },
+      "tiles": 1
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 144,
+        "y": 512
+      },
+      "to": {
+        "x": 848,
+        "y": 704
+      },
+      "tiles": 31
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 848,
+        "y": 731
+      },
+      "to": {
+        "x": 848,
+        "y": 704
+      },
+      "tiles": 1
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 848,
+        "y": 704
+      },
+      "to": {
+        "x": 112,
+        "y": 928
+      },
+      "tiles": 31
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 112,
+        "y": 895
+      },
+      "to": {
+        "x": 112,
+        "y": 928
+      },
+      "tiles": 3
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 112,
+        "y": 944
+      },
+      "to": {
+        "x": 560,
+        "y": 1024
+      },
+      "tiles": 18
+    },
+    {
+      "map": "water-district",
+      "from": {
+        "x": 560,
+        "y": 912
+      },
+      "to": {
+        "x": 80,
+        "y": 832
+      },
+      "tiles": 18
+    }
+  ],
+  "walls": [
+    {
+      "map": "air-district",
+      "object": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        35,
+        2
+      ],
+      "outside": [
+        34,
+        2
+      ],
+      "key": "ArrowRight",
+      "control": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1077,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1112,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "air-district",
+      "object": "studio-roundtable",
+      "sprite": "table-circular",
+      "wall": [
+        5,
+        16
+      ],
+      "outside": [
+        5,
+        15
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 480
+        },
+        "after": {
+          "x": 176,
+          "y": 453
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 480
+        },
+        "after": {
+          "x": 176,
+          "y": 496
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "air-district",
+      "object": "studio-chair-west",
+      "sprite": "chair-lounge",
+      "wall": [
+        2,
+        20
+      ],
+      "outside": [
+        2,
+        21
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 80,
+          "y": 672
+        },
+        "after": {
+          "x": 80,
+          "y": 702
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 80,
+          "y": 672
+        },
+        "after": {
+          "x": 80,
+          "y": 672
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "comet-maze",
+      "object": "lobby-bench-west",
+      "sprite": "bench-curved",
+      "wall": [
+        17,
+        44
+      ],
+      "outside": [
+        17,
+        45
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 560,
+          "y": 1440
+        },
+        "after": {
+          "x": 560,
+          "y": 1470
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 560,
+          "y": 1440
+        },
+        "after": {
+          "x": 560,
+          "y": 1440
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "comet-maze",
+      "object": "lobby-table",
+      "sprite": "table-small-wood",
+      "wall": [
+        31,
+        45
+      ],
+      "outside": [
+        32,
+        45
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 1040,
+          "y": 1440
+        },
+        "after": {
+          "x": 1070,
+          "y": 1440
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1040,
+          "y": 1440
+        },
+        "after": {
+          "x": 1032,
+          "y": 1440
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "comet-maze",
+      "object": "lobby-planter",
+      "sprite": "world-ambient-plant-palm",
+      "wall": [
+        43,
+        44
+      ],
+      "outside": [
+        43,
+        45
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 1392,
+          "y": 1440
+        },
+        "after": {
+          "x": 1392,
+          "y": 1470
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1392,
+          "y": 1440
+        },
+        "after": {
+          "x": 1392,
+          "y": 1440
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "earth-district",
+      "object": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        35,
+        2
+      ],
+      "outside": [
+        34,
+        2
+      ],
+      "key": "ArrowRight",
+      "control": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1074,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1112,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "earth-district",
+      "object": "archive-reading-workstation",
+      "sprite": "desk-cream",
+      "wall": [
+        11,
+        20
+      ],
+      "outside": [
+        11,
+        19
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 368,
+          "y": 608
+        },
+        "after": {
+          "x": 368,
+          "y": 581
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 368,
+          "y": 608
+        },
+        "after": {
+          "x": 368,
+          "y": 624
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "earth-district",
+      "object": "archive-reading-seat",
+      "sprite": "chair-north-cream",
+      "wall": [
+        11,
+        22
+      ],
+      "outside": [
+        11,
+        23
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 368,
+          "y": 736
+        },
+        "after": {
+          "x": 368,
+          "y": 760
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 368,
+          "y": 736
+        },
+        "after": {
+          "x": 368,
+          "y": 736
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "earth-district",
+      "object": "reading-palm",
+      "sprite": "world-ambient-plant-palm",
+      "wall": [
+        31,
+        14
+      ],
+      "outside": [
+        31,
+        15
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 1008,
+          "y": 480
+        },
+        "after": {
+          "x": 1008,
+          "y": 507
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1008,
+          "y": 480
+        },
+        "after": {
+          "x": 1008,
+          "y": 480
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "fa-ship-interior",
+      "object": "mess-table-a",
+      "sprite": "ship-mess-table",
+      "wall": [
+        9,
+        8
+      ],
+      "outside": [
+        9,
+        7
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 304,
+          "y": 224
+        },
+        "after": {
+          "x": 304,
+          "y": 194
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 304,
+          "y": 224
+        },
+        "after": {
+          "x": 304,
+          "y": 240
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "fa-ship-interior",
+      "object": "mess-bench-a",
+      "sprite": "ship-mess-bench",
+      "wall": [
+        9,
+        10
+      ],
+      "outside": [
+        9,
+        11
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 304,
+          "y": 352
+        },
+        "after": {
+          "x": 304,
+          "y": 382
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 304,
+          "y": 352
+        },
+        "after": {
+          "x": 304,
+          "y": 352
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "hidden-observatory",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 75,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "hidden-observatory",
+      "object": "quiet-table",
+      "sprite": "table-small-white",
+      "wall": [
+        34,
+        24
+      ],
+      "outside": [
+        34,
+        25
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 1104,
+          "y": 800
+        },
+        "after": {
+          "x": 1104,
+          "y": 830
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1104,
+          "y": 800
+        },
+        "after": {
+          "x": 1104,
+          "y": 800
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "hidden-observatory",
+      "object": "quiet-sofa",
+      "sprite": "sofa-blue",
+      "wall": [
+        28,
+        28
+      ],
+      "outside": [
+        28,
+        29
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 912,
+          "y": 928
+        },
+        "after": {
+          "x": 912,
+          "y": 958
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 912,
+          "y": 928
+        },
+        "after": {
+          "x": 912,
+          "y": 928
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "hidden-observatory",
+      "object": "quiet-palm",
+      "sprite": "world-ambient-plant-palm",
+      "wall": [
+        36,
+        22
+      ],
+      "outside": [
+        36,
+        23
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 1168,
+          "y": 736
+        },
+        "after": {
+          "x": 1168,
+          "y": 766
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1168,
+          "y": 736
+        },
+        "after": {
+          "x": 1168,
+          "y": 736
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "moon-cafe",
+      "object": "cafe-palm-west",
+      "sprite": "world-ambient-plant-palm",
+      "wall": [
+        5,
+        30
+      ],
+      "outside": [
+        5,
+        31
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 992
+        },
+        "after": {
+          "x": 176,
+          "y": 1022
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 992
+        },
+        "after": {
+          "x": 176,
+          "y": 992
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "moon-cafe",
+      "object": "cafe-moon-fountain",
+      "sprite": "hub-moon-fountain",
+      "wall": [
+        27,
+        11
+      ],
+      "outside": [
+        27,
+        10
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 880,
+          "y": 320
+        },
+        "after": {
+          "x": 880,
+          "y": 293
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 880,
+          "y": 320
+        },
+        "after": {
+          "x": 880,
+          "y": 336
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "moon-cafe",
+      "object": "cafe-moon-sofa-left",
+      "sprite": "sofa-cream",
+      "wall": [
+        25,
+        17
+      ],
+      "outside": [
+        25,
+        18
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 816,
+          "y": 576
+        },
+        "after": {
+          "x": 816,
+          "y": 606
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 816,
+          "y": 576
+        },
+        "after": {
+          "x": 816,
+          "y": 576
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "moon-cafe",
+      "object": "cafe-moon-table",
+      "sprite": "table-small-wood",
+      "wall": [
+        29,
+        17
+      ],
+      "outside": [
+        29,
+        18
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 944,
+          "y": 576
+        },
+        "after": {
+          "x": 944,
+          "y": 606
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 944,
+          "y": 576
+        },
+        "after": {
+          "x": 944,
+          "y": 576
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "nebula-arcade",
+      "object": "stage-console",
+      "sprite": "desk-coding",
+      "wall": [
+        18,
+        12
+      ],
+      "outside": [
+        18,
+        13
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 592,
+          "y": 416
+        },
+        "after": {
+          "x": 592,
+          "y": 446
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 592,
+          "y": 416
+        },
+        "after": {
+          "x": 592,
+          "y": 416
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "nebula-arcade",
+      "object": "arcade-lounge-west",
+      "sprite": "sofa-blue",
+      "wall": [
+        12,
+        26
+      ],
+      "outside": [
+        12,
+        27
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 400,
+          "y": 864
+        },
+        "after": {
+          "x": 400,
+          "y": 894
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 400,
+          "y": 864
+        },
+        "after": {
+          "x": 400,
+          "y": 864
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "orbit-playground",
+      "object": "play-bench-west",
+      "sprite": "bench-curved",
+      "wall": [
+        5,
+        29
+      ],
+      "outside": [
+        5,
+        30
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 960
+        },
+        "after": {
+          "x": 176,
+          "y": 987
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 960
+        },
+        "after": {
+          "x": 176,
+          "y": 960
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "orbit-playground",
+      "object": "play-garden-west-tree",
+      "sprite": "plaza-tree-flowering",
+      "wall": [
+        5,
+        21
+      ],
+      "outside": [
+        5,
+        22
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 704
+        },
+        "after": {
+          "x": 176,
+          "y": 731
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 704
+        },
+        "after": {
+          "x": 176,
+          "y": 704
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "shipyard-beach",
+      "object": "workshop-tools",
+      "sprite": "table-workshop",
+      "wall": [
+        12,
+        17
+      ],
+      "outside": [
+        12,
+        18
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 400,
+          "y": 576
+        },
+        "after": {
+          "x": 400,
+          "y": 603
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 400,
+          "y": 576
+        },
+        "after": {
+          "x": 400,
+          "y": 576
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "shipyard-beach",
+      "object": "beach-palm-west",
+      "sprite": "coast-life-beach-palm",
+      "wall": [
+        4,
+        10
+      ],
+      "outside": [
+        4,
+        11
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 144,
+          "y": 352
+        },
+        "after": {
+          "x": 144,
+          "y": 382
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 144,
+          "y": 352
+        },
+        "after": {
+          "x": 144,
+          "y": 352
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "shipyard-beach",
+      "object": "beach-cafe-seat",
+      "sprite": "bench-park",
+      "wall": [
+        29,
+        11
+      ],
+      "outside": [
+        29,
+        12
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 944,
+          "y": 384
+        },
+        "after": {
+          "x": 944,
+          "y": 417
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 944,
+          "y": 384
+        },
+        "after": {
+          "x": 944,
+          "y": 384
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-aquarius",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 75,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-aquarius",
+      "object": "collab-table-west",
+      "sprite": "table-circular",
+      "wall": [
+        6,
+        20
+      ],
+      "outside": [
+        6,
+        19
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 208,
+          "y": 608
+        },
+        "after": {
+          "x": 208,
+          "y": 578
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 208,
+          "y": 608
+        },
+        "after": {
+          "x": 208,
+          "y": 624
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-aquarius",
+      "object": "social-seat-west",
+      "sprite": "chair-north-slate",
+      "wall": [
+        4,
+        33
+      ],
+      "outside": [
+        5,
+        33
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 1056
+        },
+        "after": {
+          "x": 206,
+          "y": 1056
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 1056
+        },
+        "after": {
+          "x": 168,
+          "y": 1056
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-aquarius",
+      "object": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "wall": [
+        4,
+        3
+      ],
+      "outside": [
+        5,
+        3
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 203,
+          "y": 96
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 168,
+          "y": 96
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-cancer",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 78,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-cancer",
+      "object": "moon-table-west",
+      "sprite": "table-small-white",
+      "wall": [
+        9,
+        20
+      ],
+      "outside": [
+        9,
+        21
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 304,
+          "y": 672
+        },
+        "after": {
+          "x": 304,
+          "y": 702
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 304,
+          "y": 672
+        },
+        "after": {
+          "x": 304,
+          "y": 672
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-cancer",
+      "object": "social-sofa",
+      "sprite": "sofa-cream",
+      "wall": [
+        11,
+        30
+      ],
+      "outside": [
+        11,
+        31
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 368,
+          "y": 992
+        },
+        "after": {
+          "x": 368,
+          "y": 1019
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 368,
+          "y": 992
+        },
+        "after": {
+          "x": 368,
+          "y": 992
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-cancer",
+      "object": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "wall": [
+        4,
+        3
+      ],
+      "outside": [
+        5,
+        3
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 206,
+          "y": 96
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 168,
+          "y": 96
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-gemini",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 72,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-gemini",
+      "object": "west-workstation",
+      "sprite": "desk-coding",
+      "wall": [
+        5,
+        19
+      ],
+      "outside": [
+        5,
+        20
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 640
+        },
+        "after": {
+          "x": 176,
+          "y": 673
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 640
+        },
+        "after": {
+          "x": 176,
+          "y": 640
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-gemini",
+      "object": "social-seat-a",
+      "sprite": "chair-north-cream",
+      "wall": [
+        3,
+        33
+      ],
+      "outside": [
+        4,
+        33
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 144,
+          "y": 1056
+        },
+        "after": {
+          "x": 171,
+          "y": 1056
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 144,
+          "y": 1056
+        },
+        "after": {
+          "x": 136,
+          "y": 1056
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-gemini",
+      "object": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "wall": [
+        4,
+        3
+      ],
+      "outside": [
+        5,
+        3
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 203,
+          "y": 96
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 168,
+          "y": 96
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-libra",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 75,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-libra",
+      "object": "west-forum-table",
+      "sprite": "table-small-white",
+      "wall": [
+        7,
+        22
+      ],
+      "outside": [
+        7,
+        23
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 240,
+          "y": 736
+        },
+        "after": {
+          "x": 240,
+          "y": 766
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 240,
+          "y": 736
+        },
+        "after": {
+          "x": 240,
+          "y": 736
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-libra",
+      "object": "forum-bench-west",
+      "sprite": "bench-curved",
+      "wall": [
+        4,
+        21
+      ],
+      "outside": [
+        4,
+        22
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 144,
+          "y": 704
+        },
+        "after": {
+          "x": 144,
+          "y": 734
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 144,
+          "y": 704
+        },
+        "after": {
+          "x": 144,
+          "y": 704
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-libra",
+      "object": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "wall": [
+        4,
+        3
+      ],
+      "outside": [
+        5,
+        3
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 206,
+          "y": 96
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 168,
+          "y": 96
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-sagittarius",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 75,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-sagittarius",
+      "object": "horizon-bench-west",
+      "sprite": "bench-park",
+      "wall": [
+        2,
+        22
+      ],
+      "outside": [
+        2,
+        23
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 80,
+          "y": 736
+        },
+        "after": {
+          "x": 80,
+          "y": 766
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 80,
+          "y": 736
+        },
+        "after": {
+          "x": 80,
+          "y": 736
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-sagittarius",
+      "object": "social-chart-workstation",
+      "sprite": "desk-coding",
+      "wall": [
+        8,
+        30
+      ],
+      "outside": [
+        8,
+        31
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 272,
+          "y": 992
+        },
+        "after": {
+          "x": 272,
+          "y": 1022
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 272,
+          "y": 992
+        },
+        "after": {
+          "x": 272,
+          "y": 992
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-sagittarius",
+      "object": "interior-ref-north-west",
+      "sprite": "interior-ref-plant-motion-base",
+      "wall": [
+        4,
+        3
+      ],
+      "outside": [
+        5,
+        3
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 203,
+          "y": 96
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 176,
+          "y": 96
+        },
+        "after": {
+          "x": 168,
+          "y": 96
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-taurus",
+      "object": "west-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        0,
+        2
+      ],
+      "outside": [
+        1,
+        2
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 78,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 48,
+          "y": 64
+        },
+        "after": {
+          "x": 40,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-taurus",
+      "object": "roundtable-west",
+      "sprite": "table-circular",
+      "wall": [
+        6,
+        20
+      ],
+      "outside": [
+        6,
+        19
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 208,
+          "y": 608
+        },
+        "after": {
+          "x": 208,
+          "y": 578
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 208,
+          "y": 608
+        },
+        "after": {
+          "x": 208,
+          "y": 624
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-taurus",
+      "object": "jade-planter-west",
+      "sprite": "world-ambient-plant-palm",
+      "wall": [
+        3,
+        9
+      ],
+      "outside": [
+        4,
+        9
+      ],
+      "key": "ArrowLeft",
+      "control": {
+        "before": {
+          "x": 144,
+          "y": 288
+        },
+        "after": {
+          "x": 174,
+          "y": 288
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 144,
+          "y": 288
+        },
+        "after": {
+          "x": 136,
+          "y": 288
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "speaker-taurus",
+      "object": "social-sofa",
+      "sprite": "sofa-cream",
+      "wall": [
+        3,
+        30
+      ],
+      "outside": [
+        3,
+        31
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 112,
+          "y": 992
+        },
+        "after": {
+          "x": 112,
+          "y": 1022
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 112,
+          "y": 992
+        },
+        "after": {
+          "x": 112,
+          "y": 992
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "star-garden",
+      "object": "dawn-tree",
+      "sprite": "plaza-tree-flowering",
+      "wall": [
+        11,
+        13
+      ],
+      "outside": [
+        11,
+        14
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 368,
+          "y": 448
+        },
+        "after": {
+          "x": 368,
+          "y": 478
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 368,
+          "y": 448
+        },
+        "after": {
+          "x": 368,
+          "y": 448
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "star-garden",
+      "object": "garden-bench-west",
+      "sprite": "bench-park",
+      "wall": [
+        13,
+        17
+      ],
+      "outside": [
+        13,
+        18
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 432,
+          "y": 576
+        },
+        "after": {
+          "x": 432,
+          "y": 603
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 432,
+          "y": 576
+        },
+        "after": {
+          "x": 432,
+          "y": 576
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "water-district",
+      "object": "east-wall-core",
+      "sprite": "wall-charcoal",
+      "wall": [
+        35,
+        2
+      ],
+      "outside": [
+        34,
+        2
+      ],
+      "key": "ArrowRight",
+      "control": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1080,
+          "y": 64
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 1104,
+          "y": 64
+        },
+        "after": {
+          "x": 1112,
+          "y": 64
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "water-district",
+      "object": "conservatory-tree-west",
+      "sprite": "plaza-tree-flowering",
+      "wall": [
+        4,
+        15
+      ],
+      "outside": [
+        4,
+        16
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 144,
+          "y": 512
+        },
+        "after": {
+          "x": 144,
+          "y": 539
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 144,
+          "y": 512
+        },
+        "after": {
+          "x": 144,
+          "y": 512
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "water-district",
+      "object": "conservatory-bench",
+      "sprite": "bench-curved",
+      "wall": [
+        26,
+        21
+      ],
+      "outside": [
+        26,
+        22
+      ],
+      "key": "ArrowUp",
+      "control": {
+        "before": {
+          "x": 848,
+          "y": 704
+        },
+        "after": {
+          "x": 848,
+          "y": 731
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 848,
+          "y": 704
+        },
+        "after": {
+          "x": 848,
+          "y": 704
+        }
+      },
+      "stopped": true
+    },
+    {
+      "map": "water-district",
+      "object": "notes-workstation",
+      "sprite": "desk-coding",
+      "wall": [
+        3,
+        30
+      ],
+      "outside": [
+        3,
+        29
+      ],
+      "key": "ArrowDown",
+      "control": {
+        "before": {
+          "x": 112,
+          "y": 928
+        },
+        "after": {
+          "x": 112,
+          "y": 895
+        }
+      },
+      "contact": {
+        "before": {
+          "x": 112,
+          "y": 928
+        },
+        "after": {
+          "x": 112,
+          "y": 944
+        }
+      },
+      "stopped": true
+    }
+  ],
+  "portals": [
+    {
+      "from": "air-district",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-air",
+      "position": {
+        "x": 2032,
+        "y": 3888
+      }
+    },
+    {
+      "from": "air-district",
+      "exit": "court-return",
+      "to": "campus-exploration",
+      "entry": "from-air",
+      "position": {
+        "x": 560,
+        "y": 432
+      }
+    },
+    {
+      "from": "comet-maze",
+      "exit": "orbit-return",
+      "to": "orbit-maze",
+      "entry": "from-comet",
+      "position": {
+        "x": 2256,
+        "y": 2256
+      }
+    },
+    {
+      "from": "comet-maze",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-maze",
+      "position": {
+        "x": 2032,
+        "y": 336
+      }
+    },
+    {
+      "from": "earth-district",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-earth",
+      "position": {
+        "x": 2064,
+        "y": 3856
+      }
+    },
+    {
+      "from": "earth-district",
+      "exit": "court-return",
+      "to": "campus-exploration",
+      "entry": "from-earth",
+      "position": {
+        "x": 880,
+        "y": 432
+      }
+    },
+    {
+      "from": "fa-ship-interior",
+      "exit": "stairs-up",
+      "to": "fa-ship",
+      "entry": "from-lower-deck",
+      "position": {
+        "x": 1072,
+        "y": 912
+      }
+    },
+    {
+      "from": "fa-ship-interior",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-shipyard",
+      "position": {
+        "x": 3856,
+        "y": 2032
+      }
+    },
+    {
+      "from": "hidden-observatory",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-observatory",
+      "position": {
+        "x": 2064,
+        "y": 3856
+      }
+    },
+    {
+      "from": "moon-cafe",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-campus",
+      "position": {
+        "x": 2032,
+        "y": 3888
+      }
+    },
+    {
+      "from": "moon-cafe",
+      "exit": "branch-return",
+      "to": "campus-exploration",
+      "entry": "from-moon-cafe",
+      "position": {
+        "x": 1232,
+        "y": 848
+      }
+    },
+    {
+      "from": "nebula-arcade",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-festival",
+      "position": {
+        "x": 304,
+        "y": 2064
+      }
+    },
+    {
+      "from": "nebula-arcade",
+      "exit": "branch-return",
+      "to": "zodiac-festival-park",
+      "entry": "from-arcade",
+      "position": {
+        "x": 336,
+        "y": 400
+      }
+    },
+    {
+      "from": "orbit-playground",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-festival",
+      "position": {
+        "x": 304,
+        "y": 2064
+      }
+    },
+    {
+      "from": "orbit-playground",
+      "exit": "branch-return",
+      "to": "zodiac-festival-park",
+      "entry": "from-playground",
+      "position": {
+        "x": 1136,
+        "y": 400
+      }
+    },
+    {
+      "from": "shipyard-beach",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-shipyard",
+      "position": {
+        "x": 3888,
+        "y": 2064
+      }
+    },
+    {
+      "from": "shipyard-beach",
+      "exit": "board-fa-ship",
+      "to": "fa-ship",
+      "entry": "arrival",
+      "position": {
+        "x": 624,
+        "y": 976
+      }
+    },
+    {
+      "from": "shipyard-beach",
+      "exit": "shore-gate",
+      "to": "constellation-shore",
+      "entry": "arrival",
+      "position": {
+        "x": 656,
+        "y": 304
+      }
+    },
+    {
+      "from": "speaker-aquarius",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-aquarius",
+      "position": {
+        "x": 2736,
+        "y": 1104
+      }
+    },
+    {
+      "from": "speaker-cancer",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-cancer",
+      "position": {
+        "x": 2064,
+        "y": 3728
+      }
+    },
+    {
+      "from": "speaker-gemini",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-gemini",
+      "position": {
+        "x": 2736,
+        "y": 3536
+      }
+    },
+    {
+      "from": "speaker-libra",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-libra",
+      "position": {
+        "x": 656,
+        "y": 2288
+      }
+    },
+    {
+      "from": "speaker-sagittarius",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-sagittarius",
+      "position": {
+        "x": 1328,
+        "y": 1104
+      }
+    },
+    {
+      "from": "speaker-taurus",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-speaker-taurus",
+      "position": {
+        "x": 3248,
+        "y": 2992
+      }
+    },
+    {
+      "from": "star-garden",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-campus",
+      "position": {
+        "x": 2064,
+        "y": 3888
+      }
+    },
+    {
+      "from": "star-garden",
+      "exit": "branch-return",
+      "to": "campus-exploration",
+      "entry": "from-star-garden",
+      "position": {
+        "x": 272,
+        "y": 816
+      }
+    },
+    {
+      "from": "water-district",
+      "exit": "plaza-return",
+      "to": "overworld",
+      "entry": "from-water",
+      "position": {
+        "x": 2032,
+        "y": 3856
+      }
+    },
+    {
+      "from": "water-district",
+      "exit": "court-return",
+      "to": "campus-exploration",
+      "entry": "from-water",
+      "position": {
+        "x": 1232,
+        "y": 432
+      }
+    }
+  ],
+  "restrictedAreas": [],
+  "responses": [
+    {
+      "path": "maps/air-district.tmj",
+      "status": 200,
+      "sha256": "f106426bbdf32bb1c8911b43cdc9b4c46cad93cd91eecffee248ff7d198cd018",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/air-district.tmj",
+      "status": 200,
+      "sha256": "f106426bbdf32bb1c8911b43cdc9b4c46cad93cd91eecffee248ff7d198cd018",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "status": 200,
+      "sha256": "719d5d5dee1ba74166bb26ea30ec60fd8ad5ed9e9d081aab160e62004b92a724",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "status": 200,
+      "sha256": "1f5d0d21eca158accd07baffbf919e1a797d4e64472d04cf647c4f2e1fc8ca74",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "status": 200,
+      "sha256": "719d5d5dee1ba74166bb26ea30ec60fd8ad5ed9e9d081aab160e62004b92a724",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/earth-district.tmj",
+      "status": 200,
+      "sha256": "3e26fbbf83b65ca617a8e8974db4cb46b2cbfa00f27f4b947718031adaf4ee4e",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/earth-district.tmj",
+      "status": 200,
+      "sha256": "3e26fbbf83b65ca617a8e8974db4cb46b2cbfa00f27f4b947718031adaf4ee4e",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship-interior.tmj",
+      "status": 200,
+      "sha256": "0aaae6a4afb9ed8e02fa5ca647c2d5bf40d42b1c22467b7ef26e5f06f96c2772",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "status": 200,
+      "sha256": "d29314c01c677ee0519b941581d82c27cfa7a8cb2affda94b348139a9e7d549c",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship-interior.tmj",
+      "status": 200,
+      "sha256": "0aaae6a4afb9ed8e02fa5ca647c2d5bf40d42b1c22467b7ef26e5f06f96c2772",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/hidden-observatory.tmj",
+      "status": 200,
+      "sha256": "39ab63290eb4d81f76bc3e2b32f960cf6d89053d0bf7d277c9cf7d7878bd9b7a",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "status": 200,
+      "sha256": "13a4299e0b5be89afd0a7fc00ef836937b2d76004f8631b4e6739a215d8f6959",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "status": 200,
+      "sha256": "13a4299e0b5be89afd0a7fc00ef836937b2d76004f8631b4e6739a215d8f6959",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "status": 200,
+      "sha256": "c11597f574a6ad43d560b4ea9d5269834982c56ebc088e47cc2569f413d76af1",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "status": 200,
+      "sha256": "c11597f574a6ad43d560b4ea9d5269834982c56ebc088e47cc2569f413d76af1",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "status": 200,
+      "sha256": "603edb3cfb9939af57237174de075e1109bb6b72f158430089d1c54f0535146f",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/orbit-playground.tmj",
+      "status": 200,
+      "sha256": "da752be76887e8f47e9b9bd11d2b7502ce94719b763a3e16f07294df31878500",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/orbit-playground.tmj",
+      "status": 200,
+      "sha256": "da752be76887e8f47e9b9bd11d2b7502ce94719b763a3e16f07294df31878500",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "status": 200,
+      "sha256": "603edb3cfb9939af57237174de075e1109bb6b72f158430089d1c54f0535146f",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "status": 200,
+      "sha256": "e67e23d00436bc245ea8b197cf720b75143e84403a4f67085392ba9c13ca2ea2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "status": 200,
+      "sha256": "e67e23d00436bc245ea8b197cf720b75143e84403a4f67085392ba9c13ca2ea2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "status": 200,
+      "sha256": "d29314c01c677ee0519b941581d82c27cfa7a8cb2affda94b348139a9e7d549c",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "status": 200,
+      "sha256": "e67e23d00436bc245ea8b197cf720b75143e84403a4f67085392ba9c13ca2ea2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "status": 200,
+      "sha256": "02402dd394373ff8d9b3bf1837ba12d735be291582812cc7e33635df58950e42",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "status": 200,
+      "sha256": "b49ec21cd0f77c25410bb82805a81d3088579ffa42b5a7a5df43a2dee1d84511",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "status": 200,
+      "sha256": "122722355c50195c1a4ea389594cf8ec56384ea2b02e5acd05046ea2eecfa9d6",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "status": 200,
+      "sha256": "7d859d4c58a7e7c2e5a24451f55a439b20366fec280496d09cefe45369f9bae9",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "status": 200,
+      "sha256": "67c181cd78f3a6048d081f2f404c3ff4e08e1ab76e350ffe313cef025d63d26e",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "status": 200,
+      "sha256": "e2fa3c2582bf6e32cd00c6ea74b7d795117dc33149b0d8512fcd2d65b11eebed",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "status": 200,
+      "sha256": "0511c501f56804f02ffbc295c16af41fa563faf067dd5bacf839b9a9b4da6b00",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/star-garden.tmj",
+      "status": 200,
+      "sha256": "4ca1ed5e4094db011164a8c32b4e4f0712e2952b0c74facc7177f2b1ca3dd7d2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/star-garden.tmj",
+      "status": 200,
+      "sha256": "4ca1ed5e4094db011164a8c32b4e4f0712e2952b0c74facc7177f2b1ca3dd7d2",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "status": 200,
+      "sha256": "350b67fe0b84e4f9e4a5aa006bda869844cfeb84aa4e8bc401e22d7186aea4c5",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "status": 200,
+      "sha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "status": 200,
+      "sha256": "350b67fe0b84e4f9e4a5aa006bda869844cfeb84aa4e8bc401e22d7186aea4c5",
+      "matchesBuild": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "status": 200,
+      "sha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "matchesBuild": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "media": [
+    {
+      "map": "air-district",
+      "requests": 2,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "comet-maze",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "earth-district",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "fa-ship-interior",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "hidden-observatory",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "moon-cafe",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "nebula-arcade",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "orbit-playground",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "shipyard-beach",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-aquarius",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-cancer",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-gemini",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-libra",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-sagittarius",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "speaker-taurus",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "star-garden",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    },
+    {
+      "map": "water-district",
+      "requests": 0,
+      "camera": "false",
+      "microphone": "false",
+      "tracks": 0
+    }
+  ],
+  "browserClosed": true
+}

@@ -1,0 +1,8440 @@
+{
+  "head": null,
+  "maps": [
+    {
+      "map": "air-district",
+      "dimensions": [
+        36,
+        34
+      ],
+      "placements": 65,
+      "nativeObjects": 10,
+      "paintedTiles": 1969,
+      "blockedTiles": 196,
+      "safeReachableTiles": 988,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 13,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "campus-exploration",
+      "dimensions": [
+        48,
+        48
+      ],
+      "placements": 218,
+      "nativeObjects": 12,
+      "paintedTiles": 4118,
+      "blockedTiles": 702,
+      "safeReachableTiles": 1552,
+      "entries": 17,
+      "exits": 9,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 17,
+      "isolatedComponents": 8
+    },
+    {
+      "map": "comet-maze",
+      "dimensions": [
+        48,
+        48
+      ],
+      "placements": 240,
+      "nativeObjects": 10,
+      "paintedTiles": 3822,
+      "blockedTiles": 1136,
+      "safeReachableTiles": 1163,
+      "entries": 1,
+      "exits": 2,
+      "areas": 4,
+      "entities": 0,
+      "tilesets": 15,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "constellation-shore",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 2415,
+      "nativeObjects": 6,
+      "paintedTiles": 3954,
+      "blockedTiles": 931,
+      "safeReachableTiles": 665,
+      "entries": 1,
+      "exits": 2,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 16,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "earth-district",
+      "dimensions": [
+        36,
+        34
+      ],
+      "placements": 66,
+      "nativeObjects": 10,
+      "paintedTiles": 1989,
+      "blockedTiles": 201,
+      "safeReachableTiles": 983,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 14,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "fa-ship",
+      "dimensions": [
+        48,
+        56
+      ],
+      "placements": 6283,
+      "nativeObjects": 5,
+      "paintedTiles": 8900,
+      "blockedTiles": 2460,
+      "safeReachableTiles": 220,
+      "entries": 2,
+      "exits": 3,
+      "areas": 4,
+      "entities": 0,
+      "tilesets": 17,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "fa-ship-interior",
+      "dimensions": [
+        40,
+        26
+      ],
+      "placements": 170,
+      "nativeObjects": 6,
+      "paintedTiles": 1800,
+      "blockedTiles": 417,
+      "safeReachableTiles": 619,
+      "entries": 1,
+      "exits": 2,
+      "areas": 4,
+      "entities": 0,
+      "tilesets": 9,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "fire-district",
+      "dimensions": [
+        36,
+        34
+      ],
+      "placements": 66,
+      "nativeObjects": 10,
+      "paintedTiles": 1981,
+      "blockedTiles": 198,
+      "safeReachableTiles": 986,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 14,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "hidden-observatory",
+      "dimensions": [
+        40,
+        36
+      ],
+      "placements": 59,
+      "nativeObjects": 14,
+      "paintedTiles": 2209,
+      "blockedTiles": 205,
+      "safeReachableTiles": 1193,
+      "entries": 1,
+      "exits": 1,
+      "areas": 2,
+      "entities": 0,
+      "tilesets": 15,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "lunar-hall",
+      "dimensions": [
+        64,
+        56
+      ],
+      "placements": 153,
+      "nativeObjects": 16,
+      "paintedTiles": 5727,
+      "blockedTiles": 523,
+      "safeReachableTiles": 2995,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 24,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "moon-cafe",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 64,
+      "nativeObjects": 5,
+      "paintedTiles": 2384,
+      "blockedTiles": 433,
+      "safeReachableTiles": 1163,
+      "entries": 1,
+      "exits": 2,
+      "areas": 2,
+      "entities": 0,
+      "tilesets": 16,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "moon-grotto",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 39,
+      "nativeObjects": 5,
+      "paintedTiles": 4263,
+      "blockedTiles": 792,
+      "safeReachableTiles": 804,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 10,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "nebula-arcade",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 45,
+      "nativeObjects": 7,
+      "paintedTiles": 3842,
+      "blockedTiles": 363,
+      "safeReachableTiles": 1233,
+      "entries": 1,
+      "exits": 2,
+      "areas": 5,
+      "entities": 0,
+      "tilesets": 13,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "orbit-maze",
+      "dimensions": [
+        80,
+        80
+      ],
+      "placements": 491,
+      "nativeObjects": 27,
+      "paintedTiles": 9658,
+      "blockedTiles": 2444,
+      "safeReachableTiles": 3946,
+      "entries": 2,
+      "exits": 3,
+      "areas": 4,
+      "entities": 0,
+      "tilesets": 20,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "orbit-playground",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 71,
+      "nativeObjects": 5,
+      "paintedTiles": 3785,
+      "blockedTiles": 356,
+      "safeReachableTiles": 1240,
+      "entries": 1,
+      "exits": 2,
+      "areas": 2,
+      "entities": 0,
+      "tilesets": 11,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "overworld",
+      "dimensions": [
+        128,
+        128
+      ],
+      "placements": 6215,
+      "nativeObjects": 21,
+      "paintedTiles": 47321,
+      "blockedTiles": 6854,
+      "safeReachableTiles": 9386,
+      "entries": 26,
+      "exits": 18,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 101,
+      "isolatedComponents": 16
+    },
+    {
+      "map": "shipyard-beach",
+      "dimensions": [
+        48,
+        48
+      ],
+      "placements": 4731,
+      "nativeObjects": 4,
+      "paintedTiles": 7203,
+      "blockedTiles": 1486,
+      "safeReachableTiles": 804,
+      "entries": 3,
+      "exits": 3,
+      "areas": 2,
+      "entities": 0,
+      "tilesets": 35,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "solar-hall",
+      "dimensions": [
+        64,
+        56
+      ],
+      "placements": 153,
+      "nativeObjects": 16,
+      "paintedTiles": 5727,
+      "blockedTiles": 523,
+      "safeReachableTiles": 2995,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 24,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-aquarius",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 80,
+      "nativeObjects": 12,
+      "paintedTiles": 2492,
+      "blockedTiles": 283,
+      "safeReachableTiles": 975,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 20,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-aries",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 95,
+      "nativeObjects": 12,
+      "paintedTiles": 2579,
+      "blockedTiles": 308,
+      "safeReachableTiles": 950,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 22,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-cancer",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 77,
+      "nativeObjects": 12,
+      "paintedTiles": 2527,
+      "blockedTiles": 293,
+      "safeReachableTiles": 965,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 21,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-capricorn",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 79,
+      "nativeObjects": 12,
+      "paintedTiles": 2523,
+      "blockedTiles": 304,
+      "safeReachableTiles": 954,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 20,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-gemini",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 81,
+      "nativeObjects": 12,
+      "paintedTiles": 2464,
+      "blockedTiles": 270,
+      "safeReachableTiles": 988,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 22,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-leo",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 89,
+      "nativeObjects": 12,
+      "paintedTiles": 2520,
+      "blockedTiles": 284,
+      "safeReachableTiles": 974,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 21,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-libra",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 78,
+      "nativeObjects": 12,
+      "paintedTiles": 2499,
+      "blockedTiles": 283,
+      "safeReachableTiles": 975,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 21,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-pisces",
+      "dimensions": [
+        36,
+        38
+      ],
+      "placements": 79,
+      "nativeObjects": 12,
+      "paintedTiles": 2618,
+      "blockedTiles": 298,
+      "safeReachableTiles": 1032,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 22,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-sagittarius",
+      "dimensions": [
+        40,
+        36
+      ],
+      "placements": 83,
+      "nativeObjects": 12,
+      "paintedTiles": 2678,
+      "blockedTiles": 291,
+      "safeReachableTiles": 1107,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 21,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-scorpio",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 77,
+      "nativeObjects": 12,
+      "paintedTiles": 2506,
+      "blockedTiles": 293,
+      "safeReachableTiles": 958,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 21,
+      "isolatedComponents": 5
+    },
+    {
+      "map": "speaker-taurus",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 79,
+      "nativeObjects": 12,
+      "paintedTiles": 2503,
+      "blockedTiles": 288,
+      "safeReachableTiles": 970,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 22,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "speaker-virgo",
+      "dimensions": [
+        36,
+        36
+      ],
+      "placements": 80,
+      "nativeObjects": 12,
+      "paintedTiles": 2476,
+      "blockedTiles": 274,
+      "safeReachableTiles": 984,
+      "entries": 1,
+      "exits": 1,
+      "areas": 3,
+      "entities": 0,
+      "tilesets": 23,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "star-garden",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 190,
+      "nativeObjects": 5,
+      "paintedTiles": 3821,
+      "blockedTiles": 380,
+      "safeReachableTiles": 1216,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 12,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "stargazer-terrace",
+      "dimensions": [
+        40,
+        40
+      ],
+      "placements": 68,
+      "nativeObjects": 5,
+      "paintedTiles": 3792,
+      "blockedTiles": 355,
+      "safeReachableTiles": 1241,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 11,
+      "isolatedComponents": 0
+    },
+    {
+      "map": "water-district",
+      "dimensions": [
+        36,
+        34
+      ],
+      "placements": 64,
+      "nativeObjects": 10,
+      "paintedTiles": 2062,
+      "blockedTiles": 224,
+      "safeReachableTiles": 960,
+      "entries": 1,
+      "exits": 2,
+      "areas": 1,
+      "entities": 0,
+      "tilesets": 15,
+      "isolatedComponents": 1
+    },
+    {
+      "map": "zodiac-festival-park",
+      "dimensions": [
+        48,
+        48
+      ],
+      "placements": 203,
+      "nativeObjects": 18,
+      "paintedTiles": 5628,
+      "blockedTiles": 520,
+      "safeReachableTiles": 1778,
+      "entries": 3,
+      "exits": 3,
+      "areas": 8,
+      "entities": 0,
+      "tilesets": 12,
+      "isolatedComponents": 0
+    }
+  ],
+  "issues": [],
+  "reviews": [
+    {
+      "map": "air-district",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          24
+        ]
+      ]
+    },
+    {
+      "map": "air-district",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "campus-exploration",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 4,
+          "cells": [
+            [
+              36,
+              9
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              38,
+              9
+            ],
+            [
+              39,
+              9
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              6,
+              33
+            ],
+            [
+              7,
+              33
+            ],
+            [
+              8,
+              33
+            ],
+            [
+              9,
+              33
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              36,
+              33
+            ],
+            [
+              37,
+              33
+            ],
+            [
+              38,
+              33
+            ],
+            [
+              39,
+              33
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              26,
+              9
+            ],
+            [
+              27,
+              9
+            ],
+            [
+              28,
+              9
+            ],
+            [
+              29,
+              9
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              19,
+              9
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              36,
+              22
+            ],
+            [
+              37,
+              22
+            ],
+            [
+              38,
+              22
+            ],
+            [
+              39,
+              22
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              6,
+              22
+            ],
+            [
+              7,
+              22
+            ],
+            [
+              8,
+              22
+            ],
+            [
+              9,
+              22
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "earth-district",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          24
+        ]
+      ]
+    },
+    {
+      "map": "earth-district",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "fa-ship-interior",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "mess-and-galley",
+      "detail": {
+        "blocked": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            15,
+            10
+          ]
+        ],
+        "total": 78
+      }
+    },
+    {
+      "map": "fa-ship-interior",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "captains-chart-room",
+      "detail": {
+        "blocked": [
+          [
+            26,
+            8
+          ],
+          [
+            27,
+            8
+          ],
+          [
+            28,
+            8
+          ],
+          [
+            32,
+            9
+          ],
+          [
+            33,
+            9
+          ]
+        ],
+        "total": 72
+      }
+    },
+    {
+      "map": "fa-ship-interior",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "crew-bunks",
+      "detail": {
+        "blocked": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            20
+          ],
+          [
+            9,
+            20
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            14,
+            20
+          ],
+          [
+            15,
+            20
+          ],
+          [
+            4,
+            21
+          ],
+          [
+            5,
+            21
+          ],
+          [
+            7,
+            21
+          ],
+          [
+            9,
+            21
+          ],
+          [
+            10,
+            21
+          ],
+          [
+            12,
+            21
+          ],
+          [
+            14,
+            21
+          ],
+          [
+            15,
+            21
+          ],
+          [
+            4,
+            22
+          ],
+          [
+            5,
+            22
+          ],
+          [
+            6,
+            22
+          ],
+          [
+            7,
+            22
+          ],
+          [
+            8,
+            22
+          ]
+        ],
+        "total": 65
+      }
+    },
+    {
+      "map": "fa-ship-interior",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "cargo-hold",
+      "detail": {
+        "blocked": [
+          [
+            24,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            28,
+            19
+          ],
+          [
+            29,
+            19
+          ],
+          [
+            24,
+            21
+          ],
+          [
+            25,
+            21
+          ],
+          [
+            28,
+            21
+          ],
+          [
+            29,
+            21
+          ],
+          [
+            32,
+            21
+          ],
+          [
+            34,
+            21
+          ],
+          [
+            31,
+            22
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            33,
+            22
+          ],
+          [
+            34,
+            22
+          ]
+        ],
+        "total": 60
+      }
+    },
+    {
+      "map": "fire-district",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          24
+        ]
+      ]
+    },
+    {
+      "map": "fire-district",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "hidden-observatory",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "observatory-quiet",
+      "detail": {
+        "blocked": [
+          [
+            19,
+            10
+          ],
+          [
+            20,
+            10
+          ],
+          [
+            21,
+            10
+          ],
+          [
+            29,
+            21
+          ],
+          [
+            30,
+            21
+          ],
+          [
+            31,
+            21
+          ],
+          [
+            28,
+            22
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            36,
+            22
+          ],
+          [
+            5,
+            23
+          ],
+          [
+            6,
+            23
+          ],
+          [
+            7,
+            23
+          ],
+          [
+            28,
+            23
+          ],
+          [
+            32,
+            23
+          ],
+          [
+            34,
+            24
+          ],
+          [
+            28,
+            28
+          ],
+          [
+            29,
+            28
+          ],
+          [
+            30,
+            28
+          ],
+          [
+            35,
+            29
+          ],
+          [
+            36,
+            29
+          ]
+        ],
+        "total": 1178
+      }
+    },
+    {
+      "map": "hidden-observatory",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 40,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "lunar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Lunar stage",
+      "detail": {
+        "blocked": [
+          [
+            27,
+            13
+          ],
+          [
+            28,
+            13
+          ]
+        ],
+        "total": 416
+      }
+    },
+    {
+      "map": "lunar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Lunar audience",
+      "detail": {
+        "blocked": [
+          [
+            18,
+            24
+          ],
+          [
+            20,
+            24
+          ],
+          [
+            22,
+            24
+          ],
+          [
+            24,
+            24
+          ],
+          [
+            26,
+            24
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            35,
+            24
+          ],
+          [
+            37,
+            24
+          ],
+          [
+            39,
+            24
+          ],
+          [
+            41,
+            24
+          ],
+          [
+            43,
+            24
+          ],
+          [
+            45,
+            24
+          ],
+          [
+            18,
+            28
+          ],
+          [
+            20,
+            28
+          ],
+          [
+            22,
+            28
+          ],
+          [
+            24,
+            28
+          ],
+          [
+            26,
+            28
+          ],
+          [
+            28,
+            28
+          ],
+          [
+            35,
+            28
+          ],
+          [
+            37,
+            28
+          ]
+        ],
+        "total": 640
+      }
+    },
+    {
+      "map": "lunar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Lunar preparation",
+      "detail": {
+        "blocked": [
+          [
+            51,
+            7
+          ],
+          [
+            52,
+            7
+          ],
+          [
+            53,
+            7
+          ],
+          [
+            54,
+            7
+          ],
+          [
+            55,
+            7
+          ],
+          [
+            56,
+            7
+          ],
+          [
+            51,
+            8
+          ],
+          [
+            52,
+            8
+          ],
+          [
+            53,
+            8
+          ],
+          [
+            54,
+            8
+          ],
+          [
+            55,
+            8
+          ],
+          [
+            56,
+            8
+          ],
+          [
+            58,
+            8
+          ],
+          [
+            59,
+            8
+          ],
+          [
+            51,
+            9
+          ],
+          [
+            52,
+            9
+          ],
+          [
+            53,
+            9
+          ],
+          [
+            54,
+            9
+          ],
+          [
+            55,
+            9
+          ],
+          [
+            56,
+            9
+          ]
+        ],
+        "total": 100
+      }
+    },
+    {
+      "map": "lunar-hall",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 64,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "orbit-maze",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "maze-quiet",
+      "detail": {
+        "blocked": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            21,
+            2
+          ]
+        ],
+        "total": 4712
+      }
+    },
+    {
+      "map": "orbit-maze",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "quiet-garden",
+      "detail": {
+        "blocked": [
+          [
+            5,
+            76
+          ],
+          [
+            6,
+            76
+          ],
+          [
+            26,
+            76
+          ],
+          [
+            4,
+            77
+          ],
+          [
+            7,
+            77
+          ],
+          [
+            10,
+            77
+          ],
+          [
+            13,
+            77
+          ],
+          [
+            14,
+            77
+          ],
+          [
+            15,
+            77
+          ],
+          [
+            17,
+            77
+          ],
+          [
+            20,
+            77
+          ],
+          [
+            21,
+            77
+          ],
+          [
+            28,
+            77
+          ],
+          [
+            31,
+            77
+          ]
+        ],
+        "total": 442
+      }
+    },
+    {
+      "map": "orbit-maze",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          19,
+          0
+        ]
+      ]
+    },
+    {
+      "map": "overworld",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          69
+        ],
+        [
+          127,
+          69
+        ]
+      ]
+    },
+    {
+      "map": "overworld",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 12,
+          "cells": [
+            [
+              125,
+              62
+            ],
+            [
+              126,
+              62
+            ],
+            [
+              127,
+              62
+            ],
+            [
+              125,
+              63
+            ],
+            [
+              126,
+              63
+            ],
+            [
+              127,
+              63
+            ],
+            [
+              125,
+              64
+            ],
+            [
+              126,
+              64
+            ],
+            [
+              127,
+              64
+            ],
+            [
+              125,
+              65
+            ],
+            [
+              126,
+              65
+            ],
+            [
+              127,
+              65
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              63,
+              23
+            ],
+            [
+              64,
+              23
+            ],
+            [
+              63,
+              24
+            ],
+            [
+              64,
+              24
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              107,
+              67
+            ],
+            [
+              108,
+              67
+            ],
+            [
+              107,
+              68
+            ],
+            [
+              108,
+              68
+            ]
+          ]
+        },
+        {
+          "size": 8,
+          "cells": [
+            [
+              62,
+              125
+            ],
+            [
+              63,
+              125
+            ],
+            [
+              64,
+              125
+            ],
+            [
+              65,
+              125
+            ],
+            [
+              62,
+              126
+            ],
+            [
+              63,
+              126
+            ],
+            [
+              64,
+              126
+            ],
+            [
+              65,
+              126
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              101,
+              89
+            ],
+            [
+              102,
+              89
+            ],
+            [
+              101,
+              90
+            ],
+            [
+              102,
+              90
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              41,
+              105
+            ],
+            [
+              42,
+              105
+            ],
+            [
+              41,
+              106
+            ],
+            [
+              42,
+              106
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              25,
+              89
+            ],
+            [
+              26,
+              89
+            ],
+            [
+              25,
+              90
+            ],
+            [
+              26,
+              90
+            ]
+          ]
+        },
+        {
+          "size": 16,
+          "cells": [
+            [
+              0,
+              62
+            ],
+            [
+              1,
+              62
+            ],
+            [
+              2,
+              62
+            ],
+            [
+              3,
+              62
+            ],
+            [
+              0,
+              63
+            ],
+            [
+              1,
+              63
+            ],
+            [
+              2,
+              63
+            ],
+            [
+              3,
+              63
+            ],
+            [
+              0,
+              64
+            ],
+            [
+              1,
+              64
+            ],
+            [
+              2,
+              64
+            ],
+            [
+              3,
+              64
+            ],
+            [
+              0,
+              65
+            ],
+            [
+              1,
+              65
+            ],
+            [
+              2,
+              65
+            ],
+            [
+              3,
+              65
+            ]
+          ]
+        },
+        {
+          "size": 12,
+          "cells": [
+            [
+              62,
+              1
+            ],
+            [
+              63,
+              1
+            ],
+            [
+              64,
+              1
+            ],
+            [
+              65,
+              1
+            ],
+            [
+              62,
+              2
+            ],
+            [
+              63,
+              2
+            ],
+            [
+              64,
+              2
+            ],
+            [
+              65,
+              2
+            ],
+            [
+              62,
+              3
+            ],
+            [
+              63,
+              3
+            ],
+            [
+              64,
+              3
+            ],
+            [
+              65,
+              3
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              101,
+              45
+            ],
+            [
+              102,
+              45
+            ],
+            [
+              101,
+              46
+            ],
+            [
+              102,
+              46
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              25,
+              45
+            ],
+            [
+              26,
+              45
+            ],
+            [
+              25,
+              46
+            ],
+            [
+              26,
+              46
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              19,
+              67
+            ],
+            [
+              20,
+              67
+            ],
+            [
+              19,
+              68
+            ],
+            [
+              20,
+              68
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              63,
+              111
+            ],
+            [
+              64,
+              111
+            ],
+            [
+              63,
+              112
+            ],
+            [
+              64,
+              112
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              85,
+              105
+            ],
+            [
+              86,
+              105
+            ],
+            [
+              85,
+              106
+            ],
+            [
+              86,
+              106
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              41,
+              29
+            ],
+            [
+              42,
+              29
+            ],
+            [
+              41,
+              30
+            ],
+            [
+              42,
+              30
+            ]
+          ]
+        },
+        {
+          "size": 4,
+          "cells": [
+            [
+              85,
+              29
+            ],
+            [
+              86,
+              29
+            ],
+            [
+              85,
+              30
+            ],
+            [
+              86,
+              30
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "shipyard-beach",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 4,
+          "cells": [
+            [
+              18,
+              37
+            ],
+            [
+              19,
+              37
+            ],
+            [
+              20,
+              37
+            ],
+            [
+              21,
+              37
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "solar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Solar stage",
+      "detail": {
+        "blocked": [
+          [
+            27,
+            13
+          ],
+          [
+            28,
+            13
+          ]
+        ],
+        "total": 416
+      }
+    },
+    {
+      "map": "solar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Solar audience",
+      "detail": {
+        "blocked": [
+          [
+            18,
+            24
+          ],
+          [
+            20,
+            24
+          ],
+          [
+            22,
+            24
+          ],
+          [
+            24,
+            24
+          ],
+          [
+            26,
+            24
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            35,
+            24
+          ],
+          [
+            37,
+            24
+          ],
+          [
+            39,
+            24
+          ],
+          [
+            41,
+            24
+          ],
+          [
+            43,
+            24
+          ],
+          [
+            45,
+            24
+          ],
+          [
+            18,
+            28
+          ],
+          [
+            20,
+            28
+          ],
+          [
+            22,
+            28
+          ],
+          [
+            24,
+            28
+          ],
+          [
+            26,
+            28
+          ],
+          [
+            28,
+            28
+          ],
+          [
+            35,
+            28
+          ],
+          [
+            37,
+            28
+          ]
+        ],
+        "total": 640
+      }
+    },
+    {
+      "map": "solar-hall",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Solar preparation",
+      "detail": {
+        "blocked": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "total": 100
+      }
+    },
+    {
+      "map": "solar-hall",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 64,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-aquarius",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-aquarius",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            26,
+            12
+          ],
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ]
+        ],
+        "total": 240
+      }
+    },
+    {
+      "map": "speaker-aquarius",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Aquarius listening area",
+      "detail": {
+        "blocked": [
+          [
+            2,
+            18
+          ],
+          [
+            3,
+            18
+          ],
+          [
+            10,
+            18
+          ],
+          [
+            25,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            2,
+            19
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            2,
+            20
+          ],
+          [
+            3,
+            20
+          ],
+          [
+            6,
+            20
+          ],
+          [
+            7,
+            20
+          ],
+          [
+            8,
+            20
+          ],
+          [
+            9,
+            20
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            26,
+            20
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            20
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            6,
+            21
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-aquarius",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-aries",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-aries",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ]
+        ],
+        "total": 240
+      }
+    },
+    {
+      "map": "speaker-aries",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Aries listening area",
+      "detail": {
+        "blocked": [
+          [
+            4,
+            18
+          ],
+          [
+            5,
+            18
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            7,
+            18
+          ],
+          [
+            8,
+            18
+          ],
+          [
+            9,
+            18
+          ],
+          [
+            10,
+            18
+          ],
+          [
+            11,
+            18
+          ],
+          [
+            12,
+            18
+          ],
+          [
+            23,
+            18
+          ],
+          [
+            24,
+            18
+          ],
+          [
+            25,
+            18
+          ],
+          [
+            26,
+            18
+          ],
+          [
+            27,
+            18
+          ],
+          [
+            28,
+            18
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            31,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            33,
+            19
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-aries",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-cancer",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-cancer",
+      "detail": {
+        "blocked": [
+          [
+            30,
+            11
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            26,
+            12
+          ],
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ],
+          [
+            30,
+            12
+          ],
+          [
+            30,
+            13
+          ]
+        ],
+        "total": 208
+      }
+    },
+    {
+      "map": "speaker-cancer",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Cancer listening area",
+      "detail": {
+        "blocked": [
+          [
+            4,
+            18
+          ],
+          [
+            5,
+            18
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            31,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            7,
+            19
+          ],
+          [
+            10,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            28,
+            19
+          ],
+          [
+            32,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            3,
+            20
+          ],
+          [
+            7,
+            20
+          ],
+          [
+            9,
+            20
+          ],
+          [
+            26,
+            20
+          ],
+          [
+            28,
+            20
+          ],
+          [
+            32,
+            20
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-cancer",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-capricorn",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-capricorn",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ]
+        ],
+        "total": 208
+      }
+    },
+    {
+      "map": "speaker-capricorn",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Capricorn listening area",
+      "detail": {
+        "blocked": [
+          [
+            3,
+            18
+          ],
+          [
+            4,
+            18
+          ],
+          [
+            5,
+            18
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            31,
+            18
+          ],
+          [
+            32,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            4,
+            19
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            6,
+            19
+          ],
+          [
+            9,
+            19
+          ],
+          [
+            12,
+            19
+          ],
+          [
+            23,
+            19
+          ],
+          [
+            26,
+            19
+          ],
+          [
+            29,
+            19
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            31,
+            19
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-capricorn",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-gemini",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-gemini",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ]
+        ],
+        "total": 208
+      }
+    },
+    {
+      "map": "speaker-gemini",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Gemini listening area",
+      "detail": {
+        "blocked": [
+          [
+            8,
+            18
+          ],
+          [
+            27,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            6,
+            19
+          ],
+          [
+            7,
+            19
+          ],
+          [
+            23,
+            19
+          ],
+          [
+            24,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            6,
+            21
+          ],
+          [
+            24,
+            21
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            10,
+            22
+          ],
+          [
+            11,
+            22
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            28,
+            22
+          ],
+          [
+            29,
+            22
+          ],
+          [
+            30,
+            22
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-gemini",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-leo",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-leo",
+      "detail": {
+        "blocked": [
+          [
+            31,
+            11
+          ],
+          [
+            32,
+            11
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            26,
+            12
+          ],
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            32,
+            12
+          ],
+          [
+            31,
+            13
+          ],
+          [
+            32,
+            13
+          ]
+        ],
+        "total": 240
+      }
+    },
+    {
+      "map": "speaker-leo",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Leo listening area",
+      "detail": {
+        "blocked": [
+          [
+            33,
+            18
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            8,
+            19
+          ],
+          [
+            11,
+            19
+          ],
+          [
+            24,
+            19
+          ],
+          [
+            27,
+            19
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            5,
+            22
+          ],
+          [
+            8,
+            22
+          ],
+          [
+            11,
+            22
+          ],
+          [
+            24,
+            22
+          ],
+          [
+            27,
+            22
+          ],
+          [
+            30,
+            22
+          ],
+          [
+            2,
+            23
+          ],
+          [
+            2,
+            24
+          ],
+          [
+            5,
+            24
+          ],
+          [
+            8,
+            24
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-leo",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-libra",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-libra",
+      "detail": {
+        "blocked": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            4,
+            13
+          ]
+        ],
+        "total": 224
+      }
+    },
+    {
+      "map": "speaker-libra",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Libra listening area",
+      "detail": {
+        "blocked": [
+          [
+            33,
+            18
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            4,
+            21
+          ],
+          [
+            5,
+            21
+          ],
+          [
+            30,
+            21
+          ],
+          [
+            31,
+            21
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            3,
+            22
+          ],
+          [
+            6,
+            22
+          ],
+          [
+            7,
+            22
+          ],
+          [
+            28,
+            22
+          ],
+          [
+            29,
+            22
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            2,
+            23
+          ],
+          [
+            13,
+            23
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-libra",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-pisces",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-pisces",
+      "detail": {
+        "blocked": [
+          [
+            30,
+            11
+          ],
+          [
+            31,
+            11
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            26,
+            12
+          ],
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ],
+          [
+            30,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            30,
+            13
+          ],
+          [
+            31,
+            13
+          ]
+        ],
+        "total": 224
+      }
+    },
+    {
+      "map": "speaker-pisces",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Pisces listening area",
+      "detail": {
+        "blocked": [
+          [
+            33,
+            18
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            4,
+            19
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            8,
+            19
+          ],
+          [
+            27,
+            19
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            31,
+            19
+          ],
+          [
+            32,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            5,
+            21
+          ],
+          [
+            6,
+            21
+          ],
+          [
+            29,
+            21
+          ],
+          [
+            30,
+            21
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            4,
+            22
+          ],
+          [
+            7,
+            22
+          ],
+          [
+            11,
+            22
+          ],
+          [
+            24,
+            22
+          ]
+        ],
+        "total": 384
+      }
+    },
+    {
+      "map": "speaker-pisces",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-sagittarius",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-sagittarius",
+      "detail": {
+        "blocked": [
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            30,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            32,
+            12
+          ]
+        ],
+        "total": 240
+      }
+    },
+    {
+      "map": "speaker-sagittarius",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Sagittarius listening area",
+      "detail": {
+        "blocked": [
+          [
+            2,
+            18
+          ],
+          [
+            37,
+            18
+          ],
+          [
+            2,
+            19
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            8,
+            19
+          ],
+          [
+            31,
+            19
+          ],
+          [
+            34,
+            19
+          ],
+          [
+            37,
+            19
+          ],
+          [
+            2,
+            20
+          ],
+          [
+            11,
+            20
+          ],
+          [
+            28,
+            20
+          ],
+          [
+            37,
+            20
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            3,
+            22
+          ],
+          [
+            14,
+            22
+          ],
+          [
+            25,
+            22
+          ],
+          [
+            36,
+            22
+          ],
+          [
+            37,
+            22
+          ],
+          [
+            37,
+            23
+          ],
+          [
+            6,
+            24
+          ]
+        ],
+        "total": 396
+      }
+    },
+    {
+      "map": "speaker-sagittarius",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 40,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-scorpio",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-scorpio",
+      "detail": {
+        "blocked": [
+          [
+            28,
+            11
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ]
+        ],
+        "total": 192
+      }
+    },
+    {
+      "map": "speaker-scorpio",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Scorpio listening area",
+      "detail": {
+        "blocked": [
+          [
+            3,
+            18
+          ],
+          [
+            4,
+            18
+          ],
+          [
+            5,
+            18
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            31,
+            18
+          ],
+          [
+            32,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            4,
+            19
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            6,
+            19
+          ],
+          [
+            10,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            29,
+            19
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            31,
+            19
+          ],
+          [
+            32,
+            19
+          ],
+          [
+            33,
+            19
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-scorpio",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        },
+        {
+          "size": 2,
+          "cells": [
+            [
+              3,
+              30
+            ],
+            [
+              4,
+              30
+            ]
+          ]
+        },
+        {
+          "size": 2,
+          "cells": [
+            [
+              4,
+              19
+            ],
+            [
+              5,
+              19
+            ]
+          ]
+        },
+        {
+          "size": 2,
+          "cells": [
+            [
+              30,
+              19
+            ],
+            [
+              31,
+              19
+            ]
+          ]
+        },
+        {
+          "size": 1,
+          "cells": [
+            [
+              1,
+              25
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-taurus",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-taurus",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ]
+        ],
+        "total": 176
+      }
+    },
+    {
+      "map": "speaker-taurus",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Taurus listening area",
+      "detail": {
+        "blocked": [
+          [
+            5,
+            18
+          ],
+          [
+            11,
+            18
+          ],
+          [
+            24,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            31,
+            19
+          ],
+          [
+            32,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            6,
+            20
+          ],
+          [
+            7,
+            20
+          ],
+          [
+            8,
+            20
+          ],
+          [
+            9,
+            20
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            26,
+            20
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            20
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            6,
+            21
+          ],
+          [
+            7,
+            21
+          ],
+          [
+            8,
+            21
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-taurus",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "speaker-virgo",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "meeting-virgo",
+      "detail": {
+        "blocked": [
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ]
+        ],
+        "total": 208
+      }
+    },
+    {
+      "map": "speaker-virgo",
+      "code": "AREA_PARTIALLY_BLOCKED",
+      "location": "Virgo listening area",
+      "detail": {
+        "blocked": [
+          [
+            33,
+            18
+          ],
+          [
+            2,
+            19
+          ],
+          [
+            3,
+            19
+          ],
+          [
+            7,
+            19
+          ],
+          [
+            8,
+            19
+          ],
+          [
+            9,
+            19
+          ],
+          [
+            24,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            26,
+            19
+          ],
+          [
+            32,
+            19
+          ],
+          [
+            33,
+            19
+          ],
+          [
+            33,
+            20
+          ],
+          [
+            8,
+            21
+          ],
+          [
+            25,
+            21
+          ],
+          [
+            29,
+            21
+          ],
+          [
+            30,
+            21
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            29,
+            22
+          ],
+          [
+            30,
+            22
+          ],
+          [
+            2,
+            23
+          ]
+        ],
+        "total": 352
+      }
+    },
+    {
+      "map": "speaker-virgo",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "map": "water-district",
+      "code": "WALKABLE_MAP_EDGE",
+      "location": "boundary",
+      "detail": [
+        [
+          0,
+          24
+        ]
+      ]
+    },
+    {
+      "map": "water-district",
+      "code": "ISOLATED_WALKABLE_COMPONENTS",
+      "location": "navigation",
+      "detail": [
+        {
+          "size": 36,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "placements": 23046,
+    "nativeObjects": 371,
+    "paintedTiles": 166340,
+    "blockedTiles": 25168,
+    "safeReachableTiles": 49962,
+    "entries": 81,
+    "exits": 80,
+    "areas": 91,
+    "entities": 0,
+    "tilesets": 690,
+    "isolatedComponents": 48
+  },
+  "assets": {
+    "assets/sponsors/demo-01.png": {
+      "sha256": "5fb9323d3735b17b3159631b98f1afdf712d07b0132a4618d3765be0d3bbbf2e",
+      "bytes": 3687,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/demo-02-compact.png": {
+      "sha256": "aa65296e8a7427770c87c91402fd28f570a3f2a03e557eb3214e793281379f84",
+      "bytes": 2625,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/demo-02.png": {
+      "sha256": "2dbef7b72e147059e4f178d3487b66dcfdf25cb69e1ee33eab1b5545eb629fd0",
+      "bytes": 2486,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/demo-03.png": {
+      "sha256": "8f746d205166b03af10877936710f2625fc8f342f6ff1b69baf59069d0302256",
+      "bytes": 3315,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/demo-04.png": {
+      "sha256": "8fccebad29a2545f9b17da68c31596a4e99afab258feaf025ec049e020b24813",
+      "bytes": 2208,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/demo-05.png": {
+      "sha256": "306685a5b2aa8fd42e135e3f44e3fa6a407aa24d23b009fd19c553eac70375ee",
+      "bytes": 2170,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/hub-01.png": {
+      "sha256": "8659904ae57ed212274f3b93e84b9cb14423684ea77672b6dc72d1b585e176fe",
+      "bytes": 3099,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/hub-02.png": {
+      "sha256": "3626228095b41f3ef47e9d39f5b4b5658bb63ceb737e5684cd92ca637da09673",
+      "bytes": 3340,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/partner-aws-ug-mm.png": {
+      "sha256": "75d5a89db2ecce06050dfc71335767de9dbba7b9a21512bd0ed8f1d4dafe7084",
+      "bytes": 8310,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/partner-bsides-mm.png": {
+      "sha256": "a68ea0955f4eed10dfd10b4e2bd1cfa8878dc68444fde5f159138efc27f3bf10",
+      "bytes": 9105,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/partner-openinfra-mm.png": {
+      "sha256": "5efcb4d8daf7167a6f4e2d53ab65ed6ca710519129413eb1f8005512c16ae2e9",
+      "bytes": 3981,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-2026.png": {
+      "sha256": "355f9df9be585dbdfe67b7cbbd34cfd893c0fc9f6e1463a5c3d92f3552c9cc8f",
+      "bytes": 5344,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-arrival-ne.png": {
+      "sha256": "b92a08c65e2ee75c7526dabf9421f6febc3ebb9ba233d635d7155be421f41fcb",
+      "bytes": 788,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-arrival-nw.png": {
+      "sha256": "28e9ca49bc4e0ded2ad133deb7863832ebe9f34a2972ad550558083c0a25f701",
+      "bytes": 1491,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-arrival-se.png": {
+      "sha256": "3ae566a36e376acdde669780af34241a83aedef2ed54b3ff33db186faef98717",
+      "bytes": 1586,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-arrival-sw.png": {
+      "sha256": "885fd86535d2db62b8e66e1886ce18603f76ab988b41ab0c3100c90f26f80cf3",
+      "bytes": 2103,
+      "size": [
+        192,
+        64
+      ]
+    },
+    "assets/sponsors/varcamp-horizontal.png": {
+      "sha256": "d1ca1b1a70d98be5a7b27f5151ce3be48caf0b65b5f33e7e7ae48d36d7701ae4",
+      "bytes": 3129,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/sponsors/vibecode-tours.png": {
+      "sha256": "440e4c0a573ac992a1bb2157c2deac082912ff843d56202f12855c2492dc3335",
+      "bytes": 1420,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/tilesets/lpc-containers/container.png": {
+      "sha256": "cb8a60d1eac758f87785e0168370ad772fe57e0c2e6f76a127833c63d33fed03",
+      "bytes": 119437,
+      "size": [
+        512,
+        2048
+      ]
+    },
+    "assets/tilesets/lpc-dock/dock.png": {
+      "sha256": "11f6435aa55b0b072d0dbea8c4d6a044a8cf54f446713833b4215016b79711ef",
+      "bytes": 28549,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/lpc-office/Card Table.png": {
+      "sha256": "8802b24e1ac57694c8b641600833d68f5d7e8c02591c860c202d6f627c87a300",
+      "bytes": 2201,
+      "size": [
+        128,
+        192
+      ]
+    },
+    "assets/tilesets/lpc-office/Coffee Maker.png": {
+      "sha256": "886a299c0fb5033751aa65b27f1a1a96df34f8ba96c6ccd05640c2546f2599d8",
+      "bytes": 1005,
+      "size": [
+        64,
+        64
+      ]
+    },
+    "assets/tilesets/lpc-office/Laptop.png": {
+      "sha256": "9eda5d655b037792facc7011c975e0ee554389551fe0ee9ceb69a42cc6ec0f30",
+      "bytes": 2439,
+      "size": [
+        128,
+        128
+      ]
+    },
+    "assets/tilesets/lpc-office/TV, Widescreen.png": {
+      "sha256": "ea8d20dbfac08bda1b13ae38753dd8d4ad08c077dd87500cf497b13038c29fab",
+      "bytes": 12887,
+      "size": [
+        288,
+        128
+      ]
+    },
+    "assets/tilesets/lpc-office/Water Cooler.png": {
+      "sha256": "c5f6422b7c00ac02d020af1544fad53b598833fe314d2fb90f5d434663fd00b9",
+      "bytes": 1391,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/tilesets/lpc-ship/lpc-ship-accessories.png": {
+      "sha256": "8df51f3666d84ed451ea59d77ab45dbbf435a101771a9fccfe69d85d54e5e852",
+      "bytes": 22961,
+      "size": [
+        512,
+        1024
+      ]
+    },
+    "assets/tilesets/lpc-ship/lpc-ship.png": {
+      "sha256": "4e0ad1c82075c090c66191d5b04ef5c4cb067a92aabfbdfba93886b8b437fdfd",
+      "bytes": 59099,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "assets/tilesets/lpc-ship/rigging.png": {
+      "sha256": "a042e31bbfad5170d77cafac559c7d7e054e4a12002e65923af4f04428d0f589",
+      "bytes": 59420,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "assets/tilesets/lpc-ship/ship-cannon.png": {
+      "sha256": "9728203c9eeb62ef256954784542ebcceaab8e11bc42417766bc08d1ed1553f2",
+      "bytes": 8043,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "assets/tilesets/lpc-space/scifi_space_rpg_tiles_lpcized_0.png": {
+      "sha256": "fc6acc103df0bc1a4b59d541b12bfdaf7e5ad3eebf76f6178191c355c7325307",
+      "bytes": 5524,
+      "size": [
+        448,
+        256
+      ]
+    },
+    "assets/tilesets/lpc-water/water.png": {
+      "sha256": "6107522405d8c27b9bab7278f5dc14cd7cc0445592f5967d748cb81ede4b0d47",
+      "bytes": 7905,
+      "size": [
+        96,
+        192
+      ]
+    },
+    "assets/tilesets/original/amenities.png": {
+      "sha256": "bde5e063d7f5ca86d1269f37bcbeb521dd5fd5ea5029d3441c713717032d7098",
+      "bytes": 508,
+      "size": [
+        64,
+        96
+      ]
+    },
+    "assets/tilesets/original/beach-lounge.png": {
+      "sha256": "af2cad6459f38ce25c18900bcde3db6cceb3dd7382f7036cfaea15a51a0fe0be",
+      "bytes": 11703,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "assets/tilesets/original/beach-surf.png": {
+      "sha256": "879bb15a937246deb1e020f831185c7e078ae3f2ddb903db0873112bca66ab7e",
+      "bytes": 12610,
+      "size": [
+        1024,
+        672
+      ]
+    },
+    "assets/tilesets/original/booth-stickers.png": {
+      "sha256": "b319354b5e5b8dbd1b549fa98af6d77280361fff907aee5dc03d4b0c84535241",
+      "bytes": 932,
+      "size": [
+        192,
+        32
+      ]
+    },
+    "assets/tilesets/original/campus.png": {
+      "sha256": "3b5a7b2e38ad769c064fdaca0a1d4d113174e57de16c6884034fcd70e1999a9d",
+      "bytes": 148,
+      "size": [
+        32,
+        32
+      ]
+    },
+    "assets/tilesets/original/coast-life-harbor-dolphin.png": {
+      "sha256": "f00854bed514d05de28c0d8dc6bf06ce3a916c761acf231858bf3d9429c2f268",
+      "bytes": 58596,
+      "size": [
+        512,
+        320
+      ]
+    },
+    "assets/tilesets/original/coast-life-harbor-fish-east.png": {
+      "sha256": "82e0390a539d37e031159a4700bf4d70ee686e3f17034729cbe408bb3f94dc1f",
+      "bytes": 105708,
+      "size": [
+        512,
+        608
+      ]
+    },
+    "assets/tilesets/original/coast-life-harbor-fish-west.png": {
+      "sha256": "31f10286786d82ef5f1a22926dab98769a38ecce06312877c4f10c9d5d1289e1",
+      "bytes": 111446,
+      "size": [
+        512,
+        736
+      ]
+    },
+    "assets/tilesets/original/coast-life-harbor-gull-north.png": {
+      "sha256": "db4c33367d4a80f34cd8c3c6c12fb60d0022a5ace57040e52b7a4246c9f215e0",
+      "bytes": 34127,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "assets/tilesets/original/coast-life-harbor-gull-south.png": {
+      "sha256": "9319509aa81178337efa25cfca5e054786a57e03ee66f1a7dba737692793c145",
+      "bytes": 34156,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "assets/tilesets/original/coast-life-props.png": {
+      "sha256": "9a5406671f0b4327181a06a071f1a809121a152ba7b06e65b7e7fd8d9a74cfc8",
+      "bytes": 318461,
+      "size": [
+        1024,
+        256
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-dolphin.png": {
+      "sha256": "dae27b5f4bd5bf4319f3119f9f98c5044b2c7ef04b4410ad08e34c014f8a02ab",
+      "bytes": 57839,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-fish-bay.png": {
+      "sha256": "c031f5d78c643ac24661a8bd98a14b12f2c647dc05bef80fd4be5013daae84f3",
+      "bytes": 109172,
+      "size": [
+        512,
+        608
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-fish-west.png": {
+      "sha256": "a3cc3e1e76e57049168cffd435de3c64f630f4495a36217787a5719e3ff4aca7",
+      "bytes": 92069,
+      "size": [
+        512,
+        448
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-gull-north.png": {
+      "sha256": "ff3e47a8d9ab5d671e9a8f50c20f5a824511d5b6ff2b034a40740f10889420bb",
+      "bytes": 33370,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-gull-south.png": {
+      "sha256": "40c6d52a27be1dd3beb7c5b3555279979b9bab28a8b172b5ff916c16ad3ed752",
+      "bytes": 33631,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/coast-life-shore-seal.png": {
+      "sha256": "edf6b3cac7fd9f389a406a95e3839b3925a40a5e26ce35280923a884bf8c2a48",
+      "bytes": 31474,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/coastal-flight.png": {
+      "sha256": "b3158271baf90d0606fffb2d133f6a22caa59f4956d0539cf74eb61b618eaca1",
+      "bytes": 121514,
+      "size": [
+        512,
+        576
+      ]
+    },
+    "assets/tilesets/original/coastal.png": {
+      "sha256": "8935fb1dd29807e2d7210135cc78c1787f3903620ff983fc44cf4045202228a6",
+      "bytes": 56368,
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    "assets/tilesets/original/constellation-coast.png": {
+      "sha256": "361713a217882b0ad1811f5eaa485c233816141fd0a53fad0025cefe679e48b1",
+      "bytes": 191355,
+      "size": [
+        2048,
+        608
+      ]
+    },
+    "assets/tilesets/original/exterior-gates.png": {
+      "sha256": "cd0313dd8ff6a23d58a031c6d90d4d96f2a71603458cb0c8803f5ed07b5c6458",
+      "bytes": 11899,
+      "size": [
+        512,
+        704
+      ]
+    },
+    "assets/tilesets/original/guides.png": {
+      "sha256": "69a9abbdec5f6d4af77fd9624ef75c2a833e6ff64a9e1ab014c13486cb9cad0a",
+      "bytes": 939,
+      "size": [
+        96,
+        64
+      ]
+    },
+    "assets/tilesets/original/hall-buildings.png": {
+      "sha256": "652dcd737f54acac03c153604c93e06c8b7217a1a733cfef4ad21ec95c91d7a8",
+      "bytes": 618802,
+      "size": [
+        768,
+        384
+      ]
+    },
+    "assets/tilesets/original/hall-exteriors.png": {
+      "sha256": "2365aedfcaed8d5555d25a14c0eec6c5d5d5093525b3761fe721dd87a4694578",
+      "bytes": 121471,
+      "size": [
+        512,
+        192
+      ]
+    },
+    "assets/tilesets/original/hub-buildings.png": {
+      "sha256": "f7f086352add1ad428b7338dda5dfcde41d8d2f1b078eb18837b9fafe80e8b3e",
+      "bytes": 8881,
+      "size": [
+        384,
+        576
+      ]
+    },
+    "assets/tilesets/original/hub-labels.png": {
+      "sha256": "5315d98993f6ba65253e651666b5ccdc9318a79de34e6fdacd66d79df083f447",
+      "bytes": 22724,
+      "size": [
+        384,
+        1632
+      ]
+    },
+    "assets/tilesets/original/interior-motion-plant.png": {
+      "sha256": "5a8291914b985607f60aa71628747adf120fd0287b4ba33e03c28b550cc34c0a",
+      "bytes": 26132,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/interior-motion-server.png": {
+      "sha256": "f13ce147ca93ec8baa8a31a6b9791f0b2a1d4d1413371a78eda8f6893cfee1c8",
+      "bytes": 26428,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/interior-motion-steam.png": {
+      "sha256": "79f91884708421aafc3ddd9edc9f246d48b8c944417cfe28fa7a11429c691418",
+      "bytes": 1686,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/interior-motion-water.png": {
+      "sha256": "8eea14ca45c573a01e7d4b49afc05dc0f49407fe8f8efedfea5d5ec3b002e613",
+      "bytes": 57209,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/interior-reference-plant-base.png": {
+      "sha256": "c7419154a4bae99aca033bbc9300292eca20db395d2ee59d59861281e6a25257",
+      "bytes": 4355,
+      "size": [
+        96,
+        96
+      ]
+    },
+    "assets/tilesets/original/interior-reference.png": {
+      "sha256": "51505595f87dfa2268b627c87ed2eb001edee10cd477afba819f1bd46ba24c79",
+      "bytes": 149628,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/leo-lion-head.png": {
+      "sha256": "b2c76652721cc8b30906d8fbf999add8a35164f1ba024ba14e47513389fe12c4",
+      "bytes": 17861,
+      "size": [
+        128,
+        96
+      ]
+    },
+    "assets/tilesets/original/magic.png": {
+      "sha256": "ac9008b87dab629541131d315982cc2fae296c22e6db5437aab651a6de2dc452",
+      "bytes": 16884,
+      "size": [
+        512,
+        608
+      ]
+    },
+    "assets/tilesets/original/naval-details.png": {
+      "sha256": "37192164559eae3437b55cdb8f1181df8f8b893684eb6556c96ff8ef64b25cd8",
+      "bytes": 812,
+      "size": [
+        256,
+        96
+      ]
+    },
+    "assets/tilesets/original/organic-coast.png": {
+      "sha256": "2fb7d2c09d6e185fd5363869bd75e760a4102323a8981eab2f55080ede04c9a5",
+      "bytes": 204903,
+      "size": [
+        2048,
+        672
+      ]
+    },
+    "assets/tilesets/original/plaza-buildings.png": {
+      "sha256": "31226f5771a387009495e824b784f17c05d49a341e99129afcd6b75a5be74d57",
+      "bytes": 1227129,
+      "size": [
+        768,
+        768
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-00.png": {
+      "sha256": "1dc7e5a1f21523fc307d56b59c82ba9944f35f2ef8419f2bf49ea44d99cc8cda",
+      "bytes": 9439,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-01.png": {
+      "sha256": "b13d31c7c954196dd821f9ae8273e5665d7802c9161f0b84a211b6c86f981c26",
+      "bytes": 14351,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-02.png": {
+      "sha256": "0938df318ac350b93f3916283d847d19a196156b307531c069c9405d55021934",
+      "bytes": 4213,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-03.png": {
+      "sha256": "25c6ebfef4adef3bc7404390e448a4b891a1f47d73154260037c449b618de185",
+      "bytes": 9214,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-04.png": {
+      "sha256": "ca6b306defb71d594f44f7d48b837efa320432aebe9980af0f0619fb59667227",
+      "bytes": 20644,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-05.png": {
+      "sha256": "4102ba653d64c2f8ee614eb69a906dd709a3a4b42cd9a6b80cb5186562f9d398",
+      "bytes": 5469,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-06.png": {
+      "sha256": "55c1ac0547c7a55bf984d6ad61e367f81279ffef9c5daf4d49e07cb2f9f0e847",
+      "bytes": 12516,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-07.png": {
+      "sha256": "8ebab1aa2cb8b2468b8026ad4985672e5dcb5c669fa425c1a86d67458370209f",
+      "bytes": 18551,
+      "size": [
+        512,
+        416
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-08.png": {
+      "sha256": "75024410f596e907906d0ad40a72572782ba0e5b381dc5a0f127fd8180a22ac7",
+      "bytes": 17764,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-09.png": {
+      "sha256": "586004c7fdc9669d753c20199569e3df0a3cba4df255a65c639c912e96682b6a",
+      "bytes": 24799,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-10.png": {
+      "sha256": "0618d7366f064557ebf1fd23b265bd28c161f1c061221cfdb576ac38690374e3",
+      "bytes": 28901,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-11.png": {
+      "sha256": "1fc6df7727e735089ac0c00d86141faf3f8fbae1b997eb010e15716174ad0055",
+      "bytes": 13413,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-12.png": {
+      "sha256": "077eb8bc8f8dc5ded51ef857fccdaf757d7eba65c819c315dce636e6170eb442",
+      "bytes": 6601,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-13.png": {
+      "sha256": "7e5fc501a031dc26a40c52715084f70071d641b3d5b8380a33aebd8ffd8896b1",
+      "bytes": 13157,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-14.png": {
+      "sha256": "24ed698008408cd13c588b971dfaac6606c2bee563cc16592a66cd1e05763491",
+      "bytes": 9306,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-15.png": {
+      "sha256": "b41e02880713e889091fc802b2d68ee143eff8f481164507e6e0c319cb72c0aa",
+      "bytes": 6146,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-16.png": {
+      "sha256": "e8d4c831483d4039adc20ad7d191a489b1af42e78b6170b834703f8cf2f68202",
+      "bytes": 28858,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-17.png": {
+      "sha256": "53a7412dfb98973485b6bba69a6c40cb28b1fab72dab4e436d3a6d7e9aa6c3de",
+      "bytes": 10144,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-18.png": {
+      "sha256": "04ff86cc88c2d183c09416028a80ad91ee5d2f26a9ba36b2195784dc4ca2392a",
+      "bytes": 36393,
+      "size": [
+        512,
+        576
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-19.png": {
+      "sha256": "7cc7e93ee0c9906894c3e493ca88cbb4979558cd3c5a7126555590918d149b8b",
+      "bytes": 14563,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-20.png": {
+      "sha256": "9a25924ace5996e2869d01acfb235dbbd843bd1e9d50f024f36f806c41b68bd7",
+      "bytes": 15477,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-21.png": {
+      "sha256": "8abb8c9c0aa0f2fccb0bfafcb2c2acaa245517fc88557875e739293f19710c8f",
+      "bytes": 30056,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-22.png": {
+      "sha256": "5f18ab51a5db6e8d65285a9f3de74693db51b9960ed920fef304263b7e2ee75f",
+      "bytes": 35506,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-23.png": {
+      "sha256": "fa54ba8c37cf64935f34f697f77ef192f5f35e5f0a4eca9d13a2aa2f3a951249",
+      "bytes": 16942,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-24.png": {
+      "sha256": "a721ff13a3c1932243c8858200044fe080fb9ccb3bf3f6f32b30f5e475ef28ed",
+      "bytes": 4401,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-25.png": {
+      "sha256": "281482b78c02d63a6d465aeb9129ebdd85786a3ee466d24ef83f89850df303e3",
+      "bytes": 13442,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-26.png": {
+      "sha256": "9c4e03077169cd6d5a55afc203daaf81db4002cca5502745e63aa6002cdeb756",
+      "bytes": 14034,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-27.png": {
+      "sha256": "03e20f5111740e646662b524322af4eb94cfa56f5d1d3c6e8ad7faae7e9df103",
+      "bytes": 34311,
+      "size": [
+        512,
+        544
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-28.png": {
+      "sha256": "ace29742d726c4b34a2c8fa0e336a1d8633bc686ff6ac56f4396ba55b9571673",
+      "bytes": 30796,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-29.png": {
+      "sha256": "9c9b030169fed566b9cb3230ab667d0f59e92565357d5f2dd5ccde44a95c9f0a",
+      "bytes": 34884,
+      "size": [
+        512,
+        544
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-30.png": {
+      "sha256": "fd2f870b0602606d93d8c0373f70264658fc9439b2a94ca8fd2054d22b9757b2",
+      "bytes": 15873,
+      "size": [
+        512,
+        352
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-31.png": {
+      "sha256": "9864c75f56898a71c2632a965afc4d6e4aa6f4d41d2122aeb8c4a4f2e0354ea9",
+      "bytes": 19100,
+      "size": [
+        512,
+        416
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-32.png": {
+      "sha256": "4a05e0eb10dfd3fffec4fbce611e8a77f71de623c51c196cbb8aaef5f56b2d46",
+      "bytes": 7237,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-33.png": {
+      "sha256": "e0995baf726e4f51234c9533d250876755b2bbe0c2941ae4c52bd6b460096e51",
+      "bytes": 20654,
+      "size": [
+        512,
+        416
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-34.png": {
+      "sha256": "0c4743fcf95e847b642e2943bae5a0de8f23f8cd3b970b74c1313b1088fb8023",
+      "bytes": 7074,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-35.png": {
+      "sha256": "18d8c0a03dd4a3e64ed57593afac1c6a6af2a758b462596d2e82bc34d8512616",
+      "bytes": 15593,
+      "size": [
+        512,
+        288
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-36.png": {
+      "sha256": "509eb3580433d5672c097b98dfd800de2ccc0a0a1afca45237364d7c252f5486",
+      "bytes": 12810,
+      "size": [
+        512,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-37.png": {
+      "sha256": "bbb19f225a8fdc8bc6274415b14196ed322b0ab99237ec4e62e0dd111b74ed76",
+      "bytes": 14640,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-38.png": {
+      "sha256": "19eb1a008f12aa5186ac347e1057afbfec53fa16e203c7e6004acded4fe3d584",
+      "bytes": 16094,
+      "size": [
+        512,
+        320
+      ]
+    },
+    "assets/tilesets/original/plaza-drone-39.png": {
+      "sha256": "936859d516d255ab9eb530df4577df27a677a584a86d386e086b1e7026c84407",
+      "bytes": 6414,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-fleet-camera.png": {
+      "sha256": "24e1fb8d757c08aefc12e6f7e27b8103f8a20b55811c26edd4081f48bd529cb0",
+      "bytes": 51568,
+      "size": [
+        512,
+        352
+      ]
+    },
+    "assets/tilesets/original/plaza-fleet-delivery.png": {
+      "sha256": "caf13a85f2e813a64354e823f14ba8f0b027c1df13a60d481a6659d63d1fce57",
+      "bytes": 38760,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/plaza-fleet-survey.png": {
+      "sha256": "b391c29129d863be52d51ec529431bcb837c911cd9706042e863c5e02776863e",
+      "bytes": 38003,
+      "size": [
+        512,
+        544
+      ]
+    },
+    "assets/tilesets/original/plaza-fountain-water-upper.png": {
+      "sha256": "3ec4cc3d4506e47c53b83c75bebf5441d3bc74b0ebf057ebdd2076aca824d5b8",
+      "bytes": 4351,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-fountain-water.png": {
+      "sha256": "7119cfdad059c57204ca54e171228aeec2acef3a2e0a0ca91825de74248182e6",
+      "bytes": 10185,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-fountain.png": {
+      "sha256": "cec850cca9c6f9e1e2c523314105dc201500d8009db29e15022e8fc382d97af4",
+      "bytes": 27707,
+      "size": [
+        128,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-garden.png": {
+      "sha256": "d596b52d98bd34085f5a7655b5156430f22e12d2d29a7d06ad4d129d0f834e6f",
+      "bytes": 96180,
+      "size": [
+        256,
+        256
+      ]
+    },
+    "assets/tilesets/original/plaza-grass.png": {
+      "sha256": "39d3d490995a1bb14f9c2a5746236304f54d40028f99c57cdf48571828f836f3",
+      "bytes": 9677,
+      "size": [
+        64,
+        64
+      ]
+    },
+    "assets/tilesets/original/plaza-lamp.png": {
+      "sha256": "6ef8f70c29743dc6eddf4387f8be88d34505908b353ebdbb52fda9975405fd44",
+      "bytes": 3316,
+      "size": [
+        32,
+        96
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-arrival-east.png": {
+      "sha256": "125c77f0987f19e33aaaa22532120c229ce9985cbbee42a1db52e8899f5aa733",
+      "bytes": 137052,
+      "size": [
+        512,
+        1088
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-arrival-west.png": {
+      "sha256": "bb23487952e118ef0d4598b61e27cfa5ef90ea5426f6c52f916d24214bbdce4a",
+      "bytes": 141064,
+      "size": [
+        512,
+        1088
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-east.png": {
+      "sha256": "88f2e5bce8a6310f001d2b4e2a38285d874ec90d70cff6f007f8526d5884405f",
+      "bytes": 138292,
+      "size": [
+        512,
+        1088
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-north.png": {
+      "sha256": "700d1c4dec829c8e98ce02738546d0010c8bbf61db63f5bbd25102624db8d26b",
+      "bytes": 137845,
+      "size": [
+        512,
+        1152
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-south.png": {
+      "sha256": "e1ce04ab552ad9845a45d0c2ab3bbf6d5b924778a070912f42ba282d23667588",
+      "bytes": 135369,
+      "size": [
+        512,
+        1120
+      ]
+    },
+    "assets/tilesets/original/plaza-patrol-west.png": {
+      "sha256": "824c8e2cda9d19517a05d93a91d399c8edabfcfb2226b5dd875ba4967cf90e70",
+      "bytes": 133861,
+      "size": [
+        512,
+        1056
+      ]
+    },
+    "assets/tilesets/original/plaza-pots.png": {
+      "sha256": "e6eec9d2def5dcdacd07f11b1b2bba7d1800bd95cdb6d5ef057fdbc944ae3b5e",
+      "bytes": 8153,
+      "size": [
+        128,
+        64
+      ]
+    },
+    "assets/tilesets/original/roadster-v2.png": {
+      "sha256": "e7d1e60509d55e2e78bf71eb6108b307716dd25a24f008837df2fc5f6e494802",
+      "bytes": 965696,
+      "size": [
+        512,
+        2016
+      ]
+    },
+    "assets/tilesets/original/rolling-breaker.png": {
+      "sha256": "b5dfc39c8e7a6a1fb4963f3a1b7531ab1cdd107356bba7cf60fd5fb8d3118503",
+      "bytes": 16268,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "assets/tilesets/original/ship-interior.png": {
+      "sha256": "7db4e97ffa6233fdf44a568aa57b5f840c9fc86112d4bffe26de907055dd9415",
+      "bytes": 5416,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/speaker-room-style.png": {
+      "sha256": "b7dab480865258feb6d296febc4fbf70daabe4a56dd3f07f348bbce637189a9e",
+      "bytes": 551,
+      "size": [
+        32,
+        224
+      ]
+    },
+    "assets/tilesets/original/standing-captions.png": {
+      "sha256": "de6b571512062a4802da518befef1ce0367a4f07cc73e03ea485d09cd1e0117b",
+      "bytes": 2531,
+      "size": [
+        512,
+        192
+      ]
+    },
+    "assets/tilesets/original/tropical-cove-coast.png": {
+      "sha256": "757c441e158e8206bb2570f6f737bc28420dd90a1d64761f5ca9de8a15d1deb8",
+      "bytes": 190621,
+      "size": [
+        2048,
+        640
+      ]
+    },
+    "assets/tilesets/original/vibecode-expo-captions.png": {
+      "sha256": "b8e0f49e56243b7ec94edae1b6acb6c8d9e77555c5f17bcfaf30647d4fc8ae5e",
+      "bytes": 3374,
+      "size": [
+        512,
+        128
+      ]
+    },
+    "assets/tilesets/original/wayfinding.png": {
+      "sha256": "49d6e41eda5742ba27e16f027551aa324a1f2fbbd5b2540eb58a417bf0502cae",
+      "bytes": 963,
+      "size": [
+        256,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-air-district-device-1.png": {
+      "sha256": "2d38cf745215eb3870e8cf36a28b2abcded768a26cc1d427cfcf7626362101b2",
+      "bytes": 1872,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-air-district-lamp-2.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-campus-exploration-device-1.png": {
+      "sha256": "e47dce3d1bc6d122903babae5d3a3f3abf943dccf189300b0ab01d7022012e67",
+      "bytes": 2126,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-campus-exploration-leaves-2.png": {
+      "sha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "bytes": 4535,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-comet-maze-lamp-1.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-comet-maze-lamp-2.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-earth-district-device-1.png": {
+      "sha256": "2d38cf745215eb3870e8cf36a28b2abcded768a26cc1d427cfcf7626362101b2",
+      "bytes": 1872,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-earth-district-lamp-2.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fa-ship-fish-2.png": {
+      "sha256": "e3962e360787020b5064f930cf4dc8b5b8916de7fcaaa211495f9585c21a4340",
+      "bytes": 104213,
+      "size": [
+        512,
+        480
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fa-ship-gull-1.png": {
+      "sha256": "711e93790792c1214e66fcf3dd15fbc9d718be74cec8f8dec974d1b313c6dcdb",
+      "bytes": 13375,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fa-ship-interior-lamp-2.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fa-ship-interior-steam-1-upper.png": {
+      "sha256": "5b8548f4d53e683e5344a230c2f982eea4c3b3ce34ca355d1f51bc822e3cf391",
+      "bytes": 4610,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fa-ship-interior-steam-1.png": {
+      "sha256": "2ed25ae50464b51b072716e760051a39d83297832c1429e28a1e90a5d55ac575",
+      "bytes": 497,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fire-district-heat-1.png": {
+      "sha256": "c79ee002793d0027d30f664539d6426a2da0519066f55c2e0c80bc2bd0ebf667",
+      "bytes": 774,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-fire-district-steam-2.png": {
+      "sha256": "a3c4667adf3092082181383001c787e311c1bf938613589af3fa924de19454f2",
+      "bytes": 4745,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-hidden-observatory-device-2.png": {
+      "sha256": "2d38cf745215eb3870e8cf36a28b2abcded768a26cc1d427cfcf7626362101b2",
+      "bytes": 1872,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-hidden-observatory-instrument-1.png": {
+      "sha256": "1ac3c89ea333953ae7dd0a5526ee84dab267e97510e30facc79b8bd953e259af",
+      "bytes": 1441,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-moon-cafe-bubbles-2.png": {
+      "sha256": "de6a90d953586da280bbb9ceb8bc6024296e20ad5b4205192deae824982c5aca",
+      "bytes": 2573,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-moon-cafe-steam-1.png": {
+      "sha256": "a3c4667adf3092082181383001c787e311c1bf938613589af3fa924de19454f2",
+      "bytes": 4745,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-moon-grotto-crystal-2.png": {
+      "sha256": "113fa5739193146bc5460e782d15645f3038c46781a56ec1689fdf0744143d19",
+      "bytes": 1493,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-moon-grotto-ripples-1.png": {
+      "sha256": "65b778b9c054fbe651c3e0c55c821a5156ff341d023623bc13400cb53bc888b4",
+      "bytes": 11037,
+      "size": [
+        512,
+        128
+      ]
+    },
+    "assets/tilesets/original/world-ambient-nebula-arcade-device-1.png": {
+      "sha256": "5d9673fd818835c3bfa95c62856f5e78438ba85083e655eeab77b8578bc76578",
+      "bytes": 2886,
+      "size": [
+        512,
+        96
+      ]
+    },
+    "assets/tilesets/original/world-ambient-nebula-arcade-device-2.png": {
+      "sha256": "c9ed76ab2c00379819896bdb40ce08896ada94ff85ebfc8bbe327abced814911",
+      "bytes": 2791,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-nebula-arcade-device-3.png": {
+      "sha256": "c9ed76ab2c00379819896bdb40ce08896ada94ff85ebfc8bbe327abced814911",
+      "bytes": 2791,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-orbit-maze-lamp-1.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-orbit-maze-lamp-2.png": {
+      "sha256": "e39a37618fb83127bcdb1527c7441d0858ad37f2c0cbdd2f572dd213b2024a4c",
+      "bytes": 1055,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-orbit-playground-device-1.png": {
+      "sha256": "b8e512c6b57ed7eea65516bf123cb92d15f5cf6ed60ffd84d381bc2e7d3e03e2",
+      "bytes": 2010,
+      "size": [
+        512,
+        32
+      ]
+    },
+    "assets/tilesets/original/world-ambient-orbit-playground-leaves-2.png": {
+      "sha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "bytes": 4535,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-plants.png": {
+      "sha256": "4fa0fa471186b1b0725ac10a914bd9104df86e7382b2ec4f233da547dee44f11",
+      "bytes": 16885,
+      "size": [
+        96,
+        96
+      ]
+    },
+    "assets/tilesets/original/world-ambient-star-garden-leaves-2.png": {
+      "sha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "bytes": 4535,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-star-garden-ripples-1.png": {
+      "sha256": "65b778b9c054fbe651c3e0c55c821a5156ff341d023623bc13400cb53bc888b4",
+      "bytes": 11037,
+      "size": [
+        512,
+        128
+      ]
+    },
+    "assets/tilesets/original/world-ambient-stargazer-terrace-instrument-1.png": {
+      "sha256": "1ac3c89ea333953ae7dd0a5526ee84dab267e97510e30facc79b8bd953e259af",
+      "bytes": 1441,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-stargazer-terrace-leaves-2.png": {
+      "sha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "bytes": 4535,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-water-district-cascade-2.png": {
+      "sha256": "08cbd15abd22f198016ea4d24b66bc7c9fcab8281a991c2e6feb766594962513",
+      "bytes": 3376,
+      "size": [
+        512,
+        64
+      ]
+    },
+    "assets/tilesets/original/world-ambient-water-district-ripples-1.png": {
+      "sha256": "06801521b7d73b2738180f6311e86df65cab56a5b9aaf0f1147c9b9d96df16fb",
+      "bytes": 11169,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-zodiac-festival-park-leaves-2.png": {
+      "sha256": "aee25a59463b1155fe9ceb448468deb852bf86aceb081bf5ec35d072a1d9ada4",
+      "bytes": 4535,
+      "size": [
+        512,
+        160
+      ]
+    },
+    "assets/tilesets/original/world-ambient-zodiac-festival-park-ripples-1.png": {
+      "sha256": "e91ea82ffc34e7c9faa343ecef108d3b1d1e5d56f3d3d70925ace5d9ac9dff13",
+      "bytes": 11424,
+      "size": [
+        512,
+        224
+      ]
+    },
+    "assets/tilesets/original/zodiac-emblems.png": {
+      "sha256": "da65988d7efc69908599c6a8a2077d2172664af5f6a0be68384b8edd5cf87372",
+      "bytes": 115474,
+      "size": [
+        512,
+        384
+      ]
+    },
+    "assets/tilesets/original/zodiac-exteriors.png": {
+      "sha256": "fa54c55447d267b205bab262cf3eb5066e5827cbcd904d6c354fd684de056e8e",
+      "bytes": 3855621,
+      "size": [
+        1536,
+        1152
+      ]
+    },
+    "assets/tilesets/original/zodiac-ground-names.png": {
+      "sha256": "a00bba247dcc36b3fbc5c856325d7c8db05beec0d702f4bdea726a7dc4cdf9eb",
+      "bytes": 6992,
+      "size": [
+        384,
+        768
+      ]
+    },
+    "assets/tilesets/original/zodiac.png": {
+      "sha256": "57f9ef9d8144db965139a9e135fefd887f22792fed511534ddabee5f583fa63a",
+      "bytes": 9070,
+      "size": [
+        512,
+        288
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Decoration.png": {
+      "sha256": "4db175d47f79fb6a0f3ecf71decc3f39fc996478c25bd1006b72d720b04d5363",
+      "bytes": 21769,
+      "size": [
+        384,
+        256
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Exterior.png": {
+      "sha256": "68ed8f71b29edc0f4b5b6c06c9e1a815d394df28dbd7511afbc97d561868796f",
+      "bytes": 363684,
+      "size": [
+        800,
+        1088
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Other_Furniture.png": {
+      "sha256": "c5e5addd7bcf6937aa5d285c2149b05ed92ef981174d1c53c842ee221a8bb528",
+      "bytes": 45519,
+      "size": [
+        384,
+        416
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Room_Builder.png": {
+      "sha256": "b2f0881def83c4a27a0a5f51738eb5e448c3ad139afc3196748581b5b5b66a02",
+      "bytes": 45203,
+      "size": [
+        800,
+        1280
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Seats.png": {
+      "sha256": "f45b53f2e5326060008ba10ec1a854d1375cad85e805687b6330172e42df0c12",
+      "bytes": 24730,
+      "size": [
+        416,
+        448
+      ]
+    },
+    "assets/tilesets/workadventure/WA_Tables.png": {
+      "sha256": "9f952c50e2a385dc84083c60c4904e9d33d855e0db9d3431fc038476a66f86d8",
+      "bytes": 38327,
+      "size": [
+        320,
+        864
+      ]
+    }
+  },
+  "usedSprites": {
+    "floor-charcoal": 273,
+    "floor-blue": 164,
+    "floor-inlay": 525,
+    "wall-charcoal": 178,
+    "wall-navy": 119,
+    "door-open": 35,
+    "rune-threshold": 52,
+    "window-white": 44,
+    "light-amber": 105,
+    "quest-shrine": 7,
+    "sigil-air": 5,
+    "constellation-gemini": 2,
+    "constellation-libra": 2,
+    "table-circular": 10,
+    "chair-lounge": 7,
+    "screen-content": 13,
+    "light-cyan": 52,
+    "desk-coding": 24,
+    "laptop": 35,
+    "chair-north-slate": 134,
+    "chair-north-cream": 105,
+    "lounge-crescent": 7,
+    "table-small-white": 22,
+    "bookcase": 24,
+    "water-cooler": 18,
+    "sign-board-face": 47,
+    "sign-board-north": 47,
+    "sign-board-south": 47,
+    "sign-board-west": 47,
+    "sign-board-east": 47,
+    "arrow-south": 39,
+    "path-stone": 1033,
+    "floor-cosmic": 38,
+    "screen-wide": 1,
+    "console-keypad": 1,
+    "world-ambient-plant-palm": 20,
+    "plaza-grass-01": 1091,
+    "plaza-flower-bed": 35,
+    "plaza-tree-flowering": 33,
+    "arrow-north": 22,
+    "arrow-west": 7,
+    "arrow-east": 8,
+    "plaza-grass-04": 1104,
+    "plaza-grass-02": 1143,
+    "plaza-grass-03": 1141,
+    "maze-solid": 26,
+    "gate-header-face": 10,
+    "gate-window-left": 16,
+    "gate-window-right": 16,
+    "forge-wall-relief": 2,
+    "floor-wood": 43,
+    "water-wall": 4,
+    "floor-wood-long": 29,
+    "coffee-maker": 3,
+    "plant-flower": 7,
+    "crystal-cyan": 13,
+    "plaza-tree-round": 28,
+    "telescope": 4,
+    "sigil-water": 4,
+    "sigil-fire": 4,
+    "constellation-pisces": 5,
+    "bench-curved": 14,
+    "sofa-blue": 15,
+    "table-small-wood": 12,
+    "gate-post-west": 2,
+    "gate-post-east": 2,
+    "gate-beam": 2,
+    "maze-wall-rim": 458,
+    "naval-water-0": 1619,
+    "naval-water-1": 1606,
+    "naval-water-2": 1606,
+    "constellation-coast-water-0": 1,
+    "constellation-coast-water-4": 1,
+    "constellation-coast-water-8": 1,
+    "constellation-coast-water-12": 1,
+    "constellation-coast-water-16": 1,
+    "constellation-coast-water-20": 1,
+    "constellation-coast-water-24": 1,
+    "constellation-coast-land-28": 1,
+    "constellation-coast-land-32": 1,
+    "constellation-coast-land-36": 1,
+    "constellation-coast-water-40": 1,
+    "constellation-coast-water-44": 1,
+    "constellation-coast-water-48": 1,
+    "constellation-coast-land-52": 1,
+    "constellation-coast-land-56": 1,
+    "beach-sand-13": 71,
+    "constellation-coast-land-60": 1,
+    "constellation-coast-land-64": 1,
+    "constellation-coast-water-68": 1,
+    "constellation-coast-water-72": 1,
+    "constellation-coast-land-76": 1,
+    "constellation-coast-land-80": 1,
+    "beach-sand-1": 73,
+    "beach-sand-8": 74,
+    "beach-sand-15": 73,
+    "constellation-coast-land-84": 1,
+    "constellation-coast-water-88": 1,
+    "constellation-coast-water-92": 1,
+    "constellation-coast-water-96": 1,
+    "constellation-coast-land-100": 1,
+    "beach-sand-5": 73,
+    "beach-sand-12": 75,
+    "beach-sand-3": 72,
+    "beach-sand-10": 73,
+    "constellation-coast-land-104": 1,
+    "constellation-coast-land-108": 1,
+    "constellation-coast-water-112": 1,
+    "constellation-coast-water-116": 1,
+    "constellation-coast-water-120": 1,
+    "constellation-coast-land-124": 1,
+    "beach-sand-0": 72,
+    "beach-sand-7": 69,
+    "beach-sand-14": 74,
+    "constellation-coast-land-128": 1,
+    "constellation-coast-water-132": 1,
+    "constellation-coast-water-136": 1,
+    "constellation-coast-land-140": 1,
+    "constellation-coast-land-144": 1,
+    "beach-sand-11": 71,
+    "beach-sand-2": 70,
+    "beach-sand-9": 69,
+    "constellation-coast-land-148": 1,
+    "constellation-coast-water-152": 1,
+    "constellation-coast-water-156": 1,
+    "constellation-coast-water-160": 1,
+    "constellation-coast-land-164": 1,
+    "beach-sand-6": 67,
+    "beach-sand-4": 69,
+    "constellation-coast-land-168": 1,
+    "constellation-coast-water-172": 1,
+    "constellation-coast-water-176": 1,
+    "constellation-coast-water-180": 1,
+    "constellation-coast-water-184": 1,
+    "constellation-coast-water-188": 1,
+    "constellation-coast-land-192": 1,
+    "constellation-coast-land-196": 1,
+    "constellation-coast-land-200": 1,
+    "constellation-coast-water-204": 1,
+    "constellation-coast-water-208": 1,
+    "constellation-coast-water-212": 1,
+    "constellation-coast-water-216": 1,
+    "constellation-coast-water-220": 1,
+    "constellation-coast-water-224": 1,
+    "constellation-coast-water-228": 1,
+    "constellation-coast-water-232": 1,
+    "constellation-coast-water-236": 1,
+    "constellation-coast-water-240": 1,
+    "constellation-coast-water-244": 1,
+    "constellation-coast-land-248": 1,
+    "constellation-coast-land-252": 1,
+    "constellation-coast-land-256": 1,
+    "constellation-coast-land-260": 1,
+    "constellation-coast-land-264": 1,
+    "constellation-coast-water-268": 1,
+    "constellation-coast-water-272": 1,
+    "constellation-coast-water-276": 1,
+    "constellation-coast-water-280": 1,
+    "constellation-coast-land-284": 1,
+    "constellation-coast-land-288": 1,
+    "constellation-coast-land-292": 1,
+    "constellation-coast-water-296": 1,
+    "constellation-coast-water-300": 1,
+    "constellation-coast-water-304": 1,
+    "constellation-coast-water-308": 1,
+    "constellation-coast-water-312": 1,
+    "constellation-coast-water-316": 1,
+    "constellation-coast-water-320": 1,
+    "constellation-coast-water-324": 1,
+    "constellation-coast-land-328": 1,
+    "constellation-coast-land-332": 1,
+    "constellation-coast-land-336": 1,
+    "constellation-coast-land-340": 1,
+    "constellation-coast-land-344": 1,
+    "constellation-coast-land-348": 1,
+    "constellation-coast-land-352": 1,
+    "constellation-coast-land-356": 1,
+    "constellation-coast-land-360": 1,
+    "constellation-coast-land-364": 1,
+    "constellation-coast-land-368": 1,
+    "constellation-coast-land-372": 1,
+    "constellation-coast-water-376": 1,
+    "constellation-coast-water-380": 1,
+    "constellation-coast-water-384": 1,
+    "constellation-coast-water-388": 1,
+    "constellation-coast-land-392": 1,
+    "constellation-coast-water-396": 1,
+    "constellation-coast-land-400": 1,
+    "constellation-coast-land-404": 1,
+    "constellation-coast-land-408": 1,
+    "constellation-coast-land-412": 1,
+    "constellation-coast-land-416": 1,
+    "constellation-coast-land-420": 1,
+    "constellation-coast-land-424": 1,
+    "constellation-coast-land-428": 1,
+    "constellation-coast-water-432": 1,
+    "constellation-coast-water-436": 1,
+    "constellation-coast-land-440": 1,
+    "constellation-coast-land-444": 1,
+    "constellation-coast-land-448": 1,
+    "constellation-coast-land-452": 1,
+    "constellation-coast-land-456": 1,
+    "constellation-coast-land-460": 1,
+    "constellation-coast-water-464": 1,
+    "constellation-coast-water-468": 1,
+    "constellation-coast-water-472": 1,
+    "constellation-coast-land-476": 1,
+    "constellation-coast-land-480": 1,
+    "constellation-coast-water-484": 1,
+    "constellation-coast-water-488": 1,
+    "constellation-coast-land-492": 1,
+    "constellation-coast-land-496": 1,
+    "constellation-coast-land-500": 1,
+    "constellation-coast-water-504": 1,
+    "constellation-coast-water-508": 1,
+    "constellation-coast-water-512": 1,
+    "constellation-coast-land-516": 1,
+    "constellation-coast-land-520": 1,
+    "constellation-coast-land-524": 1,
+    "constellation-coast-water-528": 1,
+    "constellation-coast-water-532": 1,
+    "constellation-coast-land-536": 1,
+    "constellation-coast-land-540": 1,
+    "constellation-coast-water-544": 1,
+    "constellation-coast-water-548": 1,
+    "constellation-coast-land-552": 1,
+    "constellation-coast-land-556": 1,
+    "constellation-coast-land-560": 1,
+    "constellation-coast-water-564": 1,
+    "constellation-coast-water-568": 1,
+    "constellation-coast-land-572": 1,
+    "constellation-coast-land-576": 1,
+    "constellation-coast-water-580": 1,
+    "constellation-coast-water-584": 1,
+    "constellation-coast-water-588": 1,
+    "constellation-coast-land-592": 1,
+    "constellation-coast-land-596": 1,
+    "constellation-coast-land-600": 1,
+    "constellation-coast-land-604": 1,
+    "constellation-coast-water-608": 1,
+    "constellation-coast-water-612": 1,
+    "constellation-coast-land-616": 1,
+    "constellation-coast-land-620": 1,
+    "constellation-coast-land-624": 1,
+    "constellation-coast-water-628": 1,
+    "constellation-coast-water-632": 1,
+    "constellation-coast-land-636": 1,
+    "constellation-coast-land-640": 1,
+    "constellation-coast-water-644": 1,
+    "constellation-coast-water-648": 1,
+    "constellation-coast-land-652": 1,
+    "constellation-coast-land-656": 1,
+    "constellation-coast-water-660": 1,
+    "constellation-coast-water-664": 1,
+    "constellation-coast-land-668": 1,
+    "constellation-coast-land-672": 1,
+    "constellation-coast-land-676": 1,
+    "constellation-coast-land-680": 1,
+    "constellation-coast-land-684": 1,
+    "constellation-coast-land-688": 1,
+    "constellation-coast-water-692": 1,
+    "constellation-coast-water-696": 1,
+    "constellation-coast-land-700": 1,
+    "constellation-coast-land-704": 1,
+    "constellation-coast-land-708": 1,
+    "constellation-coast-water-712": 1,
+    "constellation-coast-water-716": 1,
+    "constellation-coast-land-720": 1,
+    "constellation-coast-land-724": 1,
+    "constellation-coast-land-728": 1,
+    "constellation-coast-land-732": 1,
+    "constellation-coast-water-736": 1,
+    "constellation-coast-water-740": 1,
+    "constellation-coast-water-744": 1,
+    "constellation-coast-land-748": 1,
+    "constellation-coast-land-752": 1,
+    "constellation-coast-land-756": 1,
+    "constellation-coast-land-760": 1,
+    "constellation-coast-water-764": 1,
+    "constellation-coast-water-768": 1,
+    "constellation-coast-water-772": 1,
+    "constellation-coast-water-776": 1,
+    "constellation-coast-water-780": 1,
+    "constellation-coast-land-784": 1,
+    "constellation-coast-land-788": 1,
+    "constellation-coast-land-792": 1,
+    "constellation-coast-land-796": 1,
+    "constellation-coast-water-800": 1,
+    "constellation-coast-water-804": 1,
+    "constellation-coast-water-808": 1,
+    "constellation-coast-land-812": 1,
+    "constellation-coast-land-816": 1,
+    "constellation-coast-land-820": 1,
+    "constellation-coast-land-824": 1,
+    "constellation-coast-water-828": 1,
+    "constellation-coast-water-832": 1,
+    "constellation-coast-water-836": 1,
+    "constellation-coast-water-840": 1,
+    "constellation-coast-land-844": 1,
+    "constellation-coast-land-848": 1,
+    "constellation-coast-water-852": 1,
+    "constellation-coast-water-856": 1,
+    "constellation-coast-water-860": 1,
+    "constellation-coast-land-864": 1,
+    "constellation-coast-land-868": 1,
+    "constellation-coast-land-872": 1,
+    "constellation-coast-land-876": 1,
+    "constellation-coast-water-880": 1,
+    "constellation-coast-water-884": 1,
+    "constellation-coast-water-888": 1,
+    "constellation-coast-water-892": 1,
+    "constellation-coast-land-896": 1,
+    "constellation-coast-land-900": 1,
+    "constellation-coast-land-904": 1,
+    "constellation-coast-land-908": 1,
+    "constellation-coast-water-912": 1,
+    "constellation-coast-water-916": 1,
+    "constellation-coast-land-920": 1,
+    "constellation-coast-land-924": 1,
+    "constellation-coast-water-928": 1,
+    "constellation-coast-water-932": 1,
+    "constellation-coast-water-936": 1,
+    "constellation-coast-water-940": 1,
+    "constellation-coast-land-944": 1,
+    "constellation-coast-land-948": 1,
+    "constellation-coast-water-952": 1,
+    "constellation-coast-water-956": 1,
+    "constellation-coast-water-960": 1,
+    "constellation-coast-land-964": 1,
+    "constellation-coast-land-968": 1,
+    "constellation-coast-land-972": 1,
+    "constellation-coast-land-976": 1,
+    "constellation-coast-water-980": 1,
+    "constellation-coast-water-984": 1,
+    "constellation-coast-land-988": 1,
+    "constellation-coast-land-992": 1,
+    "constellation-coast-land-996": 1,
+    "constellation-coast-water-1000": 1,
+    "constellation-coast-water-1004": 1,
+    "constellation-coast-water-1008": 1,
+    "constellation-coast-land-1012": 1,
+    "constellation-coast-land-1016": 1,
+    "constellation-coast-water-1020": 1,
+    "constellation-coast-water-1024": 1,
+    "constellation-coast-land-1028": 1,
+    "constellation-coast-land-1032": 1,
+    "constellation-coast-land-1036": 1,
+    "constellation-coast-land-1040": 1,
+    "constellation-coast-water-1044": 1,
+    "constellation-coast-water-1048": 1,
+    "constellation-coast-land-1052": 1,
+    "constellation-coast-land-1056": 1,
+    "constellation-coast-land-1060": 1,
+    "constellation-coast-water-1064": 1,
+    "constellation-coast-water-1068": 1,
+    "constellation-coast-water-1072": 1,
+    "constellation-coast-water-1076": 1,
+    "constellation-coast-land-1080": 1,
+    "constellation-coast-land-1084": 1,
+    "constellation-coast-land-1088": 1,
+    "constellation-coast-land-1092": 1,
+    "constellation-coast-water-1096": 1,
+    "constellation-coast-water-1100": 1,
+    "constellation-coast-water-1104": 1,
+    "constellation-coast-water-1108": 1,
+    "constellation-coast-land-1112": 1,
+    "constellation-coast-land-1116": 1,
+    "constellation-coast-land-1120": 1,
+    "constellation-coast-water-1124": 1,
+    "constellation-coast-water-1128": 1,
+    "constellation-coast-water-1132": 1,
+    "constellation-coast-water-1136": 1,
+    "constellation-coast-land-1140": 1,
+    "constellation-coast-land-1144": 1,
+    "constellation-coast-land-1148": 1,
+    "constellation-coast-land-1152": 1,
+    "constellation-coast-water-1156": 1,
+    "constellation-coast-water-1160": 1,
+    "constellation-coast-water-1164": 1,
+    "constellation-coast-water-1168": 1,
+    "constellation-coast-water-1172": 1,
+    "constellation-coast-water-1176": 1,
+    "constellation-coast-water-1180": 1,
+    "constellation-coast-water-1184": 1,
+    "constellation-coast-water-1188": 1,
+    "constellation-coast-water-1192": 1,
+    "constellation-coast-water-1196": 1,
+    "constellation-coast-water-1200": 1,
+    "constellation-coast-water-1204": 1,
+    "constellation-coast-water-1208": 1,
+    "coast-dock-plank": 3,
+    "beach-sea-veil": 4455,
+    "coast-life-coast-palm": 5,
+    "coast-life-solid-coast-parasol": 3,
+    "coast-life-solid-coast-deck-chair": 4,
+    "coast-life-coast-towel": 4,
+    "coast-life-solid-coast-beach-bar": 1,
+    "coast-life-solid-coast-sandcastle": 1,
+    "coast-life-solid-coast-volley-net": 1,
+    "coast-life-coast-mooring-post": 4,
+    "coast-life-coast-shell": 4,
+    "coast-life-boat-wood": 4,
+    "solid-coast-sign-board": 9,
+    "coast-life-coast-underwater-rock": 4,
+    "coast-life-coast-footprints": 7,
+    "coast-life-coast-pebble-cluster": 4,
+    "solid-coast-sign-post": 12,
+    "coast-sign-pointer-left": 1,
+    "coast-sign-pointer-right": 1,
+    "sigil-earth": 3,
+    "constellation-taurus": 2,
+    "constellation-virgo": 2,
+    "desk-cream": 7,
+    "sofa-cream": 15,
+    "coast-deck-plank": 7,
+    "naval-dock": 7,
+    "naval-lpc-ship-488-belowAvatar": 52,
+    "naval-lpc-ship-519-belowAvatar": 46,
+    "naval-lpc-ship-520-belowAvatar": 28,
+    "naval-lpc-ship-551-belowAvatar": 30,
+    "naval-lpc-ship-552-belowAvatar": 40,
+    "naval-lpc-ship-487-belowAvatar": 66,
+    "naval-ship-cannon-16-belowAvatar": 2,
+    "naval-ship-cannon-24-belowAvatar": 4,
+    "naval-lpc-ship-584-belowAvatar": 8,
+    "naval-lpc-ship-583-belowAvatar": 18,
+    "naval-lpc-ship-512-belowAvatar": 2,
+    "naval-lpc-ship-544-belowAvatar": 2,
+    "naval-rigging-678-aboveAvatar": 6,
+    "naval-rigging-679-aboveAvatar": 6,
+    "naval-rigging-680-aboveAvatar": 6,
+    "naval-rigging-710-aboveAvatar": 6,
+    "naval-rigging-711-aboveAvatar": 6,
+    "naval-rigging-712-aboveAvatar": 6,
+    "naval-rigging-742-aboveAvatar": 6,
+    "naval-rigging-743-aboveAvatar": 6,
+    "naval-rigging-744-aboveAvatar": 6,
+    "naval-rigging-774-aboveAvatar": 6,
+    "naval-rigging-775-aboveAvatar": 6,
+    "naval-rigging-776-aboveAvatar": 6,
+    "naval-rigging-806-aboveAvatar": 6,
+    "naval-rigging-807-aboveAvatar": 6,
+    "naval-rigging-808-aboveAvatar": 6,
+    "naval-rigging-838-aboveAvatar": 6,
+    "naval-rigging-839-aboveAvatar": 6,
+    "naval-rigging-840-aboveAvatar": 6,
+    "naval-rigging-870-aboveAvatar": 6,
+    "naval-rigging-871-aboveAvatar": 6,
+    "naval-rigging-872-aboveAvatar": 6,
+    "naval-rigging-902-aboveAvatar": 6,
+    "naval-rigging-903-aboveAvatar": 6,
+    "naval-rigging-904-aboveAvatar": 6,
+    "naval-rigging-934-aboveAvatar": 6,
+    "naval-rigging-935-aboveAvatar": 6,
+    "naval-rigging-936-aboveAvatar": 6,
+    "naval-rigging-966-aboveAvatar": 6,
+    "naval-rigging-967-aboveAvatar": 6,
+    "naval-rigging-968-aboveAvatar": 6,
+    "naval-lpc-ship-71-belowAvatar": 2,
+    "naval-lpc-ship-72-belowAvatar": 10,
+    "naval-lpc-ship-73-belowAvatar": 2,
+    "naval-lpc-ship-431-belowAvatar": 4,
+    "naval-lpc-ship-103-belowAvatar": 2,
+    "naval-lpc-ship-104-belowAvatar": 10,
+    "naval-lpc-ship-105-belowAvatar": 2,
+    "naval-lpc-ship-430-belowAvatar": 2,
+    "naval-lpc-ship-536-belowAvatar": 8,
+    "naval-lpc-ship-499-belowAvatar": 8,
+    "naval-lpc-ship-432-belowAvatar": 2,
+    "naval-lpc-ship-433-belowAvatar": 2,
+    "naval-lpc-ship-463-belowAvatar": 2,
+    "naval-lpc-ship-557-belowAvatar": 2,
+    "naval-lpc-ship-450-belowAvatar": 2,
+    "naval-lpc-ship-451-belowAvatar": 2,
+    "naval-lpc-ship-452-belowAvatar": 2,
+    "naval-lpc-ship-453-belowAvatar": 2,
+    "naval-lpc-ship-454-belowAvatar": 2,
+    "naval-lpc-ship-455-belowAvatar": 2,
+    "naval-lpc-ship-456-belowAvatar": 4,
+    "naval-lpc-ship-457-belowAvatar": 2,
+    "naval-lpc-ship-458-belowAvatar": 6,
+    "naval-lpc-ship-427-belowAvatar": 4,
+    "naval-lpc-ship-460-belowAvatar": 10,
+    "naval-lpc-ship-425-belowAvatar": 2,
+    "naval-lpc-ship-464-belowAvatar": 2,
+    "naval-lpc-ship-accessories-13-belowAvatar": 2,
+    "naval-lpc-ship-109-belowAvatar": 2,
+    "naval-lpc-ship-110-belowAvatar": 2,
+    "naval-lpc-ship-111-belowAvatar": 2,
+    "naval-lpc-ship-112-belowAvatar": 2,
+    "naval-lpc-ship-113-belowAvatar": 2,
+    "naval-lpc-ship-114-belowAvatar": 2,
+    "naval-lpc-ship-481-belowAvatar": 2,
+    "naval-lpc-ship-482-belowAvatar": 2,
+    "naval-lpc-ship-483-belowAvatar": 2,
+    "naval-lpc-ship-484-belowAvatar": 2,
+    "naval-lpc-ship-485-belowAvatar": 2,
+    "naval-lpc-ship-486-belowAvatar": 2,
+    "naval-lpc-ship-489-belowAvatar": 8,
+    "naval-lpc-ship-496-belowAvatar": 6,
+    "naval-lpc-ship-accessories-29-belowAvatar": 2,
+    "naval-lpc-ship-269-belowAvatar": 2,
+    "naval-lpc-ship-141-belowAvatar": 2,
+    "naval-lpc-ship-142-belowAvatar": 2,
+    "naval-lpc-ship-143-belowAvatar": 2,
+    "naval-lpc-ship-144-belowAvatar": 2,
+    "naval-lpc-ship-145-belowAvatar": 2,
+    "naval-lpc-ship-146-belowAvatar": 2,
+    "naval-lpc-ship-513-belowAvatar": 2,
+    "naval-lpc-ship-514-belowAvatar": 2,
+    "naval-lpc-ship-516-belowAvatar": 2,
+    "naval-lpc-ship-517-belowAvatar": 2,
+    "naval-lpc-ship-518-belowAvatar": 2,
+    "naval-lpc-ship-accessories-45-belowAvatar": 2,
+    "naval-lpc-ship-600-belowAvatar": 2,
+    "naval-lpc-ship-593-belowAvatar": 10,
+    "naval-lpc-ship-602-belowAvatar": 2,
+    "naval-lpc-ship-175-belowAvatar": 2,
+    "naval-lpc-ship-176-belowAvatar": 2,
+    "naval-lpc-ship-177-belowAvatar": 2,
+    "naval-lpc-ship-178-belowAvatar": 2,
+    "naval-lpc-ship-545-belowAvatar": 2,
+    "naval-lpc-ship-546-belowAvatar": 2,
+    "naval-lpc-ship-548-belowAvatar": 2,
+    "naval-lpc-ship-549-belowAvatar": 2,
+    "naval-lpc-ship-550-belowAvatar": 2,
+    "naval-lpc-ship-655-belowAvatar": 38,
+    "naval-lpc-ship-648-belowAvatar": 28,
+    "naval-lpc-ship-666-belowAvatar": 4,
+    "naval-lpc-ship-77-belowAvatar": 2,
+    "naval-lpc-ship-206-belowAvatar": 2,
+    "naval-lpc-ship-207-belowAvatar": 2,
+    "naval-lpc-ship-208-belowAvatar": 2,
+    "naval-lpc-ship-209-belowAvatar": 2,
+    "naval-lpc-ship-82-belowAvatar": 2,
+    "naval-lpc-ship-577-belowAvatar": 2,
+    "naval-lpc-ship-578-belowAvatar": 2,
+    "naval-lpc-ship-579-belowAvatar": 2,
+    "naval-lpc-ship-580-belowAvatar": 2,
+    "naval-lpc-ship-581-belowAvatar": 2,
+    "naval-lpc-ship-592-belowAvatar": 2,
+    "naval-lpc-ship-616-belowAvatar": 18,
+    "naval-lpc-ship-698-belowAvatar": 2,
+    "naval-lpc-ship-768-belowAvatar": 2,
+    "naval-lpc-ship-769-belowAvatar": 2,
+    "naval-lpc-ship-610-belowAvatar": 2,
+    "naval-lpc-ship-611-belowAvatar": 2,
+    "naval-lpc-ship-612-belowAvatar": 2,
+    "naval-lpc-ship-613-belowAvatar": 2,
+    "naval-lpc-ship-614-belowAvatar": 2,
+    "naval-lpc-ship-615-belowAvatar": 2,
+    "naval-lpc-ship-617-belowAvatar": 2,
+    "naval-lpc-ship-621-belowAvatar": 4,
+    "naval-lpc-ship-619-belowAvatar": 2,
+    "naval-lpc-ship-340-belowAvatar": 2,
+    "naval-lpc-ship-624-belowAvatar": 2,
+    "naval-lpc-ship-625-belowAvatar": 6,
+    "naval-lpc-ship-631-belowAvatar": 2,
+    "naval-lpc-ship-801-belowAvatar": 2,
+    "naval-lpc-ship-802-belowAvatar": 2,
+    "naval-lpc-ship-803-belowAvatar": 2,
+    "naval-lpc-ship-804-belowAvatar": 2,
+    "naval-lpc-ship-645-belowAvatar": 2,
+    "naval-lpc-ship-646-belowAvatar": 2,
+    "naval-lpc-ship-647-belowAvatar": 2,
+    "naval-lpc-ship-649-belowAvatar": 4,
+    "naval-lpc-ship-652-belowAvatar": 4,
+    "naval-lpc-ship-653-belowAvatar": 4,
+    "naval-lpc-ship-657-belowAvatar": 2,
+    "naval-lpc-ship-660-belowAvatar": 2,
+    "naval-lpc-ship-692-belowAvatar": 2,
+    "naval-lpc-ship-835-belowAvatar": 2,
+    "naval-lpc-ship-836-belowAvatar": 2,
+    "naval-lpc-ship-837-belowAvatar": 2,
+    "naval-lpc-ship-838-belowAvatar": 2,
+    "naval-lpc-ship-839-belowAvatar": 2,
+    "naval-lpc-ship-840-belowAvatar": 36,
+    "naval-lpc-ship-816-belowAvatar": 6,
+    "naval-lpc-ship-817-belowAvatar": 2,
+    "naval-lpc-ship-818-belowAvatar": 2,
+    "naval-lpc-ship-accessories-0-belowAvatar": 4,
+    "naval-lpc-ship-1-belowAvatar": 2,
+    "naval-lpc-ship-2-belowAvatar": 2,
+    "naval-lpc-ship-3-belowAvatar": 2,
+    "naval-lpc-ship-4-belowAvatar": 2,
+    "naval-lpc-ship-5-belowAvatar": 2,
+    "naval-lpc-ship-6-belowAvatar": 2,
+    "naval-lpc-ship-7-belowAvatar": 2,
+    "naval-lpc-ship-8-belowAvatar": 2,
+    "naval-lpc-ship-9-belowAvatar": 2,
+    "naval-lpc-ship-accessories-16-belowAvatar": 4,
+    "naval-lpc-ship-33-belowAvatar": 2,
+    "naval-lpc-ship-34-belowAvatar": 2,
+    "naval-lpc-ship-35-belowAvatar": 2,
+    "naval-lpc-ship-36-belowAvatar": 2,
+    "naval-lpc-ship-37-belowAvatar": 2,
+    "naval-lpc-ship-38-belowAvatar": 2,
+    "naval-lpc-ship-39-belowAvatar": 2,
+    "naval-lpc-ship-40-belowAvatar": 2,
+    "naval-lpc-ship-41-belowAvatar": 2,
+    "naval-lpc-ship-accessories-32-belowAvatar": 4,
+    "naval-lpc-ship-65-belowAvatar": 2,
+    "naval-lpc-ship-66-belowAvatar": 2,
+    "naval-lpc-ship-67-belowAvatar": 2,
+    "naval-lpc-ship-68-belowAvatar": 2,
+    "naval-lpc-ship-69-belowAvatar": 2,
+    "naval-lpc-ship-accessories-169-belowAvatar": 4,
+    "naval-lpc-ship-97-belowAvatar": 2,
+    "naval-lpc-ship-98-belowAvatar": 2,
+    "naval-lpc-ship-accessories-123-belowAvatar": 2,
+    "naval-lpc-ship-accessories-124-belowAvatar": 2,
+    "naval-lpc-ship-accessories-125-belowAvatar": 2,
+    "naval-lpc-ship-accessories-120-belowAvatar": 2,
+    "naval-lpc-ship-accessories-122-belowAvatar": 2,
+    "naval-lpc-ship-accessories-155-belowAvatar": 2,
+    "naval-lpc-ship-accessories-156-belowAvatar": 2,
+    "naval-lpc-ship-accessories-157-belowAvatar": 2,
+    "naval-lpc-ship-accessories-136-belowAvatar": 2,
+    "naval-lpc-ship-accessories-138-belowAvatar": 2,
+    "naval-lpc-ship-accessories-152-belowAvatar": 2,
+    "naval-lpc-ship-accessories-154-belowAvatar": 2,
+    "naval-lpc-ship-accessories-168-belowAvatar": 4,
+    "naval-lpc-ship-accessories-60-belowAvatar": 2,
+    "naval-lpc-ship-accessories-93-belowAvatar": 2,
+    "naval-lpc-ship-accessories-76-belowAvatar": 2,
+    "naval-lpc-ship-accessories-77-belowAvatar": 2,
+    "naval-ship-cannon-8-belowAvatar": 6,
+    "naval-rigging-350-aboveAvatar": 4,
+    "naval-rigging-351-aboveAvatar": 4,
+    "naval-rigging-382-aboveAvatar": 6,
+    "naval-rigging-383-aboveAvatar": 6,
+    "naval-rigging-414-aboveAvatar": 6,
+    "naval-rigging-415-aboveAvatar": 6,
+    "naval-rigging-446-aboveAvatar": 6,
+    "naval-rigging-447-aboveAvatar": 6,
+    "naval-rigging-478-aboveAvatar": 6,
+    "naval-rigging-479-aboveAvatar": 6,
+    "naval-rigging-510-aboveAvatar": 6,
+    "naval-rigging-511-aboveAvatar": 6,
+    "naval-rigging-542-aboveAvatar": 6,
+    "naval-rigging-543-aboveAvatar": 6,
+    "naval-lpc-ship-134-belowAvatar": 8,
+    "naval-lpc-ship-106-belowAvatar": 8,
+    "naval-rigging-574-aboveAvatar": 6,
+    "naval-rigging-575-aboveAvatar": 6,
+    "naval-rigging-606-aboveAvatar": 6,
+    "naval-rigging-607-aboveAvatar": 6,
+    "naval-lpc-ship-accessories-80-belowAvatar": 4,
+    "naval-rigging-670-aboveAvatar": 4,
+    "naval-rigging-671-aboveAvatar": 4,
+    "naval-rigging-638-aboveAvatar": 2,
+    "naval-rigging-639-aboveAvatar": 2,
+    "naval-rigging-702-aboveAvatar": 2,
+    "naval-rigging-703-aboveAvatar": 2,
+    "naval-lpc-ship-135-belowAvatar": 2,
+    "naval-lpc-ship-136-belowAvatar": 10,
+    "naval-lpc-ship-137-belowAvatar": 2,
+    "naval-lpc-ship-129-belowAvatar": 2,
+    "naval-rigging-734-aboveAvatar": 2,
+    "naval-rigging-735-aboveAvatar": 2,
+    "naval-lpc-ship-591-belowAvatar": 4,
+    "naval-lpc-ship-167-belowAvatar": 2,
+    "naval-lpc-ship-168-belowAvatar": 10,
+    "naval-lpc-ship-169-belowAvatar": 2,
+    "naval-lpc-ship-161-belowAvatar": 2,
+    "naval-lpc-ship-162-belowAvatar": 2,
+    "naval-lpc-ship-163-belowAvatar": 2,
+    "naval-rigging-668-aboveAvatar": 2,
+    "naval-rigging-669-aboveAvatar": 2,
+    "naval-rigging-764-aboveAvatar": 4,
+    "naval-rigging-765-aboveAvatar": 4,
+    "naval-lpc-ship-623-belowAvatar": 4,
+    "naval-lpc-ship-193-belowAvatar": 2,
+    "naval-lpc-ship-194-belowAvatar": 2,
+    "naval-lpc-ship-195-belowAvatar": 2,
+    "naval-lpc-ship-196-belowAvatar": 2,
+    "naval-lpc-ship-197-belowAvatar": 2,
+    "naval-lpc-ship-198-belowAvatar": 2,
+    "naval-lpc-ship-199-belowAvatar": 2,
+    "naval-lpc-ship-200-belowAvatar": 2,
+    "naval-lpc-ship-201-belowAvatar": 2,
+    "naval-lpc-ship-226-belowAvatar": 2,
+    "naval-lpc-ship-227-belowAvatar": 2,
+    "naval-lpc-ship-228-belowAvatar": 2,
+    "naval-lpc-ship-229-belowAvatar": 2,
+    "naval-lpc-ship-230-belowAvatar": 2,
+    "naval-lpc-ship-231-belowAvatar": 2,
+    "naval-lpc-ship-232-belowAvatar": 2,
+    "naval-lpc-ship-accessories-97-belowAvatar": 2,
+    "naval-rigging-674-aboveAvatar": 6,
+    "naval-rigging-675-aboveAvatar": 6,
+    "naval-rigging-676-aboveAvatar": 6,
+    "naval-rigging-677-aboveAvatar": 6,
+    "naval-rigging-706-aboveAvatar": 6,
+    "naval-rigging-707-aboveAvatar": 6,
+    "naval-rigging-708-aboveAvatar": 6,
+    "naval-rigging-709-aboveAvatar": 6,
+    "naval-lpc-ship-543-belowAvatar": 2,
+    "naval-lpc-ship-575-belowAvatar": 10,
+    "naval-lpc-ship-603-belowAvatar": 4,
+    "naval-lpc-ship-604-belowAvatar": 4,
+    "naval-lpc-ship-605-belowAvatar": 22,
+    "naval-lpc-ship-606-belowAvatar": 4,
+    "naval-lpc-ship-607-belowAvatar": 4,
+    "naval-lpc-ship-635-belowAvatar": 4,
+    "naval-lpc-ship-636-belowAvatar": 4,
+    "naval-lpc-ship-637-belowAvatar": 22,
+    "naval-lpc-ship-638-belowAvatar": 4,
+    "naval-lpc-ship-639-belowAvatar": 4,
+    "naval-rigging-576-aboveAvatar": 6,
+    "naval-rigging-577-aboveAvatar": 6,
+    "naval-rigging-608-aboveAvatar": 6,
+    "naval-rigging-609-aboveAvatar": 6,
+    "naval-rigging-640-aboveAvatar": 6,
+    "naval-rigging-641-aboveAvatar": 6,
+    "naval-rigging-672-aboveAvatar": 6,
+    "naval-rigging-673-aboveAvatar": 6,
+    "naval-rigging-704-aboveAvatar": 6,
+    "naval-rigging-705-aboveAvatar": 6,
+    "naval-rigging-736-aboveAvatar": 6,
+    "naval-rigging-737-aboveAvatar": 6,
+    "naval-rigging-768-aboveAvatar": 6,
+    "naval-rigging-769-aboveAvatar": 6,
+    "naval-rigging-800-aboveAvatar": 6,
+    "naval-rigging-801-aboveAvatar": 6,
+    "naval-rigging-802-aboveAvatar": 6,
+    "naval-rigging-832-aboveAvatar": 6,
+    "naval-rigging-833-aboveAvatar": 6,
+    "naval-rigging-834-aboveAvatar": 6,
+    "naval-rigging-864-aboveAvatar": 6,
+    "naval-rigging-865-aboveAvatar": 6,
+    "naval-rigging-866-aboveAvatar": 6,
+    "naval-rigging-896-aboveAvatar": 4,
+    "naval-rigging-897-aboveAvatar": 4,
+    "naval-rigging-898-aboveAvatar": 4,
+    "naval-rigging-928-aboveAvatar": 4,
+    "naval-rigging-929-aboveAvatar": 4,
+    "naval-rigging-930-aboveAvatar": 4,
+    "naval-rigging-899-aboveAvatar": 2,
+    "naval-rigging-900-aboveAvatar": 2,
+    "naval-rigging-901-aboveAvatar": 2,
+    "naval-rigging-963-aboveAvatar": 4,
+    "naval-rigging-964-aboveAvatar": 4,
+    "naval-rigging-965-aboveAvatar": 4,
+    "naval-rigging-6-aboveAvatar": 4,
+    "naval-rigging-7-aboveAvatar": 4,
+    "naval-rigging-8-aboveAvatar": 4,
+    "naval-rigging-9-aboveAvatar": 2,
+    "naval-rigging-10-aboveAvatar": 2,
+    "naval-rigging-11-aboveAvatar": 2,
+    "naval-rigging-38-aboveAvatar": 4,
+    "naval-rigging-39-aboveAvatar": 4,
+    "naval-rigging-40-aboveAvatar": 4,
+    "naval-rigging-41-aboveAvatar": 2,
+    "naval-rigging-42-aboveAvatar": 2,
+    "naval-rigging-43-aboveAvatar": 2,
+    "naval-rigging-70-aboveAvatar": 4,
+    "naval-rigging-71-aboveAvatar": 4,
+    "naval-rigging-72-aboveAvatar": 4,
+    "naval-rigging-73-aboveAvatar": 2,
+    "naval-rigging-74-aboveAvatar": 2,
+    "naval-rigging-75-aboveAvatar": 2,
+    "naval-rigging-102-aboveAvatar": 4,
+    "naval-rigging-103-aboveAvatar": 4,
+    "naval-rigging-104-aboveAvatar": 4,
+    "naval-rigging-105-aboveAvatar": 2,
+    "naval-rigging-106-aboveAvatar": 2,
+    "naval-rigging-107-aboveAvatar": 2,
+    "naval-rigging-134-aboveAvatar": 4,
+    "naval-rigging-135-aboveAvatar": 4,
+    "naval-rigging-136-aboveAvatar": 4,
+    "naval-rigging-137-aboveAvatar": 2,
+    "naval-rigging-138-aboveAvatar": 2,
+    "naval-rigging-139-aboveAvatar": 2,
+    "naval-rigging-166-aboveAvatar": 4,
+    "naval-rigging-167-aboveAvatar": 4,
+    "naval-rigging-168-aboveAvatar": 4,
+    "naval-rigging-169-aboveAvatar": 2,
+    "naval-rigging-170-aboveAvatar": 2,
+    "naval-rigging-171-aboveAvatar": 2,
+    "naval-rigging-198-aboveAvatar": 4,
+    "naval-rigging-199-aboveAvatar": 4,
+    "naval-rigging-200-aboveAvatar": 4,
+    "naval-rigging-201-aboveAvatar": 2,
+    "naval-rigging-202-aboveAvatar": 2,
+    "naval-rigging-203-aboveAvatar": 2,
+    "naval-rigging-230-aboveAvatar": 4,
+    "naval-rigging-231-aboveAvatar": 4,
+    "naval-rigging-232-aboveAvatar": 4,
+    "naval-rigging-233-aboveAvatar": 2,
+    "naval-rigging-234-aboveAvatar": 2,
+    "naval-rigging-235-aboveAvatar": 2,
+    "naval-rigging-262-aboveAvatar": 4,
+    "naval-rigging-263-aboveAvatar": 4,
+    "naval-rigging-264-aboveAvatar": 4,
+    "naval-rigging-265-aboveAvatar": 2,
+    "naval-rigging-266-aboveAvatar": 2,
+    "naval-rigging-267-aboveAvatar": 2,
+    "naval-rigging-294-aboveAvatar": 4,
+    "naval-rigging-295-aboveAvatar": 4,
+    "naval-rigging-296-aboveAvatar": 4,
+    "naval-rigging-297-aboveAvatar": 2,
+    "naval-rigging-298-aboveAvatar": 2,
+    "naval-rigging-299-aboveAvatar": 2,
+    "naval-rigging-326-aboveAvatar": 4,
+    "naval-rigging-327-aboveAvatar": 4,
+    "naval-rigging-328-aboveAvatar": 4,
+    "naval-rigging-329-aboveAvatar": 2,
+    "naval-rigging-330-aboveAvatar": 2,
+    "naval-rigging-331-aboveAvatar": 2,
+    "naval-rigging-358-aboveAvatar": 4,
+    "naval-rigging-359-aboveAvatar": 4,
+    "naval-rigging-360-aboveAvatar": 4,
+    "naval-rigging-361-aboveAvatar": 2,
+    "naval-rigging-362-aboveAvatar": 2,
+    "naval-rigging-363-aboveAvatar": 2,
+    "naval-rigging-395-aboveAvatar": 2,
+    "naval-rigging-909-aboveAvatar": 6,
+    "naval-rigging-910-aboveAvatar": 6,
+    "naval-rigging-911-aboveAvatar": 6,
+    "naval-rigging-912-aboveAvatar": 6,
+    "naval-rigging-781-aboveAvatar": 2,
+    "naval-rigging-782-aboveAvatar": 2,
+    "naval-rigging-783-aboveAvatar": 2,
+    "naval-rigging-784-aboveAvatar": 2,
+    "naval-rigging-941-aboveAvatar": 6,
+    "naval-rigging-942-aboveAvatar": 6,
+    "naval-rigging-943-aboveAvatar": 6,
+    "naval-rigging-944-aboveAvatar": 6,
+    "naval-rigging-813-aboveAvatar": 2,
+    "naval-rigging-814-aboveAvatar": 2,
+    "naval-rigging-815-aboveAvatar": 2,
+    "naval-rigging-816-aboveAvatar": 2,
+    "naval-rigging-1001-aboveAvatar": 6,
+    "naval-rigging-1002-aboveAvatar": 6,
+    "naval-rigging-1003-aboveAvatar": 6,
+    "naval-rigging-1004-aboveAvatar": 6,
+    "naval-rigging-841-aboveAvatar": 2,
+    "naval-rigging-842-aboveAvatar": 2,
+    "naval-rigging-843-aboveAvatar": 2,
+    "naval-rigging-844-aboveAvatar": 2,
+    "naval-rigging-873-aboveAvatar": 2,
+    "naval-rigging-874-aboveAvatar": 2,
+    "naval-rigging-875-aboveAvatar": 2,
+    "naval-rigging-876-aboveAvatar": 2,
+    "naval-rigging-60-aboveAvatar": 4,
+    "naval-rigging-61-aboveAvatar": 4,
+    "naval-rigging-62-aboveAvatar": 4,
+    "naval-rigging-63-aboveAvatar": 4,
+    "naval-rigging-94-aboveAvatar": 4,
+    "naval-rigging-95-aboveAvatar": 4,
+    "naval-rigging-126-aboveAvatar": 6,
+    "naval-rigging-127-aboveAvatar": 6,
+    "naval-rigging-158-aboveAvatar": 6,
+    "naval-rigging-159-aboveAvatar": 6,
+    "naval-rigging-190-aboveAvatar": 6,
+    "naval-rigging-191-aboveAvatar": 6,
+    "naval-rigging-222-aboveAvatar": 6,
+    "naval-rigging-223-aboveAvatar": 6,
+    "naval-rigging-254-aboveAvatar": 6,
+    "naval-rigging-255-aboveAvatar": 6,
+    "naval-rigging-286-aboveAvatar": 4,
+    "naval-rigging-287-aboveAvatar": 4,
+    "naval-rigging-318-aboveAvatar": 4,
+    "naval-rigging-319-aboveAvatar": 4,
+    "naval-rigging-348-aboveAvatar": 4,
+    "naval-rigging-349-aboveAvatar": 4,
+    "naval-rigging-973-aboveAvatar": 4,
+    "naval-rigging-974-aboveAvatar": 4,
+    "naval-rigging-975-aboveAvatar": 4,
+    "naval-rigging-976-aboveAvatar": 4,
+    "naval-rigging-1005-aboveAvatar": 4,
+    "naval-rigging-1006-aboveAvatar": 4,
+    "naval-rigging-1007-aboveAvatar": 4,
+    "naval-rigging-1008-aboveAvatar": 4,
+    "naval-rigging-845-aboveAvatar": 2,
+    "naval-rigging-846-aboveAvatar": 2,
+    "naval-rigging-847-aboveAvatar": 2,
+    "naval-rigging-848-aboveAvatar": 2,
+    "naval-rigging-877-aboveAvatar": 2,
+    "naval-rigging-878-aboveAvatar": 2,
+    "naval-rigging-879-aboveAvatar": 2,
+    "naval-rigging-880-aboveAvatar": 2,
+    "naval-rigging-3-aboveAvatar": 6,
+    "naval-rigging-4-aboveAvatar": 6,
+    "naval-rigging-35-aboveAvatar": 6,
+    "naval-rigging-36-aboveAvatar": 6,
+    "naval-rigging-37-aboveAvatar": 6,
+    "naval-rigging-67-aboveAvatar": 6,
+    "naval-rigging-68-aboveAvatar": 6,
+    "naval-rigging-69-aboveAvatar": 6,
+    "naval-rigging-99-aboveAvatar": 6,
+    "naval-rigging-100-aboveAvatar": 6,
+    "naval-rigging-101-aboveAvatar": 6,
+    "naval-rigging-131-aboveAvatar": 6,
+    "naval-rigging-132-aboveAvatar": 6,
+    "naval-rigging-133-aboveAvatar": 6,
+    "naval-rigging-163-aboveAvatar": 6,
+    "naval-rigging-164-aboveAvatar": 6,
+    "naval-rigging-165-aboveAvatar": 6,
+    "naval-rigging-195-aboveAvatar": 6,
+    "naval-rigging-196-aboveAvatar": 6,
+    "naval-rigging-197-aboveAvatar": 6,
+    "naval-rigging-227-aboveAvatar": 6,
+    "naval-rigging-228-aboveAvatar": 6,
+    "naval-rigging-229-aboveAvatar": 6,
+    "naval-rigging-259-aboveAvatar": 6,
+    "naval-rigging-260-aboveAvatar": 6,
+    "naval-rigging-261-aboveAvatar": 6,
+    "naval-rigging-291-aboveAvatar": 6,
+    "naval-rigging-292-aboveAvatar": 6,
+    "naval-rigging-293-aboveAvatar": 6,
+    "naval-rigging-324-aboveAvatar": 6,
+    "naval-rigging-325-aboveAvatar": 6,
+    "naval-mast-base": 3,
+    "naval-barrel": 5,
+    "naval-cannon": 2,
+    "naval-crate": 6,
+    "coast-wheel": 1,
+    "naval-name-hull": 2,
+    "naval-name-boarding": 2,
+    "coast-sign-board": 3,
+    "bench-park": 13,
+    "boat-wood": 1,
+    "ship-stairs": 2,
+    "ship-lower-deck-label": 1,
+    "ship-helm-label": 1,
+    "ship-wall": 72,
+    "ship-mess-label": 1,
+    "ship-captain-label": 1,
+    "ship-bunks-label": 1,
+    "ship-cargo-label": 1,
+    "ship-galley": 1,
+    "ship-pantry": 2,
+    "ship-mess-table": 2,
+    "ship-chart-table": 1,
+    "ship-compass": 1,
+    "ship-bunk": 3,
+    "ship-cargo-crate": 4,
+    "ship-cargo-barrel": 2,
+    "ship-lantern": 6,
+    "ship-plank": 23,
+    "coast-bulwark": 36,
+    "ship-porthole": 4,
+    "ship-mess-bench": 2,
+    "ship-compass-rug": 1,
+    "ship-rope-coil": 2,
+    "constellation-aries": 2,
+    "constellation-leo": 3,
+    "forge-aries": 1,
+    "table-workshop": 5,
+    "table-broad": 1,
+    "console-green": 2,
+    "rune-ring": 5,
+    "glyph-aries": 3,
+    "glyph-taurus": 3,
+    "glyph-gemini": 3,
+    "glyph-cancer": 3,
+    "glyph-leo": 3,
+    "glyph-virgo": 4,
+    "glyph-libra": 3,
+    "glyph-scorpio": 3,
+    "glyph-sagittarius": 3,
+    "glyph-capricorn": 3,
+    "glyph-aquarius": 3,
+    "glyph-pisces": 3,
+    "speaker-style-wall": 28,
+    "speaker-style-edge-bottom": 42,
+    "speaker-style-edge-top": 18,
+    "speaker-style-edge-left": 16,
+    "speaker-style-edge-right": 16,
+    "screen-presentation": 15,
+    "lectern": 14,
+    "constellation-cancer": 5,
+    "interior-ref-sofa": 18,
+    "interior-ref-cabinet": 31,
+    "desk-glass": 4,
+    "interior-ref-plant": 20,
+    "interior-ref-desk-cluster": 2,
+    "interior-ref-aquarium": 4,
+    "interior-ref-plant-motion-base": 14,
+    "interior-ref-server": 17,
+    "interior-ref-refreshment": 14,
+    "speaker-style-caption-floor": 14,
+    "speaker-style-logo-card": 42,
+    "cafe-bar-span": 2,
+    "cafe-bar-left-end": 1,
+    "cafe-bar-right-end": 1,
+    "hub-moon-fountain": 2,
+    "cafe-chair-cream": 6,
+    "night-wash": 7,
+    "rune-frame": 3,
+    "water-blue": 6,
+    "arcade-cabinet": 6,
+    "lily-pad": 6,
+    "comet-statue": 2,
+    "plaza-plant-grass": 2,
+    "glass-partition": 25,
+    "beacon": 16,
+    "zodiac-physical-aries": 1,
+    "zodiac-ground-name-aries": 1,
+    "zodiac-physical-taurus": 1,
+    "zodiac-ground-name-taurus": 1,
+    "zodiac-physical-gemini": 1,
+    "zodiac-ground-name-gemini": 1,
+    "zodiac-physical-cancer": 1,
+    "zodiac-ground-name-cancer": 1,
+    "zodiac-physical-leo": 1,
+    "zodiac-ground-name-leo": 1,
+    "zodiac-physical-virgo": 1,
+    "zodiac-ground-name-virgo": 1,
+    "zodiac-physical-libra": 1,
+    "zodiac-ground-name-libra": 1,
+    "zodiac-physical-scorpio": 1,
+    "zodiac-ground-name-scorpio": 1,
+    "zodiac-physical-sagittarius": 1,
+    "zodiac-ground-name-sagittarius": 1,
+    "zodiac-physical-capricorn": 1,
+    "zodiac-ground-name-capricorn": 1,
+    "zodiac-physical-aquarius": 1,
+    "zodiac-ground-name-aquarius": 1,
+    "zodiac-physical-pisces": 1,
+    "zodiac-ground-name-pisces": 1,
+    "hall-building-solar": 1,
+    "hall-building-lunar": 1,
+    "exterior-gate-maze": 1,
+    "exterior-gate-festival": 1,
+    "exterior-gate-shipyard": 1,
+    "exterior-gate-campus": 1,
+    "standing-exterior-road-west": 1,
+    "solid-sign-post": 6,
+    "standing-exterior-road-east": 1,
+    "standing-exterior-road-plaza": 4,
+    "expo-wall-navy": 34,
+    "poster-night-city": 9,
+    "chair-presentation": 12,
+    "desk-curved": 12,
+    "expo-fascia": 12,
+    "expo-fascia-post": 54,
+    "plaza-fountain": 1,
+    "plaza-lamp": 6,
+    "zodiac-emblem-aries": 2,
+    "zodiac-emblem-taurus": 2,
+    "zodiac-emblem-gemini": 2,
+    "zodiac-emblem-cancer": 2,
+    "zodiac-emblem-leo": 2,
+    "zodiac-emblem-virgo": 2,
+    "zodiac-emblem-libra": 2,
+    "zodiac-emblem-scorpio": 2,
+    "zodiac-emblem-sagittarius": 2,
+    "zodiac-emblem-capricorn": 2,
+    "zodiac-emblem-aquarius": 2,
+    "zodiac-emblem-pisces": 2,
+    "leo-lion-head": 1,
+    "plaza-tree-birch": 16,
+    "plaza-lavender": 22,
+    "plaza-shrub": 14,
+    "plaza-wildflowers": 18,
+    "plaza-tulips": 8,
+    "tropical-cove-water-0": 1,
+    "tropical-cove-water-4": 1,
+    "tropical-cove-water-8": 1,
+    "tropical-cove-water-12": 1,
+    "tropical-cove-water-16": 1,
+    "tropical-cove-water-20": 1,
+    "tropical-cove-water-24": 1,
+    "tropical-cove-land-28": 1,
+    "tropical-cove-land-32": 1,
+    "tropical-cove-water-36": 1,
+    "tropical-cove-water-40": 1,
+    "tropical-cove-water-44": 1,
+    "tropical-cove-water-48": 1,
+    "tropical-cove-water-52": 1,
+    "tropical-cove-water-56": 1,
+    "tropical-cove-water-60": 1,
+    "tropical-cove-water-64": 1,
+    "tropical-cove-water-68": 1,
+    "tropical-cove-water-72": 1,
+    "tropical-cove-land-76": 1,
+    "tropical-cove-land-80": 1,
+    "tropical-cove-land-84": 1,
+    "tropical-cove-land-88": 1,
+    "tropical-cove-land-92": 1,
+    "tropical-cove-land-96": 1,
+    "tropical-cove-water-100": 1,
+    "tropical-cove-water-104": 1,
+    "tropical-cove-water-108": 1,
+    "tropical-cove-water-112": 1,
+    "tropical-cove-water-116": 1,
+    "tropical-cove-water-120": 1,
+    "tropical-cove-land-124": 1,
+    "tropical-cove-land-128": 1,
+    "tropical-cove-water-132": 1,
+    "tropical-cove-water-136": 1,
+    "tropical-cove-water-140": 1,
+    "tropical-cove-water-144": 1,
+    "tropical-cove-water-148": 1,
+    "tropical-cove-water-152": 1,
+    "tropical-cove-land-156": 1,
+    "tropical-cove-land-160": 1,
+    "tropical-cove-land-164": 1,
+    "tropical-cove-land-168": 1,
+    "tropical-cove-land-172": 1,
+    "tropical-cove-land-176": 1,
+    "tropical-cove-water-180": 1,
+    "tropical-cove-water-184": 1,
+    "organic-coast-water-188": 1,
+    "organic-coast-land-192": 1,
+    "organic-coast-land-196": 1,
+    "organic-coast-land-200": 1,
+    "organic-coast-land-204": 1,
+    "organic-coast-land-208": 1,
+    "organic-coast-land-212": 1,
+    "organic-coast-water-216": 1,
+    "organic-coast-water-220": 1,
+    "organic-coast-water-224": 1,
+    "organic-coast-water-228": 1,
+    "organic-coast-land-232": 1,
+    "organic-coast-land-236": 1,
+    "organic-coast-land-240": 1,
+    "organic-coast-land-244": 1,
+    "organic-coast-water-248": 1,
+    "organic-coast-water-252": 1,
+    "organic-coast-water-256": 1,
+    "organic-coast-water-260": 1,
+    "organic-coast-water-264": 1,
+    "organic-coast-water-268": 1,
+    "organic-coast-water-272": 1,
+    "organic-coast-water-276": 1,
+    "organic-coast-water-280": 1,
+    "organic-coast-water-284": 1,
+    "organic-coast-land-288": 1,
+    "organic-coast-land-292": 1,
+    "organic-coast-land-296": 1,
+    "organic-coast-land-300": 1,
+    "organic-coast-land-304": 1,
+    "organic-coast-land-308": 1,
+    "organic-coast-land-312": 1,
+    "organic-coast-land-316": 1,
+    "organic-coast-land-320": 1,
+    "organic-coast-land-324": 1,
+    "organic-coast-land-328": 1,
+    "organic-coast-water-332": 1,
+    "organic-coast-water-336": 1,
+    "organic-coast-water-340": 1,
+    "organic-coast-land-344": 1,
+    "organic-coast-land-348": 1,
+    "organic-coast-land-352": 1,
+    "organic-coast-water-356": 1,
+    "organic-coast-water-360": 1,
+    "organic-coast-water-364": 1,
+    "organic-coast-water-368": 1,
+    "organic-coast-water-372": 1,
+    "organic-coast-water-376": 1,
+    "organic-coast-land-380": 1,
+    "organic-coast-land-384": 1,
+    "organic-coast-land-388": 1,
+    "organic-coast-land-392": 1,
+    "organic-coast-land-396": 1,
+    "organic-coast-land-400": 1,
+    "organic-coast-land-404": 1,
+    "organic-coast-land-408": 1,
+    "organic-coast-land-412": 1,
+    "organic-coast-land-416": 1,
+    "organic-coast-land-420": 1,
+    "organic-coast-water-424": 1,
+    "organic-coast-water-428": 1,
+    "tropical-cove-water-432": 1,
+    "tropical-cove-water-436": 1,
+    "tropical-cove-land-440": 1,
+    "tropical-cove-land-444": 1,
+    "tropical-cove-land-448": 1,
+    "tropical-cove-land-452": 1,
+    "tropical-cove-land-456": 1,
+    "tropical-cove-water-460": 1,
+    "tropical-cove-water-464": 1,
+    "tropical-cove-water-468": 1,
+    "tropical-cove-land-472": 1,
+    "tropical-cove-land-476": 1,
+    "tropical-cove-land-480": 1,
+    "tropical-cove-water-484": 1,
+    "tropical-cove-water-488": 1,
+    "tropical-cove-water-492": 1,
+    "tropical-cove-water-496": 1,
+    "tropical-cove-land-500": 1,
+    "tropical-cove-land-504": 1,
+    "tropical-cove-water-508": 1,
+    "tropical-cove-water-512": 1,
+    "tropical-cove-water-516": 1,
+    "tropical-cove-land-520": 1,
+    "tropical-cove-land-524": 1,
+    "tropical-cove-water-528": 1,
+    "tropical-cove-water-532": 1,
+    "tropical-cove-land-536": 1,
+    "tropical-cove-land-540": 1,
+    "tropical-cove-water-544": 1,
+    "tropical-cove-water-548": 1,
+    "tropical-cove-land-552": 1,
+    "tropical-cove-land-556": 1,
+    "tropical-cove-land-560": 1,
+    "tropical-cove-water-564": 1,
+    "tropical-cove-water-568": 1,
+    "tropical-cove-water-572": 1,
+    "tropical-cove-water-576": 1,
+    "tropical-cove-land-580": 1,
+    "tropical-cove-land-584": 1,
+    "tropical-cove-land-588": 1,
+    "tropical-cove-water-592": 1,
+    "tropical-cove-water-596": 1,
+    "tropical-cove-land-600": 1,
+    "tropical-cove-land-604": 1,
+    "tropical-cove-water-608": 1,
+    "tropical-cove-water-612": 1,
+    "tropical-cove-water-616": 1,
+    "tropical-cove-land-620": 1,
+    "tropical-cove-land-624": 1,
+    "tropical-cove-land-628": 1,
+    "tropical-cove-water-632": 1,
+    "tropical-cove-water-636": 1,
+    "tropical-cove-water-640": 1,
+    "tropical-cove-land-644": 1,
+    "tropical-cove-land-648": 1,
+    "tropical-cove-water-652": 1,
+    "tropical-cove-water-656": 1,
+    "tropical-cove-water-660": 1,
+    "tropical-cove-land-664": 1,
+    "tropical-cove-land-668": 1,
+    "tropical-cove-land-672": 1,
+    "tropical-cove-water-676": 1,
+    "tropical-cove-water-680": 1,
+    "tropical-cove-land-684": 1,
+    "tropical-cove-land-688": 1,
+    "tropical-cove-land-692": 1,
+    "tropical-cove-water-696": 1,
+    "tropical-cove-water-700": 1,
+    "tropical-cove-land-704": 1,
+    "tropical-cove-land-708": 1,
+    "tropical-cove-land-712": 1,
+    "tropical-cove-land-716": 1,
+    "tropical-cove-land-720": 1,
+    "tropical-cove-land-724": 1,
+    "tropical-cove-land-728": 1,
+    "tropical-cove-land-732": 1,
+    "tropical-cove-land-736": 1,
+    "tropical-cove-land-740": 1,
+    "tropical-cove-land-744": 1,
+    "tropical-cove-land-748": 1,
+    "tropical-cove-land-752": 1,
+    "tropical-cove-land-756": 1,
+    "tropical-cove-water-760": 1,
+    "tropical-cove-water-764": 1,
+    "tropical-cove-land-768": 1,
+    "tropical-cove-land-772": 1,
+    "tropical-cove-land-776": 1,
+    "tropical-cove-land-780": 1,
+    "tropical-cove-water-784": 1,
+    "tropical-cove-water-788": 1,
+    "tropical-cove-water-792": 1,
+    "tropical-cove-water-796": 1,
+    "tropical-cove-water-800": 1,
+    "tropical-cove-water-804": 1,
+    "tropical-cove-water-808": 1,
+    "tropical-cove-water-812": 1,
+    "tropical-cove-water-816": 1,
+    "tropical-cove-water-820": 1,
+    "tropical-cove-land-824": 1,
+    "tropical-cove-land-828": 1,
+    "tropical-cove-land-832": 1,
+    "tropical-cove-land-836": 1,
+    "tropical-cove-water-840": 1,
+    "tropical-cove-water-844": 1,
+    "tropical-cove-land-848": 1,
+    "tropical-cove-land-852": 1,
+    "tropical-cove-land-856": 1,
+    "tropical-cove-water-860": 1,
+    "tropical-cove-water-864": 1,
+    "tropical-cove-water-868": 1,
+    "tropical-cove-water-872": 1,
+    "tropical-cove-water-876": 1,
+    "tropical-cove-water-880": 1,
+    "tropical-cove-land-884": 1,
+    "tropical-cove-land-888": 1,
+    "tropical-cove-land-892": 1,
+    "tropical-cove-land-896": 1,
+    "tropical-cove-water-900": 1,
+    "tropical-cove-water-904": 1,
+    "tropical-cove-water-908": 1,
+    "tropical-cove-land-912": 1,
+    "tropical-cove-land-916": 1,
+    "tropical-cove-land-920": 1,
+    "tropical-cove-water-924": 1,
+    "tropical-cove-water-928": 1,
+    "tropical-cove-water-932": 1,
+    "tropical-cove-water-936": 1,
+    "tropical-cove-water-940": 1,
+    "tropical-cove-water-944": 1,
+    "tropical-cove-land-948": 1,
+    "tropical-cove-land-952": 1,
+    "tropical-cove-land-956": 1,
+    "tropical-cove-land-960": 1,
+    "tropical-cove-water-964": 1,
+    "tropical-cove-water-968": 1,
+    "tropical-cove-land-972": 1,
+    "tropical-cove-land-976": 1,
+    "tropical-cove-land-980": 1,
+    "tropical-cove-land-984": 1,
+    "tropical-cove-water-988": 1,
+    "tropical-cove-water-992": 1,
+    "tropical-cove-water-996": 1,
+    "tropical-cove-water-1000": 1,
+    "tropical-cove-land-1004": 1,
+    "tropical-cove-land-1008": 1,
+    "tropical-cove-land-1012": 1,
+    "tropical-cove-land-1016": 1,
+    "tropical-cove-water-1020": 1,
+    "tropical-cove-water-1024": 1,
+    "tropical-cove-water-1028": 1,
+    "tropical-cove-water-1032": 1,
+    "tropical-cove-land-1036": 1,
+    "tropical-cove-land-1040": 1,
+    "tropical-cove-land-1044": 1,
+    "tropical-cove-land-1048": 1,
+    "tropical-cove-water-1052": 1,
+    "tropical-cove-water-1056": 1,
+    "tropical-cove-water-1060": 1,
+    "tropical-cove-water-1064": 1,
+    "tropical-cove-land-1068": 1,
+    "tropical-cove-land-1072": 1,
+    "tropical-cove-land-1076": 1,
+    "tropical-cove-water-1080": 1,
+    "tropical-cove-water-1084": 1,
+    "tropical-cove-water-1088": 1,
+    "tropical-cove-land-1092": 1,
+    "tropical-cove-land-1096": 1,
+    "tropical-cove-land-1100": 1,
+    "tropical-cove-land-1104": 1,
+    "tropical-cove-land-1108": 1,
+    "tropical-cove-land-1112": 1,
+    "tropical-cove-water-1116": 1,
+    "tropical-cove-water-1120": 1,
+    "tropical-cove-water-1124": 1,
+    "tropical-cove-water-1128": 1,
+    "tropical-cove-land-1132": 1,
+    "tropical-cove-land-1136": 1,
+    "tropical-cove-land-1140": 1,
+    "tropical-cove-land-1144": 1,
+    "tropical-cove-water-1148": 1,
+    "tropical-cove-water-1152": 1,
+    "tropical-cove-water-1156": 1,
+    "tropical-cove-water-1160": 1,
+    "tropical-cove-water-1164": 1,
+    "tropical-cove-land-1168": 1,
+    "tropical-cove-land-1172": 1,
+    "tropical-cove-land-1176": 1,
+    "tropical-cove-land-1180": 1,
+    "tropical-cove-water-1184": 1,
+    "tropical-cove-water-1188": 1,
+    "tropical-cove-water-1192": 1,
+    "tropical-cove-water-1196": 1,
+    "tropical-cove-water-1200": 1,
+    "tropical-cove-water-1204": 1,
+    "tropical-cove-water-1208": 1,
+    "tropical-cove-water-1212": 1,
+    "tropical-cove-water-1216": 1,
+    "tropical-cove-water-1220": 1,
+    "tropical-cove-water-1224": 1,
+    "tropical-cove-water-1228": 1,
+    "tropical-cove-water-1232": 1,
+    "tropical-cove-water-1236": 1,
+    "tropical-cove-water-1240": 1,
+    "tropical-cove-water-1244": 1,
+    "tropical-cove-water-1248": 1,
+    "tropical-cove-water-1252": 1,
+    "coast-life-beach-cabana": 1,
+    "coast-life-beach-tiki-bar": 1,
+    "coast-life-beach-palm": 8,
+    "coast-life-beach-parasol-teal": 2,
+    "coast-life-beach-parasol-coral": 1,
+    "coast-life-solid-beach-recliner": 4,
+    "coast-life-beach-woven-towel": 2,
+    "coast-life-beach-shrub": 4,
+    "coast-life-beach-grass": 3,
+    "coast-life-solid-beach-low-table": 1,
+    "constellation-sagittarius": 2,
+    "constellation-aquarius": 2,
+    "interior-ref-forge": 1,
+    "constellation-capricorn": 1,
+    "lounge-terraced": 2,
+    "stage-backdrop": 1,
+    "balance-wall-relief": 1,
+    "balance-libra": 2,
+    "wave-glass": 2,
+    "constellation-scorpio": 1,
+    "glass-pod": 3
+  },
+  "summary": {
+    "maps": 34,
+    "assets": 179,
+    "usedSprites": 1394,
+    "issues": 0,
+    "reviewItems": 65
+  }
+}

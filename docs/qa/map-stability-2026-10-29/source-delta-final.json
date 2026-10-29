@@ -1,0 +1,314 @@
+{
+  "base": "7f24c28b111a307f8ce010950671900660f3226e",
+  "catalogChangedSprites": [
+    "chair-presentation"
+  ],
+  "unchangedDomainFiles": 1025,
+  "unchangedLayouts": 34,
+  "maps": {
+    "maps/overworld.tmj": {
+      "beforeSha256": "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
+      "afterSha256": "639e9b26afd22260e6e3f26a8eca60786543b3f93c4ddd6f7c87e297e5f8f3c4",
+      "changedCells": [
+        {
+          "x": 44,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 52,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 60,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 67,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 75,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 83,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 44,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 52,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 60,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 67,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 75,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 83,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 44,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 52,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 60,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 67,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 75,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 83,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 44,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 52,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 60,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 67,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 75,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 83,
+          "y": 85,
+          "before": true,
+          "after": false
+        }
+      ],
+      "allOtherNativeDataUnchanged": true
+    },
+    "maps/preview/overworld.tmj": {
+      "beforeSha256": "9776df066c5ce7dfea24f66e1fa5cfc82af40f81f7de4b37906cbd11ee5480ed",
+      "afterSha256": "da738fdf88a04e5a5a39bf0fea2c15541914c47940e2487803d7bdb8dfed9c8b",
+      "changedCells": [
+        {
+          "x": 44,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 52,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 60,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 67,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 75,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 83,
+          "y": 71,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 44,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 52,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 60,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 67,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 75,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 83,
+          "y": 72,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 44,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 52,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 60,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 67,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 75,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 83,
+          "y": 84,
+          "before": false,
+          "after": true
+        },
+        {
+          "x": 44,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 52,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 60,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 67,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 75,
+          "y": 85,
+          "before": true,
+          "after": false
+        },
+        {
+          "x": 83,
+          "y": 85,
+          "before": true,
+          "after": false
+        }
+      ],
+      "allOtherNativeDataUnchanged": true
+    }
+  },
+  "guideRouteGraphUnchanged": true,
+  "privateGuideReleaseEdited": false
+}

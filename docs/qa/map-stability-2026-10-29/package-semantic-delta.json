@@ -1,0 +1,311 @@
+{
+  "ok": true,
+  "maps": [
+    {
+      "path": "maps/air-district.tmj",
+      "beforeSha256": "f106426bbdf32bb1c8911b43cdc9b4c46cad93cd91eecffee248ff7d198cd018",
+      "afterSha256": "a288a7cc83cc150a1e17971dde2e708f777938da076bd2e80b60483bbf6f1b94",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/campus-exploration.tmj",
+      "beforeSha256": "6744fd212425d0d42a8c58b369aba21bbdb349f336012210fb7a5596bebf00e6",
+      "afterSha256": "a32df66c84a2832016b6c45ce3d8839fa7520b0d4d7d9d8221798afd32a1973c",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/comet-maze.tmj",
+      "beforeSha256": "719d5d5dee1ba74166bb26ea30ec60fd8ad5ed9e9d081aab160e62004b92a724",
+      "afterSha256": "41c9b63898e12326d3c56d1850255b588909c787dc8d549c0459552353d9fd96",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/constellation-shore.tmj",
+      "beforeSha256": "02402dd394373ff8d9b3bf1837ba12d735be291582812cc7e33635df58950e42",
+      "afterSha256": "30c28a297fdd05b5ee0ed68f5530a6f6e4dc67eb341fc51821edb20a1b9f4841",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/earth-district.tmj",
+      "beforeSha256": "3e26fbbf83b65ca617a8e8974db4cb46b2cbfa00f27f4b947718031adaf4ee4e",
+      "afterSha256": "5ba4ab7d2ace1bc366c1f7fc9e7a96b17527657c13e97566a6b6c901e707c229",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/fa-ship-interior.tmj",
+      "beforeSha256": "0aaae6a4afb9ed8e02fa5ca647c2d5bf40d42b1c22467b7ef26e5f06f96c2772",
+      "afterSha256": "d55d134169c6f514298521c961b2f667d9d6d2533a219117089bc8a679a25a30",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/fa-ship.tmj",
+      "beforeSha256": "d29314c01c677ee0519b941581d82c27cfa7a8cb2affda94b348139a9e7d549c",
+      "afterSha256": "6d9eab4d8dd56a184537dd994aaf7062aad2336a4b07555316a7fdf8c94034dd",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/fire-district.tmj",
+      "beforeSha256": "d52577d61ae34d7994a7f5c45357db66f4e2802b23d50ff2b29e7a2f84f640c1",
+      "afterSha256": "403a663a6dee65bc28fbaa756a45ede0e063396e23dbdbf9c7502a7953d17483",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/hidden-observatory.tmj",
+      "beforeSha256": "39ab63290eb4d81f76bc3e2b32f960cf6d89053d0bf7d277c9cf7d7878bd9b7a",
+      "afterSha256": "9495f3d0faaef178f3347f47b44bb4223fbb629e627cc6381ad5bb4f9ff2f3ea",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/lunar-hall.tmj",
+      "beforeSha256": "8b75e6e498558d49a9a19027ae27f215a7ee01da93b56b898165afe5e9312bed",
+      "afterSha256": "9488509af28c9a11d4273b32b2e13f4747be4ec14feed71a91c045b51b271c21",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/moon-cafe.tmj",
+      "beforeSha256": "13a4299e0b5be89afd0a7fc00ef836937b2d76004f8631b4e6739a215d8f6959",
+      "afterSha256": "f083867477a43d8fd7823d91fd015f38cc046fbb3c34ab0826ffc85fcbba3351",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/moon-grotto.tmj",
+      "beforeSha256": "948bed3bc699dbc03222a38e490053159d9a882250ad0e3981f3ef3728592850",
+      "afterSha256": "470e39b47fbdd4a7524a3c22ff62f0deec0192246e1a9e42899215a2c94b66ca",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/nebula-arcade.tmj",
+      "beforeSha256": "c11597f574a6ad43d560b4ea9d5269834982c56ebc088e47cc2569f413d76af1",
+      "afterSha256": "93f847ee55031c83d93ca9264a4686784b55c30cb0f0ca916508ab4932a81e69",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/orbit-maze.tmj",
+      "beforeSha256": "1f5d0d21eca158accd07baffbf919e1a797d4e64472d04cf647c4f2e1fc8ca74",
+      "afterSha256": "4b09772958c3eea04818a80b19ea980f2830696cc71105db5989cd6ba372333f",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/orbit-playground.tmj",
+      "beforeSha256": "da752be76887e8f47e9b9bd11d2b7502ce94719b763a3e16f07294df31878500",
+      "afterSha256": "e607ea592714aa019b773eb3e5289e30cd6dec4554814e1f9ef866b780d4ae3a",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "beforeSha256": "e2526f98fc1d5d276bdeaae95e6acdcd730024af9ccee93796df3ada678ef9aa",
+      "afterSha256": "3722c85fa1195f692a016b72b0bda07806d74ace8052705e296087fd2bdaea1d",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 24,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/shipyard-beach.tmj",
+      "beforeSha256": "e67e23d00436bc245ea8b197cf720b75143e84403a4f67085392ba9c13ca2ea2",
+      "afterSha256": "a6d2b6342d490bd4da6022833ab043e7581d109d1548487dcfc5b844817db7e7",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/solar-hall.tmj",
+      "beforeSha256": "4392cf7f690561e349f70e7d5c42023c430b9162c29de18cccedeb34f39b5452",
+      "afterSha256": "b4c583b710825fc962dbbfb4eebfe1990a8a2627fb6f28389ccfd12e13e4f309",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-aquarius.tmj",
+      "beforeSha256": "b49ec21cd0f77c25410bb82805a81d3088579ffa42b5a7a5df43a2dee1d84511",
+      "afterSha256": "c1827b5953fcd467964fa9e90290db4b7e75ec3625ec85ee5b7ad7d125df187b",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-aries.tmj",
+      "beforeSha256": "eb10c76c02cfc1eff113d545d1d2651574feb1ec4b0f0920ee8abed546cca351",
+      "afterSha256": "79c18901106c3b4cf1022afc5bb0e257c0c88ceab8c9286645b36485b4cbeae5",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-cancer.tmj",
+      "beforeSha256": "122722355c50195c1a4ea389594cf8ec56384ea2b02e5acd05046ea2eecfa9d6",
+      "afterSha256": "fe0e493043199bd9cd986459a05eb2496500284959d41d40ea82646c5415fa97",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-capricorn.tmj",
+      "beforeSha256": "76cdcbf0fcadaffabc6ba0c4909c0b4a586d87136b0e3809d1f6761e629fa30b",
+      "afterSha256": "805407d12ad01174a55eabbba1ec4874a34194dd810dd736373459dd489e0cc0",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-gemini.tmj",
+      "beforeSha256": "7d859d4c58a7e7c2e5a24451f55a439b20366fec280496d09cefe45369f9bae9",
+      "afterSha256": "357d66676aa23d6da04b9501b84f0de2762fa0e7e977e2ebe68ab30b76684534",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-leo.tmj",
+      "beforeSha256": "c66e6fc42a1d77b8c8bfc17c0460026f36a91ac30b667fd7632bff0121e74e92",
+      "afterSha256": "7b9838133acccb44940914011fcc31b1de86b1e187c9762e96d7be86e2e1276b",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-libra.tmj",
+      "beforeSha256": "67c181cd78f3a6048d081f2f404c3ff4e08e1ab76e350ffe313cef025d63d26e",
+      "afterSha256": "b2a5b86aa72efa61bf1af2418383aaf851f67877b2863e3ccacf8b4c5cb3f1c0",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-pisces.tmj",
+      "beforeSha256": "1105f937131e4d695b418889e7aa82770ec749d5afe83f706829aec69f3467cc",
+      "afterSha256": "2552d8cbef37a36d4d0b6e428539370dd0eed3a85532e25008f86b73149096ff",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-sagittarius.tmj",
+      "beforeSha256": "e2fa3c2582bf6e32cd00c6ea74b7d795117dc33149b0d8512fcd2d65b11eebed",
+      "afterSha256": "b1c501a922b20829c5b0959b9d8674f02d09535b25ccdc3408468ca8048d0319",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-scorpio.tmj",
+      "beforeSha256": "744ac30858898cab63193cfcc40f165e8493754ffc5af61b45512d59c6f735e4",
+      "afterSha256": "7fceaf0deea09e904b061d1d0170dad694529a67fef43c16462bb8b828a238b2",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-taurus.tmj",
+      "beforeSha256": "0511c501f56804f02ffbc295c16af41fa563faf067dd5bacf839b9a9b4da6b00",
+      "afterSha256": "5e4dfb5b0ee5aeb069306ae1a662dce02312aa66a3c5a8d2644d2fde81033c9c",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/speaker-virgo.tmj",
+      "beforeSha256": "6936c8a20a3a10d64afc90f57844e305251ba5b99184ae45d98554e6ebe1b953",
+      "afterSha256": "ce6053a0f44bd62718b3a0a2c246116e6af1506ec8fe2aa1e52dcd0b4e629e8a",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/star-garden.tmj",
+      "beforeSha256": "4ca1ed5e4094db011164a8c32b4e4f0712e2952b0c74facc7177f2b1ca3dd7d2",
+      "afterSha256": "d9254847f28c8e59baea883a82d329d6da2f5f8507caf1886f1d43cac5b4fc23",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/stargazer-terrace.tmj",
+      "beforeSha256": "f5c7586645bc582205fae38078351e01ae7717c224dbcbd6af2ecab962c01956",
+      "afterSha256": "62afbd4967cad5acd739ea96c133e082c3795b26fcc35b35dc513779a1732c9f",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/water-district.tmj",
+      "beforeSha256": "350b67fe0b84e4f9e4a5aa006bda869844cfeb84aa4e8bc401e22d7186aea4c5",
+      "afterSha256": "84be7892d2e6955f7dd0c904b9bf23dce9b0a26b587f33d75909282c8ae18b94",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    },
+    {
+      "path": "maps/zodiac-festival-park.tmj",
+      "beforeSha256": "603edb3cfb9939af57237174de075e1109bb6b72f158430089d1c54f0535146f",
+      "afterSha256": "d9c31b398617144c450d5a2ff39e0dc8f4eabcd87a10c82e4b42fde443fe4303",
+      "oldScript": "../assets/src-main-B3isE0aq.js",
+      "newScript": "../assets/src-main-CL_VEiry.js",
+      "collisionCellsChanged": 0,
+      "allOtherMapDataUnchanged": true
+    }
+  ]
+}

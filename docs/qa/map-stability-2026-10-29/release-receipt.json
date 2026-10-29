@@ -1,0 +1,23 @@
+{
+  "codeCommit": "e095eef16f3e3967c7cc2d98e82ef5e3f163fec0",
+  "target": "varcamp-demo",
+  "applied": true,
+  "uploadStatus": 200,
+  "completeReadbacks": 2,
+  "expectedLiveFiles": 745,
+  "planPath": ".qa/release-map-physics-20261029",
+  "files": {
+    "plan.json": "e9747adc9fb0ea5b3f1e1ded836ee68bbd57bfadcb5b9d1a11160c0a325c89ac",
+    "package.zip": "ce1861bbd9ff1c86c8fd8bb6c5a60d1a1c67c8ae0f72b982be624913fbeb959d",
+    "readback-1.zip": "ef37b6e1f3e2e32f749aef3354249a42964a177efd312be5597ece31ab4fe60a",
+    "readback-2.zip": "9fb786200f11ba21edd7df6ca4e4d8e7c9297199a96a82a25b87da51420a2adf"
+  },
+  "smoke": {
+    "ok": true,
+    "startedAt": "2026-10-29T17:18:34.434Z",
+    "finishedAt": "2026-10-29T17:18:47.589Z",
+    "url": "https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/overworld.wam",
+    "secondMapUrl": "https://varcamp.3-1-133-135.sslip.io/~/varcamp-demo/maps/speaker-aries.wam",
+    "secondMapCameraSceneShown": false
+  }
+}
