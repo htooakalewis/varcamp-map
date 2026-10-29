@@ -16,5 +16,13 @@
   "pageOrAssetErrors": 0,
   "newAutomatedTestFailures": 0,
   "preexistingAutomatedTestFailuresRemaining": 175,
-  "guideServicesStarted": false
+  "guideServicesStarted": false,
+  "githubDependencyAlerts": {
+    "total": 153,
+    "critical": 7,
+    "high": 75,
+    "moderate": 60,
+    "low": 11,
+    "triaged": false
+  }
 }

@@ -32,6 +32,8 @@ The full Vitest run completed 2,640 tests: 2,370 passed, 181 failed and 89 skipp
 
 The remaining failures are listed individually in [test-results-final.json](test-results-final.json). They include old layout/fixture contracts, missing fixture dependencies, a macOS-only Tiled executable path, and guide operations tests. The separate Node operations suite passed 17/18 checks; its failed guide-image check requires world-readable local files, while the unchanged guide Docker inputs have mode `0600`. No guide activation or permission change was made.
 
+GitHub reported 153 dependency alerts on the default branch during the push (7 critical, 75 high, 60 moderate and 11 low). Dependencies were unchanged by this fix. Those alerts were not triaged in this map-geometry audit, so this report does not establish their runtime impact. [Repository alerts](https://github.com/htooayelwinict/varcamp-map/security/dependabot).
+
 Code commit **`e095eef16f3e3967c7cc2d98e82ef5e3f163fec0`** was deployed with `npm run deploy:demo -- --apply`. Upload returned HTTP 200, two complete readbacks verified all 745 expected files, and the standard live acceptance smoke passed. [Release receipt](release-receipt.json).
 
 After deployment:
