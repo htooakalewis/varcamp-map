@@ -311,7 +311,8 @@
   },
   "excluded": "Local deployment history, private configuration, credentials, dependency runtimes and temporary QA archives are not part of this public source snapshot.",
   "extensionInventory": {
-    "README.md": "794a27b9e2ce64ad1f630e7a7366e09593faeb33491b14a62b2e78844c40d809",
+    "README.md": "dd62592fd57f107f5c58ead84e919e55a9151e2ce5a6b26bbc7288db186c0dc9",
+    "README.my.md": "f5413c81d6e444829f8b57eeecb690e3d35008517f915d0eb4cc88e81327d75e",
     "art/beach-lounge-sprites.json": "f5977afbcc00c4f3b711f83aec252c420ae985fd39cba2269f99d1ab6ab50712",
     "art/source/arrival-refresh.json": "de2cf09d014d7ad5317acdc3c95fb3b7aa50b9e3b0cab527de6b19e97ff717c2",
     "art/source/arrival-roadster.json": "662465e40604a43e283dc4dc1c031aad1b00f7a82d8ef5c6e7a298e007039c0b",
@@ -1130,7 +1131,7 @@
     "assets/tilesets/zodiac-exteriors/ATTRIBUTION.md": "b142b2ea696e340dcdba6b15a4df9f81dba0de05b73df7b14c7d8eb755af9892",
     "assets/tilesets/zodiac-exteriors/LICENSE.txt": "7dd9977e106869d0e9f53a4db99306bf67bc4f3c33811db8da033a8ed272bd53",
     "buildmap.vite.config.ts": "604d329bbe1efb15c1ef6cf4e75a6e785be6e9aa27594d84925df21179e38582",
-    "docs/current-release-facts.md": "cb95a3cd30d7bc19089200a24da917919c2fd764e77f095b8874983980aef3bf",
+    "docs/current-release-facts.md": "062b2db3d8313ac51baa99bca8ae574f2a8f84d4a496e98927fea55731879896",
     "docs/dependencies.md": "ba0a896ab5d1f1b53ba728db7ea51da061eee139fa38af413892a2ef3072597e",
     "docs/entity-editor-catalogs.md": "ab575b70290ee67a5c91022396c40b2bcbf64c9c326068709ed0541054212e2c",
     "docs/operating/map-editing.md": "8be2c67fd0ba53d4979e66ff657803d1ba5163eb4b69ded81489340538cc46c7",
