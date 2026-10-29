@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import {readFileSync,mkdtempSync,mkdirSync,copyFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {resolve,dirname} from 'node:path';
@@ -99,7 +100,7 @@ describe('tropical cove visitor experience',()=>{
   const mask=(m:any)=>m.layers.find((x:any)=>x.name==='physical-collisions').data.slice(5*48,8*48);expect(mask(native()).map(Boolean)).toEqual(mask(before('maps/shipyard-beach.tmj')).map(Boolean));
  });
  it('retains every earlier catalog definition while reserving new cove sprite identities',()=>{
-  const catalog=loadTileCatalog(),old=before('art/tile-catalog.json');
+  const catalog=beforeExpoChairCatalog(loadTileCatalog()),old=before('art/tile-catalog.json');
   for(const[id,sprite]of Object.entries(old))expect(catalog[id],id).toEqual(sprite);
  });
 });

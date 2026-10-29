@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
@@ -28,7 +29,7 @@ describe('twelve zodiac exterior architectures',()=>{
   const l=read<MapLayout>('world/layouts/overworld.json'),old=beforeZodiacJson<MapLayout>('world/layouts/overworld.json'),expected=structuredClone(old);
   for(const sign of SIGN_IDS)expected.placements.find(p=>p.id===sign+'-building')!.sprite='zodiac-building-'+sign;
   expect(l).toEqual(expected);expect(readFileSync('maps/overworld.wam')).toEqual(beforeZodiacRaw('maps/overworld.wam'));
-  const c=loadTileCatalog(),oldC=beforeZodiacJson('art/tile-catalog.json');for(const[id,s]of Object.entries(oldC))expect(c[id],id+' frozen catalog definition').toEqual(s);
+  const c=beforeExpoChairCatalog(loadTileCatalog()),oldC=beforeZodiacJson('art/tile-catalog.json');for(const[id,s]of Object.entries(oldC))expect(c[id],id+' frozen catalog definition').toEqual(s);
   for(const[path,pin]of Object.entries(beforeZodiac().assets))expect(sha(readFileSync(path)),path+' original bytes').toBe(pin);
  });
  it('adds one atlas after all83 retained reservations and confines changed paint to the twelve envelopes',()=>{

@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
@@ -74,7 +75,7 @@ describe('zodiac building physical silhouettes',()=>{
   const old=beforePhysicsJson<MapLayout>('world/layouts/overworld.json'),saved=structuredClone(old),expected=structuredClone(old);
   for(const sign of SIGN_IDS){const p=expected.placements.find(p=>p.id===sign+'-building')!;p.sprite='zodiac-physical-'+sign;delete p.renderRole;delete expected.placements.find(p=>p.id===sign+'-bold-nameplate')!.renderRole;}
   const current=read<MapLayout>('world/layouts/overworld.json'),native=read<TiledMap>('maps/overworld.tmj');expect(applyZodiacPhysics(old)).toEqual(expected);expect(current).toEqual(expected);expect(old).toEqual(saved);expect(applyZodiacPhysics(current)).toEqual(current);
-  const before=beforePhysicsJson<TiledMap>('maps/overworld.tmj'),savedNative=structuredClone(before),c=loadTileCatalog();expect(reconcileZodiacPhysics(before,current,c)).toEqual(native);expect(before).toEqual(savedNative);expect(reconcileZodiacPhysics(native,current,c)).toEqual(native);
+  const before=beforePhysicsJson<TiledMap>('maps/overworld.tmj'),savedNative=structuredClone(before),c=beforeExpoChairCatalog(loadTileCatalog());expect(reconcileZodiacPhysics(before,current,c)).toEqual(native);expect(before).toEqual(savedNative);expect(reconcileZodiacPhysics(native,current,c)).toEqual(native);
  });
  it('requires current geometry even if every new source and catalog marker is removed',()=>{
   expect(()=>assertNativePlaza(beforePhysicsJson('maps/overworld.tmj'),beforePhysicsJson('world/layouts/overworld.json'),beforePhysicsJson('art/tile-catalog.json'))).toThrow(/Zodiac physics|Hall buildings|Plaza crescent|Plaza landscape|Vibe Code branding/);

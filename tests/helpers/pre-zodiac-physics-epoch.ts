@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 /** Stage historical tests only after proving the complete named successor. */
 import assert from 'node:assert/strict';
 import {beforePhysicsJson} from './zodiac-physics-history';
@@ -16,6 +17,6 @@ export function prePhysicsNative(map:TiledMap):TiledMap{
  map=preArrivalNative(map);
  if(!map.layers.some(l=>l.name==='scenery-aboveAvatar-1'))return structuredClone(map);
  const before=beforePhysicsJson<TiledMap>('maps/overworld.tmj');
- expected??=reconcileZodiacPhysics(before,applyZodiacPhysics(beforePhysicsJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ expected??=reconcileZodiacPhysics(before,applyZodiacPhysics(beforePhysicsJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'Current native must be exactly the zodiac physical successor');return before;
 }

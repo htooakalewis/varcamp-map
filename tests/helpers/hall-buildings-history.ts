@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {readFileSync} from 'node:fs';
 import {preCrescentLayout,preCrescentNative,crescentSuccessorSha} from './plaza-crescent-history';
 import {createHash} from 'node:crypto';
@@ -16,6 +17,6 @@ let expected:TiledMap|undefined;
 export function preHallBuildingsNative(map:TiledMap):TiledMap{
  map=preCrescentNative(map);
  if(!map.tilesets.some(s=>s.name==='hall-buildings'))return structuredClone(map);
- const before=beforeHallBuildingsJson<TiledMap>('maps/overworld.tmj');expected??=reconcileHallBuildings(before,applyHallBuildings(beforeHallBuildingsJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ const before=beforeHallBuildingsJson<TiledMap>('maps/overworld.tmj');expected??=reconcileHallBuildings(before,applyHallBuildings(beforeHallBuildingsJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact enclosed-hall and ground-name successor required');return before;
 }

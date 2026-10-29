@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
@@ -33,6 +34,6 @@ export function preSpacingNative(map:TiledMap):TiledMap{
  const caption=map.layers.find(l=>l.name==='standing-caption-expo-n1-nameplate') as TileLayer|undefined;
  if(!caption?.data.slice(65*128,66*128).some(Boolean))return structuredClone(map);
  const before=beforeSpacingJson<TiledMap>('maps/overworld.tmj');
- expected??=reconcileExpoSpacing(before,applyExpoSpacing(beforeSpacingJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ expected??=reconcileExpoSpacing(before,applyExpoSpacing(beforeSpacingJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact native spacing successor required');return before;
 }

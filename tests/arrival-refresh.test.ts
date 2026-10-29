@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import {vibeCodeSuccessorSha} from './helpers/vibecode-history';
 import{readFileSync}from'node:fs';
 import{createHash}from'node:crypto';
@@ -54,7 +55,7 @@ describe('current colourful arrival and topmost drones',()=>{
  });
  it('reproduces an exact idempotent source/native successor without changing either predecessor input',async()=>{
   const{applyArrivalRefresh,reconcileArrivalRefresh}=await import('../tools/maps/arrival-refresh');const old=beforeArrivalJson<MapLayout>('world/layouts/overworld.json'),native=beforeArrivalJson<TiledMap>('maps/overworld.tmj'),saved=structuredClone(old),savedNative=structuredClone(native),current=read<MapLayout>('world/layouts/overworld.json');
-  expect(applyArrivalRefresh(old)).toEqual(current);expect(applyArrivalRefresh(current)).toEqual(current);expect(old).toEqual(saved);expect(reconcileArrivalRefresh(native,current,loadTileCatalog())).toEqual(read('maps/overworld.tmj'));expect(native).toEqual(savedNative);expect(reconcileArrivalRefresh(read('maps/overworld.tmj'),current,loadTileCatalog())).toEqual(read('maps/overworld.tmj'));
+  expect(applyArrivalRefresh(old)).toEqual(current);expect(applyArrivalRefresh(current)).toEqual(current);expect(old).toEqual(saved);expect(reconcileArrivalRefresh(native,current,beforeExpoChairCatalog(loadTileCatalog()))).toEqual(read('maps/overworld.tmj'));expect(native).toEqual(savedNative);expect(reconcileArrivalRefresh(read('maps/overworld.tmj'),current,beforeExpoChairCatalog(loadTileCatalog()))).toEqual(read('maps/overworld.tmj'));
  });
  it.each(['missing-panel','duplicate-panel','standing-panel','moved-panel','wrong-png','old-sign','old-pole','moved-car','old-logo'])('rejects coherent %s mutations at the normal production gate',kind=>{
   const l=JSON.parse(readFileSync('world/layouts/overworld.json','utf8')) as MapLayout,panel=l.images!.find(i=>i.name===panels[0].name)!;

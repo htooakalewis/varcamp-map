@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildMap } from '../tools/maps/builder';
@@ -10,7 +11,7 @@ const names=Object.keys(before);
 const load=(name:string):MapLayout=>JSON.parse(readFileSync(`world/layouts/${name}.json`,'utf8'));
 describe('reference-furnished zodiac interiors',()=>{
  it('preserves every original catalog row',()=>{
-  const now=loadTileCatalog();for(const[key,row]of Object.entries(oldCatalog))expect(now[key],key).toEqual(row);
+  const now=beforeExpoChairCatalog(loadTileCatalog());for(const[key,row]of Object.entries(oldCatalog))expect(now[key],key).toEqual(row);
  });
  for(const name of names){
   it(`${name}: keeps exact footprint, entries, returns, meeting roles and inspection routes`,()=>{

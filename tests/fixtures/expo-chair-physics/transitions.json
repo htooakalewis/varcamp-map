@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "base": "7f24c28b111a307f8ce010950671900660f3226e",
+  "transitions": {
+    "art/tile-catalog.json": [
+      "54538cfcc221acfd471b06ec8b971903278a81dee2f261f4f2dfbabab79d01e4",
+      "05ae1dd05955e2c3520c92ec1b4e26a7a5e117980e765a5572652d7ae30ee0ef"
+    ],
+    "docs/current-release-facts.md": [
+      "88dca627d8b5163ff002b5a78279f1d2929bd0b100e0c68ae43c718d255f2eca",
+      "cb95a3cd30d7bc19089200a24da917919c2fd764e77f095b8874983980aef3bf"
+    ],
+    "maps/overworld.tmj": [
+      "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
+      "639e9b26afd22260e6e3f26a8eca60786543b3f93c4ddd6f7c87e297e5f8f3c4"
+    ],
+    "maps/preview/overworld.tmj": [
+      "9776df066c5ce7dfea24f66e1fa5cfc82af40f81f7de4b37906cbd11ee5480ed",
+      "da738fdf88a04e5a5a39bf0fea2c15541914c47940e2487803d7bdb8dfed9c8b"
+    ],
+    "ops/bots/config.mjs": [
+      "6da3d164cf862f238eedbfb05808b085188a4a07982e74d1bb41349e7cbe3805",
+      "08b8c07c3e24c5e1959dd960b7cae66b22d0276221d099aabbbfd9579d36fb4a"
+    ],
+    "publication/verify-source.mjs": [
+      "d4722d9bacf7d55426be557537406cbce82e323e30671b4e83f1e8767b151122",
+      "3f4c067fdceca1cf1b08e00eb698b01320699c927e082cca6312b8e86db56a3e"
+    ],
+    "src/bots/lyra-routes.json": [
+      "e50d171e707adf08959248400fd68d7f531b2d54c2f4f63140d0d1c78a050284",
+      "3dd6b76556baf3ec1db6ddd6cdf339c3ffd7483ed6fd1d769884cbc28e3c2658"
+    ],
+    "tests/arrival-refresh.test.ts": [
+      "2fd149ddd248c18279df630210f3c54b94fcef8512e4b45eceb489b934850368",
+      "aeb86821a52e7ecd566c920839a6bf6ab847b97dc74cf9821ce209974522cd9e"
+    ],
+    "tests/coast-life.test.ts": [
+      "15f0f1a9015754afef59635b1e7edb39007c9e0c44b8b41874714fbaf3854144",
+      "9fa38e4a059b5d265dde0a5bee8dbcb9cce17dd44ca722002b7f68469591362a"
+    ],
+    "tests/expo-spacing.test.ts": [
+      "6227edbb46457ec0ad1203b6ca6c97e9857b63249f1f45bdfa10b7e37c9e89a0",
+      "94d0b7b3e67619c922bec6722826349dadad8ae400f52b993f3d9c794b126785"
+    ],
+    "tests/hall-exteriors.test.ts": [
+      "43b751c3098fa031c823a1d270ac5e253ea09e971e19f160208aeee1fe7b7f38",
+      "6072439fa8dafaee80516e44b421d72a5dfb9bed5b001d22a46710776fc8c3f6"
+    ],
+    "tests/helpers/drone-depth-epoch.ts": [
+      "7b7991705a20ced1623e3a5232ce30be2a280fa3e6dbb91bf7771992892783c6",
+      "442db225f7fed849c0747464a03cf5129799fcafc8f7a6cc40c348c3d0c37630"
+    ],
+    "tests/helpers/expo-spacing-history.ts": [
+      "b92c8575bc0b2ee5b630d551f848d35b62596d84e5dc48261152ab9c7e9df66a",
+      "a66e70eb9455176a15bf728ca70e0c6c73f2deaabf96c810c54272bf64708c53"
+    ],
+    "tests/helpers/fountain-motion-history.ts": [
+      "61919d17c70e3affad20a68110e611e33cd55c0fda46dccdef75f54399bd3d83",
+      "d26691cf5259a6432871fbcd7954587f086b89a54536f36696541f1669ec259c"
+    ],
+    "tests/helpers/hall-buildings-history.ts": [
+      "a1c40db5f0a0eae24ba6883d59c8919847170dcc9247fc396723b3098e26483e",
+      "31109bf9b12b5093fce69494de32bed2eb4c62b29a7b8c7d4a065b6b569136e6"
+    ],
+    "tests/helpers/leo-lion-head-history.ts": [
+      "2bf4832a3fcd123b95767c2feef48c84bf9cd4d73da26bd49f4ed3443dc42d45",
+      "0756776e69ef1ea0cb45dda7c980612e08662d3564c07a3b351e7f564615c3e1"
+    ],
+    "tests/helpers/maze-gate-history.ts": [
+      "392da2c62c926559491abad1ae2e15c791bccb674359c5df5d4a9a39c961ad37",
+      "26366d5949f7a4ec95f3973694f724f1b618fb76b1f63cbcb1e1ace1202dcfde"
+    ],
+    "tests/helpers/plaza-crescent-history.ts": [
+      "c5125a6452d118fc9d3dd7bad53a0fbe26407b11ddd83a27a6fa88c58d32ab75",
+      "305ded8d254028c7abd42387cad6d8aba221fb73c670f34466043d035c008ea2"
+    ],
+    "tests/helpers/plaza-landscape-history.ts": [
+      "a64cc636126dcb076b8328a0d3e4b59feaa520d236c84b7cc0cf81b3c3ff5876",
+      "60388dff10a07f56ed24022975d911106e8bda81451ff76a35fd4c8becb77e80"
+    ],
+    "tests/helpers/plaza-patrol-history.ts": [
+      "38aa85a791238fadc06e9e57a14bb4d6f49088bc4243a44bc692fcf3585684fb",
+      "14822ebd544233421532e51deb5e4292494b3459e137d29c84da24023b166875"
+    ],
+    "tests/helpers/plaza-successor.ts": [
+      "e0bf7c5ab908baef10f893c06b917d5c2624a90d5cc2cba70a488c61e5b81856",
+      "6ae506eeaa0079a629e8b93b8bc39af76a2ae133be0cf6ef8d9b3ac1907aa0c8"
+    ],
+    "tests/helpers/pre-arrival-epoch.ts": [
+      "5db8aabb560d3cbf2f8a70a19453521d6debfdba595248783fdf3a7969d54f45",
+      "4507df796fd1007fce83a2d87b1be5fb55e3c70a7f769d4c1d15c7377e920a10"
+    ],
+    "tests/helpers/pre-hall-exterior-epoch.ts": [
+      "aa78e50c5336be6cbecb7cf5e880b2b7458109b163b4645fa7665ce25096d89f",
+      "e4ce1350f1f48e8d1e305cb92c32cef4333b19e5a280b54953e4fbe6644fb59e"
+    ],
+    "tests/helpers/pre-zodiac-epoch.ts": [
+      "918c358efa46553521fb0846f6f32cfa5940cd7fe6eee3bce8a702ff5098a469",
+      "2595737dab0fbd4b9114d4935c3cce8673fda7010d9592304098c08a9975f59b"
+    ],
+    "tests/helpers/pre-zodiac-physics-epoch.ts": [
+      "13a0a6aae532c2e2103051d1ed882cd5ead06cf5cf4c14d30e61408859caeee5",
+      "c3a49a0d2a2c5e900f86304c9274e2fecb8ff2313016e87acaef3c1a9a1f803f"
+    ],
+    "tests/helpers/vibecode-history.ts": [
+      "58011e6959cd77f68b803a227011d50d59bb1577428f3566d46f83c2bc9273ce",
+      "681d85ec74bb1ccb785e8b540a23068f3cd06e9ea4938dc500ee320662558909"
+    ],
+    "tests/interior-reference.test.ts": [
+      "d2bb04dd29052e5664edc92a45fb14a59d92bb96cb036838bba0a85929a35e46",
+      "acb1fcabd78c89c2148bccb4fe84cff08287fe48ad1568258ea2a7d7add485f7"
+    ],
+    "tests/publication-integrity.test.ts": [
+      "8547343843a36395f7cb7b4434580295eaed96792c66c708e5208c34ad6e1e10",
+      "bd00ee503b133c3b67eb08086f0416aadf09b2f68644af28a7d0a39c1c1f7d5b"
+    ],
+    "tests/publication-revisions.test.ts": [
+      "4688ff25813ed4218b78a5ce96912c95b08d262c9018ae310478ec59074becd4",
+      "98a9ff35c281907cb1241a31107bf7143bcdc143d01bf7c1bf2103459cb81428"
+    ],
+    "tests/tropical-cove.test.ts": [
+      "596cb6bac6c667f5ebba74473267af1009148a1f7fe60b78e4ad140f6210ebfd",
+      "9f563091182a6960763d7e7cb67236ae93737dd068907a6457a3c42a66e3272e"
+    ],
+    "tests/vibecode-branding.test.ts": [
+      "2cdc2ffb40394780be04185685af12c89a505cf46ac9f85cfd50cccdc774b289",
+      "76c35ce3d02ef0bc98bfec9cf188aa4a09838851c7613a698d0e29d21146e6e3"
+    ],
+    "tests/world-ambient.test.ts": [
+      "707c537233e6106ba563983fdad8f1a1a9dde40c24bdecb0e579c4ba42a4e287",
+      "dc9c682bc6e2f2059f1c777445ddd81ac600b90355ab13f16ac967f6813da432"
+    ],
+    "tests/zodiac-exteriors.test.ts": [
+      "632c980273d6d95c58a6b931fe5ccfd57e32d03080e6474dc5f232d24a5fe735",
+      "6c260af86bb0982ac55b4483fac7683e533fa84fb4b4fd1d3e41e71d8598d6b2"
+    ],
+    "tests/zodiac-physics.test.ts": [
+      "f73a708ce593ae03e30d7fe7e67fffbe4532500537e9dba6e346a87d0fcf8b70",
+      "2d8ac3ac40ad4dab738bbbc7abf56d51ce699e961ff85bc19caea6f4c4814950"
+    ]
+  }
+}

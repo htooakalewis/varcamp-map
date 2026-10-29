@@ -4,6 +4,9 @@ import {expect,it} from 'vitest';
 import type {MapLayout,TiledMap,TileLayer} from '../tools/maps/types';
 import {priorSpacingProvenance} from '../tools/maps/expo-spacing-provenance';
 import {preFountainLayout} from './helpers/fountain-motion-history';
+import {loadTileCatalog} from '../tools/art/catalog';
+import {buildMap} from '../tools/maps/builder';
+import {restoreExpoChairNative,reconcileExpoChairPhysics,assertExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 const read=<T=any>(p:string):T=>JSON.parse(readFileSync(p,'utf8'));
 const current=()=>read<MapLayout>('world/layouts/overworld.json');
 const native=()=>read<TiledMap>('maps/overworld.tmj');
@@ -44,6 +47,35 @@ it('blocks both divider columns while retaining a walking route into every booth
   const b=interior(l,row+i);expect(seen.has((b.y+3)*128+b.x+2),b.id+' reachable interior').toBe(true);
   if([1,2,4,5].includes(i))for(let y=b.y;y<b.y+b.height;y++)for(let x=b.x+6;x<b.x+8;x++)expect(mask[y*128+x],b.id+' solid two-tile divider').not.toBe(0);
  }
+});
+it.each(['native','authored'] as const)('%s booth chairs block the visible seat and leave the transparent tile below walkable',kind=>{
+ const l=current(),m=kind==='native'?native():buildMap(l,loadTileCatalog()).tmj;
+ const mask=(m.layers.find(layer=>layer.name==='physical-collisions') as TileLayer).data;
+ const chairs=l.placements.filter(p=>/^expo-[ns][1-6]-chair$/.test(p.id));
+ expect(chairs).toHaveLength(12);
+ // WA_Seats row 9 contains the entire chair; row 10 in its 1x2 crop is empty.
+ // Blocking row 10 creates an invisible obstacle while leaving the chair walkable.
+ for(const p of chairs){
+  expect.soft(mask[p.y*m.width+p.x],p.id+' visible seat').not.toBe(0);
+  expect.soft(mask[(p.y+1)*m.width+p.x],p.id+' empty floor below').toBe(0);
+ }
+});
+it('preserves the old chair collision receipt through an exact reversible native successor',()=>{
+ const l=current(),m=native(),c=loadTileCatalog(),prior=l,old=restoreExpoChairNative(m,l,c);
+ expect(reconcileExpoChairPhysics(old,prior,c)).toEqual(m);
+ const a=(old.layers.find(l=>l.name==='physical-collisions') as TileLayer).data,b=(m.layers.find(l=>l.name==='physical-collisions') as TileLayer).data;
+ expect(a.filter((v,i)=>v!==b[i])).toHaveLength(24);
+ expect(old.layers.filter(l=>l.name!=='physical-collisions')).toEqual(m.layers.filter(l=>l.name!=='physical-collisions'));
+ expect(old.tilesets).toEqual(m.tilesets);
+ for(const p of prior.placements.filter(p=>/^expo-[ns][1-6]-chair$/.test(p.id))){expect(a[p.y*128+p.x]).toBe(0);expect(a[(p.y+1)*128+p.x]).not.toBe(0);}
+});
+it.each(['chair','extra-cell','catalog-art','catalog-collider'])('rejects %s drift when preserving the chair predecessor',kind=>{
+ const l=current(),m=native(),c=loadTileCatalog();
+ if(kind==='chair')l.placements.find(p=>p.id==='expo-n1-chair')!.x++;
+ if(kind==='extra-cell'){const a=(m.layers.find(l=>l.name==='physical-collisions') as TileLayer).data;a[76*128+70]=a.find(Boolean)!;}
+ if(kind==='catalog-art')c['chair-presentation'].rect.y++;
+ if(kind==='catalog-collider')c['chair-presentation'].blockingCells=[[0,1]];
+ expect(()=>{assertExpoChairCatalog(c);restoreExpoChairNative(m,l,c);}).toThrow();
 });
 it('preserves all meeting, media, entry, exit, animation and zodiac building behavior',()=>{
  const l=priorSpacingProvenance(preFountainLayout(current())),old=prior();

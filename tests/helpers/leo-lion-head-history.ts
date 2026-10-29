@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {preHallBuildingsLayout,preHallBuildingsNative,hallBuildingsSuccessorSha} from './hall-buildings-history';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -16,6 +17,6 @@ let expected:TiledMap|undefined;
 export function preLeoNative(map:TiledMap):TiledMap{
  map=preHallBuildingsNative(map);
  if(!map.tilesets.some(s=>s.name==='leo-lion-head'))return structuredClone(map);
- const before=beforeLeoJson<TiledMap>('maps/overworld.tmj');expected??=reconcileLeoLionHead(before,applyLeoLionHead(beforeLeoJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ const before=beforeLeoJson<TiledMap>('maps/overworld.tmj');expected??=reconcileLeoLionHead(before,applyLeoLionHead(beforeLeoJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact Leo ornament successor required');return before;
 }

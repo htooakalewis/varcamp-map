@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../tools/maps/expo-chair-physics';
 import {vibeCodeSuccessorSha} from './helpers/vibecode-history';
 import {preHallBuildingsLayout} from './helpers/hall-buildings-history';
 import {readFileSync,existsSync} from 'node:fs';
@@ -29,7 +30,7 @@ describe('Solar and Lunar exterior architectures',()=>{
   expect(existsSync('assets/tilesets/original/hall-exteriors.png'),'two themed hall facade atlas exists').toBe(true);
  });
  it('preserves every prior asset, other native map, WAM, catalog definition and collision cell',()=>{
-  const b=beforeHallExteriors(),c=loadTileCatalog(),old=beforeHallJson('art/tile-catalog.json');
+  const b=beforeHallExteriors(),c=beforeExpoChairCatalog(loadTileCatalog()),old=beforeHallJson('art/tile-catalog.json');
   for(const[path,pin]of Object.entries({...b.assets,...b.nativeMaps,...b.wams}))if(path!=='maps/preview/overworld.tmj')expect(sha(readFileSync(path)),path+' retained bytes or exact branding successor').toBe(vibeCodeSuccessorSha(path,pin));
   for(const[id,s]of Object.entries(old))expect(c[id],id+' retained catalog definition').toEqual(s);
   const m=prePhysicsNative(read<TiledMap>('maps/overworld.tmj')),prior=beforeHallJson<TiledMap>('maps/overworld.tmj');

@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {readFileSync} from 'node:fs';
 import {preSpacingLayout,preSpacingNative,spacingSuccessorSha} from './expo-spacing-history';
 import {createHash} from 'node:crypto';
@@ -24,7 +25,7 @@ let expected:TiledMap|undefined;
 export function prePatrolNative(map:TiledMap):TiledMap{
  map=preSpacingNative(map);
  if(!map.layers.some(l=>l.name.startsWith('plaza-patrol-')))return structuredClone(map);
- const before=beforePatrolJson<TiledMap>('maps/overworld.tmj');expected??=reconcilePlazaPatrol(before,applyPlazaPatrol(advancePatrolProvenance(beforePatrolJson<MapLayout>('world/layouts/overworld.json'))),loadTileCatalog());assert.deepEqual(map,expected,'exact native patrol successor required');return before;
+ const before=beforePatrolJson<TiledMap>('maps/overworld.tmj');expected??=reconcilePlazaPatrol(before,applyPlazaPatrol(advancePatrolProvenance(beforePatrolJson<MapLayout>('world/layouts/overworld.json'))),beforeExpoChairCatalog(loadTileCatalog()));assert.deepEqual(map,expected,'exact native patrol successor required');return before;
 }
 /** The drone-depth epoch predates the six additional patrols. */
 export const BEFORE_PATROL_DRONES=[...Array.from({length:40},(_,i)=>({map:'overworld',name:'plaza-drone-'+String(i).padStart(2,'0')})),...['camera','delivery','survey'].map(id=>({map:'overworld',name:'plaza-fleet-'+id}))];

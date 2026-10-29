@@ -3,7 +3,7 @@
     "proposalSha256": "a071e0c81c18ad4b1d759f8c246384fc50032e6e3b7c395413246b9858958282",
     "sourceSha256": {
       "world/layouts/overworld.json": "d21f3cb13dbaccc9a47cf42ad9ee424f32673a80465ff1357430d25fd1342b41",
-      "maps/overworld.tmj": "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
+      "maps/overworld.tmj": "639e9b26afd22260e6e3f26a8eca60786543b3f93c4ddd6f7c87e297e5f8f3c4",
       "maps/overworld.wam": "34912c410e77b9ce32c356275f585a5b8f444187b8f447d346f7542bbe159eff",
       "tests/exterior-gates.test.ts": "eeaf05f4e7311d7bf8053609a7221d63dbc60d6b0493cfa513278a77339f84da",
       "tests/npc-maps.test.ts": "9e0951890a877421e27e13127a1d2243b057c1e89559276d4e5d43d321c8ea57",
@@ -11,7 +11,7 @@
       "tests/helpers/editor-catalog-history.ts": "b6668f1d84d6c028c1cba99d2ff3e936c241a030edbddb061a222168711eb7ee",
       "world/editor-collections.json": "024e7de19bc32d573b6bb79b77e013e153584ebbfb413436b9991fd467452fc0",
       "tests/helpers/physical-prop-contracts.ts": "9ac76984fe6fe3e32514aeb755b1317dda180ffac4efa656c51f513eadf57972",
-      "art/tile-catalog.json": "54538cfcc221acfd471b06ec8b971903278a81dee2f261f4f2dfbabab79d01e4",
+      "art/tile-catalog.json": "05ae1dd05955e2c3520c92ec1b4e26a7a5e117980e765a5572652d7ae30ee0ef",
       "tools/bots/route-audit.ts": "47671835b82b951cde24acfd95478be8d5b770f080e7e4b8726208cb28a67cf0",
       "tests/guide-route-audit.test.ts": "a74ce0f4f0ca25213ecb616fc77cfc488802ef755f8489bfeb21075a927d0638",
       "src/bots/map-guard.ts": "9ee1397f8886e7f11e723f3ee3b7e011692b6352481dd83503739455f7055c15",
@@ -55,10 +55,12 @@
       "tools/maps/cafe-arrival-context.ts": "66022b0035aba61c1791ae07e0c547a4c4bc10ff5a40126365c25b076d3b29c6",
       "art/source/cafe-arrival-refresh.json": "2630b6f793a84b9ef2c1e59dd5ea8eb02e9aeafcb5aea59fd0aae65bfbf8e526",
       "tools/maps/maze-gate-context.ts": "c037c2de5058365087839c3208244360e4d80bffae0aec98e2263974807fc350",
-      "art/source/maze-gate-refresh.json": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19"
+      "art/source/maze-gate-refresh.json": "44a807922c89b3bf6c46ade6d4578ed3a304c9dbfac0e2215fdbe24434ad1b19",
+      "tools/maps/expo-chair-physics.ts": "ee0fed3318613b75d9565a413c1e725ba3849994a147854a442b6a09701607e9",
+      "tools/maps/plaza-native.ts": "1c10ac69d96222ae0e8d83f643e0e4288fab6e6920e48eac9446d4598b424722"
     },
     "allowedCellsSha256": "34d4a7f34610d0b669b9f059086557e03aec0f379cf28c832797a279cc07061d",
-    "geometrySha256": "a55b68650073396f526ec49f676bd22b858246a7fedf2dc76e7baf03082342a1",
+    "geometrySha256": "99cccd86946e1600b2a8a491ab941b9a9dc25f6e7572e5cd2088af03cbb237ad",
     "geometryEncoding": "Sorted-key JSON of width,height,tilewidth,tileheight,layers with objectgroup class omitted only when identical to nonempty object type,tilesets excluding image,properties excluding script; UTF-8 SHA-256."
   },
   "home": [

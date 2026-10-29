@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 /** Historical tests stage genuine predecessor bytes only after validating the
  * complete named successor. No candidate fields are stripped or silently reset. */
 import assert from 'node:assert/strict';
@@ -18,6 +19,6 @@ export function preHallNative(map:TiledMap):TiledMap{
  map=prePhysicsNative(map);
  if(!map.tilesets.some(t=>t.image?.endsWith('/hall-exteriors.png')||t.name==='hall-exteriors'))return structuredClone(map);
  const before=beforeHallJson<TiledMap>('maps/overworld.tmj');
- expected??=reconcileNativeProjection(before,buildMap(applyHallExteriors(beforeHallJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog()).tmj);
+ expected??=reconcileNativeProjection(before,buildMap(applyHallExteriors(beforeHallJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog())).tmj);
  assert.deepEqual(map,expected,'Current native must be the exact two-hall exterior successor');return before;
 }

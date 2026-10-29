@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "path": "art/tile-catalog.json",
+      "fromSha256": "54538cfcc221acfd471b06ec8b971903278a81dee2f261f4f2dfbabab79d01e4",
+      "toSha256": "05ae1dd05955e2c3520c92ec1b4e26a7a5e117980e765a5572652d7ae30ee0ef",
+      "reason": "Correct the 12 expo chair collision masks to the visible seat tile; free the empty tile below. Correct the chair footprint in the catalog and keep every placement unchanged. Preserve all art, objects, areas, portals, atlas reservations and other collision cells; refresh public guide geometry receipts without activating bots. Verified against live keyboard movement and independent full-map geometry audit."
+    },
+    {
+      "path": "maps/overworld.tmj",
+      "fromSha256": "43d14ed94475f1b314eb4cfb7ebb9019b4ea959e70f019fd874b7fa755b78461",
+      "toSha256": "639e9b26afd22260e6e3f26a8eca60786543b3f93c4ddd6f7c87e297e5f8f3c4",
+      "reason": "Correct the 12 expo chair collision masks to the visible seat tile; free the empty tile below. Correct the chair footprint in the catalog and keep every placement unchanged. Preserve all art, objects, areas, portals, atlas reservations and other collision cells; refresh public guide geometry receipts without activating bots. Verified against live keyboard movement and independent full-map geometry audit."
+    },
+    {
+      "path": "maps/preview/overworld.tmj",
+      "fromSha256": "9776df066c5ce7dfea24f66e1fa5cfc82af40f81f7de4b37906cbd11ee5480ed",
+      "toSha256": "da738fdf88a04e5a5a39bf0fea2c15541914c47940e2487803d7bdb8dfed9c8b",
+      "reason": "Correct the 12 expo chair collision masks to the visible seat tile; free the empty tile below. Correct the chair footprint in the catalog and keep every placement unchanged. Preserve all art, objects, areas, portals, atlas reservations and other collision cells; refresh public guide geometry receipts without activating bots. Verified against live keyboard movement and independent full-map geometry audit."
+    }
+  ]
+}

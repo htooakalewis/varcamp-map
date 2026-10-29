@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog,restoreExpoChairNative} from '../../tools/maps/expo-chair-physics';
 import {cafeArrivalSuccessorSha} from './cafe-arrival-history';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -16,6 +17,7 @@ const cache=new Map<string,TiledMap>();
 export function preVibeCodeNative(map:TiledMap):TiledMap{
  if(!map.tilesets.some(t=>t.image==='../assets/sponsors/vibecode-tours.png'))return structuredClone(map);
  const id=String(map.properties?.find(p=>p.name==='worldMapId')?.value),old=beforeVibeCodeJson<TiledMap>(`maps/${id}.tmj`);
- if(!cache.has(id)){const l=applyVibeCodeBranding(beforeVibeCodeJson<MapLayout>(`world/layouts/${id}.json`)),c=loadTileCatalog();cache.set(id,id==='overworld'?reconcileVibeCodeBranding(old,l,c):renderReferenceInterior(l,c).tmj);}
+ if(id==='overworld')map=restoreExpoChairNative(map,JSON.parse(readFileSync('world/layouts/overworld.json','utf8')),loadTileCatalog());
+ if(!cache.has(id)){const l=applyVibeCodeBranding(beforeVibeCodeJson<MapLayout>(`world/layouts/${id}.json`)),c=beforeExpoChairCatalog(loadTileCatalog());cache.set(id,id==='overworld'?reconcileVibeCodeBranding(old,l,c):renderReferenceInterior(l,c).tmj);}
  assert.deepEqual(map,cache.get(id),'exact Vibe Code native successor required');return old;
 }

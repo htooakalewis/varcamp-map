@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {preVibeCodeLayout,preVibeCodeNative,vibeCodeSuccessorSha} from './vibecode-history';
 import {beforeCrescentJson} from './plaza-crescent-history';
 import {readFileSync} from 'node:fs';
@@ -20,6 +21,6 @@ export function preLandscapeNative(map:TiledMap):TiledMap{
  const before=beforeLandscapeJson<TiledMap>('maps/overworld.tmj');
  // Earlier immutable epochs must continue through the existing historical chain.
  if(!map.tilesets.some(s=>s.name==='hall-buildings')||isDeepStrictEqual(map,before)||isDeepStrictEqual(map,beforeCrescentJson('maps/overworld.tmj')))return structuredClone(map);
- expected??=reconcilePlazaLandscape(before,applyPlazaLandscape(beforeLandscapeJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ expected??=reconcilePlazaLandscape(before,applyPlazaLandscape(beforeLandscapeJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact landscape/circular-ring successor required');return before;
 }

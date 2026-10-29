@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog,reconcileExpoChairPhysics} from '../../tools/maps/expo-chair-physics';
 import {applyVibeCodeBranding,reconcileVibeCodeBranding} from '../../tools/maps/vibecode-branding';
 import {applyPlazaLandscape,reconcilePlazaLandscape} from '../../tools/maps/plaza-landscape';
 import {applyHallBuildings,reconcileHallBuildings} from '../../tools/maps/hall-buildings';
@@ -217,6 +218,7 @@ export async function expectedBrandSuccessor(catalog:TileCatalog):Promise<{layou
 }
 /** One shared actual forward producer transaction for groves/redraw tests. */
 export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layout:MapLayout;native:TiledMap}>{
+ const currentCatalog=catalog;catalog=beforeExpoChairCatalog(catalog);
  const brand=await expectedBrandSuccessor(catalog);
  const roadster=await applyRoadsterV2Successor(brand.layout,brand.native,catalog);
  const layout=refineExpoBooths(roadster.layout);
@@ -241,7 +243,7 @@ export async function expectedPlazaSuccessor(catalog:TileCatalog):Promise<{layou
  const patrol=applyPlazaPatrol(arrival),patrolNative=reconcilePlazaPatrol(arrivalNative,patrol,catalog);
  assert.deepEqual(patrol,beforeSpacingJson('world/layouts/overworld.json'),'Genuine pre-spacing source matches the patrol forward operation');
  assert.deepEqual(patrolNative,beforeSpacingJson('maps/overworld.tmj'),'Genuine pre-spacing native matches the patrol forward operation');
- const spaced=applyExpoSpacing(patrol),spacedNative=reconcileExpoSpacing(patrolNative,spaced,catalog),flowing=applyFountainMotion(spaced),flowingNative=reconcileFountainMotion(spacedNative,flowing,catalog),lion=applyLeoLionHead(flowing);const buildings=applyHallBuildings(lion),buildingNative=reconcileHallBuildings(reconcileLeoLionHead(flowingNative,lion,catalog),buildings,catalog),crescent=applyPlazaCrescent(buildings);const landscape=applyPlazaLandscape(crescent),landscapeNative=reconcilePlazaLandscape(reconcilePlazaCrescent(buildingNative,crescent,catalog),landscape,catalog),branded=applyVibeCodeBranding(landscape);return {layout:branded,native:reconcileVibeCodeBranding(landscapeNative,branded,catalog)};
+ const spaced=applyExpoSpacing(patrol),spacedNative=reconcileExpoSpacing(patrolNative,spaced,catalog),flowing=applyFountainMotion(spaced),flowingNative=reconcileFountainMotion(spacedNative,flowing,catalog),lion=applyLeoLionHead(flowing);const buildings=applyHallBuildings(lion),buildingNative=reconcileHallBuildings(reconcileLeoLionHead(flowingNative,lion,catalog),buildings,catalog),crescent=applyPlazaCrescent(buildings);const landscape=applyPlazaLandscape(crescent),landscapeNative=reconcilePlazaLandscape(reconcilePlazaCrescent(buildingNative,crescent,catalog),landscape,catalog),branded=applyVibeCodeBranding(landscape);return {layout:branded,native:reconcileExpoChairPhysics(reconcileVibeCodeBranding(landscapeNative,branded,catalog),branded,currentCatalog)};
 }
 export async function assertPlazaSuccessor(layout:MapLayout,map:TiledMap,catalog:TileCatalog):Promise<void>{
  const expected=await expectedPlazaSuccessor(catalog);

@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
@@ -16,6 +17,6 @@ let expected:TiledMap|undefined;
 export function preFountainNative(map:TiledMap):TiledMap{
  map=preLeoNative(map);
  if(!map.layers.some(l=>l.name==='plaza-fountain-water'))return structuredClone(map);
- const before=beforeFountainJson<TiledMap>('maps/overworld.tmj');expected??=reconcileFountainMotion(before,applyFountainMotion(beforeFountainJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ const before=beforeFountainJson<TiledMap>('maps/overworld.tmj');expected??=reconcileFountainMotion(before,applyFountainMotion(beforeFountainJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact fountain successor required');return before;
 }

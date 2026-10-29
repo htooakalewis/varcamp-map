@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {prePatrolLayout,prePatrolNative} from './plaza-patrol-history';
 import assert from 'node:assert/strict';
 import {beforeArrivalJson} from './arrival-refresh-history';
@@ -13,6 +14,6 @@ let expected:TiledMap|undefined;
 export function preArrivalNative(map:TiledMap):TiledMap{
  map=prePatrolNative(map);
  if(!map.tilesets.some(t=>t.image?.includes('/varcamp-arrival-'))&&!map.layers.some(l=>l.name.startsWith('Arrival /')))return structuredClone(map);
- const before=beforeArrivalJson<TiledMap>('maps/overworld.tmj');expected??=reconcileArrivalRefresh(before,applyArrivalRefresh(beforeArrivalJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ const before=beforeArrivalJson<TiledMap>('maps/overworld.tmj');expected??=reconcileArrivalRefresh(before,applyArrivalRefresh(beforeArrivalJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'Current native must be exactly the arrival successor');return before;
 }

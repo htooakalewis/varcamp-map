@@ -1,3 +1,5 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
+import {expoChairSuccessorSha} from './expo-chair-history';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -7,7 +9,7 @@ const raw=readFileSync('tests/fixtures/maze-gates/before.json.gz');
 assert.equal(createHash('sha256').update(raw).digest('hex'),'21c78da230741c5b61082f51c321e37688255ccbb24aaf9ea9733dded4f738e5');
 const snapshot=JSON.parse(gunzipSync(raw).toString()),before=snapshot.components;
 assert.equal(snapshot.base,'71405c9a9c4fbd780b5f94c174dd06144b4c0b2a');
-export function mazeGateSuccessorSha(path:string,pin:string):string{const t=JSON.parse(readFileSync('tests/fixtures/maze-gates/transitions.json','utf8'));assert.equal(t.base,snapshot.base);const pair=t.transitions[path];if(!pair||pair[0]!==pin)return pin;assert.equal(pair[0],snapshot.pins[path]);return pair[1];}
+export function mazeGateSuccessorSha(path:string,pin:string):string{const t=JSON.parse(readFileSync('tests/fixtures/maze-gates/transitions.json','utf8'));assert.equal(t.base,snapshot.base);const pair=t.transitions[path];if(!pair||pair[0]!==pin)return expoChairSuccessorSha(path,pin);assert.equal(pair[0],snapshot.pins[path]);return expoChairSuccessorSha(path,pair[1]);}
 /** Historical ambient assertions retain their original baseline. Only this
  * exact reviewed successor may be undone; current mutation tests check it too. */
 export function beforeMazeGateLayout(input:any):any{
@@ -44,7 +46,7 @@ export function advanceMazeGateLayout(input:any):any{
 
 /** Undo only the eight exact additive crops for historical catalog assertions. */
 export function beforeMazeGateCatalog(input:any):any{
- const catalog=structuredClone(input);
+ const catalog=structuredClone(beforeExpoChairCatalog(input));
  const additions={
   "maze-solid": {
     "sheet": "assets/tilesets/original/magic.png",

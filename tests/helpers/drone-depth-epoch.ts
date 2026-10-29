@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 /** Drone-depth epoch (2026-10-26 owner request: "set all drones at upper layer top of other
  * objects and tiles"). The43 overworld drone overlays (closed PLAZA_DRONES class) move from
  * belowAvatar to aboveScenery. The source delta is exactly that level after one closed
@@ -108,7 +109,7 @@ export function renumberFreshDroneLayers<T extends TiledMap>(map:T,prior:TiledMa
 }
 /** The complete native successor of a pre-epoch native and its (provenance-advanced) source. */
 export function droneDepthNative(before:TiledMap,layout:MapLayout):TiledMap{
- const next=applyDroneDepth(layout),map=reconcileNativeProjection(before,buildMap(next,loadTileCatalog()).tmj);
+ const next=applyDroneDepth(layout),map=reconcileNativeProjection(before,buildMap(next,beforeExpoChairCatalog(loadTileCatalog())).tmj);
  assert.deepEqual(map,droneDepthNativeOracle(before,next),'Drone-depth projection differs from the independent reorder oracle');return map;
 }
 export function preDroneDepthLayout(layout:MapLayout):MapLayout{

@@ -1,3 +1,4 @@
+import {beforeExpoChairCatalog} from '../../tools/maps/expo-chair-physics';
 import {preLandscapeLayout,preLandscapeNative,landscapeSuccessorSha} from './plaza-landscape-history';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -19,6 +20,6 @@ export function preCrescentNative(map:TiledMap):TiledMap{
  const before=beforeCrescentJson<TiledMap>('maps/overworld.tmj');
  // Earlier immutable epochs must continue through the existing historical chain.
  if(!map.tilesets.some(s=>s.name==='hall-buildings')||isDeepStrictEqual(map,before))return structuredClone(map);
- expected??=reconcilePlazaCrescent(before,applyPlazaCrescent(beforeCrescentJson<MapLayout>('world/layouts/overworld.json')),loadTileCatalog());
+ expected??=reconcilePlazaCrescent(before,applyPlazaCrescent(beforeCrescentJson<MapLayout>('world/layouts/overworld.json')),beforeExpoChairCatalog(loadTileCatalog()));
  assert.deepEqual(map,expected,'exact crescent/circular-ring successor required');return before;
 }
